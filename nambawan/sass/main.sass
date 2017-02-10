@@ -62,12 +62,12 @@ a:hover
 
 h1
 	font-size: 60px
-	font-weight: 700
+	font-weight: 800
 	line-height: 1.2
 h2
 	color: #333
 	font-size: 48px
-	font-weight: 700
+	font-weight: 800
 	line-height: 2
 header.index
 	height: 100vh
@@ -77,47 +77,56 @@ header.index
 	display: flex
 	justify-content: space-around
 	flex-direction: column
-header .is-sticky
-	a
-		color: #333
-	.top-line
-		padding: 0
-		box-shadow: 0 15px 25px rgba(4, 74, 127, 0.1)
-	.top-line:before
-		height: 100%
-	.logo-txt
-		font-weight: 300
-		line-height: 1.25
-	.logo-img
-		margin-top: 15px
-		margin-bottom: 15px
-	.logo-img:before
-		opacity: 1
-	.logo-txt
-		font-size: 10px
-		p:first-child
-			font-size: 21px
-			font-weight: 700
-		p:last-child
-			opacity: .6
-	nav
-		font-size: 14px
-	ul
-		padding-top: 5px
-	li:last-child
-		p:first-child
-			font-size: 14px
-		p:last-child
-			font-size: 12px
+header
+	.is-sticky
+		height: 70px !important
+		.svg-icon--logo_blue
+			opacity: 1
+		.svg-icon--logo_white
+			opacity: 0
+		a
+			color: #333
+		.top-line
+			height: 70px
+			line-height: 70px
+			padding: 0
+			box-shadow: 0 15px 25px rgba(4, 74, 127, 0.1)
+		.top-line:before
+			height: 100%
+		.logo-txt
+			font-weight: 300
+			line-height: 1.25
+			p:first-child
+				font-size: 26px
+			p:last-child
+				font-size: 12px
+		.logo-img
+			transform: scale(.8)
+			margin-right: 3px
 .top-line .content
-	display: flex
+	display: inline-flex
 	justify-content: space-between
 	align-items: center
+	line-height: 1.7em
+	height: 100%
 header
 	position: relative
 	z-index: 10
+	.svg-icon--logo_blue
+		position: absolute
+		top: 50%
+		margin-top: -40px
+		left: 0
+		opacity: 0
+	.svg-icon--logo_white
+		position: absolute
+		top: 50%
+		margin-top: -30px
+		left: 0
 	.top-line
-		padding: 15px 0
+		text-align: center
+		line-height: 100px
+		height: 100px
 		position: absolute
 		width: 100%
 		top: 0
@@ -145,8 +154,7 @@ header
 		text-align: right
 		p:first-child
 			font-size: 18px
-			font-weight: bold
-			font-weight: bold
+			font-weight: 700
 			transition: font-size .4s
 		p:last-child
 			font-size: 14px
@@ -155,6 +163,9 @@ header
 			display: inline-block
 			border-bottom: 1px dashed #88aff0
 			opacity: .7
+	.logo-img
+		margin-right: 10px
+		transition: .4s
 	.logo-img,
 	.logo-txt
 		display: inline-block
@@ -165,7 +176,8 @@ header
 		font-size: 16px
 	.btn
 		margin-top: 85px
-
+.logo
+	display: inline-block
 .content
 	width: 1175px
 	margin: 0 auto
@@ -176,66 +188,15 @@ header
 	font-size: 13px
 	font-weight: 300
 	line-height: 1.25
+	margin-left: 65px
 	p:first-child
-		transition: font-size .4s
+		transition: .4s
 		font-size: 30px
 		font-weight: 700
 	p:last-child
-		transition: font-size .4s
-		opacity: .6
-.logo-img:before
-	transition: .4s
-	content: ""
-	position: absolute
-	left: -15px
-	top: -17px
-	height: 83px
-	width: 80px
-	opacity: 0
-	background: $accentBlue
-.logo-img
-	line-height: 50px
-	width: 50px
-	margin-right: 20px
-	font-family: "Lato"
-	font-size: 34px
-	font-weight: 900
-	color: #fff
-	position: relative
-	text-align: center
-	.border-right,
-	.border-bottom,
-	.border-left
-		position: absolute
-		background: #fff
-	.border-bottom
-		width: 100%
-		bottom: 0
-		left: 0
-		height: 4px
-	.border-left,
-	.border-right
-		height: 100%
-		width: 4px
-		bottom: 0
-	.border-left
-		left: 0
-	.border-right
-		right: 0
-	.border-top-1,
-	.border-top-2
-		position: absolute
-		top: 0
-		height: 4px
-		background: #fff
-		transform: skewX(-45deg)
-	.border-top-1
-		left: 2px
-		width: 30px
-	.border-top-2
-		right: 2px
-		width: 10px
-
+		transition: .4s
+		font-size: 14px
+		opacity: .7
 .btn
 	@include btn-radius(30px)
 	font-weight: 700
@@ -774,29 +735,22 @@ header.white
 	left: 0
 	width: 100%
 	background: #fff
-	.logo-img:before
-		opacity: 1
-		top: -20px
-		height: 87px
 	.top-line
-		padding: 10px 0
 		background: #fff
 		box-shadow: 0 15px 25px rgba(4, 74, 127, 0.1)
 	a
 		color: #333
 	li:last-child p:last-child
 		border-bottom: 1px dashed #d6d6d6
+	.svg-icon--logo_white
+			opacity: 0
+	.svg-icon--logo_blue
+			opacity: 1
+	.logo-img
+		margin-right: 20px
 	.is-sticky
 		.logo-img
-			margin-bottom: 5px
-			margin-top: 5px
-		.logo-img:before
-			left: -5px
-			top: -5px
-			height: 60px
-			width: 60px
-		.top-line
-			padding: 0px
+			margin-right: 5px
 #port-cases
 	padding: 220px 0 60px
 	.clarify

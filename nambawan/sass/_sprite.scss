@@ -1,10 +1,10 @@
 %svg-common {
-	background: url("../img/sprite/view/svg/sprite.svg") no-repeat;
+	background: url("../img/sprite/view/svg/_sprite.view.svg") no-repeat;
 }
 
 .svg-icon--ad {
 	@extend %svg-common;
-	background-position: 32.26744186046512% 0;
+	background-position: 31.53409090909091% 0;
 }
 
 .svg-icon--ad-dims {
@@ -14,7 +14,7 @@
 
 .svg-icon--ad_1 {
 	@extend %svg-common;
-	background-position: 82.4758064516129% 16.407932011331443%;
+	background-position: 80.73947368421052% 50.22832369942196%;
 }
 
 .svg-icon--ad_1-dims {
@@ -24,7 +24,7 @@
 
 .svg-icon--ad_2 {
 	@extend %svg-common;
-	background-position: 53.239443993612745% 78.9402212351826%;
+	background-position: 35.16576498038512% 80.53511126504458%;
 }
 
 .svg-icon--ad_2-dims {
@@ -34,7 +34,7 @@
 
 .svg-icon--ad_3 {
 	@extend %svg-common;
-	background-position: 0 80.60257669420531%;
+	background-position: 99.9869403959672% 0;
 }
 
 .svg-icon--ad_3-dims {
@@ -44,7 +44,7 @@
 
 .svg-icon--ad_4 {
 	@extend %svg-common;
-	background-position: 59.73008762291156% 26.858356940509914%;
+	background-position: 58.4134681619045% 27.40173410404624%;
 }
 
 .svg-icon--ad_4-dims {
@@ -54,7 +54,7 @@
 
 .svg-icon--ad_5 {
 	@extend %svg-common;
-	background-position: 69.26437319603713% 78.40123630233211%;
+	background-position: 66.52062052627556% 79.97420464316423%;
 }
 
 .svg-icon--ad_5-dims {
@@ -64,7 +64,7 @@
 
 .svg-icon--ad_6 {
 	@extend %svg-common;
-	background-position: 99.92931937172774% 0;
+	background-position: 98.15641025641025% 20.59587020648967%;
 }
 
 .svg-icon--ad_6-dims {
@@ -74,7 +74,7 @@
 
 .svg-icon--brand {
 	@extend %svg-common;
-	background-position: 60.53856477911991% 0;
+	background-position: 59.18646528378793% 0;
 }
 
 .svg-icon--brand-dims {
@@ -84,7 +84,7 @@
 
 .svg-icon--brand_1 {
 	@extend %svg-common;
-	background-position: 0 99.79688751573407%;
+	background-position: 98.52271264959464% 79.90716954694068%;
 }
 
 .svg-icon--brand_1-dims {
@@ -94,7 +94,7 @@
 
 .svg-icon--brand_2 {
 	@extend %svg-common;
-	background-position: 98.25992947051404% 58.285714285714285%;
+	background-position: 61.19195944412217% 53.84256559766764%;
 }
 
 .svg-icon--brand_2-dims {
@@ -104,7 +104,7 @@
 
 .svg-icon--brand_3 {
 	@extend %svg-common;
-	background-position: 82.90369649805447% 0;
+	background-position: 81.14949217096911% 15.059245755953059%;
 }
 
 .svg-icon--brand_3-dims {
@@ -114,7 +114,7 @@
 
 .svg-icon--brand_4 {
 	@extend %svg-common;
-	background-position: 98.38655635454522% 39.42857142857143%;
+	background-position: 0 99.71720116618076%;
 }
 
 .svg-icon--brand_4-dims {
@@ -124,7 +124,7 @@
 
 .svg-icon--consult {
 	@extend %svg-common;
-	background-position: 24.602900093122255% 57.30420752140996%;
+	background-position: 24.09013937736095% 58.57650342552652%;
 }
 
 .svg-icon--consult-dims {
@@ -134,7 +134,7 @@
 
 .svg-icon--consult_1 {
 	@extend %svg-common;
-	background-position: 31.053294167016368% 24.935649935649938%;
+	background-position: 30.37351210835956% 25.412613400371626%;
 }
 
 .svg-icon--consult_1-dims {
@@ -144,7 +144,7 @@
 
 .svg-icon--consult_2 {
 	@extend %svg-common;
-	background-position: 18.559974597126303% 79.7023622497072%;
+	background-position: 99.19670389469049% 60.57302748549942%;
 }
 
 .svg-icon--consult_2-dims {
@@ -154,7 +154,7 @@
 
 .svg-icon--consult_3 {
 	@extend %svg-common;
-	background-position: 98.63824289405684% 20.114942528735632%;
+	background-position: 96.91392405063291% 41.002932551319645%;
 }
 
 .svg-icon--consult_3-dims {
@@ -164,7 +164,7 @@
 
 .svg-icon--consult_4 {
 	@extend %svg-common;
-	background-position: 98.38655635454522% 77.01962574167047%;
+	background-position: 14.396828202732392% 99.55466294097101%;
 }
 
 .svg-icon--consult_4-dims {
@@ -174,7 +174,7 @@
 
 .svg-icon--linkedin {
 	@extend %svg-common;
-	background-position: 60.26375855947248% 50.459016393442624%;
+	background-position: 85.56549838429032% 95.27298050139275%;
 }
 
 .svg-icon--linkedin-dims {
@@ -182,9 +182,29 @@
 	height: 50px;
 }
 
+.svg-icon--logo_blue {
+	@extend %svg-common;
+	background-position: 43.446236559139784% 56.30487804878049%;
+}
+
+.svg-icon--logo_blue-dims {
+	width: 81px;
+	height: 81px;
+}
+
+.svg-icon--logo_white {
+	@extend %svg-common;
+	background-position: 51.05612244897959% 80.1810344827586%;
+}
+
+.svg-icon--logo_white-dims {
+	width: 61px;
+	height: 61px;
+}
+
 .svg-icon--mobile {
 	@extend %svg-common;
-	background-position: 0 57.41644644800249%;
+	background-position: 0 58.69378674717941%;
 }
 
 .svg-icon--mobile-dims {
@@ -194,7 +214,7 @@
 
 .svg-icon--mobile_1 {
 	@extend %svg-common;
-	background-position: 61.64795918367347% 97.34896051346449%;
+	background-position: 72.8075% 97.34737441297851%;
 }
 
 .svg-icon--mobile_1-dims {
@@ -204,7 +224,7 @@
 
 .svg-icon--mobile_2 {
 	@extend %svg-common;
-	background-position: 48.25954198473283% 97.84041508904781%;
+	background-position: 59.65835411471322% 97.84866256615648%;
 }
 
 .svg-icon--mobile_2-dims {
@@ -214,7 +234,7 @@
 
 .svg-icon--site {
 	@extend %svg-common;
-	background-position: 0 28.38390092879257%;
+	background-position: 0 29.0126582278481%;
 }
 
 .svg-icon--site-dims {
@@ -224,7 +244,7 @@
 
 .svg-icon--site_1 {
 	@extend %svg-common;
-	background-position: 16.96990442086416% 99.35066784381853%;
+	background-position: 29.40251166868666% 99.3897654955976%;
 }
 
 .svg-icon--site_1-dims {
@@ -234,7 +254,7 @@
 
 .svg-icon--site_2 {
 	@extend %svg-common;
-	background-position: 82.03475935828877% 52.10198300283286%;
+	background-position: 0 80.64450867052022%;
 }
 
 .svg-icon--site_2-dims {
@@ -244,7 +264,7 @@
 
 .svg-icon--site_3 {
 	@extend %svg-common;
-	background-position: 36.22277946416788% 79.04532577903682%;
+	background-position: 18.3533669380897% 80.64450867052022%;
 }
 
 .svg-icon--site_3-dims {
@@ -254,7 +274,7 @@
 
 .svg-icon--site_4 {
 	@extend %svg-common;
-	background-position: 82.4758064516129% 34.25495750708215%;
+	background-position: 80.73947368421052% 32.02023121387283%;
 }
 
 .svg-icon--site_4-dims {
@@ -274,7 +294,7 @@
 
 .svg-icon--smm_1 {
 	@extend %svg-common;
-	background-position: 80.32641824795988% 78.37921348314606%;
+	background-position: 77.51663291871564% 79.95128939828079%;
 }
 
 .svg-icon--smm_1-dims {
@@ -284,7 +304,7 @@
 
 .svg-icon--smm_2 {
 	@extend %svg-common;
-	background-position: 33.67792207792208% 97.99157303370787%;
+	background-position: 45.60559796437659% 98.0028653295129%;
 }
 
 .svg-icon--smm_2-dims {
@@ -294,7 +314,7 @@
 
 .svg-icon--smm_3 {
 	@extend %svg-common;
-	background-position: 43.799457994579946% 50.85781951367279%;
+	background-position: 81.38196286472149% 0;
 }
 
 .svg-icon--smm_3-dims {
