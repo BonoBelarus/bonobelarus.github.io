@@ -178,10 +178,7 @@ $(document).ready(function(){
 	///// END of FOCUS	
 
 	
-	parallax("#we-do");
-	parallax("#cases");
-	parallax("#treatment");
-	parallax("#contacts");
+	
 	hoverFunc("#share-exp");
 	hoverFunc("#we-do");
 	hoverFunc("#contacts");
@@ -190,7 +187,7 @@ $(document).ready(function(){
 
 	$(".top-line").sticky({
 		topSpacing:0,
-		zIndex: 10,
+		zIndex: 999,
 		widthFromWrapper: false,
 		getWidthFrom: "body"
 	});
