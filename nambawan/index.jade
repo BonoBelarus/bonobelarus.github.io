@@ -61,7 +61,7 @@ html
 					.clarify
 						p Наша основная специализация — комплексный интернет-маркетинг.
 						p Мы помогаем нашим клиентам получить трафик и конвертировать его в продажи.
-					a(href="#").btn.gt-consult Получить консультацию
+					a(href="#").btn.gt-consult.link-pop-up-q Получить консультацию
 					a(href="#").btn.vw-port Смотреть портфолио
 		section#we-do
 			.layout-wrap
@@ -234,7 +234,7 @@ html
 						.clarify
 							p Давайте обсудим его. Продумаем. И сделаем!
 					li
-						a(href="#").btn Оставить заявку
+						a(href="#").btn.link-pop-up-q Оставить заявку
 		section#share-exp
 			.layout-wrap
 				.layout-txt
@@ -283,7 +283,7 @@ html
 						p hello@nambawan.by
 					li
 						p Обратная связь
-						p Оставить заявку
+						a(href="#").link-pop-up-q Оставить заявку
 				.notion
 					p Свяжитесь с нами удобным способом и мы предложим вам варианты решения вашей задачи, составим смету, а затем поможем в реализации вашего проекта
 				.social
@@ -334,6 +334,23 @@ html
 								input(type="text")
 							a.btn(href="#") Подписаться
 						a.policy(href="#") Политика конфиденциальности
+		.pop-up#pop-up-question
+			.close
+				a(href="#")
+			.content
+				h2 Расскажите о своем проекте или задайте вопрос
+				form.form
+					.name
+						label(for="") Ваше имя
+						input(type="text")
+					.phone
+						label(for="") Телефон или почта
+						input(type="text")
+					.comment
+						label(for="") Комментарий
+						input(type="text")
+					button(type="submit").btn Отправить
+
 
 
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")

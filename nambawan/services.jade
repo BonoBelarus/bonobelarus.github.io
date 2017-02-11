@@ -32,12 +32,7 @@ html
 					.logo
 						a(href="#")
 							.logo-img
-								.border-top-1
-								.border-top-2
-								.border-right
-								.border-bottom
-								.border-left
-								p N
+								.svg-icon.svg-icon--logo_blue.svg-icon--logo_blue-dims
 							.logo-txt
 								p Nambawan
 								p Маркетинговое агенство
@@ -228,10 +223,11 @@ html
 				h2 У вас есть проект?
 				.clarify
 					p Давайте обсудим его. Продумаем. И сделаем!
-				a.btn(href="#") Оставить заявку
+				a.btn.link-pop-up-q(href="#") Оставить заявку
 		section#contacts
-			.layout-txt
-				p Контакты
+			.layout-wrap
+				.layout-txt
+					p Контакты
 			.content
 				ul.items
 					li
@@ -242,7 +238,7 @@ html
 						p hello@nambawan.by
 					li
 						p Обратная связь
-						p Оставить заявку
+						a(href="#").link-pop-up-q Оставить заявку
 				.notion
 					p Свяжитесь с нами удобным способом и мы предложим вам варианты решения вашей задачи, составим смету, а затем поможем в реализации вашего проекта
 				.social
@@ -293,8 +289,22 @@ html
 								input(type="text")
 							a.btn(href="#") Подписаться
 						a.policy(href="#") Политика конфиденциальности
-
-
+		.pop-up#pop-up-question
+			.close
+				a(href="#")
+			.content
+				h2 Расскажите о своем проекте или задайте вопрос
+				form.form
+					.name
+						label(for="") Ваше имя
+						input(type="text")
+					.phone
+						label(for="") Телефон или почта
+						input(type="text")
+					.comment
+						label(for="") Комментарий
+						input(type="text")
+					button(type="submit").btn Отправить
 
 
 

@@ -175,7 +175,19 @@ $(document).ready(function(){
 			}
 		});
 	}
-	///// END of FOCUS	
+	///// END of FOCUS
+	///// OPEN POP-UP
+	$(".link-pop-up-q").click(function(e){
+		e.preventDefault();
+		$("section, footer, header").addClass("disabled");
+		$("#pop-up-question").addClass("active");
+	});
+
+	$(".pop-up .close a").click(function(e){
+		e.preventDefault();
+		$("section, footer, header").removeClass("disabled");
+		$("#pop-up-question").removeClass("active");
+	});
 
 	
 	

@@ -50,7 +50,15 @@ section
 	position: relative
 	z-index: 10
 
-input:focus, textarea:focus
+section,
+header,
+footer
+	transition: .7s
+
+section.disabled,
+footer.disabled
+	transform: translateX(-100%)
+input:focus, textarea:focus, button:focus
 	outline: none
 
 a
@@ -80,20 +88,25 @@ header.index
 	justify-content: space-around
 	flex-direction: column
 header
+	#sticky-wrapper
+		top: -10px
+		position: relative
+		height: 100px !important
 	.is-sticky
 		.svg-icon--logo_blue
-			opacity: 1
+			transform: translateY(150px)
+			transition-delay: .4s
 		.svg-icon--logo_white
-			opacity: 0
+			transform: translateY(-150px)
 		a
 			color: #333
 		.top-line
 			height: 70px
 			line-height: 70px
 			padding: 0
-			box-shadow: 0 15px 25px rgba(4, 74, 127, 0.1)
 		.top-line:before
-			height: 100%
+			height: 70px
+			box-shadow: 0 15px 25px rgba(4, 74, 127, 0.1)
 		.logo-txt
 			font-weight: 300
 			line-height: 1.25
@@ -103,7 +116,6 @@ header
 				font-size: 12px
 		.logo-img
 			transform: scale(.8)
-			margin-right: 3px
 .top-line .content
 	display: inline-flex
 	justify-content: space-between
@@ -112,28 +124,29 @@ header
 	height: 100%
 header
 	position: relative
-	z-index: 10
+	z-index: 11
 	.svg-icon--logo_blue
 		position: absolute
-		top: 50%
+		top: -150px
 		margin-top: -40px
 		left: 0
-		opacity: 0
+		transition: .4s ease
 	.svg-icon--logo_white
+		width: 65px
+		height: 65px
 		position: absolute
 		top: 50%
 		margin-top: -30px
-		left: 0
+		left: 10px
+		transition: .4s ease .4s
 	.top-line
 		text-align: center
-		line-height: 100px
-		height: 100px
 		position: absolute
 		width: 100%
+		height: 100px
 		top: 0
 		left: 0
 		transition: .4s
-		overflow: hidden
 		z-index: 999
 	.top-line:before
 		position: absolute
@@ -186,6 +199,7 @@ header
 	margin: 0 auto
 	position: relative
 	z-index: 99
+	transition: .75s
 .logo-txt
 	vertical-align: middle
 	display: inline-block
@@ -645,6 +659,11 @@ header
 				margin-bottom: 20px
 				font-size: 26px
 				font-weight: 700
+		li:last-child
+			a
+				border-bottom: 1px solid #c0d5f7
+				padding-bottom: 5px
+				color: #333
 	.notion
 		width: 660px
 		margin: 55px auto 100px
@@ -690,6 +709,11 @@ footer
 	color: #fff
 	font-size: 16px
 	padding: 110px 0 90px
+	.logo-txt,
+	.logo-img
+		display: inline-block
+	.logo-txt
+		margin-left: 20px
 	a
 		color: #fff
 	li
@@ -760,20 +784,29 @@ header.white
 	left: 0
 	width: 100%
 	background: #fff
+	#sticky-wrapper
+		top: 0 !important
 	.top-line
+		line-height: 100px
+		height: 100px
 		background: #fff
 		box-shadow: 0 15px 25px rgba(4, 74, 127, 0.1)
+	.top-line:before
+		box-shadow: none
 	a
 		color: #333
 	li:last-child p:last-child
 		border-bottom: 1px dashed #d6d6d6
-	.svg-icon--logo_white
-			opacity: 0
 	.svg-icon--logo_blue
-			opacity: 1
+		top: 50%
 	.logo-img
 		margin-right: 20px
 	.is-sticky
+		.top-line
+			line-height: 70px
+			height: 70px
+		.svg-icon--logo_blue
+			transform: none
 		.logo-img
 			margin-right: 5px
 #port-cases
@@ -1018,6 +1051,64 @@ header.white
 		.btn:hover
 			box-shadow: 0 5px 15px rgba($accentGreen, .4)
 
+.pop-up.active
+	transform: translateX(-100%)
+.pop-up
+	position: fixed
+	z-index: 99
+	top: 0
+	left: 100%
+	transition: .7s ease
+	background: #0a1a42
+	color: #fff
+	text-align: center
+	height: 100vh
+	width: 100%
+	line-height: 100vh
+	.close
+		position: absolute	
+		top: 40px
+		right: 65px
+		background: url(../img/close.png) center no-repeat
+		line-height: 1.5em
+		a
+			height: 40px
+			width: 40px
+			display: inline-block
+	.content
+		line-height: 1.7em
+		display: inline-block
+		vertical-align: middle
+	h2
+		line-height: 1.4em
+		max-width: 700px
+		margin: 0 auto
+		color: #fff
+	.form
+		max-width: 630px
+		margin: 50px auto 0
+		label
+			text-transform: uppercase
+			opacity: .7
+		.comment
+			margin-top: 30px
+		.name
+			margin-right: 30px
+		.name,
+		.phone
+			display: inline-block
+			width: 300px
+		button
+			margin-top: 70px
+			line-height: 60px
+			display: inline-block
+			width: auto
+			text-align: center
+			font-size: 16px
+			font-weight: 700
+			background: $accentGreen
+			border: none
+			padding: 0 80px
 
 
 @import "media" // Всегда в конце
