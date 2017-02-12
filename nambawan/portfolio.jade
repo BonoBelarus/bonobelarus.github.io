@@ -49,7 +49,7 @@ html
 							li
 								a(href="contacts.html") Контакты
 							li
-								a(href="#")
+								a(href="#").link-pop-up-c
 									p +375 29 517 65 08
 									p Заказать звонок
 		section#port-cases
@@ -231,9 +231,24 @@ html
 								input(type="text")
 							a.btn(href="#") Подписаться
 						a.policy(href="#") Политика конфиденциальности
+		.pop-up#pop-up-call
+			.close
+				a(href="#")
+					img(src="img/close.png", alt="")
+			.content
+				h2 Заказать обратный звонок
+				form.form
+					.name
+						label(for="") Ваше имя
+						input(type="text")
+					.phone
+						label(for="") Телефон или почта
+						input(type="text")
+					button(type="submit").btn Отправить
 		.pop-up#pop-up-question
 			.close
 				a(href="#")
+					img(src="img/close.png", alt="")
 			.content
 				h2 Расскажите о своем проекте или задайте вопрос
 				form.form

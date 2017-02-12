@@ -177,17 +177,22 @@ $(document).ready(function(){
 	}
 	///// END of FOCUS
 	///// OPEN POP-UP
-	$(".link-pop-up-q").click(function(e){
-		e.preventDefault();
-		$("section, footer, header").addClass("disabled");
-		$("#pop-up-question").addClass("active");
-	});
+	function openPopUp(link, target){
+		$(link).click(function(e){
+			e.preventDefault();
+			$("section, footer, header").addClass("disabled");
+			$(target).addClass("active");
+		});
+	}
 
-	$(".pop-up .close a").click(function(e){
-		e.preventDefault();
-		$("section, footer, header").removeClass("disabled");
-		$("#pop-up-question").removeClass("active");
-	});
+	function closePopUp(){
+		$(".pop-up .close a").click(function(e){
+			e.preventDefault();
+			$("section, footer, header").removeClass("disabled");
+			$(this).closest(".pop-up").removeClass("active");
+		});
+	};
+	//// END of POP-UP
 
 	
 	
@@ -196,6 +201,9 @@ $(document).ready(function(){
 	hoverFunc("#contacts");
 	hoverFunc("#port-cases");
 	focusFunc();
+	openPopUp(".link-pop-up-q", "#pop-up-question");
+	openPopUp(".link-pop-up-c", "#pop-up-call");
+	closePopUp();
 
 	$(".top-line").sticky({
 		topSpacing:0,

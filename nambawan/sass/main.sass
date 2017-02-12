@@ -1069,12 +1069,14 @@ header.white
 		position: absolute	
 		top: 40px
 		right: 65px
-		background: url(../img/close.png) center no-repeat
 		line-height: 1.5em
+		transition: .5s
 		a
 			height: 40px
 			width: 40px
 			display: inline-block
+	.close:hover
+		transform: scale(.8) rotateZ(360deg)
 	.content
 		line-height: 1.7em
 		display: inline-block
@@ -1109,6 +1111,17 @@ header.white
 			background: $accentGreen
 			border: none
 			padding: 0 80px
+		button:hover
+			box-shadow: 0 6px 19px rgba(5, 216, 165, 0.54)
+#pop-up-call
+	h2
+		max-width:  500px
+	.form
+		div
+			display: block
+			margin: 30px auto 0
+		.phone:after
+			background: #ff2c41
 
 
 @import "media" // Всегда в конце
