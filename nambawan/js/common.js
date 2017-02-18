@@ -210,13 +210,13 @@ $(document).ready(function(){
 				console.log(ol);
 				$(elem).parent().css({
 					"height": elemHeight,
-					"width": $("body").width(),
+					"width": $(document).width(),
 					"marginLeft": -ol,
 				});
 				$(elem).css({
 					"paddingLeft": ol,
 					"paddingRight": ol,
-					"width": $("body").width() + (ol * 2)
+					"width": 1360
 				});
 			}
 		}
@@ -240,7 +240,7 @@ $(document).ready(function(){
 		hoverFunc("#contacts");
 		hoverFunc("#port-cases");
 	}
-	if($(window).width() < 1250 && $(window).width() > 840){
+	if($(window).width() < 1250 && $(window).width() > 750){
 		calcCards(".mini-articles");
 	}
 
