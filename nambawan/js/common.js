@@ -251,6 +251,15 @@ $(document).ready(function(){
 	// 	getWidthFrom: "body"
 	// });
 
+	function stickyHeader(){
+		var st = $(window).scrollTop();
+		if(st > 0){
+			$(".top-line").addClass("is-sticky");
+		}else{
+			$(".top-line").removeClass("is-sticky")
+		}
+	}
+	stickyHeader();
 	$(window).scroll(function(){
 		var st = $(window).scrollTop();
 		if(st > 0){
@@ -258,6 +267,5 @@ $(document).ready(function(){
 		}else{
 			$(".top-line").removeClass("is-sticky")
 		}
-		console.log(st);
 	});
 });
