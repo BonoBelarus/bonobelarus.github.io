@@ -4,12 +4,492 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
+@media only screen and (max-width : 1250px)
+	body
+		min-width: 840px
+	.content
+		width: 750px
+	.small-nav
+		position: relative
+		cursor: pointer
+		width: 28px
+		height: 22px
+		div
+			position: absolute
+			top: 50%
+			transition: .15s
+			margin-top: -2px
+			left: 0
+			height: 4px
+			width: 100%
+			background: #fff
+	.small-nav:before,
+	.small-nav:after
+		position: absolute
+		transform-origin: center
+		transition: .35s
+		content: ""
+		left: 0
+		width: 100%
+		height: 4px
+		background: #fff
+	.small-nav:before
+		top: 0
+	.small-nav:after
+		bottom: 0
+	.overlay-menu
+		display: none
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 12
+		width: 100%
+		height: 100%
+		background: rgba(0, 0, 0, .9)
+	nav
+		z-index: 13
+		position: relative
+		@keyframes slideNav
+			50%
+				right: 10px
+			75%
+				right: -10px
+			100%
+				opacity: 1
+				right: 0px
+		ul
+			position: absolute
+			padding: 30 0px
+			top: 100%
+			margin-top: 10px
+			right: -200px
+			opacity: 0
+			text-align: right
+			transition: .55s
+			font-size: 21px
+			line-height: 2em
+		ul:before
+			content: ""
+			position: absolute
+			width: 100%
+			height: 100%
+			background: #fff
+			top: 0
+			opacity: 0
+			right: -200px
+			z-index: -1
+		li
+			display: block
+		li:last-child
+			display: none
+	nav.active
+		div
+			opacity: 0
+		ul
+			animation: slideNav .55s forwards
+	nav.active .small-nav:before
+		transform: rotateZ(45deg)
+		top: 10px
+		width: 120%
+	nav.active .small-nav:after
+		top: 10px
+		width: 120%
+		transform: rotateZ(-45deg)
+	header li:not(:last-child)
+		margin: 0
+	header
+		#sticky-wrapper
+			top: 0px
+		.is-sticky
+			.small-nav:before,
+			.small-nav:after,
+			.small-nav div
+				background: #333
+			nav ul
+				padding: 30px
+			nav ul:before
+				animation: slideNav .8s forwards
+	header.white
+		z-index: 100
+		ul
+			margin-top: 30px
+			background: #fff
+			padding: 30px
+		.small-nav:before,
+		.small-nav:after,
+		.small-nav div
+			background: #2962ff
+		.is-sticky
+			ul
+				margin-top: 15px
+			ul:before
+				animation: none
+	header.index
+		display: block
+		height: auto
+		section
+			padding: 100px 0
+	h1
+		font-size: 41px
+	#we-do .layout-txt
+		font-size: 199px
+	#we-do .items
+		padding: 30px 0
+		>ul
+			justify-content: flex-start
+			>li
+				margin-top: 80px
+				padding: 0
+				width: 40%
+			>li:nth-child(odd)
+				margin-right: 20%
+	#cases .layout-txt
+		font-size: 211px
+	.case-illu
+		display: none
+	.cases>div:nth-child(3n+1) .case-descr,
+	.cases>div:nth-child(3n+1) .tags,
+	.cases>div:nth-child(3n+1) h3
+		max-width: 650px
+	.case-descr
+		font-size: 18px
+	.case-bg
+		img
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			margin: auto
+			height: inherit
+			width: auto
+	.tags li
+		margin: 7px
+	.cases>div:nth-child(3n+2) h3,
+	.cases>div:nth-child(3n+3) h3
+		font-size: 32px
+	.cases>div:nth-child(3n+3),
+	.cases>div:nth-child(3n+2)
+		padding: 0 80px
+		.case-descr
+			font-size: 16px
+	.letter-why
+		width: 100%
+	.letter-form
+		margin-top: 60px
+		width: 100%
+		text-align: center
+	#treatment .layout-txt
+		font-size: 150px
+	#treatment
+		li
+			width: 40%
+			margin: 0
+		li:nth-child(odd)
+			margin-right: 20%
+	#have-project li
+		display: block
+		width: 100%
+	#have-project li:nth-child(2)
+		text-align: left
+		margin-top: 50px
+	#have-project .clarify
+		font-size: 21px
+	#share-exp .layout-txt
+		font-size: 172px
+	#share-exp
+		overflow: hidden
+		.items
+			margin-top: 50px
+			overflow-x: auto
+			position: relative
+			width: 100%
+		ul
+			margin-top: 0
+			position: absolute
+			top: 0
+			text-align: left
+			width: 1166px
+			li
+				width: 300px
+	#share-exp li:not(:first-child)
+		margin-left: 25px
+	#contacts .layout-txt
+		font-size: 137px
+	#contacts .items
+		font-size: 24px
+	#contacts .items li p:first-child
+		font-size: 18px
+	#contacts .social li
+		width: 180px
+	footer
+		text-align: center
+		padding: 100px 0
+		background-repeat: repeat-y
+		.delivery-form
+			display: block
+	.footer-cont>li:first-child,
+	.footer-cont>li:nth-child(3),
+	.footer-cont>li:nth-child(2)
+		width: 100%
+	.footer-nav
+		margin-top: 50px
+		li:first-child
+			display: none
+		.btn
+			margin-bottom: 50px
+	.footer-nav li
+		width: 18%
+
+	///// SERVICES
+	#services .content>.clarify
+		font-size: 21px
+	.ser-items
+		position: relative
+		z-index: 12
+	.ser-items>li
+		padding: 50px
+	.ser-features
+		margin-top: 20px
+		text-align: left
+	.ser-features li
+		width: 47.5%
+		vertical-align: top
+		margin-top: 15px
+	.ser-features ul>li:nth-child(odd)
+		margin-right: 5%
+	.ser-features .ft-img
+		width: 30%
+		display: inline-block
+		vertical-align: top
+	.ser-features .ft-c
+		padding-top: 5px
+		vertical-align: top
+		width: 70%
+		display: inline-block
+	.ser-features .btn
+		margin-top: 0
+		border: none
+		padding: 0
+	#lets-discuss
+		h2
+			font-size: 56px
+		.clarify
+			font-size: 21px
+		.btn
+			font-size: 18px
+			padding: 0 90px
+			margin-top: 50px
+	
+	#port-cases .clarify
+		font-size: 21px
+	#port-cases .items ul
+		text-align: center
+		li
+			margin-top: 10px
+	#port-items li
+		display: block
+		width: 100%
+	
+	#cont .items
+		display: flex
+		justify-content: space-between
+		font-size: 21px
+		li
+			width: auto
+	#cont .form label
+		font-size: 16px !important
 	/**/
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
+@media only screen and (max-width : 750px)
+	h1
+		font-size: 28px
+	h2
+		font-size: 36px
+	body
+		min-width: 320px
+	.content
+		width: 100%
+		padding: 0 15px
+	header.index section
+		padding: 100px 0 40px
+	header .svg-icon--logo_white
+		left: 20px
+	header .top-line
+		position: fixed
+
+	.logo-txt p:first-child
+		font-size: 19px
+	.logo-txt p:last-child
+		font-size: 9px
+	.svg-icon--logo_blue-dims
+		transform: scale(.8)
+	.svg-icon--logo_white-dims
+		transform: scale(.8)
+	.small-nav div, .small-nav:after, .small-nav:before
+		height: 3px
+	header .is-sticky
+		.logo-txt p:first-child
+			font-size: 19px
+		.logo-txt p:last-child
+			font-size: 9px
+	header .btn
+		font-size: 14px
+		text-align: center
+		display: block
+		margin: 0 auto
+		max-width: 290px
+	header
+		.gt-consult
+			margin-right: 0
+			margin-top: 40px
+		.vw-port
+			margin-top: 20px
+
+	#we-do .layout-txt
+		font-size: 77px
+	#we-do .clarify
+		font-size: 18px
+	#we-do .items>ul>li
+		width: 100%
+		margin-top: 50px
+	#we-do .items>ul>li.all-services
+		margin-top: 100px
+	.all-services
+		a
+			position: relative
+			width: 290px
+			left: 0
+			text-align: center
+			display: block
+			margin: -35px auto 0
+			border: 2px solid #2962ff
+			line-height: 50px
+
+	#cases .layout-txt
+		font-size: 89px
+	#cases .clarify
+		font-size: 18px
+	.cases>div:nth-child(3n+1) h3
+		font-size: 32px
+	.case-info
+		padding: 120px 0
+	.tags
+		font-size: 12px
+	.cases>div:nth-child(3n+2)
+		width: 100%
+		padding-left: 15px
+		padding-right: 15px
+	.cases>div:nth-child(3n+3)
+		width: 100%
+		padding-left: 15px
+		padding-right: 15px
+
+	#why-ppl-leave h2
+		font-size: 32px
+
+	#treatment
+		padding-bottom: 80px
+		.layout-txt
+			font-size: 57px
+		h2
+			line-height: 1.3em
+		li
+			display: block
+			width: 100%
+			padding: 0
+			margin-top: 60px
+
+	.letter-why h2 span:before
+		background: none
+
+	#have-project h2
+		font-size: 44px
+		line-height: 1.3em
+		margin-bottom: 25px
+	#have-project .clarify
+		font-size: 16px
+	#have-project .btn
+		width: 290px
+		margin: 0 auto
+		text-align: center
+
+	#share-exp li:not(:first-child), .letter-why
+		margin-left: 0
+	.letter-form form
+		padding: 40px 15px
+		width: 100%
+	.letter-form .btn
+		line-height: 1.3em
+		padding: 15px 30px
+	.box-letter
+		padding: 90px 20px
+	#share-exp .layout-txt
+		font-size: 83px
+	#share-exp
+		padding: 100px 0
+		h2
+			line-height: 1.3em
+	#share-exp ul li
+		display: block
+		margin-left: auto
+		margin-right: auto
+		width: 270px
+	#share-exp li:not(:first-child)
+		margin-left: auto
+	#share-exp ul
+		width: 100%
+		position: relative
+	#share-exp .btn
+		margin-top: 50px
+	#share-exp .article-mini-text
+		padding: 40px 0
+
+	#contacts
+		padding: 30px 0 100px
+	#contacts .layout-txt
+		font-size: 53px
+	#contacts .items li
+		display: block
+		width: 100%
+		margin-top: 70px
+	#contacts .social
+		ul
+			width: 100%
+		li
+			display: inline-block
+			margin-top: 0
+			width: 25%
+		.svg-icon
+			transform: scale(.6)
+		.svg-icon--smm_3
+			margin-right: 50px
+	#contacts .notion
+		width: 100%
+	
+	footer
+		padding: 50px 0
+	.footer-nav
+		li
+			width: 50%
+		.btn
+			margin-top: 25px
+			margin-bottom: 25px
+	.delivery .btn
+		margin-top: 25px
+	
+
+	.pop-up .form .name,
+	.pop-up .form .phone
+		width: 100%
+	.pop-up .form .phone
+		margin-top: 30px
+	.pop-up h2
+		font-size: 19px
+	.pop-up .close
+		top: 20px
+		right: 20px
 	/**/
 
 

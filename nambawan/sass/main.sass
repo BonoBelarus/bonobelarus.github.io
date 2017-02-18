@@ -39,7 +39,7 @@ body
 	font-smoothing: antialiased
 	cursor: default
 	font-size: 16px
-	min-width: 1200px
+	min-width: 1250px
 	position: relative
 	line-height: 1.55
 	font-family: $default-font
@@ -80,42 +80,13 @@ h2
 	line-height: 2
 header.index
 	height: 100vh
-	z-index: 11
+	z-index: 100
 	color: #fff
 	background: url(../img/main_bg.jpg) center no-repeat
 	display: block
 	display: flex
 	justify-content: space-around
 	flex-direction: column
-header
-	#sticky-wrapper
-		top: -10px
-		position: relative
-		height: 100px !important
-	.is-sticky
-		.svg-icon--logo_blue
-			transform: translateY(150px)
-			transition-delay: .4s
-		.svg-icon--logo_white
-			transform: translateY(-150px)
-		a
-			color: #333
-		.top-line
-			height: 70px
-			line-height: 70px
-			padding: 0
-		.top-line:before
-			height: 70px
-			box-shadow: 0 15px 25px rgba(4, 74, 127, 0.1)
-		.logo-txt
-			font-weight: 300
-			line-height: 1.25
-			p:first-child
-				font-size: 26px
-			p:last-child
-				font-size: 12px
-		.logo-img
-			transform: scale(.8)
 .top-line .content
 	display: inline-flex
 	justify-content: space-between
@@ -141,7 +112,7 @@ header
 		transition: .4s ease .4s
 	.top-line
 		text-align: center
-		position: absolute
+		position: fixed
 		width: 100%
 		height: 100px
 		top: 0
@@ -157,6 +128,29 @@ header
 		left: 0
 		background: #fff
 		transition: .4s
+	.is-sticky
+		height: 70px
+		line-height: 70px
+		padding: 0
+		.svg-icon--logo_blue
+			transform: translateY(150px)
+			transition-delay: .4s
+		.svg-icon--logo_white
+			transform: translateY(-150px)
+		a
+			color: #333
+		.logo-txt
+			font-weight: 300
+			line-height: 1.25
+			p:first-child
+				font-size: 26px
+			p:last-child
+				font-size: 12px
+		.logo-img
+			transform: scale(.8)
+	.is-sticky:before
+		height: 70px
+		box-shadow: 0 15px 25px rgba(4, 74, 127, 0.1)
 	a
 		color: #fff
 		display: block
@@ -208,11 +202,11 @@ header
 	line-height: 1.25
 	margin-left: 65px
 	p:first-child
-		transition: .4s
+		transition: font-size .4s, color 0s
 		font-size: 30px
 		font-weight: 700
 	p:last-child
-		transition: .4s
+		transition: font-size .4s, color 0s
 		font-size: 14px
 		opacity: .7
 .btn
@@ -612,6 +606,8 @@ header
 		display: inline-block
 		vertical-align: top
 		transition: .3s
+		img
+			width: 100%
 		a
 			display: block
 			position: relative
@@ -1055,7 +1051,7 @@ header.white
 	transform: translateX(-100%)
 .pop-up
 	position: fixed
-	z-index: 99
+	z-index: 101
 	top: 0
 	left: 100%
 	transition: .7s ease
@@ -1066,7 +1062,8 @@ header.white
 	width: 100%
 	line-height: 100vh
 	.close
-		position: absolute	
+		position: absolute
+		z-index: 999
 		top: 40px
 		right: 65px
 		line-height: 1.5em

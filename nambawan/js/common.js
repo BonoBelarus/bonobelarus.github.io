@@ -188,27 +188,76 @@ $(document).ready(function(){
 	function closePopUp(){
 		$(".pop-up .close a").click(function(e){
 			e.preventDefault();
-			$("section, footer, header").removeClass("disabled");
-			$(this).closest(".pop-up").removeClass("active");
+			var thisPopUp = $(this).closest(".pop-up");
+			if($(window).width() < 1250){
+				setTimeout(function(){
+					$("section, footer, header").removeClass("disabled");
+					$(thisPopUp).removeClass("active");
+				}, 500);
+			}else{
+				$("section, footer, header").removeClass("disabled");
+				$(this).closest(".pop-up").removeClass("active");
+			}
 		});
 	};
 	//// END of POP-UP
-
+	//// CALC BLOG CARDS
+		function calcCards(elem){
+			if($(elem).length > 0){
+				var elemHeight = $(elem).height();
+				var elemWidth = $(elem).width();
+				var ol = $(elem).offset().left;
+				console.log(ol);
+				$(elem).parent().css({
+					"height": elemHeight,
+					"width": $("body").width(),
+					"marginLeft": -ol,
+				});
+				$(elem).css({
+					"paddingLeft": ol,
+					"paddingRight": ol,
+					"width": $("body").width() + (ol * 2)
+				});
+			}
+		}
+	/////END of CALC BLOG CARDS
+	/////SHOW SMALL MENU
+	$(".small-nav").click(function(e){
+		e.preventDefault();
+		$("header nav").toggleClass("active");
+		$(".overlay-menu").fadeToggle();
+	});
 	
 	
-	hoverFunc("#share-exp");
-	hoverFunc("#we-do");
-	hoverFunc("#contacts");
-	hoverFunc("#port-cases");
 	focusFunc();
 	openPopUp(".link-pop-up-q", "#pop-up-question");
 	openPopUp(".link-pop-up-c", "#pop-up-call");
 	closePopUp();
+	
+	if($(window).width() > 1250){
+		hoverFunc("#share-exp");
+		hoverFunc("#we-do");
+		hoverFunc("#contacts");
+		hoverFunc("#port-cases");
+	}
+	if($(window).width() < 1250 && $(window).width() > 840){
+		calcCards(".mini-articles");
+	}
 
-	$(".top-line").sticky({
-		topSpacing:0,
-		zIndex: 999,
-		widthFromWrapper: false,
-		getWidthFrom: "body"
+	// $(".top-line").sticky({
+	// 	topSpacing:0,
+	// 	zIndex: 999,
+	// 	widthFromWrapper: false,
+	// 	getWidthFrom: "body"
+	// });
+
+	$(window).scroll(function(){
+		var st = $(window).scrollTop();
+		if(st > 0){
+			$(".top-line").addClass("is-sticky");
+		}else{
+			$(".top-line").removeClass("is-sticky")
+		}
+		console.log(st);
 	});
 });
