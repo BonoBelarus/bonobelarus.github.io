@@ -241,7 +241,7 @@ $(document).ready(function(){
 		hoverFunc("#port-cases");
 	}
 	if($(window).width() < 1250 && $(window).width() > 750){
-		calcCards(".mini-articles");
+		//calcCards(".mini-articles");
 	}
 
 	// $(".top-line").sticky({
