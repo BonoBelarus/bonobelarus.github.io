@@ -129,6 +129,22 @@ header
 		left: 0
 		background: #fff
 		transition: .4s
+	nav
+		font-size: 16px
+		.btn-nav
+			display: none
+			a
+				border: 1px solid $accentGreen
+				background: $accentGreen
+		a:hover
+			color: $accentGreen
+			transform: translateY(-5px)
+		.nav-phone
+			a:hover
+				color: #fff
+				transform: none
+				p:last-child
+					border: none
 	.is-sticky
 		height: 70px
 		line-height: 70px
@@ -139,7 +155,23 @@ header
 		.svg-icon--logo_white
 			transform: translateY(-150px)
 		a
-			color: #333
+			color: #232323
+		nav
+			a:hover
+				color: $accentBlue
+		nav
+			.nav-phone
+				a:hover
+					color: #515151
+					transform: none
+					p:first-child
+						color: #515151
+					p:last-child
+						border: none
+						color: $accentBlue
+				a
+					p:last-child
+						color: $accentBlue
 		.logo-txt
 			font-weight: 300
 			line-height: 1.25
@@ -157,18 +189,23 @@ header
 		display: block
 	li
 		display: inline-block
+		line-height: 70px
 		vertical-align: middle
 	li:not(:last-child)
 		margin-right: 45px
-	li:last-child
+	.nav-phone
+		line-height: 1.5em
 		text-align: right
 		p:first-child
 			font-size: 18px
 			font-weight: 700
 			transition: font-size .4s
 		p:last-child
-			font-size: 14px
-			transition: font-size .4s
+			font-size: 12px
+			color: #fff
+			font-weight: 700
+			text-transform: uppercase
+			transition: .4s
 			line-height: 1
 			display: inline-block
 			border-bottom: 1px dashed #88aff0
@@ -182,8 +219,6 @@ header
 		vertical-align: middle
 		p
 			position: relative
-	nav
-		font-size: 16px
 	.btn
 		margin-top: 85px
 		margin-bottom: 30px
@@ -219,39 +254,31 @@ header
 	text-transform: uppercase
 	transition: .3s
 	position: relative
-	box-shadow: 0 0 0 1px #fff
-	overflow: hidden
+	border: 1px solid $accentGreen
 	z-index: 2
 .btn:before
 	@include btn-radius(30px)
 	content: ""
 	position: absolute
 	height: 100%
-	width: 105%
+	width: 100%
 	top: 0
-	left: -105%
-	transition: .25s
-	z-index: -1
-	overflow: hidden
-@keyframes bounceRight
-	25%
-		transform: translateX(7px)
-	50%
-		transform: translateX(-7px)
-	65%
-		transform: translateX(0px)
-	85%
-		transform: translateX(-7px)
+	left: 0
+	z-index: 1
+	box-shadow: 0 0 0 1px rgba($accentGreen, 1)
+@keyframes btnWaving
+	0%
+		opacity: 1
+		transform: scale(1)
 	100%
-		transform: translateX(0px)
+		opacity: 0
+		transform: scale(1.2)
 .btn:hover
 	color: #fff
-	animation: bounceRight .4s forwards .15s
-	box-shadow: 0 5px 15px rgba($accentGreen, .4)
 .btn:hover:before
-	transform: translateX(99%)
+	animation: btnWaving 1s forwards
 #main-top
-	.btn:before
+	.btn
 		background: $accentGreen
 
 .gt-consult
@@ -312,6 +339,18 @@ header
 	top: 0
 	left: 0
 	box-shadow: 0 20px 25px rgba(4, 74, 127, 0.1)
+@keyframes bounceBtn
+	40%
+		transform: translateX(100%)
+	55%
+		transform: translateX(80%)
+	70%
+		transform: translateX(100%)
+	85%
+		transform: translateX(93%)
+	100%
+		transform: translateX(101%)
+	
 .all-services
 	a
 		position: absolute
@@ -319,15 +358,17 @@ header
 		margin-left: -85px
 		top: 50%
 		margin-top: -30px
-		opacity: .5
-		box-shadow: 0 0 0 1px $accentBlue
+		border: none
+		box-shadow: inset 0 0 0 1px $accentBlue
 		color: $accentBlue
+		overflow: hidden
 	.btn:before
+		z-index: -1
+		left: -101%
+		box-shadow: 0 0 0 1px $accentBlue
 		background: $accentBlue
-.all-services a:hover
-	opacity: 1
-.all-services.active a
-	opacity: 1
+.all-services a:hover:before
+	animation: bounceBtn .6s both linear
 
 #cases
 	overflow: hidden
@@ -356,8 +397,10 @@ header
 		.btn
 			background: #e50536
 			color: #fff
-		.btn:hover
-			box-shadow: 0 5px 15px rgba(#e50536, .5)
+			box-shadow: none
+			border: 1px solid #e50536
+		.btn:before
+			box-shadow: 0 0 0 1px #e50536
 		.case-info-layout
 			background: #1c2453
 	>div:nth-child(3n+2),
@@ -384,7 +427,6 @@ header
 		color: #fff
 		display: block
 	.btn
-
 		box-shadow: none
 		margin-top: 35px
 .case-info-content
@@ -434,7 +476,10 @@ header
 	position: relative
 	display: inline-block
 	background: $accentBlue
+	border: 1px solid $accentBlue
 	color: #fff
+.watch-cases:before
+	box-shadow: 0 0 0 1px $accentBlue
 
 #why-ppl-leave
 	padding-bottom: 130px
@@ -499,7 +544,7 @@ header
 		color: #9b9b9b
 		font-size: 22px
 	p:last-child
-		color: #333
+		color: #515151
 		font-size: 18px
 .letter-form
 	width: 45%
@@ -521,8 +566,9 @@ header
 		background: $accentGreen
 		margin-top: 40px
 		font-size: 14px
-	.btn:hover
-		box-shadow: 0 5px 15px rgba($accentGreen, .5)
+		border: 1px solid $accentGreen
+	.btn:before
+		box-shadow: 0 0 0 1px $accentGreen
 .delivery-form
 	div:before
 		background: #fff
@@ -611,10 +657,10 @@ header
 	.btn
 		background: $accentGreen
 		box-shadow: none
-		border: none
+		border: 1px solid $accentGreen
 		color: #fff
-	.btn:hover
-		box-shadow: 0 5px 15px rgba($accentGreen, .3)
+	.btn:before
+		border: none
 #share-exp
 	color: #666
 	font-size: 15px
@@ -656,12 +702,18 @@ header
 		margin-left: 20px
 	.btn
 		margin-top: 100px
-		box-shadow: 0 0 0 1px $accentBlue
+		border: none
+		overflow: hidden
+		box-shadow: inset 0 0 0 1px $accentBlue
 	.btn:before
+		z-index: -1
+		left: -101%
 		background: $accentBlue
 	.btn:hover
-		box-shadow: 0 5px 15px rgba($accentBlue, .5)
 		opacity: 1
+		color: #fff
+	.btn:hover:before
+		animation: bounceBtn .75s both linear
 	.article-img
 		position: relative
 	.article-img:before
@@ -683,7 +735,7 @@ header
 		color: #fff
 	.items
 		font-size: 32px
-		color: #333
+		color: #515151
 		li
 			display: inline-block
 			width: 33.33%
@@ -692,13 +744,32 @@ header
 				margin-bottom: 20px
 				font-size: 26px
 				font-weight: 700
+				color: #333
 		li:last-child
 			a
-				border-bottom: 1px solid #c0d5f7
 				padding-bottom: 5px
-				color: #333
-			a:hover
-				border-bottom: 3px solid #c0d5f7
+				color: #515151
+				position: relative
+			a:after
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				height: 1px
+				width: 100%
+				background: #c0d5f7
+			a:before
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 0
+				height: 1px
+				background: $accentBlue
+				transition: .25s
+				z-index: 2
+			a:hover:before
+				width: 100%
 	.notion
 		width: 660px
 		margin: 55px auto 100px
@@ -743,7 +814,7 @@ footer
 	background: #0e1d49 url(../img/footer-bg.jpg) center no-repeat
 	color: #fff
 	font-size: 16px
-	padding: 110px 0 90px
+	padding: 70px 0 90px
 	.logo-txt,
 	.logo-img
 		display: inline-block
@@ -763,8 +834,11 @@ footer
 .footer-nav
 	.btn
 		text-transform: none
-		opacity: .7
 		margin-top: 50px
+		background: $accentGreen
+	>.btn:hover
+		opacity: 1
+	>.btn:before
 	li
 		margin-bottom: 10px
 		width: 33.33%
@@ -776,6 +850,9 @@ footer
 		display: inline-block
 		opacity: .5
 		border-bottom: 1px dashed #fff
+		transition: .1s
+	.policy:hover
+		border-bottom: 1px dashed transparent
 	p:first-child
 		opacity: 1
 		font-size: 16px
@@ -795,24 +872,32 @@ footer
 		display: inline-block
 		width: 205px
 		line-height: 45px
+		color: #515151
+		vertical-align: top
 		border: none
-		background: transparent
+		background: #fff
 		position: relative
 	.btn
-		margin-left: 15px
+		margin-left: 13px
 		border: none
 		font-size: 12px
 		color: #fff
 		line-height: 45px
 		padding: 0 20px
 		background: $accentGreen
-	.btn:hover
-		box-shadow: 0 5px 15px rgba($accentGreen, .3)
+		box-shadow: none
+		border: 1px solid $accentGreen
 	.form
+		div
+			vertical-align: top
 		div:after
 			height: 0
-.delivery-form
-	margin: 20px 0
+		input
+			transition: .35s
+		input:focus
+			box-shadow: inset 0 0 25px 5px $accentGreen
+	.delivery-form
+		margin: 20px 0
 header.white
 	position: absolute
 	top: 0
@@ -827,9 +912,17 @@ header.white
 	.top-line:before
 		box-shadow: none
 	a
-		color: #333
-	li:last-child p:last-child
+		color: #232323
+	nav
+		a:hover
+			color: $accentBlue
+	.nav-phone p:last-child
 		border-bottom: 1px dashed #d6d6d6
+		color: $accentBlue
+	.nav-phone a:hover
+		color: #515151
+		p:first-child
+			color: #515151
 	.svg-icon--logo_blue
 		top: 50%
 	.logo-img
@@ -862,7 +955,7 @@ header.white
 	a
 		padding: 0 25px
 		display: block
-		color: #333
+		color: #515151
 		position: relative
 #port-items
 	color: #fff
@@ -955,19 +1048,20 @@ header.white
 			text-transform: uppercase
 			margin-bottom: 30px
 		.btn
-			color: #fff
 			margin-top: 60px
+			color: #fff
+			border: 1px solid #fff
+		.btn:before
+			box-shadow: 0 0 0 1px #fff
 #lets-discuss
 	overflow: hidden
-	padding: 150px 0
+	padding: 70px 0
 	text-align: center
 	.btn
-		margin-top: 60px
+		margin-top: 50px
 		color: #fff
-		border: none
+		border: 1px solid $accentGreen
 		background: $accentGreen
-	.btn:hover
-		box-shadow: 0 5px 15px rgba($accentGreen, .4)
 	.circles>div
 		transition: 1s
 	@keyframes waving
@@ -1032,10 +1126,13 @@ header.white
 		line-height: 36px
 		padding: 0 20px
 		font-size: 12px
-		opacity: .7
 		margin-top: 25px
 		color: #1b6ced
-		border: 1px solid #1b6ced
+		border: 1px solid $accentBlue
+		box-shadow: none
+	.btn:before
+		box-shadow: 0 2px 7px rgba($accentBlue, .5)
+		transition: .2s
 	.btn:hover
 		opacity: 1
 
@@ -1075,13 +1172,11 @@ header.white
 		.btn
 			margin-top: 65px
 			color: #fff
-			border: none
+			border: 1px solid $accentGreen
 			background: $accentGreen
 			line-height: 60px
 			font-size: 18px
 			padding: 0 90px
-		.btn:hover
-			box-shadow: 0 5px 15px rgba($accentGreen, .4)
 
 .pop-up.active
 	transform: translateX(-100%)
@@ -1122,8 +1217,8 @@ header.white
 		margin: 0 auto
 		color: #fff
 	.form
-		max-width: 630px
-		margin: 50px auto 0
+		max-width: 700px
+		margin: 50px auto
 		line-height: 1.5em
 		vertical-align: middle
 		display: inline-block
@@ -1137,7 +1232,9 @@ header.white
 		.name,
 		.phone
 			display: inline-block
-			width: 300px
+			width: 335px
+		.email
+			margin-top: 20px
 		button
 			margin-top: 70px
 			line-height: 60px
@@ -1147,21 +1244,255 @@ header.white
 			font-size: 16px
 			font-weight: 700
 			background: $accentGreen
-			border: none
+			border: 1px solid $accentGreen
 			padding: 0 80px
-		button:hover
-			box-shadow: 0 6px 19px rgba(5, 216, 165, 0.54)
+			box-shadow: none
 #pop-up-call
 	h2
 		max-width:  500px
 	.form
 		div
-			display: block
 			margin: 30px auto 0
-		.phone:after
+		.email:after
 			background: #ff2c41
+		.phone,
+		.name
+			width: 270px
+		.phone
+			margin-left: 30px
 .wrap
 	width: 100%
+.layout-bg-color
+	display: none
+#case-top
+	color: #fff
+	height: 100vh
+	line-height: 100vh
+	text-align: center
+	padding-top: 70px
+	h1
+		max-width: 1000px
+	.content
+		text-align: left
+		line-height: 1.5em
+		vertical-align: middle
+		display: inline-block
+	.layout-bg
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		z-index: 2
+		opacity: .85
+	.case-bg
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		img
+			width: 100%
+			height: auto
+	.back-to
+		margin-bottom: 90px
+		padding-left: 25px
+		background: url(../img/arrow-back.png) left center no-repeat
+		opacity: .7
+		a
+			color: #fff
+	.case-link-top
+		a
+			color: #fff
+			padding-bottom: 2px
+			border-bottom: 2px solid #f9423e
+
+#case-descr
+	padding: 140px 0 120px
+.case-descr-sec
+	color: #515151
+	>li
+		display: inline-block
+		width: 33.33%
+		vertical-align: top
+		li
+			position: relative
+			padding-left: 20px
+		li:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 0
+			width: 12px
+			height: 1px
+			background: #2962ff
+	>li:not(:last-child)
+		padding-right: 50px
+	.caption
+		margin-bottom: 20px
+		font-size: 21px
+		font-weight: 700
+		color: #333
+	.pass-off
+		color: #808080
+		font-size: 14px
+		margin-top: 35px
+
+#prototype
+	background: #f6f7fb
+	padding: 150px 0
+	.prototype-clip-mini
+		text-align: center
+		img
+			margin: 0 auto
+			max-width: 100%
+	.clarify
+		margin-bottom: 60px
+
+#design
+	background: #f6f7fb
+	.clarify
+		margin-bottom: 60px
+	.design-long-main
+		text-align: center
+		img
+			max-width: 100%
+			margin: 0 auto
+#inside-pages
+	background: #f6f7fb
+	padding: 150px 0
+	.inside-pages-clip
+		margin-top: 70px
+		text-align: center
+		img
+			margin: 0 auto
+			max-width: 100%
+
+#adaptive
+	background: #f6f7fb
+	h2
+		text-align: left
+		line-height: 1.2em
+	.clarify
+		text-align: left
+		margin-top: 50px
+	.adaptive-img
+		margin-top: 70px
+	img
+		width: 100%
+
+#ad-comp
+	padding: 150px 0
+	color: #515151
+	background: #f6f7fb
+	.clarify
+		color: #515151
+		font-size: 18px
+		max-width: 900px
+	.ad-features
+		font-size: 16px
+		margin-top: 130px
+		ul
+			display: flex
+			justify-content: space-between
+		li
+			width: 33.33%
+			p:first-child
+				color: #333
+				font-size: 36px
+				font-weight: 700
+				margin-bottom: 15px
+	.ad-rev
+		margin-top: 200px
+		padding-left: 200px
+		text-align: center
+		position: relative
+		.ad-box
+			background: #fff
+			display: flex
+			justify-content: flex-end
+			text-align: right
+			max-width: 830px
+			box-shadow: 0 20px 30px rgba(4, 74, 127, 0.1)
+			padding: 40px
+			>div
+				display: inline-block
+		.ad-rev-logo
+			width: 30%
+			margin-right: 5%
+			vertical-align: top
+		.ad-box-txt
+			text-align: left
+			width: 75%
+		.ad-rev-img
+			border: 2px solid #bed0ff
+			box-shadow: 0 20px 30px rgba(4, 74, 127, 0.08)
+			position: absolute
+			top: -75px
+			left: 130px
+			width: 250px
+			img
+				width: 100%
+		.ad-rev-name
+			color: #333
+			font-weight: 700
+			margin-top: 50px
+		.ad-rev-vac
+			font-size: 14px
+			margin-top: 10px
+
+#another-projects
+	padding: 150px 0 0
+	background: #f6f7fb
+	h2
+		margin-bottom: 80px
+	li
+		width: 50%
+		display: inline-block
+		height: 440px
+		a
+			position: relative
+			display: block
+			height: 100%
+			line-height: 440px
+			padding: 0 100px
+		.layout-bg
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			opacity: .9
+			z-index: 99
+			display: block
+			line-height: 1.5em
+		.case-mini-img
+			line-height: 1.5em
+			z-index: 0
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			display: block
+			left: 0
+			overflow: hidden
+			img
+				display: block
+				width: 120%
+		.case-card-txt
+			line-height: 1.5em
+			z-index: 99
+			position: relative
+			margin-bottom: 90px
+			display: inline-block
+			color: #fff
+			vertical-align: bottom
+		.site-name
+			margin-bottom: 20px
+			font-weight: 700
+			font-size: 42px
+		.site-descr
+			color: #f1f2f2
 
 
 @import "media" // Всегда в конце

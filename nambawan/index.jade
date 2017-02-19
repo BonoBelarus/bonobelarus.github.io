@@ -52,10 +52,12 @@ html
 								a(href="#") Блог
 							li
 								a(href="contacts.html") Контакты
-							li
-								a(href="#").link-pop-up-c
+							li.nav-phone
+								a(href="#")
 									p +375 29 517 65 08
 									p Заказать звонок
+							li.btn-nav
+								a(href="#").btn.link-pop-up-q Оставить заявку
 			section#main-top
 				.content
 					h1 
@@ -65,7 +67,7 @@ html
 						p Наша основная специализация — комплексный интернет-маркетинг.
 						p Мы помогаем нашим клиентам получить трафик и конвертировать его в продажи.
 					a(href="#").btn.gt-consult.link-pop-up-q Получить консультацию
-					a(href="#").btn.vw-port Смотреть портфолио
+					a(href="portfolio.html").btn.vw-port Смотреть портфолио
 		section#we-do
 			.layout-wrap
 				.layout-txt
@@ -131,7 +133,7 @@ html
 								li
 									p Управление репутациец (SERM)
 						li.all-services
-							a.btn(href="#") Все услуги
+							a.btn(href="services.html") Все услуги
 		section#cases
 			.layout-wrap
 				.layout-txt
@@ -177,7 +179,7 @@ html
 							.case-descr
 								p Продающий сайт-каталог для компании, занимающейся автополивом газонов
 		.btn-cases
-			a(href="#").btn.watch-cases Смотреть все работы
+			a(href="portfolio.html").btn.watch-cases Смотреть все работы
 		section#why-ppl-leave
 			.content
 				.box-letter
@@ -196,13 +198,16 @@ html
 							p Заполните форму
 							div
 								label(for="") Введите ваше имя
-								input(type="text")
+								input(type="text" name="name")
 							div
-								label(for="") Телефон или почта
-								input(type="text")
+								label(for="") Телефон
+								input(type="text" name="phone")
+							div
+								label(for="") Почта
+								input(type="email" name="email")
 							div
 								label(for="") Адрес сайта
-								input(type="text")
+								input(type="text" name"site")
 							a(href="#").btn Получить рекомендации
 		section#treatment
 			.layout-wrap
@@ -246,32 +251,31 @@ html
 				h2 Делимся опытом
 				.items
 					.items-bg
-					.wrap
-						ul.mini-articles
-							li
-								a(href="#")
-									.article-img
-										img(src="img/mini-article-1.jpg", alt="")
-									.article-mini-text
-										.caption
-											p Контент стратегия и вебдизайн: как это работает
-										p Контент-стратегия — это ваш план по созданию и публикации контента, а также как он со временем живет и развивается. 
-							li
-								a(href="#")
-									.article-img
-										img(src="img/mini-article-2.jpg", alt="")
-									.article-mini-text
-										.caption
-											p Невидимые силы: размер, контраст и баланс
-										p Контент-стратегия — это ваш план по созданию и публикации контента, а также как он со временем живет и развивается. 
-							li
-								a(href="#")
-									.article-img
-										img(src="img/mini-article-3.jpg", alt="")
-									.article-mini-text
-										.caption
-											p Системы дизайна в сложных местах
-										p Контент-стратегия — это ваш план по созданию и публикации контента, а также как он со временем живет и развивается.
+					ul.mini-articles
+						li
+							a(href="#")
+								.article-img
+									img(src="img/mini-article-1.jpg", alt="")
+								.article-mini-text
+									.caption
+										p Контент стратегия и вебдизайн: как это работает
+									p Контент-стратегия — это ваш план по созданию и публикации контента, а также как он со временем живет и развивается. 
+						li
+							a(href="#")
+								.article-img
+									img(src="img/mini-article-2.jpg", alt="")
+								.article-mini-text
+									.caption
+										p Невидимые силы: размер, контраст и баланс
+									p Контент-стратегия — это ваш план по созданию и публикации контента, а также как он со временем живет и развивается. 
+						li
+							a(href="#")
+								.article-img
+									img(src="img/mini-article-3.jpg", alt="")
+								.article-mini-text
+									.caption
+										p Системы дизайна в сложных местах
+									p Контент-стратегия — это ваш план по созданию и публикации контента, а также как он со временем живет и развивается.
 			a.btn(href="") Перейти в блог
 		section#contacts
 			.layout-wrap
@@ -333,9 +337,7 @@ html
 						p E-mail рассылка
 						p Опыт, идеи, новости, обратная связь
 						.delivery-form.form
-							div
-								label(for="") Введите E-mail
-								input(type="text")
+							input(type="text" placeholder="Введите E-mail")
 							a.btn(href="#") Подписаться
 						a.policy(href="#") Политика конфиденциальности
 		.pop-up#pop-up-call
@@ -343,14 +345,17 @@ html
 				a(href="#")
 					img(src="img/close.png", alt="")
 			.content
-				h2 Заказать обратный звонок
 				form.form
+					h2 Заказать обратный звонок
 					.name
 						label(for="") Ваше имя
-						input(type="text")
+						input(type="text" name="name")
 					.phone
-						label(for="") Телефон или почта
-						input(type="text")
+						label(for="") Телефон
+						input(type="tel" name="phone")
+					.email
+						label(for="") Почта
+						input(type="email" name="email")
 					button(type="submit").btn Отправить
 		.pop-up#pop-up-question
 			.close
@@ -361,16 +366,20 @@ html
 					h2 Расскажите о своем проекте или задайте вопрос
 					.name
 						label(for="") Ваше имя
-						input(type="text")
+						input(type="text" name="name")
 					.phone
-						label(for="") Телефон или почта
-						input(type="text")
+						label(for="") Телефон
+						input(type="tel" name="phone")
+					.email
+						label(for="") Почта
+						input(type="email" name="email")
 					.comment
 						label(for="") Комментарий
-						input(type="text")
+						input(type="text" name="comment")
 					button(type="submit").btn Отправить
 
 
 
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+		script(src="js/jquery.fancybox.js")
 		script(src="js/scripts.min.js")

@@ -4,11 +4,12 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1250px)
+@media only screen and (max-width : 1050px)
 	body
-		min-width: 840px
+		min-width: 100%
 	.content
-		width: 750px
+		width: 100%
+		padding: 0 20px
 	.small-nav
 		position: relative
 		cursor: pointer
@@ -46,47 +47,66 @@
 		width: 100%
 		height: 100%
 		background: rgba(0, 0, 0, .9)
-	nav
+	header nav
 		z-index: 13
 		position: relative
-		@keyframes slideNav
-			50%
-				right: 10px
-			75%
-				right: -10px
-			100%
-				opacity: 1
-				right: 0px
 		ul
-			position: absolute
-			padding: 30 0px
-			top: 100%
-			margin-top: 10px
-			right: -200px
-			opacity: 0
-			text-align: right
+			overflow: auto
+			height: 100vh
+			position: fixed
+			padding: 50px 0
+			top: -100%
+			right: 0
+			width: 100vw
 			transition: .55s
-			font-size: 21px
+			font-size: 28px
+			z-index: -3
 			line-height: 2em
+			text-align: center
+			font-weight: 700
+			background: $accentBlue
+		.btn-nav
+			display: block
+			font-size: 21px
+			a
+				display: inline-block
+				line-height: 60px
+				height: 60px
 		ul:before
 			content: ""
 			position: absolute
 			width: 100%
-			height: 100%
-			background: #fff
+			height: 100vh
+			background: $accentBlue
 			top: 0
-			opacity: 0
-			right: -200px
+			right: 0
 			z-index: -1
 		li
 			display: block
-		li:last-child
-			display: none
+			position: relative
+			top: -100px
+			opacity: 0
+		.nav-phone
+			margin-top: 50px
+			text-align: center
+			line-height: 2em
+			p:first-child
+				font-size: 31px
+			p:last-child
+				color: #fff
+				font-size: 21px
 	nav.active
 		div
 			opacity: 0
 		ul
-			animation: slideNav .55s forwards
+			top: 0
+		li
+			transition: .7s ease
+			top: 0
+			opacity: 1
+
+		
+			//animation: slideNav .55s forwards
 	nav.active .small-nav:before
 		transform: rotateZ(45deg)
 		top: 10px
@@ -98,30 +118,44 @@
 	header li:not(:last-child)
 		margin: 0
 	header
-		#sticky-wrapper
-			top: 0px
+		.top-line
+			.content
+				padding-left: 0
+		.top-line.active:before
+			background: #2962ff
+		.top-line.active
+			.small-nav:before,
+			.small-nav:after,
+			.small-nav div
+				background: #fff
+			.logo
+				a
+					color: #fff
+			nav
+				ul
+					width: 100vw
+				a
+					color: #fff
 		.is-sticky
 			.small-nav:before,
 			.small-nav:after,
 			.small-nav div
 				background: #333
 			nav ul
-				padding: 30px
-			nav ul:before
-				animation: slideNav .8s forwards
+				padding: 50px 0
+				a
+					color: #fff
+	header .is-sticky nav .nav-phone a p:last-child
+		color: #fff
 	header.white
 		z-index: 100
 		ul
-			margin-top: 30px
-			background: #fff
 			padding: 30px
 		.small-nav:before,
 		.small-nav:after,
 		.small-nav div
 			background: #2962ff
 		.is-sticky
-			ul
-				margin-top: 15px
 			ul:before
 				animation: none
 	header.index
@@ -139,10 +173,8 @@
 			justify-content: flex-start
 			>li
 				margin-top: 80px
-				padding: 0
-				width: 40%
-			>li:nth-child(odd)
-				margin-right: 20%
+				padding: 0 20px
+				width: 300px
 	#cases .layout-txt
 		font-size: 211px
 	.case-illu
@@ -213,7 +245,7 @@
 			margin-top: 0
 			text-align: left
 			li
-				width: 230px
+				width: 30%
 	#share-exp li:not(:first-child)
 		margin-left: 25px
 	#contacts .layout-txt
@@ -240,6 +272,15 @@
 			display: none
 		.btn
 			margin-bottom: 50px
+			vertical-align: top
+	.delivery
+		.form
+			.btn
+				margin-top: 0
+	.footer-nav ul
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
 	.footer-nav li
 		width: 18%
 
@@ -290,17 +331,92 @@
 		li
 			margin-top: 10px
 	#port-items li
-		display: block
+		height: 350px
+		img
+			height: 120%
+			width: auto
+	#port-items .active-content
+		padding: 25px
+		.btn
+			position: absolute
+			bottom: 20px
+			left: 50%
+			padding: 0
+			margin-left: -107px
+			width: 214px
+	#port-items .site-name
+		font-size: 31px
 		width: 100%
+		margin: 0
+		vertical-align: middle
+		text-align: center
+	#port-items .item-info
+		line-height: 350px
 	
 	#cont .items
 		display: flex
-		justify-content: space-between
+		justify-content: space-around
 		font-size: 21px
 		li
 			width: auto
 	#cont .form label
 		font-size: 16px !important
+	#cont .contact-box
+		width: 710px
+	#cont .contact-box input
+		width: 270px
+
+	#case-top
+		height: auto
+		line-height: 1.5em
+		padding: 150px 0 100px
+		.case-bg
+			img
+				height: 100%
+				width: auto
+	#case-descr
+		padding: 100px 0
+	#prototype
+		padding: 100px 0
+		.clarify
+			margin-top: 30px
+	#design
+		.clarify
+			margin-top: 30px
+	#inside-pages
+		padding: 100px 0
+	#adaptive
+		text-align: center
+		img
+			margin: 0 auto
+			max-width: 100%
+	#ad-comp
+		padding: 100px 0
+	#ad-comp .ad-features
+		margin-top: 70px
+	#ad-comp .ad-rev .ad-rev-img
+		left: -15px
+	#ad-comp .ad-rev
+		margin: 150px auto 0
+		max-width: 650px
+		padding-left: 115px
+	#another-projects
+		padding: 100px 0 0
+	#another-projects li a
+		padding: 0 50px
+	#another-projects li .site-name
+		font-size: 31px
+	#another-projects
+		.case-mini-img
+			img
+				height: 100%
+				width: auto
+	#contacts
+		padding: 100px 0
+	#contacts .items
+		font-size: 21px
+	#contacts .notion
+		margin: 30px 0 50px
 	/**/
 
 
@@ -317,8 +433,6 @@
 		padding: 0 15px
 	header.index section
 		padding: 100px 0 40px
-	header .svg-icon--logo_white
-		left: 20px
 	header .top-line
 		position: fixed
 
@@ -326,8 +440,6 @@
 		font-size: 19px
 	.logo-txt p:last-child
 		font-size: 9px
-	.svg-icon--logo_blue-dims
-		transform: scale(.8)
 	.svg-icon--logo_white-dims
 		transform: scale(.8)
 	.small-nav div, .small-nav:after, .small-nav:before
@@ -421,7 +533,7 @@
 		margin-left: 0
 	.letter-form form
 		padding: 40px 15px
-		width: 100%
+		width: 95%
 	.letter-form .btn
 		line-height: 1.3em
 		padding: 15px 30px
@@ -483,6 +595,9 @@
 			margin-bottom: 25px
 	.delivery .btn
 		margin-top: 25px
+	.delivery-form
+		input
+			margin-bottom: 20px
 	
 
 	.pop-up .form .name,
@@ -495,6 +610,10 @@
 	.pop-up .close
 		top: 20px
 		right: 20px
+	#pop-up-call .form .name, #pop-up-call .form .phone
+		width: 100%
+		margin-right: 0
+		margin-left: 0
 	
 	#services
 		padding: 150px 0 100px
@@ -530,16 +649,17 @@
 	#port-cases
 		.items
 			ul
-				text-align: left
+				text-align: center
+				margin: 0 auto
 				li
-					width: 50%
 					display: inline-block
 					margin-right: 0
 	#port-items li
 		height: 350px
+		width: 100%
 	#port-items img
 		width: auto
-		height: 100%
+		height: 120%
 	#port-items .active-content
 		padding: 25px
 		.btn
@@ -578,6 +698,69 @@
 		margin: 50px auto 0
 		padding: 0
 		text-align: center
+
+	#ad-comp, #case-descr, #inside-pages, #prototype
+		padding: 70px 0
+	#case-top .back-to
+		margin-bottom: 50px	
+	#case-top
+		padding-bottom: 70px
+		h1
+			margin: 30px 0
+			font-size: 21px
+	.case-descr-sec>li
+		margin-top: 50px
+		width: 100%
+
+	#ad-comp .ad-rev
+		padding: 0
+	#ad-comp .ad-rev .ad-box
+		max-width: 100%
+		padding: 30px
+		.ad-box-txt
+			width: 100%
+	#ad-comp .ad-rev .ad-rev-img
+		position: relative
+		margin: 0 auto
+		left: 0
+	#ad-comp
+		h2
+			line-height: 1.2em
+		.clarify
+			margin-top: 50px
+	#ad-comp .ad-features
+		margin-top: 50px
+	#ad-comp .ad-features ul
+		justify-content: center
+		flex-wrap: wrap
+		li
+			width: 50%
+			text-align: center
+		li:last-child
+			margin-top: 40px
+	
+	#lets-discuss .circle
+		animation: none
+
+	#another-projects
+		h2
+			font-size: 31px
+			line-height: 1.2em
+		li
+			width: 100%
+	#another-projects li .case-mini-img img
+		width: auto
+		height: 120%
+	
+	#prototype
+		h2
+			font-size: 28px
+	
+	#inside-pages
+		h2
+			line-height: 1.2em
+		.clarify
+			margin-top: 50px
 	/**/
 
 
@@ -588,6 +771,9 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	#ad-comp .ad-features ul li
+		width: 100%
+		margin-top: 40px
 	/**/
 
 

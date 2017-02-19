@@ -225,6 +225,7 @@ $(document).ready(function(){
 	$(".small-nav").click(function(e){
 		e.preventDefault();
 		$("header nav").toggleClass("active");
+		$("header .top-line").toggleClass("active");
 		$(".overlay-menu").fadeToggle();
 	});
 	
@@ -279,6 +280,17 @@ $(document).ready(function(){
 	(function(){
 		if($(".ad-rev-logo img").length < 1){
 			$(".ad-rev-logo").detach();
+		}
+	})();
+
+	(function(){
+		var navArr = $("header nav li");
+		var delay = 0;
+		for(var i = 0; i < navArr.length; i++){
+			delay += 0.15;
+			$(navArr[i]).css({
+				"transition-delay": delay + "s"
+			});
 		}
 	})();
 
