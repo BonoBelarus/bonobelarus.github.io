@@ -261,11 +261,26 @@ $(document).ready(function(){
 	}
 	stickyHeader();
 	$(window).scroll(function(){
-		var st = $(window).scrollTop();
-		if(st > 0){
-			$(".top-line").addClass("is-sticky");
-		}else{
-			$(".top-line").removeClass("is-sticky")
-		}
+		stickyHeader();
 	});
+
+	(function(){
+		if($(".layout-bg").length > 0){
+			var elemArr = $(".layout-bg")
+			for(var i = 0; i<elemArr.length; i++){
+				var color = $(elemArr[i]).find(".layout-bg-color").text().trim();
+				$(elemArr[i]).css({
+					"background": color
+				});
+			}
+		}
+	})();
+
+	(function(){
+		if($(".ad-rev-logo img").length < 1){
+			$(".ad-rev-logo").detach();
+		}
+	})();
+
+	$(".fancybox").fancybox();
 });
