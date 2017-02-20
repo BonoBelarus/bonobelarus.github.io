@@ -89,6 +89,9 @@ $(document).ready(function(){
 				});
 			}
 			$(item).find(".items>ul>li").hover(function(){
+				if($(this).hasClass("all-services") == true){
+					return;
+				}
 				$(item).find(".items>ul>li").removeClass("active");
 				var height, width, left, top;
 				if(item == "#share-exp"){
@@ -162,7 +165,7 @@ $(document).ready(function(){
 			$(this).closest("div").addClass("active");
 			$(this).closest("div").find("label").css({
 				"fontSize": "12px",
-				"transform": "translateY(-105%)"
+				"transform": "translateY(-95%)"
 			});
 		});
 		$(".form").find("input").blur(function(){
