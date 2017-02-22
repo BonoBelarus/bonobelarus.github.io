@@ -52,7 +52,7 @@ html
 								a(href="#") Блог
 							li
 								a(href="contacts.html") Контакты
-							li.nav-phone
+							li.nav-phone.link-pop-up-c
 								a(href="#")
 									p +375 29 517 65 08
 									p Заказать звонок
@@ -134,7 +134,7 @@ html
 									p Управление репутациец (SERM)
 						li.all-services
 							a.btn(href="services.html") Все услуги
-		section#cases
+		section#cases.port-items
 			.layout-wrap
 				.layout-txt
 					p Кейсы
@@ -142,11 +142,13 @@ html
 				h2 Наши работы
 				.clarify
 					p Разрабатываем продукты на основе бизнес-требований
-			.cases
-				.case-info
+			ul.cases
+				li
 					.case-bg
 						img(src="img/mgl-case.jpg", alt="")
-					.case-info-layout
+					.layout-bg
+						.layout-bg-color
+							p #061147
 					.case-illu
 						img(src="img/mgl-mini.png", alt="")
 					.content
@@ -163,21 +165,38 @@ html
 						.case-descr
 							p Адаптивный корпоративный сайт-каталог для официального представительства ЗАО «Могилевский комбинат силикатных изделий» в России.
 						a(href="#").btn Смотреть кейс
-				.case-info
-					a(href="#")
-						.case-info-content
-							h3 Action-studio.by
-							.case-descr
+				li
+					.item-info
+						.layout-bg
+						img(src="img/mgl-case.jpg", alt="")
+						.item-cont-box
+							.site-name
+								p Action-studio.by
+							.site-descr
 								p Имиджевый сайт для студии видеопродакшена
-				.case-info
-					a(href="#")
-						.case-bg
-							img(src="img/gerona-case.jpg", alt="")
-						.case-info-layout
-						.case-info-content
-							h3 Gerona.by
-							.case-descr
-								p Продающий сайт-каталог для компании, занимающейся автополивом газонов
+					.active-content
+						p сайт
+						.site-name
+							p Action-studio.by
+						.item-descr
+							p Имиджевый сайт для студии видеопродакшена
+						a.btn(href="#") Смотреть кейс
+				li
+					.item-info
+						.layout-bg
+						img(src="img/mgl-case.jpg", alt="")
+						.item-cont-box
+							.site-name
+								p Gerona.by
+							.site-descr
+								p Продающий сайт-каталог для компании, занимающейся автополивом газонов 
+					.active-content
+						p сайт
+						.site-name
+							p Gerona.by
+						.item-descr
+							p Продающий сайт-каталог для компании, занимающейся автополивом газонов 
+						a.btn(href="#") Смотреть кейс
 		.btn-cases
 			a(href="portfolio.html").btn.watch-cases Смотреть все работы
 		section#why-ppl-leave

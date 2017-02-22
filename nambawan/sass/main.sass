@@ -94,6 +94,9 @@ header.index
 	align-items: center
 	line-height: 1.7em
 	height: 100%
+h2+.clarify
+	color: #515151
+	font-size: 18px
 header
 	position: relative
 	z-index: 11
@@ -132,13 +135,14 @@ header
 	nav
 		font-size: 16px
 		.btn-nav
+			margin-top: 50px
 			display: none
 			a
 				border: 1px solid $accentGreen
 				background: $accentGreen
 		a:hover
 			color: $accentGreen
-			transform: translateY(-5px)
+			transform: translateY(-3px)
 		.nav-phone
 			a:hover
 				color: #fff
@@ -162,22 +166,24 @@ header
 		nav
 			.nav-phone
 				a:hover
-					color: #515151
+					color: #333
 					transform: none
 					p:first-child
-						color: #515151
+						color: #333
 					p:last-child
 						border: none
 						color: $accentBlue
 				a
 					p:last-child
 						color: $accentBlue
+						border-bottom: 1px dashed $accentBlue
 		.logo-txt
 			font-weight: 300
 			line-height: 1.25
 			p:first-child
 				font-size: 26px
 			p:last-child
+				font-weight: 400
 				font-size: 12px
 		.logo-img
 			transform: scale(.8)
@@ -206,10 +212,9 @@ header
 			font-weight: 700
 			text-transform: uppercase
 			transition: .4s
-			line-height: 1
 			display: inline-block
-			border-bottom: 1px dashed #88aff0
-			opacity: .7
+			line-height: 1.2em
+			border-bottom: 1px dashed #fff
 	.logo-img
 		margin-right: 10px
 		transition: .4s
@@ -244,7 +249,8 @@ header
 	p:last-child
 		transition: font-size .4s, color 0s
 		font-size: 14px
-		opacity: .7
+		font-weight: 400
+		opacity: .8
 .btn
 	@include btn-radius(30px)
 	font-weight: 700
@@ -278,12 +284,15 @@ header
 .btn:hover:before
 	animation: btnWaving 1s forwards
 #main-top
+	h1+.clarify
+		font-size: 18px
 	.btn
 		background: $accentGreen
+	.vw-port
+		background: transparent
 
 .gt-consult
 	margin-right: 30px
-
 #we-do
 	background: #f6f7fb
 	padding: 130px 0 100px
@@ -338,6 +347,7 @@ header
 	height: 0
 	top: 0
 	left: 0
+	opacity: 0
 	box-shadow: 0 20px 25px rgba(4, 74, 127, 0.1)
 @keyframes bounceBtn
 	40%
@@ -373,8 +383,6 @@ header
 #cases
 	overflow: hidden
 	padding: 130px 0 0
-	.clarify
-		color: #848484
 	.layout-txt
 		font-size: 332px
 		color: #f6f7fb
@@ -385,68 +393,110 @@ header
 	text-align: center
 	margin-top: 100px
 	color: #f1f2f2
-	>div
+	.content
+		height: auto
+	>li
 		vertical-align: top
 		display: inline-block
-	>div:nth-child(3n+1)
+	>li:nth-child(3n+1)
 		width: 100%
+		line-height: 1.5em
+		height: auto
+		padding: 210px 175px
+		text-align: left
+		.tags
+			margin-top: 20px
+			line-height: 26px
+			font-size: 14px
+			li
+				width: auto
+				height: auto
+				background: transparent
+				display: inline-block
+				line-height: 26px 
+				@include btn-radius(13px)	
+				display: inline-block
+				margin: 5px
+				border: 1px solid #fff
+				padding: 0 20px
 		h3, .tags, .case-descr
 			max-width: 450px
 		h3
 			font-size: 57px
+			line-height: 1.5em
 		.btn
 			background: #e50536
 			color: #fff
 			box-shadow: none
+			margin-top: 50px
 			border: 1px solid #e50536
 		.btn:before
 			box-shadow: 0 0 0 1px #e50536
-		.case-info-layout
-			background: #1c2453
-	>div:nth-child(3n+2),
-	>div:nth-child(3n+3)
+		.case-bg
+			img
+				height: 120%
+	>li:nth-child(3n+2),
+	>li:nth-child(3n+3)
 		width: 50%
 		line-height: 440px
 		height: 440px
 		h3
 			position: relative
 			font-size: 42px
-	>div:nth-child(3n+2)
+	>li:nth-child(3n+2)
 		background: #ee3438
 		padding: 0 115px
-	>div:nth-child(3n+3)
+	>li:nth-child(3n+3)
 		padding: 0 90px
-		.case-info-layout
-			background: #187b1f
-			opacity: .8
+.case-info:hover
+	.active-content
+		transform: translateY(100%)
+	.case-info-content
+		transition: .55s
+		transform: translateY(100%)
 .case-info
 	text-align: left
 	position: relative
 	padding: 210px 0 120px
-	>a
-		color: #fff
-		display: block
+	overflow: hidden
+	.layout-bg
+		height: 100%
+		opacity: .8
+		position: absolute
+		width: 100%
+		top: 0
+		left: 0
+		z-index: 1
+	.active-content
+		position: absolute
+		top: -100%
+		height: 100%
+		width: 100%
+		left: 0
+		background: red
+		transition: .35s
+		line-height: 1.4em
 	.btn
 		box-shadow: none
 		margin-top: 35px
 .case-info-content
 	display: inline-block
 	line-height: 1.5em
-	vertical-align: bottom
-	margin-bottom: 100px
-.case-bg
-	overflow: hidden
-	width: 100%
-	height: 100%
+	position: absolute
 	top: 0
 	left: 0
+	height: 100%
+	width: 100%
+	transition: .45s
+	vertical-align: bottom
+	margin-bottom: 100px
+.case-box
+	padding: 0 90px
 	position: absolute
-	img
-		position: absolute
-		left: 0
-		top: 0
-		height: inherit
-		width: inherit
+	top: 250px
+	left: 0
+	z-index: 2
+	display: inline-block
 .case-info-layout
 	position: absolute
 	width: 100%
@@ -458,20 +508,13 @@ header
 	position: absolute
 	bottom: 0
 	right: 0
+	width: 800px
+	height: 650px
+	z-index: 2
 .case-descr, .tags
 	opacity: .8
 .case-descr
 	margin-top: 20px
-.tags
-	margin-top: 20px
-	line-height: 26px
-	font-size: 14px
-	li
-		@include btn-radius(13px)	
-		display: inline-block
-		margin: 5px
-		border: 1px solid #fff
-		padding: 0 20px
 .watch-cases
 	position: relative
 	display: inline-block
@@ -556,6 +599,8 @@ header
 		box-shadow: 0 20px 40px rgba(4, 74, 127, 0.15)
 		width: 370px
 		background: #f6f7fb
+		input
+			margin-top: 33px
 	p
 		color: #231f20
 		font-size: 24px
@@ -601,12 +646,12 @@ header
 		display: inline-block
 		text-align: left
 		position: absolute
+		text-transform: uppercase
 		bottom: 0
 		left: 0
 		width: 100%
 		line-height: 2.3em
 	input
-		padding-left: 15px
 		line-height: 30px
 		margin-top: 20px
 		position: relative
@@ -652,8 +697,6 @@ header
 		width: 50%
 	li:nth-child(2)
 		text-align: right
-	.clarify
-		opacity: .8
 	.btn
 		background: $accentGreen
 		box-shadow: none
@@ -661,6 +704,8 @@ header
 		color: #fff
 	.btn:before
 		border: none
+	.clarify
+		color: #fff
 #share-exp
 	color: #666
 	font-size: 15px
@@ -768,6 +813,8 @@ header
 				background: $accentBlue
 				transition: .25s
 				z-index: 2
+			a:hover
+				color: $accentBlue
 			a:hover:before
 				width: 100%
 	.notion
@@ -838,10 +885,16 @@ footer
 		background: $accentGreen
 	>.btn:hover
 		opacity: 1
-	>.btn:before
+	>.btn
+		opacity: .7
+		background: transparent
 	li
 		margin-bottom: 10px
 		width: 33.33%
+		a
+			opacity: .7
+		a:hover
+			opacity: 1
 .delivery
 	font-size: 14px
 	p
@@ -893,9 +946,10 @@ footer
 		div:after
 			height: 0
 		input
+			padding: 0 15px
 			transition: .35s
 		input:focus
-			box-shadow: inset 0 0 25px 5px $accentGreen
+			box-shadow: inset 0 0 0 1px $accentBlue, 0 0 15px rgba(255,255,255,.7)
 	.delivery-form
 		margin: 20px 0
 header.white
@@ -917,12 +971,12 @@ header.white
 		a:hover
 			color: $accentBlue
 	.nav-phone p:last-child
-		border-bottom: 1px dashed #d6d6d6
+		border-bottom: 1px dashed $accentBlue
 		color: $accentBlue
 	.nav-phone a:hover
-		color: #515151
+		color: #333
 		p:first-child
-			color: #515151
+			color: #333
 	.svg-icon--logo_blue
 		top: 50%
 	.logo-img
@@ -930,14 +984,16 @@ header.white
 	.is-sticky
 		line-height: 70px
 		height: 70px
+		.nav-phone a:hover
+			color: #333
+			p:first-child
+				color: #333
 		.svg-icon--logo_blue
 			transform: none
 		.logo-img
 			margin-right: 5px
 #port-cases
 	padding: 220px 0 60px
-	.clarify
-		color: #848484
 	.items
 		padding: 0
 .kinds
@@ -959,6 +1015,7 @@ header.white
 		position: relative
 #port-items
 	color: #fff
+.port-items
 	.layout-bg
 		opacity: .9
 		position: absolute
@@ -1024,13 +1081,26 @@ header.white
 		top: 0
 		left: 0
 		z-index: 2
+		>img
+			height: 120%
+			width: auto
+		.site-name
+			text-align: left
+			width: 100%
+			margin-bottom: 0
+			margin-left: 0
+			vertical-align: bottom
+			display: inline-block
+		.site-descr
+			max-width: 500px
+			opacity: .8
 		a
 			display: block
 			height: 100%
 			width: 100%
 			color: inherit
 	.active-content
-		transition: .75s
+		transition: .55s
 		line-height: 1.4em
 		position: absolute
 		height: 100%
@@ -1048,11 +1118,25 @@ header.white
 			text-transform: uppercase
 			margin-bottom: 30px
 		.btn
-			margin-top: 60px
+			margin-top: 35px
 			color: #fff
+			opacity: .7
 			border: 1px solid #fff
+		.btn:hover
+			opacity: 1
 		.btn:before
 			box-shadow: 0 0 0 1px #fff
+.item-cont-box
+	line-height: 1.5em
+	display: inline-block
+	vertical-align: bottom
+	width: 100%
+	position: absolute
+	z-index: 2
+	top: 250px
+	text-align: left
+	left: 0
+	padding: 0 115px
 #lets-discuss
 	overflow: hidden
 	padding: 70px 0
@@ -1082,20 +1166,37 @@ header.white
 		top: 50%
 		border-radius: 50%
 		transform-origin: center
+		top: 50%
+		left: 50%
+		box-shadow: 0 0 1px 1px #eaecf4
 	.c1
-		animation: waving 12s infinite linear
+		width: 100px
+		height: 100px
+		margin-top: -50px
+		margin-left: -50px
+		//animation: waving 12s infinite linear
 	.c2
-		animation: waving 12s infinite linear 3s
+		width: 350px
+		height: 350px
+		margin-top: -175px
+		margin-left: -175px
+		//animation: waving 12s infinite linear 3s
 	.c3
-		animation: waving 12s infinite linear 6s
+		width: 600px
+		height: 600px
+		margin-top: -300px
+		margin-left: -300px
+		//animation: waving 12s infinite linear 6s
 	.c4
-		animation: waving 12s infinite linear 9s
+		width: 1000px
+		height: 1000px
+		margin-top: -500px
+		margin-left: -500px
+		//animation: waving 12s infinite linear 9s
 
 #services
 	background: #f6f7fb
 	padding: 230px 0 130px
-	.clarify
-		color: #848484
 	.svg-icon
 		margin: 0 auto
 .ser-items
@@ -1121,20 +1222,21 @@ header.white
 		display: inline-block
 		vertical-align: top
 	.ft-img
+		height: 70px
 		margin-bottom: 20px
 	.btn
 		line-height: 36px
 		padding: 0 20px
 		font-size: 12px
-		margin-top: 25px
-		color: #1b6ced
-		border: 1px solid $accentBlue
+		margin-top: 0
+		color: $accentBlue
 		box-shadow: none
+		border: none
 	.btn:before
-		box-shadow: 0 2px 7px rgba($accentBlue, .5)
+		box-shadow: none
 		transition: .2s
 	.btn:hover
-		opacity: 1
+		color: $accentGreen
 
 #cont
 	padding: 230px 0 200px
@@ -1270,7 +1372,17 @@ header.white
 	line-height: 100vh
 	text-align: center
 	padding-top: 70px
+	.adaptive
+		position: relative
+		height: 30px
+		top: -25px
+		img
+			height: initial
+			white-space: initial
 	h1
+		position: relative
+		top: -30px
+		margin: 50px 0
 		max-width: 1000px
 	.content
 		text-align: left
@@ -1289,13 +1401,16 @@ header.white
 		position: absolute
 		width: 100%
 		height: 100%
+		overflow: hidden
 		top: 0
 		left: 0
 		img
 			width: 100%
 			height: auto
 	.back-to
-		margin-bottom: 90px
+		position: relative
+		top: -25px
+		margin-bottom: 70px
 		padding-left: 25px
 		background: url(../img/arrow-back.png) left center no-repeat
 		opacity: .7
@@ -1386,8 +1501,6 @@ header.white
 	color: #515151
 	background: #f6f7fb
 	.clarify
-		color: #515151
-		font-size: 18px
 		max-width: 900px
 	.ad-features
 		font-size: 16px

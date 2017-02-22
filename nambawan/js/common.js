@@ -90,6 +90,10 @@ $(document).ready(function(){
 			}
 			$(item).find(".items>ul>li").hover(function(){
 				if($(this).hasClass("all-services") == true){
+					$(item).find(".items li").removeClass("active");
+					$(item).find(".items-bg").css({
+						"opacity": "0"
+					});
 					return;
 				}
 				$(item).find(".items>ul>li").removeClass("active");
@@ -183,7 +187,7 @@ $(document).ready(function(){
 	function openPopUp(link, target){
 		$(link).click(function(e){
 			e.preventDefault();
-			$("section, footer, header").addClass("disabled");
+			//$("section, footer, header").addClass("disabled");
 			$(target).addClass("active");
 		});
 	}
@@ -194,7 +198,7 @@ $(document).ready(function(){
 			var thisPopUp = $(this).closest(".pop-up");
 			if($(window).width() < 1250){
 				setTimeout(function(){
-					$("section, footer, header").removeClass("disabled");
+					//$("section, footer, header").removeClass("disabled");
 					$(thisPopUp).removeClass("active");
 				}, 500);
 			}else{
