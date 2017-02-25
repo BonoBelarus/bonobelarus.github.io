@@ -68,7 +68,6 @@ $(document).ready(function(){
 					"borderBottomRightRadius": "16px",
 					"borderBottomLeftRadius": "16px"
 				});
-				$(item).find(".items ul li:first-child").addClass("active");
 				var leftI = $(item).find(".items ul>li:first-child").position().left;
 				var topI = $(item).find(".items ul>li:first-child").position().top;
 				var widthI = $(item).find(".items ul>li:first-child").outerWidth();
