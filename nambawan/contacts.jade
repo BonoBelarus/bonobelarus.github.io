@@ -75,14 +75,17 @@ html
 						p Обратная связь
 						div
 							label(for="") Введите ваше имя
-							input(type="text")
+							input(type="text" required)
 						div
-							label(for="") Телефон или почта
-							input(type="text")
+							label(for="") Телефон
+							input(type="text" required)
 						div
+							label(for="") Почта
+							input(type="text")
+						div.comment
 							label(for="") Комментарий
-							input(type="text")
-						a.btn(href="#") Отправить
+							textarea(rows="1")
+						button.btn(href="#") Отправить
 		footer
 			.content
 				ul.footer-cont

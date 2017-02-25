@@ -147,8 +147,8 @@ header
 			a:hover
 				color: #fff
 				transform: none
-				a:last-child
-					border: none
+			a:last-child:hover
+				border: none
 	.is-sticky
 		height: 70px
 		line-height: 1em
@@ -698,6 +698,11 @@ header
 	.comment
 		label
 			margin-bottom: 5px
+.contact-box
+	textarea
+		border-bottom: 2px solid #e9ebf2
+#cont .contact-box .comment
+	margin-top: 50px
 #treatment
 	padding: 130px 0 200px
 	overflow: hidden
@@ -1015,10 +1020,10 @@ header.white
 	.nav-phone a:last-child
 		border-bottom: 1px dashed $accentBlue
 		color: $accentBlue
-	.nav-phone a:hover
-		color: #333
-		a:first-child
-			color: #333
+	.nav-phone
+		a:last-child:hover
+			border-bottom: none
+			color: $accentBlue
 	.svg-icon--logo_blue
 		top: 50%
 	.logo-img
