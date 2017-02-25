@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+	$('textarea').autoResize()
 	
 	var parallax = function(item){
 		if($(item).length>0) {
@@ -162,9 +163,21 @@ $(document).ready(function(){
 	}
 	///// END of HOVER
 	///// FOCUS
+	$('.form').find('textarea').focus(function(){
+		
+	});
+	$('.form').find('textarea').blur(function(){
+		
+	});
 	var focusFunc = function(){
-		$(".form").find("input").focus(function(){
-			if($(this).closest(".form").is(".delivery-form")){
+		$(".form").find("input, textarea").focus(function(e){
+			if($(e.target).is('textarea')){
+				$(this).closest('div').find('label').css({
+					'fontSize': '12px',
+					'transform': 'translateY(30px)'
+				});
+				$(this).closest("div").addClass("active");
+				return;
 			}
 			$(this).closest("div").addClass("active");
 			$(this).closest("div").find("label").css({
@@ -172,13 +185,21 @@ $(document).ready(function(){
 				"transform": "translateY(-95%)"
 			});
 		});
-		$(".form").find("input").blur(function(){
-			if($(this).val() == ""){
+		$(".form").find("input, textarea").blur(function(e){
+			if($(e.target).is('textarea')){
+				$(this).closest('div').find('label').css({
+					'fontSize': '16px',
+					'transform': 'translateY(0px)'
+				});
 				$(this).closest("div").removeClass("active");
+				return;
+			}
+			if($(this).val() == ""){
 				$(this).closest("div").find("label").css({
 					"fontSize": "14px",
 					"transform": "translateY(0px)"
 				});
+				$(this).closest("div").removeClass("active");
 			}
 		});
 	}
@@ -186,9 +207,14 @@ $(document).ready(function(){
 	///// OPEN POP-UP
 	function openPopUp(link, target){
 		$(link).click(function(e){
+			if($(this).closest('nav').length != 0){
+				$('nav').removeClass('active');
+				$("header .top-line").removeClass("active");
+				$(".overlay-menu").fadeOut();
+			}
+			$(target).addClass("active");
 			e.preventDefault();
 			//$("section, footer, header").addClass("disabled");
-			$(target).addClass("active");
 		});
 	}
 
@@ -294,12 +320,47 @@ $(document).ready(function(){
 		var navArr = $("header nav li");
 		var delay = 0;
 		for(var i = 0; i < navArr.length; i++){
-			delay += 0.15;
+			delay += 0.1;
 			$(navArr[i]).css({
 				"transition-delay": delay + "s"
 			});
 		}
 	})();
+/////////VALIDATION
+	var invalid;
+	$('form button').click(function(e){
+		invalid = $(this).closest('form').find(':invalid');
+		$(invalid).focus().closest('div').addClass('error');
+	});
+	$('form input').blur(function(){
+		if($(this).is(':invalid') == true){
+			$(this).closest('div').removeClass('error');
+		}
+	});
 
+	$("form").submit(function(e) {
+		var input = $(e.target).find('input');
+		$.ajax({
+			type: "GET",
+			url: "mail.php",
+			data: $("form").serialize()
+		}).done(function() {
+			if($(e.target).closest('.pop-up').length > 0){
+				$("section, footer, header").removeClass("disabled");
+				$(e.target).closest(".pop-up").removeClass("active");
+			}
+			swal({
+				title: 'Спасибо за заявку',
+				type: 'success',
+				timer: 2000
+			});
+			$(input).val('').blur();
+		});
+		return false;
+	});
+///////END of VALIDATION
+/////ALERT
+	
+/////END of ALERT
 	$(".fancybox").fancybox();
 });

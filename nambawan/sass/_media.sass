@@ -52,13 +52,13 @@
 		position: relative
 		ul
 			overflow: auto
-			height: 100vh
+			height: 100%
 			position: fixed
 			padding: 50px 0
 			top: -100%
 			right: 0
 			width: 100vw
-			transition: .55s
+			transition: .35s
 			font-size: 28px
 			z-index: -3
 			line-height: 2em
@@ -92,12 +92,13 @@
 			margin-top: 50px !important
 			text-align: center
 			line-height: 1.5em
-			p:first-child
+			a:first-child
 				font-size: 28px
-			p:last-child
+			a:last-child
 				line-height: 1.2em
-				color: #fff
+				color: #fff !important
 				font-size: 18px
+				margin-top: 20px
 		.nav-phone
 			a:hover
 				color: #fff
@@ -111,7 +112,7 @@
 		ul
 			top: 0
 		li
-			transition: .7s ease
+			transition: .5s ease
 			top: 0
 			opacity: 1
 
@@ -439,6 +440,8 @@
 	.cases>li:nth-child(3n+2), .cases>li:nth-child(3n+3)
 		line-height: 350px
 		height: 350px
+	.cases>li:nth-child(3n+1)
+		padding: 100px
 	/**/
 
 
@@ -492,10 +495,13 @@
 		margin-top: 50px
 	#we-do .items>ul>li.all-services
 		margin-top: 100px
+	.cases>li:nth-child(3n+1)
+		.case-descr
+			font-size: 16px
 	.all-services
 		a
 			position: relative
-			width: 290px
+			width: 230px
 			left: 0
 			text-align: center
 			display: block
@@ -669,11 +675,19 @@
 	.kinds
 		margin-top: 50px
 	.cases>li:nth-child(3n+1)
-		padding: 80px 55px
+		padding: 50px 20px
 	.cases>li:nth-child(3n+2), .cases>li:nth-child(3n+3)
 		width: 100%
 		height: 350px
 		line-height: 350px
+	.cases>li:nth-child(3n+1) h3
+		font-size: 47px
+	.cases>li:nth-child(3n+1) .tags
+		font-size: 12px
+	.item-cont-box
+		padding: 0 20px
+
+	
 	.port-cases
 		.items
 			ul
@@ -793,6 +807,8 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.kinds a
+		font-size: 13px
 	/**/
 
 
@@ -801,6 +817,17 @@
 	#ad-comp .ad-features ul li
 		width: 100%
 		margin-top: 40px
+	#port-cases .items ul
+		text-align: left
+		li
+			margin: 0
+	.kinds
+		li
+			margin-right: 0
+			width: 33.33%
+		a
+			padding: 0
+			font-size: 12px
 	/**/
 
 

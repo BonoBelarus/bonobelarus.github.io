@@ -16,7 +16,7 @@ html
 		link(rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png")
 
 		
-
+		link(rel="stylesheet", href="css/sweetalert2.min.css")
 		link(rel="stylesheet" href="css/main.min.css")
 
 		<!-- Chrome, Firefox OS and Opera -->
@@ -52,10 +52,9 @@ html
 								a(href="#") Блог
 							li
 								a(href="contacts.html") Контакты
-							li.nav-phone.link-pop-up-c
-								a(href="#")
-									p +375 29 517 65 08
-									p Заказать звонок
+							li.nav-phone
+								a(href="tel:+375295176508") +375 29 517 65 08
+								a(href="#").link-pop-up-c Заказать звонок
 							li.btn-nav
 								a(href="#").btn.link-pop-up-q Оставить заявку
 			section#main-top
@@ -162,6 +161,8 @@ html
 								p Программирование и вёрстка
 							li
 								p Контекстная реклама
+							li
+								p СЕО
 						.case-descr
 							p Адаптивный корпоративный сайт-каталог для официального представительства ЗАО «Могилевский комбинат силикатных изделий» в России.
 						a(href="#").btn Смотреть кейс
@@ -217,17 +218,17 @@ html
 							p Заполните форму
 							div
 								label(for="") Введите ваше имя
-								input(type="text" name="name")
+								input(type="text" name="name" required)
 							div
 								label(for="") Телефон
-								input(type="text" name="phone")
+								input(type="text" name="phone" required)
 							div
 								label(for="") Почта
 								input(type="email" name="email")
 							div
 								label(for="") Адрес сайта
 								input(type="text" name"site")
-							a(href="#").btn Получить рекомендации
+							button.btn Получить рекомендации
 		section#treatment
 			.layout-wrap
 				.layout-txt
@@ -356,8 +357,9 @@ html
 						p E-mail рассылка
 						p Опыт, идеи, новости, обратная связь
 						.delivery-form.form
-							input(type="text" placeholder="Введите E-mail")
-							a.btn(href="#") Подписаться
+							form
+								input(type="text" placeholder="Введите E-mail" required)
+								button.btn(href="#") Подписаться
 						a.policy(href="#") Политика конфиденциальности
 		.pop-up#pop-up-call
 			.close
@@ -368,10 +370,10 @@ html
 					h2 Заказать обратный звонок
 					.name
 						label(for="") Ваше имя
-						input(type="text" name="name")
+						input(type="text" name="name" required)
 					.phone
 						label(for="") Телефон
-						input(type="tel" name="phone")
+						input(type="tel" name="phone" required)
 					.email
 						label(for="") Почта
 						input(type="email" name="email")
@@ -385,20 +387,22 @@ html
 					h2 Расскажите о своем проекте или задайте вопрос
 					.name
 						label(for="") Ваше имя
-						input(type="text" name="name")
+						input(type="text" name="name" required)
 					.phone
 						label(for="") Телефон
-						input(type="tel" name="phone")
+						input(type="tel" name="phone" required)
 					.email
 						label(for="") Почта
 						input(type="email" name="email")
 					.comment
 						label(for="") Комментарий
-						input(type="text" name="comment")
+						textarea(rows="1")
 					button(type="submit").btn Отправить
 
 
 
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
 		script(src="js/jquery.fancybox.js")
+		script(src="js/sweetalert2.min.js")
+		script(src="js/autoresize.js")
 		script(src="js/scripts.min.js")

@@ -17,6 +17,7 @@ html(lang="en")
 
 			link(href="https://fonts.googleapis.com/css?family=Raleway:300,700" rel="stylesheet")
 			link(rel="stylesheet", href="css/jquery.fancybox.css")
+			link(rel="stylesheet", href="css/sweetalert2.min.css")
 			link(rel="stylesheet" href="css/main.min.css")
 
 			<!-- Chrome, Firefox OS and Opera -->
@@ -51,10 +52,9 @@ html(lang="en")
 								a(href="#") Блог
 							li
 								a(href="contacts.html") Контакты
-							li.nav-phone.link-pop-up-c
-								a(href="#")
-									p +375 29 517 65 08
-									p Заказать звонок
+							li.nav-phone
+								a(href="tel:+375295176508") +375 29 517 65 08
+								a(href="#").link-pop-up-c Заказать звонок
 							li.btn-nav
 								a(href="#").btn.link-pop-up-q Оставить заявку
 		section#case-top
@@ -167,6 +167,8 @@ html(lang="en")
 				.c2.circle
 				.c3.circle
 				.c4.circle
+				.c5.circle
+				.c6.circle
 			.content
 				h2 У вас есть проект?
 				.clarify
@@ -272,10 +274,10 @@ html(lang="en")
 					h2 Заказать обратный звонок
 					.name
 						label(for="") Ваше имя
-						input(type="text" name="name")
+						input(type="text" name="name" required)
 					.phone
 						label(for="") Телефон
-						input(type="tel" name="phone")
+						input(type="tel" name="phone" required)
 					.email
 						label(for="") Почта
 						input(type="email" name="email")
@@ -289,19 +291,22 @@ html(lang="en")
 					h2 Расскажите о своем проекте или задайте вопрос
 					.name
 						label(for="") Ваше имя
-						input(type="text" name="name")
+						input(type="text" name="name" required)
 					.phone
 						label(for="") Телефон
-						input(type="tel" name="phone")
+						input(type="tel" name="phone" required)
 					.email
 						label(for="") Почта
 						input(type="email" name="email")
 					.comment
 						label(for="") Комментарий
-						input(type="text" name="comment")
+						textarea(rows="1")
 					button(type="submit").btn Отправить
 		
 
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+		script(src="https://use.fontawesome.com/54268bcde8.js")
 		script(src="js/jquery.fancybox.js")
+		script(src="js/sweetalert2.min.js")
+		script(src="js/autoresize.js")
 		script(src="js/scripts.min.js")
