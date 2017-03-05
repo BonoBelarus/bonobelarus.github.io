@@ -1,0 +1,421 @@
+@import "bourbon"
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "animation-top"
+@import "animations"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+*
+	list-style-type: none
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+body
+	cursor: default
+	min-width: 1250px
+	position: relative
+	line-height: 1.55
+	text-rendering: optimizeLegibility
+	-webkit-font-smoothing: antialiased
+	font-smoothing: antialiased
+	font-family: $default-font
+	font-size: 16px
+	font-weight: 300
+	overflow-x: hidden
+	color: $first-color
+
+a
+	text-decoration: none
+	transition: .35s
+	position: relative
+
+h1,h2,h3
+	text-align: center
+	color: $first-color
+	+ .clarify
+		font-size: 20px
+		color: $second-color
+		text-align: center
+		max-width: 700px
+		margin: 20px auto 0
+h1
+	font-size: 56px
+h2
+	font-size: 44px
+h3
+	font-size: 32px
+	+ .clarify
+		font-size: 18px
+
+.content
+	width: 1170px
+	margin: 0 auto
+	position: relative
+
+.btn
+	@include btn-radius(25px)
+	display: inline-block
+	line-height: 50px
+	padding: 0 35px
+	font-weight: 800
+	font-size: 17px
+	position: relative
+
+header
+	line-height: 80px
+	position: absolute
+	top: 0
+	left: 0
+	height: 80px
+	width: 100%
+	background-color: #fff
+	text-align: center
+	.content
+		line-height: 1.5em
+		display: inline-flex
+		justify-content: space-between
+		text-align: left
+	.logo
+		line-height: 1.2em
+		>div
+			display: inline-block
+			vertical-align: top
+	.logo-notion
+		color: #808285
+		font-size: 13px
+	a
+		color: $first-color
+		display: block
+	li
+		display: inline-block
+	li:not(:last-child)
+		margin-right: 35px
+#top-sec
+	height: 100vh
+	background-color: #ffd63b
+	line-height: 100vh
+	text-align: center
+	.content
+		text-align: left
+		display: inline-block
+		line-height: 1.5em
+		vertical-align: middle
+	h1
+		text-align: left
+		line-height: 1.3em
+		font-family: "RobotoSlab"
+		color: $first-color
+		font-size: 56px
+	.clarify
+		margin: 40px 0 0
+		text-align: left
+		margin-top: 40px
+		max-width: 550px
+		font-size: 20px
+	.to-order
+		background-color: #f23030
+		box-shadow: 0 8px 15px rgba(249, 41, 0, 0.4)
+		color: #fff
+		display: inline-block
+	.to-try
+		margin-left: 35px
+		background-color: #fff
+		color: $first-color
+	.btns
+		margin-top: 70px
+
+#opportunities
+	padding: 250px 0 120px
+	.cards
+		position: absolute
+		width: 100%
+		left: 0
+		top: -325px
+		ul
+			display: flex
+			justify-content: space-between
+		li
+			padding: 30px 20px
+			display: inline-block
+			width: 280px
+			height: 150px
+			background-color: #fff
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
+	h2
+		font-family: 'RobotoSlab'
+.oppo-slider
+	margin: 80px 0 160px
+	display: flex
+	justify-content: space-between
+	position: relative
+	.owl-nav
+		position: absolute
+		top: 35%
+		left: 0
+		width: 100%
+		height: 70px
+		font-size: 76px
+		line-height: .7
+		color: #d5d7d8
+		>div
+			position: absolute
+			display: inline-block
+	.owl-prev
+		width: 50px
+		height: 100px
+		left: -150px
+	.owl-next
+		width: 50px
+		height: 100px
+		right: -150px
+	.carousel-wrap
+		width: 610px
+		padding: 20px 80px 60px
+		box-shadow: 0 15px 50px rgba(0, 0, 0, 0.11)
+	.slide-img
+		display: inline-block
+		max-width: 70px
+		margin-right: 20px
+		vertical-align: middle
+		img
+			width: auto
+	.slide-ft-txt
+		vertical-align: middle
+		display: inline-block
+		line-height: 1.3em
+		max-width: 100px
+	.slide-ft
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		li
+			margin-top: 40px
+			display: inline-block
+			width: 50%
+	.slide-txt
+		margin-top: 30px
+		text-align: center
+		color: $second-color
+		font-size: 15px
+#oppo-links
+	div:not(:first-child)
+		margin-top: 10px
+	div
+		position: relative
+		padding-left: 25px
+		cursor: pointer
+	div:before
+		content: ""
+		position: absolute
+		width: 0
+		height: 0
+		border: 3px solid #ffd64b
+		border-radius: 50%
+		top: 50%
+		left: 0
+		margin-top: -4px
+		transition: .25s
+	div:last-child:before
+		background: url(../img/red-star.png) center no-repeat
+		height: 25px
+		width: 25px
+		top: 0
+		left: -10px
+		border: none
+	div.active
+		font-weight: 800
+	div.active:not(:last-child):before
+		margin-top: -10px
+		left: -8px
+		width: 15px
+		height: 15px
+		background-color: #fff
+		border: 3px solid #ffd64b
+.integr-spis
+	margin-top: 60px
+	text-align: center
+	ul
+		display: flex
+		justify-content: space-between
+	li
+		display: inline-block
+		max-width: 250px
+		position: relative
+	li:not(:last-child):before
+		content: "+"
+		font-weight: 300
+		font-size: 76px
+		color: #ccc
+		line-height: 1
+		top: 25px
+		right: -50px
+		position: absolute
+	.integr-icon
+		line-height: 115px
+		height: 115px
+		width: 115px
+		margin: 0 auto
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
+		border-radius: 50%
+		img
+			vertical-align: middle
+	.integr-caption
+		font-size: 18px
+		font-weight: 800
+		margin: 30px 0 20px
+#for-whom
+	background-color: #f7f6f3
+	padding: 120px 0
+	.tab-links
+		margin-top: 60px
+		text-align: center
+		li
+			border: 1px solid #ffd63b
+			display: inline-block
+			cursor: pointer
+			transition: .25s
+		li.active
+			background: #ffd63b
+			box-shadow: 0 8px 15px rgba(255, 157, 0, 0.35)
+		li:not(:last-child)
+			margin-right: 30px
+		li:hover
+			box-shadow: 0 8px 15px rgba(255, 157, 0, 0.35)
+	.tab-box
+		margin-top: 80px
+		>div
+			display: none
+			>ul
+				text-align: center
+				display: flex
+				justify-content: space-between
+		div.active
+			display: block
+		li
+			width: 370px
+		.tab-caption
+			font-size: 18px
+			color: #000
+			font-weight: 800
+			margin: 40px 0
+		.tab-txt
+			color: $second-color
+		.tab-content
+			opacity: 0
+			transform: translateY(20px)
+		.tab-content.active
+			animation: slideIn .5s both
+	.btns
+		margin-top: 120px
+		text-align: center
+	.to-consult
+		box-shadow: inset 0 0 0 1px #ffd63b
+		font-size: 16px
+		font-weight: 800
+		color: #000
+		padding-left: 80px
+		z-index: 2
+		transition: .15s
+		overflow: hidden
+	.to-consult:before
+		content: ''
+		@include btn-radius(25px)
+		position: absolute
+		width: 50px
+		height: 100%
+		top: 0
+		left: 0px
+		background-color: #ffd63b
+		transition: .35s
+		z-index: -1
+	.to-consult:after
+		content: '?'
+		position: absolute
+		top: 0
+		left: 0
+		width: 50px
+		height: 100%
+		font-size: 28px
+		font-weight: 800
+		color: #fff
+		z-index: 2
+		transition: .35s
+		animation: rotateAsk 5s infinite
+	.to-consult:hover:before
+		width: 100%
+	.to-consult:hover:after
+		left: -60px
+		animation: none
+	.to-consult:hover
+		color: #fff
+.big-card-help
+	background-color: #ffd63b
+	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.11)
+	padding: 45px 70px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: 120px
+	h2
+		max-width: 460px
+		text-align: left
+		line-height: 1.2em
+		font-size: 40px
+		display: inline-block
+	.features
+		li
+			background-color: #fff
+			border-radius: 10px
+			padding: 30px
+		li:first-child
+			margin-bottom: 20px
+		.check-mark
+			display: inline-block
+			background-color: #ddf6e0
+			border-radius: 50%
+			text-align: center
+			width: 50px
+			height: 50px
+			line-height: 50px
+			vertical-align: middle
+			margin-right: 20px
+			img
+				vertical-align: middle
+		.ft-descr
+			display: inline-block
+			max-width: 270px
+			line-height: 1.4em
+			vertical-align: middle
+		.caption
+			font-weight: 800
+	
+		
+
+
+
+
+@import "media" // Всегда в конце
