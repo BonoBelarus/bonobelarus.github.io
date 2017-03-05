@@ -192,8 +192,6 @@ header li:not(:last-child) { margin-right: 35px; }
 
 #oppo-links div.active { font-weight: 800; }
 
-#oppo-links div:last-child.active:before { -webkit-animation: pulse .5s forwards; animation: pulse .5s forwards; }
-
 #oppo-links div.active:not(:last-child):before { margin-top: -10px; left: -8px; width: 15px; height: 15px; background-color: #fff; border: 3px solid #ffd64b; }
 
 .integr-spis { margin-top: 60px; text-align: center; }
