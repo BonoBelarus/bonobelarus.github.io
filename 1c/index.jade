@@ -17,6 +17,8 @@ html
 
 		link(rel="stylesheet", href="css/owl.carousel.min.css")
 		link(rel="stylesheet", href="css/owl.theme.default.min.css")
+		link(rel="stylesheet", href="css/ion.rangeSlider.css")
+		link(rel="stylesheet", href="css/ion.rangeSlider.skinHTML5.css")
 		link(rel="stylesheet" href="css/main.css")
 
 		<!-- Chrome, Firefox OS and Opera -->
@@ -30,11 +32,13 @@ html
 			.content
 				.logo
 					.logo-main
-						p МиСофт
+						img(src="img/logo-mi.png", alt="")
 					.logo-notion
 						p Официальный дистрибьютор фирмы «1С»
 						p в Республике Беларусь
 				nav
+					.mobile-menu
+						div
 					ul
 						li
 							a(href="#") Возможности продукта
@@ -119,7 +123,7 @@ html
 					p «1С:Управление торговлей» позволяют автоматизировать и контролировать большинство задача компании, занимающейся продажей товаров или оказанием услуг
 				.oppo-slider
 					#oppo-links
-						div
+						div.active
 							p CRM и маркетинг
 						div
 							p Продажи и доставка
@@ -363,31 +367,35 @@ html
 						li
 							.integr-icon
 								img(src="img/integr-icon-1.png", alt="")
-							.integr-caption
-								p 1C бухгалтерия
-							.integr-txt
-								p (4-5 слов о том как оно здорово интегрируется)
+							.integr-clarify
+								.integr-caption
+									p 1C бухгалтерия
+								.integr-txt
+									p (4-5 слов о том как оно здорово интегрируется)
 						li
 							.integr-icon
 								img(src="img/integr-icon-2.png", alt="")
-							.integr-caption
-								p Web и mobile
-							.integr-txt
-								p (программа работает на любой платформе)
+							.integr-clarify
+								.integr-caption
+									p Web и mobile
+								.integr-txt
+									p (программа работает на любой платформе)
 						li
 							.integr-icon
 								img(src="img/integr-icon-3.png", alt="")
-							.integr-caption
-								p Интеграция с "1C-Битрикс"
-							.integr-txt
-								p (обмен с интернет-магазином)
+							.integr-clarify
+								.integr-caption
+									p Интеграция с "1C-Битрикс"
+								.integr-txt
+									p (обмен с интернет-магазином)
 						li
 							.integr-icon
 								img(src="img/integr-icon-4.png", alt="")
-							.integr-caption
-								p Оборудование
-							.integr-txt
-								p (терминалы сбора данных, сканеры штрих-кодово и т.д.)
+							.integr-clarify
+								.integr-caption
+									p Оборудование
+								.integr-txt
+									p (терминалы сбора данных, сканеры штрих-кодово и т.д.)
 		section#for-whom
 			.content
 				h2 Для кого подходит
@@ -474,7 +482,7 @@ html
 				.btns
 					a.btn.to-consult(href="#") Нужна консультация по внедрению?
 				.big-card-help
-					h2 Система помогает вам контролировать и анализировать процессы в компании. 
+					h3 Система помогает вам контролировать и анализировать процессы в компании. 
 					.features
 						ul
 							li
@@ -490,12 +498,420 @@ html
 									img(src="img/check-mark.png", alt="")
 								.ft-descr
 									.caption
-										p Бизнес как на ладони
+										p Опережение конкурентов
 									.ft-txt
-										p Все данные доступны вам в любое время из любой точки мира.
+										p Вы принимаете взвешенные и обоснованные управленческие решения.
+		section#about
+			.content
+				h2 О компании
+				.about-wrap
+					.about-box
+						p
+							span.bold ЗАО «МиСофт НВП»
+							|  — официальный дистрибьютор фирмы «1С» в Республике Беларусь. Наша компания уже 
+							span.bold 22 года
+							|   специализируется на поставке, установке, внедрении и сопровождении автоматизированных систем на основе платформы «1С:Предприятие».
+						p Разработки компании «МиСофт» признаны фирмой «1С» как 
+							span.bold.dashed продукты, совместимые с системой программ «1С:Предприятие».
+						p Специалисты нашей компании обучены и сертифицированы по соответствующим направлениям и технологиям. Более 
+							span.bold 150 сертификатов «1С»
+							|  по различным областям деятельности. Уровень подготовки сотрудников позволяет решать даже самые сложные задачи автоматизации.
+					.about-logo
+						p МиСофт
+						.logo-clarify
+							p Официальный дистрибьютор фирмы "1C"
+							p в Республике Беларусь
+							p ISO 9001:2008 
+				.about-cards
+					ul
+						li
+							.about-card-wrap
+								.about-card-img
+									img(src="img/about-card-1.png", alt="")
+								.about-card-txt
+									p Преподаватели нашего учебного центра сертифицированы фирмой «1С» и имеют право обучения пользователей и программистов «1С».
+						li
+							.about-card-wrap
+								.about-card-img
+									img(src="img/about-card-1.png", alt="")
+								.about-card-txt
+									p Преподаватели нашего учебного центра сертифицированы фирмой «1С» и имеют право обучения пользователей и программистов «1С».
+						li
+							.about-card-wrap
+								.about-card-img
+									img(src="img/about-card-1.png", alt="")
+								.about-card-txt
+									p Преподаватели нашего учебного центра сертифицированы фирмой «1С» и имеют право обучения пользователей и программистов «1С».
+				.why-us
+					h3 Почему выбирают нас
+					ul
+						li
+							.why-us-img
+								img(src="img/why-us-icon-1.png", alt="")
+							.why-us-txt
+								.caption.bold
+									p Опыт
+								p У нас накоплен опыт внедрения в различных отраслях, мы знакомы с их спецификой
+						li
+							.why-us-img
+								img(src="img/why-us-icon-2.png", alt="")
+							.why-us-txt
+								.caption.bold
+									p Квалификация
+								p У нас накоплен опыт внедрения в различных отраслях, мы знакомы с их спецификой
+						li
+							.why-us-img
+								img(src="img/why-us-icon-3.png", alt="")
+							.why-us-txt
+								.caption.bold
+									p Скорость
+								p У нас накоплен опыт внедрения в различных отраслях, мы знакомы с их спецификой
+						li
+							.why-us-img
+								img(src="img/why-us-icon-4.png", alt="")
+							.why-us-txt
+								.caption.bold
+									p Надёжность
+								p У нас накоплен опыт внедрения в различных отраслях, мы знакомы с их спецификой
+		section#cases
+			.content
+				h2 Кейсы
+				.clarify
+					p Наше решение используют 17 935 пользователей, в более чем 900 компаний
+				.cases-cards
+					ul
+						li
+							.case-logo
+								img(src="img/case-1-logo.png", alt="")
+							.case-txt
+								.caption
+									p ООО «Юнитаргет»
+								p Крупная оптовая компания, импортер обуви от производителей Германии, России, Турции и Китая.
+							.case-users
+								p Решение для 
+									span.bold 50 пользователей
+							.case-btn
+								a.btn(href="#") смотреть кейс
+						li
+							.case-logo
+								img(src="img/case-2-logo.png", alt="")
+							.case-txt
+								.caption
+									p Schneider Electric
+								p Мировой эксперт в управлении энергией и автоматизации для энергетики, предприятий, центров обработки данных.
+							.case-users
+								p Решение для 
+									span.bold 30 пользователей
+							.case-btn
+								a.btn(href="#") смотреть кейс
+						li
+							.case-logo
+								img(src="img/case-3-logo.png", alt="")
+							.case-txt
+								.caption
+									p ООО «Стима»
+								p Крупная оптовая компания, импортер обуви от производителей Германии, России, Турции и Китая.
+							.case-users
+								p Решение для 
+									span.bold 50 пользователей
+							.case-btn
+								a.btn(href="#") смотреть кейс
+						li
+							.case-logo
+								img(src="img/case-1-logo.png", alt="")
+							.case-txt
+								.caption
+									p ООО «Юнитаргет»
+								p Крупная оптовая компания, импортер обуви от производителей Германии, России, Турции и Китая.
+							.case-users
+								p Решение для 
+									span.bold 50 пользователей
+							.case-btn
+								a.btn(href="#") смотреть кейс
+						li
+							.case-logo
+								img(src="img/case-2-logo.png", alt="")
+							.case-txt
+								.caption
+									p Schneider Electric
+								p Мировой эксперт в управлении энергией и автоматизации для энергетики, предприятий, центров обработки данных.
+							.case-users
+								p Решение для 
+									span.bold 30 пользователей
+							.case-btn
+								a.btn(href="#") смотреть кейс
+						li
+							.case-logo
+								img(src="img/case-3-logo.png", alt="")
+							.case-txt
+								.caption
+									p ООО «Стима»
+								p Крупная оптовая компания, импортер обуви от производителей Германии, России, Турции и Китая.
+							.case-users
+								p Решение для 
+									span.bold 50 пользователей
+							.case-btn
+								a.btn(href="#") смотреть кейс
+					.more-cases
+						a.btn(href="#") Показать ещё 6 кейсов
+		section#our-clients
+			.content
+				h2 Наши клиенты — компании из самых разных отраслей
+				.industries
+					ul
+						li
+							.ind-icon
+								img(src="img/ind-alco.png", alt="")
+							.ind-txt
+								p Алкогольная продукция
+						li
+							.ind-icon
+								img(src="img/ind-food.png", alt="")
+							.ind-txt
+								p Продукты питания
+						li
+							.ind-icon
+								img(src="img/ind-electro.png", alt="")
+							.ind-txt
+								p Электрооборудование
+						li
+							.ind-icon
+								img(src="img/ind-shoe.png", alt="")
+							.ind-txt
+								p Обувь
+						li
+							.ind-icon
+								img(src="img/ind-build.png", alt="")
+							.ind-txt
+								p Строительные материалы
+						li
+							.ind-icon
+								img(src="img/ind-floor.png", alt="")
+							.ind-txt
+								p Напольные покрытия
+						li
+							.ind-icon
+								img(src="img/ind-doors.png", alt="")
+							.ind-txt
+								p Межкомнатные двери
+						li
+							.ind-icon
+								img(src="img/ind-tools.png", alt="")
+							.ind-txt
+								p Запасные части
+						li
+							.ind-icon
+								img(src="img/ind-wear.png", alt="")
+							.ind-txt
+								p Товары легкой промышленности
+		section#price
+			.content
+				h2 Стоимость лицензии
+				.clarify
+					p Стоимость складывается из базовой лицензии «1С:Управление торговлей» плюс количество пользователь, плюс вид сервера
+				.form-price
+					form(action="")
+						ul.price-steps
+							li
+								.caption
+									p Лицензия
+								.step-notion
+									p «1С:Управление торговлей» для 1 пользователя
+									p.price 702,00 руб
 
+							li
+								.caption
+									p Дополнительные пользователи
+								.range-slider
+									input#range-slider(type='text' name='xtra-users' value='')
+							li
+								.caption
+									p Сервер (опционально)
+								ul.server-options
+									li
+										.checkbox
+											input(type="checkbox")
+										.option-txt
+											p.bold До 5 пользователей
+											p.price 580,80 руб.
+									li
+										.checkbox
+											input(type="checkbox")
+										.option-txt
+											p.bold Безлимит. 32 бита
+											p.price 2 032,20 руб.
+									li
+										.checkbox
+											input(type="checkbox")
+										.option-txt
+											p.bold Безлимит. 64 бита
+											p.price 3 483,60 руб.
+						.form-check
+							ul
+								li.product
+									.caption
+										p Продукт
+									.product-box
+										.product-notion
+											p «1С:Управление торговлей»
+										.product-price
+											p 702,00
+								li.xtra-users
+									.caption
+										p Дополнительные пользователи
+									.product-box
+										.product-notion
+											p 10 человек
+										.product-price
+											p 3992,00
+								li.server
+									.caption
+										p Сервер
+									.product-box
+										.product-notion
+											p До 5 пользователей
+										.product-price
+											p 580,80
+							.total
+								p 5 274 руб
+							.order-btn
+								a.btn(href="#") Заказать внедрение
+				.faq
+					.faq-top
+						.caption
+							p А если мне нужно 11 лицензий?
+						.more-adv
+							p Ещё совет
+					.faq-txt
+						.faq-ask
+							p Для того что бы не переплачивать за лишних пользователей, вы можете заказать лицензию на 10 пользователей и докупить ещё одну лицензию отдельно.
+						.get-consult
+							a.btn(href="#") Получить консультацию
+		section#technologies
+			.content
+				h2 Технология внедрения
+				.clarify
+					p Мы разработали собственную отлаженную методику внедрения проектов — от предпроектного обследования до сопровождения проекта
+				ul
+					li
+						.tech-icon
+							img(src="img/tech-icon-1.png", alt="")
+						.caption
+							p Подготовка
+						.tech-txt
+							p Изучаем особенности вашего бизнеса, принципы работы, требования к системе.
+					li
+						.tech-icon
+							img(src="img/tech-icon-2.png", alt="")
+						.caption
+							p Внедрение
+						.tech-txt
+							p Продукт готов к работе, настроен под вашу специфику и требования бизнеса
+					li
+						.tech-icon
+							img(src="img/tech-icon-3.png", alt="")
+						.caption
+							p Програмирование
+						.tech-txt
+							p Новые функции, изменение существующих, отчеты, экранные формы
+					li
+						.tech-icon
+							img(src="img/tech-icon-4.png", alt="")
+						.caption
+							p Перенос данных
+						.tech-txt
+							p Ничего не потеряется —все старые данные будут перенесены (товары, остатки, клиенты, долги и т.д)
+					li
+						.tech-icon
+							img(src="img/tech-icon-5.png", alt="")
+						.caption
+							p Обучение
+						.tech-txt
+							p Проводим групповые и индивидуальные курсы в рамках внедрения
+					li
+						.tech-icon
+							img(src="img/tech-icon-6.png", alt="")
+						.caption
+							p Техническая поддержка
+						.tech-txt
+							p Консультируем, анализируем проблемы                       и находим решения, настраиваем сервера, поддерживаем работоспособность.
+		section#try
+			.content
+				h2 Попробуйте прямо сейчас
+				.clarify
+					p Вы можете познакомиться с программой самостоятельно, используя нашу облачную версию 1С.
+					p Для этого не потребуется что-либо скачивать или устанавливать у себя
+					p на компьютере какие-либо программы.
+				.btns
+					a.try.btn(href="#") Попробовать бесплатно
+					a.order.btn(href="#") Заказать внедрение
+			.clouds
+				.back-cloud
+					img(src="img/back-cloud.png", alt="")
+				.forward-cloud
+					img(src="img/for-clound.png", alt="")
+		section#need-help
+			.content
+				h2 Нужна помощь консультанта с опытом внедрений?
+				ul
+					li
+						.help-icon
+							img(src="img/need-help-1.png", alt="")
+						.help-txt
+							a(href="#") Задать вопрос
+					li
+						.help-icon
+							img(src="img/need-help-2.png", alt="")
+						.help-txt
+							a(href="tel:+375333829194") +375 33 382-91-94
+		section#contacts
+			.content
+				.contacts-box
+					h2 Контакты
+					.addr
+						.caption
+							p Фактический адрес:
+						p г. Минск, пр-т Независимости 177, 2-ой подъезд, 6-ой этаж
+					.post
+						.caption
+							p Почтовый адрес:
+						p 220125, г. Минск, ул. Шафарнянская, 11, пом.31
+					.phones
+						.caption
+							p Телефоны:
+						p +375 (17) 286-35-76 — многоканальный
+						p +375 (29) 696-00-29 — Velcom
+						p +375 (33) 341-11-79 — МТС
+					.email
+						.caption
+							p E-mail:
+						p info@misoft.by
+						p hotline@misoft.by — служба техподдержки
+		footer
+			.content
+				ul
+					li.footer-rights
+						.logo
+							img(src="img/logo.png", alt="")
+						.clarify
+							p Официальный дистрибьютор фирмы “1С” в Республике Беларусь
+						.rights
+							p © 1995-2017
+					li.social
+						a(href="#").facebook
+							img(src="img/facebook.png", alt="")
+						a(href="#").vk
+							img(src="img/vk.png", alt="")
+						a(href="#").twitter
+							p t
+					li.made-by
+						p Разработка:
+						.made-by-logo
+							a(href="#")
+								img(src="img/made-by-logo.jpg", alt="")
 
-		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
-		script(src="js/owl.carousel.min.js")
+		script(src="js/jquery.min.js")
 		script(src="https://use.fontawesome.com/54268bcde8.js")
+		script(src="js/owl.carousel.min.js")
+		script(src="js/ion.rangeSlider.min.js")
 		script(src="js/common.js")

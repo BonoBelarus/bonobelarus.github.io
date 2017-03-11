@@ -4,31 +4,510 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1050px)
+@media only screen and (min-width : 1024px)
+	.mobile-menu
+		display: none
+@media only screen and (max-width : 1024px)
+	.content,
+	body
+		width: 100%
+		min-width: 100%
+	.content
+		padding: 0 50px
+	.animation-top
+		display: none
+	.mobile-menu
+		display: block
+	nav
+		ul
+			display: none
+	#opportunities
+		.cards
+			overflow: auto
+			ul
+				width: 1200px
+				padding-bottom: 30px
+		.integr-spis
+			ul
+				flex-direction: column
+				align-items: flex-start
+			li
+				text-align: left
+				display: block
+				max-width: 100%
+				width: 100%
+			.integr-icon,
+			.integr-clarify
+				display: inline-block
+			.integr-icon
+				text-align: center
+				margin-right: 30px
+		.integr-spis li:not(:last-child):before
+			top: 100%
+			margin-top: -40px
+			right: initial
+			left: 200px
 	
+	
+	#for-whom .tab-links
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+	#for-whom .tab-links li:not(:last-child)
+		margin-right: 0
+	#for-whom .tab-links li.btn
+		font-size: 14px
+		padding: 0 25px
+	#for-whom .tab-box li
+		padding: 0 20px
+		width: auto
+		.tab-caption
+			font-size: 16px
+			margin: 20px 0
+	.big-card-help
+		flex-direction: column
+		h3
+			font-size: 36px
+		.features
+			margin-top: 50px
+			max-width: 550px
+	.big-card-help .features .ft-descr
+			max-width: 390px
+
+
+	#about .about-logo
+		display: none
+	.about-cards .about-card-txt
+		font-size: 14px
+		padding: 20px 10px
+	
+	.why-us
+		.why-us-txt
+			font-size: 18px
+		li
+			margin-top: 50px
+	
+	#cases .case-txt
+		margin-top: 30px
+	#cases .cases-cards ul
+		justify-content: space-around
+		li
+			padding: 55px 30px
+			width: 300px
+	#cases .case-btn a
+		width: 100%
+		padding: 0
+	#cases .case-users
+		font-size: 14px
+	
+	#our-clients
+		h2
+			line-height: 1em
+		li
+			width: 300px
+	
+	#price .form-price form
+		flex-direction: column
+	#price .price-steps
+		width: 100%
+	.server-options
+		li
+			padding: 20px 10px
+	.form-check
+		width: 100%
+		margin-top: 30px
+		.product-box
+			justify-content: space-around
+		.product-notion,
+		.product-price
+			width: 30%
+		.product-price
+			text-align: right
+	.faq
+		.faq-ask
+			width: 60%
+		.get-consult
+			width: 30%
+			a
+				padding: 0
+				width: 100%
+				font-size: 12px
+				text-align: center
+
+	#technologies ul
+		justify-content: space-around
+		li
+			width: 40%
+	#technologies li:nth-child(3n+3):after
+		content: '. . .'
+	#technologies li:nth-child(6):after,
+	#technologies li:nth-child(5):after
+		content: ''
+	#technologies li:after
+		top: 100%
+		margin-top: 20px
+		right: 50%
+		margin-right: -40px
+	
+	#try
+		padding: 160px 0 230px
+		h2
+			font-size: 48px
+		.clarify
+			p
+				display: inline
+		.try.btn:before
+			margin-right: -30px
+			margin-bottom: 20px
+		.clouds
+			.back-cloud
+				bottom: -60px
+			.forward-cloud
+				bottom: -50px
+	footer
+		.footer-rights
+			max-width: 27%
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	h2
+		line-height: 1em
+		font-size: 40px
+	h3
+		line-height: 1em
+		font-size: 26px
+
+	.content
+		padding: 0 20px
+	header .content
+		vertical-align: middle
+		align-items: center
+	#top-sec
+		height: auto
+		line-height: 1.2em
+		padding: 110px 0 130px
+		h1
+			font-size: 33px
+		.to-try,
+		.to-order
+			width: 250px
+			padding: 0
+			text-align: center
+		.to-try
+			margin-top: 30px
+	
+	#opportunities
+		padding: 160px 0 100px
+		.cards
+			top: -235px
+		h2
+			margin-bottom: 30px
+	#opportunities .integr-spis
+		margin-top: 30px
+		li
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			margin-top: 50px
+	#opportunities .integr-spis li:not(:last-child):before
+		margin-top: -15px
+	#opportunities .integr-spis .integr-clarify
+		vertical-align: middle
+	#opportunities .integr-spis .integr-icon
+		vertical-align: middle
+		margin: 0
+		margin-right: 30px
+		width: 115px
+		height: 115px
+		padding: 0 25px
+	.integr-spis .integr-caption
+		margin: 0 0 10px
+	.integr-spis .integr-txt
+		font-size: 15px
+	
+	
+
+	#technologies ul li
+		width: 270px
+		padding: 0
+	#technologies ul li:after
+		margin-right: -25px
+	#technologies ul li:nth-child(5):after
+		content: '. . .'
+
+	#for-whom
+		padding: 100px 0
+		h2
+			font-size: 36px
+	#for-whom .tab-links li.btn
+		margin-top: 20px
+	#for-whom .tab-box li
+		margin-top: 30px
+	
+	.big-card-help
+		padding: 60px 20px
+		h3
+			font-size: 24px
+	
+	.big-card-help .features
+		li
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: flex-start
+			padding: 30px 10px
+		.check-mark
+			padding: 0 13px
+	#about
+		padding: 330px 0 100px
+	.about-cards ul
+		li
+			width: 25%
+		li:not(:last-child)
+			margin-right: 20px
+		li:hover
+			.about-card-wrap
+				transform: none
+		.about-card-img
+			img
+				width: 100%
+	.about-cards .about-card-wrap
+		height: 50px
+		line-height: 50px
+		.about-card-img
+			line-height: 50px
+	.why-us
+		margin-top: 50px
+		padding: 50px 20px
+		li
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: flex-start
+		.why-us-img
+			margin-right: 20px
+	h1 + .clarify, h2 + .clarify, h3 + .clarify
+		font-size: 18px
+	#cases
+		padding: 100px 0
+	#cases .cases-cards
+		margin-top: 40px
+	#cases .more-cases
+		margin-top: 80px
+	#our-clients
+		padding: 100px 0
+		h2
+			font-size: 31px
+	#our-clients
+		font-size: 14px
+		li
+			margin-top: 40px
+		li:last-child
+			.ind-icon
+				max-width: 80px
+				width: auto
+				margin-right: 3px
+	#price
+		padding: 100px 0
+		h2
+			font-size: 36px
+	
+	#price .price-steps .step-notion
+		align-items: center
+		padding: 10px
+		line-height: 1.4em
+		vertical-align: middle
+		p:first-child
+			margin-right: 9px
+	#price .price-steps > li:before
+		left: 0
+	#price .price-steps .caption
+		padding-left: 20px
+	.server-options li
+		width: 100%
+	.server-options .option-txt
+		display: -webkit-inline-flex
+		display: -moz-inline-flex
+		display: -ms-inline-flex
+		display: -o-inline-flex
+		display: inline-flex
+		justify-content: space-between
+		width: 100%
+		padding-left: 50px
+	.server-options
+		.checkbox
+			position: absolute
+		li
+			margin-top: 20px
+	
+	.form-check
+		.product-notion
+			width: 70%
+	.faq .caption
+		margin-right: 0
+	.faq .more-adv
+		margin-top: 20px
+		text-align: center
+		display: block
+	.faq .faq-txt
+		flex-direction: column
+	.faq .faq-ask,
+	.faq .get-consult
+		width: 100%
+	.faq .get-consult
+		margin-top: 30px
+		a
+			font-size: 16px
+	
+	#technologies
+		padding: 100px 0
+		h2
+			font-size: 36px
+	#technologies ul li:first-child
+		margin-top: 50px
+	#try
+		padding: 100px 0 170px
+		h2
+			font-size: 40px
+	
+	#try .clouds .back-cloud
+		bottom: -65px
+		width: 150%
+	#try .clouds .forward-cloud
+		bottom: -70px
+		width: 150%
+	#try .btns
+		position: relative
+		z-index: 1
+	
+	#need-help
+		h2
+			font-size: 36px
+		ul
+			font-size: 16px
+		.help-icon
+			margin: 0 auto
+			text-align: center
+			max-width: 70px
+			height: 80px
+			line-height: 80px
+			img
+				vertical-align: middle
+				width: 100%
+
+	#contacts .contacts-box
+		padding: 50px 20px
+	
+	footer
+		padding: 50px 0
+		text-align: center
+		.footer-rights
+			max-width: 100%
+		.social
+			margin-top: 30px
+		.made-by
+			margin-top: 30px
+	.form-check .order-btn a
+		padding: 0 25px
+	.faq
+		padding: 35px 20px
+
+
+
+
+
+
+
+
+
+
+
+
+	#for-whom .tab-links,
+	footer ul,
+	#for-whom .tab-box > div > ul,
+	.server-options
+		flex-direction: column
+
 	/**/
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 750px)
+@media only screen and (max-width : 650px)
+	#try .clouds .forward-cloud
+		bottom: -50px
+		width: 150%
+@media only screen and (max-width : 610px)
+	#top-sec
+		.to-try
+			display: block
+			margin-left: 0
+	#try
+		.try.btn
+			margin-right: auto
+			margin-bottom: 20px
+			margin-left: auto
+		.btns
+			a
+				width: 290px
+				padding: 0
+				text-align: center
+				margin-right: auto
+				margin-left: auto
+				display: block
 	
 	/**/
 
 
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-
-	/**/
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	
+	#opportunities .integr-spis li:not(:last-child):before
+		left: 165px
+	#for-whom .to-consult
+		width: 100%
+		padding: 0 0 0 55px
+		font-size: 12px
+	#try .clouds .forward-cloud
+		bottom: -40px
+		width: 150%
 	/**/
-
-
+@media only screen and (max-width : 450px)
+	header .logo
+		.logo-notion
+			display: none
+	/**/
+@media only screen and (max-width : 425px)
+	.why-us	li
+		flex-direction: column
+		align-items: center
+		text-align: center
+		.why-us-img
+			margin-right: 0
+	#cases .more-cases a
+		width: 100%
+		padding: 0
+	#try .try.btn:before
+		display: none
+	/**/
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
+@media only screen and (max-width : 360px)
+	#try .clouds .forward-cloud
+		bottom: -30px
+		width: 150%
 	/**/
 
 

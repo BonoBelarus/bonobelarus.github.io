@@ -13,6 +13,8 @@
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="css/owl.carousel.min.css"/>
     <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="css/ion.rangeSlider.css"/>
+    <link rel="stylesheet" href="css/ion.rangeSlider.skinHTML5.css"/>
     <link rel="stylesheet" href="css/main.css"/><!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#000"/><!-- Windows Phone -->
     <meta name="msapplication-navbutton-color" content="#000"/><!-- iOS Safari -->
@@ -22,15 +24,16 @@
     <header>
       <div class="content">
         <div class="logo">
-          <div class="logo-main">
-            <p>МиСофт</p>
-          </div>
+          <div class="logo-main"><img src="img/logo-mi.png" alt=""/></div>
           <div class="logo-notion">
             <p>Официальный дистрибьютор фирмы «1С»</p>
             <p>в Республике Беларусь</p>
           </div>
         </div>
         <nav>
+          <div class="mobile-menu">
+            <div></div>
+          </div>
           <ul>
             <li><a href="#">Возможности продукта</a></li>
             <li><a href="#">О компании</a></li>
@@ -429,38 +432,46 @@
           <ul>
             <li>
               <div class="integr-icon"><img src="img/integr-icon-1.png" alt=""/></div>
-              <div class="integr-caption">
-                <p>1C бухгалтерия</p>
-              </div>
-              <div class="integr-txt">
-                <p>(4-5 слов о том как оно здорово интегрируется)</p>
+              <div class="integr-clarify">
+                <div class="integr-caption">
+                  <p>1C бухгалтерия</p>
+                </div>
+                <div class="integr-txt">
+                  <p>(4-5 слов о том как оно здорово интегрируется)</p>
+                </div>
               </div>
             </li>
             <li>
               <div class="integr-icon"><img src="img/integr-icon-2.png" alt=""/></div>
-              <div class="integr-caption">
-                <p>Web и mobile</p>
-              </div>
-              <div class="integr-txt">
-                <p>(программа работает на любой платформе)</p>
+              <div class="integr-clarify">
+                <div class="integr-caption">
+                  <p>Web и mobile</p>
+                </div>
+                <div class="integr-txt">
+                  <p>(программа работает на любой платформе)</p>
+                </div>
               </div>
             </li>
             <li>
               <div class="integr-icon"><img src="img/integr-icon-3.png" alt=""/></div>
-              <div class="integr-caption">
-                <p>Интеграция с "1C-Битрикс"</p>
-              </div>
-              <div class="integr-txt">
-                <p>(обмен с интернет-магазином)</p>
+              <div class="integr-clarify">
+                <div class="integr-caption">
+                  <p>Интеграция с "1C-Битрикс"</p>
+                </div>
+                <div class="integr-txt">
+                  <p>(обмен с интернет-магазином)</p>
+                </div>
               </div>
             </li>
             <li>
               <div class="integr-icon"><img src="img/integr-icon-4.png" alt=""/></div>
-              <div class="integr-caption">
-                <p>Оборудование</p>
-              </div>
-              <div class="integr-txt">
-                <p>(терминалы сбора данных, сканеры штрих-кодово и т.д.)</p>
+              <div class="integr-clarify">
+                <div class="integr-caption">
+                  <p>Оборудование</p>
+                </div>
+                <div class="integr-txt">
+                  <p>(терминалы сбора данных, сканеры штрих-кодово и т.д.)</p>
+                </div>
               </div>
             </li>
           </ul>
@@ -581,7 +592,7 @@
         </div>
         <div class="btns"><a class="btn to-consult" href="#">Нужна консультация по внедрению?</a></div>
         <div class="big-card-help">
-          <h2>Система помогает вам контролировать и анализировать процессы в компании. </h2>
+          <h3>Система помогает вам контролировать и анализировать процессы в компании. </h3>
           <div class="features">
             <ul>
               <li>
@@ -599,10 +610,10 @@
                 <div class="check-mark"><img src="img/check-mark.png" alt=""/></div>
                 <div class="ft-descr">
                   <div class="caption">
-                    <p>Бизнес как на ладони</p>
+                    <p>Опережение конкурентов</p>
                   </div>
                   <div class="ft-txt">
-                    <p>Все данные доступны вам в любое время из любой точки мира.</p>
+                    <p>Вы принимаете взвешенные и обоснованные управленческие решения.</p>
                   </div>
                 </div>
               </li>
@@ -611,9 +622,530 @@
         </div>
       </div>
     </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
+    <section id="about">
+      <div class="content">
+        <h2>О компании</h2>
+        <div class="about-wrap">
+          <div class="about-box">
+            <p><span class="bold">ЗАО «МиСофт НВП»</span> — официальный дистрибьютор фирмы «1С» в Республике Беларусь. Наша компания уже <span class="bold">22 года</span>  специализируется на поставке, установке, внедрении и сопровождении автоматизированных систем на основе платформы «1С:Предприятие».</p>
+            <p>Разработки компании «МиСофт» признаны фирмой «1С» как <span class="bold dashed">продукты, совместимые с системой программ «1С:Предприятие».</span></p>
+            <p>Специалисты нашей компании обучены и сертифицированы по соответствующим направлениям и технологиям. Более <span class="bold">150 сертификатов «1С»</span> по различным областям деятельности. Уровень подготовки сотрудников позволяет решать даже самые сложные задачи автоматизации.</p>
+          </div>
+          <div class="about-logo">
+            <p>МиСофт</p>
+            <div class="logo-clarify">
+              <p>Официальный дистрибьютор фирмы "1C"</p>
+              <p>в Республике Беларусь</p>
+              <p>ISO 9001:2008 </p>
+            </div>
+          </div>
+        </div>
+        <div class="about-cards">
+          <ul>
+            <li>
+              <div class="about-card-wrap">
+                <div class="about-card-img"><img src="img/about-card-1.png" alt=""/></div>
+                <div class="about-card-txt">
+                  <p>Преподаватели нашего учебного центра сертифицированы фирмой «1С» и имеют право обучения пользователей и программистов «1С».</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="about-card-wrap">
+                <div class="about-card-img"><img src="img/about-card-1.png" alt=""/></div>
+                <div class="about-card-txt">
+                  <p>Преподаватели нашего учебного центра сертифицированы фирмой «1С» и имеют право обучения пользователей и программистов «1С».</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="about-card-wrap">
+                <div class="about-card-img"><img src="img/about-card-1.png" alt=""/></div>
+                <div class="about-card-txt">
+                  <p>Преподаватели нашего учебного центра сертифицированы фирмой «1С» и имеют право обучения пользователей и программистов «1С».</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="why-us">
+          <h3>Почему выбирают нас</h3>
+          <ul>
+            <li>
+              <div class="why-us-img"><img src="img/why-us-icon-1.png" alt=""/></div>
+              <div class="why-us-txt">
+                <div class="caption bold">
+                  <p>Опыт</p>
+                </div>
+                <p>У нас накоплен опыт внедрения в различных отраслях, мы знакомы с их спецификой</p>
+              </div>
+            </li>
+            <li>
+              <div class="why-us-img"><img src="img/why-us-icon-2.png" alt=""/></div>
+              <div class="why-us-txt">
+                <div class="caption bold">
+                  <p>Квалификация</p>
+                </div>
+                <p>У нас накоплен опыт внедрения в различных отраслях, мы знакомы с их спецификой</p>
+              </div>
+            </li>
+            <li>
+              <div class="why-us-img"><img src="img/why-us-icon-3.png" alt=""/></div>
+              <div class="why-us-txt">
+                <div class="caption bold">
+                  <p>Скорость</p>
+                </div>
+                <p>У нас накоплен опыт внедрения в различных отраслях, мы знакомы с их спецификой</p>
+              </div>
+            </li>
+            <li>
+              <div class="why-us-img"><img src="img/why-us-icon-4.png" alt=""/></div>
+              <div class="why-us-txt">
+                <div class="caption bold">
+                  <p>Надёжность</p>
+                </div>
+                <p>У нас накоплен опыт внедрения в различных отраслях, мы знакомы с их спецификой</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="cases">
+      <div class="content">
+        <h2>Кейсы</h2>
+        <div class="clarify">
+          <p>Наше решение используют 17 935 пользователей, в более чем 900 компаний</p>
+        </div>
+        <div class="cases-cards">
+          <ul>
+            <li>
+              <div class="case-logo"><img src="img/case-1-logo.png" alt=""/></div>
+              <div class="case-txt">
+                <div class="caption">
+                  <p>ООО «Юнитаргет»</p>
+                </div>
+                <p>Крупная оптовая компания, импортер обуви от производителей Германии, России, Турции и Китая.</p>
+              </div>
+              <div class="case-users">
+                <p>Решение для <span class="bold">50 пользователей</span></p>
+              </div>
+              <div class="case-btn"><a class="btn" href="#">смотреть кейс</a></div>
+            </li>
+            <li>
+              <div class="case-logo"><img src="img/case-2-logo.png" alt=""/></div>
+              <div class="case-txt">
+                <div class="caption">
+                  <p>Schneider Electric</p>
+                </div>
+                <p>Мировой эксперт в управлении энергией и автоматизации для энергетики, предприятий, центров обработки данных.</p>
+              </div>
+              <div class="case-users">
+                <p>Решение для <span class="bold">30 пользователей</span></p>
+              </div>
+              <div class="case-btn"><a class="btn" href="#">смотреть кейс</a></div>
+            </li>
+            <li>
+              <div class="case-logo"><img src="img/case-3-logo.png" alt=""/></div>
+              <div class="case-txt">
+                <div class="caption">
+                  <p>ООО «Стима»</p>
+                </div>
+                <p>Крупная оптовая компания, импортер обуви от производителей Германии, России, Турции и Китая.</p>
+              </div>
+              <div class="case-users">
+                <p>Решение для <span class="bold">50 пользователей</span></p>
+              </div>
+              <div class="case-btn"><a class="btn" href="#">смотреть кейс</a></div>
+            </li>
+            <li>
+              <div class="case-logo"><img src="img/case-1-logo.png" alt=""/></div>
+              <div class="case-txt">
+                <div class="caption">
+                  <p>ООО «Юнитаргет»</p>
+                </div>
+                <p>Крупная оптовая компания, импортер обуви от производителей Германии, России, Турции и Китая.</p>
+              </div>
+              <div class="case-users">
+                <p>Решение для <span class="bold">50 пользователей</span></p>
+              </div>
+              <div class="case-btn"><a class="btn" href="#">смотреть кейс</a></div>
+            </li>
+            <li>
+              <div class="case-logo"><img src="img/case-2-logo.png" alt=""/></div>
+              <div class="case-txt">
+                <div class="caption">
+                  <p>Schneider Electric</p>
+                </div>
+                <p>Мировой эксперт в управлении энергией и автоматизации для энергетики, предприятий, центров обработки данных.</p>
+              </div>
+              <div class="case-users">
+                <p>Решение для <span class="bold">30 пользователей</span></p>
+              </div>
+              <div class="case-btn"><a class="btn" href="#">смотреть кейс</a></div>
+            </li>
+            <li>
+              <div class="case-logo"><img src="img/case-3-logo.png" alt=""/></div>
+              <div class="case-txt">
+                <div class="caption">
+                  <p>ООО «Стима»</p>
+                </div>
+                <p>Крупная оптовая компания, импортер обуви от производителей Германии, России, Турции и Китая.</p>
+              </div>
+              <div class="case-users">
+                <p>Решение для <span class="bold">50 пользователей</span></p>
+              </div>
+              <div class="case-btn"><a class="btn" href="#">смотреть кейс</a></div>
+            </li>
+          </ul>
+          <div class="more-cases"><a class="btn" href="#">Показать ещё 6 кейсов</a></div>
+        </div>
+      </div>
+    </section>
+    <section id="our-clients">
+      <div class="content">
+        <h2>Наши клиенты — компании из самых разных отраслей</h2>
+        <div class="industries">
+          <ul>
+            <li>
+              <div class="ind-icon"><img src="img/ind-alco.png" alt=""/></div>
+              <div class="ind-txt">
+                <p>Алкогольная продукция</p>
+              </div>
+            </li>
+            <li>
+              <div class="ind-icon"><img src="img/ind-food.png" alt=""/></div>
+              <div class="ind-txt">
+                <p>Продукты питания</p>
+              </div>
+            </li>
+            <li>
+              <div class="ind-icon"><img src="img/ind-electro.png" alt=""/></div>
+              <div class="ind-txt">
+                <p>Электрооборудование</p>
+              </div>
+            </li>
+            <li>
+              <div class="ind-icon"><img src="img/ind-shoe.png" alt=""/></div>
+              <div class="ind-txt">
+                <p>Обувь</p>
+              </div>
+            </li>
+            <li>
+              <div class="ind-icon"><img src="img/ind-build.png" alt=""/></div>
+              <div class="ind-txt">
+                <p>Строительные материалы</p>
+              </div>
+            </li>
+            <li>
+              <div class="ind-icon"><img src="img/ind-floor.png" alt=""/></div>
+              <div class="ind-txt">
+                <p>Напольные покрытия</p>
+              </div>
+            </li>
+            <li>
+              <div class="ind-icon"><img src="img/ind-doors.png" alt=""/></div>
+              <div class="ind-txt">
+                <p>Межкомнатные двери</p>
+              </div>
+            </li>
+            <li>
+              <div class="ind-icon"><img src="img/ind-tools.png" alt=""/></div>
+              <div class="ind-txt">
+                <p>Запасные части</p>
+              </div>
+            </li>
+            <li>
+              <div class="ind-icon"><img src="img/ind-wear.png" alt=""/></div>
+              <div class="ind-txt">
+                <p>Товары легкой промышленности</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="price">
+      <div class="content">
+        <h2>Стоимость лицензии</h2>
+        <div class="clarify">
+          <p>Стоимость складывается из базовой лицензии «1С:Управление торговлей» плюс количество пользователь, плюс вид сервера</p>
+        </div>
+        <div class="form-price">
+          <form action="">
+            <ul class="price-steps">
+              <li>
+                <div class="caption">
+                  <p>Лицензия</p>
+                </div>
+                <div class="step-notion">
+                  <p>«1С:Управление торговлей» для 1 пользователя</p>
+                  <p class="price">702,00 руб</p>
+                </div>
+              </li>
+              <li>
+                <div class="caption">
+                  <p>Дополнительные пользователи</p>
+                </div>
+                <div class="range-slider">
+                  <input id="range-slider" type="text" name="xtra-users" value=""/>
+                </div>
+              </li>
+              <li>
+                <div class="caption">
+                  <p>Сервер (опционально)</p>
+                </div>
+                <ul class="server-options">
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox"/>
+                    </div>
+                    <div class="option-txt">
+                      <p class="bold">До 5 пользователей</p>
+                      <p class="price">580,80 руб.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox"/>
+                    </div>
+                    <div class="option-txt">
+                      <p class="bold">Безлимит. 32 бита</p>
+                      <p class="price">2 032,20 руб.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox"/>
+                    </div>
+                    <div class="option-txt">
+                      <p class="bold">Безлимит. 64 бита</p>
+                      <p class="price">3 483,60 руб.</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="form-check">
+              <ul>
+                <li class="product">
+                  <div class="caption">
+                    <p>Продукт</p>
+                  </div>
+                  <div class="product-box">
+                    <div class="product-notion">
+                      <p>«1С:Управление торговлей»</p>
+                    </div>
+                    <div class="product-price">
+                      <p>702,00</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="xtra-users">
+                  <div class="caption">
+                    <p>Дополнительные пользователи</p>
+                  </div>
+                  <div class="product-box">
+                    <div class="product-notion">
+                      <p>10 человек</p>
+                    </div>
+                    <div class="product-price">
+                      <p>3992,00</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="server">
+                  <div class="caption">
+                    <p>Сервер</p>
+                  </div>
+                  <div class="product-box">
+                    <div class="product-notion">
+                      <p>До 5 пользователей</p>
+                    </div>
+                    <div class="product-price">
+                      <p>580,80</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="total">
+                <p>5 274 руб</p>
+              </div>
+              <div class="order-btn"><a class="btn" href="#">Заказать внедрение</a></div>
+            </div>
+          </form>
+        </div>
+        <div class="faq">
+          <div class="faq-top">
+            <div class="caption">
+              <p>А если мне нужно 11 лицензий?</p>
+            </div>
+            <div class="more-adv">
+              <p>Ещё совет</p>
+            </div>
+          </div>
+          <div class="faq-txt">
+            <div class="faq-ask">
+              <p>Для того что бы не переплачивать за лишних пользователей, вы можете заказать лицензию на 10 пользователей и докупить ещё одну лицензию отдельно.</p>
+            </div>
+            <div class="get-consult"><a class="btn" href="#">Получить консультацию</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="technologies">
+      <div class="content">
+        <h2>Технология внедрения</h2>
+        <div class="clarify">
+          <p>Мы разработали собственную отлаженную методику внедрения проектов — от предпроектного обследования до сопровождения проекта</p>
+        </div>
+        <ul>
+          <li>
+            <div class="tech-icon"><img src="img/tech-icon-1.png" alt=""/></div>
+            <div class="caption">
+              <p>Подготовка</p>
+            </div>
+            <div class="tech-txt">
+              <p>Изучаем особенности вашего бизнеса, принципы работы, требования к системе.</p>
+            </div>
+          </li>
+          <li>
+            <div class="tech-icon"><img src="img/tech-icon-2.png" alt=""/></div>
+            <div class="caption">
+              <p>Внедрение</p>
+            </div>
+            <div class="tech-txt">
+              <p>Продукт готов к работе, настроен под вашу специфику и требования бизнеса</p>
+            </div>
+          </li>
+          <li>
+            <div class="tech-icon"><img src="img/tech-icon-3.png" alt=""/></div>
+            <div class="caption">
+              <p>Програмирование</p>
+            </div>
+            <div class="tech-txt">
+              <p>Новые функции, изменение существующих, отчеты, экранные формы</p>
+            </div>
+          </li>
+          <li>
+            <div class="tech-icon"><img src="img/tech-icon-4.png" alt=""/></div>
+            <div class="caption">
+              <p>Перенос данных</p>
+            </div>
+            <div class="tech-txt">
+              <p>Ничего не потеряется —все старые данные будут перенесены (товары, остатки, клиенты, долги и т.д)</p>
+            </div>
+          </li>
+          <li>
+            <div class="tech-icon"><img src="img/tech-icon-5.png" alt=""/></div>
+            <div class="caption">
+              <p>Обучение</p>
+            </div>
+            <div class="tech-txt">
+              <p>Проводим групповые и индивидуальные курсы в рамках внедрения</p>
+            </div>
+          </li>
+          <li>
+            <div class="tech-icon"><img src="img/tech-icon-6.png" alt=""/></div>
+            <div class="caption">
+              <p>Техническая поддержка</p>
+            </div>
+            <div class="tech-txt">
+              <p>Консультируем, анализируем проблемы                       и находим решения, настраиваем сервера, поддерживаем работоспособность.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="try">
+      <div class="content">
+        <h2>Попробуйте прямо сейчас</h2>
+        <div class="clarify">
+          <p>Вы можете познакомиться с программой самостоятельно, используя нашу облачную версию 1С.</p>
+          <p>Для этого не потребуется что-либо скачивать или устанавливать у себя</p>
+          <p>на компьютере какие-либо программы.</p>
+        </div>
+        <div class="btns"><a class="try btn" href="#">Попробовать бесплатно</a><a class="order btn" href="#">Заказать внедрение</a></div>
+      </div>
+      <div class="clouds">
+        <div class="back-cloud"><img src="img/back-cloud.png" alt=""/></div>
+        <div class="forward-cloud"><img src="img/for-clound.png" alt=""/></div>
+      </div>
+    </section>
+    <section id="need-help">
+      <div class="content">
+        <h2>Нужна помощь консультанта с опытом внедрений?</h2>
+        <ul>
+          <li>
+            <div class="help-icon"><img src="img/need-help-1.png" alt=""/></div>
+            <div class="help-txt"><a href="#">Задать вопрос</a></div>
+          </li>
+          <li>
+            <div class="help-icon"><img src="img/need-help-2.png" alt=""/></div>
+            <div class="help-txt"><a href="tel:+375333829194">+375 33 382-91-94</a></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="contacts">
+      <div class="content">
+        <div class="contacts-box">
+          <h2>Контакты</h2>
+          <div class="addr">
+            <div class="caption">
+              <p>Фактический адрес:</p>
+            </div>
+            <p>г. Минск, пр-т Независимости 177, 2-ой подъезд, 6-ой этаж</p>
+          </div>
+          <div class="post">
+            <div class="caption">
+              <p>Почтовый адрес:</p>
+            </div>
+            <p>220125, г. Минск, ул. Шафарнянская, 11, пом.31</p>
+          </div>
+          <div class="phones">
+            <div class="caption">
+              <p>Телефоны:</p>
+            </div>
+            <p>+375 (17) 286-35-76 — многоканальный</p>
+            <p>+375 (29) 696-00-29 — Velcom</p>
+            <p>+375 (33) 341-11-79 — МТС</p>
+          </div>
+          <div class="email">
+            <div class="caption">
+              <p>E-mail:</p>
+            </div>
+            <p>info@misoft.by</p>
+            <p>hotline@misoft.by — служба техподдержки</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="content">
+        <ul>
+          <li class="footer-rights">
+            <div class="logo"><img src="img/logo.png" alt=""/></div>
+            <div class="clarify">
+              <p>Официальный дистрибьютор фирмы “1С” в Республике Беларусь</p>
+            </div>
+            <div class="rights">
+              <p>© 1995-2017</p>
+            </div>
+          </li>
+          <li class="social"><a class="facebook" href="#"><img src="img/facebook.png" alt=""/></a><a class="vk" href="#"><img src="img/vk.png" alt=""/></a><a class="twitter" href="#">
+              <p>t</p></a></li>
+          <li class="made-by">
+            <p>Разработка:</p>
+            <div class="made-by-logo"><a href="#"><img src="img/made-by-logo.jpg" alt=""/></a></div>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/54268bcde8.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
