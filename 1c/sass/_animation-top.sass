@@ -1,7 +1,7 @@
 .inside-circle
-	animation: backRotate 20s infinite linear
+	animation: backRotate 60s infinite linear
 .animation-top
-	animation: topRotate 40s infinite linear
+	animation: topRotate 30s infinite linear
 	width: 360px
 	height: 360px
 	border-radius: 50%
@@ -10,6 +10,7 @@
 	right: 50px
 	border: 1px dashed #fff
 	.center-circle
+		z-index: 9
 		position: absolute
 		height: 100px
 		width: 100px
@@ -35,13 +36,14 @@
 	.perhot-6,
 	.perhot-8,
 	.perhot-10
-		animation: backRotate 40s infinite linear
+		transition: .7s
+		animation: backRotate 30s infinite linear
 	.perhot-1,
 	.perhot-3,
 	.perhot-5,
 	.perhot-7,
 	.perhot-9
-		animation: topRotate 40s infinite linear
+		animation: backRotate 60s infinite linear
 	.top-anim-1-icon,
 	.top-anim-2-icon,
 	.top-anim-3-icon,
@@ -54,22 +56,32 @@
 		background-color: #fff
 		line-height: 85px
 		text-align: center
+		right: 0
+		top: 0
+		left: 0
+		bottom: 0
+		margin: auto
+		transition: 1s ease .5s
+		opacity: 0
 		img
 			vertical-align: middle
-	.top-anim-1-icon
-		left: 5%
-	.top-anim-2-icon
-		top: 10%
-		right: -5%
-	.top-anim-3-icon
-		top: 60%
-		right: -5%
-	.top-anim-4-icon
-		left: 40%
-		bottom: -30px
-	.top-anim-5-icon
-		left: -10%
-		top: 50%
+	.anim.active
+		opacity: 1
+	.top-anim-1-icon.active
+		left: -170px
+		top: -315px
+	.top-anim-2-icon.active
+		top: -200px
+		right: -300px
+	.top-anim-3-icon.active
+		top: 200px
+		right: -300px
+	.top-anim-4-icon.active
+		left: -50px
+		top: 355px
+	.top-anim-5-icon.active
+		left: -350px
+		top: 50px
 	.perhot-1,
 	.perhot-2,
 	.perhot-3,
