@@ -71,14 +71,22 @@ $(document).ready(function(){
 		}, del);
 	});
 
+
+	$('.faq-txt .owl-carousel').owlCarousel({
+		items: 1,
+		nav: true,
+		navText: ['','<img src="img/svg/calc_tip.svg"><p>Ещё совет</p>'],
+		loop: true
+	});
+
 	if($(window).width() > 1023){
-		$('.owl-carousel').owlCarousel({
+		$('.carousel-wrap .owl-carousel').owlCarousel({
 			items: 1,
 			nav: true,
 			dots: true,
 			dotData: true,
 			dotsContainer: '#oppo-links',
-			navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
+			navText: ['<img src="img/svg/arrow-left.svg">','<img src="img/svg/arrow_right.svg">']
 		});
 	}
 
@@ -194,14 +202,31 @@ $(document).ready(function(){
 		$('body').addClass('disabled');
 		e.preventDefault();
 	});
-	$('.pop-up-case .close').click(function(){
-		$('.pop-up-case, .pop-up-case-wrap').removeClass('active');
+	$('.to-consult').click(function(e){
+		$('.pop-up-consult-wrap, #pop-up-consult').addClass('active');
+		$('body').addClass('disabled');
+		e.preventDefault();
+	});
+	$('.to-order').click(function(e){
+		$('.pop-up-order-wrap, #pop-up-order').addClass('active');
+		$('body').addClass('disabled');
+		e.preventDefault();
+	});
+	$('.server-faq-link').click(function(e){
+		$('.pop-up-server-wrap, #pop-up-server').addClass('active');
+		$('body').addClass('disabled');
+		e.preventDefault();
+	});
+
+	$('.pop-up .close').click(function(){
+		$('.pop-up, .pop-up-wrap').removeClass('active');
 		$('body').removeClass('disabled');
 	});
 	//END of FADE IN POP-UP
 	//MOBILE-MENU
 	$('.mobile-menu').click(function(){
 		$(this).toggleClass('active');
+		$('body').toggleClass('disabled');
 		$('nav ul').slideToggle();
 	});
 	//END of MOBILE-MENU

@@ -14,12 +14,23 @@
 	.nav-phone,
 	.nav-order
 		display: none
+@media only screen and (max-width : 1050px)
+	footer
+		text-align: center
+		.footer-top
+			flex-direction: column
+		.footer-nav
+			margin: 50px 0
 @media only screen and (max-width : 1024px)
+	#pop-up-server
+		padding: 40px 20px 90px
 	.nav-phone,
 	.nav-order
 		display: block
 	.pop-up-case-wrap .pop-case-descr
 		padding: 80px 20px
+	#pop-up-consult
+		padding: 60px 20px
 	.oppo-slider
 		display: none
 	.tab-box
@@ -456,8 +467,6 @@
 			max-width: 100%
 		.social
 			margin-top: 30px
-		.made-by
-			margin-top: 30px
 	.form-check .order-btn a
 		padding: 0 25px
 	.faq
@@ -489,6 +498,14 @@
 		bottom: -50px
 		width: 150%
 @media only screen and (max-width : 610px)
+	.faq .faq-txt .owl-carousel .owl-next
+		position: initial
+		text-align: center
+		margin-top: 20px
+	.top-line-server
+		flex-direction: column
+		a
+			margin: 10px 0 0 25px
 	#top-sec
 		.to-try
 			display: block
@@ -550,6 +567,11 @@
 		width: 48%
 	/**/
 @media only screen and (max-width : 450px)
+	.footer-bottom
+		flex-direction: column
+		align-items: center
+	.made-by
+		margin-top: 20px
 	header .logo
 		.logo-notion
 			display: none
