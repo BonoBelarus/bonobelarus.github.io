@@ -12,6 +12,21 @@
     display: none; } }
 
 @media only screen and (max-width: 1050px) {
+  .faq .faq-txt {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .faq .get-consult a {
+    margin-top: 30px; }
+  .form-check:after {
+    margin-top: -45px;
+    width: 120%;
+    left: -10%;
+    height: 150px; }
   footer {
     text-align: center; }
     footer .footer-top {
@@ -190,7 +205,7 @@
     padding: 20px 10px; }
   .form-check {
     width: 100%;
-    margin-top: 30px; }
+    margin-top: 50px; }
     .form-check .product-box {
       -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
@@ -243,6 +258,10 @@
   /**/ }
 
 /* Small Devices, Tablets */
+@media only screen and (max-width: 968px) {
+  .pop-up-case-wrap .close {
+    position: fixed; } }
+
 @media only screen and (max-width: 768px) {
   h2 {
     line-height: 1em;

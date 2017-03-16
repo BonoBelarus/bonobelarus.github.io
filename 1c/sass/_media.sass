@@ -15,6 +15,15 @@
 	.nav-order
 		display: none
 @media only screen and (max-width : 1050px)
+	.faq .faq-txt
+			flex-direction: column
+	.faq .get-consult a
+		margin-top: 30px
+	.form-check:after
+		margin-top: -45px
+		width: 120%
+		left: -10%
+		height: 150px
 	footer
 		text-align: center
 		.footer-top
@@ -168,7 +177,7 @@
 			padding: 20px 10px
 	.form-check
 		width: 100%
-		margin-top: 30px
+		margin-top: 50px
 		.product-box
 			justify-content: space-around
 		.product-notion,
@@ -223,6 +232,9 @@
 	/**/
 
 /* Small Devices, Tablets */
+@media only screen and (max-width : 968px)
+	.pop-up-case-wrap .close
+		position: fixed
 @media only screen and (max-width : 768px)
 	h2
 		line-height: 1em

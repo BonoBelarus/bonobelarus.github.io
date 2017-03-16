@@ -59,6 +59,7 @@ body
 	position: relative
 	z-index: 1
 
+
 a
 	text-decoration: none
 	transition: .35s
@@ -117,7 +118,9 @@ header
 		line-height: 1.5em
 		display: inline-flex
 		justify-content: space-between
+		align-items: center
 		text-align: left
+		vertical-align: middle
 	.logo
 		line-height: 1.2em
 		>div
@@ -150,6 +153,7 @@ header
 		color: $first-color
 		font-size: 56px
 	.clarify
+		color: $first-color
 		margin: 40px 0 0
 		text-align: left
 		margin-top: 40px
@@ -187,13 +191,18 @@ header
 		li
 			display: flex
 			justify-content: flex-start
-			padding: 30px 20px
+			padding: 20px
 			width: 280px
-			height: 150px
+			height: 120px
 			background-color: #fff
 			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
 	h2,	h3
 		font-family: 'RobotoSlab'
+#oppo-links
+	font-size: 18px
+	>div:last-child
+		font-weight: 700
+		color: red
 .oppo-slider
 	margin: 80px 0 160px
 	display: flex
@@ -213,6 +222,9 @@ header
 		>div
 			position: absolute
 			display: inline-block
+		>div.disabled
+			opacity: .4
+			cursor: default
 		img
 			width: 30px
 	.owl-prev
@@ -233,8 +245,6 @@ header
 		max-width: 70px
 		margin-right: 20px
 		vertical-align: middle
-		img
-			width: auto
 	.slide-ft-txt
 		vertical-align: middle
 		display: inline-block
@@ -293,6 +303,22 @@ header
 			top: 20px
 			left: 20px
 			border: none
+		>li:first-child
+			z-index: 1
+		>li:nth-child(2)
+			z-index: 2
+		>li:nth-child(3)
+			z-index: 3
+		>li:nth-child(4)
+			z-index: 4
+		>li:nth-child(5)
+			z-index: 5
+		>li:nth-child(6)
+			z-index: 6
+		>li:nth-child(7)
+			z-index: 7
+		>li:nth-child(8)
+			z-index: 8
 		>li:first-child:before
 			content: '1'
 		>li:nth-child(2):before
@@ -422,9 +448,14 @@ header
 		font-size: 18px
 		font-weight: 800
 		margin: 30px 0 20px
+	.integr-txt
+		font-size: 15px
 #for-whom
 	background-color: #f7f6f3
 	padding: 120px 0
+	.tab-img
+		max-width: 120px
+		margin: 0 auto
 	.drop-content
 		display: none
 		font-size: 16px
@@ -557,6 +588,16 @@ header
 		z-index: 2
 		transition: .15s
 		overflow: hidden
+		position: relative
+		p
+			transition: .15s
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			text-align: center
+			opacity: 0
 	.to-consult:before
 		content: ''
 		@include btn-radius(25px)
@@ -587,6 +628,10 @@ header
 		left: -60px
 		animation: none
 	.to-consult:hover
+		color: transparent
+		p
+			color: $first-color
+			opacity: 1
 .big-card-help
 	background-color: #ffd63b
 	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.11)
@@ -687,6 +732,7 @@ header
 			line-height: 1.2em
 			vertical-align: middle
 	.about-card-txt
+		font-size: 15px
 		padding: 40px
 		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
 		z-index: 5
@@ -730,7 +776,7 @@ header
 	padding: 140px 0
 	background-color: #f7f6f3
 	.cases-cards
-		margin-top: 80px
+		margin-top: 50px
 		text-align: center
 		color: $second-color
 		ul
@@ -753,6 +799,7 @@ header
 			max-height: 100px
 			vertical-align: middle
 	.case-txt
+		font-size: 15px
 		text-align: left
 		margin-top: 50px
 		.caption
@@ -762,6 +809,7 @@ header
 			margin-bottom: 20px
 			color: $first-color
 	.case-users
+		font-size: 14px
 		margin-top: 20px
 		p
 			position: relative
@@ -878,6 +926,9 @@ header
 		display: inline-block
 		width: 155px
 		vertical-align: top
+		font-size: 16px
+		.bold
+			font-size: 14px
 	.checkbox
 		display: inline-block
 		width: 25px
@@ -885,22 +936,41 @@ header
 	.caption
 		font-size: 14px
 		color: $third-color
+.form-check:after
+	content: ''
+	position: absolute
+	top: 100%
+	margin-top: -25px
+	left: -35px
+	width: 420px
+	height: 85px
+	background: url(../img/svg/zubki-05.svg) center no-repeat
+	background-size: cover
 .form-check:before
 	content: ''
 	position: absolute
-	top: -13px
-	left: -10%
-	width: 120%
-	height: 25px
+	top: -30px
+	left: -5%
+	width: 110%
+	height: 65px
 	background: url(../img/svg/check-1.svg) center no-repeat
-	background-size: 100%
+	background-size: contain
 	z-index: -1
 .form-check
+	padding-bottom: 40px
 	z-index: 99
 	width: 350px
 	background-color: #fff
 	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1)
 	position: relative
+	.bottom-white
+		position: absolute
+		width: 100%
+		height: 60px
+		background-color: #fff
+		bottom: 0
+		left: 0
+		z-index: 9
 	ul
 		background-color: #fff
 		padding: 50px 30px 0
@@ -932,7 +1002,7 @@ header
 			background: url(../img/svg/checkmark_small.svg) center no-repeat
 			background-size: 15px
 	li
-		border-bottom: 1px solid #a7a9ac
+		border-bottom: 1px solid #e6e7e8
 		padding-bottom: 20px
 	li:not(:first-child)
 		margin-top: 20px
@@ -954,6 +1024,8 @@ header
 		a
 			background-color: #f23030
 			color: #fff
+			position: relative
+			z-index: 10
 			line-height: 45px
 			margin-top: 30px
 		a:hover
@@ -972,16 +1044,16 @@ header
 		font-weight: 800
 		font-size: 21px
 		margin-right: 50px
+		margin-bottom: 20px
 	.faq-txt
-		margin-top: 30px
 		display: flex
 		justify-content: space-between
 	.faq-txt .owl-carousel
-		max-width: 600px
+		max-width: 750px
 		.owl-next
 			position: absolute
-			top: -60px
-			left: 70%
+			top: 5px
+			left: 84%
 			img
 				width: 25px
 				margin-right: 15px
