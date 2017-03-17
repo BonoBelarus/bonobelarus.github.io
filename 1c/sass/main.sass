@@ -10,6 +10,22 @@
 @import "pop-up-server"
 
 
+.circle_big
+	position: absolute
+	width: 1000px
+	height: 1000px
+	background: url(../img/svg/animation/circle_big.svg) center no-repeat
+.circle_small
+	position: absolute
+	width: 20px
+	height: 20px
+	background: url(../img/svg/animation/circle_small.svg) center no-repeat
+.plus
+	position: absolute
+	width: 20px
+	height: 20px
+	background: url(../img/svg/animation/plus_bg.svg) center no-repeat
+
 *::-webkit-input-placeholder,
 *::-webkit-textarea-placeholder
 	color: #666
@@ -100,20 +116,36 @@ h3
 	display: inline-block
 	line-height: 50px
 	padding: 0 35px
-	font-weight: 800
+	font-weight: 700
 	font-size: 17px
 	position: relative
-
-
-header
-	line-height: 80px
+header .nav-order:hover:before
+	display: none
+header .nav-order
+	transition: .5s
+	display: inline-block
+	opacity: 0
 	position: absolute
+	top: -15px
+	right: -250px
+	a
+		box-shadow: none
+		border: 2px solid #f23030
+		color: #f23030
+		background-color: #fff
+header
+	transition: .25s
+	line-height: 80px
+	position: fixed
+	z-index: 999
 	top: 0
 	left: 0
 	height: 80px
 	width: 100%
 	background-color: #fff
 	text-align: center
+	nav
+		transition: .5s
 	.content
 		line-height: 1.5em
 		display: inline-flex
@@ -127,20 +159,67 @@ header
 			display: inline-block
 			vertical-align: top
 	.logo-notion
+		transition: .5s
 		color: #808285
 		font-size: 13px
 	a
 		color: $first-color
 		display: block
+		transition: .15s
 	li
+		position: relative
 		display: inline-block
+	li:before
+		content: ''
+		position: absolute
+		bottom: -28px
+		left: 0
+		width: 100%
+		height: 5px
+		background-color: red
+		transition: .15s
+		opacity: 0
+	li:hover:before
+		opacity: 1
+	li:hover
+		a
+		 color: #f23030
 	li:not(:last-child)
 		margin-right: 35px
 #top-sec
+	overflow: hidden
 	height: 100vh
 	background-color: #ffd63b
 	line-height: 100vh
 	text-align: center
+	position: relative
+	.circle_small:nth-child(4)
+		top: 45%
+		left: 55%
+	.circle_small:nth-child(5)
+		top: 15%
+		left: 25%
+	.circle_small:nth-child(6)
+		top: 65%
+		left: 15%
+	.circle_big:nth-child(7)
+		top: -85%
+		right: -50%
+		animation: to-pulse-bg 10s infinite linear
+	.circle_big:nth-child(8)
+		animation: to-pulse-bg 10s infinite linear
+		animation-delay: 2s
+		bottom: -85%
+		left: -50%
+	.plus:first-child
+		top: 35%
+		left: 50%
+	.plus:nth-child(2)
+		top: 60%
+		left: 30%
+	.plus:nth-child(3)
+		top: 45%
+		left: 15%
 	.content
 		text-align: left
 		display: inline-block
@@ -159,14 +238,19 @@ header
 		margin-top: 40px
 		max-width: 550px
 		font-size: 20px
+	.to-order:hover
+		box-shadow: none
 	.to-order
 		background-color: #f23030
 		box-shadow: 0 8px 15px rgba(249, 41, 0, 0.4)
 		color: #fff
 		display: inline-block
+	.to-try:hover
+		background-color: #fff
 	.to-try
 		margin-left: 35px
-		background-color: #fff
+		background-color: transparent
+		border: 2px solid #fff
 		color: $first-color
 	.btns
 		margin-top: 70px
@@ -200,6 +284,9 @@ header
 		font-family: 'RobotoSlab'
 #oppo-links
 	font-size: 18px
+	>div:hover
+		font-weight: 700
+		transition: .25s
 	>div:last-child
 		font-weight: 700
 		color: red
@@ -221,7 +308,10 @@ header
 		text-align: center
 		>div
 			position: absolute
+			transition: .35s
 			display: inline-block
+		>div:hover
+			opacity: .7
 		>div.disabled
 			opacity: .4
 			cursor: default
@@ -528,6 +618,7 @@ header
 		margin-top: 60px
 		text-align: center
 		.caption
+			transition: .25s
 			cursor: pointer
 			max-width: 300px
 			width: 100%
@@ -545,7 +636,7 @@ header
 			margin-right: 30px
 		li:hover
 			.caption
-				box-shadow: 0 8px 15px rgba(255, 157, 0, 0.35)
+				background: #ffd63b
 	.tab-box
 		margin-top: 80px
 		>div
@@ -917,10 +1008,35 @@ header
 	margin-top: 25px
 	display: flex
 	justify-content: space-between
+	input
+		visibility: hidden
+		position: absolute
+	input:checked + label
+		background: #ffd63b url(../img/svg/calc_checkmark.svg) center no-repeat
+		background-size: 15px
+		border: none
+	label
+		vertical-align: top
+		border: 1px solid #bcbec0
+		width: 20px
+		height: 20px
+		cursor: pointer
+		position: relative
+		display: inline-block
+	label:before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+
 	li
-		border: 1px solid #ffd63b
 		padding: 20px
 		width: 230px
+		border: 1px solid #e6e7e8
+	li:hover
+		border: 1px solid #ffd63b
+	li.active
+		border: 1px solid #ffd63b
 	.option-txt
 		color: $third-color
 		display: inline-block
@@ -1021,14 +1137,17 @@ header
 		text-align: center
 	.order-btn
 		text-align: center
-		a
+		a:hover
 			background-color: #f23030
 			color: #fff
+			box-shadow: none
+		a
+			color: #fff
+			background-color: #f23030
 			position: relative
 			z-index: 10
 			line-height: 45px
 			margin-top: 30px
-		a:hover
 			box-shadow: 0 8px 15px rgba(#f23030, .35)
 .faq
 	margin-top: 120px
@@ -1177,6 +1296,8 @@ header
 		text-align: center
 		font-size: 18px
 		
+	.try.btn:hover
+		box-shadow: none
 	.try.btn
 		@include btn-radius(30px)
 		background-color: #f23030
@@ -1195,10 +1316,12 @@ header
 		height: 100px
 		background: url(../img/try-arr.png) center no-repeat
 
+	.order.btn:hover
+		background-color: #fff
 	.order.btn
 		@include btn-radius(30px)
 		line-height: 60px
-		background-color: #fff
+		border: 2px solid #fff
 		color: $first-color
 		padding: 0 40px
 	.clouds
@@ -1239,10 +1362,12 @@ header
 				border-bottom: 1px solid transparent
 
 #contacts
-	padding: 70px 0
+	padding: 120px 0 70px
 	background: #ccc
 	position: relative
 	.contacts-box
+		position: relative
+		z-index: 9
 		color: $second-color
 		font-size: 18px
 		max-width: 570px
@@ -1277,9 +1402,27 @@ footer
 		li:not(:last-child)
 			margin-right: 20px
 	.footer-social
+		.facebook
+			background: url(../img/facebook.png) center no-repeat
+		.facebook:hover
+			background: #1359bf url(../img/facebook-hover.png) center no-repeat
+		.vk
+			background: url(../img/vk.png) center no-repeat
+		.vk:hover
+			background: #0061d6 url(../img/vk-hover.png) center no-repeat
+		.twitter a
+			transition: none
+		.twitter:hover a
+			color: #fff
+		.twitter:hover
+			background-color: #3ea9f9
 		a
 			display: block
+			width: 100%
+			height: 100%
 			border-radius: 50%
+		li:hover
+			box-shadow: none
 		li
 			vertical-align: top
 			border-radius: 50%
@@ -1302,13 +1445,19 @@ footer
 		display: flex
 		justify-content: space-between
 	.made-by
-		>*
-			display: inline-block
-			vertical-align: middle
+		a:hover
+			color: #2962ff
+		a
+			color: $first-color
+			>*
+				display: inline-block
+				vertical-align: middle
 		img
 			vertical-align: middle
-		a
-			margin-left: 20px
+		p:first-child
+			margin-right: 20px
+		p:last-child
+			font-weight: 700
 .mobile-menu:before,
 .mobile-menu:after
 	content: ''
@@ -1383,7 +1532,15 @@ footer
 		font-weight: 700
 		border-radius: 50%
 		background-color: #ffd63b
-	
+.map
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	iframe
+		width: 100%
+		height: 100%
 
 
 @import "media" // Всегда в конце

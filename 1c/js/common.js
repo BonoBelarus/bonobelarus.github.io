@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+	$(window).scroll(function(){
+		if($('header').offset().top > 5){
+			$('header').addClass('is-sticky');
+		}else{
+			$('header').removeClass('is-sticky');
+		}
+	});
+
 	String.prototype.allReplace = function(obj) {
 		var retStr = this;
 		for (var x in obj) {
@@ -185,6 +193,8 @@ $(document).ready(function(){
 	(function(){
 		var inputArr = $('.server-options input');
 		$(inputArr).change(function(e){
+			var thisLi = $(this).closest('li');
+			$('.server-options li').removeClass('active');
 			var nonCheckedArr = [];
 			$(inputArr).each(function(i){
 
@@ -203,9 +213,11 @@ $(document).ready(function(){
 			if($(this).hasClass('active') == true){
 				$(this).removeClass('active').addClass('disabled');
 				$('.server .product-price').attr('data-server-price', '0').text(' ');
+				$(thisLi).removeClass('active');
 			}else{
 				$(inputArr).prop('checked', false).addClass('disabled').removeClass('active');
 				$(this).prop('checked', true).addClass('active').removeClass('disabled');
+				$(thisLi).addClass('active')
 
 				var price = $('.form-check .server .product-price');
 				$(price).text('');
@@ -233,7 +245,8 @@ $(document).ready(function(){
 
 	//FADE IN POP-UP
 	$('body').click(function(e){
-		if($(e.target).closest('.pop-up').length < 1 && $(e.target).hasClass('btn') != true){
+		console.log(e.target);
+		if($(e.target).closest('.pop-up').length < 1 && $(e.target).hasClass('link') != true){
 			$('.pop-up, .pop-up-wrap').removeClass('active');
 			$('body').removeClass('disabled');
 		}
