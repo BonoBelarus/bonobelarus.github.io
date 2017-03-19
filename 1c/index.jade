@@ -1423,6 +1423,15 @@ html
 						p info@misoft.by
 						p hotline@misoft.by — служба техподдержки
 			#map
+			script.
+				var map;
+				function initMap() {
+				map = new google.maps.Map(document.getElementById('map'), {
+					center: {lat: -34.397, lng: 150.644},
+					zoom: 8,
+					scrollwheel: false
+				});
+				}
 		footer
 			.content
 				.footer-top

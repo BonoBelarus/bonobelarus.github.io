@@ -299,13 +299,4 @@ $(document).ready(function(){
 	t > 0 ? $(".top-line").addClass("is-sticky") : $(".top-line").removeClass("is-sticky")
 }());
 
-var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 8,
-	scrollwheel: false
-  });
-}
-
 });
