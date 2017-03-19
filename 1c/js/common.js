@@ -116,7 +116,7 @@ $(document).ready(function(){
 		$('.carousel-wrap .owl-carousel').owlCarousel({
 			items: 1,
 			nav: true,
-			loop: false,
+			loop: true,
 			dots: true,
 			dotData: true,
 			dotsContainer: '#oppo-links',
@@ -147,8 +147,14 @@ $(document).ready(function(){
 			$('.clouds .back-cloud img').css({
 				'transform': 'translate(' + x/700 + '%,' + y/150 + '%)'
 			});
+			$('.plus').css({
+				'transform': 'translate(' + x/10 + '%,' + y/10 + '%)'
+			});
 			$('.clouds .forward-cloud img').css({
 				'transform': 'translate(-' + x/700 + '%,-' + y/100 + '%)'
+			});
+			$('.circle_small').css({
+				'transform': 'translate(-' + x/10 + '%,-' + y/10 + '%)'
 			});
 		});
 	}());
@@ -289,7 +295,17 @@ $(document).ready(function(){
 	checkSlider();
 
 (function() {
-        var t = $(window).scrollTop();
-        t > 0 ? $(".top-line").addClass("is-sticky") : $(".top-line").removeClass("is-sticky")
-    }());
+	var t = $(window).scrollTop();
+	t > 0 ? $(".top-line").addClass("is-sticky") : $(".top-line").removeClass("is-sticky")
+}());
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 8,
+	scrollwheel: false
+  });
+}
+
 });
