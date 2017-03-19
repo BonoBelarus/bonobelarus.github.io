@@ -12,7 +12,7 @@
 		nav
 			transform: translateX(-325px)
 			li:before
-				bottom: -20px
+				bottom: -18px
 		.nav-order
 			opacity: 1
 			position: absolute
@@ -48,6 +48,30 @@
 	.nav-order
 		opacity: 0
 @media only screen and (max-width : 1050px)
+	#for-whom .drop-content ul li
+		display: block
+	#for-whom .mobile-links .tab-img
+		margin-right: auto
+	#for-whom .mobile-links .tab-txt
+		text-align: center
+	header .nav-order
+		opacity: 1
+		position: relative
+		top: 0
+		right: 0
+	.pop-up
+		padding: 60px 20px !important
+	.integr-spis .integr-icon:before
+		content: ''
+		position: absolute
+		width: 100px !important
+		height: 100px !important
+		border-radius: 50%
+		top: 50%
+		margin-top: -50px !important
+		left: 50%
+		margin-left: -50px !important
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
 	#top-sec
 		.circle_big:nth-child(7),
 		.circle_big:nth-child(8)
@@ -172,6 +196,7 @@
 			margin: 20px 0
 	.big-card-help
 		flex-direction: column
+		overflow: hidden
 		h3
 			font-size: 36px
 		.features
@@ -326,13 +351,16 @@
 		margin-top: -15px
 	#opportunities .integr-spis .integr-clarify
 		vertical-align: middle
+		max-width: 300px
 	#opportunities .integr-spis .integr-icon
 		vertical-align: middle
 		margin: 0
 		margin-right: 30px
-		width: 115px
-		height: 115px
-		padding: 0 25px
+		width: 90px
+		height: 90px
+		line-height: 90px
+	.integr-spis .integr-icon img
+		max-width: 65px
 	.integr-spis .integr-caption
 		margin: 0 0 10px
 	.integr-spis .integr-txt
@@ -549,10 +577,15 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 650px)
+	.pop-up-case
+		.close
+			position: fixed
 	#try .clouds .forward-cloud
 		bottom: -50px
 		width: 150%
 @media only screen and (max-width : 610px)
+	.check-form-popup-wrap #check-form-popup
+		padding: 60px 20px
 	.faq .faq-txt .owl-carousel .owl-next
 		position: initial
 		text-align: center
@@ -650,8 +683,6 @@
 		flex-direction: column
 		align-items: center
 		text-align: center !important
-	#for-whom .mobile-links .tab-img
-		margin-right: 0
 	#for-whom .mobile-links .btn
 		padding: 0 20px
 	#for-whom .mobile-links .caption

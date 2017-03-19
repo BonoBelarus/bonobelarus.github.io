@@ -1,5 +1,5 @@
 @import "bourbon"
-@import "fonts"
+//@import "fonts"
 @import "libs"
 @import "vars"
 @import "animation-top"
@@ -8,7 +8,22 @@
 @import "pop-up-case"
 @import "consult-pop-up"
 @import "pop-up-server"
+@import "check-form-popup"
+@import "//fonts.fontstorage.com/import/lato.css"
 
+.pop-up
+	margin: 30px 0
+
+.close
+	transform-origin: center
+	width: 20px
+	height: 20px
+	cursor: pointer
+	transition: .5s
+	img
+		width: 100%
+.close:hover
+	transform: rotateZ(360deg)
 
 .circle_big
 	position: absolute
@@ -29,20 +44,20 @@
 *::-webkit-input-placeholder,
 *::-webkit-textarea-placeholder
 	color: #666
-	opacity: 1
+	opacity: .5
 
 *:-moz-placeholder
 	color: #666
-	opacity: 1
+	opacity: .5
 
 *::-moz-placeholder
 	color: #666
-	opacity: 1
+	opacity: .5
 
 *:-ms-input-placeholder,
 *:-ms-textarea-placeholder
 	color: #666
-	opacity: 1
+	opacity: .5
 
 *
 	list-style-type: none
@@ -67,7 +82,7 @@ body
 	text-rendering: optimizeLegibility
 	-webkit-font-smoothing: antialiased
 	font-smoothing: antialiased
-	font-family: $default-font
+	font-family: 'Lato', sans-serif;
 	font-size: 16px
 	font-weight: 300
 	overflow-x: hidden
@@ -92,10 +107,10 @@ h1,h2,h3
 		margin: 20px auto 0
 h1
 	font-size: 56px
-	font-family: 'RobotoSlab'
+	font-family: 'Roboto Slab'
 h2
 	font-size: 44px
-	font-family: 'RobotoSlab'
+	font-family: 'Roboto Slab'
 h3
 	font-size: 32px
 	+ .clarify
@@ -175,6 +190,7 @@ header
 			display: inline-block
 			vertical-align: top
 	.logo-notion
+		margin-left: 20px
 		transition: .5s
 		color: #808285
 		font-size: 13px
@@ -188,11 +204,10 @@ header
 	li:before
 		content: ''
 		position: absolute
-		bottom: -28px
 		left: 0
 		width: 100%
 		height: 5px
-		background-color: red
+		background-color: #ffd63b
 		transition: .15s
 		opacity: 0
 	li:hover:before
@@ -244,7 +259,7 @@ header
 	h1
 		text-align: left
 		line-height: 1.3em
-		font-family: "RobotoSlab"
+		font-family: 'Roboto Slab', serif
 		color: $first-color
 		font-size: 56px
 	.clarify
@@ -274,6 +289,10 @@ header
 #opportunities
 	background-color: #fff
 	padding: 250px 0 120px
+	.cards.active
+		li
+			opacity: 1
+			transform: translateY(-50px)
 	.cards
 		position: absolute
 		width: 100%
@@ -289,15 +308,25 @@ header
 			display: flex
 			justify-content: space-between
 		li
+			opacity: 0
+			position: relative
+			top: 50px
 			display: flex
 			justify-content: flex-start
 			padding: 20px
 			width: 280px
+			transition: .5s
 			height: 120px
 			background-color: #fff
 			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
+		li:nth-child(2)
+			transition-delay: .3s
+		li:nth-child(3)
+			transition-delay: .6s
+		li:nth-child(4)
+			transition-delay: .9s
 	h2,	h3
-		font-family: 'RobotoSlab'
+		font-family: 'Roboto Slab', serif
 #oppo-links
 	font-size: 18px
 	>div:hover
@@ -537,20 +566,30 @@ header
 		max-width: 250px
 		position: relative
 	li:not(:last-child):before
-		content: "+"
-		font-weight: 300
-		font-size: 76px
-		color: #ccc
-		line-height: 1
+		content: ""
+		background: url(../img/plus-2.png) center no-repeat
+		width: 60px
+		height: 60px
 		top: 25px
-		right: -50px
+		right: -60px
 		position: absolute
+	.integr-icon:before
+		content: ''
+		position: absolute
+		width: 140px
+		height: 140px
+		border-radius: 50%
+		top: 50%
+		margin-top: -70px
+		left: 50%
+		margin-left: -70px
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
 	.integr-icon
 		line-height: 115px
 		height: 115px
 		width: 115px
 		margin: 0 auto
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
+		position: relative
 		border-radius: 50%
 		img
 			max-width: 70px
@@ -567,6 +606,8 @@ header
 	.tab-img
 		max-width: 120px
 		margin: 0 auto
+		height: 115px
+		line-height: 115px
 	.drop-content
 		display: none
 		font-size: 16px
@@ -633,6 +674,7 @@ header
 				transform: rotateZ(45deg)
 			.caption
 				background-color: #ffd63b
+				box-shadow: 0 8px 15px rgba(255, 157, 0, 0.35)
 		.tab-img
 			margin-right: 30px
 	.tab-links
@@ -674,7 +716,7 @@ header
 			font-size: 18px
 			color: #000
 			font-weight: 800
-			margin: 40px 0
+			margin: 20px 0 40px
 		.tab-txt
 			color: $second-color
 		.tab-content
@@ -751,8 +793,27 @@ header
 	display: flex
 	justify-content: space-between
 	align-items: center
+	position: relative
 	margin-top: 120px
 	margin-bottom: -300px
+	.plus:first-child
+		top: 30px
+		left: 90px
+	.plus:nth-child(2)
+		bottom: 30px
+		left: 160px
+	.plus:nth-child(3)
+		bottom: 50%
+		left: 460px
+	.circle_small:nth-child(4)
+		top: 30px
+		left: 360px
+	.circle_small:nth-child(5)
+		top: 270px
+		left: 560px
+	.circle_small:nth-child(6)
+		top: 50%
+		left: 30px
 	h3
 		max-width: 460px
 		text-align: left
@@ -861,7 +922,7 @@ header
 	border: 10px solid #f7f6f3
 	padding: 70px
 	h3
-		font-family: "RobotoSlab"
+		font-family: 'Roboto Slab', serif;
 	ul
 		display: flex
 		justify-content: space-between
@@ -893,6 +954,7 @@ header
 		color: $second-color
 		ul
 			display: flex
+			align-items: flex-start
 			justify-content: space-between
 			flex-wrap: wrap
 		li
@@ -909,6 +971,7 @@ header
 		line-height: 100px
 		img
 			max-height: 100px
+			max-width: 100%
 			vertical-align: middle
 	.case-txt
 		font-size: 15px
@@ -922,10 +985,11 @@ header
 			color: $first-color
 	.case-users
 		font-size: 14px
+		text-align: left
 		margin-top: 20px
 		p
 			position: relative
-			padding-left: 15px
+			padding-left: 25px
 		p:before
 			position: absolute
 			content: ''
@@ -944,8 +1008,8 @@ header
 			border: 1px solid #ffd63b
 			font-size: 12px
 			color: $first-color
-			font-family: Lato
-			font-weight: 700
+			font-family: 'Lato'
+			font-weight: 900
 		a:hover
 			box-shadow: 0 8px 15px rgba(255, 157, 0, 0.35)
 			background-color: #ffd63b
@@ -956,7 +1020,7 @@ header
 			font-size: 14px
 			padding: 0 60px
 			text-transform: uppercase
-			font-weight: 700
+			font-weight: 900
 			border: 1px solid #ffd63b
 		a:hover
 			background: #ffd63b
@@ -1058,6 +1122,7 @@ header
 	li:hover
 		border: 1px solid #ffd63b
 	li.active
+		background-color: #fff
 		border: 1px solid #ffd63b
 	.option-txt
 		color: $third-color
@@ -1125,20 +1190,21 @@ header
 		margin-bottom: 10px
 		color: #a7a9ac
 		text-transform: uppercase
+	.product-notion.warn:before
+		opacity: .3
+	.product-notion:before
+		content: ''
+		position: absolute
+		top: 50%
+		margin-top: -8px
+		left: 0
+		width: 20px
+		height: 15px
+		background: url(../img/svg/checkmark_small.svg) center no-repeat
+		background-size: 15px
 	.product-notion
-		p
-			position: relative
-			padding-left: 25px
-		p:before
-			content: ''
-			position: absolute
-			top: 50%
-			margin-top: -8px
-			left: 0
-			width: 20px
-			height: 15px
-			background: url(../img/svg/checkmark_small.svg) center no-repeat
-			background-size: 15px
+		position: relative
+		padding-left: 25px
 	li
 		border-bottom: 1px solid #e6e7e8
 		padding-bottom: 20px
@@ -1155,7 +1221,7 @@ header
 		margin-top: 30px
 		font-weight: 700
 		font-size: 38px
-		font-family: 'RobotoSlab'
+		font-family: 'Roboto Slab', serif;
 		text-align: center
 	.order-btn
 		text-align: center
@@ -1196,6 +1262,8 @@ header
 			top: 5px
 			left: 84%
 			img
+				position: relative
+				transform-origin: 43% 50%
 				width: 25px
 				margin-right: 15px
 			p,img
@@ -1206,7 +1274,7 @@ header
 			p
 				color: rgba($first-color, .7)
 			img
-				animation: spin .7s forwards
+				opacity: .7
 	.faq-ask
 		max-width: 700px
 	.get-consult

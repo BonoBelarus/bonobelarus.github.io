@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	$("nav a").mPageScroll2id();
+
 	$(window).scroll(function(){
 		if($('header').offset().top > 5){
 			$('header').addClass('is-sticky');
@@ -38,8 +40,9 @@ $(document).ready(function(){
 		var hidden = $("#myList li:hidden");
 		var visible = $("#myList li:visible");
 		$('#quant-case').text(hidden.length);
+		console.log(visible.length);
 		switch(visible.length){
-			case 12:
+			case 6:
 				$('#loadMore').show();
 				$('#showLess').hide();
 		}
@@ -85,8 +88,8 @@ $(document).ready(function(){
 	});
 	$('#showLess').click(function (e) {
 		x=(x-6<0) ? 6 : x-6;
-		countCases();
 		$('#myList li').not(':lt('+x+')').hide();
+		countCases();
 		var top = $(e.target).offset().top;
 		$('html, body').animate({
 			scrollTop: top - 650
@@ -110,6 +113,15 @@ $(document).ready(function(){
 		nav: true,
 		navText: ['','<img src="img/svg/calc_tip.svg"><p>Ещё совет</p>'],
 		loop: true
+	});
+
+	var rotate = 0;
+	$('.faq-txt .owl-next').click(function(){
+		rotate += 360;
+		console.log('ture');
+		$(this).find('img').css({
+			'-webkit-transform': 'rotateZ(' + rotate + 'deg)'
+		}, 1000);
 	});
 
 	if($(window).width() > 1023){
@@ -180,6 +192,7 @@ $(document).ready(function(){
 			case '30': xtraUsersPrice = '4 814,40'; break;
 			case '50': xtraUsersPrice = '7 548,00'; break;
 			case '100': xtraUsersPrice = '14515,20';
+
 		}
 
 		
@@ -191,7 +204,11 @@ $(document).ready(function(){
 		//console.log(xtraUsersPrice);
 	}
 	$('#range-slider').change(function(){
+			$('.xtra-users .product-notion').removeClass('warn');
 		checkSlider();
+		if($(this).val() == 0){
+			$('.xtra-users .product-notion').addClass('warn');
+		}
 	});
 		//slider
 		//checkbox
@@ -219,6 +236,7 @@ $(document).ready(function(){
 			if($(this).hasClass('active') == true){
 				$(this).removeClass('active').addClass('disabled');
 				$('.server .product-price').attr('data-server-price', '0').text(' ');
+				$('.server .product-notion').text('');
 				$(thisLi).removeClass('active');
 			}else{
 				$(inputArr).prop('checked', false).addClass('disabled').removeClass('active');
@@ -227,9 +245,10 @@ $(document).ready(function(){
 
 				var price = $('.form-check .server .product-price');
 				$(price).text('');
-				var value = $(this).closest('li').find('.price').text().trim();
+				var value = $(this).closest('li').find('.price').attr('data-server-price');
 				$(price).attr('data-server-price', value).append(value);
-				//console.log(+value + ' | ' + value);
+				var server_name = $(this).closest('li').find('.server-name').text().trim();
+				$('.server .product-notion').text(server_name);
 			}
 		});
 
@@ -259,7 +278,7 @@ $(document).ready(function(){
 	});
 	
 	$('#myList .btn').click(function(e){
-		$('.pop-up-case, .pop-up-case-wrap').addClass('active');
+		$(this).closest('li').find('.pop-up-case, .pop-up-case-wrap').addClass('active');
 		$('body').addClass('disabled');
 		e.preventDefault();
 	});
@@ -294,9 +313,41 @@ $(document).ready(function(){
 	countTotal();
 	checkSlider();
 
-(function() {
-	var t = $(window).scrollTop();
-	t > 0 ? $(".top-line").addClass("is-sticky") : $(".top-line").removeClass("is-sticky")
-}());
+	(function() {
+		var t = $(window).scrollTop();
+		t > 0 ? $(".top-line").addClass("is-sticky") : $(".top-line").removeClass("is-sticky")
+	}());
+
+	$('#check-form-popup .close').click(function(){
+		$('.ordered-server').removeClass('disabled');
+		$('.check-form-popup-wrap, #check-form-popup').removeClass('active');
+	});
+
+	//TO CHECK FORM
+		$('.form-check .btn').click(function(e){
+			$('.check-form-popup-wrap, #check-form-popup').addClass('active');
+			$('body').addClass('disabled');
+			var priceLicense = $('.price').attr('data-license-price');
+			var productPrice = $('.server .product-price').attr('data-server-price');
+			var xtraUsersPrice = $('.xtra-users .product-price').attr('data-xtra-users-price');
+			var xtraUsers = $('#range-slider').val();
+			var server_name = $('.server .product-notion').text().trim();
+			$('#users-count').text(xtraUsers);
+			$('.ordered-users .ordered-item-price').text(xtraUsersPrice);
+			$('.ordered-server .ordered-item').text(server_name);
+			$('.ordered-server .ordered-item-price').text(productPrice);
+			var total = $('#total-price').text().trim();
+			$('#total').text(total);
+			if(productPrice == 0){
+				$('.ordered-server').addClass('disabled');
+			}
+			e.preventDefault();
+		});
+	//END of TO CHECK FORM
+	$('.cards').waypoint(function(direction) {
+			$('.cards').addClass('active');
+		},{
+			offset: '65%'
+		});
 
 });

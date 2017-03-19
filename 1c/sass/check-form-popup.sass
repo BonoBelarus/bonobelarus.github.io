@@ -1,0 +1,123 @@
+.check-form-popup-wrap.active
+	z-index: 999
+	opacity: 1
+.check-form-popup-wrap
+	position: fixed
+	transition: .5s
+	width: 100%
+	height: 100vh
+	opacity: 0
+	z-index: -1
+	line-height: 100vh
+	top: 0
+	left: 0
+	background-color: rgba(0, 0, 0, .8)
+	text-align: center
+	overflow: auto
+	#check-form-popup.active
+		opacity: 1
+		transform: translateY(50px)
+		transition-delay: .5s
+	#check-form-popup
+		margin: 30px 0
+		padding: 60px 100px
+		text-align: left
+		transition: .5s
+		opacity: 0
+		top: -50px
+		max-width: 610px
+		line-height: 1.4em
+		display: inline-block
+		vertical-align: middle
+		background-color: #fff
+		position: relative
+	.close
+		position: absolute
+		top: 20px
+		right: 20px
+		width: 20px
+		height: 20px
+		background: url(../img/close.png) center no-repeat
+	h3
+		font-size: 32px
+		font-weight: 700
+		font-family: 'Roboto Slab'
+		color: $first-color
+	form
+		width: 100%
+		text-align: center
+		margin-top: 30px
+		>div:not(:first-child)
+			margin-top: 20px
+		>div
+			text-align: left
+			width: 100%
+		label
+			line-height: 1.2em
+			display: inline-block
+			font-weight: 700
+			font-size: 12px
+			color: $second-color
+		input
+			line-height: 45px
+		textarea
+			padding: 20px
+		input,textarea
+			padding-left: 20px
+			border: 1px solid #e7e7e7
+			font-size: 14px
+			font-family: Lato
+			font-weight: 300
+			width: 100%
+		textarea
+			resize: vertical
+		button
+			margin-top: 30px
+			background-color: #ffd63b
+			border: none
+			text-transform: uppercase
+			font-weight: 700
+			cursor: pointer
+	#ordered
+		padding-bottom: 10px
+	.ordered
+		margin-top: 20px
+		background-color: #f7f6f3
+		padding: 20px
+		font-size: 14px
+		span
+		.total
+			text-align: right
+			font-size: 16px
+			font-family: 'Roboto Slab'
+			color: $first-color
+			font-weight: 700
+		#total
+			display: inline-block
+		li:before
+			content: ''
+			position: absolute
+			width: 15px
+			height: 10px
+			top: 50%
+			margin-top: -7px
+			left: 0
+			background: url(../img/svg/checkmark_small.svg) center no-repeat
+			background-size: cover
+		li:not(:first-child)
+			margin-top: 5px
+		li
+			position: relative
+			padding-left: 25px
+			display: flex
+			justify-content: space-between
+	.ordered-server.disabled
+		display: none
+	.ordered-item,
+	.ordered-item-price
+		display: inline-block
+	.ordered-item-price
+		font-weight: 700
+	.total
+		padding-top: 10px
+		border-top: 1px solid #e6e7e8
