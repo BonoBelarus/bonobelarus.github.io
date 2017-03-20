@@ -98,16 +98,6 @@ $(document).ready(function(){
 	});
 	//END of SHOW MORE
 
-	var del = 150;
-	$('.anim').each(function(i){
-		del += 150;
-		var iElem = $(this);
-		setTimeout(function(){
-			$(iElem).addClass('active');
-		}, del);
-	});
-
-
 	$('.faq-txt .owl-carousel').owlCarousel({
 		items: 1,
 		nav: true,
@@ -273,6 +263,7 @@ $(document).ready(function(){
 		console.log(e.target);
 		if($(e.target).closest('.pop-up').length < 1 && $(e.target).hasClass('link') != true){
 			$('.pop-up, .pop-up-wrap').removeClass('active');
+			$('.ordered-server, .ordered-users').removeClass('disabled');
 			$('body').removeClass('disabled');
 		}
 	});
@@ -289,6 +280,11 @@ $(document).ready(function(){
 	});
 	$('.to-order').click(function(e){
 		$('.pop-up-order-wrap, #pop-up-order').addClass('active');
+		$('body').addClass('disabled');
+		e.preventDefault();
+	});
+	$('.to-call').click(function(e){
+		$('.pop-up-call-wrap, #pop-up-call').addClass('active');
 		$('body').addClass('disabled');
 		e.preventDefault();
 	});
@@ -319,7 +315,7 @@ $(document).ready(function(){
 	}());
 
 	$('#check-form-popup .close').click(function(){
-		$('.ordered-server').removeClass('disabled');
+		$('.ordered-server, .ordered-users').removeClass('disabled');
 		$('.check-form-popup-wrap, #check-form-popup').removeClass('active');
 	});
 
@@ -341,13 +337,16 @@ $(document).ready(function(){
 			if(productPrice == 0){
 				$('.ordered-server').addClass('disabled');
 			}
+			if(xtraUsersPrice == 0){
+				$('.ordered-users').addClass('disabled');
+			}
 			e.preventDefault();
 		});
 	//END of TO CHECK FORM
 	$('.cards').waypoint(function(direction) {
 			$('.cards').addClass('active');
 		},{
-			offset: '65%'
+			offset: '85%'
 		});
 
 });

@@ -148,6 +148,7 @@ header .nav-order
 		border: 2px solid #f23030
 		color: #f23030
 		line-height: 40px
+		padding: 0 25px
 		background-color: #fff
 header.is-sticky:before
 	height: 100%
@@ -189,6 +190,8 @@ header
 		>div
 			display: inline-block
 			vertical-align: top
+			img
+				width: 100%
 	.logo-notion
 		margin-left: 20px
 		transition: .5s
@@ -201,22 +204,22 @@ header
 	li
 		position: relative
 		display: inline-block
-	li:before
-		content: ''
-		position: absolute
-		left: 0
-		width: 100%
-		height: 5px
-		background-color: #ffd63b
-		transition: .15s
-		opacity: 0
+	// li:before
+	// 	content: ''
+	// 	position: absolute
+	// 	left: 0
+	// 	width: 100%
+	// 	height: 5px
+	// 	background-color: #ffd63b
+	// 	transition: .15s
+	// 	opacity: 0
 	li:hover:before
 		opacity: 1
 	li:hover
 		a
 		 color: #f23030
-	li:not(:last-child)
-		margin-right: 35px
+	li:not(:first-child)
+		margin-left: 35px
 #top-sec
 	overflow: hidden
 	height: 100vh
@@ -320,11 +323,11 @@ header
 			background-color: #fff
 			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
 		li:nth-child(2)
-			transition-delay: .3s
+			transition-delay: .1s
 		li:nth-child(3)
-			transition-delay: .6s
+			transition-delay: .2s
 		li:nth-child(4)
-			transition-delay: .9s
+			transition-delay: .3s
 	h2,	h3
 		font-family: 'Roboto Slab', serif
 #oppo-links
@@ -538,7 +541,7 @@ header
 		margin-top: -4px
 		transition: .25s
 	div:last-child:before
-		background: url(../img/red-star.png) center no-repeat
+		background: url(../img/svg/star.svg) center no-repeat
 		height: 25px
 		width: 25px
 		top: 0
@@ -783,6 +786,7 @@ header
 		animation: none
 	.to-consult:hover
 		color: transparent
+		box-shadow: 0 8px 15px rgba(255, 157, 0, 0.35)
 		p
 			color: $first-color
 			opacity: 1
@@ -827,9 +831,21 @@ header
 			padding: 30px
 		li:first-child
 			margin-bottom: 20px
-		.check-mark
-			display: inline-block
+		.check-mark:before
+			content: ''
+			position: absolute
+			top: 50%
+			margin-top: -25px
+			left: 50%
+			margin-left: -25px
+			width: 50px
+			height: 50px
+			border-radius: 50%
 			background-color: #ddf6e0
+			z-index: -1
+		.check-mark
+			position: relative
+			display: inline-block
 			border-radius: 50%
 			text-align: center
 			width: 50px
@@ -837,7 +853,9 @@ header
 			line-height: 50px
 			vertical-align: middle
 			margin-right: 20px
+			padding: 0
 			img
+				width: 100%
 				vertical-align: middle
 		.ft-descr
 			display: inline-block
@@ -1027,7 +1045,6 @@ header
 			box-shadow: 0 8px 15px rgba(255, 157, 0, 0.35)
 #showLess
 	display: none
-
 #our-clients
 	padding: 120px 0
 	h2
@@ -1253,6 +1270,7 @@ header
 		margin-right: 50px
 		margin-bottom: 20px
 	.faq-txt
+		align-items: center
 		display: flex
 		justify-content: space-between
 	.faq-txt .owl-carousel
@@ -1375,6 +1393,30 @@ header
 	padding: 160px 0 300px
 	background: #ffd63b
 	position: relative
+	.plus:first-child
+		top: 50px
+		left: 60%
+	.plus:nth-child(2)
+		top: 150px
+		right: 20%
+	.plus:nth-child(3)
+		bottom: 30%
+		right: 20%
+	.plus:nth-child(4)
+		bottom: 25%
+		right: 50%
+	.circle_small:nth-child(5)
+		top: 50%
+		right: 30%
+	.circle_small:nth-child(6)
+		top: 65%
+		right: 5%
+	.circle_small:nth-child(7)
+		bottom: 35%
+		left: 15%
+	.circle_small:nth-child(8)
+		top: 15%
+		left: 15%
 	h2
 		font-size: 52px
 	.clarify
@@ -1450,10 +1492,13 @@ header
 				padding-bottom: 5px
 			a:hover
 				border-bottom: 1px solid transparent
-
+		.help-icon
+			height: 100px
+			img
+				max-height: 100%
 #contacts
 	padding: 120px 0 70px
-	background: #ccc
+	background: #fff
 	position: relative
 	.contacts-box
 		position: relative
@@ -1522,6 +1567,7 @@ footer
 				display: inline-block
 				vertical-align: middle
 				height: 50%
+				margin-bottom: 5px
 			.cls-1
 				fill: #a09f9e
 		.twitter:hover
@@ -1598,7 +1644,7 @@ footer
 		top: 50%
 		margin-top: -2px
 #map
-	position: fixed
+	position: absolute
 	width: 100%
 	height: 100%
 	top: 0

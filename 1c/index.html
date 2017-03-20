@@ -43,7 +43,7 @@
             <li><a href="#price">Стоимость</a></li>
             <li><a href="#contacts">Контакты</a></li>
             <li class="nav-phone"><a href="tel:+375333829194">+375 33 3829194</a></li>
-            <li class="nav-order to-order"><a class="btn link" href="#">Заказать внедрение</a></li>
+            <li class="nav-order to-call"><a class="btn link" href="#">Заказать звонок</a></li>
           </ul>
         </nav>
       </div>
@@ -607,7 +607,8 @@
                   <li>
                     <div class="slide-img"><img src="img/svg/about_product/4-4.svg" alt=""/></div>
                     <div class="slide-ft-txt">
-                      <p>Штрихкодирование</p>
+                      <p>Штрихко-</p>
+                      <p>дирование</p>
                     </div>
                   </li>
                 </ul>
@@ -1943,6 +1944,14 @@
       </div>
     </section>
     <section id="try">
+      <div class="plus"></div>
+      <div class="plus"></div>
+      <div class="plus"></div>
+      <div class="plus"></div>
+      <div class="circle_small"></div>
+      <div class="circle_small"></div>
+      <div class="circle_small"></div>
+      <div class="circle_small"></div>
       <div class="content">
         <h2>Попробуйте прямо сейчас</h2>
         <div class="clarify">
@@ -1962,11 +1971,11 @@
         <h2>Нужна помощь консультанта с опытом внедрений?</h2>
         <ul>
           <li>
-            <div class="help-icon"><img src="img/need-help-1.png" alt=""/></div>
+            <div class="help-icon"><img src="img/svg/need-help-1.svg" alt=""/></div>
             <div class="help-txt"><a href="#">Задать вопрос</a></div>
           </li>
           <li>
-            <div class="help-icon"><img src="img/need-help-2.png" alt=""/></div>
+            <div class="help-icon"><img src="img/svg/need-help-2.svg" alt=""/></div>
             <div class="help-txt"><a href="tel:+375333829194">+375 33 382-91-94</a></div>
           </li>
         </ul>
@@ -2005,16 +2014,9 @@
           </div>
         </div>
       </div>
-      <div id="map"></div>
-      <script>
-        var map;
-        function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-        	center: {lat: -34.397, lng: 150.644},
-        	zoom: 8
-        });
-        }
-      </script>
+      <div id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2348.2071185383475!2d27.680772515591382!3d53.945828880108955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcecac2e9bfbf%3A0x4392476c7a6fe0f6!2z0L_RgNC-0YHQv9C10LrRgiDQndC10LfQsNCy0LjRgdC40LzQvtGB0YLQuCAxNzcsINCc0LjQvdGB0LosINCR0LXQu9Cw0YDRg9GB0Yw!5e0!3m2!1sru!2sru!4v1490043600336" frameborder="0" style="border:0;" allowfullscreen="allowfullscreen"></iframe>
+      </div>
     </section>
     <footer>
       <div class="content">
@@ -2026,16 +2028,16 @@
           <div class="footer-nav">
             <p>Смотрите также:</p>
             <ul>
-              <li><a href="#">МиСофт</a></li>
-              <li><a href="">1С-УСН</a></li>
-              <li><a href="">1С-ОБЩЕПИТ</a></li>
-              <li><a href="">1С-ТРАНСПОРТ</a></li>
-              <li><a href="">1С-СТРОИТЕЛЬСТВО</a></li>
+              <li><a href="http://www.misoft.by/">МиСофт</a></li>
+              <li><a href="http://www.1c-usn.by/">1С-УСН</a></li>
+              <li><a href="http://www.1c-obshepit.by/">1С-ОБЩЕПИТ</a></li>
+              <li><a href="http://www.1c-transport.by/">1С-ТРАНСПОРТ</a></li>
+              <li><a href="http://www.1c-stroitelstvo.by/">1С-СТРОИТЕЛЬСТВО</a></li>
             </ul>
           </div>
           <div class="footer-social">
             <ul>
-              <li class="facebook"><a href="#">
+              <li class="facebook"><a href="https://www.facebook.com/misoft.by">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.81 20">
                     <title>fb</title>
                     <g id="Layer_2" data-name="Layer 2">
@@ -2044,7 +2046,7 @@
                       </g>
                     </g>
                   </svg></a></li>
-              <li class="vk"><a href="#">
+              <li class="vk"><a href="https://vk.com/misoft_by">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.81 20">
                     <title>fb</title>
                     <g id="Layer_2" data-name="Layer 2">
@@ -2053,7 +2055,7 @@
                       </g>
                     </g>
                   </svg></a></li>
-              <li class="twitter"><a href="#">
+              <li class="twitter"><a href="https://twitter.com/misoft_by">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.16 18">
                     <title>twitter</title>
                     <g id="Layer_2" data-name="Layer 2">
@@ -2108,6 +2110,35 @@
       <div class="pop-up" id="pop-up-order">
         <div class="close"><img src="img/close.png" alt=""/></div>
         <h3>Заказать внедрение</h3>
+        <div class="clarify">
+          <p>Опишите вашу задачу и наши</p>
+          <p>специалисты подготовят решение</p>
+        </div>
+        <form action="">
+          <div class="name">
+            <label for="">Ваше имя</label>
+            <input type="text" placeholder="Иван Иванович"/>
+          </div>
+          <div class="phone">
+            <label for="">Телефон</label>
+            <input type="tel" placeholder="Для связи с вами"/>
+          </div>
+          <div class="email">
+            <label for="">Email</label>
+            <input type="email" placeholder="Вышлем необходимые материалы"/>
+          </div>
+          <div class="comment">
+            <label for="">Комментарий</label>
+            <textarea placeholder="Расскажите о вашей задаче"></textarea>
+          </div>
+          <button class="btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <div class="pop-up-call-wrap pop-up-wrap">
+      <div class="pop-up" id="pop-up-call">
+        <div class="close"><img src="img/close.png" alt=""/></div>
+        <h3>Заказать звонок</h3>
         <div class="clarify">
           <p>Опишите вашу задачу и наши</p>
           <p>специалисты подготовят решение</p>

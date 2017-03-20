@@ -10,14 +10,14 @@
 			transform: translateY(-50px)
 			opacity: 0
 		nav
-			transform: translateX(-325px)
+			transform: translateX(-290px)
 			li:before
 				bottom: -18px
 		.nav-order
 			opacity: 1
 			position: absolute
-			top: -10px
-			right: -325px
+			top: -13px
+			right: -290px
 			a
 				line-height: 40px
 				box-shadow: none
@@ -48,6 +48,14 @@
 	.nav-order
 		opacity: 0
 @media only screen and (max-width : 1050px)
+	header li:before
+		display: none
+	header li:not(:last-child)
+		margin-left: 0
+	.pop-up-case-wrap .pop-case-form
+		padding: 60px 20px
+	header .logo-main
+		width: 100px
 	#for-whom .drop-content ul li
 		display: block
 	#for-whom .mobile-links .tab-img
@@ -304,6 +312,13 @@
 	.pop-up-case-wrap .close
 		position: fixed
 @media only screen and (max-width : 768px)
+	#need-help
+		padding: 70px 0
+	#contacts
+		padding: 0
+	#map
+		position: relative
+		height: 300px
 	h2
 		line-height: 1em
 		font-size: 40px
@@ -360,7 +375,7 @@
 		height: 90px
 		line-height: 90px
 	.integr-spis .integr-icon img
-		max-width: 65px
+		max-width: 45px
 	.integr-spis .integr-caption
 		margin: 0 0 10px
 	.integr-spis .integr-txt
@@ -399,8 +414,6 @@
 			display: flex
 			justify-content: flex-start
 			padding: 30px 10px
-		.check-mark
-			padding: 0 13px
 	#about
 		padding: 330px 0 100px
 	.about-cards ul
@@ -450,8 +463,12 @@
 		li:last-child
 			.ind-icon
 				max-width: 80px
-				width: auto
 				margin-right: 3px
+	.integr-spis .integr-icon:before
+		width: 80px !important
+		height: 80px !important
+		margin-top: -40px !important
+		margin-left: -40px !important
 	#price
 		padding: 100px 0
 		h2
@@ -485,6 +502,11 @@
 		li
 			margin-top: 20px
 	
+	.form-check:after
+		width: 100%
+		left: 0
+		margin-top: -70px
+		background-size: 120%
 	.form-check
 		.product-notion
 			width: 70%

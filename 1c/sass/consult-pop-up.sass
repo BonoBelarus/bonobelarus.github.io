@@ -1,9 +1,11 @@
 .pop-up-consult-wrap.active,
-.pop-up-order-wrap.active
+.pop-up-order-wrap.active,
+.pop-up-call-wrap.active
 	z-index: 999
 	opacity: 1
 .pop-up-consult-wrap,
-.pop-up-order-wrap
+.pop-up-order-wrap,
+.pop-up-call-wrap
 	width: 100%
 	height: 100vh
 	line-height: 100vh
@@ -17,12 +19,14 @@
 	background-color: rgba(#000, .8)
 	overflow: auto
 #pop-up-consult.active,
-#pop-up-order.active
+#pop-up-order.active,
+#pop-up-call.active
 	transition: .55s ease .5s
 	opacity: 1
 	transform: translateY(150px)
 #pop-up-consult,
-#pop-up-order
+#pop-up-order,
+#pop-up-call
 	opacity: 0
 	top: -150px
 	background-color: #fff
