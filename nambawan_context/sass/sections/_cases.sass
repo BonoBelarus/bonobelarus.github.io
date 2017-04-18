@@ -1,0 +1,257 @@
+#cases
+	padding: 50px 0 100px
+	h2,
+	.notion
+		text-align: center
+	.notion
+		opacity: .4
+		font-weight: 700
+		font-size: 14px
+		text-transform: uppercase
+		margin-bottom: 20px
+	.carousel-nav
+		margin-top: 20px
+		text-align: center
+	.next,
+	.prev,
+	.items-count
+		display: inline-block
+		vertical-align: middle
+	.prev:before
+		left: 0
+		transform: rotateZ(-35deg)
+		transform-origin: left center
+	.prev:after
+		left: 0
+		transform: rotateZ(35deg)
+		transform-origin: left center
+	.next:after
+		right: 0
+		transform: rotateZ(-35deg)
+		transform-origin: right center
+	.next:before
+		right: 0
+		transform: rotateZ(35deg)
+		transform-origin: right center
+	.prev:before,
+	.prev:after,
+	.next:before,
+	.next:after
+		transition: .25s
+		content: ''
+		position: absolute
+		width: 15px
+		height: 1px
+		top: 0
+		background-color: #000
+	.prev-wrap.anim
+		.prev:before
+			transform: rotateZ(-35deg) translateX(5px)
+		.prev:after
+			transform: rotateZ(35deg) translateX(5px)
+	.next-wrap.anim
+		.next:after
+			transform: rotateZ(-35deg) translateX(-10px)
+		.next:before
+			transform: rotateZ(35deg) translateX(-10px)
+	.prev-wrap
+		margin-right: 20px
+	.next-wrap
+		margin-left: 20px
+	.next-wrap,
+	.prev-wrap
+		display: inline-block
+		position: relative
+		width: 30px
+		height: 20px
+		cursor: pointer
+	.prev,
+	.next
+		position: absolute
+		top: 50%
+		left: 0
+		height: 1px
+		width: 30px
+		background-color: #000
+		display: inline-block
+	.items-count
+		font-family: 'Open Sans'
+		color: #666
+		font-size: 18px
+		height: 35px
+		position: relative
+	.total
+		vertical-align: top
+	.current
+		vertical-align: top
+		line-height: .9em
+		color: #333
+		font-size: 37px
+		font-weight: 600
+	.carousel
+		margin-top: 50px
+	.case-goals,
+	.item-center,
+	.results
+		width: 31%
+	.item
+		padding-top: 100px
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+	.case-goals
+		font-size: 14px
+		>li:not(:first-child)
+			margin-top: 20px
+		.caption
+			color: #2962ff
+			font-weight: 700
+			text-transform: uppercase
+			margin-bottom: 10px
+	.instruments
+		li
+			position: relative
+			padding-left: 25px
+		li:not(:first-child)
+			margin-top: 7px
+		li:before
+			content: ''
+			position: absolute
+			height: 1px
+			width: 17px
+			top: 12px
+			left: 0
+			background-color: #000
+	.graf
+		position: relative
+		.line-meter
+			position: absolute
+	.item-center
+		text-align: center
+	.orders,
+	.advert
+		width: 110px
+		display: inline-block
+		position: relative
+		vertical-align: bottom
+		>ul
+			display: flex
+			justify-content: flex-start
+			align-items: flex-end
+		.caption
+			position: absolute
+			width: 100%
+			top: 100%
+			color: #333
+			margin-top: 10px
+			font-weight: 700
+			font-size: 15px
+	.graf-before,
+	.graf-after
+		position: relative
+		>p
+			position: absolute
+			bottom: 15px
+			font-size: 11px
+			width: 100%
+			text-align: center
+			color: #fff
+	.orders,
+	.advert
+		>ul>li
+			position: relative
+			width: 50%
+			vertical-align: bottom
+			display: inline-block
+		.label-feature
+			position: absolute
+			left: 50%
+			margin-left: -63px
+			bottom: 100%
+			width: 126px
+			height: 85px
+			padding-top: 20px
+			font-size: 14px
+			color: #a59f34
+			line-height: 1.1em
+			font-weight: 700
+			background: url(../img/label-feature.svg) center 5px no-repeat
+	.orders
+		margin-right: 40px
+		>ul>li:first-child
+			background-color: #275183
+			height: 112px
+		>ul>li:nth-child(2)
+			background-color: #3570b6
+			height: 280px
+			position: relative
+	.advert
+		>ul>li:first-child
+			background-color: #05d8a5
+			height: 225px
+		>ul>li:nth-child(2)
+			background-color: #46edc4
+			height: 180px
+	.line-100
+		top: 0
+	.line-75
+		top: 25%
+	.line-50
+		top: 50%
+		margin-top: -1px
+	.line-25
+		top: 75%
+	.line-0
+		bottom: 0
+	.line-meter
+		left: 0
+		position: absolute
+		width: 100%
+		height: 2px
+		background: url(../img/line-meter.png) center repeat-x
+	.arrow-anim-up
+		li
+			//animation: to-up 1s linear infinite
+	.arrow-anim-up:before
+		content: ''
+		position: absolute
+		top: -2px
+		left: -6px
+		width: 0
+		height: 0
+		border-left: 7px solid transparent
+		border-right: 7px solid transparent
+		border-bottom: 15px solid #fff
+	.arrow-anim-down:before
+		content: ''
+		position: absolute
+		bottom: -5px
+		left: -6px
+		width: 0
+		height: 0
+		border-left: 7px solid transparent
+		border-right: 7px solid transparent
+		border-top: 15px solid #fff
+	.arrow-anim
+		left: 50%
+		top: 20px
+		margin-left: -1px
+		position: absolute
+		li
+			background-color: #fff
+			margin-top: 5px
+			width: 2px
+			height: 15px
+	.result
+		ul
+			background-color: #f6f7fb
+			border-radius: 15px
+			padding: 45px 40px
+		.caption
+			color: #2962ff
+			font-size: 14px
+			font-weight: 700
+			text-transform: uppercase
+			margin-bottom: 10px
+		li:not(:first-child)
+			margin-top: 20px

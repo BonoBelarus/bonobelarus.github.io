@@ -1,0 +1,808 @@
+doctype html
+html(lang='ru', class="no-js")
+
+	head
+		meta(charset='utf-8')
+
+		title Заголовок
+		meta(name='description', content='')
+
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		meta(property='og:image', content='path/to/image.jpg')
+		
+		link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+		link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
+		link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+		link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+
+		// Load CSS & WebFonts Main Function
+		script !function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);
+		
+		// Load CSS Start
+		//script loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" );
+		script loadCSS( "css/fonts.css", false, "all" );
+		script loadCSS( "css/reset.css", false, "all" );
+		script loadCSS( "css/owl.carousel.min.css", false, "all" );
+		script loadCSS( "css/owl.theme.default.min.css", false, "all" );
+		script loadCSS( "css/main.css", false, "all" );
+		// Load CSS End
+
+		// Load CSS Compiled without JS
+		noscript
+			link(rel='stylesheet', href='css/reset.css')
+			link(rel='stylesheet', href='css/fonts.css')
+			link(rel='stylesheet', href='css/main.css')
+	body
+		header
+			.top-bg
+				img(src="img/top-bg.png", alt="")
+			.content
+				.top-line
+					.logo
+						img(src="img/logo.png", alt="")
+					nav
+						.small-nav
+							div
+						ul
+							li
+								a(href="#") Услуги
+							li
+								a(href="#") Портфолио
+							li
+								a(href="#") Блог
+							li
+								a(href="#") Контакты
+							li.nav-order
+								a(href="#") +375 29 517 65 08
+								a(href="#") Заказать звонок
+				section#main-sec
+					.back-to
+						a(href="#") К списку услуг
+					.top-caption
+						h1
+							p Контекстная реклама.
+							p Получайте звонки
+							p с завтрашнего дня
+						.clarify
+							p Профессиональная разработка и ведение рекламных кампаний
+							p Яндекс.Директ и Google AdWords
+					.btn-wrap
+						a.btn(href="#") Заказать услугу
+		section#why-profit
+			.second-nav
+				.content
+					.border-bottom
+					nav
+						ul
+							li.active
+								a(href="#") Наши преимущества
+							li
+								a(href="#") Примеры кейсов
+							li
+								a(href="#") Проектная группа
+							li
+								a(href="#") Наши тарифы
+							li
+								a(href="#") Вопрос-ответ
+							li.btn-wrap
+								a(href="#").btn Заказать контекстную рекламу
+			.content
+				h2
+					p Почему окупаемость нашей рекламы
+					p до 2-х месяцев
+				.why-profit_cards
+					ul
+						li
+							.card-img
+								img(src="img/why-profit_card-1.png", alt="")
+							.card-info
+								.caption
+									p Определяем оптимальную стратегию
+								.clarify
+									p Определим, где присутствует ваша целевая аудитория, выбираем оптимальную стратегию, усиливаем дополнительными рекламными инструментами
+						li
+							.card-img
+								img(src="img/why-profit_card-2.png", alt="")
+							.card-info
+								.caption
+									p Экономим бюджет
+								.clarify
+									p Подключаем системы автоматизации ставок, отключим неэффективные запросы, которые расходуют баланс
+						li
+							.card-img
+								img(src="img/why-profit_card-3.png", alt="")
+							.card-info
+								.caption
+									p Улучшаем качество заявок
+								.clarify
+									p Постоянно отслеживаем не целевые запросы
+									p Увеличиваем количество минус слов, мониторим системы аналитик
+						li
+							.card-img
+								img(src="img/why-profit_card-4.png", alt="")
+							.card-info
+								.caption
+									p Дорабатываем сайт
+								.clarify
+									p Как правило сайт не спроектирован так, чтобы выдавать высокие конверсии сайта, и часть клиентов уходит. Увеличиваем конверсию сайта с помощью доработак или поможем разработать новый сайт под наши маркетинговые стратегии.
+		section#banner-learn
+			.content
+				.banner-content
+					h3
+						p Узнайте, как снизить ваши расходы
+						p на рекламную компанию
+					.clarify
+						p Мы поделимся опытом совершенно бесплатно
+				.btn-wrap
+					a.btn(href="#") Узнать
+		section#results
+			.content
+				h2 
+					p Какие результаты получают
+					p наши клиенты?
+				.result-cards
+					ul
+						li
+							.card-img
+								.card-arr
+									.line-arr-1.line-arr.line-up
+									.line-arr-2.line-arr.line-up
+									.line-arr-3.line-arr.line-up
+									.line-arr-4.line-arr.line-up
+									.line-arr-5.line-arr.line-up.pick
+								ul.before
+									li
+									li
+									li
+								ul.after
+									li.adv
+									li.adv
+									li
+									li
+									li
+							.caption
+								p
+									span.mark +43% 
+									| к конверсии
+							.clarify
+								p Увеличение конверсии сайта
+						li
+							.card-img
+								.card-arr
+									.line-arr-1.line-arr.line-up
+									.line-arr-2.line-arr.line-up
+									.line-arr-3.line-arr.line-up
+									.line-arr-4.line-arr.line-up
+									.line-arr-5.line-arr.line-up.pick
+								ul.before
+									li
+									li
+								ul.after
+									li.adv
+									li.adv
+									li
+									li
+							.caption
+								p
+									span.mark +39% 
+									|  CTR
+							.clarify
+								p Увеличение CTR объявлений
+						li
+							.card-img
+								.card-arr
+									.line-arr-1.line-arr.line-down
+									.line-arr-2.line-arr.line-down
+									.line-arr-3.line-arr.line-down
+									.line-arr-4.line-arr.line-down.pick
+								ul.before
+									li
+									li
+									li
+									li
+								ul.after
+									li.adv
+							.caption
+								p
+									span.mark В 4 раза 
+									| ниже стоимость
+							.clarify
+								p Снижение стоимости лида
+						li
+							.card-img
+								.card-arr
+									.line-arr-1.line-arr.line-up
+									.line-arr-2.line-arr.line-up
+									.line-arr-3.line-arr.line-up
+									.line-arr-4.line-arr.line-up
+									.line-arr-5.line-arr.line-up.pick
+								ul.before
+									li
+									li
+									li
+								ul.after
+									li.adv
+									li
+									li
+									li
+							.caption
+								p
+									span.mark +27% 
+									|  к выручке
+							.clarify
+								p Увеличение выручки
+				.btn-wrap
+					a.btn(href="#") Рассчитать стоимость продвижения
+		section#steps
+			.content
+				h2
+					p Как мы настраиваем стабильный
+					p поток клиентов из интернета?
+				.steps-list
+					.center-line
+					.first-column
+						.step-2
+							.step-img
+								img(src="img/step-2.png", alt="")
+							.caption
+								.step-number
+									.st-num
+										p 2
+								p Разрабатываем стратегию
+							.clarify
+								p Для максимально эффективного контакта с целевой аудиторией
+						.step-4
+							.step-img
+								img(src="img/step-4.png", alt="")
+							.caption
+								.step-number
+									.st-num
+										p 4
+								p Анализ и оптимизация
+							.clarify
+								p Следим за рекламной кампанией
+								p Предоставляем отчеты о работе еженедельно
+					.second-column
+						.step-1
+							.step-img
+								img(src="img/step-1.png", alt="")
+							.caption
+								.step-number
+									.st-num
+										p 1
+								p Маркетинговый анализ ниши
+							.clarify
+								p Вашего бизнеса и потребностей целевой аудитории
+						.step-3
+							.step-img
+								img(src="img/step-3.png", alt="")
+							.caption
+								.step-number
+									.st-num
+										p 3
+								p Запуск рекламной кампании
+							.clarify
+								p Разработка и запуск рекламной кампании
+						.step-5
+							.step-img
+								img(src="img/step-5.png", alt="")
+							.caption
+								.step-number
+									.st-num
+										p 5
+								p Новые клиенты
+							.clarify
+								p Вы получаете новых клиентов по минимальной стоимости
+				.btn-wrap
+					a.btn(href="#") Заказать услугу
+		section#letter
+			.content
+				.box-letter
+					.triangle
+						div
+					.letter-why
+						h2
+							p У вас уже есть
+							p рекламная компания?
+						.clarify
+							p Оставьте заявку в форме справа, и мы бесплатно проведем аудит вашей рекламной компании по нашему чек-листу и в течение 5 часов 
+								span пришлем 7 рекомендаций
+								| по улучшению вашей рекламной компании, которые вы сможете применить.
+					.letter-form.form
+						form(action="")
+							p Заполните форму
+							div
+								label(for="") Введите ваше имя
+								input(type="text" name="name" required)
+							div
+								label(for="") Телефон
+								input(type="text" name="phone" required)
+							div
+								label(for="") Адрес сайта
+								input(type="text" name="site")
+							button.btn Подать заявку на аудит
+		section#experience
+			.content
+				.exp-info
+					h2
+						p Профессиональный опыт
+						p и результаты работы
+					.clarify
+						p У нас есть опыт работы с такими тематиками, как:
+				.exp-list
+					ul
+						li
+							p Товары для населения
+						li
+							p Оптовая торговля
+						li
+							p Производство
+						li
+							p Услуги для населения
+						li
+							p Услуги бизнесу
+		section#cases
+			.content
+				.notion
+					p Примеры кейсов
+				h2 Аудит и оптимизация рекламной компании
+				.carousel-nav
+					.prev-wrap
+						.prev
+					.items-count
+						span.current 1
+						| /
+						span.total 3
+					.next-wrap
+						.next
+				.carousel
+					.owl-carousel
+						.item
+							ul.case-goals
+								li
+									.caption
+										p Клиент
+									p Поставщик светодиодных светильников из РФ
+								li
+									.caption
+										p Задача
+									p Увеличить количество заказов с сайта
+								li.instruments
+									.caption
+										p Инструменты
+									ul
+										li
+											p Яндекс Директ (реклама в поиске,рекламная сеть яндекса)
+										li
+											p Google Adwords (реклама в поиске, контекстно-медийная сеть)
+										li
+											p редизайн сайта
+										li
+											p добавление форм захвата
+							.item-center.graf
+								.line-100.line-meter
+								.line-75.line-meter
+								.line-50.line-meter
+								.line-25.line-meter
+								.line-0.line-meter
+								.orders
+									ul
+										li.graf-before
+											p до
+										li.graf-after
+											ul.arrow-anim.arrow-anim-up
+												li
+												li
+												li
+												li
+												li
+												li
+												li
+											p после
+											.label-feature
+												p рост
+												p в 2,5 раза
+									.caption
+										p Заявки
+								.advert
+									ul
+										li.graf-before
+											p до
+										li.graf-after
+											ul.arrow-anim.arrow-anim-down
+												li
+												li
+												li
+												li
+												li
+											p после
+											.label-feature
+												p снижение
+												p на 20%
+									.caption
+										p Рекламные затраты
+							.result
+								ul
+									li
+										.caption
+											p Затрачено времени:
+										p 5 месяцев
+									li
+										.caption
+											p Увеличение кол-ва заявок:
+										p более, чем в 
+											span.bold 2,5 раза
+									li
+										.caption
+											p Снижение затрат на рекламу:
+										p сэкономили заказчику 
+											span.bold 20%
+						.item
+						.item
+		section#banner_get-started
+			.content
+				h2 Готовы работать с нами?
+				.btn-wrap
+					a.btn(href="#") Начать сотрудничество
+		section#project-group
+			.content
+				h2 Проектная группа
+				.clarify
+					p На каждый проект работает слаженная команда узкопрофильных специалистов
+				ul.group-list
+					li
+						.group-img
+							img(src="img/proj-group-1.png", alt="")
+						.caption
+							p Маркетолог
+						p Поможет в эффективном
+						p позиционировании
+					li
+						.group-img
+							img(src="img/proj-group-2.png", alt="")
+						.caption
+							p Специалист
+							p по контекстной рекламе
+						p Сертифицированный специалист
+						p в системах Яндекс.Директ
+						p и Google AdWords
+					li
+						.group-img
+							img(src="img/proj-group-3.png", alt="")
+						.caption
+							p Ведущий дизайнер
+						p Отрисовка продающих баннеров и креативной графики для рекламной кампании
+		section#prices
+			.content
+				h2 Наши тарифы
+				.clarify
+					p Тарифы не включают в себя рекламный бюджет и стоимость сторонних инструментов — бюджет рекламной кампании формируется в медиаплане.
+					p У нас несколько тарифных планов для всех, кто еще не работал с контекстной рекламой и хочет быстро запустить это канал продаж.
+				.prices-list
+					ul
+						li.tarif.tarif-1
+							.price-title
+								.caption
+									p Быстрый старт
+								.tarif-price
+									p 100$
+									.notion
+										p (Первый месяц 200$)
+								.btn-wrap
+									a.btn(href="#") Начать сотрудничество
+							.price-info
+								ul
+									li.caption
+										p До 300 ключевых слов
+									li
+										p Уникальные тексты объявлений с конкурентными преимуществами
+									li
+										p Подбор релевантных посадочных страниц для каждого объявления
+									li
+										p Настройка Метрика/Analytics
+									li
+										p Тематические площадки, РСЯ/КМС: до 3-х объявлений
+						li.tarif.tarif-2
+							.price-title
+								.caption
+									p Стандарт
+								.tarif-price
+									p 200$
+									.notion
+										p (Первый месяц 400$)
+								.btn-wrap
+									a.btn(href="#") Начать сотрудничество
+							.price-info
+								ul
+									li.caption
+										p До 500 ключевых слов
+									li
+										p Уникальные тексты объявлений с конкурентными преимуществами
+									li
+										p Быстрые ссылки
+									li
+										p разделение компаний по регионам
+									li
+										p кросс-минусация
+									li
+										p utm метки
+									li
+										p Настройка Метрика/Analytics
+									li
+										p Тематические площадки, РСЯ/КМС
+									li
+										p Ремаркетинг: до 5-ти объявлений
+									li
+										p А/В тестирование объявлений
+									li
+										p Медийная рекламная кампания в Google AdWords: до 7-х баннеров
+									li
+										p Реклама на YouTube
+						li.tarif.tarif-3
+							.price-title
+								.caption
+									p Быстрый старт
+								.tarif-price
+									p 100$
+									.notion
+										p (Первый месяц 200$)
+								.btn-wrap
+									a.btn(href="#") Начать сотрудничество
+							.price-info
+								ul
+									li.caption
+										p От 1000 ключевых слов
+									li
+										p Уникальные тексты объявлений с конкурентными преимуществами
+									li
+										p Быстрые ссылки
+									li
+										p разделение компаний по регионам
+									li
+										p кросс-минусация
+									li
+										p utm метки
+									li
+										p Подбор релевантных посадочных страниц для каждого объявления
+									li
+										p Настройка Метрика/Analytics
+									li
+										p Тематические площадки, РСЯ/КМС
+									li
+										p Ремаркетинг: от 5-ти объявлений
+									li
+										p А/В тестирование объявлений 
+									li
+										p Медийная рекламная кампания в Google AdWords: от 7-х баннеров
+									li
+										p Реклама на YouTube
+									li
+										p Персональный менеджер
+		section#faq
+			.content
+				h2 Вопрос-ответ
+				ul.faq-list
+					li
+						.question
+							.to-open
+								.l1
+								.l2
+							p Где можно увидеть контекстную рекламу?
+						.faq-active
+							p Контекстная реклама — это инструмент, позволяющий привлечь новых покупателей и увеличить продажи в интернете. Пользователю, заинтересованному в приобретении товара или услуги, достаточно ввести запрос в строку поисковика, и он увидит предложения рекламодателей.
+							p Это же и является главным преимуществом контекстной рекламы. Ведь так намного повышается вероятность демонстрации рекламного объявления именно потенциальному покупателю и, таким образом, ресурсы не расходуются на незаинтересованную аудиторию. Но и это не все плюсы контекстной рекламы.
+							.caption
+								p Преимущества:
+							ul.advantages
+								li
+									p мгновенный результат;
+								li
+									p управление рекламным бюджетом в режиме реального времени;
+								li
+									p плата только за клик, а не за показ;
+								li
+									p точное соответствие интересам пользователей;
+								li
+									p фиксированные позиции показа;
+								li
+									p возможность выбора точной целевой аудитории - временной, географический и другие виды таргетинга;
+								li
+									p развернутая статистика проведения контекстной кампании.
+							.caption
+								p Недостатки:
+							ul.disadvantages
+								li
+									p плата за клик — ведь кликабельность не равна конверсии посетителя в покупателя;
+								li
+									p при остановке рекламной кампании поток клиентов сокращается;
+								li
+									p рост списка запросов увеличивает расходы.
+							h3 Сравнение контекстной рекламы и поискового продвижения
+							.table
+								table
+									tr
+										td
+										td.caption
+											p Контекстная реклама
+										td.caption
+											p Поисковое продвижение
+									tr
+										td
+											p Скорость результата
+										td
+											.plus
+											p Мгновенный результат
+										td
+											.minus
+											p Результат отложен во времени
+									tr
+										td
+											p Принцип оплаты
+										td
+											.minus
+											p Оплата за клик, то есть
+											p за каждого посетителя
+										td
+											.plus
+											p Количество посетителей
+											p не зависит от бюджета
+									tr
+										td
+											p Скорость изменений
+											p рекламной кампании
+										td
+											.plus
+											p Возможность оперативного
+											p внесения изменений в ход
+											p рекламной кампании
+										td
+											.minus
+											p Внесение изменений в ход
+											p рекламной кампании требует
+											p времени
+									tr
+										td
+											p Долговременность эффекта
+										td
+											.minus
+											p При остановке рекламной
+											p кампании поток клиентов
+											p прекращается
+										td
+											.plus
+											p Долговременный эффект
+									tr
+										td
+											p Фиксированные позиции размещения
+										td
+											.plus
+											p Фиксированные позиции
+											p размещения
+										td
+											.minus
+											p Возможна нестабильность
+											p позиций
+									tr
+										td
+											p Рост списка ключевых запросов
+										td
+											.minus
+											p Рост списка ключевых запросов
+											p увеличивает расходы на рекламную
+											p кампанию
+										td
+											.plus
+											p Естественный рост списка запросов
+											p без увеличения затрат
+								.slide-up
+									p Свернуть
+					li
+						.question
+							.to-open
+								.l1
+								.l2
+							p Где можно увидеть контекстную рекламу?
+						.faq-active
+							p active-content
+					li
+						.question
+							.to-open
+								.l1
+								.l2
+							p Где можно увидеть контекстную рекламу?
+						.faq-active
+							p active-content
+					li
+						.question
+							.to-open
+								.l1
+								.l2
+							p Где можно увидеть контекстную рекламу?
+						.faq-active
+							p active-content
+					li
+						.question
+							.to-open
+								.l1
+								.l2
+							p Где можно увидеть контекстную рекламу?
+						.faq-active
+							p active-content
+					li
+						.question
+							.to-open
+								.l1
+								.l2
+							p Где можно увидеть контекстную рекламу?
+						.faq-active
+							p active-content
+		section#contacts
+			.content
+				h2 Остались вопросы?
+				ul.contact-list
+					li
+						.caption
+							p Звоните
+						a(href="#") +375 29 517 65 08
+					li
+						.caption
+							p Пишите
+						p hello@nambawan.by
+					li
+						.caption
+							p Обратная связь
+						a(href="#") Оставить заявку
+				.clarify
+					p Свяжитесь с нами удобным способом и мы предложим вам варианты решения вашей задачи,
+					p составим смету, а затем поможем в реализации вашего проекта
+				.social
+					ul
+						li
+							a(href="#")
+								img(src="img/facebook.png", alt="")
+						li
+							a(href="#")
+								img(src="img/vk.png", alt="")
+						li
+							a(href="#")
+								img(src="img/insta.png", alt="")
+						li
+							a(href="#")
+								img(src="img/linked.png", alt="")
+		footer
+			.content
+				ul.footer-cont
+					li.logo
+						a(href="#")
+							.logo-img
+								img(src="img/logo.png", alt="")
+					li.footer-nav
+						ul
+							li
+								a(href="#") О нас
+							li
+								a(href="#") Портфолио
+							li
+								a(href="#") Блог
+							li
+								a(href="#") Услуги
+							li
+								a(href="#") Контакты
+						a.btn(href="#") Презентация агенства
+					li.delivery
+						p E-mail рассылка
+						p Опыт, идеи, новости, обратная связь
+						.delivery-form.form
+							form
+								input(type="text" placeholder="Введите E-mail" required)
+								button.btn(href="#") Подписаться
+						a.policy(href="#") Политика конфиденциальности
+		.hidden
+
+		// Load Scripts
+		script.
+			var scr = {"scripts":[
+			{"src" : "js/libs-dist.js", "async" : false},
+			{"src" : "js/common.js", "async" : false}
+			]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);

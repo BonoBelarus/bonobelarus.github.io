@@ -1,0 +1,37 @@
+#experience
+	padding: 100px 0
+	background-color: #eef0f7
+	.content
+		display: flex
+		justify-content: space-between
+		align-items: center
+	.clarify
+		color: #333
+		margin-top: 30px
+	.exp-list
+		font-weight: 400
+		width: 30%
+		li
+			position: relative
+			padding-left: 40px
+		li:before
+			content: ''
+			width: 30px
+			height: 30px
+			position: absolute
+			left: 0
+			top: 50%
+			margin-top: -20px
+			background: url(../img/experience-sprite.png) no-repeat
+		li:not(:first-child)
+			margin-top: 50px
+		li:first-child:before
+			margin-top: -15px
+		li:nth-child(2):before
+			background-position: 0 -53px
+		li:nth-child(3):before
+			background-position: 0 -112px
+		li:nth-child(4):before
+			background-position: 0 -169px
+		li:nth-child(5):before
+			background-position: 0 -227px

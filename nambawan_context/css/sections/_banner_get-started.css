@@ -1,0 +1,8 @@
+#banner_get-started {
+  background: url(../img/banner-bg.jpg) center no-repeat;
+  text-align: center;
+  padding: 80px 0; }
+  #banner_get-started h2 {
+    color: #fff; }
+  #banner_get-started .btn-wrap {
+    margin-top: 50px; }

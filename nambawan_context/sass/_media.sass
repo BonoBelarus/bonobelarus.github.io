@@ -1,0 +1,434 @@
+@import "bourbon"
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.content
+		padding: 0 20px
+	header .top-bg img
+		width: initial
+		height: 100%
+	header
+		padding-bottom: 50px
+		height: initial
+		#main-sec
+			height: initial
+			padding-top: 25px
+		.top-line
+			position: relative
+		h1
+			font-size: 51px
+			line-height: 1em
+	h2
+		font-size: 41px
+		line-height: 1em
+	#why-profit .why-profit_cards ul
+		flex-direction: column
+		align-items: center
+	
+	#results
+		padding: 75px 0
+	.result-cards .caption
+		font-size: 18px
+		margin: 20px 0 5px
+	.result-cards .clarify
+		font-size: 15px
+	
+	#steps
+		padding: 75px 0
+	.steps-list
+		margin: 25px auto 0
+	
+	#letter
+		padding: 75px 0
+	
+	.letter-why h2
+		line-height: 1em
+		font-size: 48px
+	.letter-why .clarify
+		line-height: 1.7em
+	
+	#experience
+		padding: 75px 0
+	
+	#cases
+		padding: 50px 0 75px
+	
+	#banner_get-started
+		padding: 75px 0
+	
+	#project-group
+		padding: 75px 0 100px
+	
+	#prices
+		padding: 75px 0 100px
+	#prices h2 + .clarify
+		font-size: 19px
+	
+	#faq
+		padding: 75px 0
+	#faq .table table
+		line-height: 1.2em
+	
+	#contacts
+		padding: 75px 0
+	
+	footer
+		background-repeat: repeat
+	.footer-cont
+		flex-direction: column
+		align-items: center
+		text-align: center
+	.footer-cont > li:first-child, .footer-cont > li:nth-child(3)
+		width: 50%
+	.footer-nav
+		margin-top: 25px
+		ul
+			max-width: 225px
+			margin: 0 auto
+			text-align: left
+			li
+				width: 49%
+		.btn
+			margin-top: 25px
+	footer
+		.delivery
+			margin-top: 25px
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.small-nav
+		width: 40px
+		height: 30px
+		position: relative
+		div
+			height: 2px
+			position: absolute
+			top: 50%
+			left: 0
+			margin-top: -1px
+			background-color: #fff
+			width: 100%
+	.small-nav:before,
+	.small-nav:after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 2px
+		background-color: #fff
+		left: 0
+	.small-nav:before
+		top: 0
+	.small-nav:after
+		bottom: 0
+	header
+		nav
+			ul
+				display: none
+	
+	.second-nav
+		ul
+			display: block
+			li:not(:last-child)
+				margin-right: 35px
+	
+	h2, h3
+		p
+			display: inline
+	
+	.result-cards
+		margin-top: 0
+		> ul
+			flex-wrap: wrap
+			align-items: baseline
+			li
+				margin-top: 85px
+				width: 50%
+	
+	.steps-list .first-column, .steps-list .second-column
+		width: 330px
+	
+	.letter-why h2
+		font-size: 41px
+	.box-letter
+		padding: 90px 35px
+	.letter-why .clarify
+		font-size: 17px
+	.letter-form form
+		padding: 40px 20px
+	.letter-form .btn
+		padding: 0
+		width: 100%
+		text-align: center
+		font-size: 13px
+		line-height: 50px
+	
+	#experience
+		text-align: center
+		.content
+			flex-direction: column
+		.exp-list
+			width: 100%
+			margin-top: 50px
+			text-align: left
+			ul
+				display: flex
+				justify-content: space-between
+				flex-wrap: wrap
+				max-width: 510px
+				margin: 0 auto
+			li
+				width: 45%
+	#experience .exp-list li:not(:first-child)
+		margin-top: 30px
+	#experience .exp-list li
+		margin-top: 30px
+	
+	#project-group .group-list
+		font-size: 14px
+		margin-top: 75px
+		p
+			display: inline
+	#project-group .caption
+		font-size: 18px
+		margin: 25px 0 5px
+	
+	#prices h2 + .clarify
+		font-size: 17px
+	#prices h2 + .clarify p:not(:first-child)
+		margin-top: 25px
+	#prices .tarif
+		flex-direction: column
+	#prices .price-title
+		min-width: 100%
+		width: 100%
+		padding: 50px 20px
+	#prices .price-title .btn-wrap
+		margin-top: 35px
+	
+	#faq tr td:first-child
+		width: 30%
+	#faq .table .caption
+		font-size: 16px
+	#faq .faq-active
+		padding: 0
+		>p,
+		>.caption,
+		.advantages,
+		.disadvantages,
+		.slide-up
+			padding-left: 20px
+	#faq tr td
+		padding-left: 20px
+		padding-right: 20px
+	#faq .table p
+		display: inline
+	
+	#contacts .contact-list li
+		font-size: 24px
+	#contacts .caption
+		margin-bottom: 20px
+	#contacts .social
+		margin: 50px auto 0
+	
+	#banner-learn
+		background-size: cover
+	
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.delivery .btn
+		margin-left: 0
+	
+	/*Disable Animation on Mobile Devices*/
+	header h1
+		font-size: 39px
+	
+	#banner-learn .content
+		flex-direction: column
+		text-align: center
+	#banner-learn h3
+		font-size: 33px
+		line-height: 1em
+	#banner-learn .btn-wrap
+		margin-top: 50px
+	
+	h2
+		font-size: 32px
+	
+	.steps-list .first-column
+		padding-top: 0
+	.center-line
+		display: none
+	.steps-list
+		.step-number
+			display: none
+	.steps-list .first-column,
+	.steps-list .second-column
+		text-align: center
+		margin: 0
+	
+	.box-letter
+		flex-direction: column
+		align-items: center
+	.letter-why
+		width: 100%
+		margin-right: 0
+	.letter-form
+		margin-top: 35px
+		width: 100%
+		text-align: center
+		form
+			max-width: 100%
+			width: 100%
+	
+	#project-group ul
+		flex-direction: column
+		align-items: center
+	#project-group li
+		width: 100%
+		margin-top: 35px
+	#project-group .group-list
+		margin-top: 35px
+	
+	#faq .question
+		font-size: 19px
+		padding: 20px 100px 20px 30px
+	
+	#contacts .contact-list
+		margin-top: 35px
+		flex-direction: column
+		align-items: center
+		li
+			width: 100%
+			margin-top: 35px
+	
+	.footer-cont > li:nth-child(2),
+	.footer-cont > li:first-child,
+	.footer-cont > li:nth-child(3)
+		width: 280px
+	.delivery .btn
+		max-width: 200px
+		margin-top: 15px
+	.second-nav
+		line-height: 60px
+		height: 60px
+	
+	#contacts .caption
+		font-size: 23px
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	#why-profit .why-profit_cards li
+		height: 290px
+	.btn
+		padding: 0
+		width: 100%
+		text-align: center
+	.price-info
+		padding: 50px
+
+@media only screen and (max-width : 425px)
+	header h1
+		font-size: 36px
+	
+	#why-profit .why-profit_cards li
+		flex-direction: column
+		align-items: center
+		text-align: center
+		padding: 20px
+		height: initial
+	#why-profit .card-img
+		margin-right: 0
+	
+	.result-cards > ul
+		flex-direction: column
+		align-items: center
+		li
+			width: 100%
+	#results
+		.btn
+			font-size: 14px
+	
+	.letter-why h2
+		font-size: 35px
+	
+	#faq .question
+		font-size: 17px
+	/**/
+@media only screen and (max-width : 375px)
+	header h1
+		font-size: 30px
+	
+	#banner-learn h3
+		font-size: 27px
+	#banner-learn
+		padding: 75px 0
+	
+	#results .btn
+		line-height: 1.2em
+		padding: 15px
+	
+	h2
+		font-size: 27px
+	
+	.steps-list .first-column, .steps-list .second-column
+		width: 100%
+	.steps-list .first-column > div, .steps-list .second-column > div
+		padding: 0
+	
+	.letter-why h2
+		font-size: 29px
+	.letter-why .clarify
+		margin-top: 35px
+	.box-letter
+		padding: 90px 15px 50px
+	
+	#prices .price-title
+		.btn-wrap
+			width: 100%
+			text-align: center
+		.btn
+			padding: 0
+	
+	#faq .question
+		padding: 20px 40px 20px 20px
+	#faq .to-open
+		right: 0
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

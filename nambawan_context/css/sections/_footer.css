@@ -1,0 +1,101 @@
+footer {
+  background: #0e1d49 url(../img/footer-bg.jpg) center no-repeat;
+  color: #fff;
+  font-size: 16px;
+  padding: 70px 0 90px; }
+  footer .logo-txt,
+  footer .logo-img {
+    display: inline-block; }
+  footer .logo-txt {
+    margin-left: 20px; }
+  footer a {
+    color: #fff; }
+  footer li {
+    vertical-align: top;
+    display: inline-block; }
+
+.footer-cont > li:first-child,
+.footer-cont > li:nth-child(3) {
+  width: 30%; }
+
+.footer-cont > li:nth-child(2) {
+  width: 40%; }
+
+.footer-nav .btn {
+  text-transform: none;
+  margin-top: 50px;
+  background: #05d8a5; }
+
+.footer-nav > .btn:hover {
+  opacity: 1; }
+
+.footer-nav > .btn {
+  opacity: .7;
+  background: transparent; }
+
+.footer-nav li {
+  margin-bottom: 10px;
+  width: 33.33%; }
+  .footer-nav li a {
+    opacity: .7; }
+  .footer-nav li a:hover {
+    opacity: 1; }
+
+.delivery {
+  font-size: 14px; }
+  .delivery p {
+    opacity: .7; }
+  .delivery .policy {
+    display: inline-block;
+    opacity: .5;
+    border-bottom: 1px dashed #fff;
+    transition: .1s; }
+  .delivery .policy:hover {
+    border-bottom: 1px dashed transparent; }
+  .delivery p:first-child {
+    opacity: 1;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .delivery div {
+    display: inline-block; }
+  .delivery label {
+    width: 100%;
+    font-size: 14px;
+    color: grey;
+    line-height: 2.4em;
+    padding-left: 15px;
+    bottom: 5px; }
+  .delivery input {
+    margin: 0;
+    display: inline-block;
+    width: 205px;
+    line-height: 45px;
+    color: #515151;
+    vertical-align: top;
+    border: none;
+    background: #fff;
+    position: relative; }
+  .delivery .btn {
+    margin-left: 13px;
+    border: none;
+    font-size: 12px;
+    color: #fff;
+    line-height: 45px;
+    padding: 0 20px;
+    background: #05d8a5;
+    box-shadow: 0 5px 10px 0px rgba(1, 251, 191, 0.5);
+    border: 1px solid #05d8a5; }
+  .delivery .btn:hover {
+    box-shadow: none; }
+  .delivery .form div {
+    vertical-align: top; }
+  .delivery .form div:after {
+    height: 0; }
+  .delivery .form input {
+    padding: 0 15px;
+    transition: .35s; }
+  .delivery .form input:focus {
+    box-shadow: inset 0 0 0 1px #2962ff, 0 0 15px rgba(255, 255, 255, 0.7); }
+  .delivery .delivery-form {
+    margin: 20px 0; }
