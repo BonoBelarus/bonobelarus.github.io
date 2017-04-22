@@ -43,7 +43,9 @@ html(lang='ru', class="no-js")
 						img(src="img/logo.png", alt="")
 					nav
 						.small-nav
-							div
+							.sn1
+							.sn-center
+							.sn2
 						ul
 							li
 								a(href="#") Услуги
@@ -55,7 +57,7 @@ html(lang='ru', class="no-js")
 								a(href="#") Контакты
 							li.nav-order
 								a(href="#") +375 29 517 65 08
-								a(href="#") Заказать звонок
+								a(href="#").pop-up-call Заказать звонок
 				section#main-sec
 					.back-to
 						a(href="#") К списку услуг
@@ -68,7 +70,7 @@ html(lang='ru', class="no-js")
 							p Профессиональная разработка и ведение рекламных кампаний
 							p Яндекс.Директ и Google AdWords
 					.btn-wrap
-						a.btn(href="#") Заказать услугу
+						a.btn(href="#").pop-up-call Заказать услугу
 		section#why-profit
 			.second-nav
 				.content
@@ -86,7 +88,7 @@ html(lang='ru', class="no-js")
 							li
 								a(href="#") Вопрос-ответ
 							li.btn-wrap
-								a(href="#").btn Заказать контекстную рекламу
+								a(href="#").btn.pop-up-call Заказать контекстную рекламу
 			.content
 				h2
 					p Почему окупаемость нашей рекламы
@@ -295,7 +297,7 @@ html(lang='ru', class="no-js")
 							.clarify
 								p Вы получаете новых клиентов по минимальной стоимости
 				.btn-wrap
-					a.btn(href="#") Заказать услугу
+					a.btn(href="#").pop-up-call Заказать услугу
 		section#letter
 			.content
 				.box-letter
@@ -312,15 +314,15 @@ html(lang='ru', class="no-js")
 					.letter-form.form
 						form(action="")
 							p Заполните форму
-							div
-								label(for="") Введите ваше имя
+							div.name
 								input(type="text" name="name" required)
-							div
+								label(for="") Введите ваше имя
+							div.phone
+								input(type="tel" name="phone" required)
 								label(for="") Телефон
-								input(type="text" name="phone" required)
-							div
-								label(for="") Адрес сайта
+							div.site
 								input(type="text" name="site")
+								label(for="") Адрес сайта
 							button.btn Подать заявку на аудит
 		section#experience
 			.content
@@ -346,100 +348,250 @@ html(lang='ru', class="no-js")
 			.content
 				.notion
 					p Примеры кейсов
-				h2 Аудит и оптимизация рекламной компании
 				.carousel-nav
-					.prev-wrap
-						.prev
 					.items-count
 						span.current 1
 						| /
-						span.total 3
-					.next-wrap
-						.next
+						span.total
 				.carousel
 					.owl-carousel
 						.item
-							ul.case-goals
-								li
-									.caption
-										p Клиент
-									p Поставщик светодиодных светильников из РФ
-								li
-									.caption
-										p Задача
-									p Увеличить количество заказов с сайта
-								li.instruments
-									.caption
-										p Инструменты
+							.item-caption
+								.to-open
+									.l1
+									.l2
+								h2 Аудит и оптимизация рекламной компании
+							.item-content
+								ul.case-goals
+									li
+										.caption
+											p Клиент
+										p Поставщик светодиодных светильников из РФ
+									li
+										.caption
+											p Задача
+										p Увеличить количество заказов с сайта
+									li.instruments
+										.caption
+											p Инструменты
+										ul
+											li
+												p Яндекс Директ (реклама в поиске,рекламная сеть яндекса)
+											li
+												p Google Adwords (реклама в поиске, контекстно-медийная сеть)
+											li
+												p редизайн сайта
+											li
+												p добавление форм захвата
+								.item-center.graf
+									.line-100.line-meter
+									.line-75.line-meter
+									.line-50.line-meter
+									.line-25.line-meter
+									.line-0.line-meter
+									.orders
+										ul
+											li.graf-before
+												p до
+											li.graf-after
+												ul.arrow-anim.arrow-anim-up
+													li
+													li
+													li
+													li
+													li
+													li
+													li
+												p после
+												.label-feature
+													p рост
+													p в 2,5 раза
+										.caption
+											p Заявки
+									.advert
+										ul
+											li.graf-before
+												p до
+											li.graf-after
+												ul.arrow-anim.arrow-anim-down
+													li
+													li
+													li
+													li
+													li
+												p после
+												.label-feature
+													p снижение
+													p на 20%
+										.caption
+											p Рекламные затраты
+								.result
 									ul
 										li
-											p Яндекс Директ (реклама в поиске,рекламная сеть яндекса)
+											.caption
+												p Затрачено времени:
+											p 5 месяцев
 										li
-											p Google Adwords (реклама в поиске, контекстно-медийная сеть)
+											.caption
+												p Увеличение кол-ва заявок:
+											p более, чем в 
+												span.bold 2,5 раза
 										li
-											p редизайн сайта
-										li
-											p добавление форм захвата
-							.item-center.graf
-								.line-100.line-meter
-								.line-75.line-meter
-								.line-50.line-meter
-								.line-25.line-meter
-								.line-0.line-meter
-								.orders
+											.caption
+												p Снижение затрат на рекламу:
+											p сэкономили заказчику 
+												span.bold 20%
+						.item.item-2
+							.item-caption
+								.to-open
+									.l1
+									.l2
+								h2 Привлечение менеджеров на прохождения тренинга
+							.item-content
+								ul.case-goals
+									li
+										.caption
+											p Клиент
+										p Тренинговая компания
+									li
+										.caption
+											p Задача
+										p Привлечь менеджеров по продажам на прохождение тренинга
+									li.instruments
+										.caption
+											p Инструменты
+										ul
+											li
+												p Яндекс Директ (реклама в поиске,рекламная сеть яндекса)
+											li
+												p Google Adwords (реклама в поиске, контекстно-медийная сеть)
+								.item-center.graf
+									.line-100.line-meter
+									.line-75.line-meter
+									.line-50.line-meter
+									.line-25.line-meter
+									.line-0.line-meter
 									ul
-										li.graf-before
-											p до
-										li.graf-after
-											ul.arrow-anim.arrow-anim-up
-												li
-												li
-												li
-												li
-												li
-												li
-												li
-											p после
+										li
+										li
+										li
+										li
+										li
+										li
 											.label-feature
-												p рост
-												p в 2,5 раза
-									.caption
-										p Заявки
-								.advert
+												p 87
+												p заявок
+									.item-date-line
+										p Неделя 1
+										p Неделя 2
+								.result
 									ul
-										li.graf-before
-											p до
-										li.graf-after
-											ul.arrow-anim.arrow-anim-down
-												li
-												li
-												li
-												li
-												li
-											p после
-											.label-feature
-												p снижение
-												p на 20%
-									.caption
-										p Рекламные затраты
-							.result
-								ul
-									li
-										.caption
-											p Затрачено времени:
-										p 5 месяцев
-									li
-										.caption
-											p Увеличение кол-ва заявок:
-										p более, чем в 
-											span.bold 2,5 раза
-									li
-										.caption
-											p Снижение затрат на рекламу:
-										p сэкономили заказчику 
-											span.bold 20%
+										li
+											.caption
+												p Затрачено времени:
+											p 3 дня
+										li
+											.caption
+												p кол-во заявок за 2 недели:
+											p 87 заявок
 						.item
-						.item
+							.item-caption
+								.to-open
+									.l1
+									.l2
+								h2 Увеличить целевой трафик без увеличения рекламного бюджета
+							.item-content
+								ul.case-goals
+									li
+										.caption
+											p Клиент
+										p Торгово-развлекательный центр
+									li
+										.caption
+											p Задача
+										p  Увеличить целевой трафик
+									li.instruments
+										.caption
+											p Инструменты
+										ul
+											li
+												p Яндекс Директ (реклама в поиске,рекламная сеть яндекса)
+											li
+												p Google Adwords (реклама в поиске, контекстно-медийная сеть)
+								.item-center.graf
+									.line-100.line-meter
+									.line-75.line-meter
+									.line-50.line-meter
+									.line-25.line-meter
+									.line-0.line-meter
+									.orders
+										ul
+											li.graf-before
+												p 
+													span(style="font-size:20px") 115
+													br
+													| до
+											li.graf-after
+												ul.arrow-anim.arrow-anim-up
+													li
+													li
+													li
+													li
+													li
+													li
+													li
+												p
+													span(style="font-size:20px") 380
+													br
+													| после
+												.label-feature
+													p рост
+													p в 2,5 раза
+										.caption
+											p Заявки
+									.advert
+										ul
+											li.graf-before
+												p
+													span(style="font-size:20px") $1,2
+													br
+													| до
+											li.graf-after
+												ul.arrow-anim.arrow-anim-down
+													li
+													li
+													li
+													li
+												p
+													span(style="font-size:20px") $0,4
+													br
+													| после
+												.label-feature
+													p снижение
+													p на 20%
+										.caption
+											p Средняя цена клика
+								.result
+									ul
+										li
+											.caption
+												p Затрачено времени:
+											p 2 месяца
+										li
+											.caption
+												p Целевой трафик:
+											p увеличился в 
+												span.bold 3 раза
+										li
+											.caption
+												p Цена клика:
+											p снижена до 
+												span.bold $0,40
+										li
+											.caption
+												p Заявки:
+											p было 115, 
+												span.bold стало 380
 		section#banner_get-started
 			.content
 				h2 Готовы работать с нами?
@@ -801,6 +953,25 @@ html(lang='ru', class="no-js")
 		.hidden
 
 		// Load Scripts
+
+		.pop-up-wrap
+			.close
+				img(src="img/close.png", alt="")
+			#pop-up
+				h3 Расскажите о своем проекте или задайте вопрос
+				form(action="")
+					.form-group
+						.name
+							input(type="text" id="form-name" name="name")
+							label(for="form-name") Ваше имя
+						.phone
+							input(type="tel" id="form-phone" name="phone")
+							label(for="form-phone") Телефон
+					.email
+						input(type="email" id="form-email" name="email")
+						label(for="form-email") Почта
+					.btn-wrap
+						button.btn Отправить
 		script.
 			var scr = {"scripts":[
 			{"src" : "js/libs-dist.js", "async" : false},

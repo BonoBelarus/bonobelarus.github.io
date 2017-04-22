@@ -30,6 +30,8 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 
+body.disabled
+	overflow: hidden
 body
 	color: #333
 	cursor: default
@@ -86,3 +88,183 @@ h3
 	font-weight: 700
 	color: #fff
 	line-height: 1.3em
+
+.mobile-audit
+	display: none
+
+.to-open
+	overflow: hidden
+	transition: .75s
+	opacity: .8
+	position: absolute
+	width: 30px
+	height: 30px
+	border-radius: 50%
+	box-shadow: 0 0 0 2px #000
+	right: 50px
+	top: 50%
+	margin-top: -15px
+.to-open .l1,
+.to-open .l2
+	transition: .3s
+	content: ''
+	transform: none
+	left: 50%
+	top: 50%
+	background-color: #000
+	position: absolute
+.to-open .l1
+	height: 2px
+	width: 20px
+	margin-top: -1px
+	margin-left: -10px
+.to-open .l2
+	width: 2px
+	height: 20px
+	margin-top: -10px
+	margin-left: -1px
+
+.label-feature
+	position: absolute
+	left: 50%
+	margin-left: -63px
+	bottom: 100%
+	width: 126px
+	height: 85px
+	padding-top: 20px
+	font-size: 14px
+	color: #a59f34
+	line-height: 1.1em
+	font-weight: 700
+	background: url(../img/label-feature.svg) center 5px no-repeat
+
+.item-date-line
+	position: absolute
+	bottom: -50px
+	width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	text-transform: uppercase
+	font-size: 13px
+	color: #aaa7a7
+
+.pop-up-wrap.active
+	z-index: 10
+	opacity: 1
+	transform: scale(1)
+	transition: z-index .5s ease 0s, opacity .5s, transform .5s
+.pop-up-wrap
+	padding: 20px
+	z-index: -1
+	opacity: 0
+	transition: z-index .5s ease .5s, opacity .5s, transform .5s ease 1s
+	transform: scale(2)
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100vh
+	line-height: 100vh
+	background-color: #0a1a42
+	text-align: center
+	.close
+		line-height: 1em
+		top: 25px
+		right: 50px
+		position: absolute
+		transition: .45s
+		cursor: pointer
+	.close:hover
+		transform: rotateZ(180deg)
+	#pop-up
+		display: inline-block
+		line-height: 1.2em
+		vertical-align: middle
+		position: relative
+		h3,label
+			color: #fff
+	form
+		margin: 50px auto 0
+		max-width: 500px
+		display: flex
+		justify-content: flex-start
+		flex-direction: column
+		align-items: center
+	.form-group,
+	.email
+		width: 100%
+		position: relative
+	.name,
+	.phone
+		width: 45%
+		position: relative
+form
+	.active label
+		font-size: 10px
+		transform: translateY(-20px)
+	.name.active:after,
+	.phone.active:after,
+	.email.active:after,
+	.site.active:after
+		width: 100%
+	.name:after,
+	.phone:after,
+	.email:after,
+	.site:after
+		transition: .35s
+		content: ''
+		width: 0
+		background-color: #2962ff
+		height: 2px
+		position: absolute
+		bottom: -5px
+		left: 0
+	.name:before,
+	.phone:before,
+	.email:before,
+	.site:before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 2px !important
+		background-color: #fff
+		bottom: -5px
+		left: 0
+	.form-group
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+	.email
+		display: inline-block
+		margin-top: 40px
+	label
+		transition: .35s
+		text-transform: uppercase
+		position: absolute
+		display: inline-block
+		bottom: 0
+		left: 0
+	input,textarea
+		z-index: 1
+		width: 100%
+		line-height: 1.5em
+		color: #fff
+		background-color: transparent
+		border: none
+		position: relative
+	.btn-wrap
+		width: 200px
+		margin-top: 50px
+	button
+		border: none
+
+// .small-nav.active .sn1
+// 	animation: open-nav_before .6s ease both
+// .small-nav.active .sn2
+// 	animation: open-nav_after .6s ease both
+// .small-nav.active
+// 	.sn-center
+// 		transition: 0s ease .15s
+// 		opacity: 0

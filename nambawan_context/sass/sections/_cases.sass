@@ -12,6 +12,10 @@
 	.carousel-nav
 		margin-top: 20px
 		text-align: center
+	.owl-prev,
+	.owl-next
+		display: inline-block
+
 	.next,
 	.prev,
 	.items-count
@@ -94,7 +98,7 @@
 	.item-center,
 	.results
 		width: 31%
-	.item
+	.item-content
 		padding-top: 100px
 		display: flex
 		justify-content: space-between
@@ -126,6 +130,10 @@
 		position: relative
 		.line-meter
 			position: absolute
+	.item-caption
+		position: relative
+		.to-open
+			display: none
 	.item-center
 		text-align: center
 	.orders,
@@ -150,6 +158,7 @@
 	.graf-after
 		position: relative
 		>p
+			line-height: 1.5em
 			position: absolute
 			bottom: 15px
 			font-size: 11px
@@ -163,19 +172,6 @@
 			width: 50%
 			vertical-align: bottom
 			display: inline-block
-		.label-feature
-			position: absolute
-			left: 50%
-			margin-left: -63px
-			bottom: 100%
-			width: 126px
-			height: 85px
-			padding-top: 20px
-			font-size: 14px
-			color: #a59f34
-			line-height: 1.1em
-			font-weight: 700
-			background: url(../img/label-feature.svg) center 5px no-repeat
 	.orders
 		margin-right: 40px
 		>ul>li:first-child
@@ -255,3 +251,48 @@
 			margin-bottom: 10px
 		li:not(:first-child)
 			margin-top: 20px
+	.item-2
+		h2
+			font-size: 36px
+		.item-center
+			.line-meter:before
+				content: ''
+				position: absolute
+				left: -20px
+				top: -10px
+				font-family: Raleway
+				font-size: 13px
+				color: #aaa7a7
+			.line-0:before
+				content: '0'
+			.line-25:before
+				content: '25'
+			.line-50:before
+				content: '50'
+			.line-75:before
+				content: '75'
+			.line-100:before
+				content: '100'
+			ul
+				display: flex
+				justify-content: space-between
+				align-items: flex-end
+			li
+				position: relative
+				width: 55px
+			li:nth-child(even)
+				background-color: #4685d0
+			li:nth-child(odd)
+				background-color: #3570b6
+			li:first-child
+				height: 54px
+			li:nth-child(2)
+				height: 80px
+			li:nth-child(3)
+				height: 69px
+			li:nth-child(4)
+				height: 143px
+			li:nth-child(5)
+				height: 187px
+			li:last-child
+				height: 248px

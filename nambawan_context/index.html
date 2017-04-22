@@ -2,11 +2,15 @@
 <html class="no-js" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Заголовок</title>
+    <title>Nambawan - Context</title>
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:image" content="path/to/image.jpg">
+    
+    <meta name="theme-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
@@ -36,14 +40,16 @@
           <div class="logo"><img src="img/logo.png" alt=""></div>
           <nav>
             <div class="small-nav">
-              <div></div>
+              <div class="sn1"></div>
+              <div class="sn-center"></div>
+              <div class="sn2"></div>
             </div>
             <ul>
               <li><a href="#">Услуги</a></li>
               <li><a href="#">Портфолио</a></li>
               <li><a href="#">Блог</a></li>
               <li><a href="#">Контакты</a></li>
-              <li class="nav-order"><a href="#">+375 29 517 65 08</a><a href="#">Заказать звонок</a></li>
+              <li class="nav-order"><a href="#">+375 29 517 65 08</a><a class="pop-up-call" href="#">Заказать звонок</a></li>
             </ul>
           </nav>
         </div>
@@ -60,7 +66,7 @@
               <p>Яндекс.Директ и Google AdWords</p>
             </div>
           </div>
-          <div class="btn-wrap"><a class="btn" href="#">Заказать услугу</a></div>
+          <div class="btn-wrap"><a class="btn pop-up-call" href="#">Заказать услугу</a></div>
         </section>
       </div>
     </header>
@@ -75,7 +81,7 @@
               <li><a href="#">Проектная группа</a></li>
               <li><a href="#">Наши тарифы</a></li>
               <li><a href="#">Вопрос-ответ</a></li>
-              <li class="btn-wrap"><a class="btn" href="#">Заказать контекстную рекламу</a></li>
+              <li class="btn-wrap"><a class="btn pop-up-call" href="#">Заказать контекстную рекламу</a></li>
             </ul>
           </nav>
         </div>
@@ -356,7 +362,7 @@
             </div>
           </div>
         </div>
-        <div class="btn-wrap"><a class="btn" href="#">Заказать услугу</a></div>
+        <div class="btn-wrap"><a class="btn pop-up-call" href="#">Заказать услугу</a></div>
       </div>
     </section>
     <section id="letter">
@@ -377,17 +383,17 @@
           <div class="letter-form form">
             <form action="">
               <p>Заполните форму</p>
-              <div>
-                <label for="">Введите ваше имя</label>
+              <div class="name">
                 <input type="text" name="name" required>
+                <label for="">Введите ваше имя</label>
               </div>
-              <div>
+              <div class="phone">
+                <input type="tel" name="phone" required>
                 <label for="">Телефон</label>
-                <input type="text" name="phone" required>
               </div>
-              <div>
-                <label for="">Адрес сайта</label>
+              <div class="site">
                 <input type="text" name="site">
+                <label for="">Адрес сайта</label>
               </div>
               <button class="btn">Подать заявку на аудит</button>
             </form>
@@ -432,134 +438,334 @@
         <div class="notion">
           <p>Примеры кейсов</p>
         </div>
-        <h2>Аудит и оптимизация рекламной компании</h2>
         <div class="carousel-nav">
-          <div class="prev-wrap">
-            <div class="prev"></div>
-          </div>
-          <div class="items-count"><span class="current">1</span>/<span class="total">3</span></div>
-          <div class="next-wrap">
-            <div class="next"></div>
-          </div>
+          <div class="items-count"><span class="current">1</span>/<span class="total"></span></div>
         </div>
         <div class="carousel">
           <div class="owl-carousel">
             <div class="item">
-              <ul class="case-goals">
-                <li>
-                  <div class="caption">
-                    <p>Клиент</p>
-                  </div>
-                  <p>Поставщик светодиодных светильников из РФ</p>
-                </li>
-                <li>
-                  <div class="caption">
-                    <p>Задача</p>
-                  </div>
-                  <p>Увеличить количество заказов с сайта</p>
-                </li>
-                <li class="instruments">
-                  <div class="caption">
-                    <p>Инструменты</p>
-                  </div>
-                  <ul>
-                    <li>
-                      <p>Яндекс Директ (реклама в поиске,рекламная сеть яндекса)</p>
-                    </li>
-                    <li>
-                      <p>Google Adwords (реклама в поиске, контекстно-медийная сеть)</p>
-                    </li>
-                    <li>
-                      <p>редизайн сайта</p>
-                    </li>
-                    <li>
-                      <p>добавление форм захвата</p>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <div class="item-center graf">
-                <div class="line-100 line-meter"></div>
-                <div class="line-75 line-meter"></div>
-                <div class="line-50 line-meter"></div>
-                <div class="line-25 line-meter"></div>
-                <div class="line-0 line-meter"></div>
-                <div class="orders">
-                  <ul>
-                    <li class="graf-before">
-                      <p>до</p>
-                    </li>
-                    <li class="graf-after">
-                      <ul class="arrow-anim arrow-anim-up">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                      </ul>
-                      <p>после</p>
-                      <div class="label-feature">
-                        <p>рост</p>
-                        <p>в 2,5 раза</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="caption">
-                    <p>Заявки</p>
-                  </div>
+              <div class="item-caption">
+                <div class="to-open">
+                  <div class="l1"></div>
+                  <div class="l2"></div>
                 </div>
-                <div class="advert">
-                  <ul>
-                    <li class="graf-before">
-                      <p>до</p>
-                    </li>
-                    <li class="graf-after">
-                      <ul class="arrow-anim arrow-anim-down">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                      </ul>
-                      <p>после</p>
-                      <div class="label-feature">
-                        <p>снижение</p>
-                        <p>на 20%</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="caption">
-                    <p>Рекламные затраты</p>
-                  </div>
-                </div>
+                <h2>Аудит и оптимизация рекламной компании</h2>
               </div>
-              <div class="result">
-                <ul>
+              <div class="item-content">
+                <ul class="case-goals">
                   <li>
                     <div class="caption">
-                      <p>Затрачено времени:</p>
+                      <p>Клиент</p>
                     </div>
-                    <p>5 месяцев</p>
+                    <p>Поставщик светодиодных светильников из РФ</p>
                   </li>
                   <li>
                     <div class="caption">
-                      <p>Увеличение кол-ва заявок:</p>
+                      <p>Задача</p>
                     </div>
-                    <p>более, чем в <span class="bold">2,5 раза</span></p>
+                    <p>Увеличить количество заказов с сайта</p>
                   </li>
-                  <li>
+                  <li class="instruments">
                     <div class="caption">
-                      <p>Снижение затрат на рекламу:</p>
+                      <p>Инструменты</p>
                     </div>
-                    <p>сэкономили заказчику <span class="bold">20%</span></p>
+                    <ul>
+                      <li>
+                        <p>Яндекс Директ (реклама в поиске,рекламная сеть яндекса)</p>
+                      </li>
+                      <li>
+                        <p>Google Adwords (реклама в поиске, контекстно-медийная сеть)</p>
+                      </li>
+                      <li>
+                        <p>редизайн сайта</p>
+                      </li>
+                      <li>
+                        <p>добавление форм захвата</p>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
+                <div class="item-center graf">
+                  <div class="line-100 line-meter"></div>
+                  <div class="line-75 line-meter"></div>
+                  <div class="line-50 line-meter"></div>
+                  <div class="line-25 line-meter"></div>
+                  <div class="line-0 line-meter"></div>
+                  <div class="orders">
+                    <ul>
+                      <li class="graf-before">
+                        <p>до</p>
+                      </li>
+                      <li class="graf-after">
+                        <ul class="arrow-anim arrow-anim-up">
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                        <p>после</p>
+                        <div class="label-feature">
+                          <p>рост</p>
+                          <p>в 2,5 раза</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="caption">
+                      <p>Заявки</p>
+                    </div>
+                  </div>
+                  <div class="advert">
+                    <ul>
+                      <li class="graf-before">
+                        <p>до</p>
+                      </li>
+                      <li class="graf-after">
+                        <ul class="arrow-anim arrow-anim-down">
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                        <p>после</p>
+                        <div class="label-feature">
+                          <p>снижение</p>
+                          <p>на 20%</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="caption">
+                      <p>Рекламные затраты</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="result">
+                  <ul>
+                    <li>
+                      <div class="caption">
+                        <p>Затрачено времени:</p>
+                      </div>
+                      <p>5 месяцев</p>
+                    </li>
+                    <li>
+                      <div class="caption">
+                        <p>Увеличение кол-ва заявок:</p>
+                      </div>
+                      <p>более, чем в <span class="bold">2,5 раза</span></p>
+                    </li>
+                    <li>
+                      <div class="caption">
+                        <p>Снижение затрат на рекламу:</p>
+                      </div>
+                      <p>сэкономили заказчику <span class="bold">20%</span></p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="item"></div>
-            <div class="item"></div>
+            <div class="item item-2">
+              <div class="item-caption">
+                <div class="to-open">
+                  <div class="l1"></div>
+                  <div class="l2"></div>
+                </div>
+                <h2>Привлечение менеджеров на прохождения тренинга</h2>
+              </div>
+              <div class="item-content">
+                <ul class="case-goals">
+                  <li>
+                    <div class="caption">
+                      <p>Клиент</p>
+                    </div>
+                    <p>Тренинговая компания</p>
+                  </li>
+                  <li>
+                    <div class="caption">
+                      <p>Задача</p>
+                    </div>
+                    <p>Привлечь менеджеров по продажам на прохождение тренинга</p>
+                  </li>
+                  <li class="instruments">
+                    <div class="caption">
+                      <p>Инструменты</p>
+                    </div>
+                    <ul>
+                      <li>
+                        <p>Яндекс Директ (реклама в поиске,рекламная сеть яндекса)</p>
+                      </li>
+                      <li>
+                        <p>Google Adwords (реклама в поиске, контекстно-медийная сеть)</p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="item-center graf">
+                  <div class="line-100 line-meter"></div>
+                  <div class="line-75 line-meter"></div>
+                  <div class="line-50 line-meter"></div>
+                  <div class="line-25 line-meter"></div>
+                  <div class="line-0 line-meter"></div>
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li>
+                      <div class="label-feature">
+                        <p>87</p>
+                        <p>заявок</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="item-date-line">
+                    <p>Неделя 1</p>
+                    <p>Неделя 2</p>
+                  </div>
+                </div>
+                <div class="result">
+                  <ul>
+                    <li>
+                      <div class="caption">
+                        <p>Затрачено времени:</p>
+                      </div>
+                      <p>3 дня</p>
+                    </li>
+                    <li>
+                      <div class="caption">
+                        <p>кол-во заявок за 2 недели:</p>
+                      </div>
+                      <p>87 заявок</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-caption">
+                <div class="to-open">
+                  <div class="l1"></div>
+                  <div class="l2"></div>
+                </div>
+                <h2>Увеличить целевой трафик без увеличения рекламного бюджета</h2>
+              </div>
+              <div class="item-content">
+                <ul class="case-goals">
+                  <li>
+                    <div class="caption">
+                      <p>Клиент</p>
+                    </div>
+                    <p>Торгово-развлекательный центр</p>
+                  </li>
+                  <li>
+                    <div class="caption">
+                      <p>Задача</p>
+                    </div>
+                    <p> Увеличить целевой трафик</p>
+                  </li>
+                  <li class="instruments">
+                    <div class="caption">
+                      <p>Инструменты</p>
+                    </div>
+                    <ul>
+                      <li>
+                        <p>Яндекс Директ (реклама в поиске,рекламная сеть яндекса)</p>
+                      </li>
+                      <li>
+                        <p>Google Adwords (реклама в поиске, контекстно-медийная сеть)</p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="item-center graf">
+                  <div class="line-100 line-meter"></div>
+                  <div class="line-75 line-meter"></div>
+                  <div class="line-50 line-meter"></div>
+                  <div class="line-25 line-meter"></div>
+                  <div class="line-0 line-meter"></div>
+                  <div class="orders">
+                    <ul>
+                      <li class="graf-before">
+                        <p> <span style="font-size:20px;">115</span><br>до</p>
+                      </li>
+                      <li class="graf-after">
+                        <ul class="arrow-anim arrow-anim-up">
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                        <p><span style="font-size:20px;">380</span><br>после</p>
+                        <div class="label-feature">
+                          <p>рост</p>
+                          <p>в 2,5 раза</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="caption">
+                      <p>Заявки</p>
+                    </div>
+                  </div>
+                  <div class="advert">
+                    <ul>
+                      <li class="graf-before">
+                        <p><span style="font-size:20px;">$1,2</span><br>до</p>
+                      </li>
+                      <li class="graf-after">
+                        <ul class="arrow-anim arrow-anim-down">
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                        <p><span style="font-size:20px;">$0,4</span><br>после</p>
+                        <div class="label-feature">
+                          <p>снижение</p>
+                          <p>на 20%</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="caption">
+                      <p>Средняя цена клика</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="result">
+                  <ul>
+                    <li>
+                      <div class="caption">
+                        <p>Затрачено времени:</p>
+                      </div>
+                      <p>2 месяца</p>
+                    </li>
+                    <li>
+                      <div class="caption">
+                        <p>Целевой трафик:</p>
+                      </div>
+                      <p>увеличился в <span class="bold">3 раза</span></p>
+                    </li>
+                    <li>
+                      <div class="caption">
+                        <p>Цена клика:</p>
+                      </div>
+                      <p>снижена до <span class="bold">$0,40</span></p>
+                    </li>
+                    <li>
+                      <div class="caption">
+                        <p>Заявки:</p>
+                      </div>
+                      <p>было 115, <span class="bold">стало 380</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1058,6 +1264,31 @@
     </footer>
     <div class="hidden"></div>
     <!-- Load Scripts-->
+    <div class="pop-up-wrap">
+      <div class="close"><img src="img/close.png" alt=""></div>
+      <div id="pop-up">
+        <h3>Расскажите о своем проекте или задайте вопрос</h3>
+        <form action="">
+          <div class="form-group">
+            <div class="name">
+              <input type="text" id="form-name" name="name">
+              <label for="form-name">Ваше имя</label>
+            </div>
+            <div class="phone">
+              <input type="tel" id="form-phone" name="phone">
+              <label for="form-phone">Телефон</label>
+            </div>
+          </div>
+          <div class="email">
+            <input type="email" id="form-email" name="email">
+            <label for="form-email">Почта</label>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <script>
       var scr = {"scripts":[
       {"src" : "js/libs-dist.js", "async" : false},
