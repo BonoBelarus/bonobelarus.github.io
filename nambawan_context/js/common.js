@@ -17,7 +17,8 @@ $(document).ready(function(){
 			for(var i = 0; i < sn_li.length; i++){
 				sn_w += $(sn_li[i]).outerWidth();
 			}
-			$('.second-nav ul').outerWidth(sn_w + sn_p + 30);
+			//$('.second-nav ul').outerWidth(sn_w + sn_p + 500);
+			$('.second-nav ul').outerWidth(1200);
 		}, 1000);
 	}());
 	//END of CALC SECOND NAV

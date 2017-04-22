@@ -4,25 +4,6 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	.content
-		padding: 0 20px
-	header .top-bg img
-		width: initial
-		height: 100%
-	header
-		padding-bottom: 50px
-		height: initial
-		#main-sec
-			height: initial
-			padding-top: 25px
-		.top-line
-			position: relative
-		h1
-			font-size: 51px
-			line-height: 1em
-	h2
-		font-size: 41px
-		line-height: 1em
 	#why-profit .why-profit_cards ul
 		flex-direction: column
 		align-items: center
@@ -100,6 +81,8 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+	.second-nav .btn-wrap
+		padding-right: 20px
 	#cases .item-content,
 	#cases .carousel-nav
 		display: none
@@ -137,102 +120,6 @@
 	#cases
 		.result
 			text-align: center
-	header
-		padding-top: 120px
-		.top-line.is-sticky
-			line-height: 80px
-			height: 80px
-		.top-line.is-sticky:before
-			transform: translateY(100%)
-		.top-line:before
-			content: ''
-			position: absolute
-			width: 100%
-			height: 80px
-			top: -100%
-			transition: .5s
-			left: 0
-			background-color: #000
-			z-index: 1
-		.top-line
-			transition: .5s
-			position: fixed
-			z-index: 9
-			padding: 0 20px
-			top: 0
-			left: 0
-			width: 100%
-	.small-nav
-		width: 40px
-		height: 30px
-		z-index: 9
-		position: relative
-		.sn-center
-			height: 2px
-			position: absolute
-			top: 50%
-			transition: .15s
-			left: 0
-			margin-top: -1px
-			background-color: #fff
-			width: 100%
-	.small-nav .sn1,
-	.small-nav .sn2
-		position: absolute
-		width: 100%
-		height: 2px
-		background-color: #fff
-		left: 0
-	.small-nav .sn1
-		transition: .25s
-		top: 0
-	.small-nav .sn2
-		transition: .25s
-		bottom: 0
-	header
-		nav
-			position: relative
-			text-align: center
-			text-transform: uppercase
-			ul
-				line-height: 1.2em
-				padding: 150px 0 50px
-				background-color: #2962ff
-				left: 0
-				top: 0
-				width: 100%
-				height: 100vh
-				position: fixed
-				transition: .35s ease .5s
-				opacity: 0
-				z-index: -1
-				top: -100%
-			li
-				margin: 0
-				display: block
-			li:not(:last-child)
-				margin-right: 0
-				margin-bottom: 20px
-			li:last-child
-				margin-left: 0
-			.nav-order
-				margin-top: 50px
-				text-align: center
-	nav.active
-		ul
-			opacity: 1
-			transition: .45s ease .25s
-			transform: translateY(100%)
-	
-	.second-nav
-		ul
-			display: block
-			li:not(:last-child)
-				margin-right: 35px
-	
-	h2, h3
-		p
-			display: inline
 	
 	.result-cards
 		margin-top: 0
@@ -381,8 +268,6 @@
 		margin-left: 0
 	
 	/*Disable Animation on Mobile Devices*/
-	header h1
-		font-size: 39px
 	
 	#banner-learn .content
 		flex-direction: column
@@ -392,9 +277,6 @@
 		line-height: 1em
 	#banner-learn .btn-wrap
 		margin-top: 50px
-	
-	h2
-		font-size: 32px
 	
 	.steps-list .first-column
 		padding-top: 0
@@ -450,9 +332,6 @@
 	.delivery .btn
 		max-width: 200px
 		margin-top: 15px
-	.second-nav
-		line-height: 60px
-		height: 60px
 	
 	#contacts .caption
 		font-size: 23px
@@ -472,8 +351,6 @@
 		padding: 50px
 
 @media only screen and (max-width : 425px)
-	header h1
-		font-size: 36px
 	
 	#why-profit .why-profit_cards li
 		flex-direction: column
@@ -500,8 +377,6 @@
 		font-size: 17px
 	/**/
 @media only screen and (max-width : 375px)
-	header h1
-		font-size: 30px
 	
 	#banner-learn h3
 		font-size: 27px
@@ -511,9 +386,6 @@
 	#results .btn
 		line-height: 1.2em
 		padding: 15px
-	
-	h2
-		font-size: 27px
 	
 	.steps-list .first-column, .steps-list .second-column
 		width: 100%
