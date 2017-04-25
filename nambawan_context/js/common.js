@@ -320,4 +320,27 @@ $(document).ready(function(){
 		offset: '80%'
 	});
 	//END of ANIMATIONS
+	//2 UP
+	$('.arr-2-top').click(function(){
+         $('body,html').animate({
+            scrollTop: 0
+        }, 400);
+	});
+	//END of 2 UP
+	//HOVER SOCIAL
+	$('.social li').mouseenter(function(){
+		var this_width = $(this).outerWidth()
+		var items_bg = $('.social .items-bg');
+		var ol = $(this).position().left;
+		$(items_bg).css({
+			'width': this_width,
+			'opacity': '1',
+			'transform': 'translateX(' + ol + 'px)'
+		});
+	}).mouseleave(function(){
+		$('.social .items-bg').css({
+			'opacity': '0'
+		});
+	});
+	//END of HOVER SOCIAL
 });

@@ -94,7 +94,7 @@ a {
   width: 100%;
   height: 100%;
   border-radius: 32px;
-  box-shadow: inset 0 0 5px rgba(0, 255, 183, 0.35), 0 0 5px rgba(0, 255, 183, 0.35); }
+  box-shadow: inset 0 0 1px 1px rgba(0, 255, 183, 0.35); }
 
 .btn:hover:before {
   opacity: 0;
@@ -363,6 +363,24 @@ form .btn-wrap {
 form button {
   border: none; }
 
+.arr-2-top:hover {
+  background-color: #05d8a5;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+
+.arr-2-top {
+  transition: .25s;
+  cursor: pointer;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background: rgba(41, 98, 255, 0.2) url(../img/arrow_top.svg) center no-repeat;
+  background-size: 60%; }
+  .arr-2-top img {
+    max-width: 100%; }
+
 @-webkit-keyframes to-up {
   0% {
     background-position: center 100%; }
@@ -606,7 +624,7 @@ header {
     header .nav-order a {
       display: block; }
     header .nav-order a:first-child {
-      font-size: 18px;
+      font-size: 21px;
       font-weight: 700; }
     header .nav-order a:nth-child(2) {
       margin-top: 10px;
@@ -1213,7 +1231,7 @@ header {
     margin-top: 100px;
     text-align: center; }
   #steps .btn:before {
-    box-shadow: 0 0 5px rgba(41, 98, 255, 0.45); }
+    box-shadow: inset 0 0 1px 1px rgba(41, 98, 255, 0.45); }
   #steps .btn:hover {
     box-shadow: none; }
   #steps .btn {
@@ -2020,6 +2038,8 @@ header {
     min-width: 420px; }
     #prices .price-title .btn-wrap {
       margin-top: 50px; }
+    #prices .price-title .btn:before {
+      box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.7); }
     #prices .price-title .btn {
       background-color: transparent;
       box-shadow: 0 0 0 2px #fff;
@@ -2256,17 +2276,24 @@ header {
     margin-top: 50px;
     color: #848484; }
   #contacts .social {
+    overflow: hidden;
+    position: relative;
     text-align: center;
     max-width: 800px;
-    margin: 100px auto 0; }
-    #contacts .social a:hover {
+    margin: 100px auto 0;
+    border-radius: 35px;
+    border: 1px solid #dae1e8; }
+    #contacts .social .items-bg {
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      transition: .2s linear;
+      height: 100%;
       background-color: #fff; }
     #contacts .social a {
       display: block; }
     #contacts .social ul {
       overflow: hidden;
-      border-radius: 35px;
-      border: 1px solid #dae1e8;
       line-height: 70px;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -2277,10 +2304,13 @@ header {
     #contacts .social li:not(:last-child) {
       border-right: 1px solid #dae1e8; }
     #contacts .social li {
+      position: relative;
       display: inline-block;
       width: 200px;
       vertical-align: middle; }
     #contacts .social img {
+      max-width: 40px;
+      max-height: 30px;
       vertical-align: middle; }
 
 footer {
@@ -2336,9 +2366,12 @@ footer {
 .footer-nav > .btn:hover {
   opacity: 1; }
 
+.footer-nav > .btn:before {
+  box-shadow: 0 0 0 1px rgba(0, 255, 183, 0.35); }
+
 .footer-nav > .btn {
   opacity: .7;
-  box-shadow: 0 0 0 2px #fff;
+  box-shadow: 0 0 0 1px #05d8a5;
   background: transparent; }
 
 .footer-nav li {

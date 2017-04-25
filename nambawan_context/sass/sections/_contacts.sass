@@ -42,25 +42,35 @@
 		margin-top: 50px
 		color: #848484
 	.social
+		overflow: hidden
+		position: relative
 		text-align: center
 		max-width: 800px
 		margin: 100px auto 0
-		a:hover
+		border-radius: 35px
+		border: 1px solid #dae1e8
+		.items-bg
+			position: absolute
+			top: 0
+			opacity: 0
+			transition: .2s linear
+			height: 100%
 			background-color: #fff
 		a
 			display: block
 		ul
 			overflow: hidden
-			border-radius: 35px
-			border: 1px solid #dae1e8
 			line-height: 70px
 			display: flex
 			justify-content: flex-start
 		li:not(:last-child)
 			border-right: 1px solid #dae1e8
 		li
+			position: relative
 			display: inline-block
 			width: 200px
 			vertical-align: middle
 		img
+			max-width: 40px
+			max-height: 30px
 			vertical-align: middle
