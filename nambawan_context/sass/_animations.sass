@@ -1,8 +1,13 @@
 @keyframes to-up
 	0%
-		transform: translateY(0)
+		background-position: center 100%
 	100%
-		transform: translateY(-15px)
+		background-position: center -1000%
+@keyframes to-down
+	0%
+		background-position: center -100%
+	100%
+		background-position: center 1500%
 
 @keyframes open-nav_before
 	35%
@@ -44,4 +49,14 @@
 		transform: scale(1.2)
 	100%
 		opacity: 1
+		transform: scale(1)
+
+@keyframes label-feature
+	0%
+		opacity: 0
+		transform: translateY(50px) scale(0)
+	70%
+		opacity: 1
+		transform: translateY(0px) scale(1.2)
+	100%
 		transform: scale(1)

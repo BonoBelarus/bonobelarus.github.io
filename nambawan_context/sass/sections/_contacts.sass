@@ -9,6 +9,28 @@
 		li
 			width: 30%
 			font-size: 32px
+		li:last-child
+			a
+				transition: .25s
+				position: relative
+			a:before,
+			a:after
+				content: ''
+				position: absolute
+				bottom: -5px
+				left: 0
+				height: 1px
+			a:before
+				width: 100%
+				background-color: #ccc
+			a:after
+				transition: .25s
+				width: 0
+				background-color: #2962ff
+			a:hover:after
+				width: 100%
+			a:hover
+				color: #2962ff
 	.caption
 		margin-bottom: 40px
 		font-weight: 700

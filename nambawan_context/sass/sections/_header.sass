@@ -36,8 +36,25 @@ header
 	.logo
 		position: relative
 		z-index: 2
+		display: flex
+		justify-content: flex-start
+		align-items: center
+	.logo-img
+		margin-right: 15px
 		img
+			width: 40px
+			height: 40px
 			vertical-align: middle
+	.logo-txt
+		p:first-child
+			line-height: 1em
+			font-weight: 700
+			font-size: 30px
+		p:nth-child(2)
+			line-height: 1em
+			font-size: 14px
+			font-weight: 400
+			opacity: .8
 	nav
 		li
 			vertical-align: middle
@@ -45,7 +62,7 @@ header
 		li:not(:last-child)
 			margin-right: 45px
 		li:last-child
-			margin-left: 100px
+			margin-left: 50px
 	.nav-order
 		line-height: 1em
 		text-align: right
@@ -57,6 +74,21 @@ header
 		a:nth-child(2)
 			margin-top: 10px
 			opacity: .7
+			position: relative
+			text-transform: uppercase
+			font-size: 12px
+			display: inline-block
+		a:nth-child(2):hover:before
+			border-color: transparent
+		a:nth-child(2):before
+			transition: .25s
+			content: ''
+			border-bottom: 1px dashed #fff
+			position: absolute
+			width: 100%
+			height: 1px
+			bottom: 0
+			left: 0
 	#main-sec
 		padding-top: 120px
 		height: 100vh
@@ -158,14 +190,13 @@ header
 				padding: 150px 0 50px
 				background-color: #2962ff
 				left: 0
-				top: 0
 				width: 100%
 				height: 100vh
 				position: fixed
 				transition: .35s ease .5s
 				opacity: 0
 				z-index: -1
-				top: -100%
+				top: -100vh
 			li
 				margin: 0
 				display: block

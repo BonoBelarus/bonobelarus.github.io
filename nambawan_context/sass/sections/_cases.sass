@@ -150,12 +150,13 @@
 		.to-open
 			display: none
 	.item-center
+		height: 280px
 		text-align: center
 	.orders,
 	.advert
 		width: 110px
 		display: inline-block
-		position: relative
+		position: absolute
 		vertical-align: bottom
 		>ul
 			display: flex
@@ -169,40 +170,59 @@
 			margin-top: 10px
 			font-weight: 700
 			font-size: 15px
+	.orders .graf-after
+		>p
+			background-color: #3570b6
+	.orders .graf-before
+		>p
+			background-color: #275183
+	.advert .graf-before
+		>p
+			background-color: #05d8a5
+	.advert .graf-after
+		>p
+			background-color: #46edc4
 	.graf-before,
 	.graf-after
 		position: relative
 		>p
 			line-height: 1.5em
 			position: absolute
-			bottom: 15px
+			bottom: 0
+			height: 40px
+			line-height: 40px
 			font-size: 11px
 			width: 100%
 			text-align: center
 			color: #fff
 	.orders,
 	.advert
+		bottom: 0
 		>ul>li
 			position: relative
 			width: 50%
+			height: 0
 			vertical-align: bottom
 			display: inline-block
 	.orders
-		margin-right: 40px
+		left: 50%
+		margin-left: -120px
+		>ul>li
+			transition: 1s
 		>ul>li:first-child
 			background-color: #275183
-			height: 112px
 		>ul>li:nth-child(2)
 			background-color: #3570b6
-			height: 280px
 			position: relative
 	.advert
+		right: 50%
+		margin-right: -120px
+		>ul>li
+			transition: 1s ease .75s
 		>ul>li:first-child
 			background-color: #05d8a5
-			height: 225px
 		>ul>li:nth-child(2)
 			background-color: #46edc4
-			height: 180px
 	.line-100
 		top: 0
 	.line-75
@@ -245,14 +265,14 @@
 		border-top: 15px solid #fff
 	.arrow-anim
 		left: 50%
+		width: 2px
+		height: 100px
+		background: url(../img/dashed_line-01.svg) center repeat-y
 		top: 20px
 		margin-left: -1px
 		position: absolute
-		li
-			background-color: #fff
-			margin-top: 5px
-			width: 2px
-			height: 15px
+	.arrow-anim-up
+		height: 175px
 	.result
 		ul
 			background-color: #f6f7fb
@@ -289,25 +309,30 @@
 			.line-100:before
 				content: '100'
 			ul
+				position: absolute
+				bottom: 0
+				width: 100%
+				left: 0
 				display: flex
 				justify-content: space-between
 				align-items: flex-end
 			li
 				position: relative
 				width: 55px
+				height: 0
 			li:nth-child(even)
 				background-color: #4685d0
 			li:nth-child(odd)
 				background-color: #3570b6
 			li:first-child
-				height: 54px
+				transition: .75s
 			li:nth-child(2)
-				height: 80px
+				transition: .75s ease .15s
 			li:nth-child(3)
-				height: 69px
+				transition: .75s ease .3s
 			li:nth-child(4)
-				height: 143px
+				transition: .75s ease .45s
 			li:nth-child(5)
-				height: 187px
+				transition: .75s ease .6s
 			li:last-child
-				height: 248px
+				transition: .75s ease .75s
