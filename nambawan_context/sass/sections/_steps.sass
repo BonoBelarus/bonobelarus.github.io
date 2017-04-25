@@ -37,12 +37,28 @@
 	margin: 80px auto 0
 	position: relative
 	text-align: center
+	.step.active
+		transform: translateY(0)
+		opacity: 1
+		.step-number:before
+			width: 100%
+		.step-number:after
+			animation: to-pulse .5s forwards .75s
+		.st-num
+			animation: to-pulse-num .5s forwards 1.5s
+		
+	.step
+		transition: .75s
+		opacity: 0
+		transform: translateY(50px)
 	.first-column
 		margin-right: 55px
 		padding-top: 70px
 		text-align: right
 		.step-number
 			right: -50px
+		.step-number:before
+			left: 0
 		.step-number:after
 			left: 0
 		.st-num
@@ -51,6 +67,8 @@
 		text-align: left
 		.step-number
 			left: -50px
+		.step-number:before
+			right: 0
 		.step-number:after
 			right: 0
 		.st-num
@@ -79,15 +97,19 @@
 		background-color: #ccc
 		top: 50%
 		margin-top: -6px
+		opacity: 0
+		transition: .25s ease .75s
 	.step-number:before
 		content: ''
 		position: absolute
-		width: 100%
+		width: 0
 		height: 1px
+		transition: .75s ease 1s
 		top: 50%
-		left: 0
 		background-color: #ccc
 	.st-num
+		opacity: 0
+		transition: .35s ease 2s
 		border: 1px solid #ccc
 		color: #8d8d8d
 		font-weight: 400

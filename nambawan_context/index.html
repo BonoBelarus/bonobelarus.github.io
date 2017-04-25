@@ -15,8 +15,8 @@
     <script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
     <!-- Load CSS Start-->
     <!--script loadCSS( "css/fonts.css", false, "all" );-->
-    
-    <style>@font-face{font-family:"Raleway";font-style:normal;font-weight:300;src:url("fonts/Raleway-Light/ralewaylight.eot?#iefix") format("embedded-opentype"), url("fonts/Raleway-Light/ralewaylight.woff2") format("woff2"), url("fonts/Raleway-Light/ralewaylight.woff") format("woff"), url("fonts/Raleway-Light/ralewaylight.ttf") format("truetype")}@font-face{font-family:"Raleway";font-style:normal;font-weight:400;src:url("fonts/Raleway-Regular/ralewayregular.eot?#iefix") format("embedded-opentype"), url("fonts/Raleway-Regular/ralewayregular.woff2") format("woff2"), url("fonts/Raleway-Regular/ralewayregular.woff") format("woff"), url("fonts/Raleway-Regular/ralewayregular.ttf") format("truetype")}@font-face{font-family:"Raleway";font-style:normal;font-weight:500;src:url("fonts/Raleway-Medium/ralewaymedium.eot?#iefix") format("embedded-opentype"), url("fonts/Raleway-Medium/ralewaymedium.woff2") format("woff2"), url("fonts/Raleway-Medium/ralewaymedium.woff") format("woff"), url("fonts/Raleway-Medium/ralewaymedium.ttf") format("truetype")}@font-face{font-family:"Raleway";font-style:normal;font-weight:600;src:url("fonts/Raleway-SemiBold/ralewaysemibold.eot?#iefix") format("embedded-opentype"), url("fonts/Raleway-SemiBold/ralewaysemibold.woff2") format("woff2"), url("fonts/Raleway-SemiBold/ralewaysemibold.woff") format("woff"), url("fonts/Raleway-SemiBold/ralewaysemibold.ttf") format("truetype")}@font-face{font-family:"Raleway";font-style:normal;font-weight:700;src:url("fonts/Raleway-Bold/ralewaybold.eot?#iefix") format("embedded-opentype"), url("fonts/Raleway-Bold/ralewaybold.woff2") format("woff2"), url("fonts/Raleway-Bold/ralewaybold.woff") format("woff"), url("fonts/Raleway-Bold/ralewaybold.ttf") format("truetype")}@font-face{font-family:"Raleway";font-style:normal;font-weight:800;src:url("fonts/Raleway-ExtraBold/ralewayextrabold.eot?#iefix") format("embedded-opentype"), url("fonts/Raleway-ExtraBold/ralewayextrabold.woff2") format("woff2"), url("fonts/Raleway-ExtraBold/ralewayextrabold.woff") format("woff"), url("fonts/Raleway-ExtraBold/ralewayextrabold.ttf") format("truetype")}@font-face{font-family:"Open Sans";font-style:normal;font-weight:700;src:url("fonts/OpenSans-Bold/opensansbold.woff2") format("woff2"), url("fonts/OpenSans-Bold/opensansbold.woff") format("woff"), url("fonts/OpenSans-Bold/opensansbold.ttf") format("truetype")}@font-face{font-family:"Open Sans";font-style:normal;font-weight:600;src:url("fonts/OpenSans-SemiBold/opensanssemibold.woff2") format("woff2"), url("fonts/OpenSans-SemiBold/opensanssemibold.woff") format("woff"), url("fonts/OpenSans-SemiBold/opensanssemibold.ttf") format("truetype")}.to-open{display:none;} a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*{box-sizing:border-box;margin:0;padding:0}::-webkit-input-placeholder{color:#666;opacity:1}:-moz-placeholder{color:#666;opacity:1}::-moz-placeholder{color:#666;opacity:1}:-ms-input-placeholder{color:#666;opacity:1}input:active,input:focus{outline:none}body input:focus:required:invalid,body textarea:focus:required:invalid{color:#666}body input:required:valid,body textarea:required:valid{color:#666}body.disabled{overflow:hidden}body{color:#333;cursor:default;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-family:"Raleway", sans-serif;font-variant-numeric:normal;font-weight:300;font-size:16px;line-height:1.4em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}button{cursor:pointer}a{color:#fff;font-variant-numeric:lining-nums;text-decoration:none}.bold{font-weight:700}.content{max-width:1170px;margin:0 auto}.btn{font-size:16px;font-weight:700;text-transform:uppercase;display:inline-block;color:#fff;background-color:#05d8a5;line-height:65px;box-shadow:0 6px 15px rgba(0, 255, 183, 0.35);padding:0 50px;border-radius:32px;transition:.35s}.btn:hover{box-shadow:none}h2{color:#333;font-size:48px;font-weight:700;line-height:1.2em}h3{font-size:36px;font-weight:700;color:#fff;line-height:1.3em}.mobile-audit{display:none}.to-open{overflow:hidden;transition:.75s;opacity:.8;position:absolute;width:30px;height:30px;border-radius:50%;box-shadow:0 0 0 2px #000;right:50px;top:50%;margin-top:-15px}.to-open .l1,.to-open .l2{transition:.3s;content:'';-webkit-transform:none;-ms-transform:none;transform:none;left:50%;top:50%;background-color:#000;position:absolute}.to-open .l1{height:2px;width:20px;margin-top:-1px;margin-left:-10px}.to-open .l2{width:2px;height:20px;margin-top:-10px;margin-left:-1px}.label-feature{position:absolute;left:50%;margin-left:-63px;bottom:100%;width:126px;height:85px;padding-top:20px;font-size:14px;color:#a59f34;line-height:1.1em;font-weight:700;background:url(img/label-feature.svg) center 5px no-repeat}.item-date-line{position:absolute;bottom:-50px;width:100%;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-ms-flex-align:center;align-items:center;text-transform:uppercase;font-size:13px;color:#aaa7a7}.pop-up-wrap.active{z-index:10;opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);transition:z-index .5s ease 0s, opacity .5s, -webkit-transform .5s;transition:z-index .5s ease 0s, opacity .5s, transform .5s;transition:z-index .5s ease 0s, opacity .5s, transform .5s, -webkit-transform .5s}.pop-up-wrap{padding:20px;z-index:-1;opacity:0;transition:z-index .5s ease .5s, opacity .5s, -webkit-transform .5s ease 1s;transition:z-index .5s ease .5s, opacity .5s, transform .5s ease 1s;transition:z-index .5s ease .5s, opacity .5s, transform .5s ease 1s, -webkit-transform .5s ease 1s;-webkit-transform:scale(2);-ms-transform:scale(2);transform:scale(2);position:fixed;top:0;left:0;width:100%;height:100vh;line-height:100vh;background-color:#0a1a42;text-align:center}.pop-up-wrap .close{line-height:1em;top:25px;right:50px;position:absolute;transition:.45s;cursor:pointer}.pop-up-wrap .close:hover{-webkit-transform:rotateZ(180deg);-ms-transform:rotate(180deg);transform:rotateZ(180deg)}.pop-up-wrap #pop-up{display:inline-block;line-height:1.2em;vertical-align:middle;position:relative}.pop-up-wrap #pop-up h3,.pop-up-wrap #pop-up label{color:#fff}.pop-up-wrap form{margin:50px auto 0;max-width:500px;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.pop-up-wrap .email,.pop-up-wrap .form-group{width:100%;position:relative}.pop-up-wrap .name,.pop-up-wrap .phone{width:45%;position:relative}form .active label{font-size:10px;-webkit-transform:translateY(-20px);-ms-transform:translateY(-20px);transform:translateY(-20px)}form .email.active:after,form .name.active:after,form .phone.active:after,form .site.active:after{width:100%}form .email:after,form .name:after,form .phone:after,form .site:after{transition:.35s;content:'';width:0;background-color:#2962ff;height:2px;position:absolute;bottom:-5px;left:0}form .email:before,form .name:before,form .phone:before,form .site:before{content:'';position:absolute;width:100%;height:2px!important;background-color:#fff;bottom:-5px;left:0}form .form-group{width:100%;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-ms-flex-align:center;align-items:center}form .email{display:inline-block;margin-top:40px}form label{transition:.35s;text-transform:uppercase;position:absolute;display:inline-block;bottom:0;left:0}form input,form textarea{z-index:1;width:100%;line-height:1.5em;color:#fff;background-color:transparent;border:none;position:relative}form .btn-wrap{width:200px;margin-top:50px}form button{border:none}header{background:linear-gradient(51deg, #193453 0%, #3b80f0 100%);background-size:cover;height:100vh;color:#fff;position:relative}header .top-bg{position:absolute;top:0;left:0;width:100%;height:100%;opacity:.25;overflow:hidden}header .top-bg img{width:100%}header .content{position:relative}header .top-line{position:absolute;height:120px;left:0;top:0;width:100%;line-height:120px;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-ms-flex-align:center;align-items:center}header .logo{position:relative;z-index:2}header .logo img{vertical-align:middle}header nav li{vertical-align:middle;display:inline-block}header nav li:not(:last-child){margin-right:45px}header nav li:last-child{margin-left:100px}header .nav-order{line-height:1em;text-align:right}header .nav-order a{display:block}header .nav-order a:first-child{font-size:18px;font-weight:700}header .nav-order a:nth-child(2){margin-top:10px;opacity:.7}header #main-sec{padding-top:120px;height:100vh;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}header .back-to{font-size:18px;font-weight:500;position:relative;padding-left:35px}header .back-to a{color:#05d8a5}header .back-to:before{content:'';position:absolute;top:50%;margin-top:-9px;left:0;background:url(img/left-arrow.png) center no-repeat;width:25px;height:17px}header h1{margin-top:30px;font-size:60px;font-weight:700;line-height:1.2em}header .clarify{font-size:18px;opacity:.7;line-height:1.5em;margin-top:45px}header .btn{margin-top:60px}@media only screen and (max-width:1200px){.content{padding:0 20px}header .top-bg img{width:initial;height:100%}header{padding-bottom:50px;height:initial}header #main-sec{height:initial;padding-top:25px}header .top-line{position:relative}header h1{font-size:51px;line-height:1em}h2{font-size:41px;line-height:1em}}@media only screen and (max-width:992px){header{padding-top:120px}header .top-line.is-sticky{line-height:80px;height:80px}header .top-line.is-sticky:before{-webkit-transform:translateY(100%);-ms-transform:translateY(100%);transform:translateY(100%)}header .top-line:before{content:'';position:absolute;width:100%;height:80px;top:-100%;transition:.5s;left:0;background-color:#000;z-index:1}header .top-line{transition:.5s;position:fixed;z-index:9;padding:0 20px;top:0;left:0;width:100%}.small-nav{width:40px;height:30px;z-index:9;position:relative}.small-nav .sn-center{height:2px;position:absolute;top:50%;transition:.15s;left:0;margin-top:-1px;background-color:#fff;width:100%}.small-nav .sn1,.small-nav .sn2{position:absolute;width:100%;height:2px;background-color:#fff;left:0}.small-nav .sn1{transition:.25s;top:0}.small-nav .sn2{transition:.25s;bottom:0}header nav{position:relative;text-align:center;text-transform:uppercase}header nav ul{line-height:1.2em;padding:150px 0 50px;background-color:#2962ff;left:0;top:0;width:100%;height:100vh;position:fixed;transition:.35s ease .5s;opacity:0;z-index:-1;top:-100%}header nav li{margin:0;display:block}header nav li:not(:last-child){margin-right:0;margin-bottom:20px}header nav li:last-child{margin-left:0}header nav .nav-order{margin-top:50px;text-align:center}nav.active ul{opacity:1;transition:.45s ease .25s;-webkit-transform:translateY(100%);-ms-transform:translateY(100%);transform:translateY(100%)}.second-nav ul{display:block}.second-nav ul li:not(:last-child){margin-right:35px}h2 p,h3 p{display:inline}}@media only screen and (max-width:768px){header h1{font-size:39px}h2{font-size:32px}.second-nav{line-height:60px;height:60px}}@media only screen and (max-width:425px){header h1{font-size:36px}}@media only screen and (max-width:375px){header h1{font-size:30px}h2{font-size:27px}}</style>
+    <script>loadLocalStorageCSS( "webfonts", "css/fonts.css" );</script>
+    <!--style .to-open{display:none;} a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*{box-sizing:border-box;margin:0;padding:0}::-webkit-input-placeholder{color:#666;opacity:1}:-moz-placeholder{color:#666;opacity:1}::-moz-placeholder{color:#666;opacity:1}:-ms-input-placeholder{color:#666;opacity:1}input:active,input:focus{outline:none}body input:focus:required:invalid,body textarea:focus:required:invalid{color:#666}body input:required:valid,body textarea:required:valid{color:#666}body.disabled{overflow:hidden}body{color:#333;cursor:default;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-family:"Raleway", sans-serif;font-variant-numeric:normal;font-weight:300;font-size:16px;line-height:1.4em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}button{cursor:pointer}a{color:#fff;font-variant-numeric:lining-nums;text-decoration:none}.bold{font-weight:700}.content{max-width:1170px;margin:0 auto}.btn{font-size:16px;font-weight:700;text-transform:uppercase;display:inline-block;color:#fff;background-color:#05d8a5;line-height:65px;box-shadow:0 6px 15px rgba(0, 255, 183, 0.35);padding:0 50px;border-radius:32px;transition:.35s}.btn:hover{box-shadow:none}h2{color:#333;font-size:48px;font-weight:700;line-height:1.2em}h3{font-size:36px;font-weight:700;color:#fff;line-height:1.3em}.mobile-audit{display:none}.to-open{overflow:hidden;transition:.75s;opacity:.8;position:absolute;width:30px;height:30px;border-radius:50%;box-shadow:0 0 0 2px #000;right:50px;top:50%;margin-top:-15px}.to-open .l1,.to-open .l2{transition:.3s;content:'';-webkit-transform:none;-ms-transform:none;transform:none;left:50%;top:50%;background-color:#000;position:absolute}.to-open .l1{height:2px;width:20px;margin-top:-1px;margin-left:-10px}.to-open .l2{width:2px;height:20px;margin-top:-10px;margin-left:-1px}.label-feature{position:absolute;left:50%;margin-left:-63px;bottom:100%;width:126px;height:85px;padding-top:20px;font-size:14px;color:#a59f34;line-height:1.1em;font-weight:700;background:url(../img/label-feature.svg) center 5px no-repeat}.item-date-line{position:absolute;bottom:-50px;width:100%;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-ms-flex-align:center;align-items:center;text-transform:uppercase;font-size:13px;color:#aaa7a7}.pop-up-wrap.active{z-index:10;opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);transition:z-index .5s ease 0s, opacity .5s, -webkit-transform .5s;transition:z-index .5s ease 0s, opacity .5s, transform .5s;transition:z-index .5s ease 0s, opacity .5s, transform .5s, -webkit-transform .5s}.pop-up-wrap{padding:20px;z-index:-1;opacity:0;transition:z-index .5s ease .5s, opacity .5s, -webkit-transform .5s ease 1s;transition:z-index .5s ease .5s, opacity .5s, transform .5s ease 1s;transition:z-index .5s ease .5s, opacity .5s, transform .5s ease 1s, -webkit-transform .5s ease 1s;-webkit-transform:scale(2);-ms-transform:scale(2);transform:scale(2);position:fixed;top:0;left:0;width:100%;height:100vh;line-height:100vh;background-color:#0a1a42;text-align:center}.pop-up-wrap .close{line-height:1em;top:100px;right:25px;position:absolute;transition:.45s;cursor:pointer}.pop-up-wrap .close:hover{-webkit-transform:rotateZ(180deg);-ms-transform:rotate(180deg);transform:rotateZ(180deg)}.pop-up-wrap #pop-up{display:inline-block;line-height:1.2em;vertical-align:middle;position:relative}.pop-up-wrap #pop-up h3,.pop-up-wrap #pop-up label{color:#fff}.pop-up-wrap form{margin:50px auto 0;max-width:500px;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.pop-up-wrap .email,.pop-up-wrap .form-group{width:100%;position:relative}.pop-up-wrap .name,.pop-up-wrap .phone{width:45%;position:relative}form .active label{font-size:10px;-webkit-transform:translateY(-20px);-ms-transform:translateY(-20px);transform:translateY(-20px)}form .email.active:after,form .name.active:after,form .phone.active:after,form .site.active:after{width:100%}form .email:after,form .name:after,form .phone:after,form .site:after{transition:.35s;content:'';width:0;background-color:#2962ff;height:2px;position:absolute;bottom:-5px;left:0}form .email:before,form .name:before,form .phone:before,form .site:before{content:'';position:absolute;width:100%;height:2px!important;background-color:#fff;bottom:-5px;left:0}form .form-group{width:100%;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-ms-flex-align:center;align-items:center}form .email{display:inline-block;margin-top:40px}form label{transition:.35s;text-transform:uppercase;position:absolute;display:inline-block;bottom:0;left:0}form input,form textarea{z-index:1;width:100%;line-height:1.5em;color:#fff;background-color:transparent;border:none;position:relative}form .btn-wrap{width:200px;margin-top:50px}form button{border:none}header{background:linear-gradient(51deg, #193453 0%, #3b80f0 100%);background-size:cover;height:100vh;color:#fff;position:relative}header .top-bg{position:absolute;top:0;left:0;width:100%;height:100%;opacity:.25;overflow:hidden}header .top-bg img{width:100%}header .content{position:relative}header .top-line{position:absolute;height:120px;left:0;top:0;width:100%;line-height:120px;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-ms-flex-align:center;align-items:center}header .logo{position:relative;z-index:2}header .logo img{vertical-align:middle}header nav li{vertical-align:middle;display:inline-block}header nav li:not(:last-child){margin-right:45px}header nav li:last-child{margin-left:100px}header .nav-order{line-height:1em;text-align:right}header .nav-order a{display:block}header .nav-order a:first-child{font-size:18px;font-weight:700}header .nav-order a:nth-child(2){margin-top:10px;opacity:.7}header #main-sec{padding-top:120px;height:100vh;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}header .back-to{font-size:18px;font-weight:500;position:relative;padding-left:35px}header .back-to a{color:#05d8a5}header .back-to:before{content:'';position:absolute;top:50%;margin-top:-9px;left:0;background:url(../img/left-arrow.png) center no-repeat;width:25px;height:17px}header h1{margin-top:30px;font-size:60px;font-weight:700;line-height:1.2em}header .clarify{font-size:18px;opacity:.7;line-height:1.5em;margin-top:45px}header .btn{margin-top:60px}@media only screen and (max-width:1200px){.content{padding:0 20px}header .top-bg img{width:initial;height:100%}header{padding-bottom:50px;height:initial}header #main-sec{height:initial;padding-top:25px}header .top-line{position:relative}header h1{font-size:51px;line-height:1em}h2{font-size:41px;line-height:1em}}@media only screen and (max-width:992px){header{padding-top:120px}header .top-line.is-sticky{line-height:80px;height:80px}header .top-line.is-sticky:before{-webkit-transform:translateY(100%);-ms-transform:translateY(100%);transform:translateY(100%)}header .top-line:before{content:'';position:absolute;width:100%;height:80px;top:-100%;transition:.5s;left:0;background-color:#000;z-index:1}header .top-line{transition:.5s;position:fixed;z-index:9;padding:0 20px;top:0;left:0;width:100%}.small-nav{width:40px;height:30px;z-index:9;position:relative}.small-nav .sn-center{height:2px;position:absolute;top:50%;transition:.15s;left:0;margin-top:-1px;background-color:#fff;width:100%}.small-nav .sn1,.small-nav .sn2{position:absolute;width:100%;height:2px;background-color:#fff;left:0}.small-nav .sn1{transition:.25s;top:0}.small-nav .sn2{transition:.25s;bottom:0}header nav{position:relative;text-align:center;text-transform:uppercase}header nav ul{line-height:1.2em;padding:150px 0 50px;background-color:#2962ff;left:0;top:0;width:100%;height:100vh;position:fixed;transition:.35s ease .5s;opacity:0;z-index:-1;top:-100%}header nav li{margin:0;display:block}header nav li:not(:last-child){margin-right:0;margin-bottom:20px}header nav li:last-child{margin-left:0}header nav .nav-order{margin-top:50px;text-align:center}nav.active ul{opacity:1;transition:.45s ease .25s;-webkit-transform:translateY(100%);-ms-transform:translateY(100%);transform:translateY(100%)}.second-nav ul{display:block}.second-nav ul li:not(:last-child){margin-right:35px}h2 p,h3 p{display:inline}}@media only screen and (max-width:768px){header h1{font-size:39px}h2{font-size:32px}.second-nav{line-height:60px;height:60px}}@media only screen and (max-width:425px){header h1{font-size:36px}}@media only screen and (max-width:375px){header h1{font-size:30px}h2{font-size:27px}}-->
     <script>loadCSS( "css/owl.carousel.min.css", false, "all" );</script>
     <script>loadCSS( "css/owl.theme.default.min.css", false, "all" );</script>
     <script>loadCSS( "css/main.css", false, "all" );</script>
@@ -31,8 +31,8 @@
   <body>
     <header>
       <div class="top-bg"><img src="img/top-bg.png" alt=""></div>
-      <div class="content">
-        <div class="top-line">
+      <div class="top-line">
+        <div class="content">
           <div class="logo"><img src="img/logo.png" alt=""></div>
           <nav>
             <div class="small-nav">
@@ -49,7 +49,9 @@
             </ul>
           </nav>
         </div>
-        <section id="main-sec">
+      </div>
+      <section id="main-sec">
+        <div class="content">
           <div class="back-to"><a href="#">К списку услуг</a></div>
           <div class="top-caption">
             <h1>
@@ -62,9 +64,9 @@
               <p>Яндекс.Директ и Google AdWords</p>
             </div>
           </div>
-          <div class="btn-wrap"><a class="btn pop-up-call" href="#">Заказать услугу</a></div>
-        </section>
-      </div>
+          <div class="btn-wrap"><a class="btn pop-up-order" href="#">Заказать услугу</a></div>
+        </div>
+      </section>
     </header>
     <section id="why-profit">
       <div class="second-nav">
@@ -77,7 +79,7 @@
               <li><a href="#">Проектная группа</a></li>
               <li><a href="#">Наши тарифы</a></li>
               <li><a href="#">Вопрос-ответ</a></li>
-              <li class="btn-wrap"><a class="btn pop-up-call" href="#">Заказать контекстную рекламу</a></li>
+              <li class="btn-wrap"><a class="btn pop-up-order" href="#">Заказать контекстную рекламу</a></li>
             </ul>
           </nav>
         </div>
@@ -149,7 +151,7 @@
             <p>Мы поделимся опытом совершенно бесплатно</p>
           </div>
         </div>
-        <div class="btn-wrap"><a class="btn" href="#">Узнать</a></div>
+        <div class="btn-wrap"><a class="btn pop-up-consult" href="#">Узнать</a></div>
       </div>
     </section>
     <section id="results">
@@ -271,7 +273,7 @@
             </li>
           </ul>
         </div>
-        <div class="btn-wrap"><a class="btn" href="#">Рассчитать стоимость продвижения</a></div>
+        <div class="btn-wrap"><a class="btn pop-up-calc" href="#">Рассчитать стоимость продвижения</a></div>
       </div>
     </section>
     <section id="steps">
@@ -283,7 +285,7 @@
         <div class="steps-list">
           <div class="center-line"></div>
           <div class="first-column">
-            <div class="step-2">
+            <div class="step" id="step-2">
               <div class="step-img"><img src="img/step-2.png" alt=""></div>
               <div class="caption">
                 <div class="step-number">
@@ -297,7 +299,7 @@
                 <p>Для максимально эффективного контакта с целевой аудиторией</p>
               </div>
             </div>
-            <div class="step-4">
+            <div class="step" id="step-4">
               <div class="step-img"><img src="img/step-4.png" alt=""></div>
               <div class="caption">
                 <div class="step-number">
@@ -314,7 +316,7 @@
             </div>
           </div>
           <div class="second-column">
-            <div class="step-1">
+            <div class="step" id="step-1">
               <div class="step-img"><img src="img/step-1.png" alt=""></div>
               <div class="caption">
                 <div class="step-number">
@@ -328,7 +330,7 @@
                 <p>Вашего бизнеса и потребностей целевой аудитории</p>
               </div>
             </div>
-            <div class="step-3">
+            <div class="step" id="step-3">
               <div class="step-img"><img src="img/step-3.png" alt=""></div>
               <div class="caption">
                 <div class="step-number">
@@ -342,7 +344,7 @@
                 <p>Разработка и запуск рекламной кампании</p>
               </div>
             </div>
-            <div class="step-5">
+            <div class="step" id="step-5">
               <div class="step-img"><img src="img/step-5.png" alt=""></div>
               <div class="caption">
                 <div class="step-number">
@@ -358,7 +360,7 @@
             </div>
           </div>
         </div>
-        <div class="btn-wrap"><a class="btn pop-up-call" href="#">Заказать услугу</a></div>
+        <div class="btn-wrap"><a class="btn pop-up-order" href="#">Заказать услугу</a></div>
       </div>
     </section>
     <section id="letter">
@@ -769,7 +771,7 @@
     <section id="banner_get-started">
       <div class="content">
         <h2>Готовы работать с нами?</h2>
-        <div class="btn-wrap"><a class="btn" href="#">Начать сотрудничество</a></div>
+        <div class="btn-wrap"><a class="btn pop-up-order" href="#">Начать сотрудничество</a></div>
       </div>
     </section>
     <section id="project-group">
@@ -827,7 +829,7 @@
                     <p>(Первый месяц 200$)</p>
                   </div>
                 </div>
-                <div class="btn-wrap"><a class="btn" href="#">Начать сотрудничество</a></div>
+                <div class="btn-wrap"><a class="btn pop-up_order_item" href="#">Начать сотрудничество</a></div>
               </div>
               <div class="price-info">
                 <ul>
@@ -860,7 +862,7 @@
                     <p>(Первый месяц 400$)</p>
                   </div>
                 </div>
-                <div class="btn-wrap"><a class="btn" href="#">Начать сотрудничество</a></div>
+                <div class="btn-wrap"><a class="btn pop-up_order_item" href="#">Начать сотрудничество</a></div>
               </div>
               <div class="price-info">
                 <ul>
@@ -906,15 +908,15 @@
             <li class="tarif tarif-3">
               <div class="price-title">
                 <div class="caption">
-                  <p>Быстрый старт</p>
+                  <p>Профессионал</p>
                 </div>
-                <div class="tarif-price">
-                  <p>100$</p>
+                <div class="tarif-price white-coin">
+                  <p class="thin">Персональный просчет</p>
                   <div class="notion">
-                    <p>(Первый месяц 200$)</p>
+                    <p> </p>
                   </div>
                 </div>
-                <div class="btn-wrap"><a class="btn" href="#">Начать сотрудничество</a></div>
+                <div class="btn-wrap"><a class="btn pop-up_order_item" href="#">Начать сотрудничество</a></div>
               </div>
               <div class="price-info">
                 <ul>
@@ -1142,7 +1144,48 @@
               <p>Где можно увидеть контекстную рекламу?</p>
             </div>
             <div class="faq-active">
-              <p>active-content</p>
+              <div class="clarify underline">
+                <p>Существует две основных системы контекстной рекламы:</p>
+              </div>
+              <p><span class="bold">Яндекс.Директ </span>— крупнейшая российская система контекстной рекламы. Объявления показываются в поисковой выдаче Яндекса и на сайтах-участниках рекламной сети (tut.by, all.by, Rambler.ru и еще более 15 тыс. сайтов).</p>
+              <p><span class="bold">Google.Adwords </span>— показы рекламных объявлений в Google и на многочисленных сайтах – участниках рекламной сети (Google.ru, Google.com.by и более 100 тыс. сайтов).</p>
+              <div class="clarify underline">
+                <p>На страницах результатов поиска объявления могут быть показаны в следующих блоках:</p>
+              </div>
+              <ul class="li-offset">
+                <li>
+                  <div class="caption">
+                    <p>Спецразмещение</p>
+                  </div>
+                  <p>Блок спецразмещения расположен над результатами поиска. Может содержать до трех объявлений. Показы в этом блоке приносят наибольшее количество кликов.</p>
+                </li>
+                <li>
+                  <div class="caption">
+                    <p>Гарантированные показы</p>
+                  </div>
+                  <p>Блок гарантированных показов содержит до четырех объявлений. Как правило, блок гарантированных показов расположен под результатами поиска. В некоторых случаях блок может находиться справа от результатов поиска.</p>
+                </li>
+                <li>
+                  <div class="caption">
+                    <p>Динамические показы</p>
+                  </div>
+                  <p>Блок динамических показов обычно находится под результатами поиска на второй и последующих страницах результатов поиска и содержит до четырех объявлений. Если блок гарантированных показов находится справа от результатов поиска, то блок динамических показов располагается под ним и содержит до пяти объявлений.</p>
+                </li>
+              </ul>
+              <div class="caption">
+                <p>Площадки</p>
+              </div>
+              <div class="clarify underline">
+                <p>Объявления также могут размещаться на различных площадках с таргетингом на ключевые слова, темы и интересы пользователей.</p>
+              </div>
+              <ul class="li-offset">
+                <li>
+                  <p><span class="caption">Рекламная сеть Яндекса (РСЯ) </span> — это система размещения контекстных объявлений и медийных баннеров на страницах сайтов — участников сети. Рекламная сеть объединяет тысячи сайтов, совокупная аудитория которых превышает 73 млн человек в месяц среди них TUT.by, Onliner, Gismeteo и другие.</p>
+                </li>
+                <li>
+                  <p><span class="caption">Контекстно-медийная сеть Google (КМС) </span> — это огромная аудитория с широчайшим спектром интересов, богатый выбор веб-страниц, на которых можно показывать рекламу, гибкие настройки таргетинга и новаторские форматы объявлений. К ним относятся YouTube, Gmail, Formspring.me  и прочие.</p>
+                </li>
+              </ul>
             </div>
           </li>
           <li>
@@ -1260,10 +1303,114 @@
     </footer>
     <div class="hidden"></div>
     <!-- Load Scripts-->
-    <div class="pop-up-wrap">
+    <div class="pop-up-wrap pop-up-wrap_call">
       <div class="close"><img src="img/close.png" alt=""></div>
-      <div id="pop-up">
-        <h3>Расскажите о своем проекте или задайте вопрос</h3>
+      <div class="pop-up pop-up_call">
+        <h3>Мы Вам перезвоним!</h3>
+        <form action="">
+          <div class="form-group">
+            <div class="name">
+              <input type="text" id="form-name" name="name">
+              <label for="form-name">Ваше имя</label>
+            </div>
+            <div class="phone">
+              <input type="tel" id="form-phone" name="phone">
+              <label for="form-phone">Телефон</label>
+            </div>
+          </div>
+          <div class="email">
+            <input type="email" id="form-email" name="email">
+            <label for="form-email">Почта</label>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="pop-up-wrap pop-up-wrap_order">
+      <div class="close"><img src="img/close.png" alt=""></div>
+      <div class="pop-up pop-up_order">
+        <h3>Заказать услугу</h3>
+        <form action="">
+          <div class="form-group">
+            <div class="name">
+              <input type="text" id="form-name" name="name">
+              <label for="form-name">Ваше имя</label>
+            </div>
+            <div class="phone">
+              <input type="tel" id="form-phone" name="phone">
+              <label for="form-phone">Телефон</label>
+            </div>
+          </div>
+          <div class="email">
+            <input type="email" id="form-email" name="email">
+            <label for="form-email">Почта</label>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="pop-up-wrap pop-up-wrap_consult">
+      <div class="close"><img src="img/close.png" alt=""></div>
+      <div class="pop-up pop-up_consult">
+        <h3>Заказать консультацию</h3>
+        <form action="">
+          <div class="form-group">
+            <div class="name">
+              <input type="text" id="form-name" name="name">
+              <label for="form-name">Ваше имя</label>
+            </div>
+            <div class="phone">
+              <input type="tel" id="form-phone" name="phone">
+              <label for="form-phone">Телефон</label>
+            </div>
+          </div>
+          <div class="email">
+            <input type="email" id="form-email" name="email">
+            <label for="form-email">Почта</label>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="pop-up-wrap pop-up-wrap_calc">
+      <div class="close"><img src="img/close.png" alt=""></div>
+      <div class="pop-up pop-up_calc">
+        <h3>Наши специалисты помогут рассчитать стоимость в кратчайшие сроки</h3>
+        <form action="">
+          <div class="form-group">
+            <div class="name">
+              <input type="text" id="form-name" name="name">
+              <label for="form-name">Ваше имя</label>
+            </div>
+            <div class="phone">
+              <input type="tel" id="form-phone" name="phone">
+              <label for="form-phone">Телефон</label>
+            </div>
+          </div>
+          <div class="email">
+            <input type="email" id="form-email" name="email">
+            <label for="form-email">Почта</label>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="pop-up-wrap pop-up-wrap_order-item">
+      <div class="close"><img src="img/close.png" alt=""></div>
+      <div class="pop-up pop-up_order-item">
+        <h3>Ваш заказ:</h3>
+        <div class="clarify">
+          <p><span class="txt">Тариф: </span><span class="item-tarif"></span></p>
+          <p><span class="txt">Цена: </span><span class="item-price"></span><span class="item-price-notion"></span></p>
+        </div>
         <form action="">
           <div class="form-group">
             <div class="name">

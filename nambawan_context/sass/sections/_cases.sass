@@ -15,6 +15,18 @@
 	.carousel-nav
 		margin-top: 20px
 		text-align: center
+	.owl-prev.disabled,
+	.owl-next.disabled
+		opacity: .5
+		.prev-wrap,
+		.next-wrap
+			cursor: default
+		.prev:before,
+		.next:after
+			transform: rotateZ(-35deg) !important 
+		.prev:after,
+		.next:before
+			transform: rotateZ(35deg) !important
 	.owl-prev,
 	.owl-next
 		display: inline-block
@@ -53,9 +65,9 @@
 		background-color: #000
 	.prev-wrap.anim
 		.prev:before
-			transform: rotateZ(-35deg) translateX(5px)
+			transform: rotateZ(-35deg) translateX(10px)
 		.prev:after
-			transform: rotateZ(35deg) translateX(5px)
+			transform: rotateZ(35deg) translateX(10px)
 	.next-wrap.anim
 		.next:after
 			transform: rotateZ(-35deg) translateX(-10px)

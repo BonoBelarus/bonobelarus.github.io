@@ -17,8 +17,16 @@
 	.faq-active
 		font-size: 15px
 		color: #333
-		padding: 0 50px
+		padding: 0 50px 50px
 		display: none
+		.li-offset
+			li:not(:first-child)
+				margin-top: 25px
+		li .caption
+			margin-top: 0
+			vertical-align: middle
+		>.clarify
+			margin: 15px 0
 		li:before
 			font-weight: 300
 			content: '—'
@@ -34,6 +42,7 @@
 		overflow: hidden
 		font-weight: 700
 		margin-top: 30px
+		display: inline-block
 	h3
 		font-size: 20px
 		color: #333

@@ -2,6 +2,7 @@
 	box-sizing: border-box
 	margin: 0
 	padding: 0
+	list-style-type: none
 
 *::-webkit-input-placeholder
 	color: #666
@@ -30,8 +31,8 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 
-body.disabled
-	overflow: hidden
+// body.disabled
+// 	overflow: hidden
 body
 	color: #333
 	cursor: default
@@ -46,6 +47,12 @@ body
 	-moz-user-select: none
 	-ms-user-select: none
 	user-select: none
+
+.thin
+	font-weight: 300
+
+.underline
+	text-decoration: underline
 
 button
 	cursor: pointer
@@ -168,20 +175,42 @@ h3
 	line-height: 100vh
 	background-color: #0a1a42
 	text-align: center
+	h3
+		max-width: 800px
 	.close
 		line-height: 1em
-		top: 25px
-		right: 50px
+		right: 25px
+		top: 100px
 		position: absolute
 		transition: .45s
 		cursor: pointer
 	.close:hover
 		transform: rotateZ(180deg)
-	#pop-up
+	.pop-up
 		display: inline-block
 		line-height: 1.2em
 		vertical-align: middle
 		position: relative
+		.clarify
+			line-height: 1.7em
+			margin-top: 25px
+			color: #fff
+			font-size: 18px
+			position: relative
+			text-align: left
+			background-color: #000118
+			padding: 15px
+		.txt
+			margin-right: 15px
+			font-weight: 700
+			text-transform: uppercase
+			width: 80px
+			display: inline-block
+			text-align: right
+		.item-price-notion
+			opacity: .5
+			margin-left: 10px
+			font-size: 14px
 		h3,label
 			color: #fff
 	form
