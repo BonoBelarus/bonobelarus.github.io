@@ -4,6 +4,8 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	body.disabled
+		overflow: hidden
 	#why-profit .why-profit_cards ul
 		flex-direction: column
 		align-items: center
@@ -248,7 +250,7 @@
 		h3
 			line-height: 1em
 		.close
-			top: 10px
+			top: 100px
 			right: 20px
 			width: 30px
 			height: 30px
@@ -341,6 +343,14 @@
 		flex-direction: column
 		align-items: center
 @media only screen and (max-width : 480px)
+	.pop-up-wrap .pop-up
+		.clarify
+			text-align: center
+			p:first-child
+				margin-bottom: 15px
+		.txt
+			text-align: center
+			width: 100%
 	#why-profit .why-profit_cards li
 		height: 290px
 	.btn

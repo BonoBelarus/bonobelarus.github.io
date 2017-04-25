@@ -215,14 +215,20 @@ $(document).ready(function(){
 	});
 	
 	$('.pop-up-wrap .close').click(function(){
-		$('body').removeClass('disabled');
+		if($('header nav').hasClass('active') != true){
+			$('body').removeClass('disabled');
+		}
+		this_close = $(this);
 		if($(window).width() < 1200){
 			setTimeout(function(){
-				$('.pop-up-wrap').removeClass('active');		
+				$(this).closest('.pop-up-wrap').removeClass('active');		
 			}, 300);
 		}else{
-			$('.pop-up-wrap').removeClass('active');
+			$(this).closest('.pop-up-wrap').removeClass('active');
 		}
+		setTimeout(function(){
+			$(this_close).closest('.pop-up-wrap').removeClass('active');
+		}, 400)
 	});
 	//END of POP-UP
 	//SMALL NAV

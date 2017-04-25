@@ -19,6 +19,8 @@
 		color: #333
 		padding: 0 50px 50px
 		display: none
+		>p
+			margin-top: 25px
 		.li-offset
 			li:not(:first-child)
 				margin-top: 25px
@@ -43,6 +45,9 @@
 		font-weight: 700
 		margin-top: 30px
 		display: inline-block
+	td.caption
+		display: table-cell
+		padding: 0
 	h3
 		font-size: 20px
 		color: #333
@@ -121,3 +126,11 @@
 	.active
 		.to-open
 			box-shadow: 0 0 20px rgba(#000, .3)
+	.number
+		padding-left: 15px
+		li
+			padding: 0
+			list-style-type: decimal
+			margin-top: 25px
+		li:before
+			content: ''

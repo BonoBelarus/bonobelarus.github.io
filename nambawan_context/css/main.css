@@ -204,6 +204,7 @@ h3 {
     top: 100px;
     position: absolute;
     transition: .45s;
+    z-index: 9;
     cursor: pointer; }
   .pop-up-wrap .close:hover {
     -webkit-transform: rotateZ(180deg);
@@ -483,30 +484,8 @@ header {
       width: 100%; }
   header .content {
     position: relative;
-    width: 1170px; }
-  header .top-line:before {
-    content: '';
-    width: 100%;
-    height: 75px;
-    line-height: 75px;
-    top: -100%;
-    left: 0;
-    background-color: #000118;
-    z-index: 9;
-    transition: .5s;
-    position: absolute; }
-  header .top-line.is-sticky:before {
-    -webkit-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    transform: translateY(100%); }
-  header .top-line.is-sticky {
-    z-index: 999;
-    position: fixed;
-    width: 100%;
-    line-height: 75px;
-    height: 75px;
-    top: 0;
-    left: 0; }
+    max-width: 1170px;
+    width: 100%; }
   header .top-line {
     transition: .5s;
     position: absolute;
@@ -614,33 +593,13 @@ header {
     line-height: 1em; } }
 
 @media only screen and (max-width: 992px) {
-  header {
-    padding-top: 120px; }
-    header .top-line.is-sticky {
-      line-height: 80px;
-      height: 80px; }
-    header .top-line.is-sticky:before {
-      -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-      transform: translateY(100%); }
-    header .top-line:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 80px;
-      top: -100%;
-      transition: .5s;
-      left: 0;
-      background-color: #000;
-      z-index: 1; }
-    header .top-line {
-      transition: .5s;
-      position: fixed;
-      z-index: 9;
-      padding: 0 20px;
-      top: 0;
-      left: 0;
-      width: 100%; }
+  header .top-line {
+    position: relative;
+    transition: .5s;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%; }
   .small-nav {
     width: 40px;
     height: 30px;
@@ -728,9 +687,6 @@ header {
   h2 {
     font-size: 27px; } }
 
-.second-nav.is-sticky:before {
-  opacity: 1; }
-
 .second-nav.is-sticky {
   position: fixed !important;
   width: 100%;
@@ -738,25 +694,14 @@ header {
   height: 80px;
   left: 0;
   z-index: 999;
-  background-color: #fff;
+  background-color: #000118;
   box-shadow: 0 15px 25px rgba(4, 74, 127, 0.1);
   overflow-y: hidden; }
-  .second-nav.is-sticky ul {
-    width: 100% !important; }
   .second-nav.is-sticky a {
     color: #fff; }
 
-.second-nav:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  opacity: 0;
-  transition: .5s;
-  background-color: #000118; }
-
 .second-nav {
+  transition: .5s;
   line-height: 80px;
   position: absolute;
   top: 0;
@@ -2078,6 +2023,8 @@ header {
     color: #333;
     padding: 0 50px 50px;
     display: none; }
+    #faq .faq-active > p {
+      margin-top: 25px; }
     #faq .faq-active .li-offset li:not(:first-child) {
       margin-top: 25px; }
     #faq .faq-active li .caption {
@@ -2101,6 +2048,9 @@ header {
     font-weight: 700;
     margin-top: 30px;
     display: inline-block; }
+  #faq td.caption {
+    display: table-cell;
+    padding: 0; }
   #faq h3 {
     font-size: 20px;
     color: #333;
@@ -2178,6 +2128,15 @@ header {
 #faq .active .to-open {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
 
+#faq .number {
+  padding-left: 15px; }
+  #faq .number li {
+    padding: 0;
+    list-style-type: decimal;
+    margin-top: 25px; }
+  #faq .number li:before {
+    content: ''; }
+
 #contacts {
   padding: 80px 0;
   background-color: #f6f7fb;
@@ -2207,6 +2166,8 @@ header {
     text-align: center;
     max-width: 800px;
     margin: 100px auto 0; }
+    #contacts .social a:hover {
+      background-color: #fff; }
     #contacts .social a {
       display: block; }
     #contacts .social ul {
@@ -2341,6 +2302,8 @@ footer {
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
+  body.disabled {
+    overflow: hidden; }
   #why-profit .why-profit_cards ul {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -2574,7 +2537,7 @@ footer {
     .pop-up-wrap h3 {
       line-height: 1em; }
     .pop-up-wrap .close {
-      top: 10px;
+      top: 100px;
       right: 20px;
       width: 30px;
       height: 30px; }
@@ -2678,6 +2641,13 @@ footer {
     align-items: center; } }
 
 @media only screen and (max-width: 480px) {
+  .pop-up-wrap .pop-up .clarify {
+    text-align: center; }
+    .pop-up-wrap .pop-up .clarify p:first-child {
+      margin-bottom: 15px; }
+  .pop-up-wrap .pop-up .txt {
+    text-align: center;
+    width: 100%; }
   #why-profit .why-profit_cards li {
     height: 290px; }
   .btn {
