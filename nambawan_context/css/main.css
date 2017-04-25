@@ -616,6 +616,14 @@ header {
     display: inline-block; }
   header nav li:not(:last-child) {
     margin-right: 45px; }
+    header nav li:not(:last-child) a {
+      transition: .35s;
+      display: inline-block; }
+    header nav li:not(:last-child) a:hover {
+      color: #05d8a5;
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px); }
   header nav li:last-child {
     margin-left: 50px; }
   header .nav-order {
@@ -656,7 +664,14 @@ header {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
+  header .back-to:hover:before {
+    -webkit-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    transform: translateX(-5px); }
+  header .back-to:hover {
+    opacity: .5; }
   header .back-to {
+    transition: .35s;
     font-size: 18px;
     font-weight: 500;
     position: relative;
@@ -664,6 +679,7 @@ header {
     header .back-to a {
       color: #05d8a5; }
   header .back-to:before {
+    transition: .35s;
     content: '';
     position: absolute;
     top: 50%;
@@ -2911,33 +2927,33 @@ footer {
   .arrow-anim-down {
     -webkit-animation: to-down 70s infinite linear;
     animation: to-down 70s infinite linear; }
-  #cases .owl-item.active .orders > ul > li:first-child {
+  #cases.active .owl-item.active .orders > ul > li:first-child {
     height: 112px; }
-  #cases .owl-item.active .orders > ul > li:nth-child(2) {
+  #cases.active .owl-item.active .orders > ul > li:nth-child(2) {
     height: 280px; }
-  #cases .owl-item.active .orders .label-feature {
+  #cases.active .owl-item.active .orders .label-feature {
     -webkit-animation: label-feature .5s forwards .75s;
     animation: label-feature .5s forwards .75s; }
-  #cases .owl-item.active .advert > ul > li:first-child {
+  #cases.active .owl-item.active .advert > ul > li:first-child {
     height: 225px; }
-  #cases .owl-item.active .advert > ul > li:nth-child(2) {
+  #cases.active .owl-item.active .advert > ul > li:nth-child(2) {
     height: 180px; }
-  #cases .owl-item.active .advert .label-feature {
+  #cases.active .owl-item.active .advert .label-feature {
     -webkit-animation: label-feature .5s forwards 1.45s;
     animation: label-feature .5s forwards 1.45s; }
-  #cases .owl-item.active .item-2 .item-center ul li:first-child {
+  #cases.active .owl-item.active .item-2 .item-center ul li:first-child {
     height: 55px; }
-  #cases .owl-item.active .item-2 .item-center ul li:nth-child(2) {
+  #cases.active .owl-item.active .item-2 .item-center ul li:nth-child(2) {
     height: 80px; }
-  #cases .owl-item.active .item-2 .item-center ul li:nth-child(3) {
+  #cases.active .owl-item.active .item-2 .item-center ul li:nth-child(3) {
     height: 69px; }
-  #cases .owl-item.active .item-2 .item-center ul li:nth-child(4) {
+  #cases.active .owl-item.active .item-2 .item-center ul li:nth-child(4) {
     height: 143px; }
-  #cases .owl-item.active .item-2 .item-center ul li:nth-child(5) {
+  #cases.active .owl-item.active .item-2 .item-center ul li:nth-child(5) {
     height: 186px; }
-  #cases .owl-item.active .item-2 .item-center ul li:nth-child(6) {
+  #cases.active .owl-item.active .item-2 .item-center ul li:nth-child(6) {
     height: 248px; }
-  #cases .owl-item.active .item-2 .item-center ul .label-feature {
+  #cases.active .owl-item.active .item-2 .item-center ul .label-feature {
     -webkit-animation: label-feature .5s forwards 1.25s;
     animation: label-feature .5s forwards 1.25s; }
   /**/ }

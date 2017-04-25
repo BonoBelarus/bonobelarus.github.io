@@ -342,5 +342,10 @@ $(document).ready(function(){
 			'opacity': '0'
 		});
 	});
+	$('#cases').waypoint(function(){
+		$('#cases').addClass('active');
+	}, {
+		offset: '20%'
+	});
 	//END of HOVER SOCIAL
 });

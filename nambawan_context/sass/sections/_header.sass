@@ -61,6 +61,12 @@ header
 			display: inline-block
 		li:not(:last-child)
 			margin-right: 45px
+			a
+				transition: .35s
+				display: inline-block
+			a:hover
+				color: #05d8a5
+				transform: translateY(-5px)
 		li:last-child
 			margin-left: 50px
 	.nav-order
@@ -95,7 +101,12 @@ header
 		display: flex
 		justify-content: center
 		flex-direction: column
+	.back-to:hover:before
+		transform: translateX(-5px)
+	.back-to:hover
+		opacity: .5
 	.back-to
+		transition: .35s
 		font-size: 18px
 		font-weight: 500
 		position: relative
@@ -103,6 +114,7 @@ header
 		a
 			color: #05d8a5
 	.back-to:before
+		transition: .35s
 		content: ''
 		position: absolute
 		top: 50%
