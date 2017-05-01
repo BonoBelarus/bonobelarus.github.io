@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Nambawan - Context</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <!-- Load CSS & WebFonts Main Function-->
+    <script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+    <!-- Load CSS Start-->
+    <!--script loadCSS( "css/fonts.css", false, "all" );-->
+    <script>loadLocalStorageCSS( "webfonts", "css/fonts.css" );</script>
+    <!--style .to-open{display:none;} a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*{box-sizing:border-box;margin:0;padding:0}::-webkit-input-placeholder{color:#666;opacity:1}:-moz-placeholder{color:#666;opacity:1}::-moz-placeholder{color:#666;opacity:1}:-ms-input-placeholder{color:#666;opacity:1}input:active,input:focus{outline:none}body input:focus:required:invalid,body textarea:focus:required:invalid{color:#666}body input:required:valid,body textarea:required:valid{color:#666}body.disabled{overflow:hidden}body{color:#333;cursor:default;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-family:"Raleway", sans-serif;font-variant-numeric:normal;font-weight:300;font-size:16px;line-height:1.4em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}button{cursor:pointer}a{color:#fff;font-variant-numeric:lining-nums;text-decoration:none}.bold{font-weight:700}.content{max-width:1170px;margin:0 auto}.btn{font-size:16px;font-weight:700;text-transform:uppercase;display:inline-block;color:#fff;background-color:#05d8a5;line-height:65px;box-shadow:0 6px 15px rgba(0, 255, 183, 0.35);padding:0 50px;border-radius:32px;transition:.35s}.btn:hover{box-shadow:none}h2{color:#333;font-size:48px;font-weight:700;line-height:1.2em}h3{font-size:36px;font-weight:700;color:#fff;line-height:1.3em}.mobile-audit{display:none}.to-open{overflow:hidden;transition:.75s;opacity:.8;position:absolute;width:30px;height:30px;border-radius:50%;box-shadow:0 0 0 2px #000;right:50px;top:50%;margin-top:-15px}.to-open .l1,.to-open .l2{transition:.3s;content:'';-webkit-transform:none;-ms-transform:none;transform:none;left:50%;top:50%;background-color:#000;position:absolute}.to-open .l1{height:2px;width:20px;margin-top:-1px;margin-left:-10px}.to-open .l2{width:2px;height:20px;margin-top:-10px;margin-left:-1px}.label-feature{position:absolute;left:50%;margin-left:-63px;bottom:100%;width:126px;height:85px;padding-top:20px;font-size:14px;color:#a59f34;line-height:1.1em;font-weight:700;background:url(../img/label-feature.svg) center 5px no-repeat}.item-date-line{position:absolute;bottom:-50px;width:100%;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-ms-flex-align:center;align-items:center;text-transform:uppercase;font-size:13px;color:#aaa7a7}.pop-up-wrap.active{z-index:10;opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);transition:z-index .5s ease 0s, opacity .5s, -webkit-transform .5s;transition:z-index .5s ease 0s, opacity .5s, transform .5s;transition:z-index .5s ease 0s, opacity .5s, transform .5s, -webkit-transform .5s}.pop-up-wrap{padding:20px;z-index:-1;opacity:0;transition:z-index .5s ease .5s, opacity .5s, -webkit-transform .5s ease 1s;transition:z-index .5s ease .5s, opacity .5s, transform .5s ease 1s;transition:z-index .5s ease .5s, opacity .5s, transform .5s ease 1s, -webkit-transform .5s ease 1s;-webkit-transform:scale(2);-ms-transform:scale(2);transform:scale(2);position:fixed;top:0;left:0;width:100%;height:100vh;line-height:100vh;background-color:#0a1a42;text-align:center}.pop-up-wrap .close{line-height:1em;top:100px;right:25px;position:absolute;transition:.45s;cursor:pointer}.pop-up-wrap .close:hover{-webkit-transform:rotateZ(180deg);-ms-transform:rotate(180deg);transform:rotateZ(180deg)}.pop-up-wrap #pop-up{display:inline-block;line-height:1.2em;vertical-align:middle;position:relative}.pop-up-wrap #pop-up h3,.pop-up-wrap #pop-up label{color:#fff}.pop-up-wrap form{margin:50px auto 0;max-width:500px;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.pop-up-wrap .email,.pop-up-wrap .form-group{width:100%;position:relative}.pop-up-wrap .name,.pop-up-wrap .phone{width:45%;position:relative}form .active label{font-size:10px;-webkit-transform:translateY(-20px);-ms-transform:translateY(-20px);transform:translateY(-20px)}form .email.active:after,form .name.active:after,form .phone.active:after,form .site.active:after{width:100%}form .email:after,form .name:after,form .phone:after,form .site:after{transition:.35s;content:'';width:0;background-color:#2962ff;height:2px;position:absolute;bottom:-5px;left:0}form .email:before,form .name:before,form .phone:before,form .site:before{content:'';position:absolute;width:100%;height:2px!important;background-color:#fff;bottom:-5px;left:0}form .form-group{width:100%;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-ms-flex-align:center;align-items:center}form .email{display:inline-block;margin-top:40px}form label{transition:.35s;text-transform:uppercase;position:absolute;display:inline-block;bottom:0;left:0}form input,form textarea{z-index:1;width:100%;line-height:1.5em;color:#fff;background-color:transparent;border:none;position:relative}form .btn-wrap{width:200px;margin-top:50px}form button{border:none}header{background:linear-gradient(51deg, #193453 0%, #3b80f0 100%);background-size:cover;height:100vh;color:#fff;position:relative}header .top-bg{position:absolute;top:0;left:0;width:100%;height:100%;opacity:.25;overflow:hidden}header .top-bg img{width:100%}header .content{position:relative}header .top-line{position:absolute;height:120px;left:0;top:0;width:100%;line-height:120px;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-ms-flex-align:center;align-items:center}header .logo{position:relative;z-index:2}header .logo img{vertical-align:middle}header nav li{vertical-align:middle;display:inline-block}header nav li:not(:last-child){margin-right:45px}header nav li:last-child{margin-left:100px}header .nav-order{line-height:1em;text-align:right}header .nav-order a{display:block}header .nav-order a:first-child{font-size:18px;font-weight:700}header .nav-order a:nth-child(2){margin-top:10px;opacity:.7}header #main-sec{padding-top:120px;height:100vh;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}header .back-to{font-size:18px;font-weight:500;position:relative;padding-left:35px}header .back-to a{color:#05d8a5}header .back-to:before{content:'';position:absolute;top:50%;margin-top:-9px;left:0;background:url(../img/left-arrow.png) center no-repeat;width:25px;height:17px}header h1{margin-top:30px;font-size:60px;font-weight:700;line-height:1.2em}header .clarify{font-size:18px;opacity:.7;line-height:1.5em;margin-top:45px}header .btn{margin-top:60px}@media only screen and (max-width:1200px){.content{padding:0 20px}header .top-bg img{width:initial;height:100%}header{padding-bottom:50px;height:initial}header #main-sec{height:initial;padding-top:25px}header .top-line{position:relative}header h1{font-size:51px;line-height:1em}h2{font-size:41px;line-height:1em}}@media only screen and (max-width:992px){header{padding-top:120px}header .top-line.is-sticky{line-height:80px;height:80px}header .top-line.is-sticky:before{-webkit-transform:translateY(100%);-ms-transform:translateY(100%);transform:translateY(100%)}header .top-line:before{content:'';position:absolute;width:100%;height:80px;top:-100%;transition:.5s;left:0;background-color:#000;z-index:1}header .top-line{transition:.5s;position:fixed;z-index:9;padding:0 20px;top:0;left:0;width:100%}.small-nav{width:40px;height:30px;z-index:9;position:relative}.small-nav .sn-center{height:2px;position:absolute;top:50%;transition:.15s;left:0;margin-top:-1px;background-color:#fff;width:100%}.small-nav .sn1,.small-nav .sn2{position:absolute;width:100%;height:2px;background-color:#fff;left:0}.small-nav .sn1{transition:.25s;top:0}.small-nav .sn2{transition:.25s;bottom:0}header nav{position:relative;text-align:center;text-transform:uppercase}header nav ul{line-height:1.2em;padding:150px 0 50px;background-color:#2962ff;left:0;top:0;width:100%;height:100vh;position:fixed;transition:.35s ease .5s;opacity:0;z-index:-1;top:-100%}header nav li{margin:0;display:block}header nav li:not(:last-child){margin-right:0;margin-bottom:20px}header nav li:last-child{margin-left:0}header nav .nav-order{margin-top:50px;text-align:center}nav.active ul{opacity:1;transition:.45s ease .25s;-webkit-transform:translateY(100%);-ms-transform:translateY(100%);transform:translateY(100%)}.second-nav ul{display:block}.second-nav ul li:not(:last-child){margin-right:35px}h2 p,h3 p{display:inline}}@media only screen and (max-width:768px){header h1{font-size:39px}h2{font-size:32px}.second-nav{line-height:60px;height:60px}}@media only screen and (max-width:425px){header h1{font-size:36px}}@media only screen and (max-width:375px){header h1{font-size:30px}h2{font-size:27px}}-->
+    <script>loadCSS( "css/owl.carousel.min.css", false, "all" );</script>
+    <script>loadCSS( "css/owl.theme.default.min.css", false, "all" );</script>
+    <script>loadCSS( "css/main.css", false, "all" );</script>
+    <!-- Load CSS End-->
+    <!-- Load CSS Compiled without JS-->
+    <noscript>
+      <link rel="stylesheet" href="css/reset.css">
+      <link rel="stylesheet" href="css/fonts.css">
+      <link rel="stylesheet" href="css/main.css">
+    </noscript>
+  </head>
+  <body>
+    <header>
+      <div class="top-bg"><img src="img/top-bg.jpg" alt=""></div>
+      <div class="top-line">
+        <div class="content">
+          <div class="logo">
+            <div class="logo-img"><img src="img/logo_white.svg" alt=""></div>
+            <div class="logo-txt">
+              <p>Nambawan</p>
+              <p>Маркетинговое агенство</p>
+            </div>
+          </div>
+          <nav>
+            <div class="small-nav">
+              <div class="sn1"></div>
+              <div class="sn-center"></div>
+              <div class="sn2"></div>
+            </div>
+            <ul>
+              <li><a href="http://nambawan.by/index.php?id=12">Услуги</a></li>
+              <li><a href="http://nambawan.by/index.php?id=5">Портфолио</a></li>
+              <li><a href="http://blog.nambawan.by">Блог</a></li>
+              <li><a href="http://nambawan.by/index.php?id=13">Контакты</a></li>
+              <li class="nav-order"><a href="#">+375 33 602 70 15</a><a class="pop-up-call" href="#">Заказать звонок</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <section id="main-sec">
+        <div class="content">
+          <div class="back-to"><a href="#">К списку услуг</a></div>
+          <div class="top-caption">
+            <h1>
+              <p>Поисковое продвижение сайта</p>
+              <p>(seo). Получайте первых</p>
+              <p>клиентов уже через 2 месяца</p>
+            </h1>
+            <div class="clarify">
+              <p>Профессиональное продвижение сайта в поисковых системах Яндекс и Google</p>
+            </div>
+          </div>
+          <div class="btn-wrap"><a class="btn pop-up-order" href="#">Заказать услугу</a></div>
+        </div>
+      </section>
+    </header>
+    <section id="why-profit">
+      <div class="content">
+        <h2>
+          <p>Почему наше продвижение окупается</p>
+        </h2>
+        <div class="why-profit_cards">
+          <ul>
+            <li>
+              <div class="card-img"><img src="img/why-us_1.png" alt=""></div>
+              <div class="card-info">
+                <div class="caption">
+                  <p>Долгосрочный эффект</p>
+                </div>
+                <div class="clarify">
+                  <p>Правильно оптимизированный сайт надолго останется в ТОПе и продолжит окупаться даже после завершения работ.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-img"><img src="img/why-us_2.png" alt=""></div>
+              <div class="card-info">
+                <div class="caption">
+                  <p>Высокая конверсия</p>
+                </div>
+                <div class="clarify">
+                  <p>Высокий уровень конверсии «посетитель - клиент», так как продвижение ориентировано на целевую аудиторию.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-img"><img src="img/why-us_3.png" alt=""></div>
+              <div class="card-info">
+                <div class="caption">
+                  <p>Узнаваемость и доверие</p>
+                </div>
+                <div class="clarify">
+                  <p>Повышает узнаваемость бренда. Компаниям находящимся в ТОПе поисковой выдачи доверяют больше.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-img"><img src="img/why-us_4.png" alt=""></div>
+              <div class="card-info">
+                <div class="caption">
+                  <p>Дорабатываем сайт</p>
+                </div>
+                <div class="clarify">
+                  <p>Увеличиваем конверсию сайта с помощью доработак или поможем разработать новый сайт под наши маркетинговые стратегии.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="results">
+      <div class="content">
+        <h2> 
+          <p>Какие результаты получают</p>
+          <p>наши клиенты?</p>
+        </h2>
+        <div class="result-cards">
+          <ul>
+            <li>
+              <div class="card-img">
+                <div class="card-arr">
+                  <div class="line-arr-1 line-arr line-up"></div>
+                  <div class="line-arr-2 line-arr line-up"></div>
+                  <div class="line-arr-3 line-arr line-up"></div>
+                  <div class="line-arr-4 line-arr line-up"></div>
+                  <div class="line-arr-5 line-arr line-up pick"></div>
+                </div><span>8</span><span>2</span>
+              </div>
+              <div class="caption">
+                <p>82 запроса <span class="mark">в топе</span></p>
+              </div>
+              <div class="clarify">
+                <p>В топ вышло 82 запроса</p>
+              </div>
+            </li>
+            <li>
+              <div class="card-img">
+                <div class="card-arr">
+                  <div class="line-arr-1 line-arr line-up"></div>
+                  <div class="line-arr-2 line-arr line-up"></div>
+                  <div class="line-arr-3 line-arr line-up"></div>
+                  <div class="line-arr-4 line-arr line-up"></div>
+                  <div class="line-arr-5 line-arr line-up pick"></div>
+                </div>
+                <ul class="before">
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="after">
+                  <li class="adv"></li>
+                  <li class="adv"></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <div class="caption">
+                <p>Рост в <span class="mark">2,5 раза</span></p>
+              </div>
+              <div class="clarify">
+                <p>Органический трафик вырос в 2,5 раза</p>
+              </div>
+            </li>
+            <li>
+              <div class="card-img">
+                <div class="card-arr">
+                  <div class="line-arr-1 line-arr line-down"></div>
+                  <div class="line-arr-2 line-arr line-down"></div>
+                  <div class="line-arr-3 line-arr line-down"></div>
+                  <div class="line-arr-4 line-arr line-down pick"></div>
+                </div>
+                <ul class="before">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="after">
+                  <li class="adv"></li>
+                </ul>
+              </div>
+              <div class="caption">
+                <p><span class="mark">-80% </span>отказов</p>
+              </div>
+              <div class="clarify">
+                <p>Показатель отказов уменьшился на 80%</p>
+              </div>
+            </li>
+            <li>
+              <div class="card-img">
+                <div class="card-arr">
+                  <div class="line-arr-1 line-arr line-up"></div>
+                  <div class="line-arr-2 line-arr line-up"></div>
+                  <div class="line-arr-3 line-arr line-up"></div>
+                  <div class="line-arr-4 line-arr line-up"></div>
+                  <div class="line-arr-5 line-arr line-up pick"></div>
+                </div>
+                <ul class="before">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="after">
+                  <li class="adv"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <div class="caption">
+                <p class="mark">Рост выручки</p>
+              </div>
+              <div class="clarify">
+                <p>Вырочка увеличилась в 1.5 раза</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="caption">
+          <p>Затраты на продвижение окупились <span class="mark">за 4 месяца</span></p>
+        </div>
+        <div class="btn-wrap"><a class="btn pop-up-calc" href="#">Рассчитать стоимость продвижения</a></div>
+      </div>
+    </section>
+    <section id="steps">
+      <div class="content">
+        <h2>
+          <p>Что такое эффективная  seo-оптимизация</p>
+        </h2>
+        <ul class="steps-list">
+          <li>
+            <div class="line"></div>
+            <div class="step-img"><img src="img/seo-feature-1.png" alt=""></div>
+            <div class="caption">
+              <p>Достижение целей бизнеса</p>
+            </div>
+            <div class="clarify">
+              <p>Чтобы вывести ваш ресурс в ТОП-3 и достичь цели по привлечению посетителей, заинтересованных в приобретении ваших продуктов, <span class="bold">мы работаем по широкому семантическому ядру – от 150 запросов. </span>Кроме того, поисковая оптимизация сайтов, которую вы можете выгодно заказать в нашей компании, позволит профессионально раскрутить даже молодой проект.</p>
+            </div>
+          </li>
+          <li>
+            <div class="line"></div>
+            <div class="step-img"><img src="img/seo-feature-2.png" alt=""></div>
+            <div class="caption">
+              <p>Seo-оптимизация с гарантией результатата</p>
+            </div>
+            <div class="clarify">
+              <p>Современная профессиональная SEO оптимизация от нашей компании — это выгодные условия для каждого клиента и простое формирование цены на услуги. <span class="bold">Вы получаете первые результаты уже через 14 дней, </span>и ваш ресурс 100% не попадет под санкции поисковых систем, потому что мы отбираем ссылки вручную. За ваши деньги мы предложим раскрутку web-сайтов в интернете с гарантией того, что по завершении сотрудничества вам достанется проработанный сайт.</p>
+            </div>
+          </li>
+          <li>
+            <div class="line"></div>
+            <div class="step-img"><img src="img/seo-feature-3.png" alt=""></div>
+            <div class="caption">
+              <p>Качественные тексты</p>
+            </div>
+            <div class="clarify">
+              <p>Комплексное, грамотное продвижение сайта в поиске, расценки на которое вы можете уточнить у менеджера, <span class="bold">включает написание статей персональным копирайтером. </span>Специалист будет взаимодействовать с вами лично и создаст тексты, которые мотивируют потенциальных клиентов совершить покупку.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-img"><img src="img/seo-feature-4.png" alt=""></div>
+            <div class="caption">
+              <p>Техническая поддержка</p>
+            </div>
+            <div class="clarify">
+              <p>Если вам нужна студия, в которой можно не только недорого заказать профессиональную раскрутку сайтов в интернете, но и получить помощь специалистов, которые сами вносят SEO-правки, обращайтесь к нам. Если вы решите доработать сайт, помощь окажет отдел разработки, который работает как с "Битрикс", так и со всеми известными cms.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="letter">
+      <div class="content">
+        <div class="box-letter">
+          <div class="triangle">
+            <div></div>
+          </div>
+          <div class="letter-why">
+            <h2>
+              <p>Вы уже делали seo </p>
+              <p>продвижение сайта?</p>
+            </h2>
+            <div class="clarify">
+              <p>Оставьте заявку в форме справа, и мы бесплатно проведем аудит вашей рекламной компании по нашему чек-листу и в течение 5 часов <span>пришлем 7 рекомендаций</span>по улучшению вашей рекламной компании, которые вы сможете применить.</p>
+            </div>
+          </div>
+          <div class="letter-form form">
+            <form action="">
+              <p>Заполните форму</p>
+              <div class="name">
+                <input type="text" name="name" required>
+                <label for="">Введите ваше имя</label>
+              </div>
+              <div class="phone">
+                <input type="tel" name="phone" required>
+                <label for="">Телефон</label>
+              </div>
+              <div class="site">
+                <input type="text" name="site">
+                <label for="">Адрес сайта</label>
+              </div>
+              <button class="btn">Подать заявку на аудит</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="experience">
+      <div class="content">
+        <div class="exp-info">
+          <h2>
+            <p>Профессиональный опыт</p>
+            <p>и результаты работы</p>
+          </h2>
+          <div class="clarify">
+            <p>У нас есть опыт работы с такими тематиками, как:</p>
+          </div>
+        </div>
+        <div class="exp-list">
+          <ul>
+            <li>
+              <p>Товары для населения</p>
+            </li>
+            <li>
+              <p>Оптовая торговля</p>
+            </li>
+            <li>
+              <p>Производство</p>
+            </li>
+            <li>
+              <p>Услуги для населения</p>
+            </li>
+            <li>
+              <p>Услуги бизнесу</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="cases">
+      <div class="content">
+        <div class="notion">
+          <p>Примеры кейсов</p>
+        </div>
+        <div class="carousel-nav">
+          <div class="items-count"><span class="current">1</span>/<span class="total"></span></div>
+        </div>
+        <div class="carousel">
+          <div class="owl-carousel">
+            <div class="item item-1">
+              <div class="item-caption">
+                <div class="to-open">
+                  <div class="l1"></div>
+                  <div class="l2"></div>
+                </div>
+                <h3>Autotovar.by</h3>
+              </div>
+              <div class="mobile-content">
+                <div class="item-left">
+                  <div class="clarify">
+                    <p>Интернет-магазин автозапчастей</p>
+                    <p class="bold">Рост трафика <span class="mark">в 122 раза за 5 месяцев</span></p>
+                  </div>
+                  <div class="to-do">
+                    <p><span class="mark bold">Задача</span>: Продвижение по трафику</p>
+                    <p><span class="mark bold">Города</span>: Вся Беларусь</p>
+                    <p><span class="mark bold">Особенности</span>: Молодой сайт, большое количество наименований в ассортиментных группах. Работа с B2B и B2C клиентами</p>
+                  </div>
+                  <div class="done">
+                    <p><span class="mark bold">Затрачено времени</span>: 5 месяцев</p>
+                    <p><span class="mark bold">Достигнута цель</span>: 6000 посетителей в месяц</p>
+                  </div>
+                </div>
+                <div class="item-right">
+                  <div class="tabs">
+                    <ul>
+                      <li class="active">
+                        <p>Показать график</p>
+                      </li>
+                      <li>
+                        <p>Показать позиции в Яндекс</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="tab-content">
+                    <li class="active case-graf">
+                      <div class="dashes">
+                        <div class="dashed dashed-1"></div>
+                        <div class="dashed dashed-2"></div>
+                        <div class="dashed dashed-3"></div>
+                        <div class="dashed dashed-4"></div>
+                        <div class="dashed dashed-5"></div>
+                        <div class="dashed dashed-6"></div>
+                      </div>
+                      <div class="labels">
+                        <div class="label label-1">
+                          <p>57</p>
+                        </div>
+                        <div class="label label-2">
+                          <p>450</p>
+                        </div>
+                        <div class="label label-3">
+                          <p>1202</p>
+                        </div>
+                        <div class="label label-4">
+                          <p>2884</p>
+                        </div>
+                        <div class="label label-5">
+                          <p>6949</p>
+                        </div>
+                      </div>
+                      <div class="graf-lines">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                        <div class="line line-4"></div>
+                        <div class="line line-5"></div>
+                        <div class="line line-6"></div>
+                      </div>
+                      <ul>
+                        <li>
+                          <p>Май</p>
+                        </li>
+                        <li>
+                          <p>Июнь</p>
+                        </li>
+                        <li>
+                          <p>Июль</p>
+                        </li>
+                        <li>
+                          <p>Август</p>
+                        </li>
+                        <li>
+                          <p>Сентябрь</p>
+                        </li>
+                        <li>
+                          <p>Октябрь</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="case-img"><img src="img/cases-1.png" alt=""></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="item item-2">
+              <div class="item-caption">
+                <div class="to-open">
+                  <div class="l1"></div>
+                  <div class="l2"></div>
+                </div>
+                <h3>Praudio.ru</h3>
+              </div>
+              <div class="mobile-content">
+                <div class="item-left">
+                  <div class="clarify">
+                    <p>Ремонт аудиотехники</p>
+                    <p class="bold">Достигли роста трафика в <span class="mark">6,7 раз</span></p>
+                  </div>
+                  <div class="to-do">
+                    <p><span class="mark bold">Задача</span>: Продвижение в ТОП-10</p>
+                    <p><span class="mark bold">Города</span>: Санкт-Петербург</p>
+                    <p><span class="mark bold">Затрачено времени</span>: 6 месяцев</p>
+                    <p><span class="mark bold">Достигнутая цель</span>: рост трафика в 6,7 раз</p>
+                  </div>
+                </div>
+                <div class="item-right">
+                  <div class="tabs">
+                    <ul>
+                      <li class="active">
+                        <p>Показать график</p>
+                      </li>
+                      <li>
+                        <p>Показать позиции в Яндекс</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="tab-content">
+                    <li class="active case-graf">
+                      <div class="dashes">
+                        <div class="dashed dashed-1"></div>
+                        <div class="dashed dashed-2"></div>
+                        <div class="dashed dashed-3"></div>
+                        <div class="dashed dashed-4"></div>
+                        <div class="dashed dashed-5"></div>
+                        <div class="dashed dashed-6"></div>
+                      </div>
+                      <div class="labels">
+                        <div class="label label-1">
+                          <p>+667%</p>
+                        </div>
+                        <div class="label label-2">
+                          <p>+248%</p>
+                        </div>
+                      </div>
+                      <div class="graf-lines">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                        <div class="line line-4"></div>
+                        <div class="line line-5"></div>
+                        <div class="line line-6"></div>
+                        <div class="line line-7 yellow"></div>
+                        <div class="line line-8 yellow"></div>
+                        <div class="line line-9 yellow"></div>
+                        <div class="line line-10 yellow"></div>
+                        <div class="line line-11 yellow"></div>
+                        <div class="line line-12 yellow"></div>
+                      </div>
+                      <ul>
+                        <li>
+                          <p>Октябрь</p>
+                        </li>
+                        <li>
+                          <p>Ноябрь</p>
+                        </li>
+                        <li>
+                          <p>Декабрь</p>
+                        </li>
+                        <li>
+                          <p>Январь</p>
+                        </li>
+                        <li>
+                          <p>Февраль</p>
+                        </li>
+                        <li>
+                          <p>Март</p>
+                        </li>
+                        <li>
+                          <p>Апрель</p>
+                        </li>
+                      </ul>
+                      <div class="clarify-color">
+                        <ul>
+                          <li>
+                            <p>Яндекс</p>
+                          </li>
+                          <li>
+                            <p>Google</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="case-img"><img src="img/cases-2.png" alt=""></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="item item-3">
+              <div class="item-caption">
+                <div class="to-open">
+                  <div class="l1"></div>
+                  <div class="l2"></div>
+                </div>
+                <h3>Gidro.by</h3>
+              </div>
+              <div class="mobile-content">
+                <div class="item-right">
+                  <div class="clarify">
+                    <p>Ремонт аудиотехники</p>
+                    <p class="bold">Достигли роста трафика в <span class="mark">6,7 раз</span></p>
+                  </div>
+                  <div class="to-do">
+                    <p><span class="mark bold">Задача</span>: Продвижение в ТОП-10</p>
+                    <p><span class="mark bold">Города</span>: Санкт-Петербург</p>
+                    <p><span class="mark bold">Затрачено времени</span>: 6 месяцев</p>
+                    <p><span class="mark bold">Достигнутая цель</span>: рост трафика в 6,7 раз</p>
+                  </div>
+                </div>
+                <div class="item-right">
+                  <div class="tabs">
+                    <ul>
+                      <li class="active">
+                        <p>Показать график</p>
+                      </li>
+                      <li>
+                        <p>Показать позиции в Яндекс</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="tab-content">
+                    <li class="active case-graf">
+                      <div class="dashes">
+                        <div class="dashed dashed-1"></div>
+                        <div class="dashed dashed-2"></div>
+                        <div class="dashed dashed-3"></div>
+                        <div class="dashed dashed-4"></div>
+                        <div class="dashed dashed-5"></div>
+                        <div class="dashed dashed-6"></div>
+                      </div>
+                      <div class="labels">
+                        <div class="label label-1">
+                          <p>+667%</p>
+                        </div>
+                        <div class="label label-2">
+                          <p>+248%</p>
+                        </div>
+                      </div>
+                      <div class="graf-lines">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                        <div class="line line-4"></div>
+                        <div class="line line-5"></div>
+                        <div class="line line-6"></div>
+                        <div class="line line-7 yellow"></div>
+                        <div class="line line-8 yellow"></div>
+                        <div class="line line-9 yellow"></div>
+                        <div class="line line-10 yellow"></div>
+                        <div class="line line-11 yellow"></div>
+                        <div class="line line-12 yellow"></div>
+                      </div>
+                      <ul>
+                        <li>
+                          <p>Октябрь</p>
+                        </li>
+                        <li>
+                          <p>Ноябрь</p>
+                        </li>
+                        <li>
+                          <p>Декабрь</p>
+                        </li>
+                        <li>
+                          <p>Январь</p>
+                        </li>
+                        <li>
+                          <p>Февраль</p>
+                        </li>
+                        <li>
+                          <p>Март</p>
+                        </li>
+                        <li>
+                          <p>Апрель</p>
+                        </li>
+                      </ul>
+                      <div class="clarify-color">
+                        <ul>
+                          <li>
+                            <p>Яндекс</p>
+                          </li>
+                          <li>
+                            <p>Google</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="case-img"><img src="img/cases-3.png" alt=""></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="item item-4">
+              <div class="item-caption">
+                <div class="to-open">
+                  <div class="l1"></div>
+                  <div class="l2"></div>
+                </div>
+                <h3>Sapex.by</h3>
+              </div>
+              <div class="mobile-content">
+                <div class="item-left">
+                  <div class="clarify">
+                    <p>Служба доставки</p>
+                    <p class="bold">Вывели 32 из 47 запросов в <span class="mark">ТОП-3</span></p>
+                  </div>
+                  <div class="to-do">
+                    <p><span class="bold mark">Задача</span>: Продвижение в ТОП-10</p>
+                    <p><span class="bold mark">Города</span>: Минск</p>
+                    <p><span class="bold mark">Затрачено времени</span>: 7 месяцев</p>
+                    <p><span class="bold mark">Достигнутая цель:</span></p>
+                    <div class="achieved-goals">
+                      <p>71 из 82 запросов в ТОП-10</p>
+                      <p>37 из 52 запросов в ТОП-5</p>
+                      <p>32 из 47 запросов в ТОП-3</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-right">
+                  <div class="tabs">
+                    <ul>
+                      <li class="active">
+                        <p>Показать график</p>
+                      </li>
+                      <li>
+                        <p>Показать позиции в Яндекс</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="tab-content">
+                    <li class="active case-graf">
+                      <div class="dashes">
+                        <div class="dashed dashed-1"></div>
+                        <div class="dashed dashed-2"></div>
+                        <div class="dashed dashed-3"></div>
+                        <div class="dashed dashed-4"></div>
+                        <div class="dashed dashed-5"></div>
+                        <div class="dashed dashed-6"></div>
+                      </div>
+                      <div class="labels">
+                        <div class="label label-1">
+                          <p>94</p>
+                        </div>
+                        <div class="label label-2">
+                          <p>604</p>
+                        </div>
+                        <div class="label label-3">
+                          <p>732</p>
+                        </div>
+                        <div class="label label-4">
+                          <p>952</p>
+                        </div>
+                      </div>
+                      <div class="graf-lines">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                        <div class="line line-4"></div>
+                        <div class="line line-5"></div>
+                        <div class="line line-6"></div>
+                        <div class="line line-7"></div>
+                        <div class="line line-8"></div>
+                      </div>
+                      <ul>
+                        <li>
+                          <p>Июнь</p>
+                        </li>
+                        <li>
+                          <p>август</p>
+                        </li>
+                        <li>
+                          <p>октябрь</p>
+                        </li>
+                        <li>
+                          <p>декабрь</p>
+                        </li>
+                        <li>
+                          <p>февраль</p>
+                        </li>
+                        <li>
+                          <p>апрель</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="case-img"><img src="img/cases-4.png" alt=""></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="banner_get-started">
+      <div class="content">
+        <h2>Готовы работать с нами?</h2>
+        <div class="btn-wrap"><a class="btn pop-up-order" href="#">Начать сотрудничество</a></div>
+      </div>
+    </section>
+    <section id="project-group">
+      <div class="content">
+        <h2>Проектная группа</h2>
+        <div class="clarify">
+          <p>На каждый проект работает слаженная команда узкопрофильных специалистов</p>
+        </div>
+        <ul class="group-list">
+          <li>
+            <div class="group-img"><img src="img/proj-group-1.png" alt=""></div>
+            <div class="caption">
+              <p>Копирайтер </p>
+            </div>
+            <p>Напишет специальные текста для вашего сайта, так и для размещения статей на внешних ресурсах.</p>
+          </li>
+          <li>
+            <div class="group-img"><img src="img/proj-group-2.png" alt=""></div>
+            <div class="caption">
+              <p>Специалист</p>
+              <p>по поисковому продвижению</p>
+            </div>
+            <p>Знает все тонкости поискового ранжирования</p>
+          </li>
+          <li>
+            <div class="group-img"><img src="img/proj-group-3.png" alt=""></div>
+            <div class="caption">
+              <p>Программист</p>
+            </div>
+            <p>Доработает техническую часть сайта, проверит валидность кода.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="prices">
+      <div class="content">
+        <h2>Наши тарифы</h2>
+        <div class="clarify">
+          <p>Тарифы не включают в себя рекламный бюджет и стоимость сторонних инструментов — бюджет рекламной кампании формируется в медиаплане.</p>
+          <p>У нас несколько тарифных планов для всех, кто еще не работал с контекстной рекламой и хочет быстро запустить это канал продаж.</p>
+        </div>
+        <div class="prices-list">
+          <ul>
+            <li class="tarif tarif-1">
+              <div class="price-title">
+                <div class="caption">
+                  <p>Быстрый старт</p>
+                </div>
+                <div class="tarif-price">
+                  <p>200$</p>
+                </div>
+                <div class="btn-wrap"><a class="btn pop-up_order_item" href="#">Начать сотрудничество</a></div>
+              </div>
+              <div class="price-info">
+                <ul>
+                  <li>
+                    <p>Технический аудит сайта</p>
+                  </li>
+                  <li>
+                    <p>Ежемесячная техническая </p>
+                  </li>
+                  <li>
+                    <p>Текстовая оптимизация</p>
+                  </li>
+                  <li>
+                    <p>Аналитика и мониторинг</p>
+                  </li>
+                  <li>
+                    <p>До 100 продвигаемых запросов</p>
+                  </li>
+                  <li>
+                    <p>Копирайтинг продвигаемых страниц</p>
+                  </li>
+                  <li>
+                    <p>Размещение внешних ссылок</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="tarif tarif-2">
+              <div class="price-title">
+                <div class="caption">
+                  <p>Стандарт</p>
+                </div>
+                <div class="tarif-price">
+                  <p>400$</p>
+                </div>
+                <div class="btn-wrap"><a class="btn pop-up_order_item" href="#">Начать сотрудничество</a></div>
+              </div>
+              <div class="price-info">
+                <ul>
+                  <li>
+                    <p>Технический аудит сайта</p>
+                  </li>
+                  <li>
+                    <p>Ежемесячная техническая</p>
+                  </li>
+                  <li>
+                    <p>Текстовая оптимизация, аналитика и мониторинг</p>
+                  </li>
+                  <li>
+                    <p>До 200 продвигаемых запросов</p>
+                  </li>
+                  <li>
+                    <p>Копирайтинг продвигаемых страниц</p>
+                  </li>
+                  <li>
+                    <p>Расширение структуры сайта</p>
+                  </li>
+                  <li>
+                    <p>Размещение внешних ссылок</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="tarif tarif-3">
+              <div class="price-title">
+                <div class="caption">
+                  <p>Профессионал</p>
+                </div>
+                <div class="tarif-price white-coin">
+                  <p class="thin">Персональный просчет</p>
+                  <div class="notion">
+                    <p> </p>
+                  </div>
+                </div>
+                <div class="btn-wrap"><a class="btn pop-up_order_item" href="#">Начать сотрудничество</a></div>
+              </div>
+              <div class="price-info">
+                <ul>
+                  <li>
+                    <p>Персональный просчет</p>
+                  </li>
+                  <li>
+                    <p>Технический аудит сайта</p>
+                  </li>
+                  <li>
+                    <p>Ежемесячная техническая</p>
+                  </li>
+                  <li>
+                    <p>Текстовая оптимизация, аналитика и мониторинг 350 запросов с последующим добавлением</p>
+                  </li>
+                  <li>
+                    <p>Копирайтинг продвигаемых страниц</p>
+                  </li>
+                  <li>
+                    <p>Расширение структуры сайта									</p>
+                  </li>
+                  <li>
+                    <p>Размещение внешних ссылок									</p>
+                  </li>
+                  <li>
+                    <p>Юзабилити-аудит</p>
+                  </li>
+                  <li>
+                    <p>Бесплатные seo-доработки</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="faq">
+      <div class="content">
+        <h2>Вопрос-ответ</h2>
+        <ul class="faq-list">
+          <li>
+            <div class="question">
+              <div class="to-open">
+                <div class="l1"></div>
+                <div class="l2"></div>
+              </div>
+              <p>Какие преимущества и недостатки контекстной рекламы?</p>
+            </div>
+            <div class="faq-active">
+              <p><span class="underline">Контекстная реклама </span>— это инструмент, позволяющий привлечь новых покупателей и увеличить продажи в интернете. Пользователю, заинтересованному в приобретении товара или услуги, достаточно ввести запрос в строку поисковика, и он увидит предложения рекламодателей.</p>
+              <p>Это же и является главным преимуществом контекстной рекламы. Ведь так намного повышается вероятность демонстрации рекламного объявления именно потенциальному покупателю и, таким образом, ресурсы не расходуются на незаинтересованную аудиторию. Но и это не все плюсы контекстной рекламы.</p>
+              <div class="caption">
+                <p>Преимущества:</p>
+              </div>
+              <ul class="advantages">
+                <li>
+                  <p>мгновенный результат;</p>
+                </li>
+                <li>
+                  <p>управление рекламным бюджетом в режиме реального времени;</p>
+                </li>
+                <li>
+                  <p>плата только за клик, а не за показ;</p>
+                </li>
+                <li>
+                  <p>точное соответствие интересам пользователей;</p>
+                </li>
+                <li>
+                  <p>фиксированные позиции показа;</p>
+                </li>
+                <li>
+                  <p>возможность выбора точной целевой аудитории - временной, географический и другие виды таргетинга;</p>
+                </li>
+                <li>
+                  <p>развернутая статистика проведения контекстной кампании.</p>
+                </li>
+              </ul>
+              <div class="caption">
+                <p>Недостатки:</p>
+              </div>
+              <ul class="disadvantages">
+                <li>
+                  <p>плата за клик — ведь кликабельность не равна конверсии посетителя в покупателя;</p>
+                </li>
+                <li>
+                  <p>при остановке рекламной кампании поток клиентов сокращается;</p>
+                </li>
+                <li>
+                  <p>рост списка запросов увеличивает расходы.</p>
+                </li>
+              </ul>
+              <h3>Сравнение контекстной рекламы и поискового продвижения</h3>
+              <div class="table">
+                <table>
+                  <tr>
+                    <td></td>
+                    <td class="caption">
+                      <p>Контекстная реклама</p>
+                    </td>
+                    <td class="caption">
+                      <p>Поисковое продвижение</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Скорость результата</p>
+                    </td>
+                    <td>
+                      <div class="plus"></div>
+                      <p>Мгновенный результат</p>
+                    </td>
+                    <td>
+                      <div class="minus"></div>
+                      <p>Результат отложен во времени</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Принцип оплаты</p>
+                    </td>
+                    <td>
+                      <div class="minus"></div>
+                      <p>Оплата за клик, то есть</p>
+                      <p>за каждого посетителя</p>
+                    </td>
+                    <td>
+                      <div class="plus"></div>
+                      <p>Количество посетителей</p>
+                      <p>не зависит от бюджета</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Скорость изменений</p>
+                      <p>рекламной кампании</p>
+                    </td>
+                    <td>
+                      <div class="plus"></div>
+                      <p>Возможность оперативного</p>
+                      <p>внесения изменений в ход</p>
+                      <p>рекламной кампании</p>
+                    </td>
+                    <td>
+                      <div class="minus"></div>
+                      <p>Внесение изменений в ход</p>
+                      <p>рекламной кампании требует</p>
+                      <p>времени</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Долговременность эффекта</p>
+                    </td>
+                    <td>
+                      <div class="minus"></div>
+                      <p>При остановке рекламной</p>
+                      <p>кампании поток клиентов</p>
+                      <p>прекращается</p>
+                    </td>
+                    <td>
+                      <div class="plus"></div>
+                      <p>Долговременный эффект</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Фиксированные позиции размещения</p>
+                    </td>
+                    <td>
+                      <div class="plus"></div>
+                      <p>Фиксированные позиции</p>
+                      <p>размещения</p>
+                    </td>
+                    <td>
+                      <div class="minus"></div>
+                      <p>Возможна нестабильность</p>
+                      <p>позиций</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Рост списка ключевых запросов</p>
+                    </td>
+                    <td>
+                      <div class="minus"></div>
+                      <p>Рост списка ключевых запросов</p>
+                      <p>увеличивает расходы на рекламную</p>
+                      <p>кампанию</p>
+                    </td>
+                    <td>
+                      <div class="plus"></div>
+                      <p>Естественный рост списка запросов</p>
+                      <p>без увеличения затрат</p>
+                    </td>
+                  </tr>
+                </table>
+                <div class="slide-up">
+                  <p>Свернуть</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <div class="to-open">
+                <div class="l1"></div>
+                <div class="l2"></div>
+              </div>
+              <p>Где можно увидеть контекстную рекламу?</p>
+            </div>
+            <div class="faq-active">
+              <div class="clarify underline">
+                <p>Существует две основных системы контекстной рекламы:</p>
+              </div>
+              <p><span class="bold">Яндекс.Директ </span>— крупнейшая российская система контекстной рекламы. Объявления показываются в поисковой выдаче Яндекса и на сайтах-участниках рекламной сети (tut.by, all.by, Rambler.ru и еще более 15 тыс. сайтов).</p>
+              <p><span class="bold">Google.Adwords </span>— показы рекламных объявлений в Google и на многочисленных сайтах – участниках рекламной сети (Google.ru, Google.com.by и более 100 тыс. сайтов).</p>
+              <div class="clarify underline">
+                <p>На страницах результатов поиска объявления могут быть показаны в следующих блоках:</p>
+              </div>
+              <ul class="li-offset">
+                <li>
+                  <div class="caption">
+                    <p>Спецразмещение</p>
+                  </div>
+                  <p>Блок спецразмещения расположен над результатами поиска. Может содержать до трех объявлений. Показы в этом блоке приносят наибольшее количество кликов.</p>
+                </li>
+                <li>
+                  <div class="caption">
+                    <p>Гарантированные показы</p>
+                  </div>
+                  <p>Блок гарантированных показов содержит до четырех объявлений. Как правило, блок гарантированных показов расположен под результатами поиска. В некоторых случаях блок может находиться справа от результатов поиска.</p>
+                </li>
+                <li>
+                  <div class="caption">
+                    <p>Динамические показы</p>
+                  </div>
+                  <p>Блок динамических показов обычно находится под результатами поиска на второй и последующих страницах результатов поиска и содержит до четырех объявлений. Если блок гарантированных показов находится справа от результатов поиска, то блок динамических показов располагается под ним и содержит до пяти объявлений.</p>
+                </li>
+              </ul>
+              <div class="caption">
+                <p>Площадки</p>
+              </div>
+              <div class="clarify underline">
+                <p>Объявления также могут размещаться на различных площадках с таргетингом на ключевые слова, темы и интересы пользователей.</p>
+              </div>
+              <ul class="li-offset">
+                <li>
+                  <p><span class="caption">Рекламная сеть Яндекса (РСЯ) </span> — это система размещения контекстных объявлений и медийных баннеров на страницах сайтов — участников сети. Рекламная сеть объединяет тысячи сайтов, совокупная аудитория которых превышает 73 млн человек в месяц среди них TUT.by, Onliner, Gismeteo и другие.</p>
+                </li>
+                <li>
+                  <p><span class="caption">Контекстно-медийная сеть Google (КМС) </span> — это огромная аудитория с широчайшим спектром интересов, богатый выбор веб-страниц, на которых можно показывать рекламу, гибкие настройки таргетинга и новаторские форматы объявлений. К ним относятся YouTube, Gmail, Formspring.me  и прочие.</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <div class="to-open">
+                <div class="l1"></div>
+                <div class="l2"></div>
+              </div>
+              <p>Что влияет на позицию показа рекламного объявления?</p>
+            </div>
+            <div class="faq-active">
+              <ul class="number">
+                <li>
+                  <p><span class="bold">Кликабельность, или CTR (click-through rate) </span>— отношение числа кликов к общему числу показов. Чем больше кликабельность, тем ниже цена за клик. Для повышения кликабельности рекламное объявление должно точно соответствовать запросам (содержать ключевые слова), быть привлекательным для пользователя, настроено по времени показа, региону и т.д.</p>
+                </li>
+                <li>
+                  <p><span class="bold">Качество рекламной кампании </span>— это сборный показатель, который участвует в расчете того, на какой позиции окажется ваше объявление. Он учитывает множество параметров, но основной — это релевантность: соответствие ключевой фразы написанному объявлению, соответствует ли фраза и объявление той странице сайта, куда они ведут при клике. Помимо этого, система учитывает, как часто пользователи переходя по объявлению, остаются на сайте, а не уходят с него через секунду (показатель отказов).</p>
+                </li>
+                <li>
+                  <p><span class="bold">Уровень конкуренции в вашей тематике: </span>объявления размещаются в зависимости от стоимости, чем дороже ставка за ваше объявление, тем выше оно будет размещено (аукционная модель ценообразования). Начальный ценовой уровень устанавливает рекламный сервис.</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <div class="to-open">
+                <div class="l1"></div>
+                <div class="l2"></div>
+              </div>
+              <p>Как отследить эффективность?</p>
+            </div>
+            <div class="faq-active">
+              <p>Мы стремится повысить качество предоставляемых услуг и постоянно наращивает опыт работы с инструментами, позволяющими определить качество кликов и трафика, который получают наши клиенты. Для этого мы устанавливаем на сайтах наших клиентов специальные счетчики, с помощью которых можно отслеживать эффективность любых рекламных кампаний (например, проводимых на Google AdWords и Яндекс-Директе).</p>
+              <p>Установка счетчиков поможет увидеть, как вели себя посетители, пришедшие на ваш сайт  по рекламе – сколько времени на сайте они провели, сколько страниц просмотрели и какие цели  они выполнили (например, сколько человек заполнило форм для онлайн-заказа, сколько человек дошло до страницы "Контакты" и так далее).</p>
+              <p>Эта информация позволит узнать, насколько эффективно были потрачены средства на рекламу, а также выяснить, как воспринимают сайт посетители, и нет ли на нем "проблемных мест", откуда уходят ваши потенциальные клиенты.</p>
+              <div class="caption">
+                <p>Аудит трафика</p>
+              </div>
+              <p>После проведения рекламной кампании мы проводим аудит трафика и готовим специальный отчет, где указывается, насколько эффективно она прошла с точки зрения поставленных целей. Вы узнаете, сколько стоила каждая конверсия, какие действия посетители выполнили на вашем сайте, и сколько времени они провели. К отчету прикладываются рекомендации с возможными изменениями в рекламной кампании и на самом сайте.</p>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <div class="to-open">
+                <div class="l1"></div>
+                <div class="l2"></div>
+              </div>
+              <p>Сколько стоит контекстная реклама?</p>
+            </div>
+            <div class="faq-active">
+              <p>"Сколько стоит контекстная реклама?" На этот вопрос можно ответить просто — контекстная реклама будет стоить 125$ (первый месяц 175$, так как идёт настройка, запуск, отладка рекламной кампании), так как это минимальный заказ, начиная с которого агентство Flex Media работает с клиентами. Однако однозначного ответа тут нет.</p>
+              <p>Для начала — в контекстной рекламе фиксированный цены "за единицу товара" вообще нет. Причина этого в том, что стоимость продаваемых в контексте кликов определяется аукционом между рекламодателями, так что цена клика в каждый конкретный момент времени может быть разной. Несмотря на то, что площадки часто заявляются о том, что у них можно купить клики от "одного рубля", это не значит, что они готовы завалить рекламодателя дешевым трафиком. На Яндексе и Google, например, есть понятие "минимальная ставка", которая может оказаться куда выше. К счастью, эта минимальная ставка работает только на поиске, а из Сети все еще можно получить клики "по рублю". Только будет их немного — конкуренты ведь не дремлют, а низкая ставка на ваших ключевых словах означает, что вероятность показа объявлений снизится до минимального значения.</p>
+              <p>Чтобы выяснить, какая стоимость клика приемлема при привлечении клиента по "Интернет- каналам" нужно сформулировать свои маркетинговые (а следовательно, вытекающие из них рекламные) задачи в виде четко поставленных целей: например, "стоимость заполненной на сайте анкеты должна равняться X рублям". Но чтобы вычислить эту цифру, нужно знать, сколько анкет конвертируется в продажи, какова прибыль с единицы товара, а следовательно, сколько рублей стоит клик, стоящий в самом начале цепочки "клик &gt; посещение сайта &gt; анкета &gt; продажа". Исследование несложное, но на вопрос "сколько стоит контекстная реклама" отвечает четко.</p>
+              <p>Итак, стоимость контекстной рекламы должна рассчитываться исходя из маркетинговых планов рекламодателя. Конечно, в любом случае можно составить план-прогноз со средними ценами ключевых слов, однако без четкого понимания того, сколько вы готовы платить за клик, вы не сможете понять, дорого это или дешево.</p>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <div class="to-open">
+                <div class="l1"></div>
+                <div class="l2"></div>
+              </div>
+              <p>Зачем после настройки рекламной компании нужно обслуживание?</p>
+            </div>
+            <div class="faq-active">
+              <p>Обслуживание контекстной рекламы позволяет добиваться уменьшения цены клика, которую вы будите затрачивать на рекламу. Уменьшение цены клика достигается путем:</p>
+              <ul style="margin-top:15px;">
+                <li>
+                  <p>регулировки объявлений</p>
+                </li>
+                <li>
+                  <p>отключение ключевых слов которые не конвертируются в звонок, заявку</p>
+                </li>
+                <li>
+                  <p>поиск новых ключевых слов для показа вашей рекламы</p>
+                </li>
+                <li>
+                  <p>коректировки ставок</p>
+                </li>
+                <li>
+                  <p>проведение а/б тестирования, что позволяет увеличить CTR, снизить цену клика</p>
+                </li>
+                <li>
+                  <p>разбивка по регионам</p>
+                </li>
+                <li>
+                  <p>разбивка по каналам показа</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="contacts">
+      <div class="content">
+        <h2>Остались вопросы?</h2>
+        <ul class="contact-list">
+          <li>
+            <div class="caption">
+              <p>Звоните</p>
+            </div><a href="#">+375 29 517 65 08</a>
+          </li>
+          <li>
+            <div class="caption">
+              <p>Пишите</p>
+            </div>
+            <p>hello@nambawan.by</p>
+          </li>
+          <li>
+            <div class="caption">
+              <p>Обратная связь</p>
+            </div><a class="pop-up-order" href="#">Оставить заявку</a>
+          </li>
+        </ul>
+        <div class="clarify">
+          <p>Свяжитесь с нами удобным способом и мы предложим вам варианты решения вашей задачи,</p>
+          <p>составим смету, а затем поможем в реализации вашего проекта</p>
+        </div>
+        <div class="social">
+          <div class="items-bg"></div>
+          <ul>
+            <li><a href="#"><img src="img/fb.svg" alt=""></a></li>
+            <li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+            <li><a href="#"><img src="img/insta.svg" alt=""></a></li>
+            <li><a href="#"><img src="img/youtube.svg" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="content">
+        <ul class="footer-cont">
+          <li class="logo">
+            <div class="logo-img"><img src="img/logo_white.svg" alt=""></div>
+            <div class="logo-txt">
+              <p>Nambawan</p>
+              <p>Маркетинговое агенство</p>
+            </div>
+          </li>
+          <li class="footer-nav">
+            <ul>
+              <li><a href="#">О нас</a></li>
+              <li><a href="http://nambawan.by/index.php?id=5">Портфолио</a></li>
+              <li><a href="http://blog.nambawan.by">Блог</a></li>
+              <li><a href="http://nambawan.by/index.php?id=12">Услуги</a></li>
+              <li><a href="http://nambawan.by/index.php?id=13">Контакты</a></li>
+            </ul><a class="btn" href="#">Презентация агенства</a>
+          </li>
+          <li class="delivery">
+            <p>E-mail рассылка</p>
+            <p>Опыт, идеи, новости, обратная связь</p>
+            <div class="delivery-form form">
+              <form>
+                <input type="text" placeholder="Введите E-mail" required>
+                <button class="btn" href="#">Подписаться</button>
+              </form>
+            </div><a class="policy" href="#">Политика конфиденциальности</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div class="hidden"></div>
+    <!-- Load Scripts-->
+    <div class="pop-up-wrap pop-up-wrap_call">
+      <div class="close"><img src="img/close.png" alt=""></div>
+      <div class="pop-up pop-up_call">
+        <h3>Мы Вам перезвоним!</h3>
+        <form action="">
+          <div class="form-group">
+            <div class="name">
+              <input type="text" id="form-name" name="name">
+              <label for="form-name">Ваше имя</label>
+            </div>
+            <div class="phone">
+              <input type="tel" id="form-phone" name="phone">
+              <label for="form-phone">Телефон</label>
+            </div>
+          </div>
+          <div class="email">
+            <input type="email" id="form-email" name="email">
+            <label for="form-email">Почта</label>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="pop-up-wrap pop-up-wrap_order">
+      <div class="close"><img src="img/close.png" alt=""></div>
+      <div class="pop-up pop-up_order">
+        <h3>Заказать услугу</h3>
+        <form action="">
+          <div class="form-group">
+            <div class="name">
+              <input type="text" id="form-name" name="name">
+              <label for="form-name">Ваше имя</label>
+            </div>
+            <div class="phone">
+              <input type="tel" id="form-phone" name="phone">
+              <label for="form-phone">Телефон</label>
+            </div>
+          </div>
+          <div class="email">
+            <input type="email" id="form-email" name="email">
+            <label for="form-email">Почта</label>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="pop-up-wrap pop-up-wrap_consult">
+      <div class="close"><img src="img/close.png" alt=""></div>
+      <div class="pop-up pop-up_consult">
+        <h3>Заказать консультацию</h3>
+        <form action="">
+          <div class="form-group">
+            <div class="name">
+              <input type="text" id="form-name" name="name">
+              <label for="form-name">Ваше имя</label>
+            </div>
+            <div class="phone">
+              <input type="tel" id="form-phone" name="phone">
+              <label for="form-phone">Телефон</label>
+            </div>
+          </div>
+          <div class="email">
+            <input type="email" id="form-email" name="email">
+            <label for="form-email">Почта</label>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="pop-up-wrap pop-up-wrap_calc">
+      <div class="close"><img src="img/close.png" alt=""></div>
+      <div class="pop-up pop-up_calc">
+        <h3>Наши специалисты помогут рассчитать стоимость в кратчайшие сроки</h3>
+        <form action="">
+          <div class="form-group">
+            <div class="name">
+              <input type="text" id="form-name" name="name">
+              <label for="form-name">Ваше имя</label>
+            </div>
+            <div class="phone">
+              <input type="tel" id="form-phone" name="phone">
+              <label for="form-phone">Телефон</label>
+            </div>
+          </div>
+          <div class="email">
+            <input type="email" id="form-email" name="email">
+            <label for="form-email">Почта</label>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="pop-up-wrap pop-up-wrap_order-item">
+      <div class="close"><img src="img/close.png" alt=""></div>
+      <div class="pop-up pop-up_order-item">
+        <h3>Ваш заказ:</h3>
+        <div class="clarify">
+          <p><span class="txt">Тариф: </span><span class="item-tarif"></span></p>
+          <p><span class="txt">Цена: </span><span class="item-price"></span><span class="item-price-notion"></span></p>
+        </div>
+        <form action="">
+          <div class="form-group">
+            <div class="name">
+              <input type="text" id="form-name" name="name">
+              <label for="form-name">Ваше имя</label>
+            </div>
+            <div class="phone">
+              <input type="tel" id="form-phone" name="phone">
+              <label for="form-phone">Телефон</label>
+            </div>
+          </div>
+          <div class="email">
+            <input type="email" id="form-email" name="email">
+            <label for="form-email">Почта</label>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="arr-2-top"></div>
+    <script>
+      var scr = {"scripts":[
+      {"src" : "js/libs-dist.js", "async" : false},
+      {"src" : "js/common.js", "async" : false}
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>

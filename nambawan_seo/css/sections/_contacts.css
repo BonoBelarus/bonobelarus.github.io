@@ -1,0 +1,85 @@
+#contacts {
+  overflow: hidden;
+  padding: 200px 0 130px;
+  background: #f6f7fb; }
+  #contacts .layout-txt {
+    font-size: 206px;
+    color: #fff; }
+  #contacts .items {
+    font-size: 32px;
+    color: #515151; }
+    #contacts .items li {
+      display: inline-block;
+      width: 33.33%;
+      text-align: center; }
+      #contacts .items li p:first-child {
+        margin-bottom: 20px;
+        font-size: 26px;
+        font-weight: 700;
+        color: #333; }
+    #contacts .items li:last-child a {
+      padding-bottom: 5px;
+      color: #515151;
+      position: relative; }
+    #contacts .items li:last-child a:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background: #c0d5f7; }
+    #contacts .items li:last-child a:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #2962ff;
+      transition: .25s;
+      z-index: 2; }
+    #contacts .items li:last-child a:hover {
+      color: #2962ff; }
+    #contacts .items li:last-child a:hover:before {
+      width: 100%; }
+  #contacts .notion {
+    width: 660px;
+    margin: 55px auto 100px;
+    font-size: 15px;
+    color: #848484;
+    text-align: center; }
+  #contacts .social {
+    text-align: center; }
+    #contacts .social .svg-icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 5px;
+      transition: .25s; }
+    #contacts .social .items-bg {
+      box-shadow: none; }
+    #contacts .social .items {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      z-index: 9;
+      padding: 0;
+      height: 70px;
+      border: 1px solid #dae1e8; }
+    #contacts .social a {
+      display: block; }
+    #contacts .social ul {
+      display: inline-block;
+      overflow: hidden; }
+    #contacts .social li:not(:first-child) {
+      border-left: 1px solid #dae1e8; }
+    #contacts .social li {
+      z-index: 999;
+      transition: .4s;
+      text-align: center;
+      display: inline-block;
+      width: 200px;
+      line-height: 70px;
+      position: relative; }
+    #contacts .social li:hover .svg-icon {
+      opacity: .7; }

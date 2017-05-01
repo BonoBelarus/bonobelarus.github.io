@@ -1,0 +1,136 @@
+#faq
+	padding: 100px 0
+	background-color: #fff
+	.faq-list
+		margin-top: 30px
+		>li
+			border-top: 1px solid #ccc
+		>li.active
+			background-color: #f8f8f9
+	.question
+		position: relative
+		cursor: pointer
+		padding: 20px 50px
+		font-size: 22px
+		font-weight: 600
+		color: #333
+	.faq-active
+		font-size: 15px
+		color: #333
+		padding: 0 50px 50px
+		display: none
+		>p
+			margin-top: 25px
+		.li-offset
+			li:not(:first-child)
+				margin-top: 25px
+		li .caption
+			margin-top: 0
+			vertical-align: middle
+		>.clarify
+			margin: 15px 0
+		li:before
+			font-weight: 300
+			content: '—'
+			height: 1px
+			line-height: 0em
+			top: 10px
+			left: 0px
+			position: absolute
+		li
+			padding-left: 30px
+			position: relative
+	.caption
+		overflow: hidden
+		font-weight: 700
+		margin-top: 30px
+		display: inline-block
+	td.caption
+		display: table-cell
+		padding: 0
+	h3
+		font-size: 20px
+		color: #333
+		font-weight: 700
+		text-align: center
+		margin-top: 70px
+	.table
+		margin-top: 40px
+		font-weight: 700
+		.caption
+			font-size: 18px
+		table
+			font-size: 15px
+			width: 100%
+		tr:first-child
+			line-height: 60px
+			height: 60px
+			background-color: #ededed
+			td
+				padding: 0
+	td
+		padding: 25px 0
+		vertical-align: middle
+	tr:not(:first-child)
+		border-bottom: 1px solid #e4e4e4
+	tr
+		td:first-child
+			text-transform: uppercase
+			width: 40%
+		td:nth-child(2)
+			border-right: 1px solid #e4e4e4
+		td:nth-child(2),
+		td:nth-child(3)
+			width: 30%
+			text-align: center
+	.plus,
+	.minus
+		margin: 0 auto 10px
+		position: relative
+		width: 32px
+		height: 32px
+		border-radius: 50%
+	.plus
+		background-color: #25ae88
+	.minus
+		background-color: #a0a0a0
+	.plus:after
+		content: ''
+		position: absolute
+		height: 20px
+		width: 2px
+		left: 50%
+		margin-left: -1px
+		top: 50%
+		margin-top: -10px
+		background-color: #fff
+	.plus:before,
+	.minus:before
+		content: ''
+		position: absolute
+		width: 20px
+		height: 2px
+		top: 50%
+		left: 50%
+		margin-left: -10px
+		margin-top: -1px
+		background-color: #fff
+	.slide-up
+		line-height: 100px
+		cursor: pointer
+		text-decoration: underline
+		font-weight: 500
+		color: #0581d8
+		font-size: 15px
+#faq
+	.active
+		.to-open
+			box-shadow: 0 0 20px rgba(#000, .3)
+	.number
+		padding-left: 15px
+		li
+			padding: 0
+			list-style-type: decimal
+			margin-top: 25px
+		li:before
+			content: ''

@@ -1,0 +1,552 @@
+.to-open
+	display: block
+#cases
+	padding: 50px 0 100px
+	background-color: #fff
+	h3
+		font-weight: 700
+		font-size: 35px
+		color: #333
+	h2,
+	h3,
+	.notion
+		text-align: left
+	.notion
+		opacity: .4
+		font-weight: 700
+		font-size: 14px
+		text-transform: uppercase
+		margin-bottom: 20px
+	.carousel-nav
+		margin-top: 30px
+		text-align: left
+	.owl-prev.disabled,
+	.owl-next.disabled
+		opacity: .5
+		.prev-wrap,
+		.next-wrap
+			cursor: default
+		.prev:before,
+		.next:after
+			transform: rotateZ(-35deg) !important 
+		.prev:after,
+		.next:before
+			transform: rotateZ(35deg) !important
+	.owl-prev,
+	.owl-next
+		display: inline-block
+
+	.next,
+	.prev,
+	.items-count
+		display: inline-block
+		vertical-align: middle
+	.prev:before
+		left: 0
+		transform: rotateZ(-35deg)
+		transform-origin: left center
+	.prev:after
+		left: 0
+		transform: rotateZ(35deg)
+		transform-origin: left center
+	.next:after
+		right: 0
+		transform: rotateZ(-35deg)
+		transform-origin: right center
+	.next:before
+		right: 0
+		transform: rotateZ(35deg)
+		transform-origin: right center
+	.prev:before,
+	.prev:after,
+	.next:before,
+	.next:after
+		transition: .25s
+		content: ''
+		position: absolute
+		width: 15px
+		height: 1px
+		top: 0
+		background-color: #000
+	.prev-wrap.anim
+		.prev:before
+			transform: rotateZ(-35deg) translateX(10px)
+		.prev:after
+			transform: rotateZ(35deg) translateX(10px)
+	.next-wrap.anim
+		.next:after
+			transform: rotateZ(-35deg) translateX(-10px)
+		.next:before
+			transform: rotateZ(35deg) translateX(-10px)
+	.prev-wrap
+		margin-right: 20px
+	.next-wrap
+		margin-left: 20px
+	.next-wrap,
+	.prev-wrap
+		display: inline-block
+		position: relative
+		width: 30px
+		height: 20px
+		cursor: pointer
+	.prev,
+	.next
+		position: absolute
+		top: 50%
+		left: 0
+		height: 1px
+		width: 30px
+		background-color: #000
+		display: inline-block
+	.items-count
+		font-family: 'Open Sans'
+		color: #666
+		font-size: 18px
+		height: 35px
+		position: relative
+	.total
+		vertical-align: top
+	.current
+		vertical-align: top
+		line-height: .9em
+		color: #333
+		font-size: 37px
+		font-weight: 600
+	.carousel
+		margin-top: 30px
+	.item
+		.to-open
+			display: none
+		.mobile-content
+			padding-bottom: 150px
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+	.clarify-color
+		position: absolute
+		top: 100%
+		left: 50px
+		margin-top: 100px
+		ul
+			display: flex
+			justify-content: flex-start
+			align-items: center
+		li
+			position: relative
+		li:before
+			content: ''
+			position: absolute
+			top: 50%
+			margin-top: -6px
+			left: -20px
+			height: 12px
+			width: 12px
+			border-radius: 50%
+		li:first-child:before
+			background-color: #ede73d
+		li:nth-child(2):before
+			background-color: #033c93
+		li:first-child
+			margin-right: 60px
+	.mark
+		color: #2962ff
+	.item-caption
+		position: relative
+	.item-caption + .clarify
+		margin-top: 10px
+		p:nth-child(2)
+			margin-top: 10px
+			font-size: 23px
+	.to-do,
+	.done
+		.bold
+			text-transform: uppercase
+		>p:not(:first-child)
+			margin-top: 15px
+	.to-do
+		margin-top: 55px
+		max-width: 380px
+	.done
+		margin-top: 30px
+		background-color: #f6f7fb
+		border-radius: 15px
+		padding: 40px 30px
+	.tabs
+		ul
+			display: flex
+			justify-content: flex-end
+		li.active
+			color: #333
+			border: none
+		li
+			cursor: pointer
+			color: #033c93
+			border-bottom: 1px solid #033c93
+		li:first-child
+			margin-right: 30px
+	.tab-content
+		margin-top: 100px
+		>li
+			display: none
+		>li.active
+			display: block
+	.case-graf
+		padding-top: 40px
+		height: 410px
+		max-width: 665px
+		width: 665px
+		margin-right: 5px
+		position: relative
+		.dashes:before
+			content: ''
+			position: absolute
+			height: 40px
+			width: 1px
+			background-color: #ccc
+			bottom: 100%
+			left: -1px
+		.dashes
+			height: 100%
+			width: calc(100% - 60px)
+			top: 30px
+			right: 30px
+			position: absolute
+			border-left: 1px solid #ccc
+			border-bottom: 1px solid #ccc
+			display: flex
+			justify-content: space-between
+			flex-direction: column
+			align-items: center
+		.dashed:before
+			content: ''
+			top: 0
+			margin-top: -10px
+			position: absolute
+			font-size: 13px
+			right: 100%
+			width: 50px
+			margin-right: 30px
+			text-align: right
+		.dashed-1:before
+			content: '2 000'
+		.dashed-2:before
+			content: '1 500'
+		.dashed-3:before
+			content: '1 000'
+		.dashed-4:before
+			content: '500'
+		.dashed-5:before
+			content: '100'
+		.dashed
+			position: relative
+			width: 100%
+			height: 2px
+			background: linear-gradient(to right, rgba(#ccc, .5) 15px, transparent 15px, transparent 20px)
+			background-size: 20px 2px
+		.dashed-6
+			opacity: 0
+		>ul
+			position: absolute
+			top: 100%
+			margin-top: 40px
+			display: flex
+			font-size: 13px
+			justify-content: space-between
+			align-items: center
+			text-transform: uppercase
+			width: 100%
+	.graf-lines
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 30px
+		right: 0
+		.line
+			position: absolute
+			background-color: #033c93
+			height: 2px
+			left: 50%
+			top: 50%
+			width: 0
+			transition: .2s linear
+			transform-origin: left center
+		.line:before,
+		.line:after
+			content: ''
+			position: absolute
+			width: 12px
+			height: 12px
+			border-radius: 50%
+			top: 50%
+			margin-top: -6px
+		.line:after
+			right: -5px
+			background-color: #033c93
+		.line-1:before
+			left: -5px
+			background-color: #033c93
+		.line-1
+			left: 30px
+			top: 100%
+			margin-top: -25px
+			transform: rotateZ(-45deg)
+		.line-2
+			transition-delay: .2s
+			margin-top: 28px
+			margin-left: -150px
+			transform: rotateZ(-35deg)
+		.line-3
+			transition-delay: .4s
+			margin-top: -10px
+			margin-left: -95px
+			transform: rotateZ(35deg)
+		.line-4
+			transition-delay: .6s
+			margin-top: 25px
+			margin-left: -35px
+			transform: rotateZ(-35deg)
+		.line-5
+			transition-delay: .8s
+			margin-top: -20px
+			margin-left: 30px
+			transform: rotateZ(15deg)
+		.line-6
+			transition-delay: 1s
+			margin-top: -3px
+			margin-left: 90px
+			transform: rotateZ(-29deg)
+		.line-7
+			transition-delay: 1.2s
+			margin-top: -34px
+			margin-left: 145px
+			transform: rotateZ(-5deg)
+		.line-8
+			transition-delay: 1.4s
+			margin-left: 210px
+			margin-top: -40px
+			transform: rotateZ(5deg)
+	.labels
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 30px
+		left: 0
+		z-index: 1
+		.label-1
+			left: 5px
+			bottom: 35px
+		.label-2
+			left: 155px
+			bottom: 190px
+		.label-3
+			left: 335px
+			bottom: 235px
+		.label-4
+			right: 0
+			bottom: 250px
+	.label
+		line-height: 25px
+		font-size: 13px
+		font-weight: 600
+		font-family: Raleway, sans-serif
+		text-transform: uppercase
+		text-align: center
+		height: 36px
+		width: 55px
+		background: url(../img/label.svg) center no-repeat
+		position: absolute
+		transform-origin: center
+		opacity: 0
+		transform: scale(0)
+	.item-1
+		.dashed:before
+			content: ''
+		.dashed-1:before
+			content: '10000'
+		.dashed-3:before
+			content: '5000'
+		.label-1
+			left: 5px
+			bottom: 35px
+		.label-2
+			left: 213px
+			bottom: 60px
+		.label-3
+			left: 332px
+			bottom: 110px
+		.label-4
+			left: 462px
+			bottom: 180px
+		.label-5
+			left: 567px
+			bottom: 290px
+		.line
+			opacity: 0
+			left: 30px
+			right: initial !important
+			bottom: 10px
+			top: initial !important
+			margin-top: 0 !important
+			margin-left: 0 !important
+		.line-6
+			transform: translate(430px, -135px)
+		.line-5
+			transform: translate(330px, -85px)
+		.line-4
+			transform: translate(210px, -35px)
+		.line-3
+			transform: translate(85px, -10px)
+		.line-2
+	.item-2,
+	.item-3
+		.label-1
+			margin-left: 600px
+			bottom: 420px
+		.label-2
+			margin-left: 90px
+		.yellow:after
+			background-color: #ede73d
+		.yellow
+			background-color: #ede73d
+		.line-1
+			transform: rotateZ(-19deg)
+			margin-top: -90px
+		.line-7
+			left: 30px
+			top: 100%
+			margin-left: 0
+			margin-top: -40px
+			transform: rotateZ(-24deg)
+		.line-2
+			transform: rotateZ(-20deg)
+			margin-left: -200px
+			margin-top: 80px
+		.line-8
+			transform: rotateZ(-8deg)
+			margin-left: -200px
+			margin-top: 120px
+		.line-3
+			transform: rotateZ(-10deg)
+			margin-left: -60px
+			margin-top: 30px
+		.line-9
+			transform: rotateZ(-15deg)
+			margin-left: -60px
+			margin-top: 100px
+		.line-4
+			transform: rotateZ(-57deg)
+			margin-left: 50px
+			margin-top: 10px
+		.line-10
+			transform: rotateZ(-44deg)
+			margin-left: 50px
+			margin-top: 70px
+		.line-5
+			transform: rotateZ(-45deg)
+			margin-left: 150px
+			margin-top: -140px
+		.line-11
+			transform: rotateZ(-46deg)
+			margin-left: 150px
+			margin-top: -25px
+		.line-6
+			transform: rotateZ(-5deg)
+			margin-left: 200px
+			margin-top: -190px
+		.line-12
+			transform: rotateZ(-37deg)
+			margin-left: 250px
+			margin-top: -125px
+#cases.active .owl-item.active
+		.label
+			animation: label-feature .5s ease forwards
+		.item-2,
+		.item-3
+			.label-1
+				animation-delay: 1.8s
+			.label-2
+				animation-delay: 1.6s
+			.line-1
+				width: 107px
+			.line-2
+				width: 150px
+			.line-3
+				width: 110px
+			.line-4
+				width: 180px
+			.line-5
+				width: 70px
+			.line-6
+				width: 100px
+			.line-7
+				width: 110px
+				transition-delay: .4s
+			.line-8
+				width: 140px
+				transition-delay: .6s
+			.line-9
+				transition-delay: .8s
+				width: 115px
+			.line-10
+				transition-delay: 1s
+				width: 140px
+			.line-11
+				transition-delay: 1.2s
+				width: 142px
+			.line-12
+				transition-delay: 1.4s
+				width: 70px
+		.item-1
+			.label-1
+				animation-delay: 1.4s
+			.label-2
+				animation-delay: 1.55s
+			.label-3
+				animation-delay: 1.7s
+			.label-4
+				animation-delay: 1.85s
+			.label-5
+				animation-delay: 2s
+			.line
+				opacity: 1
+				transition: opacity 0s, transform linear .2s
+			.line-2
+				transition-delay: .4s
+				transform: translate(85px, -10px)
+			.line-3
+				transition-delay: .6s
+				transform: translate(210px, -35px)
+			.line-4
+				transition-delay: .8s
+				transform: translate(330px, -85px)
+			.line-5
+				transition-delay: 1s
+				transform: translate(460px, -155px)
+			.line-6
+				transition-delay: 1.2s
+				transform: translate(565px, -265px)
+		.item-4
+			.label-1
+				animation-delay: 1.6s
+			.label-2
+				animation-delay: 1.7s
+			.label-3
+				animation-delay: 1.8s
+			.label-4
+				animation-delay: 1.9s
+			.line-1
+				width: 215px
+			.line-2
+				width: 70px
+			.line-3
+				width: 70px
+			.line-4
+				width: 80px
+			.line-5
+				width: 65px
+			.line-6
+				width: 65px
+			.line-7
+				width: 65px
+			.line-8
+				width: 95px
