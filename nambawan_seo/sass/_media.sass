@@ -274,6 +274,10 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.case-graf
+		transform: scale(.8)
+		position: absolute
+		left: -5%
 	#cases .item .to-open
 		top: 33px
 		right: 20px
@@ -519,9 +523,18 @@
 		font-size: 23px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 540px)
+	#cases .item .mobile-content
+		padding-bottom: 30px
+	#cases .case-graf
+		margin-top: -150px
+		left: 50%
+		margin-left: -300px
+		transform: scale(.5)
 	#experience .exp-list ul
 		flex-direction: column
 		align-items: center
+		li
+			width: 220px
 @media only screen and (max-width : 480px)
 	.pop-up-wrap .pop-up
 		.clarify
@@ -541,7 +554,8 @@
 		padding: 50px
 
 @media only screen and (max-width : 425px)
-	
+	#cases .tabs
+		font-size: 14px
 	#why-profit .why-profit_cards li
 		flex-direction: column
 		align-items: center
@@ -567,6 +581,12 @@
 		font-size: 17px
 	/**/
 @media only screen and (max-width : 375px)
+	#cases .tabs li:first-child
+		margin-right: 15px
+	#cases .tabs
+		font-size: 12px
+	#cases .case-graf
+		transform: scale(.45)
 	
 	#banner-learn h3
 		font-size: 27px

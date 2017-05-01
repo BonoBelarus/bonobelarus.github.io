@@ -349,6 +349,12 @@ $(document).ready(function(){
 		offset: '20%'
 	});
 
+	$('#steps li').waypoint(function(){
+		this.element.classList.add('active');
+	}, {
+		offset: '70%'
+	});
+
 	$('#cases .tabs li').click(function(){
 		if($(this).hasClass('active') == true){
 			return;

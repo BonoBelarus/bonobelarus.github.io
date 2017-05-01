@@ -29,9 +29,17 @@
 			color: #d4d7e2
 			font-family: 'Open Sans', sans-serif
 		li
+			transition: 1s ease
+			opacity: 0
+			top: 50px
 			max-width: 760px
 			margin: 0 auto
 			position: relative
+		li.active
+			opacity: 1
+			transform: translateY(-50px)
+			.line
+				height: 100px
 		.line:before
 			top: -2px
 		.line:after
@@ -47,12 +55,13 @@
 			border-radius: 50%
 			background-color: #d5dee0
 		.line
+			transition: 1s ease 1s
 			left: 50%
 			margin-left: -1px
 			position: absolute
 			top: 100%
 			margin-top: 25px
-			height: 100px
+			height: 0px
 			width: 2px
 			background: linear-gradient(to top, #d5dee0 5px, transparent 5px, transparent 10px, #d5dee0 10px)
 			background-size: auto 15px

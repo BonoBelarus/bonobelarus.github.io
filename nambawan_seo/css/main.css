@@ -1283,9 +1283,19 @@ header {
       color: #d4d7e2;
       font-family: 'Open Sans', sans-serif; }
     #steps .steps-list li {
+      transition: 1s ease;
+      opacity: 0;
+      top: 50px;
       max-width: 760px;
       margin: 0 auto;
       position: relative; }
+    #steps .steps-list li.active {
+      opacity: 1;
+      -webkit-transform: translateY(-50px);
+      -ms-transform: translateY(-50px);
+      transform: translateY(-50px); }
+      #steps .steps-list li.active .line {
+        height: 100px; }
     #steps .steps-list .line:before {
       top: -2px; }
     #steps .steps-list .line:after {
@@ -1301,12 +1311,13 @@ header {
       border-radius: 50%;
       background-color: #d5dee0; }
     #steps .steps-list .line {
+      transition: 1s ease 1s;
       left: 50%;
       margin-left: -1px;
       position: absolute;
       top: 100%;
       margin-top: 25px;
-      height: 100px;
+      height: 0px;
       width: 2px;
       background: linear-gradient(to top, #d5dee0 5px, transparent 5px, transparent 10px, #d5dee0 10px);
       background-size: auto 15px; }
@@ -1658,6 +1669,8 @@ header {
     font-weight: 600; }
   #cases .carousel {
     margin-top: 30px; }
+  #cases .item img {
+    max-width: 100%; }
   #cases .item .to-open {
     display: none; }
   #cases .item .mobile-content {
@@ -1726,23 +1739,27 @@ header {
     background-color: #f6f7fb;
     border-radius: 15px;
     padding: 40px 30px; }
-  #cases .tabs ul {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end; }
-  #cases .tabs li.active {
-    color: #333;
-    border: none; }
-  #cases .tabs li {
-    cursor: pointer;
-    color: #033c93;
-    border-bottom: 1px solid #033c93; }
-  #cases .tabs li:first-child {
-    margin-right: 30px; }
+  #cases .tabs {
+    position: relative;
+    z-index: 1; }
+    #cases .tabs ul {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
+    #cases .tabs li.active {
+      color: #333;
+      border: none; }
+    #cases .tabs li {
+      cursor: pointer;
+      color: #033c93;
+      border-bottom: 1px solid #033c93; }
+    #cases .tabs li:first-child {
+      margin-right: 30px; }
   #cases .tab-content {
+    position: relative;
     margin-top: 100px; }
     #cases .tab-content > li {
       display: none; }
@@ -3013,6 +3030,12 @@ footer {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  .case-graf {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    position: absolute;
+    left: -5%; }
   #cases .item .to-open {
     top: 33px;
     right: 20px; }
@@ -3309,13 +3332,24 @@ footer {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 540px) {
+  #cases .item .mobile-content {
+    padding-bottom: 30px; }
+  #cases .case-graf {
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -300px;
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5); }
   #experience .exp-list ul {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center; } }
+    align-items: center; }
+    #experience .exp-list ul li {
+      width: 220px; } }
 
 @media only screen and (max-width: 480px) {
   .pop-up-wrap .pop-up .clarify {
@@ -3335,6 +3369,8 @@ footer {
     padding: 50px; } }
 
 @media only screen and (max-width: 425px) {
+  #cases .tabs {
+    font-size: 14px; }
   #why-profit .why-profit_cards li {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -3365,6 +3401,14 @@ footer {
   /**/ }
 
 @media only screen and (max-width: 375px) {
+  #cases .tabs li:first-child {
+    margin-right: 15px; }
+  #cases .tabs {
+    font-size: 12px; }
+  #cases .case-graf {
+    -webkit-transform: scale(0.45);
+    -ms-transform: scale(0.45);
+    transform: scale(0.45); }
   #banner-learn h3 {
     font-size: 27px; }
   #banner-learn {
