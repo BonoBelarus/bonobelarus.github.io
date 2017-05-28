@@ -1,0 +1,102 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-about-1 {
+  background-image: url(../sass/sprites/png-sprite.png);
+  background-position: -144px -114px;
+  width: 46px;
+  height: 42px;
+}
+.icon-about-2 {
+  background-image: url(../sass/sprites/png-sprite.png);
+  background-position: -88px -176px;
+  width: 52px;
+  height: 50px;
+}
+.icon-about-3 {
+  background-image: url(../sass/sprites/png-sprite.png);
+  background-position: -229px -176px;
+  width: 44px;
+  height: 45px;
+}
+.icon-about-4 {
+  background-image: url(../sass/sprites/png-sprite.png);
+  background-position: -64px -290px;
+  width: 43px;
+  height: 43px;
+}
+.icon-adv-1 {
+  background-image: url(../sass/sprites/png-sprite.png);
+  background-position: -339px 0px;
+  width: 37px;
+  height: 53px;
+}
+.icon-adv-2 {
+  background-image: url(../sass/sprites/png-sprite.png);
+  background-position: 0px -290px;
+  width: 44px;
+  height: 44px;
+}
+.icon-adv-3 {
+  background-image: url(../sass/sprites/png-sprite.png);
+  background-position: -160px -176px;
+  width: 49px;
+  height: 49px;
+}
+.icon-adv-4 {
+  background-image: url(../sass/sprites/png-sprite.png);
+  background-position: -210px -114px;
+  width: 49px;
+  height: 39px;
+}
+.icon-arrow-down {
+  background-image: url(../sass/sprites/png-sprite.png);
+  background-position: -339px -73px;
+  width: 8px;
+  height: 21px;
+}
+.icon-logo-2 {
+  background-image: url(../sass/sprites/png-sprite.png);
+  background-position: 0px 0px;
+  width: 124px;
+  height: 156px;
+}
+.icon-logo {
+  background-image: url(../sass/sprites/png-sprite.png);
+  background-position: -144px -66px;
+  width: 110px;
+  height: 28px;
+}
+.icon-made-by {
+  background-image: url(../sass/sprites/png-sprite.png);
+  background-position: -144px 0px;
+  width: 175px;
+  height: 46px;
+}
+.icon-marker {
+  background-image: url(../sass/sprites/png-sprite.png);
+  background-position: 0px -176px;
+  width: 68px;
+  height: 94px;
+}
+.icon-star {
+  background-image: url(../sass/sprites/png-sprite.png);
+  background-position: -339px -114px;
+  width: 14px;
+  height: 13px;
+}
