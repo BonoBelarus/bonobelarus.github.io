@@ -1,3 +1,6 @@
+.quality.active
+	.white-wrap
+		animation: liquid 4s ease forwards
 .quality
 	padding: 150px 0
 	background-color: #fff
@@ -22,10 +25,45 @@
 		p:not(:first-child)
 			margin-top: 40px
 	.right-side
+		.liquid-pack
+			position: relative
+			overflow: hidden
+			img
+				max-width: 100%
+			.contur
+				z-index: 1
+			.contur
+				position: absolute
+				top: 0
+				left: 0
+			.canister-white
+				position: absolute
+				bottom: -20px
+				left: 0
+				width: 100%
+			.white-wrap
+				position: absolute
+				width: 110%
+				height: 100%
+				background-color: #fff
+				top: 0
+				left: -5%
 		.quality-pack
 			display: flex
 			justify-content: flex-start
 			align-items: center
+			.txc.active,
+			.sng.active
+				opacity: 1
+			.txc
+				transition: .15s
+				opacity: 0
+			.sng
+				position: absolute
+				top: 0
+				left: 0
+				opacity: 0
+				transition: .15s
 			>ul
 				margin-top: 50px
 				margin-left: 20px

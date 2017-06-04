@@ -47,7 +47,7 @@ html(lang='ru', class="no-js")
 					li
 						a(href="#products") Продукты
 					li
-						a(href="#advantages") Дизайн
+						a(href="#advantages") Преимущества
 					li
 						a(href="#about") О Texaco
 					li
@@ -58,7 +58,7 @@ html(lang='ru', class="no-js")
 			section#top-sec
 				.content
 					.top-sec_left
-						h1 TEXACO Havo
+						h1 TEXACO Havoline
 						.clarify
 							p Моторное масло для двигателей последнего поколения — 
 							p защита с первых минут!
@@ -90,7 +90,7 @@ html(lang='ru', class="no-js")
 										p 2 самых крупных научных
 										p центра в мире
 					.top-sec_right
-						img(src="img/prod-first-screen.png", alt="")
+						img(draggable="false" src="img/prod-first-screen.png", alt="")
 			section#skidka
 				.content
 					.skidka-left
@@ -104,7 +104,7 @@ html(lang='ru', class="no-js")
 								| со скидкой 67%.
 					.skidka-right
 						form(action="")
-							.caption
+							a(href="#skidka").caption
 								.icon-arrow-down
 								p Скидка 50% на замену масла
 							.name
@@ -121,8 +121,11 @@ html(lang='ru', class="no-js")
 			section#technology
 				.content
 					.tech-left
-						img(src="img/technology.png", alt="")
+						img.shadow(draggable="false" src="img/shadow.png", alt="")
+						img.shield(draggable="false" src="img/shield.png", alt="")
+						img(draggable="false" src="img/deposit_canister.jpg", alt="")
 					.tech-right
+						#technology-anchor
 						h2
 							p Технология
 							p.mark Deposit Shield
@@ -133,16 +136,24 @@ html(lang='ru', class="no-js")
 								span.bold API-SN:
 							ul
 								li
-									p.mark +85%
+									p.mark
+										span.to-count +85
+										span %
 									p защита от отложений
 								li
-									p.mark +30%
+									p.mark
+										span.to-count +30
+										span %
 									p защита от коррозии
 								li
-									p.mark +10%
+									p.mark
+										span.to-count +10
+										span %
 									p защита от износа
 								li
-									p.mark +25%
+									p.mark
+										span.to-count +25
+										span %
 									p защита от износа при
 									p экстремальных нагрузках
 			section#products
@@ -158,16 +169,17 @@ html(lang='ru', class="no-js")
 								.item
 									.product-info
 										.product-img
-											img(src="img/products/ProDSV-5W-30-4.jpg", alt="")
+											.carousel
+												.owl-carousel
+													.item
+														.img
+															img(draggable="false" src="img/products/ProDSV-5W-30-1.jpg", alt="")
+													.item
+														.img
+															img(draggable="false" src="img/products/ProDSV-5W-30-4.jpg", alt="")
 											.capacity
 												p Объём(л)
-												ul
-													li.active
-														p 4
-													li
-														p 1
 										.product-txt
-											p 1
 											h3 Havoline ProDS V 5W-30 
 											p Синтетическое моторное масло премиум-класса. 
 											p Рекомендовано для автомобилей 
@@ -188,20 +200,21 @@ html(lang='ru', class="no-js")
 								.item
 									.product-info
 										.product-img
-											img(src="img/products/ProDS-F-5W-20-4.jpg", alt="")
+											.carousel
+												.owl-carousel
+													.item
+														.img
+															img(draggable="false" src="img/products/ProDS-F-5W-20-1.jpg", alt="")
+													.item
+														.img
+															img(draggable="false" src="img/products/ProDS-F-5W-20-4.jpg", alt="")
 											.capacity
 												p Объём(л)
-												ul
-													li.active
-														p 4
-													li
-														p 1
 										.product-txt
-											p 2
-											h3 Havoline ProDS V 5W-30 
+											h3 Havoline ProDS F SAE 5W-20
 											p Синтетическое моторное масло премиум-класса. 
 											p Рекомендовано для автомобилей 
-												span.bold VW, BMW, Porsche, Mercedes-Benz и Chrysler
+												span.bold Для Volvo (моторное масло с допуском VCC 95200377)
 											ul
 												li
 													p.bold Повышает экономию топлива 
@@ -218,20 +231,21 @@ html(lang='ru', class="no-js")
 								.item
 									.product-info
 										.product-img
-											img(src="img/products/ProDS-M-4.jpg", alt="")
+											.carousel
+												.owl-carousel
+													.item
+														.img
+															img(draggable="false" src="img/products/ProDS-M-1.jpg", alt="")
+													.item
+														.img
+															img(draggable="false" src="img/products/ProDS-M-4.jpg", alt="")
 											.capacity
 												p Объём(л)
-												ul
-													li.active
-														p 4
-													li
-														p 1
 										.product-txt
-											p 3
-											h3 Havoline ProDS V 5W-30 
+											h3 HAVOLINE ProDS M SAE 5W-30
 											p Синтетическое моторное масло премиум-класса. 
 											p Рекомендовано для автомобилей 
-												span.bold VW, BMW, Porsche, Mercedes-Benz и Chrysler
+												span.bold Ford, Jaguar Land Rover и Renault
 											ul
 												li
 													p.bold Повышает экономию топлива 
@@ -248,20 +262,21 @@ html(lang='ru', class="no-js")
 								.item
 									.product-info
 										.product-img
-											img(src="img/products/ProDS-P-0W-30-4.jpg", alt="")
+											.carousel
+												.owl-carousel
+													.item
+														.img
+															img(draggable="false" src="img/products/ProDS-P-0W-30-1.jpg", alt="")
+													.item
+														.img
+															img(draggable="false" src="img/products/ProDS-P-0W-30-4.jpg", alt="")
 											.capacity
 												p Объём(л)
-												ul
-													li.active
-														p 4
-													li
-														p 1
 										.product-txt
-											p 4
-											h3 Havoline ProDS V 5W-30 
+											h3 Havoline ProDS P SAE 0W-30
 											p Синтетическое моторное масло премиум-класса. 
 											p Рекомендовано для автомобилей 
-												span.bold VW, BMW, Porsche, Mercedes-Benz и Chrysler
+												span.bold Renault, Citroën и Peugeot
 											ul
 												li
 													p.bold Повышает экономию топлива 
@@ -309,18 +324,20 @@ html(lang='ru', class="no-js")
 								.item
 									.product-info
 										.product-img
-											img(src="img/products/Ultra-S-5W-30-4.jpg", alt="")
+											.carousel
+												.owl-carousel
+													.item
+														.img
+															img(draggable="false" src="img/products/Ultra-S-5W-30-1.jpg", alt="")
+													.item
+														.img
+															img(draggable="false" src="img/products/Ultra-S-5W-30-4.jpg", alt="")
 											.capacity
 												p Объём(л)
-												ul
-													li.active
-														p 4
-													li
-														p 1
 										.product-txt
-											p 1
 											h3 Havoline Ultra S 5W-30
-											p Рекомендовано для современных автомобилей MercedesBenz, BMW, Fiat и GM (dexos2), включая Opel и Vauxhal
+											p Рекомендовано для современных автомобилей
+												span.bold MercedesBenz, BMW, Fiat и GM (dexos2), включая Opel и Vauxhal
 											ul
 												li
 													p.bold Повышает экономию топлива 
@@ -337,18 +354,20 @@ html(lang='ru', class="no-js")
 								.item
 									.product-info
 										.product-img
-											img(src="img/products/UltraS-5W-40-4.jpg", alt="")
+											.carousel
+												.owl-carousel
+													.item
+														.img
+															img(draggable="false" src="img/products/UltraS-5W-40-1.jpg", alt="")
+													.item
+														.img
+															img(draggable="false" src="img/products/UltraS-5W-40-4.jpg", alt="")
 											.capacity
 												p Объём(л)
-												ul
-													li.active
-														p 4
-													li
-														p 1
 										.product-txt
-											p 2
-											h3 Havoline Ultra S 5W-30
-											p Рекомендовано для современных автомобилей MercedesBenz, BMW, Fiat и GM (dexos2), включая Opel и Vauxhal
+											h3 Havoline Ultra S 5W-40
+											p Рекомендовано для современных автомобилей 
+												span.bold Renault, Mercedes-Benz, Porsche, Fiat, VW, BMW и GM (dexos2), включая Opel и Vauxhall
 											ul
 												li
 													p.bold Повышает экономию топлива 
@@ -365,18 +384,20 @@ html(lang='ru', class="no-js")
 								.item
 									.product-info
 										.product-img
-											img(src="img/products/Ultra-5W-40-4.jpg", alt="")
+											.carousel
+												.owl-carousel
+													.item
+														.img
+															img(draggable="false" src="img/products/Ultra-5W-40-1.jpg", alt="")
+													.item
+														.img
+															img(draggable="false" src="img/products/Ultra-5W-40-4.jpg", alt="")
 											.capacity
 												p Объём(л)
-												ul
-													li.active
-														p 4
-													li
-														p 2
 										.product-txt
-											p 3
-											h3 Havoline Ultra S 5W-30
-											p Рекомендовано для современных автомобилей MercedesBenz, BMW, Fiat и GM (dexos2), включая Opel и Vauxhal
+											h3 Havoline Ultra 5W-40
+											p Рекомендовано для современных автомобилей 
+												span.bold Для Renault, (моторное масло спецификации RN 0720)
 											ul
 												li
 													p.bold Повышает экономию топлива 
@@ -429,18 +450,20 @@ html(lang='ru', class="no-js")
 								.item
 									.product-info
 										.product-img
-											img(src="img/products/Energy-0W-20-4.jpg", alt="")
+											.carousel
+												.owl-carousel
+													.item
+														.img
+															img(draggable="false" src="img/products/Energy-0W-20-1.jpg", alt="")
+													.item
+														.img
+															img(draggable="false" src="img/products/Energy-0W-20-4.jpg", alt="")
 											.capacity
 												p Объём(л)
-												ul
-													li.active
-														p 4
-													li
-														p 1
 										.product-txt
-											p 1
 											h3 Havoline Energy 0W-20
-											p Разработано специально для автомобилей Volvo, требующих применения моторного масла с допуском VCC 95200377
+											p Разработано специально для автомобилей 
+												span.bold Volvo, требующих применения моторного масла с допуском VCC 95200377
 											ul
 												li
 													p.bold Повышает экономию топлива 
@@ -457,18 +480,20 @@ html(lang='ru', class="no-js")
 								.item
 									.product-info
 										.product-img
-											img(src="img/products/Energy-0W-30-4.jpg", alt="")
+											.carousel
+												.owl-carousel
+													.item
+														.img
+															img(draggable="false" src="img/products/Energy-0W-30-1.jpg", alt="")
+													.item
+														.img
+															img(draggable="false" src="img/products/Energy-0W-30-4.jpg", alt="")
 											.capacity
 												p Объём(л)
-												ul
-													li.active
-														p 4
-													li
-														p 1
 										.product-txt
-											p 2
-											h3 Havoline Energy 0W-20
-											p Разработано специально для автомобилей Volvo, требующих применения моторного масла с допуском VCC 95200377
+											h3 Havoline Energy 0W-30
+											p Разработано специально для автомобилей 
+												span.bold Volvo (моторное масло с допуском VCC 95200377)
 											ul
 												li
 													p.bold Повышает экономию топлива 
@@ -485,18 +510,20 @@ html(lang='ru', class="no-js")
 								.item
 									.product-info
 										.product-img
-											img(src="img/products/Energy-5W-30-4.jpg", alt="")
+											.carousel
+												.owl-carousel
+													.item
+														.img
+															img(draggable="false" src="img/products/Energy-5W-30-4.jpg", alt="")
+													.item
+														.img
+															img(draggable="false" src="img/products/Energy-5W-30-4.jpg", alt="")
 											.capacity
 												p Объём(л)
-												ul
-													li.active
-														p 4
-													li
-														p 1
 										.product-txt
-											p 3
-											h3 Havoline Energy 0W-20
-											p Разработано специально для автомобилей Volvo, требующих применения моторного масла с допуском VCC 95200377
+											h3 Havoline Energy 5W-30
+											p Разработано специально для автомобилей 
+												span.bold Ford, Jaguar Land Rover и Renault
 											ul
 												li
 													p.bold Повышает экономию топлива 
@@ -513,18 +540,20 @@ html(lang='ru', class="no-js")
 								.item
 									.product-info
 										.product-img
-											img(src="img/products/EnergyMS-5W-30-4.jpg", alt="")
+											.carousel
+												.owl-carousel
+													.item
+														.img
+															img(draggable="false" src="img/products/EnergyMS-5W-30-1.jpg", alt="")
+													.item
+														.img
+															img(draggable="false" src="img/products/EnergyMS-5W-30-4.jpg", alt="")
 											.capacity
 												p Объём(л)
-												ul
-													li.active
-														p 4
-													li
-														p 1
 										.product-txt
-											p 4
-											h3 Havoline Energy 0W-20
-											p Разработано специально для автомобилей Volvo, требующих применения моторного масла с допуском VCC 95200377
+											h3 Havoline Energy MS 5W-30
+											p Разработано специально для автомобилей 
+												span.bold Renault, Citroën и Peugeot
 											ul
 												li
 													p.bold Повышает экономию топлива 
@@ -541,18 +570,20 @@ html(lang='ru', class="no-js")
 								.item
 									.product-info
 										.product-img
-											img(src="img/products/Energy-EF-5W-30-4.jpg", alt="")
+											.carousel
+												.owl-carousel
+													.item
+														.img
+															img(draggable="false" src="img/products/Energy-EF-5W-30-1.jpg", alt="")
+													.item
+														.img
+															img(draggable="false" src="img/products/Energy-EF-5W-30-4.jpg", alt="")
 											.capacity
 												p Объём(л)
-												ul
-													li.active
-														p 4
-													li
-														p 1
 										.product-txt
-											p 5
-											h3 Havoline Energy 0W-20
-											p Разработано специально для автомобилей Volvo, требующих применения моторного масла с допуском VCC 95200377
+											h3 Havoline Energy EF 5W-30
+											p Разработано специально для автомобилей 
+												span.bold Ford и Jaguar Land Rover
 											ul
 												li
 													p.bold Повышает экономию топлива 
@@ -603,18 +634,19 @@ html(lang='ru', class="no-js")
 						.product-card
 							.product-info
 								.product-img
-									.some-items
-										.item
-											img(src="img/products/Extra-10W-40-1.jpg", alt="")
+									.carousel
+										.owl-carousel
+											.item
+												.img
+													img(draggable="false" src="img/products/Extra-10W-40-1.jpg", alt="")
+											.item
+												.img
+													img(draggable="false" src="img/products/Extra-10W-40-4.jpg", alt="")
+											.item
+												.img
+													img(draggable="false" src="img/products/Extra-10W-40-5.jpg", alt="")
 									.capacity
 										p Объём(л)
-										ul.litres
-											li
-												p 5
-											li.active
-												p 4
-											li
-												p 1
 								.product-txt
 									h3 Havoline Extra 10W-40
 									p Полусинтетическое моторное масло.
@@ -714,7 +746,7 @@ html(lang='ru', class="no-js")
 								p Рено и Ниссан используют эти смазочные материалы
 								p при первоначальной заливке.
 						.right-side
-							img(src="img/banner-sec_img.jpg", alt="")
+							img(draggable="false" src="img/banner-sec_img.jpg", alt="")
 				.quality
 					.content
 						.left-side
@@ -726,15 +758,25 @@ html(lang='ru', class="no-js")
 								p В результате, базовое масло практически полностью состоит из изопарафинов и не содержит ароматических углеводородов пагубно влияющих на двигатель.
 						.right-side
 							.quality-pack
-								img(src="img/quality-pack.png", alt="")
+								.liquid-pack
+									img.contur(src="img/contur.png", alt="")
+									img.canister-red(src="img/canister-red.png", alt="")
+									.white-wrap
+										img.canister-white(src="img/canister-white.png", alt="")
 								ul
 									li
 										.caption
-											p 15%
+											p.txc.active
+												span.to-count 15
+												span %
+											p.sng 10%
 										p Пакет присадок
 									li
 										.caption
-											p 85%
+											p.txc.active
+												span.to-count 85
+												span %
+											p.sng 70%
 										p Базовае масло
 										p высочайшей
 										p очистки
@@ -742,11 +784,11 @@ html(lang='ru', class="no-js")
 											span.bold II+ 
 											| и 
 											span.bold III+ группы
-							.tab-links
+							.tab-links#quality-tabs
 								ul
-									li.active
+									li.txc-link.active
 										p Масла Texaco
-									li
+									li.sng-link
 										p Популярные в СНГ масла
 			//- section#reviews
 			//- 	.content
@@ -758,35 +800,35 @@ html(lang='ru', class="no-js")
 			//- 			.review-box
 			//- 				.item
 			//- 					.item-img
-			//- 						img(src="img/review-1.png", alt="")
+			//- 						img(draggable="false" src="img/review-1.png", alt="")
 			//- 						.rev-name
 			//- 							p Виктор Дизелев
 			//- 					.item-txt
 			//- 						p Масло очень крутое — дико доволен! А все почему? Технология Deposit Shield разработана для наилучшей производительности на основе 100% синтетических базовых масел. Основные преимущества:  низкий расход масла, уверенный запуск двигателя и крайне быстрое поступление масла ко всем смазываемым деталям.
 			//- 				.item
 			//- 					.item-img
-			//- 						img(src="img/review-1.png", alt="")
+			//- 						img(draggable="false" src="img/review-1.png", alt="")
 			//- 						.rev-name
 			//- 							p Виктор Дизелев
 			//- 					.item-txt
 			//- 						p Масло очень крутое — дико доволен! А все почему? Технология Deposit Shield разработана для наилучшей производительности на основе 100% синтетических базовых масел. Основные преимущества:  низкий расход масла, уверенный запуск двигателя и крайне быстрое поступление масла ко всем смазываемым деталям.
 			//- 				.item
 			//- 					.item-img
-			//- 						img(src="img/review-1.png", alt="")
+			//- 						img(draggable="false" src="img/review-1.png", alt="")
 			//- 						.rev-name
 			//- 							p Виктор Дизелев
 			//- 					.item-txt
 			//- 						p Масло очень крутое — дико доволен! А все почему? Технология Deposit Shield разработана для наилучшей производительности на основе 100% синтетических базовых масел. Основные преимущества:  низкий расход масла, уверенный запуск двигателя и крайне быстрое поступление масла ко всем смазываемым деталям.
 			//- 				.item
 			//- 					.item-img
-			//- 						img(src="img/review-1.png", alt="")
+			//- 						img(draggable="false" src="img/review-1.png", alt="")
 			//- 						.rev-name
 			//- 							p Виктор Дизелев
 			//- 					.item-txt
 			//- 						p Масло очень крутое — дико доволен! А все почему? Технология Deposit Shield разработана для наилучшей производительности на основе 100% синтетических базовых масел. Основные преимущества:  низкий расход масла, уверенный запуск двигателя и крайне быстрое поступление масла ко всем смазываемым деталям.
 			//- 				.item
 			//- 					.item-img
-			//- 						img(src="img/review-1.png", alt="")
+			//- 						img(draggable="false" src="img/review-1.png", alt="")
 			//- 						.rev-name
 			//- 							p Виктор Дизелев
 			//- 					.item-txt
@@ -796,11 +838,11 @@ html(lang='ru', class="no-js")
 				.content
 					.expert
 						.item
-							img(src="img/expert.jpg", alt="")
+							img(draggable="false" src="img/expert.jpg", alt="")
 						.item
-							img(src="img/expert.jpg", alt="")
+							img(draggable="false" src="img/expert.jpg", alt="")
 						.item
-							img(src="img/expert.jpg", alt="")
+							img(draggable="false" src="img/expert.jpg", alt="")
 					.expert-txt
 						.item
 							h2 Мнение эксперта
@@ -838,66 +880,66 @@ html(lang='ru', class="no-js")
 					h2 Где купить
 					.map
 						#map
-						script.
-							function initMap() {
-								var styles = [
-								{
-								stylers:
-									[
-										{hue: ''},
-										{saturation: '-90'},
-										{lightness: ''},
-									]
-									},{
-										featureType: "road",
-										elementType: "labels.icon",
-										stylers:
-											[
-												{ lightness: 100 },
-												{ visibility: "simplified" }
-											]
-									},{
-										featureType: "road",
-										elementType: "labels.icon",
-										stylers:
-											[
-												{ visibility: "off" }
-											]
-									}
-								];
+						//- script.
+						//- 	function initMap() {
+						//- 		var styles = [
+						//- 		{
+						//- 		stylers:
+						//- 			[
+						//- 				{hue: ''},
+						//- 				{saturation: '-90'},
+						//- 				{lightness: ''},
+						//- 			]
+						//- 			},{
+						//- 				featureType: "road",
+						//- 				elementType: "labels.icon",
+						//- 				stylers:
+						//- 					[
+						//- 						{ lightness: 100 },
+						//- 						{ visibility: "simplified" }
+						//- 					]
+						//- 			},{
+						//- 				featureType: "road",
+						//- 				elementType: "labels.icon",
+						//- 				stylers:
+						//- 					[
+						//- 						{ visibility: "off" }
+						//- 					]
+						//- 			}
+						//- 		];
 
-								var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
+						//- 		var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
 								
-								var marker = new google.maps.Marker({
-									position: {lat: 53.945806, lng: 27.682972},
-									map: map,
-									title: 'HAVOLINE - Моторное масло для двигателей последнего поколения!',
-									icon: {
-										url: "img/pointer.svg",
-										scaledSize: new google.maps.Size(66, 90)
-									}
-								});
+						//- 		var marker = new google.maps.Marker({
+						//- 			position: {lat: 53.945806, lng: 27.682972},
+						//- 			map: map,
+						//- 			title: 'HAVOLINE - Моторное масло для двигателей последнего поколения!',
+						//- 			icon: {
+						//- 				url: "img/pointer.svg",
+						//- 				scaledSize: new google.maps.Size(66, 90)
+						//- 			}
+						//- 		});
 
-								var mapOptions = {
-									zoom: 17,
-									center: new google.maps.LatLng(53.9445,27.681),
-									animation: google.maps.Animation.DROP,
-									scrollwheel: false,
-									navigationControl: false,
-									mapTypeControl: false,
-									scaleControl: false,
-									icon: 'img/pointer.svg',
-									mapTypeControlOptions: {
-										mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-									}
-								};
-								var map = new google.maps.Map(document.getElementById('map'),
-								mapOptions);
-								map.mapTypes.set('map_style', styledMap);
-								map.setMapTypeId('map_style');
-								marker.setMap(map);
-								}
-						script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCACP5YH-jNEnadFPMq_QHeXIuFPz7N-w0&callback=initMap")
+						//- 		var mapOptions = {
+						//- 			zoom: 17,
+						//- 			center: new google.maps.LatLng(53.9445,27.681),
+						//- 			animation: google.maps.Animation.DROP,
+						//- 			scrollwheel: false,
+						//- 			navigationControl: false,
+						//- 			mapTypeControl: false,
+						//- 			scaleControl: false,
+						//- 			icon: 'img/pointer.svg',
+						//- 			mapTypeControlOptions: {
+						//- 				mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+						//- 			}
+						//- 		};
+						//- 		var map = new google.maps.Map(document.getElementById('map'),
+						//- 		mapOptions);
+						//- 		map.mapTypes.set('map_style', styledMap);
+						//- 		map.setMapTypeId('map_style');
+						//- 		marker.setMap(map);
+						//- 		}
+						//- script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCACP5YH-jNEnadFPMq_QHeXIuFPz7N-w0&callback=initMap")
 						.content
 							.map-box
 								.caption
@@ -950,17 +992,21 @@ html(lang='ru', class="no-js")
 						ul
 							li
 								a(href="https://www.facebook.com/nambawan.by" target="_blank")
-									img(src="img/facebook.png", alt="")
+									img(draggable="false" src="img/facebook.png", alt="")
 							li
 								a(href="https://vk.com/nambawan_by" target="_blank")
-									img(src="img/vk.png", alt="")
+									img(draggable="false" src="img/vk.png", alt="")
 							li
 								a(href="#")
-									img(src="img/twitter.png", alt="")
+									img(draggable="false" src="img/twitter.png", alt="")
 					.made-by
-						p Дизайн и разработка
+						p Дизайн и разработка:
 						a(href="https://nambawan.by" target="_blank")
-							img(src="img/namba-logo.png", alt="Nambawan")
+							.logo
+								img(draggable="false" src="img/namba-logo.svg", alt="Nambawan")
+							.made-by-company
+								p Nambawan
+								p Маркетинговое агенство
 			.popup-wrap.popup-skidka
 				.popup
 					.close
@@ -971,7 +1017,7 @@ html(lang='ru', class="no-js")
 					form(action="")
 						.name
 							label Ваше имя
-							input(type="text" placeholder="Константин" title="Только русские символы" pattern="^[А-Яа-яЁё\s]+$" required)
+							input(type="text" placeholder="Константин" required)
 						.phone
 							label Телефон
 							input(type="tel" placeholder="Скидка привязывается к телефону" required)

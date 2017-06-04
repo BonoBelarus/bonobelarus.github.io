@@ -30,8 +30,9 @@
 		font-size: 16px
 		font-weight: 300
 		.capacity
+			margin-top: 10px
 			position: relative
-			left: -40px
+			left: -65px
 			display: flex
 			justify-content: center
 			align-items: center
@@ -68,50 +69,52 @@
 			left: 0
 		.product-img
 			margin-right: 50px
-			max-width: 220px
+			width: 200px
 			text-align: center
 			position: relative
+			.item
+				width: 200px
+			.img
+				width: 200px
+				text-align: center
 			img
-				max-width: 100%
-			.slick-dots
-				z-index: 1
-				margin-bottom: -25px
-				margin-left: 65px
-				li:before
+				display: inline-block
+			.owl-dots
+				position: absolute
+				left: 75px
+				bottom: -37px
+				>div:hover
+					box-shadow: inset 0 0 0 1px rgba(#000, 1)
+				>div
+					margin: 0 3px
+					display: inline-block
+					border-radius: 4px
+					position: relative
+					height: 18px
+					line-height: 18px
+					text-align: center
+					box-shadow: inset 0 0 0 1px rgba(#000, .5)
+					width: 30px
+					transition: .15s
+				>div.active
+					color: #fff
+					box-shadow: inset 0 0 0 1px rgba(#000, 0)
+					background-color: $red-color
+				>div:before
 					content: ''
 					position: absolute
-					top: 0
-					left: 0
-					line-height: 17px
-					font-size: 11px
-					font-weight: 700
 					width: 100%
 					height: 100%
+					left: 0
+					top: 0
+					line-height: 18px
 					text-align: center
-				li:first-child:before
+				>div:first-child:before
 					content: '1'
-				li:nth-child(2):before
+				>div:nth-child(2):before
 					content: '4'
-				li:nth-child(3):before
+				>div:nth-child(3):before
 					content: '5'
-				li
-					position: relative
-					margin: 0 5px
-					width: 30px
-					height: 17px
-					transition: .25s
-					border-radius: 5px
-					box-shadow: inset 0 0 0 1px rgba(#000, .5)
-					button:before
-						display: none
-					button
-						width: 100%
-						height: 100%
-						margin: 0
-						padding: 0
-				li.slick-active
-					color: #fff
-					box-shadow: inset 0 0 0 10px $red-color
 		.product-txt
 			padding-top: 50px
 			ul
