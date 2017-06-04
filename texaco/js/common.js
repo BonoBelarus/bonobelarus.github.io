@@ -32,12 +32,7 @@ $('form').submit(function(e){
 
 
 $('#expert-opinion .expert').slick({
-	asNavFor: '.expert-txt',
 	dots: true
-});
-$('#expert-opinion .expert-txt').slick({
-	asNavFor: '.expert',
-	arrows: false
 });
 $('.owl-carousel').owlCarousel({
 	items: 1,

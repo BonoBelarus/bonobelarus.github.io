@@ -94,9 +94,9 @@ html(lang='ru', class="no-js")
 			section#skidka
 				.content
 					.skidka-left
-						h2 Скидка 
-							span.mark 67%
-							p на замену масла
+						h2
+							p Заменим масло за  
+							p.mark 1 рубль!
 						.clarify
 							p Заполните форму, и мы заменим масло в вашем
 							p автомобиле на 
@@ -106,7 +106,7 @@ html(lang='ru', class="no-js")
 						form(action="")
 							a(href="#skidka").caption
 								.icon-arrow-down
-								p Скидка 50% на замену масла
+								p Заменим масло за 1 рубль!
 							.name
 								label(for="") Ваше имя
 								input(type="text" placeholder="Введите имя" required)
@@ -769,7 +769,7 @@ html(lang='ru', class="no-js")
 											p.txc.active
 												span.to-count 15
 												span %
-											p.sng 10%
+											p.sng 30%
 										p Пакет присадок
 									li
 										.caption
@@ -835,35 +835,18 @@ html(lang='ru', class="no-js")
 			//- 						p Масло очень крутое — дико доволен! А все почему? Технология Deposit Shield разработана для наилучшей производительности на основе 100% синтетических базовых масел. Основные преимущества:  низкий расход масла, уверенный запуск двигателя и крайне быстрое поступление масла ко всем смазываемым деталям.
 			//- 			.dots
 			section#expert-opinion
+				h2 Отзывы
 				.content
 					.expert
 						.item
 							img(draggable="false" src="img/expert.jpg", alt="")
 						.item
-							img(draggable="false" src="img/expert.jpg", alt="")
+							img(draggable="false" src="img/expert-1.jpg", alt="")
 						.item
-							img(draggable="false" src="img/expert.jpg", alt="")
+							img(draggable="false" src="img/expert-2.jpg", alt="")
+						.item
+							img(draggable="false" src="img/expert-3.jpg", alt="")
 					.expert-txt
-						.item
-							h2 Мнение эксперта
-							p Знаком с продукцией компании Texaco уже боле 10 лет. Не зря продукция этого брэнда присутствует в каждом четвертом автомобиле в мире. Масло прошло испытания как в городском,так и в экстремальном режиме и ни разу не подвело. Отец проехал на Форд Мондео 2000 г.в. 2.0 бензин уже 600 тыс км. замена масла раз в 9 тыс км. А я неоднократно испытал масло в экстремальных условиях.
-							p(style="margin-top: 40px") С уверенностью могу сказать:
-							p.bold масло Texaco — выбор нашей семьи
-							.expert-info
-								.name.bold
-									p Алексей Вишневский
-								.clarify
-									p Трёхкратный чемпион Беларуси по дрифтингу
-						.item
-							h2 Мнение эксперта
-							p Знаком с продукцией компании Texaco уже боле 10 лет. Не зря продукция этого брэнда присутствует в каждом четвертом автомобиле в мире. Масло прошло испытания как в городском,так и в экстремальном режиме и ни разу не подвело. Отец проехал на Форд Мондео 2000 г.в. 2.0 бензин уже 600 тыс км. замена масла раз в 9 тыс км. А я неоднократно испытал масло в экстремальных условиях.
-							p(style="margin-top: 40px") С уверенностью могу сказать:
-							p.bold масло Texaco — выбор нашей семьи
-							.expert-info
-								.name.bold
-									p Алексей Вишневский
-								.clarify
-									p Трёхкратный чемпион Беларуси по дрифтингу
 						.item
 							h2 Мнение эксперта
 							p Знаком с продукцией компании Texaco уже боле 10 лет. Не зря продукция этого брэнда присутствует в каждом четвертом автомобиле в мире. Масло прошло испытания как в городском,так и в экстремальном режиме и ни разу не подвело. Отец проехал на Форд Мондео 2000 г.в. 2.0 бензин уже 600 тыс км. замена масла раз в 9 тыс км. А я неоднократно испытал масло в экстремальных условиях.
@@ -880,66 +863,43 @@ html(lang='ru', class="no-js")
 					h2 Где купить
 					.map
 						#map
-						//- script.
-						//- 	function initMap() {
-						//- 		var styles = [
-						//- 		{
-						//- 		stylers:
-						//- 			[
-						//- 				{hue: ''},
-						//- 				{saturation: '-90'},
-						//- 				{lightness: ''},
-						//- 			]
-						//- 			},{
-						//- 				featureType: "road",
-						//- 				elementType: "labels.icon",
-						//- 				stylers:
-						//- 					[
-						//- 						{ lightness: 100 },
-						//- 						{ visibility: "simplified" }
-						//- 					]
-						//- 			},{
-						//- 				featureType: "road",
-						//- 				elementType: "labels.icon",
-						//- 				stylers:
-						//- 					[
-						//- 						{ visibility: "off" }
-						//- 					]
-						//- 			}
-						//- 		];
+						script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGcx1ShLxo35MlMYJ0vZV8G9Dp03TLVPk&callback=initMap")
+						script.
+							var locations = [
+								["Автоцентр Сухарево", 53.8932826,27.4891187, "img/pointer.png"],
+								["СТО РС-АВТО", 53.8341412,27.6381415, "img/pointer.png"],
+								["РС-АВТО", 53.8931628,27.4666693, "img/pointer.png"],
+								["ЛР Премиум Ремонт автомобилей Land Rover, Jaguar", 53.803534,27.6845963, "img/pointer.png"],
+								["Витебский проспект 12", 53.8822456,30.4029815, "img/pointer.png"],
+								["СТО на Варшавке", 52.076152,23.7263387, "img/pointer.png"],
+								["АвтоКАН", 55.1650549,30.2042021, "img/pointer.png"],
+							];
+							var map = new google.maps.Map(document.getElementById('map'), {
+								zoom: 6,
+								center: new google.maps.LatLng(53.9445773,30.8749126),
+								mapTypeId: google.maps.MapTypeId.ROADMAP
+							});
 
-						//- 		var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
-								
-						//- 		var marker = new google.maps.Marker({
-						//- 			position: {lat: 53.945806, lng: 27.682972},
-						//- 			map: map,
-						//- 			title: 'HAVOLINE - Моторное масло для двигателей последнего поколения!',
-						//- 			icon: {
-						//- 				url: "img/pointer.svg",
-						//- 				scaledSize: new google.maps.Size(66, 90)
-						//- 			}
-						//- 		});
+							var infowindow = new google.maps.InfoWindow();
+							var marker, i;
 
-						//- 		var mapOptions = {
-						//- 			zoom: 17,
-						//- 			center: new google.maps.LatLng(53.9445,27.681),
-						//- 			animation: google.maps.Animation.DROP,
-						//- 			scrollwheel: false,
-						//- 			navigationControl: false,
-						//- 			mapTypeControl: false,
-						//- 			scaleControl: false,
-						//- 			icon: 'img/pointer.svg',
-						//- 			mapTypeControlOptions: {
-						//- 				mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-						//- 			}
-						//- 		};
-						//- 		var map = new google.maps.Map(document.getElementById('map'),
-						//- 		mapOptions);
-						//- 		map.mapTypes.set('map_style', styledMap);
-						//- 		map.setMapTypeId('map_style');
-						//- 		marker.setMap(map);
-						//- 		}
-						//- script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCACP5YH-jNEnadFPMq_QHeXIuFPz7N-w0&callback=initMap")
+							for (i = 0; i < locations.length; i++) {
+								marker = new google.maps.Marker({
+									position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+									map: map,
+									icon: {
+										url: locations[i][3],
+										scaledSize: new google.maps.Size(34, 38)
+									}
+								});
+								google.maps.event.addListener(marker, 'click', (function(marker, i) {
+									return function() {
+										infowindow.setContent(locations[i][0]);
+										infowindow.open(map, marker);
+									console.log(this);
+									}
+								})(marker, i));
+							}
 						.content
 							.map-box
 								.caption
@@ -969,11 +929,10 @@ html(lang='ru', class="no-js")
 						ul
 							li
 								.caption
-									p Скидка 
-										span.mark 67% 
-										| на замену масла
+									p Заменим масло за  
+										span.mark 1 рубль!
 								.clarify
-									p Заполните форму, и мы заменим масло в вашем автомобиле на Havoline cо скидкой 67%.
+									p Заполните форму, и мы заменим масло в вашем автомобиле на Havoline всего за 1 рубль.
 								.btn-wrap
 									p.btn.to-skidka.to-popup ПОЛУЧИТЬ СКИДКУ
 							li
@@ -996,24 +955,23 @@ html(lang='ru', class="no-js")
 							li
 								a(href="https://vk.com/nambawan_by" target="_blank")
 									img(draggable="false" src="img/vk.png", alt="")
-							li
-								a(href="#")
-									img(draggable="false" src="img/twitter.png", alt="")
 					.made-by
 						p Дизайн и разработка:
 						a(href="https://nambawan.by" target="_blank")
 							.logo
-								img(draggable="false" src="img/namba-logo.svg", alt="Nambawan")
+								svg(version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve")
+									g(id="New_Symbol")
+										g
+											polygon(fill="#EE2528" class="st0" points="20.3,0.1 18.6,1.9 22.1,1.9 22,22 2,22 1.9,1.9 15.8,1.9 17.5,0.1 0.2,0.1 0,24 24,24 23.8,0.1")
+											path(fill="#EE2528" class="st0" d="M8.9,10v8.4H6.3V5.3h1.8l6.9,8.6V5.3h2.6v13.1h-1.9L8.9,10z")
 							.made-by-company
 								p Nambawan
-								p Маркетинговое агенство
 			.popup-wrap.popup-skidka
 				.popup
 					.close
 					.caption
-						p Скидка 
-							span.mark 67%
-						p на замену масла
+						p Заменим масло за  
+						p.mark 1 рубль
 					form(action="")
 						.name
 							label Ваше имя
