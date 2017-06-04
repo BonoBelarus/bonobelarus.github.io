@@ -115,7 +115,7 @@ html(lang='ru', class="no-js")
 								input(type="tel" placeholder="Скидка привязывается к телефону" required)
 							.email
 								label(for="") Почта
-								input(type="email" pattern=".{7,20}" placeholder="Пришлем адреса наших автосервисов")
+								input(type="email" pattern=".{7,20}" placeholder="Пришлем адреса наших автосервисов" required)
 							.btn-wrap
 								button.btn ПОЛУЧИТЬ СКИДКУ
 			section#technology
@@ -921,7 +921,7 @@ html(lang='ru', class="no-js")
 					.notion
 						p Подписывайтесь на нас и будьте в курсе новостей и акций.
 				.gallery
-					img(src="img/gallery.jpg", alt="")
+					img.to-left(src="img/gallery.jpg", alt="")
 				.content
 					.questions
 						ul
@@ -949,10 +949,10 @@ html(lang='ru', class="no-js")
 					.social
 						ul
 							li
-								a(href="#")
+								a(href="https://www.facebook.com/nambawan.by" target="_blank")
 									img(src="img/facebook.png", alt="")
 							li
-								a(href="#")
+								a(href="https://vk.com/nambawan_by" target="_blank")
 									img(src="img/vk.png", alt="")
 							li
 								a(href="#")
