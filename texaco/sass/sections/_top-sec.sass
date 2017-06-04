@@ -1,0 +1,79 @@
+#top-sec:before
+	content: ''
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, .9)
+#top-sec
+	color: #ccc
+	background: url(../img/top-sec-bg.jpg) center no-repeat
+	background-size: cover
+	position: relative
+	height: 100vh
+	line-height: 1.5em
+	.content
+		height: inherit
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+	h1
+		margin: 0
+		line-height: 1em
+		color: $red-color
+		font-size: 100px
+	.clarify
+		margin-top: 40px
+	.features
+		font-weight: 300
+		max-width: 540px
+		ul
+			display: flex
+			justify-content: flex-start
+			flex-wrap: wrap
+		li:nth-child(odd)
+			margin-right: 40px
+		li
+			margin-top: 80px
+			display: flex
+			justify-content: flex-start
+		.ft-img
+			margin-right: 10px
+
+@media only screen and (max-width : 1365px)
+	#top-sec
+		.content
+			padding-left: 40px
+			padding-right: 40px
+		h1
+			font-size: 77px
+	.top-sec_right
+		max-width: 250px
+		img
+			max-width: 100%
+	#top-sec .features li
+		margin-top: 50px
+
+@media only screen and (max-width : 1200px)
+	#top-sec
+		font-size: 14px
+
+@media only screen and (max-width : 991px)
+	#top-sec
+		padding: 120px 0 60px
+		height: initial
+	#top-sec
+		.content
+			flex-direction: column-reverse
+		.top-sec_left
+			margin-top: 50px
+
+@media only screen and (max-width : 767px)
+	#top-sec .clarify p
+		display: inline
+
+@media only screen and (max-width : 424px)
+	#top-sec h1
+		font-size: 57px

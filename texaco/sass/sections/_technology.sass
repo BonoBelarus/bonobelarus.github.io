@@ -1,0 +1,68 @@
+#technology
+	padding: 130px 0
+	background-color: #fff
+	color: #414042
+	font-weight: 300
+	.content
+		display: flex
+		justify-content: space-between
+		align-items: center
+	h2
+		font-size: 90px
+	.clarify
+		margin-top: 30px
+		font-size: 18px
+		line-height: 1.5em
+	.compare
+		margin-top: 70px
+		>p
+			font-size: 21px
+			opacity: .6
+		ul
+			display: flex
+			justify-content: flex-start
+			flex-wrap: wrap
+		li
+			margin-top: 40px
+			width: 50%
+		.mark
+			font-size: 54px
+			font-weight: 400
+			font-family: 'Bebas Neue'
+
+@media only screen and (max-width : 1365px)
+	#technology
+		padding: 80px 0
+		h2
+			font-size: 67px
+		.tech-left
+			padding: 0 50px
+			img
+				max-width: 400px
+	#technology .compare
+		margin-top: 50px
+
+@media only screen and (max-width : 1200px)
+	#technology .tech-left img
+		max-width: 300px
+
+@media only screen and (max-width : 991px)
+	#technology
+		.content
+			flex-direction: column
+			padding: 0 20px
+			max-width: 540px
+
+@media only screen and (max-width : 424px)
+	#technology
+		padding: 50px 0
+		.tech-left
+			padding: 0
+	#technology .compare ul
+		flex-direction: column
+		align-items: center
+		text-align: center
+		li
+			width: 100%
+	#technology h2
+		font-size: 57px

@@ -1,0 +1,120 @@
+#expert-opinion
+	color: #fff
+	font-weight: 300
+	font-size: 17px
+	line-height: 1.5em
+	background-color: #e9e9e9
+	.content
+		padding: 65px 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+		>div
+			width: 100%
+		h2
+			font-size: 54px
+			color: $red-color
+			margin-bottom: 40px
+		.expert
+			max-width: 450px
+			text-align: right
+			img
+				max-width: 100%
+			.expert-info
+				display: inline-block
+				text-align: center
+				line-height: 1.2em
+			.name
+				font-size: 18px
+				font-weight: 700
+			.position
+				font-size: 14px
+				opacity: .7
+		.slick-prev:before,
+		.slick-prev:after
+			margin-left: -8px
+			transform-origin: left center
+		.slick-prev:after
+			transform: rotateZ(35deg)
+		.slick-prev:before
+			transform: rotateZ(-35deg)
+		.slick-next:before,
+		.slick-next:after
+			margin-left: -8px
+			transform-origin: right center
+		.slick-next:after
+			transform: rotateZ(35deg)
+		.slick-next:before
+			transform: rotateZ(-35deg)
+		.slick-prev:hover:before,
+		.slick-next:hover:before
+			transform: rotateZ(-25deg)
+		.slick-next:hover:after,
+		.slick-prev:hover:after
+			transform: rotateZ(25deg)
+		.slick-prev:before,
+		.slick-prev:after,
+		.slick-next:before,
+		.slick-next:after
+			content: ''
+			transition: .25s
+			position: absolute
+			top: 50%
+			margin-top: -1px
+			left: 50%
+			height: 2px
+			width: 15px
+			background-color: #fff
+		.slick-prev,
+		.slick-next
+			z-index: 1
+			width: 30px
+			height: 30px
+			background-color: $red-color
+		.slick-next
+			left: 100%
+			margin-left: -15px
+		.slick-prev
+			left: -15px
+		.item
+			outline: none
+		.expert-txt
+			max-width: 600px
+			padding: 50px 60px
+			background-color: #212121
+			font-size: 15px
+			.expert-info
+				font-size: 14px
+				margin-top: 50px
+			li:not(:first-child)
+				margin-top: 30px
+			.caption
+				font-size: 18px
+				font-weight: 700
+				color: $red-color
+		.slick-dots
+			bottom: 10px
+		.slick-dots li.slick-active
+			box-shadow: inset 0 0 0 10px $red-color
+		.slick-dots li
+			border-radius: 50%
+			box-shadow: inset 0 0 0 1px $red-color
+			transition: .35s
+			width: 12px
+			height: 12px
+
+@media only screen and (max-width : 1200px)
+	#expert-opinion .content
+		flex-direction: column
+	#expert-opinion .content .expert-txt
+		margin-top: -30px
+
+@media only screen and (max-width : 510px)
+	#expert-opinion .content .expert-txt
+		padding: 20px
+	#expert-opinion .content .slick-prev
+		left: 5px
+	#expert-opinion .content .slick-next
+		left: initial
+		right: 5px
+		margin-left: 0
