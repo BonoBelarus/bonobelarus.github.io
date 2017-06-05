@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#EE2528;}
-</style>
-<g id="New_Symbol">
-	<g>
-		<polygon class="st0" points="20.3,0.1 18.6,1.9 22.1,1.9 22,22 2,22 1.9,1.9 15.8,1.9 17.5,0.1 0.2,0.1 0,24 24,24 23.8,0.1 		"/>
-		<path class="st0" d="M8.9,10v8.4H6.3V5.3h1.8l6.9,8.6V5.3h2.6v13.1h-1.9L8.9,10z"/>
-	</g>
-</g>
-</svg>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><style>.st0{fill:#ee2528}</style><g id="New_Symbol"><path class="st0" d="M20.3.1l-1.7 1.8h3.5L22 22H2L1.9 1.9h13.9L17.5.1H.2L0 24h24L23.8.1z"/><path class="st0" d="M8.9 10v8.4H6.3V5.3h1.8l6.9 8.6V5.3h2.6v13.1h-1.9L8.9 10z"/></g></svg>
