@@ -1,0 +1,79 @@
+#advantages
+	padding: 100px 0
+	.content
+		padding: 110px 45px
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		background-color: #fff
+	h2
+		font-size: 59px
+		text-align: left
+		color: #231f20
+		margin-right: 60px
+
+	.adv-list
+		font-size: 15px
+		max-width: 530px
+		font-weight: 300
+		ul
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+			flex-wrap: wrap
+		li
+			margin-top: 100px
+			width: 50%
+			display: flex
+			justify-content: flex-start
+			align-items: flex-start
+			.adv-img
+				margin-right: 20px
+			.caption
+				font-weight: 700
+				margin-bottom: 10px
+		li:first-child,
+		li:nth-child(2),
+			margin: 0
+
+@media only screen and (max-width : 1365px)
+	#advantages
+		.content
+			padding: 80px 40px
+
+@media only screen and (max-width : 1200px)
+	#advantages
+		h2
+			font-size: 57px
+	#advantages .adv-list li
+		margin-top: 75px
+
+@media only screen and (max-width : 991px)
+	#advantages
+		h2
+			margin-bottom: 45px
+			max-width: 500px
+			text-align: center
+			p
+				display: inline
+		.content
+			flex-direction: column
+			align-items: center
+
+@media only screen and (max-width : 767px)
+	#advantages
+		padding: 50px 0
+		h2
+			margin-right: 0
+	#advantages .adv-list li
+		width: 100%
+		margin: 0
+	#advantages .adv-list li:not(:first-child)
+		margin-top: 30px
+
+@media only screen and (max-width : 424px)
+	#advantages
+		h2
+			font-size: 47px
+		.content
+			padding: 50px 20px

@@ -1,0 +1,173 @@
+.quality.active
+	.white-wrap
+		animation: liquid 4s ease forwards
+.quality
+	padding: 150px 0
+	background-color: #fff
+	font-weight: 300
+	line-height: 1.5em
+	.content
+		display: flex
+		justify-content: space-between
+		align-items: center
+	h2
+		font-size: 62px
+	.left-side
+		max-width: 600px
+	.nb
+		margin-top: 70px
+		padding-left: 20px
+		border-left: 2px solid $red-color
+		font-size: 21px
+	.txt
+		font-size: 17px
+		margin-top: 40px
+		p:not(:first-child)
+			margin-top: 40px
+	.right-side
+		.liquid-pack
+			position: relative
+			overflow: hidden
+			img
+				max-width: 100%
+			.contur
+				z-index: 1
+			.contur
+				position: absolute
+				top: 0
+				left: 0
+			.canister-white
+				position: absolute
+				bottom: -20px
+				left: 0
+				width: 100%
+			.white-wrap
+				position: absolute
+				width: 110%
+				height: 100%
+				background-color: #fff
+				top: 0
+				left: -5%
+		.quality-pack
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			.txc.active,
+			.sng.active
+				opacity: 1
+			.txc
+				transition: .15s
+				opacity: 0
+			.sng
+				position: absolute
+				top: 0
+				left: 0
+				opacity: 0
+				transition: .15s
+			>ul
+				margin-top: 50px
+				margin-left: 20px
+				li:before
+					content: ''
+					position: absolute
+					height: 1px
+					width: 35px
+					top: 15px
+					margin-top: -1px
+					right: 100%
+					margin-right: 10px
+					background-color: $red-color
+				li:after
+					content: ''
+					position: absolute
+					border-radius: 50%
+					background-color: $red-color
+					width: 5px
+					height: 5px
+					top: 12px
+					right: 100%
+					margin-right: 10px
+				li
+					position: relative
+				li:not(:first-child)
+					margin-top: 40px
+		.caption
+			margin-bottom: 15px
+			font-size: 48px
+			font-weight: 400
+			font-family: 'Bebas Neue'
+	.tab-links
+		margin-top: 35px
+		color: #000
+		font-size: 16px
+		ul
+			display: flex
+			justify-content: space-between
+			align-items: center
+		li:hover
+			border-bottom: 1px dashed rgba(#000, 0)
+		li
+			transition: .15s
+			cursor: pointer
+			border-bottom: 1px dashed rgba(#000, .5)
+		.active
+			border-bottom: 1px dashed transparent
+			font-weight: 700
+			color: $red-color
+
+@media only screen and (max-width : 1365px)
+	.quality
+		padding: 80px 0
+		.content
+			padding-left: 40px
+			padding-right: 40px
+
+@media only screen and (max-width : 1200px)
+	.quality
+		h2
+			font-size: 59px
+	.quality .nb
+		font-size: 18px
+
+@media only screen and (max-width : 991px)
+	.quality
+		h2
+			font-size: 55px
+	.quality .content
+		flex-direction: column-reverse
+	.quality .left-side
+		margin-top: 50px
+
+@media only screen and (max-width : 767px)
+	.quality
+		h2
+			font-size: 51px
+		.nb
+			margin-top: 50px
+
+@media only screen and (max-width : 424px)
+	.quality .right-side .quality-pack > ul
+		width: 100%
+		li:before,
+		li:after
+			display: none
+	.quality .right-side .quality-pack
+		flex-direction: column
+		align-items: center
+		text-align: center
+		p
+			display: inline
+		img
+			width: 100%
+	.quality .content
+		padding-right: 20px
+		padding-left: 10px
+	.quality .right-side .caption
+		font-size: 37px
+	.quality .tab-links
+		font-size: 14px
+	.quality .tab-links
+		li:first-child
+			margin-right: 20px
+	.quality h2
+		font-size: 43px
