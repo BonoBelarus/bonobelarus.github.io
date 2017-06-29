@@ -1,0 +1,40 @@
+.top-sec
+	padding-top: 40px
+	padding-bottom: 150px
+	background-color: #fff
+	.breadcrumbs
+		font-size: 12px
+		opacity: .4
+		a
+			color: $color
+		ul
+			display: flex
+			justify-content: flex-start
+			align-items: center
+		li
+			position: relative
+		li:not(:last-child)
+			margin-right: 20px
+		li:not(:last-child):before
+			content: '»'
+			right: -13px
+			top: 50%
+			margin-top: -14px
+			position: absolute
+	.flex-wrap
+		margin-top: 75px
+	.bullets
+		font-size: 15px
+		margin-top: 22px
+		ul
+			display: flex
+			justify-content: flex-start
+			flex-wrap: wrap
+			align-items: flex-start
+		li
+			margin-top: 38px
+			padding: 5px 0 5px 20px
+			border-left: 3px solid #3dd89d
+			width: 200px
+		li:nth-child(odd)
+			margin-right: 100px

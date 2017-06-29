@@ -1,0 +1,144 @@
+#proizvoditel
+	.about-korea
+		.left-side
+			padding-top: 130px
+			padding-bottom: 130px
+			background: url(../img/map_1.png) calc(50% - 105px) 20px no-repeat
+			text-align: center
+			width: 450px
+			min-width: 450px
+		.country-label-wrapper
+			transform-origin: center bottom
+			animation: wave-country-label 5s ease infinite
+			padding-bottom: 25px
+		.country-label
+			text-align: left
+			width: 230px
+			padding: 15px 15px 30px
+			display: inline-block
+			position: relative
+			background-color: #fff
+			animation: wave-shadow 5s ease infinite
+			.next
+				position: absolute
+				top: 10px
+				right: 0
+				height: 50px
+				width: 25px
+				cursor: pointer
+				opacity: .35
+				transition: .15s
+			.next:hover
+				opacity: .7
+			.next:before,
+			.next:after
+				content: ''
+				transition: .25s
+				position: absolute
+				height: 1px
+				width: 20px
+				background-color: #000
+				top: 50%
+				margin-top: -5px
+				left: 0
+				transform-origin: right center
+			.next:before
+				transform: rotateZ(35deg)
+			.next:after
+				transform: rotateZ(-35deg)
+			.triangle
+				position: absolute
+				width: 30px
+				height: 30px
+				top: 100%
+				left: 50%
+			.triangle:after
+				content: ''
+				position: absolute
+				width: 250%
+				height: 100%
+				background-color: #fff
+				bottom: 100%
+				left: -35px
+			.triangle:before
+				content: ''
+				position: absolute
+				height: 100%
+				width: 100%
+				left: 0
+				top: 0
+				background-color: #fff
+				margin-top: -15px
+				margin-left: -10px
+				transform: rotateZ(60deg) skewX(25deg)
+				box-shadow: 0 10px 30px rgba(0, 0, 0, .25)
+		.country-label-top
+			padding-bottom: 10px
+			display: flex
+			justify-content: space-between
+			align-items: center
+		.country-label-name
+			font-size: 15px
+			font-weight: 700
+			line-height: 1.5em
+			text-transform: uppercase
+		.country-label-content
+			position: relative
+			border-top: 1px solid #f4f4f4
+			padding-top: 10px
+			display: flex
+			justify-content: flex-start
+			align-items: center
+		.country-label-txt
+			opacity: .85
+			font-size: 15px
+			font-weight: 300
+			line-height: 1.2em
+		.country-label-num
+			margin-right: 10px
+			text-transform: uppercase
+			font-weight: 700
+			font-size: 47px
+			font-family: 'Bebas Neue'
+		.right-side
+			padding-top: 130px
+			padding-bottom: 130px
+	
+	.history-line
+		font-size: 14px
+		text-align: center
+		ul
+			display: flex
+			justify-content: flex-start
+			align-items: stretch
+		li.active
+			.year
+				color: #3dd89d
+		li
+			padding: 35px 0
+			width: 25%
+			box-shadow: inset 0 0 0 1px #e3e4e5
+		li:not(:last-child)
+			margin-right: -1px
+			.clarify
+				opacity: .6
+		li:last-child
+			.clarify
+				opacity: .85
+		.year
+			font-size: 42px
+			font-family: 'Bebas Neue'
+		.clarify
+			margin-top: 15px
+			line-height: 1.5em
+	.geografy
+		padding: 60px 40px
+		color: #fff
+		background: #343437 url(../img/map.png) right center no-repeat
+		background-size: contain
+		margin-top: 100px
+		h3
+			font-size: 36px
+		.clarify
+			max-width: 450px
+			font-size: 16px

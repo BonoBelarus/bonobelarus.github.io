@@ -1,0 +1,76 @@
+header
+	border-bottom: 1px solid #e7e9e9
+	.top-line
+		background-color: #f6f6f6
+		.content
+			height: 35px
+			display: flex
+			justify-content: space-between
+			align-items: center
+		ul
+			display: flex
+			justify-content: flex-start
+			align-items: center
+		li
+			position: relative
+		li:not(:first-child)
+			margin-left: 65px
+		li:last-child
+			margin-left: 55px
+		li:before
+			content: ''
+			position: absolute
+			top: 50%
+		li:first-child:before
+			width: 17px
+			height: 17px
+			background: url(../img/time.png) center no-repeat
+			left: -25px
+			margin-top: -7px
+		li:nth-child(2):before
+			width: 21px
+			height: 14px
+			left: -27px
+			margin-top: -7px
+			background: url(../img/mail.png) center no-repeat
+		li:nth-child(3):before
+			width: 17px
+			height: 17px
+			background: url(../img/skype.png) center no-repeat
+			left: -25px
+			margin-top: -8px
+		.company-clarify
+			opacity: .5
+			font-size: 12px
+		.company-info
+			font-size: 14px
+
+.header-menu
+	padding: 20px 0
+	font-weight: 700
+	background-color: #fff
+	.content
+		display: flex
+		justify-content: space-between
+		align-items: center
+	nav
+		margin-left: 140px
+		ul
+			display: flex
+			justify-content: flex-start
+			align-items: center
+		li:not(:first-child)
+			margin-left: 25px
+	a
+		color: #233143
+	.phones
+		line-height: 1.3em
+		font-size: 14px
+		margin-left: 70px
+	.btn
+		margin-left: 20px
+		font-size: 12px
+		color: #3dd89d
+		border: 1px solid #3dd89d
+		padding: 0 20px
+		cursor: pointer

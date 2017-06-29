@@ -1,0 +1,148 @@
+@import '_vars.sass'
+
+a
+	text-decoration: none
+	color: $color
+	display: inline-block
+
+a:focus,
+a:active
+	outline: none
+
+h1 span,
+h2 span,
+h3 span
+	display: block
+
+h1,
+h2,
+h3
+	font-weight: 700
+	line-height: 1.1em
+h1
+	font-size: 60px
+h1+.clarify
+	font-size: 19px
+	margin-top: 28px
+
+h2
+	font-size: 48px
+h2+.clarify
+	margin-top: 25px
+	opacity: .85
+h2+.flex-wrap
+	margin-top: 38px
+	.clarify
+		margin-right: 50px
+		opacity: .85
+		p:not(:first-child)
+			margin-top: 20px
+		.list
+			margin-top: 30px
+			display: flex
+			justify-content: flex-start
+			ul:first-child
+				margin-right: 55px
+			li:not(:first-child)
+				margin-top: 5px
+
+h3
+	font-size: 28px
+	+ .clarify
+		margin-top: 20px
+		opacity: .85
+		p:not(:first-child)
+			margin-top: 20px
+
+.bold
+	font-weight: 700
+
+.main-wrap
+	background-color: #f0f0f0
+	.content
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+	section
+		position: relative
+	section:before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 100%
+		top: 0
+		background-color: #fff
+
+.flex-wrap
+	display: flex
+	justify-content: space-between
+	align-items: stretch
+
+body
+	line-height: 1.4em
+	font-family: 'PT Sans', Arial, Helvetica, sans-serif
+	font-size: 18px
+	color: #233143
+	cursor: default
+	background-color: #fff
+	overflow-x: hidden
+
+.content
+	max-width: 1170px
+	margin: 0 auto
+
+.btn
+	text-transform: uppercase
+	line-height: 40px
+	height: 40px
+	font-weight: 700
+
+.clarify-img
+	font-size: 14px
+	opacity: .5
+	text-align: center
+
+main
+	background-color: #f0f0f0
+	padding-top: 50px
+	section
+		background-color: #fff
+		padding: 70px 0 70px 55px
+	section:not(:first-child)
+		margin-top: 50px
+
+.animated-borders
+	.border
+		position: absolute
+		background-color: #3bd99e
+		transition: .25s
+	.b-t
+		top: 0
+		left: 0
+		width: 0
+		height: 3px
+	.b-r
+		top: 0
+		right: 0
+		width: 3px
+		height: 0
+	.b-b
+		bottom: 0
+		right: 0
+		height: 3px
+		width: 0
+	.b-l
+		bottom: 0
+		left: 0
+		width: 3px
+		height: 0
+	a:hover
+		.b-t
+			width: 100%
+		.b-r
+			height: 100%
+		.b-b
+			width: 100%
+		.b-l
+			height: 100%
