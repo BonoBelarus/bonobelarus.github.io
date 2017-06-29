@@ -1674,6 +1674,26 @@ aside {
     font-size: 14px;
     line-height: 1.5em; }
 
+#model-range .faq {
+  margin-top: 90px; }
+  #model-range .faq > .caption:before {
+    content: '?';
+    position: absolute;
+    opacity: .1;
+    font-size: 80px;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center; }
+  #model-range .faq > .caption {
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 17px; }
+
 #model-range .tabs {
   margin-top: 20px; }
   #model-range .tabs ul {
@@ -2064,6 +2084,12 @@ aside {
   #contact-us .contact-us-box {
     padding: 0 70px 60px;
     border: 2px solid #49daa4; }
+  #contact-us .email {
+    margin-top: 30px;
+    display: inline-block;
+    padding-left: 30px;
+    background: url(../img/mail.png) left center no-repeat;
+    font-weight: 700; }
   #contact-us h2 {
     background-color: #f0f0f0;
     padding: 0 30px;
@@ -2079,6 +2105,7 @@ aside {
     margin-top: 40px;
     font-weight: 700; }
   #contact-us ul {
+    margin-top: 60px;
     padding-left: 30px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -2119,7 +2146,14 @@ aside {
     opacity: .8;
     font-size: 14px; }
   #contact-us .btn-wrap {
-    margin-top: 15px; }
+    margin-top: 15px;
+    padding: 0 40px;
+    background-color: #f0f0f0;
+    position: absolute;
+    bottom: 47px;
+    left: 50%;
+    margin-left: -130px;
+    display: inline-block; }
   #contact-us .btn {
     line-height: 45px;
     height: 45px;
