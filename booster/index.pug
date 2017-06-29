@@ -5,7 +5,7 @@ head
 	meta(name="viewport", content="width=device-width, initial-scale=1.0")
 	meta(http-equiv="X-UA-Compatible", content="ie=edge")
 	title Booster
-	//- link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet")
+	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet")
 	link(href="css/main.css", rel="stylesheet")
 	
 body
@@ -79,25 +79,26 @@ body
 					img( draggable="false" src="img/image-1.png", alt="")
 	.main-wrap
 		.content
-			aside
-				nav
-					ul
-						li
-							a(href="#") Производительность
-						li
-							a(href="#") Особенности
-						li
-							a(href="#") Продукция
-						li
-							a(href="#") Документация
-						li
-							a(href="#") Сфера применения
-						li
-							a(href="#") Объекты
-						li
-							a(href="#") Рекомендуем
-				.btn-wrap
-					a(href="#").btn Опросный лист
+			.aside-wrap
+				aside
+					nav
+						ul
+							li
+								a(href="#proizvoditel") Производительность
+							li
+								a(href="#features") Особенности
+							li
+								a(href="#model-range") Продукция
+							li
+								a(href="#documentation") Документация
+							li
+								a(href="#use-range") Сфера применения
+							li
+								a(href="#objects") Объекты
+							li
+								a(href="#recommended") Рекомендуем
+					.btn-wrap
+						a(href="#").btn Опросный лист
 			main
 				section#proizvoditel
 					h2
@@ -161,11 +162,25 @@ body
 											p в цифрах
 									.country-label-content
 										.next
-										.country-label-num
-											p 11
-										.country-label-txt
-											p экономика
-											p в мире
+										.items
+											div
+												.country-label-num
+													p 11
+												.country-label-txt
+													p экономика
+													p в мире
+											div
+												.country-label-num
+													p 12
+												.country-label-txt
+													p экономика
+													p в мире
+											div
+												.country-label-num
+													p 13
+												.country-label-txt
+													p экономика
+													p в мире
 						.right-side
 							h3
 								span BOOSTER — ведущий производитель
@@ -355,15 +370,18 @@ body
 					.doc-list
 						ul
 							li
-								a(href="#")
+								a(href="img/doc.jpg" data-fancybox="images")
+									img(src="img/doc.jpg", alt="")
 									.doc-name
 										p СЕРТИФИКАТ ТР ТС
 							li
-								a(href="#")
+								a(href="img/doc.jpg" data-fancybox="images")
+									img(src="img/doc.jpg", alt="")
 									.doc-name
 										p СЕРТИФИКАТ ДИЛЕРА
 							li
-								a(href="#")
+								a(href="img/doc.jpg" data-fancybox="images")
+									img(src="img/doc.jpg", alt="")
 									.doc-name
 										p СЕРТИФИКАТ ТР ТС
 				section#use-range
@@ -571,3 +589,8 @@ body
 							img(draggable="false" src="img/logo-namba.png", alt="")
 							p Nambawan
 		.hidden
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+	script(src="js/sticky.js")
+	script(src="js/slick.min.js")
+	script(src="js/jquery.fancybox.min.js")
+	script(src="js/common.js")
