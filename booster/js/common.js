@@ -35,4 +35,38 @@ document.addEventListener('DOMContentLoaded', function(){
 
 		});
 	});
+
+	function scroll2Sec(e){
+		$(e.target).closest('nav').removeClass('active');
+		var link = $(e.currentTarget).attr('href');
+		var section = $(link);
+
+		var xtra_offset = 0;
+		switch(link){
+			case '#where-2-buy':
+			case '#about':
+			case '#products':
+				if($(window).width() > 1024){
+					xtra_offset = 80; break;
+				}else{
+					xtra_offset = -60; break;
+				}
+			case '#technology':
+				if($(window).width() > 1024){
+					xtra_offset = 80; break;
+					toCountNumbers('#technology');
+				}else{
+					toCountNumbers('#technology');
+					xtra_offset = -60; break;
+				}
+			break;
+		}
+		
+		$('body,html').animate({
+			scrollTop: $(section).offset().top + xtra_offset
+		}, 1000);
+		animateNav(e)
+		e.preventDefault();
+	}
+	$('nav a').click(scroll2Sec);
 });
