@@ -1709,7 +1709,7 @@ aside {
     content: '';
     position: absolute;
     width: 11px;
-    height: 3px;
+    height: 2px;
     background-color: #3bd99e;
     opacity: 1;
     top: 50%;
