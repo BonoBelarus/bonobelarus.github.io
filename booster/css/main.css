@@ -1155,6 +1155,8 @@ header {
       content: '';
       position: absolute;
       top: 50%; }
+    header .top-line li:first-child {
+      font-size: 13px; }
     header .top-line li:first-child:before {
       width: 17px;
       height: 17px;
@@ -1354,12 +1356,14 @@ header {
       -webkit-box-align: start;
       -webkit-align-items: flex-start;
       -ms-flex-align: start;
-      align-items: flex-start; }
+      align-items: flex-start;
+      max-width: 500px; }
     .top-sec .bullets li {
       margin-top: 28px;
       padding: 5px 0 5px 20px;
       border-left: 3px solid #3dd89d;
-      width: 200px;
+      width: 200px; }
+    .top-sec .bullets li:nth-child(odd) {
       margin-right: 100px; }
 
 .aside-wrap {
@@ -1433,7 +1437,7 @@ aside {
     top: 0;
     right: 100%;
     z-index: 10;
-    margin-right: 0px;
+    margin-right: 0;
     height: 50px;
     width: 25px;
     cursor: pointer;
@@ -1445,6 +1449,7 @@ aside {
     position: absolute;
     top: 0;
     left: 100%;
+    margin-left: 10px;
     height: 50px;
     width: 25px;
     cursor: pointer;
@@ -1463,7 +1468,7 @@ aside {
     transition: .25s;
     position: absolute;
     height: 1px;
-    width: 20px;
+    width: 13px;
     background-color: #000;
     top: 50%;
     margin-top: -5px;
@@ -1487,7 +1492,7 @@ aside {
     transition: .25s;
     position: absolute;
     height: 1px;
-    width: 20px;
+    width: 13px;
     background-color: #000;
     top: 50%;
     margin-top: -5px;
@@ -1703,9 +1708,9 @@ aside {
   #proizvoditel .history-line li:last-child a:after {
     content: '';
     position: absolute;
-    width: 17px;
-    height: 2px;
-    background-color: #c5c5c5;
+    width: 11px;
+    height: 3px;
+    background-color: #3bd99e;
     opacity: 1;
     top: 50%;
     margin-top: -2px;
@@ -1800,7 +1805,7 @@ aside {
   #features .features-label {
     margin-top: 90px;
     height: 370px;
-    background: url(../img/image-3.png) center no-repeat;
+    background: url(../img/image-3.png) center 0px no-repeat;
     background-size: cover; }
   #features .features-label-box {
     padding: 40px;
@@ -2347,9 +2352,10 @@ aside {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -2357,6 +2363,8 @@ aside {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
+    #contact-us ul li:nth-child(even) {
+      padding-left: 30px; }
     #contact-us ul li {
       margin-top: 15px;
       display: -webkit-box;
@@ -2371,7 +2379,8 @@ aside {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-      width: 40%; }
+      max-width: 325px;
+      width: 100%; }
   #contact-us .phone-num {
     margin-right: 25px;
     font-weight: 700;
