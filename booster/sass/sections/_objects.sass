@@ -7,8 +7,13 @@
 			flex-wrap: wrap
 			align-items: stretch
 		li:hover
+			.object-img
+				img
+					transition: 15s
+					transform: scale(1.5) rotateZ(5deg)
 			.object-img:before
-				opacity: .85
+				opacity: .9
+				line-height: 1.5em
 				transition-delay: 0s
 			.object-img:after
 				opacity: 1
@@ -33,8 +38,10 @@
 			line-height: 50px
 			height: 50px
 			border: 1px solid #fff
+			z-index: 2
 		.object-img:before
 			content: ''
+			z-index: 1
 			position: absolute
 			transition: .25s ease .2s
 			width: 100%
@@ -44,8 +51,10 @@
 			background-color: #62e1b1
 			opacity: 0
 		.object-img
+			overflow: hidden
 			position: relative
 			img
+				transition: 1s ease .1s
 				max-width: 100%
 				display: block
 		.object-info

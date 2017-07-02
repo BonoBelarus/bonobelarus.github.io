@@ -9,7 +9,7 @@
 			flex-wrap: wrap
 		li
 			margin-top: -1px
-			margin-right: -1px
+			margin-left: -1px
 			width: 33.33%
 			a
 				position: relative
@@ -21,10 +21,18 @@
 				width: 100%
 		li:last-child
 			background-color: #f7f7f7
+			a:hover
+				.model-img
+					transform: translateY(-10px)
+				.model-name
+					color: $green
+			.model-img
+				transition: .25s
 			.model-name
+				transition: .05s
 				margin-top: 0
 				padding-left: 20px
-				background: url(../img/icon-download.png) left center no-repeat
+				background: url(../img/svg/download_small.svg) 40px center no-repeat
 				font-size: 16px
 		.model-name
 			margin-top: 20px
@@ -78,9 +86,7 @@
 			transition: .20s
 		li:hover:before
 			height: 3px
-			background-color: #a4dec9
-		li:hover .open:before
-			transform: rotateZ(45deg) translateY(24px)
+			background-color: #3bd99e
 		.caption
 			font-size: 17px
 			font-weight: 700

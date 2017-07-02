@@ -24,19 +24,20 @@ header
 		li:first-child:before
 			width: 17px
 			height: 17px
-			background: url(../img/time.png) center no-repeat
+			top: 50%
+			margin-top: -9px
+			background: url(../img/svg/work_timea.svg) center no-repeat
 			left: -25px
-			margin-top: -7px
 		li:nth-child(2):before
 			width: 21px
 			height: 14px
 			left: -27px
 			margin-top: -7px
-			background: url(../img/mail.png) center no-repeat
+			background: url(../img/svg/email.svg) center no-repeat
 		li:nth-child(3):before
 			width: 17px
 			height: 17px
-			background: url(../img/skype.png) center no-repeat
+			background: url(../img/svg/skype.svg) center no-repeat
 			left: -25px
 			margin-top: -8px
 		.company-clarify
@@ -44,6 +45,9 @@ header
 			font-size: 12px
 		.company-info
 			font-size: 14px
+			li:first-child
+				p
+					opacity: .7
 
 .header-menu
 	padding: 20px 0
@@ -61,13 +65,65 @@ header
 			align-items: center
 		li:not(:first-child)
 			margin-left: 25px
+		a
+			transition: .05s
+		a:hover
+			color: $green
 	a
 		color: #233143
+	.phones:hover
+		border-top: 1px solid #e7e9e9
+		border-left: 1px solid #e7e9e9
+		border-right: 1px solid #e7e9e9
+		.hidden-phones
+			border-bottom: 1px solid #e7e9e9
+			border-left: 1px solid #e7e9e9
+			border-right: 1px solid #e7e9e9
+			opacity: 1
+			li:first-child
+				transition-delay: .1s
+			li:nth-child(2)
+				transition-delay: .2s
+			li
+				opacity: 1
+	.phones:before
+		content: ''
+		position: absolute
+		height: 0
+		width: 0
+		top: 30px
+		transform: rotateZ(45deg)
+		right: 12px
+		border-right: 7px solid #000
+		border-top: 7px solid transparent
+		border-bottom: 7px solid tarnsparent
 	.phones
-		line-height: 1.3em
+		border-top: 1px solid #fff
+		border-left: 1px solid #fff
+		border-right: 1px solid #fff
+		line-height: 1.5em
 		font-size: 14px
 		margin-left: 70px
+		position: relative
+		padding: 15px 30px 0
+		.hidden-phones
+			border-bottom: 1px solid #fff
+			border-left: 1px solid #fff
+			border-right: 1px solid #fff
+			background-color: #fff
+			position: absolute
+			top: 100%
+			left: -1px
+			padding-left: 30px
+			padding-bottom: 15px
+			width: calc(100% + 2px)
+			opacity: 0
+			li
+				transition: .1s
+				opacity: 0
+				transition-delay: 0
 	.btn
+		transition: .1s
 		margin-left: 20px
 		font-size: 12px
 		color: #3dd89d

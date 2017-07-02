@@ -29,15 +29,18 @@ h2
 	font-size: 48px
 h2+.clarify
 	margin-top: 25px
-	opacity: .85
+	opacity: .9
+	line-height: 1.5em
 h2+.flex-wrap
 	margin-top: 38px
 	.clarify
 		margin-right: 50px
-		opacity: .85
+		opacity: .9
+		line-height: 1.5em
 		p:not(:first-child)
 			margin-top: 20px
 		.list
+			font-size: 14px
 			margin-top: 30px
 			display: flex
 			justify-content: flex-start
@@ -50,7 +53,8 @@ h3
 	font-size: 28px
 	+ .clarify
 		margin-top: 20px
-		opacity: .85
+		opacity: .9
+		line-height: 1.5em
 		p:not(:first-child)
 			margin-top: 20px
 
@@ -60,6 +64,7 @@ h3
 .main-wrap
 	background-color: #f0f0f0
 	.content
+		max-width: 1500px
 		display: flex
 		justify-content: flex-start
 		align-items: flex-start
@@ -89,8 +94,21 @@ body
 	overflow-x: hidden
 
 .content
-	max-width: 1170px
+	max-width: 1500px
 	margin: 0 auto
+	padding: 0 50px
+
+body aside .btn-green:hover,
+body section .btn-green:hover,
+body header .btn-green:hover,
+body footer .btn-green:hover,
+	background-color: rgba($green, .8) !important
+	
+body aside .btn-white:hover,
+body section .btn-white:hover,
+body header .btn-white:hover,
+	background-color: $green
+	color: #fff
 
 .btn
 	text-transform: uppercase
@@ -105,7 +123,7 @@ body
 
 main
 	background-color: #f0f0f0
-	padding-top: 50px
+	padding: 50px 0 100px
 	section
 		background-color: #fff
 		padding: 70px 0 70px 55px
@@ -148,4 +166,4 @@ main
 			height: 100%
 
 .is_stuck + div
-	min-width: 150px
+	min-width: 210px
