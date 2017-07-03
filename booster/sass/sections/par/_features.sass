@@ -1,0 +1,106 @@
+#features
+	.left-side
+		max-width: 600px
+	.right-side
+		text-align: center
+		width: 300px
+	.list
+		margin-top: 100px
+		>.caption
+			font-size: 28px
+			text-align: center
+			font-weight: 700
+	.bullets
+		font-size: 14px
+		ul
+			max-width: 100%
+		.caption
+			font-size: 18px
+		.clarify
+			margin-top: 5px
+			opacity: .7
+	.geografy
+		position: relative
+		padding: 60px 60px
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		flex-direction: column
+		color: #fff
+		background: #343437 url(../img/svg/map_dark.svg) calc(100% - 30px) calc(50% - 10px) no-repeat
+		background-size: auto 90%
+		margin-top: 150px
+		.label
+			position: absolute
+			right: 50px
+			bottom: 30px
+			width: 195px
+			height: 195px
+			border-radius: 50%
+			background-color: $green
+			box-shadow: 0 7px 19px rgba(61, 216, 157, 0.3)
+			color: #fff
+			text-align: center
+			display: flex
+			flex-direction: column
+			justify-content: center
+			.caption
+				font-weight: 700
+				font-size: 60px
+				line-height: 1em
+				span
+					vertical-align: middle
+				span:first-child
+					margin-right: -10px
+				.num
+					font-size: 100px
+			.clarify
+				font-size: 17px
+				font-weight: 700
+				margin-top: 15px
+				line-height: 1.1em
+		h3
+			font-size: 36px
+		.clarify
+			font-family: 'PT Sans'
+			max-width: 410px
+			font-size: 16px
+			li:before
+				content: ''
+				position: absolute
+				top: 50%
+				margin-top: -3px
+				width: 5px
+				height: 5px
+				background-color: $green
+				left: 0
+			li
+				padding-left: 15px
+				position: relative
+			li:not(:first-child)
+				margin-top: 5px
+		.notion
+			margin: 25px 0 45px
+
+.chart
+	position: relative
+	svg:hover
+		circle
+			stroke-dasharray: 90
+	svg
+		position: absolute
+		top: 0
+		left: 0
+		circle
+			transform-origin: center
+			transform: rotateZ(-60deg)
+			transition: 1s
+			stroke: #e34f26
+			stroke-width: 5
+			stroke-dasharray: 133
+			fill: #fff
+	img
+		position: absolute
+		max-width: 100px
+		max-height: 100px
+		background: white
