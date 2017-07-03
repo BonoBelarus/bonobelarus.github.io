@@ -1396,10 +1396,12 @@ header {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-top: 35px; }
+    margin-top: 75px; }
     .top-sec .flex-wrap .right-side {
       min-width: 480px;
       text-align: center; }
+  .top-sec .flex-wrap.swep {
+    margin-top: 0; }
   .top-sec .btn-wrap {
     margin-top: 50px; }
     .top-sec .btn-wrap .btn {
