@@ -75,17 +75,17 @@
 			padding-bottom: 15px
 			transition: .25s
 			position: relative
+			border-bottom: 1px solid #e3e4e5
 		li:before
 			content: ''
 			position: absolute
-			background-color: #e3e4e5
-			bottom: 0
+			bottom: -1px
 			left: 0
-			width: 100%
-			height: 1px
+			width: 0
+			height: 2px
 			transition: .20s
 		li:hover:before
-			height: 3px
+			width: 100%
 			background-color: #3bd99e
 		.caption
 			font-size: 17px
@@ -122,12 +122,22 @@
 		ul
 			display: flex
 			justify-content: flex-start
+		li:not(:last-child)
+			border-right: none
 		li
-			display: flex
-			flex-direction: column
-			justify-content: space-between
-			align-items: center
+			border: 1px solid #e3e4e5
+			margin-left: -4px
 			width: 33.33%
+			a:hover
+				.img
+					img
+						transform: translateY(0)
+			a
+				padding-top: 30px
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				align-items: center
 		.icon
 			height: 70px
 			width: 70px
@@ -150,3 +160,7 @@
 				box-shadow: 0 5px 30px rgba(#222225, .7)
 		.img
 			margin-top: 45px
+			img
+				transition: .25s
+				transform: translateY(15px)
+				display: block
