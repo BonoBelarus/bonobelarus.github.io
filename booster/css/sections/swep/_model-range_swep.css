@@ -1,0 +1,12 @@
+#model-range_swep.sass .list ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
+#model-range_swep.sass .list li {
+  width: 33.33%; }

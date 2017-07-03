@@ -113,3 +113,40 @@
 				transform: rotateZ(45deg)
 			.open:after
 				transform: rotateZ(-45deg)
+	.list
+		margin-top: 70px
+		text-align: center
+		.caption
+			margin-top: 20px
+			font-weight: 700
+		ul
+			display: flex
+			justify-content: flex-start
+		li
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			align-items: center
+			width: 33.33%
+		.icon
+			height: 70px
+			width: 70px
+			line-height: 70px
+			border-radius: 50%
+			display: inline-block
+			img
+				vertical-align: middle
+		li:first-child
+			.icon
+				background-color: #ff5e37
+				box-shadow: 0 5px 30px rgba(#ff5e37, .7)
+		li:nth-child(2)
+			.icon
+				background-color: #36c0f4
+				box-shadow: 0 5px 30px rgba(#36c0f4, .7)
+		li:nth-child(3)
+			.icon
+				background-color: #222225
+				box-shadow: 0 5px 30px rgba(#222225, .7)
+		.img
+			margin-top: 45px
