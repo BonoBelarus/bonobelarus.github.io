@@ -1463,41 +1463,42 @@ footer {
         margin-top: 20px;
         font-size: 14px; }
 
-#banner .content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-#banner .left-side {
-  background-color: #f0f5f9;
-  padding: 50px 30px 60px;
-  width: 570px;
-  position: relative; }
-  #banner .left-side .caption {
-    font-family: "Playfair Display";
-    font-size: 60px;
-    font-style: italic;
-    color: #f47aac; }
-    #banner .left-side .caption span {
-      color: #1c2335; }
-  #banner .left-side .clarify {
-    margin-top: 30px; }
-  #banner .left-side .text {
-    font-size: 15px;
-    max-width: 275px; }
-  #banner .left-side .image {
-    position: absolute;
-    top: -50px;
-    right: -90px; }
+#banner {
+  margin-bottom: 150px; }
+  #banner .content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  #banner .left-side {
+    background-color: #f0f5f9;
+    padding: 50px 30px 60px;
+    width: 570px;
+    position: relative; }
+    #banner .left-side .caption {
+      font-family: "Playfair Display";
+      font-size: 60px;
+      font-style: italic;
+      color: #f47aac; }
+      #banner .left-side .caption span {
+        color: #1c2335; }
+    #banner .left-side .clarify {
+      margin-top: 30px; }
+    #banner .left-side .text {
+      font-size: 15px;
+      max-width: 275px; }
+    #banner .left-side .image {
+      position: absolute;
+      top: -50px;
+      right: -90px; }
 
 #best-of:before {
   content: '';
