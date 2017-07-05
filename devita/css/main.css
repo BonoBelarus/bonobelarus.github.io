@@ -1438,6 +1438,8 @@ footer {
       line-height: 1.3em;
       font-size: 12px;
       margin-top: 50px; }
+      #descr-and-rev .item .care img {
+        display: inline-block; }
       #descr-and-rev .item .care .caption {
         text-align: left;
         font-weight: 600;
