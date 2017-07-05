@@ -8,16 +8,16 @@ document.addEventListener('DOMContentLoaded', function(){
 		slidesToShow: 2,
 		asNavFor: $(preview).find('.slider'),
 		infinite: false,
-		nextArrow: '<div class="next-gallery"><img src="../img/arrow-down.png" alt=""></div>',
-		prevArrow: '<div class="prev-gallery"><img src="../img/arrow-down.png" alt=""></div>'
+		nextArrow: '<div class="next-gallery"><img src="img/arrow-down.png" alt=""></div>',
+		prevArrow: '<div class="prev-gallery"><img src="img/arrow-down.png" alt=""></div>'
 	})
 	$(preview).find('.slider').slick({
 		asNavFor: $(gallery),
 		slidesToShow: 1,
 		infinite: false,
 		appendArrows: preview.find('.nav'),
-		nextArrow: '<div class="next-preview"><img src="../img/preview-arrow.png" alt=""></div>',
-		prevArrow: '<div class="prev-preview"><img src="../img/preview-arrow.png" alt=""></div>'
+		nextArrow: '<div class="next-preview"><img src="img/preview-arrow.png" alt=""></div>',
+		prevArrow: '<div class="prev-preview"><img src="img/preview-arrow.png" alt=""></div>'
 	});
 
 	var total_slides = $('#product-card .preview .item');
@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', function(){
 		slidesToShow: 2,
 		variableWidth: true,
 		appendArrows: $('#best-of .nav'),
-		nextArrow: '<div class="next"><img src="../img/best-of-arrow.png" alt=""></div>',
-		prevArrow: '<div class="prev"><img src="../img/best-of-arrow.png" alt=""></div>',
+		nextArrow: '<div class="next"><img src="img/best-of-arrow.png" alt=""></div>',
+		prevArrow: '<div class="prev"><img src="img/best-of-arrow.png" alt=""></div>',
 		dots: true
 	});
 
