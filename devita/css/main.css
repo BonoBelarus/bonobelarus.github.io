@@ -1043,6 +1043,7 @@ footer {
     max-width: 100%; }
 
 #product-card .preview {
+  width: 100%;
   max-width: 490px;
   position: relative; }
   #product-card .preview .item:focus {
