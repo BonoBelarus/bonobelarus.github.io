@@ -1,0 +1,257 @@
+#product-card
+	.content:before
+		content: ''
+		position: absolute
+		height: 100%
+		width: 80%
+		top: 0
+		right: 0
+		background-color: #f3f7fb
+	.content
+		position: relative
+		display: flex
+		justify-content: flex-start
+		align-items: center
+	.left-side
+		position: relative
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+	.gallery
+		position: relative
+		z-index: 1
+		margin: 30px -15px 0 0
+		width: 70px
+		.slick-current
+			img
+				box-shadow: 0 0 0 1px #000
+
+		.item:focus
+			outline: none
+		.slick-list:before,
+		.slick-list:after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 50px
+			left: 0
+			z-index: 1
+		.prev-gallery,
+		.next-gallery
+			position: absolute
+			left: 50%
+			cursor: pointer
+			text-align: center
+			// &.slick-disabled
+			// 	cursor: default
+			// 	opacity: .25
+		.prev-gallery
+			top: 100%
+		.next-gallery
+			transform: rotateZ(180deg)
+			bottom: 100%
+		img
+			max-width: 100%
+	.preview
+		max-width: 490px
+		position: relative
+		.item:focus
+			outline: none
+		.nav
+			position: absolute
+			bottom: 0
+			right: 0
+			z-index: 1
+			height: 55px
+			width: 170px
+			background-color: #fff
+			display: flex
+			justify-content: center
+			align-items: center
+			.next-preview,
+			.prev-preview
+				position: absolute
+				top: 50%
+				cursor: pointer
+				margin-top: -10px
+				&.slick-disabled
+					opacity: .25
+					cursor: default
+			.prev-preview
+				left: 20px
+				img
+					vertical-align: middle
+			.next-preview
+				right: 20px
+				transform: rotateZ(180deg)
+		.pages
+			font-size: 25px
+			span
+				display: inline-block
+				vertical-align: bottom
+				line-height: 1em
+			.current
+				font-size: 21px
+				color: #1c2335
+			.slash, .total
+				opacity: .4
+			.total
+				font-size: 14px
+	.right-side
+		padding: 35px 40px 35px 60px
+		position: relative
+		.breadcrumbs
+			opacity: .4
+			font-size: 12px
+			a
+				color: #1c2335
+			ul
+				display: flex
+				justify-content: flex-start
+				align-items: center
+			li
+				position: relative
+			li:not(:last-child)
+				margin-right: 25px
+			li:not(:last-child):before
+				content: ''
+				position: absolute
+				top: 50%
+				margin-top: -4px
+				left: 100%
+				margin-left: 7px
+				width: 10px
+				height: 7px
+				background: url(../img/breadcrumbs-arr.png) center no-repeat
+		.stars
+			margin-top: 20px
+			display: flex
+			justify-content: flex-end
+			align-items: center
+			ul
+				display: flex
+				justify-content: flex-start
+				align-items: center
+			li
+				cursor: pointer
+				width: 20px
+				height: 20px
+				background: url(../img/star-empty.png) center no-repeat
+			.full
+				background: url(../img/star.png) center no-repeat
+		h1
+			font-size: 48px
+			margin-top: 60px
+		.clarify:before
+			display: none
+		.clarify
+			padding-top: 0
+			margin-top: 40px
+			font-size: 14px
+		.price
+			font-family: "Playfair Display"
+			color: #1c2335
+			margin-top: 50px
+			font-size: 32px
+			text-transform: uppercase
+			span
+				display: inline-block
+				vertical-align: bottom
+				line-height: 1em
+			.cur
+				margin-left: 5px
+				font-size: 18px
+		.parameters
+			margin-top: 50px
+			font-size: 14px
+			font-weight: 600
+			span
+				font-weight: 300
+		.size
+			margin-top: 20px
+			.flex-wrap
+				ul
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					margin: 5px 30px 0 0
+					&+p:hover
+						border-bottom: 1px solid transparent
+					&+p
+						transition: .1s
+						cursor: pointer
+						line-height: 1.5em
+						color: #f47aac
+						border-bottom: 1px solid #f2d0d9
+			li:hover
+				box-shadow: inset 0 0 0 1px #f286b7
+			li.active
+				color: #fff
+				box-shadow: inset 0 0 0 20px #f286b7
+			li:not(:first-child)
+				margin-left: 10px
+			li
+				text-align: center
+				transition: .25s
+				cursor: pointer
+				box-shadow: inset 0 0 0 1px #dfe0e3
+				width: 38px
+				height: 38px
+				line-height: 38px
+		.compound
+			margin: 20px 0 60px
+		.count
+			box-shadow: 0 0 0 1px #dfe0e3
+			text-align: center
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			font-size: 30px
+			font-weight: 300
+			div
+				width: 45px
+				height: 60px
+				line-height: 60px
+				background-color: #f3f7fb
+				transition: .35s
+			.current
+				font-size: 16px
+			.plus,
+			.minus
+				cursor: pointer
+				&:hover
+					background-color: #fff
+			.minus
+				font-size: 30px
+		.btn:hover
+			background-color: rgba(#1c2335, .85)
+			box-shadow: none
+		.btn-wrap
+			margin-left: 30px
+		.btn
+			height: 60px
+			line-height: 60px
+			background-color: #1c2335
+			color: #fff
+		.to-like
+			margin-top: 60px
+			display: inline-flex
+			justify-content: flex-start
+			align-items: center
+			font-size: 14px
+			font-weight: 300
+			cursor: pointer
+			img
+				margin-right: 5px
+		.to-share
+			margin-top: 100px
+			display: flex
+			justify-content: flex-end
+			align-items: center
+			ul
+				margin-left: 20px
+				display: flex
+				justify-content: flex-start
+				align-items: center
+			li:not(:first-child)
+				margin-left: 15px

@@ -101,6 +101,7 @@ body
 	max-width: 1500px
 	margin: 0 auto
 	padding: 0 60px
+	position: relative
 
 body aside .btn-green:hover,
 body section .btn-green:hover,
@@ -136,7 +137,7 @@ body header .btn-white:hover,
 	opacity: .5
 	text-align: center
 
-main
+.main-wrap main
 	background-color: #f0f0f0
 	padding: 50px 0 100px
 	section
@@ -156,7 +157,7 @@ main
 		position: absolute
 		background-color: #3bd99e
 		transition: .25s
-		z-index: 1
+		z-index: 9
 	.b-t
 		top: 0
 		left: 0
@@ -177,7 +178,11 @@ main
 		left: 0
 		width: 3px
 		height: 0
-	a:hover
+	a
+		display: block
+		height: 100%
+		width: 100%
+	li:hover
 		.b-t
 			width: 101%
 		.b-r
@@ -212,3 +217,6 @@ main
 		margin-top: 5px
 		font-size: 14px
 		opacity: .7
+
+.slick-slide
+	outline: none

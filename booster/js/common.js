@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		}, 1000);
 	});
 
+
 	$('.country-label-content .items').slick({
 		nextArrow: '<div class="slick-next"></div>',
 		prevArrow: '<div class="slick-prev"></div>',
@@ -16,6 +17,15 @@ document.addEventListener('DOMContentLoaded', function(){
 		autoplay: true,
 		autoplaySpeed: 5000
 	})
+
+	if($('#top-index').length > 0){
+		$('#top-index .slider').slick({
+			nextArrow: '<div class="slick-next"></div>',
+			prevArrow: '<div class="slick-prev"></div>',
+			autoplay: true,
+			autoplaySpeed: 5000
+		});
+	}
 
 	var sections = $('main section'),
 		nav = $('.aside-wrap'),

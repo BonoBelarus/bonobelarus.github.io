@@ -1,0 +1,45 @@
+#catalog
+	padding-top: 100px
+	.list
+		margin-top: 50px
+		text-align: center
+		ul
+			display: flex
+			justify-content: flex-start
+			flex-wrap: wrap
+		li:last-child
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			border: none
+		li:not(:nth-child(3n+1))
+			border-left: none
+		li:nth-child(4),
+		li:nth-child(5),
+		li:nth-child(6)
+			border-top: none
+		li
+			margin-top: -4px
+			margin-left: -4px
+			border: 1px solid #e3e4e5
+			width: 33.33%
+			>a
+				padding-bottom: 90px
+				padding-top: 20px
+		.cat-img
+			height: 250px
+			line-height: 250px
+			img
+				vertical-align: bottom
+		.caption
+			margin-top: 30px
+			font-weight: 700
+		.btn-wrap
+			.btn:hover
+				color: #fff
+			.btn
+				font-size: 14px
+				color: $green
+				display: inline-block
+				padding: 0 30px

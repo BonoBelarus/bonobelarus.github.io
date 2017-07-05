@@ -1,0 +1,84 @@
+#descr-and-rev
+	padding: 100px 0
+	.tabs
+		position: relative
+		font-size: 24px
+		color: #1c2335
+		border-bottom: 1px solid #dedfe2
+		max-width: 570px
+		margin: 0 auto 70px
+		font-family: 'Times New Roman', Times, serif
+		ul
+			display: flex
+			justify-content: center
+			align-items: center
+			li.active:first-child:after
+				transform: translateX(0)
+			li:first-child:after
+				content: ''
+				transform: translateX(175px)
+				position: absolute
+				width: 50px
+				height: 2px
+				transition: 1s
+				left: 50%
+				margin-left: -25px
+				bottom: -1px
+				background-color: #d47aac
+			li.active:before
+				height: 4px
+				transition-delay: 1s
+			li.active
+				color: #f47aac
+			li:before
+				content: ''
+				position: absolute
+				height: 0
+				width: 50px
+				bottom: -1px
+				left: 50%
+				transition: .25s
+				margin-left: -25px
+				background-color: #d47aac
+			li
+				text-align: center
+				width: 120px
+				padding-bottom: 15px
+				position: relative
+				cursor: pointer
+			li:not(:first-child)
+				margin-left: 55px
+
+	.item:focus
+		outline: none
+	.item
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		.left-side
+			max-width: 670px
+			>.clarify
+				font-size: 16px
+				p:not(:first-child)
+					margin-top: 20px
+		.care
+			text-align: center
+			line-height: 1.3em
+			font-size: 12px
+			margin-top: 50px
+			.caption
+				text-align: left
+				font-weight: 600
+				font-size: 14px
+			ul
+				margin-top: 10px
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+			li:not(:first-child)
+				margin-left: 20px
+		.right-side
+			max-width: 370px
+			.clarify
+				margin-top: 20px
+				font-size: 14px

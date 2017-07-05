@@ -188,7 +188,8 @@ body {
 .content {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 0 60px; }
+  padding: 0 60px;
+  position: relative; }
 
 body aside .btn-green:hover,
 body section .btn-green:hover,
@@ -229,13 +230,13 @@ body header .btn-white:hover {
   opacity: .5;
   text-align: center; }
 
-main {
+.main-wrap main {
   background-color: #f0f0f0;
   padding: 50px 0 100px; }
-  main section {
+  .main-wrap main section {
     background-color: #fff;
     padding: 70px 0 70px 75px; }
-  main section:not(:first-child) {
+  .main-wrap main section:not(:first-child) {
     margin-top: 50px; }
 
 .animated-borders li {
@@ -251,7 +252,7 @@ main {
   -webkit-transition: .25s;
   -o-transition: .25s;
   transition: .25s;
-  z-index: 1; }
+  z-index: 9; }
 
 .animated-borders .b-t {
   top: 0;
@@ -277,16 +278,21 @@ main {
   width: 3px;
   height: 0; }
 
-.animated-borders a:hover .b-t {
+.animated-borders a {
+  display: block;
+  height: 100%;
+  width: 100%; }
+
+.animated-borders li:hover .b-t {
   width: 101%; }
 
-.animated-borders a:hover .b-r {
+.animated-borders li:hover .b-r {
   height: 101%; }
 
-.animated-borders a:hover .b-b {
+.animated-borders li:hover .b-b {
   width: 101%; }
 
-.animated-borders a:hover .b-l {
+.animated-borders li:hover .b-l {
   height: 101%; }
 
 .is_stuck + div {
@@ -325,6 +331,9 @@ main {
     margin-top: 5px;
     font-size: 14px;
     opacity: .7; }
+
+.slick-slide {
+  outline: none; }
 
 @-webkit-keyframes wave-country-label {
   0% {
@@ -3306,3 +3315,164 @@ footer {
     background-color: #3bd99e;
     top: 5px;
     left: 0; }
+
+#top-index {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  height: 100vh; }
+  #top-index .content {
+    width: 100%; }
+  #top-index h1 {
+    font-size: 50px; }
+  #top-index .slick-slider {
+    position: static; }
+  #top-index .cover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .25; }
+  #top-index .cover {
+    width: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+    #top-index .cover img {
+      width: 100%; }
+  #top-index .slider {
+    width: 900px;
+    margin: 0 auto; }
+    #top-index .slider .slick-next:hover,
+    #top-index .slider .slick-prev:hover {
+      opacity: 1; }
+    #top-index .slider .slick-next,
+    #top-index .slider .slick-prev {
+      opacity: .6;
+      cursor: pointer;
+      position: absolute;
+      width: 30px;
+      height: 20px;
+      top: 50%;
+      margin-top: -10px; }
+    #top-index .slider .slick-next:before,
+    #top-index .slider .slick-next:after,
+    #top-index .slider .slick-prev:before,
+    #top-index .slider .slick-prev:after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      top: 50%;
+      margin-top: -1px;
+      background-color: #fff; }
+    #top-index .slider .slick-next:before,
+    #top-index .slider .slick-next:after {
+      -webkit-transform-origin: right center;
+      -ms-transform-origin: right center;
+      transform-origin: right center; }
+    #top-index .slider .slick-prev:before,
+    #top-index .slider .slick-prev:after {
+      -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+      transform-origin: left center; }
+    #top-index .slider .slick-next:before {
+      -webkit-transform: rotateZ(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotateZ(45deg); }
+    #top-index .slider .slick-prev:after {
+      -webkit-transform: rotateZ(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotateZ(-45deg); }
+    #top-index .slider .slick-prev:before {
+      -webkit-transform: rotateZ(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotateZ(45deg); }
+    #top-index .slider .slick-next:after {
+      -webkit-transform: rotateZ(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotateZ(-45deg); }
+    #top-index .slider .slick-next {
+      right: 60px; }
+    #top-index .slider .slick-prev {
+      left: 60px; }
+
+#catalog {
+  padding-top: 100px; }
+  #catalog .list {
+    margin-top: 50px;
+    text-align: center; }
+    #catalog .list ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+    #catalog .list li:last-child {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border: none; }
+    #catalog .list li:not(:nth-child(3n+1)) {
+      border-left: none; }
+    #catalog .list li:nth-child(4),
+    #catalog .list li:nth-child(5),
+    #catalog .list li:nth-child(6) {
+      border-top: none; }
+    #catalog .list li {
+      margin-top: -4px;
+      margin-left: -4px;
+      border: 1px solid #e3e4e5;
+      width: 33.33%; }
+      #catalog .list li > a {
+        padding-bottom: 90px;
+        padding-top: 20px; }
+    #catalog .list .cat-img {
+      height: 250px;
+      line-height: 250px; }
+      #catalog .list .cat-img img {
+        vertical-align: bottom; }
+    #catalog .list .caption {
+      margin-top: 30px;
+      font-weight: 700; }
+    #catalog .list .btn-wrap .btn:hover {
+      color: #fff; }
+    #catalog .list .btn-wrap .btn {
+      font-size: 14px;
+      color: #3bd99e;
+      display: inline-block;
+      padding: 0 30px; }
