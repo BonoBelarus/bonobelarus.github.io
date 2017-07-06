@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function(){
 		prevArrow: '<div class="prev-preview"><img src="img/preview-arrow.png" alt=""></div>'
 	});
 
-	var total_slides = $('#product-card .preview .item');
-	$('#product-card .preview .total').text(total_slides.length);
+	var total_slides_product = $('#product-card .preview .item');
+	$('#product-card .preview .total').text(total_slides_product.length);
 	$(preview).find('.slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
 		$('#product-card .preview .current').text(currentSlide+1);
 	});
@@ -88,4 +88,86 @@ document.addEventListener('DOMContentLoaded', function(){
 		}
 		price.text(afterPrice)
 	});
+
+	var about_slider = $('#about-slider .slider');
+	about_slider.slick({
+		slidesToShow: 1,
+		nextArrow: '<div class="next"><img src="img/preview-arrow.png" alt=""></div>',
+		prevArrow: '<div class="prev"><img src="img/preview-arrow.png" alt=""></div>'
+	});
+
+	var famous_slider = $('#famous-devita .slider');
+	var total_slides_product = $('#famous-devita .slider .item');
+	$('#famous-devita .total').text(total_slides_product.length);
+	famous_slider.slick({
+		infinite: false,
+		appendArrows: $('#famous-devita .nav'),
+		nextArrow: '<div class="next"><img src="img/preview-arrow.png" alt=""></div>',
+		prevArrow: '<div class="prev"><img src="img/preview-arrow.png" alt=""></div>'
+	});
+	famous_slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
+		$('#famous-devita .current').text(currentSlide+1);
+	});
+
+	var article_slider = $('#article .slider');
+	article_slider.slick({
+		infinite: false,
+		dots: true,
+		nextArrow: '<div class="next"><img src="img/preview-arrow.png" alt=""></div>',
+		prevArrow: '<div class="prev"><img src="img/preview-arrow.png" alt=""></div>'
+	});
+
+	$('#faq .item .caption').click(function(e){
+		if($(e.currentTarget).closest('li').hasClass('active') == true){
+			$(e.currentTarget).closest('li').removeClass('active').find('.hidden-content').slideUp();
+		}else{
+			$(e.currentTarget).closest('ul').find('li').removeClass('active').find('.hidden-content').slideUp();
+			$(e.currentTarget).closest('li').addClass('active').find('.hidden-content').slideDown();
+		}
+	});
+
+	var sections = $('#faq .item'),
+		nav = $('aside nav'),
+		nav_height = nav.outerHeight(),
+		wh = $(window).height();
+	$(window).on('scroll', function () {
+		var cur_pos = $(this).scrollTop();
+		var xtra_add = 0;
+		if($(window).width() < 1024){
+			xtra_add = -60
+		}
+		sections.each(function() {
+			var top = $(this).offset().top - nav_height + xtra_add,
+			bottom = top + $(this).outerHeight();
+
+			if (cur_pos >= top && cur_pos <= bottom) {
+
+				nav.find('li').removeClass('active');
+				sections.removeClass('active');
+				
+				$(this).addClass('active');
+				nav.find('a[href="#'+$(this).attr('id')+'"]').closest('li').addClass('active');
+			}
+
+		});
+	});
+
+	$('aside').stick_in_parent({
+		offset_top: -50
+	});
+
+	function scroll2Sec(e){
+		$(e.target).closest('nav').removeClass('active');
+		var link = $(e.currentTarget).attr('href');
+		var section = $(link);
+
+		var xtra_offset = -50;
+		
+		$('body,html').animate({
+			scrollTop: $(section).offset().top + xtra_offset
+		}, 1000);
+		e.preventDefault();
+	}
+
+	$('aside nav a').click(scroll2Sec);
 });

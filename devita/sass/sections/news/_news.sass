@@ -1,0 +1,121 @@
+#news
+	padding-top: 80px
+	h2:before
+		content: ''
+		position: absolute
+		height: 2px
+		background-color: #f57bad
+		width: 60px
+		bottom: 0
+		left: 50%
+		margin-left: -30px
+	h2
+		padding-bottom: 30px
+		text-align: center
+		position: relative
+	.list
+		font-size: 14px
+		color: #494f5d
+		a:hover
+			.caption
+				color: #f47aac
+			.b-r
+				height: 60px
+			.b-l
+				height: 140%
+			.b-b
+				width: 250px
+		.news-info
+			padding: 25px 20px
+			position: relative
+			.border
+				position: absolute
+				transition: .25s
+				background: #000
+			.b-r
+				top: 0
+				right: 0
+				height: 0
+				width: 1px
+				background: linear-gradient(to bottom, #000, rgba(255,255,255, 0))
+			.b-l
+				bottom: 0
+				left: 0
+				height: 0
+				width: 1px
+				background: linear-gradient(to top, #000, rgba(255,255,255, 0))
+			.b-b
+				bottom: 0
+				left: 0
+				height: 1px
+				width: 0
+				background: linear-gradient(to right, #000, rgba(255,255,255, 0))
+		li:nth-child(3n+2)
+			.border
+				transition: .15s
+			.b-r
+				top: initial
+				bottom: 0
+				height: 0
+				background: linear-gradient(to top, #000, rgba(255,255,255, 0))
+			.b-b
+				background: #000
+				transition-delay: .15s
+			.b-l
+				transition-delay: .45s
+				bottom: initial
+				top: 0
+				left: 0
+				background: linear-gradient(to bottom, #000, rgba(255,255,255, 0))
+			a:hover .b-r
+				height: 200px
+				transition-delay: .35s
+			a:hover .b-b
+				transition-delay: .2s
+				width: 100%
+			a:hover .b-l
+				transition-delay: 0s
+				height: 60px
+		li:nth-child(3n+3)
+			.b-r
+				top: initial
+				bottom: 0
+				height: 0
+				background: linear-gradient(to top, #000, rgba(255,255,255, 0))
+			.b-b
+				left: initial
+				right: 0
+				background: linear-gradient(to left, #000, rgba(255,255,255, 0))
+			.b-l
+				bottom: initial
+				top: 0				
+				background: linear-gradient(to bottom, #000, rgba(255,255,255, 0))
+			a:hover .b-r
+				height: 140%
+			a:hover .b-l
+				height: 60px
+		img
+			max-width: 100%
+			display: block
+		ul
+			display: flex
+			justify-content: flex-start
+			align-items: stretch
+			flex-wrap: wrap
+		li
+			margin-top: 60px
+			width: 370px
+		li:nth-child(3n+2)
+			margin: 60px 30px 0
+	.caption
+		transition: .1s
+		color: #1c2335
+		line-height: 1.25em
+		font-size: 24px
+		font-family: "Playfair Display"
+		font-weight: 400
+	.news-date
+		opacity: .6
+		margin: 20px 0
+		font-size: 12px
+		color: #494f5d

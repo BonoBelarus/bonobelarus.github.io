@@ -1,0 +1,83 @@
+#faq
+	padding: 80px 0 120px
+	h1
+		text-align: center
+		position: relative
+		font-size: 60px
+		padding-bottom: 30px
+	h1:before
+		content: ''
+		position: absolute
+		background-color: #f286b7
+		bottom: 0
+		left: 50%
+		margin-left: -30px
+		height: 2px
+		width: 60px
+	.content
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+	aside
+		max-width: 170px
+		font-size: 14px
+		margin-top: 160px
+		li:not(:first-child)
+			margin-top: 20px
+		a:hover
+			color: #f47aac
+		a
+			transition: .05s
+		li.active
+			a
+				color: #f47aac
+	.main-wrap
+		max-width: 770px
+		width: 100%
+		margin-right: 100px
+	.themes
+		line-height: 1.5em
+		font-size: 16px
+		.item:first-child
+			margin-top: 70px
+		.item
+			margin-top: 80px
+			>ul
+				margin-top: 40px
+			.active
+				.caption:before
+					transform: rotateZ(-180deg)
+				.caption
+					padding-right: 50px
+					color: #f47aac
+		.header
+			color: #1c2335
+			font-size: 32px
+			font-family: 'Playfair Display'
+		.caption:hover
+			color: #f47aac
+		.caption:before
+			transition: .5s
+			content: ''
+			position: absolute
+			top: 50%
+			margin-top: -5px
+			right: 0
+			height: 15px
+			width: 25px
+			background: url(../img/faq-arr-down.png) center no-repeat
+		.caption
+			position: relative
+			transition: .05s
+			cursor: pointer
+			font-weight: 600
+			padding: 30px 0
+			border-top: 1px solid #ebecee
+		.notion
+			margin-top: 20px
+		a
+			color: #f47aac
+			border-bottom: 1px solid #f47aac
+		.hidden-content
+			display: none
+			padding: 0 50px 30px 0
