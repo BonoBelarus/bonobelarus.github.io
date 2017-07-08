@@ -1,0 +1,196 @@
+#blog
+	font-size: 16px
+	padding-top: 80px
+	img
+		max-width: 100%
+	h1:before
+		content: ''
+		position: absolute
+		height: 1px
+		width: 60px
+		left: 50%
+		bottom: 0
+		margin-left: -30px
+		background-color: #f683b2
+	h1
+		margin-bottom: 60px
+		padding-bottom: 30px
+		font-size: 60px
+		text-align: center
+		position: relative
+	.main-content
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		>ul
+			max-width: 870px
+		>ul>li:not(:first-child)
+			margin-top: 60px
+		>ul>li
+			display: flex
+			justify-content: flex-start
+			align-items: flex-start
+	.caption
+		font-family: "Playfair Display"
+		font-size: 32px
+		color: #1c2335
+		line-height: 1em
+	.clarify
+		p:not(:first-child)
+			margin-top: 20px
+	.img-prev
+		min-width: 370px
+		img
+			display: block
+	.info
+		padding: 30px
+	.meta
+		margin: 20px 0
+		font-size: 12px
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		.date
+			opacity: .5
+			margin-right: 30px
+		.comments
+			transition: .1s
+			opacity: .5
+		.comments:hover
+			opacity: 1
+	.btn-wrap
+		margin-top: 30px
+		.btn:hover
+			.b-l
+				height: 100%
+				transition-delay: 0s
+			.b-b
+				transition-delay: .25s
+				width: 100%
+		.btn
+			font-size: 12px
+			position: relative
+			box-shadow: none
+			.border
+				transition: .25s
+				background-color: #000
+				position: absolute
+			.b-b
+				transition-delay: 0s
+				width: 0
+				height: 1px
+				left: 0
+				bottom: 0
+			.b-l
+				transition-delay: .25s
+				width: 1px
+				height: 0
+				top: 0
+				left: 0
+	.is_stuck
+		margin-left: 900px
+	aside
+		transform: translateZ(0)
+		padding-bottom: 50px
+		max-width: 270px
+		img
+			max-width: 100%
+		.header
+			color: #1c2335
+			font-family: "Playfair Display"
+			font-size: 28px
+		.categories
+			background-color: #edf3f8
+			padding: 40px 30px 60px 0
+			overflow: hidden
+			.active
+				a
+					cursor: default
+					color: #fff
+				p
+					background-color: #000
+				a:hover
+					color: #fff
+					transform: none
+					p
+						transform: none
+				// a p:before
+				// 	width: 100%
+				// 	background-color: #f683b2
+				// a p:after
+				// 	height: 100%
+				// 	background-color: #f683b2
+			a
+				transition: .2s
+				color: #1c2335
+				font-size: 12px
+				font-weight: 600
+				text-transform: uppercase
+				display: inline-block
+				line-height: 50px
+				height: 50px
+				position: relative
+				p
+					display: inline-block
+					line-height: 2.5em
+					padding: 0 10px 0 30px
+			// 	span,
+			// 	p
+			// 		transition: .3s
+			// 		position: relative
+			a:hover
+				transform: translateX(-10px)
+			// 	p
+			// 		transform: translateX(-10px)
+			// 	p:before
+			// 		width: 100%
+			// 		transition-delay: .35s
+			// 	p:after
+			// 		transition-delay: .5s
+			// 		height: 100%
+			a p:after
+				content: ''
+				position: absolute
+				background-color: #000
+				width: 1px
+				height: 0
+				bottom: 0
+				right: 0
+				transition: .15s ease 0s
+			a p:before
+				transition: .15s ease .15s
+				content: ''
+				position: absolute
+				height: 1px
+				width: 0
+				bottom: 0
+				left: 0
+				background-color: #000
+			.header:before
+				content: ''
+				position: absolute
+				height: 1px
+				width: 22px
+				background-color: #f57dae
+				bottom: 0
+				left: 0
+			.header
+				margin: 0 0 10px 30px
+				padding-bottom: 15px
+				position: relative
+		.most-readable
+			margin-top: 75px
+			.header
+				margin-bottom: 40px
+			li:not(:first-child)
+				border-top: 1px solid #ececee
+				margin-top: 30px
+				padding-top: 30px
+			.caption
+				margin-top: 15px
+				font-size: 18px
+			.date
+				margin-top: 15px
+				opacity: .5
+				font-size: 12px
+				color: #101421

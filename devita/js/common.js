@@ -152,8 +152,12 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	});
 
-	$('aside').stick_in_parent({
+	$('aside.faq').stick_in_parent({
 		offset_top: -50
+	});
+
+	$('aside.blog').stick_in_parent({
+		offset_top: 0
 	});
 
 	function scroll2Sec(e){

@@ -1,0 +1,173 @@
+#lookbook_top
+	position: relative
+	color: #fff
+	text-align: center
+	padding-bottom: 130px
+	.top-box
+		position: relative
+		img
+			max-width: 100%
+		&+.content
+			max-width: 970px
+			width: 100%
+	h1
+		color: #fff
+		&+.clarify:before
+			margin-left: -30px
+			left: 50%
+	.img-overlay:before
+		content: ''
+		position: absolute
+		height: 100%
+		width: 100%
+		top: 0
+		left: 0
+		background-color: rgba(#000, .7)
+	.img-overlay
+		position: relative
+		max-width: 100%
+		img
+			display: block
+	.wrap
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		position: absolute
+		display: flex
+		justify-content: center
+		flex-direction: column
+		align-items: center
+	.gallery
+		margin-top: 100px
+		.image-prev
+			overflow: hidden
+			a:before,
+			a:after
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				opacity: .3
+				transition: .75s ease 0s
+				z-index: 2
+			a:before
+				background: linear-gradient(to bottom, #000 1px, transparent 1px) repeat-y
+				background-size: 100% 4px
+			a:after
+				top: 2px
+				background: linear-gradient(to bottom, #000 1px, transparent 1px) repeat-y
+				background-size: 100% 4px
+			a
+				display: block
+				position: relative
+			a:hover:after
+				transform: translateX(100%)
+				transition-delay: 0s
+				opacity: 0
+			a:hover:before
+				transform: translateX(-100%)
+				transition-delay: 0s
+				opacity: 0
+			a:hover
+				img
+					transition: 50s
+					transform: scale(1.5) rotateZ(5deg)
+
+		>div:not(:first-child)
+			margin-top: 60px
+		.meta
+			margin-top: 10px
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.name
+				color: #494f5d
+				font-size: 16px
+			.to-share
+				ul
+					display: flex
+					justify-content: flex-start
+					align-items: center
+				li:not(:first-child)
+					margin-left: 10px
+		img
+			transition: 5s
+			display: block
+			max-width: 100%
+		.full-image
+			width: 100%
+		._2-images
+			display: flex
+			justify-content: flex-start
+			>div
+				width: 48%
+			>div:first-child
+				margin-right: 4%
+	.btn-wrap
+		.btn:hover:before
+			width: 100%
+			transition-delay: 0s
+		.btn:hover:after
+			height: 100%
+			transition-delay: .4s
+		.btn:hover
+			box-shadow: none
+			color: #fff
+			transition-delay: .3s
+			span:before,
+			span:after
+				transition-delay: .3s
+				background-color: #fff
+			img
+				margin-left: 5px
+		.btn:before,
+		.btn:after
+			content: ''
+			position: absolute
+			left: 0
+			bottom: 0
+			transition: .5s
+		.btn:before
+			z-index: 1
+			width: 0
+			height: 100%
+			background-color: #f6b4cf
+			transition-delay: .4s
+		.btn:after
+			z-index: 2
+			transition-delay: 0s
+			width: 100%
+			height: 0
+			background-color: #000
+		span:before,
+		span:after
+			content: ''
+			position: absolute
+			height: 1px
+			width: 12px
+			background-color: #000
+			transform-origin: right center
+			top: 50%
+			margin-top: -1px
+			left: 100%
+			transition: .1s ease .15s
+			margin-left: 15px
+		span:before
+			transform: rotateZ(45deg)
+		span:after
+			transform: rotateZ(-45deg)
+		span
+			display: inline-block
+			z-index: 3
+			position: relative
+		.btn
+			box-shadow: none
+			border: 1px solid #000
+			height: 50px
+			position: relative
+			justify-content: center
+			transition-delay: .15s
+			width: 100%
