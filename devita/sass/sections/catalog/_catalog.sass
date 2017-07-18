@@ -121,63 +121,6 @@
             font-size: 16px !important
             color: #f47aac
             text-transform: uppercase !important
-    .pagination
-        margin-top: 50px
-        display: flex
-        justify-content: center
-        align-items: center
-        position: relative
-        font-size: 14px
-        font-weight: 600
-        .prev,
-        .next
-            opacity: .7
-            position: relative
-            height: 20px
-            width: 15px
-            cursor: pointer
-            &:hover
-                opacity: 1
-            &:before,
-            &:after
-                content: ''
-                position: absolute
-                background-color: #000
-                height: 1px
-                width: 100%
-                top: 50%
-            &:before
-                transform: rotateZ(45deg)
-            &:after
-                transform: rotateZ(-45deg)
-        .prev:before,
-        .prev:after
-            transform-origin: left
-            left: 0
-        .next:before,
-        .next:after
-            transform-origin: right
-            right: 0
-        ul
-            margin: 0 30px
-        li:not(:first-child)
-            margin-left: 20px
-        li.active:hover
-            box-shadow: inset 0 0 0 1px #000, inset 0 0 0 20px #fabdd6
-        li.active
-            font-size: 18px
-            color: #fff
-            box-shadow: inset 0 0 0 1px #000, inset 0 0 0 20px #fabdd6
-        li:hover
-            box-shadow: inset 0 0 0 1px #000, inset 0 0 0 7px rgba(#fabdd6, .5)
-        li
-            transition: .2s
-            cursor: pointer
-            width: 40px
-            height: 40px
-            line-height: 40px
-            text-align: center
-            box-shadow: inset 0 0 0 1px #000
 
 @media only screen and (max-width : 1200px)
     #catalog .list li

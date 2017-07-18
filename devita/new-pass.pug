@@ -57,75 +57,17 @@ html(lang="en")
 								a(href="#" target="_blank")
 									.total 2
 									img(draggable="false" src="img/icon-cart.png", alt="")
-		section#cart
+		section#new-pass
 			.content
-				h1 Корзина
-				form(action="")
-					ul.list
-						li
-							.item-prev
-								img(src="img/cart-prev-1.jpg", alt="")
-							.item-info-wrap
-								.item-info
-									.item-name
-										p Принтованное платье М-546
-									.item-properties
-										.item-height
-											p Рост: 
-												span.num 164
-										.item-size
-											p Размер: 
-												span.num 44
-								.counter
-									.minus
-									.current
-										p 1
-									.plus
-								.price
-									p
-										span.num 114 
-										span.cur  BYN
-								.delete
-						li
-							.item-prev
-								img(src="img/cart-prev-2.jpg", alt="")
-							.item-info-wrap
-								.item-info
-									.item-name
-										p Принтованное платье М-546
-									.item-properties
-										.item-height
-											p Рост: 
-												span.num 164
-										.item-size
-											p Размер: 
-												span.num 44
-								.counter
-									.minus
-									.current
-										p 1
-									.plus
-								.price
-									p
-										span.num 114 
-										span.cur  BYN
-								.delete
-					.bottom-line
-						.coupon
-							.step-1
-								p Есть купон на скидку?
-							.step-2
-								form(action="")
-									input(type="text" name="coupon" required placeholder="Введите купон")
-									button Oк
-								.error
-									p Промокод указан неверно
-						.total
-							p Итого: 
-								span.num 114 
-								span.cur  BYN
-							.btn-wrap
-								button(href="#").btn Оформить заказ
+				h1 Восстановление пароля
+				.clarify
+					p Если забыли пароль, введите вашу электронную почту
+					p и мы вышлем ссылку для восстановления пароля.
+					form(action="")
+						.email
+							input(type="email" placeholder="Ваш email" required)
+						.btn-wrap
+							button.btn Восстановить
 		footer
 			.content
 				.social

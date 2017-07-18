@@ -40,15 +40,15 @@ document.addEventListener('DOMContentLoaded', function(){
 		fade: true
 	});
 
-	var tabs = $('#descr-and-rev .tabs li');
-	tabs.click(function(e){
+	var descr_tabs = $('#descr-and-rev .tabs li');
+	descr_tabs.click(function(e){
 		var slide = $(e.currentTarget).index();
 		$(descr_and_rev_Slider).slick('slickGoTo', slide);
 
 		if($(e.currentTarget).hasClass('active')){
 			return;
 		}else{
-			tabs.removeClass('active')
+			descr_tabs.removeClass('active')
 			$(e.currentTarget).addClass('active');
 		}
 	});
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		prevArrow: '<div class="prev"><img src="img/preview-arrow.png" alt=""></div>'
 	});
 
-	$('#faq .item .caption').click(function(e){
+	$('#faq .item .caption, #payment .tabs .header').click(function(e){
 		if($(e.currentTarget).closest('li').hasClass('active') == true){
 			$(e.currentTarget).closest('li').removeClass('active').find('.hidden-content').slideUp();
 		}else{
@@ -166,17 +166,19 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	});
 
-	$('aside.faq').stick_in_parent({
-		offset_top: -50
-	});
+	if($(window).width() > 1200 ){
+		$('aside.faq').stick_in_parent({
+			offset_top: -50
+		});
 
-	$('aside.blog').stick_in_parent({
-		offset_top: 0
-	});
+		$('aside.blog').stick_in_parent({
+			offset_top: 0
+		});
 
-	$('aside.profile').stick_in_parent({
-		offset_top: 50
-	});
+		$('aside.profile').stick_in_parent({
+			offset_top: 50
+		});
+	}
 
 	function scroll2Sec(e){
 		$(e.target).closest('nav').removeClass('active');

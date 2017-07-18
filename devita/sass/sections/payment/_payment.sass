@@ -1,3 +1,72 @@
+#payment._2
+    h1+.clarify
+        margin-bottom: 50px
+    .list
+        font-size: 16px
+        .caption
+            font-weight: 600
+            margin-bottom: 15px
+        ul+.caption
+            margin-top: 35px
+        ul
+            li:not(:first-child)
+                margin-top: 10px
+        .dashed
+            li:before
+                content: ''
+                position: absolute
+                height: 1px
+                width: 20px
+                top: 50%
+                left: 0
+                background-color: #f683b2
+            li
+                padding-left: 30px
+                position: relative
+    .tabs+.warning
+        margin-top: 30px
+        .caption
+            font-weight: 600
+            font-size: 18px
+        .clarify
+            font-size: 16px
+            margin-top: 10px
+            p:not(:first-child)
+                margin-top: 20px
+    .tabs
+        width: 100%
+        margin-top: 50px
+        li:not(:first-child)
+            margin-top: 20px
+        li
+            position: relative
+            padding: 30px
+            border: 1px solid #dfe0e3
+        li.active:before
+            transform: rotateZ(180deg)
+        li:before
+            transition: .5s
+            content: url(../img/arrow-down.png)
+            position: absolute
+            right: 30px
+            top: 30px
+        .hidden-content
+            padding-top: 35px
+            max-width: 460px
+            font-size: 14px
+            display: none
+        .header
+            cursor: pointer
+            max-width: 460px
+            font-size: 14px
+            font-weight: 700
+        .caption
+            font-size: 14px
+            font-weight: 600
+        .download
+            margin-top: 30px
+            a
+                color: #f47aac
 #payment
     padding: 80px 0 130px
     .content
@@ -7,7 +76,7 @@
     h1
         font-size: 28px
     .left-side
-        max-width: 570px
+        max-width: 670px
         .btn-wrap
             margin-top: 35px
             .btn:hover
@@ -34,3 +103,33 @@
             left: 0
             margin: auto
             margin-left: 25px
+    .mobile-caption
+        display: none
+
+@media only screen and (max-width : 1200px)
+    #payment
+        font-size: 14px
+        padding: 50px 0
+        .content
+            flex-direction: column
+            align-items: stretch
+        .mobile-caption:before
+            content: ''
+            position: absolute
+            height: 1px
+            width: 60px
+            left: 50%
+            margin-left: -30px
+            bottom: 0
+            background-color: #f683b2
+        .mobile-caption
+            padding-bottom: 40px
+            margin-bottom: 50px
+            font-size: 40px
+            text-align: center
+            position: relative
+            font-family: "Playfair Display"
+            color: #1c2335
+            display: block
+    #payment .right-side
+        display: none

@@ -2,7 +2,7 @@
     .content
         max-width: 1500px
 #profile
-    padding: 80px 0 130px
+    padding: 80px 0
     h1
         font-size: 40px
         text-align: center
@@ -33,7 +33,7 @@
         padding-left: 30px
         margin-right: 100px
     main
-        width: 100%
+        width: 60%
     nav
         li:not(:first-child)
             margin-top: 15px
@@ -226,6 +226,24 @@
 #profile.security
     main
         max-width: 600px
+#profile.wishlist .list .meta .like.active
+    background: url(../img/like-full.png) center no-repeat
+#profile.wishlist .list .meta .like
+    cursor: pointer
+    transition: .2s
+    width: 26px
+    height: 24px
+    background: url(../img/like.png) center no-repeat
+#profile.wishlist
+    main
+        width: 100%
+    .meta
+        display: flex
+        justify-content: space-between
+        align-items: center
+        text-align: left
+        .price
+            margin-top: 5px
 #profile.wishlist
 	.list
 		font-size: 16px
@@ -241,7 +259,7 @@
 			width: 370px
 			margin-top: 60px
 			.clarify
-				margin: 15px 0
+				margin: 15px 0 5px
 			.price
 				font-size: 14px
 				font-weight: 700
@@ -257,7 +275,7 @@
 			transition-delay: .1s
 		.img:hover:before
 			transform: scale(1)
-			opacity: 1
+			opacity: .8
 			transition-delay: 0s
 		.img:after
 			opacity: 0
@@ -296,3 +314,38 @@
 			border-radius: 50%
 			opacity: .8
 			transition: .35s ease .1s
+
+@media only screen and (max-width : 1200px)
+    #profile .main-wrap
+        flex-direction: column
+        align-items: center
+    #profile main
+        min-width: 500px
+    #profile aside
+        margin: 0
+        background-color: #f3f7fb
+        max-width: 100%
+        width: 100%
+        margin-bottom: 50px
+        ul
+            line-height: 45px
+            height: 45px
+            display: flex
+            justify-content: center
+            align-items: center
+            li:not(:first-child)
+                margin-left: 50px
+                margin-top: 0
+    #profile.history main
+        margin-right: 0
+        max-width: 100%
+        width: 100%
+    #profile.wishlist main
+        max-width: 100%
+        width: 100%
+    #profile.wishlist .list
+        ul
+            justify-content: space-between
+        li
+            width: 350px
+            margin-right: 0

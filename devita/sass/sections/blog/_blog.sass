@@ -22,11 +22,11 @@
 		display: flex
 		justify-content: space-between
 		align-items: flex-start
-		>ul
+		.items>ul
 			max-width: 870px
-		>ul>li:not(:first-child)
+		.items>ul>li:not(:first-child)
 			margin-top: 60px
-		>ul>li
+		.items>ul>li
 			display: flex
 			justify-content: flex-start
 			align-items: flex-start
@@ -194,3 +194,64 @@
 				opacity: .5
 				font-size: 12px
 				color: #101421
+	.mobile-categories
+		display: none
+	.pagination
+		margin-top: 90px
+
+@media only screen and (max-width : 1200px)
+	#blog
+		font-size: 14px
+		h1
+			font-size: 40px
+		.main-content
+			align-items: stretch
+		.mobile-categories:before
+			content: url(../img/arrow-down.png)
+			position: absolute
+			top: 0
+			right: 20px
+			height: 100%
+		.mobile-categories
+			margin-bottom: 50px
+			display: block
+			height: 55px
+			line-height: 55px
+			font-size: 14px
+			text-transform: uppercase
+			font-weight: 600
+			padding: 0 20px
+			background-color: #f3f7fb
+			position: relative
+	#blog .main-content
+		flex-direction: column
+	#blog .img-prev
+		width: 100%
+		min-width: 295px
+		max-width: 295px
+		img
+			max-width: 100%
+	#blog .caption
+		font-size: 28px
+	#blog .info
+		padding: 0 0 0 30px
+	#blog .btn-wrap
+		margin-top: 15px
+	#blog aside
+		.categories
+			display: none
+	#blog aside .most-readable ul
+		padding-bottom: 50px
+		overflow: auto
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+		padding-right: 20px
+	#blog aside
+		max-width: 100%
+	#blog aside .most-readable li:not(:first-child)
+		margin-top: 0
+		padding-top: 0
+		margin-left: 20px
+	#blog aside .most-readable li
+		min-width: 270px

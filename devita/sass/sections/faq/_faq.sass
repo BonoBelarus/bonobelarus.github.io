@@ -81,3 +81,31 @@
 		.hidden-content
 			display: none
 			padding: 0 50px 30px 0
+
+@media only screen and (max-width : 1200px)
+	#faq
+		h1
+			font-size: 40px
+		.content
+			flex-direction: column
+		aside
+			margin-top: 50px
+			background-color: #f3f7fb
+			width: 100%
+			max-width: 100%
+			li.active
+				a
+					color: #494f5d
+			li:not(:first-child)
+				margin-top: 0
+				margin-left: 50px
+			ul
+				display: flex
+				justify-content: center
+				align-items: center
+				height: 55px
+				line-height: 55px
+	#faq .themes .item:first-child
+		margin-top: 50px
+	#faq .themes .item .caption
+		font-size: 16px

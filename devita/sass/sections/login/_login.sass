@@ -29,9 +29,12 @@
             >div:not(:first-child)
                 margin-top: 15px
             >div
+                position: relative
                 display: flex
                 justify-content: flex-start
                 align-items: center
+            >div:not(:last-child)
+                flex-direction: row-reverse
         label
             display: inline-block
             max-width: 130px
@@ -57,3 +60,66 @@
                 background-color: #000
                 color: #fff
                 box-shadow: inset 0 0 0 1px #fff
+        *::-webkit-input-placeholder
+            color: transparent
+            opacity: .5
+
+        *:-moz-placeholder
+            color: transparent
+            opacity: .5
+
+        *::-moz-placeholder
+            color: transparent
+            opacity: .5
+
+        *:-ms-input-placeholder
+            color: transparent
+            opacity: .5
+
+@media only screen and (max-width : 1200px)
+    #login
+        .content
+            text-align: center
+            flex-direction: column
+            align-items: center
+            *::-webkit-input-placeholder
+                color: $color
+                opacity: .5
+
+            *:-moz-placeholder
+                color: $color
+                opacity: .5
+
+            *::-moz-placeholder
+                color: $color
+                opacity: .5
+
+            *:-ms-input-placeholder
+                color: $color
+                opacity: .5
+    #login .left-side label
+        position: absolute
+        bottom: 0
+        left: 20px
+        text-align: left
+        opacity: .7
+        height: 45px
+        line-height: 45px
+        transition: .35s
+        opacity: 0
+        transform: scale(0)
+    #login .left-side input[value] + label
+        opacity: 1
+        transform: scale(2)
+    #login .left-side input
+        position: relative
+        z-index: 1
+        background-color: transparent
+        border: 1px solid #d2d3d6
+    #login .left-side form >div:last-child
+        margin-top: 35px
+        justify-content: space-between
+    #login .right-side
+        margin-top: 90px
+        .clarify
+            font-size: 16px
