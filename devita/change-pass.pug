@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title Devita
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700|Playfair+Display:400,400i&amp;subset=cyrillic" rel="stylesheet")
+		link(href="css/main.css", rel="stylesheet")
+		
+	body
+		header
+			.top-line
+				.content
+					.left-side
+						ul
+							li
+								a(href="#" target="_blank") Доставка  и оплата
+							li
+								a(href="#" target="_blank") Обмен и возврат
+					.right-side
+						ul
+							li.drop
+								a(href="#" target="_blank") Rus
+							li.drop
+								a(href="#" target="_blank") Валюта: BYN
+							li
+								a(href="#" target="_blank")  Войти / Регистрация
+			.major-menu
+				.content
+					.logo
+						img(draggable="false" src="img/logo.png", alt="")
+						.clarify
+							p Официальный интернет-магазин
+					nav
+						ul
+							li
+								a(href="#" target="_blank") Каталог
+							li
+								a(href="#" target="_blank") Скидки
+							li
+								a(href="#" target="_blank") Блог
+							li.drop
+								a(href="#" target="_blank") О бренде
+					.states
+						ul
+							li.search
+								a(href="#" target="_blank")
+									img(draggable="false" src="img/icon-search.png", alt="")
+							li.like
+								a(href="#" target="_blank")
+									.total 6
+									img(draggable="false" src="img/icon-like.png", alt="")
+							li.cart
+								a(href="#" target="_blank")
+									.total 2
+									img(draggable="false" src="img/icon-cart.png", alt="")
+		section#profile.security
+			.content
+				h1 Личный кабинет
+				.main-wrap
+					aside.profile
+						nav
+							ul
+								li
+									a(href="#") Профиль
+								li.active
+									a(href="#") Безопасность
+								li
+									a(href="#") История заказов
+								li
+									a(href="#") Список желаний
+					main
+						form(action="")
+							.profile-box
+								.caption
+									p Сменить пароль
+								.password
+									label Новый пароль
+									input(type="password" name="password" required)
+								.password-repeat
+									label Повторите пароль
+									input(type="password" name="password-repeat" required)
+							.btn-wrap
+								button.btn Сохранить
+		footer
+			.content
+				.social
+					ul
+						li.vk
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/vk.png", alt="")
+						li.fb
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/fb.png", alt="")
+						li.insta
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/insta.png", alt="")
+						li.ok
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/ok.png", alt="")
+						li.youtube
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/youtube.png", alt="")
+				.footer-top
+					.contacts
+						ul
+							li.viber
+								a(href="tel:+375293757770") +375 29 375 77 70
+							li.whatsapp
+								a(href="tel:+375292272633") +375 29 227 26 33
+							li.skype
+								a(href="skype:devitabel") devitabel
+							li.email
+								a(href="e-mail:devitabel@mail.ru") devitabel@mail.ru
+						.shedule
+							.caption
+								p Обработка заказов:
+							p ПН-ПТ с 09:00 до 19:00
+					nav
+						.shop
+							.caption
+								p Магазин
+							ul
+								li
+									a(href="#" target="_blank") Клоллекции
+								li
+									a(href="#" target="_blank") Распродажа
+								li
+									a(href="#" target="_blank") О бренде
+								li
+									a(href="#" target="_blank") Новости
+								li
+									a(href="#" target="_blank") Блог
+								li
+									a(href="#" target="_blank") Контакты
+						.buyers
+							.caption
+								p Покупателям
+							ul
+								li
+									a(href="#" target="_blank") Оплата и доставка
+								li
+									a(href="#" target="_blank") Обмен и возврат
+								li
+									a(href="#" target="_blank") Вопросы и ответы
+						.account
+							.caption
+								p Личный кабинет
+							ul
+								li
+									a(href="#" target="_blank") Личные данные
+								li
+									a(href="#" target="_blank") Адреса доставки
+								li
+									a(href="#" target="_blank") Заказы
+								li
+									a(href="#" target="_blank") Хочу купить
+					.subscription
+						.notion
+							p Подпишитесь на новости и получите скидку 1000 руб. на первую покупку
+						form(action="")
+							.email
+								input(type="email" name="email" placeholder="Ваш Email")
+				.footer-bottom
+					.copyright
+						.caption
+							p © 2017. Devita Shop
+						.clarify
+							p Магазин зарегистрирован
+							p в Торговом реестре РБ 15 апреля 2014.
+					.pay-with
+						img(draggable="false" src="img/payment-logo.png", alt="")
+					.made-by
+						p Дизайн и разработка
+							a(href="#" target="_blank")
+								.namba
+									.logo
+										img(draggable="false" src="img/nambawan-logo.png", alt="")
+										p Nambawan
+					
+		.hidden
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		script(src="js/slick.min.js")
+		script(src="js/sticky.js")
+		script(src="js/common.js")

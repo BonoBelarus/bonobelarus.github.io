@@ -38,3 +38,72 @@
 			max-width: 600px
 			img
 				max-width: 100%
+
+@media only screen and (max-width : 1200px)
+	#about
+		h1
+			font-size: 40px
+	#about
+		.content
+			position: relative
+		.left-side
+			margin-left: 50px
+			.main-img
+				width: 390px
+				height: 260px
+				img
+					width: 100%
+			.img-left
+				top: 120px
+				left: -45px
+				max-width: 165px
+			.img-bottom
+				top: 30px
+				left: 100px
+				max-width: 235px
+				img
+					max-width: 100%
+		h2
+			font-size: 36px
+			&+.clarify
+				font-size: 14px
+		.right-side
+			position: absolute
+			z-index: 1
+			width: 50%
+			top: 0
+			left: auto
+			right: 0
+			bottom: 0
+			margin: auto
+			margin-left: auto
+			display: flex
+			align-items: center
+			.wrap
+				padding: 40px
+				background-color: #fff
+		.content
+			padding-bottom: 150px
+			position: relative
+	#about .template-1 + .template-1
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		margin-top: 150px
+		.content
+			align-items: center
+	#about .template-1 + .template-1 .right-side
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 100%
+		img
+			margin-left: auto
+			max-height: 100%
+			vertical-align: bottom
+			max-width: 100%
+			display: block
+	#about .template-1 + .template-1 .left-side
+		margin-left: 0
+		position: relative
+		z-index: 2

@@ -1,0 +1,174 @@
+#cart
+    padding: 80px 0 130px
+    text-align: center
+    h1
+        font-size: 60px
+        position: relative
+        padding-bottom: 25px
+    h1:before
+        content: ''
+        position: absolute
+        height: 1px
+        width: 60px
+        left: 50%
+        margin-left: -30px
+        background-color: #f57bad
+        bottom: 0
+    .clarify:before
+        left: 50%
+        margin-left: -30px
+    .clarify
+        margin-bottom: 50px
+    .btn
+        background-color: #000
+        color: #fff
+    .list
+        text-align: left
+        >li:not(:first-child)
+            border-top: 1px solid #eeeff0
+        >li
+            padding: 20px 0
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .item-info
+                width: 100%
+        .item-name
+            margin-bottom: 5px
+        .item-properties
+            >div
+                >p
+                    font-weight: 600
+                    font-size: 14px
+                    span
+                        font-weight: 400
+        .item-prev
+            margin-right: 40px
+        .counter
+            display: flex
+            justify-content: flex-start
+            align-items: stretch
+            width: 50%
+            color: #1c2335
+            div
+                width: 48px
+                height: 48px
+                line-height: 48px
+            .current
+                text-align: center
+                font-weight: 600
+            .minus,
+            .plus
+                cursor: pointer
+                position: relative
+            .plus:after,
+            .plus:before
+                content: ''
+                position: absolute
+                background-color: #000
+            .plus:after
+                height: 1px
+                width: 14px
+                top: 50%
+                left: 50%
+                margin-left: -7px
+            .plus:before
+                width: 1px
+                height: 14px
+                left: 50%
+                top: 50%
+                margin-top: -7px
+            .minus:after
+                content: ''
+                position: absolute
+                background-color: #000
+                height: 1px
+                width: 14px
+                top: 50%
+                left: 50%
+                margin-left: -7px
+        .price
+            text-align: right
+            font-weight: 700
+            font-size: 14px
+            text-transform: uppercase
+            width: 20%
+            margin-right: 70px
+        .delete
+            cursor: pointer
+            width: 35px
+            height: 35px
+            position: relative
+        .delete:before,
+        .delete:after
+            content: ''
+            position: absolute
+            height: 1px
+            width: 100%
+            top: 50%
+            left: 0
+            background-color: #000
+        .delete:before
+            transform: rotateZ(45deg)
+        .delete:after
+            transform: rotateZ(-45deg)
+    .bottom-line
+        margin-top: 60px
+        background-color: #f3f7fb
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 45px 30px
+        .coupon
+            .step-1 p:hover
+                border-bottom: 1px dashed rgba(#fff, 0)
+            .step-1 p
+                border-bottom: 1px dashed #494f5d
+                font-size: 14px
+                line-height: 1em
+                cursor: pointer
+                transition: .1s
+            .error
+                font-size: 13px
+                color: #ef1146
+                text-align: left
+                opacity: 0
+                transition: .15s
+            form
+                display: flex
+                justify-content: flex-start
+                align-items: center
+            input,button
+                height: 45px
+                line-height: 45px
+            input
+                max-width: 170px
+                padding: 0 20px
+                border: none
+                box-shadow: inset 0 0 0 1px #e3e4e8
+            button:focus
+                outline: none
+            button
+                width: 45px
+                background-color: #f47aac
+                border: none
+                cursor: pointer
+                color: #fff
+            .step-2
+                display: none
+        .total
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            >p
+                margin-right: 90px
+                font-size: 16px
+                font-weight: 600
+                span
+                    text-transform: uppercase
+                    font-weight: 700
+            .btn:focus
+                outline: none
+            .btn
+                border: none
+                cursor: pointer

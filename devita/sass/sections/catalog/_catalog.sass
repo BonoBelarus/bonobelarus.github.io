@@ -1,0 +1,184 @@
+#catalog
+    text-align: center
+    padding: 80px 0 130px
+    h1:before
+        content: ''
+        position: absolute
+        height: 1px
+        width: 60px
+        left: 50%
+        margin-left: -30px
+        background-color: #f57bad
+        bottom: 0
+    h1
+        padding-bottom: 20px
+        text-align: center
+        position: relative
+    .filter
+        margin-top: 80px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background-color: #f7f7f7
+        line-height: 55px
+        height: 55px
+        padding: 0 30px
+    ul
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    .left-side
+        font-size: 14px
+        font-weight: 600
+        color: #1c2335
+        text-transform: uppercase
+        li
+            padding-right: 16px
+            background: url(../img/arrow-down.png) right center no-repeat
+            background-size: 10px
+            cursor: pointer
+        li:not(:first-child)
+            margin-left: 25px
+    .right-side
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        p:first-child
+            text-transform: uppercase
+            font-size: 14px
+            font-weight: 600
+        .dropdown
+            font-size: 14px
+            text-decoration: underline
+            margin-left: 20px
+            position: relative
+            padding-right: 18px
+            cursor: pointer
+            background: url(../img/arrow-down.png) right center no-repeat
+            background-size: 10px
+    .list
+        ul
+            display: flex
+            justify-content: space-between
+            align-items: center
+            flex-wrap: wrap
+        li
+            margin-top: 60px
+            max-width: 370px
+            width: 100%
+        .meta
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .info
+                text-align: left
+            .like.active
+                background: url(../img/like-full.png) center no-repeat
+            .like
+                cursor: pointer
+                transition: .2s
+                width: 26px
+                height: 24px
+                background: url(../img/like.png) center no-repeat
+        li a:hover
+            .prev-img:before
+                background-color: #d4e5ef
+            .prev-img:after
+                transform: scale(1)
+        .prev-img:before
+            content: ''
+            position: absolute
+            height: 100%
+            width: 100%
+            top: 0
+            left: 0
+            transition: .35s
+            opacity: .75
+            z-index: 1
+        .prev-img:after
+            content: url(../img/eye.png)
+            position: absolute
+            top: 50%
+            margin-top: -60px
+            left: 0
+            transition: .5s
+            transform: scale(0)
+            height: 100%
+            width: 100%
+            z-index: 2
+        .prev-img
+            position: relative
+            overflow: hidden
+        img
+            display: block
+            max-width: 100%
+        .clarify
+            font-size: 16px
+            margin-top: 8px
+        .num,
+        .cur
+            font-family: "Playfair Display"
+            font-size: 16px !important
+            color: #f47aac
+            text-transform: uppercase !important
+    .pagination
+        margin-top: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        font-size: 14px
+        font-weight: 600
+        .prev,
+        .next
+            opacity: .7
+            position: relative
+            height: 20px
+            width: 15px
+            cursor: pointer
+            &:hover
+                opacity: 1
+            &:before,
+            &:after
+                content: ''
+                position: absolute
+                background-color: #000
+                height: 1px
+                width: 100%
+                top: 50%
+            &:before
+                transform: rotateZ(45deg)
+            &:after
+                transform: rotateZ(-45deg)
+        .prev:before,
+        .prev:after
+            transform-origin: left
+            left: 0
+        .next:before,
+        .next:after
+            transform-origin: right
+            right: 0
+        ul
+            margin: 0 30px
+        li:not(:first-child)
+            margin-left: 20px
+        li.active:hover
+            box-shadow: inset 0 0 0 1px #000, inset 0 0 0 20px #fabdd6
+        li.active
+            font-size: 18px
+            color: #fff
+            box-shadow: inset 0 0 0 1px #000, inset 0 0 0 20px #fabdd6
+        li:hover
+            box-shadow: inset 0 0 0 1px #000, inset 0 0 0 7px rgba(#fabdd6, .5)
+        li
+            transition: .2s
+            cursor: pointer
+            width: 40px
+            height: 40px
+            line-height: 40px
+            text-align: center
+            box-shadow: inset 0 0 0 1px #000
+
+@media only screen and (max-width : 1200px)
+    #catalog .list li
+        max-width: 360px

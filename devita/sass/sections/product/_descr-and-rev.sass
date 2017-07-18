@@ -1,5 +1,7 @@
 #descr-and-rev
 	padding: 100px 0
+	background-color: #fff
+	position: relative
 	.tabs
 		position: relative
 		font-size: 24px
@@ -84,3 +86,18 @@
 			.clarify
 				margin-top: 20px
 				font-size: 14px
+
+@media only screen and (max-width : 1200px)
+	#descr-and-rev .slick-next,
+	#descr-and-rev .slick-prev
+		display: none !important
+	#descr-and-rev .item
+		padding: 0 20px
+	#descr-and-rev .item.description
+		flex-direction: column
+	#descr-and-rev .item.description .right-side
+		margin-top: 50px
+		max-width: 100%
+		width: 100%
+		img
+			width: 100%

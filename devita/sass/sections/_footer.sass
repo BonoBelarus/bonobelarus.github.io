@@ -135,3 +135,44 @@ footer
 				font-size: 15px
 				font-weight: 700
 				color: #1c2335
+
+@media only screen and (max-width : 1200px)
+	footer
+		font-size: 14px
+		.footer-top
+			flex-wrap: wrap
+			padding-bottom: 25px
+			nav
+				>div:not(:first-child)
+					margin-left: 70px
+			.subscription
+				margin-top: 25px
+				padding-top: 25px
+				border-top: 1px solid #eff0f1
+				width: 100%
+				min-width: 100%
+				display: flex
+				justify-content: space-between
+				align-items: center
+				.notion
+					max-width: 250px
+					line-height: 1.2em
+					font-size: 14px
+				.email
+					margin-top: 0
+					input
+						max-width: 400px
+						width: 400px
+		.footer-bottom
+			flex-wrap: wrap
+			.made-by
+				margin-top: 30px
+				width: 100%
+				text-align: center
+				display: flex
+				justify-content: center
+				align-items: center
+				a
+					display: inline-block
+				.namba
+					margin-left: 20px

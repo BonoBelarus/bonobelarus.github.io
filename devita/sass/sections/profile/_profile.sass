@@ -1,0 +1,298 @@
+#profile
+    .content
+        max-width: 1500px
+#profile
+    padding: 80px 0 130px
+    h1
+        font-size: 40px
+        text-align: center
+    .main-wrap:before
+        content: ''
+        position: absolute
+        height: 1px
+        width: 60px
+        top: 0
+        left: 50%
+        margin-left: -30px
+        background: #f57bad
+    .main-wrap
+        position: relative
+        padding-top: 80px
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        margin-top: 30px
+    aside.is_stuck + div
+        min-width: 200px
+        width: 200px
+        max-width: 200px
+        margin-right: 100px
+    aside
+        min-width: 200px
+        width: 200px
+        padding-left: 30px
+        margin-right: 100px
+    main
+        width: 100%
+    nav
+        li:not(:first-child)
+            margin-top: 15px
+        .active
+            a
+                color: #f47aac
+        a
+            color: #1c2335
+            font-size: 14px
+    .profile-box
+        .caption
+            margin-bottom: 30px
+            font-size: 24px
+            font-family: "Playfair Display"
+            color: #1c2335
+    form .profile-box:not(:first-child)
+        margin-top: 70px
+    form .profile-box
+        >div
+            display: flex
+            justify-content: flex-start
+            align-items: center
+        >div:not(:first-child)
+            margin-top: 15px
+        // input:invalid, select:invalid
+        //     border: none
+        //     box-shadow: inset 0 0 1px 1px red
+        input, select
+            padding: 0 20px
+            line-height: 50px
+            height: 50px
+            width: 100%
+        label
+            width: 100%
+            font-size: 14px
+            max-width: 130px
+            display: inline-block
+        .birthday
+            input
+                width: auto
+                margin-right: 30px
+                font-family: 'Open Sans'
+                text-transform: uppercase
+                height: 50px
+                padding-right: 0
+                line-height: 50px
+                &::-webkit-calendar-picker-indicator
+                    cursor: pointer
+                &::-webkit-inner-spin-button
+                    height: 46px
+                    cursor: pointer
+        .addr
+            input[name="house"],
+            input[name="apart"]
+                width: 70px
+                margin-left: 20px
+        .notion
+            font-size: 12px
+            line-height: 1.2em
+        input[type="checkbox"]
+            height: 25px
+            width: 25px
+            background-color: #fff
+            display: none
+        label[for="newsletter-check"]:hover
+            opacity: 1
+        label[for="newsletter-check"]
+            transition: .1s
+            display: inline-block
+            height: 25px
+            width: 25px
+            background-color: #fff
+            cursor: pointer
+            opacity: .4
+            margin-right: 20px
+            border: 1px solid #000
+        #newsletter-check:invalid + label
+            border-color: red
+            animation: bubble 5s ease infinite
+        #newsletter-check:checked + label
+            opacity: 1
+            background: url(../img/checked.png) center no-repeat
+    .btn-wrap
+        margin-top: 50px
+        .btn:hover
+            box-shadow: inset 0 -1px 0 1px #fff
+        .btn
+            border: 1px solid #000
+            background-color: #000
+            color: #fff
+            cursor: pointer
+            box-shadow: inset 0 0 0 1px #fff
+    .caption
+        font-family: "Playfair Display"
+        font-size: 24px
+        color: #1c2335
+    .nothing
+        margin-top: 35px
+    .history-box
+        margin-top: 35px
+        .top-line
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            background-color: #f3f7fb
+            height: 50px
+            padding: 0 30px
+            font-size: 12px
+            font-weight: 700
+            div
+                width: 33.33%
+        .item
+            border-bottom: 1px solid rgba(#000, .1)
+        .item-prev
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            height: 50px
+            font-size: 14px
+            padding-left: 30px
+            position: relative
+            >div:not(.item-show)
+                width: 32.3%
+                display: flex
+                justify-content: space-between
+                align-items: center
+        .item-show p:hover
+            border-color: transparent
+        .item-show
+            position: absolute
+            right: 0
+            top: 15px
+            cursor: pointer
+            transition: .1s
+            line-height: 1.2em
+            p.active
+                opacity: 1
+                z-index: 2
+            p.hide
+                width: 88px
+            p
+                display: inline-block
+                width: 98px
+                z-index: 1
+                position: absolute
+                right: 0
+                top: 0
+                opacity: 0
+                transition: .1s
+                border-bottom: 1px dashed #000
+                text-align: right
+        .item-hidden
+            padding-bottom: 20px
+            display: none
+        .list
+            li:not(:first-child)
+                margin-top: 15px
+            li
+                display: flex
+                justify-content: space-between
+                align-items: center
+            .item-info
+                display: flex
+                justify-content: flex-start
+                align-items: center
+            .item-img
+                max-width: 105px
+                margin-right: 30px
+                img
+                    max-width: 100%
+                    display: block
+            .item-count
+                font-size: 16px
+                color: #1c2335
+                margin-left: 30px
+                width: 50px
+            .item-char
+                margin-top: 15px
+                font-weight: 600
+                font-size: 14px
+                span
+                    font-weight: 300
+            .item-price
+                font-weight: 700
+                font-size: 14px
+                text-transform: uppercase
+#profile.history
+    main
+        margin-right: 100px
+#profile.security
+    main
+        max-width: 600px
+#profile.wishlist
+	.list
+		font-size: 16px
+		text-align: center
+		ul
+			display: flex
+			justify-content: flex-start
+			align-items: flex-start
+			flex-wrap: wrap
+		li
+			margin-right: 30px
+		li
+			width: 370px
+			margin-top: 60px
+			.clarify
+				margin: 15px 0
+			.price
+				font-size: 14px
+				font-weight: 700
+				text-transform: uppercase
+		img
+			max-width: 100%
+			display: block
+		.img
+			position: relative
+		.img:hover:after
+			transform: scale(1)
+			opacity: 1
+			transition-delay: .1s
+		.img:hover:before
+			transform: scale(1)
+			opacity: 1
+			transition-delay: 0s
+		.img:after
+			opacity: 0
+			transform: scale(0)
+			content: 'быстрый просмотр'
+			text-transform: uppercase
+			color: #fff
+			box-shadow: 0 0 0 1px #fff
+			position: absolute
+			top: 50%
+			margin-top: -25px
+			left: 50%
+			margin-left: -110px
+			text-align: center
+			line-height: 50px
+			height: 50px
+			font-weight: 600
+			border-radius: 1px
+			z-index: 2
+			width: 220px
+			font-size: 13px
+			transition: .35s
+		.img:before
+			opacity: 0
+			transform: scale(0)
+			z-index: 1
+			content: ''
+			position: absolute
+			width: 290px
+			height: 290px
+			top: 50%
+			margin-top: -145px
+			left: 50%
+			margin-left: -145px
+			background-color: #aedaf5
+			border-radius: 50%
+			opacity: .8
+			transition: .35s ease .1s
