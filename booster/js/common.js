@@ -66,4 +66,23 @@ document.addEventListener('DOMContentLoaded', function(){
 		e.preventDefault();
 	}
 	$('nav a').click(scroll2Sec);
+
+	$('#brands .slider').slick({
+		slidesToShow: 4,
+		arrows: false,
+		dots: true
+	});
+
+	$('#product .gallery').slick({
+		vertical: true,
+		slidesToShow: 4,
+		asNavFor: $('#product .preview'),
+		prevArrow: '<div class="prev-arrow"><img src="../img/arrow.png"></div>',
+		nextArrow: '<div class="next-arrow"><img src="../img/arrow.png"></div>'
+	});
+
+	$('#product .preview').slick({
+		slidesToShow: 1,
+		arrows: false
+	});
 });

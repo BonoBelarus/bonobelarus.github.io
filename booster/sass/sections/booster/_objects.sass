@@ -1,3 +1,17 @@
+#objects.common
+	h2
+		position: relative
+		border-bottom: 1px solid #ccc
+		padding-bottom: 10px
+		font-size: 28px
+		&:before
+			content: ''
+			position: absolute
+			height: 2px
+			bottom: 0
+			left: 0
+			width: 30px
+			background-color: $green
 #objects
 	.objects-list
 		margin-top: 50px
@@ -56,6 +70,7 @@
 			overflow: hidden
 			position: relative
 			img
+				width: 100%
 				transition: 1s ease .1s
 				max-width: 100%
 				display: block

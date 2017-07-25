@@ -1,0 +1,252 @@
+#make-order
+    padding: 80px 0
+    h1
+        font-size: 40px
+        text-align: center
+    .flex-wrap
+        margin-top: 50px
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+    .left-side
+        max-width: 600px
+        width: 100%
+        form
+            >.caption:not(:first-child)
+                margin-top: 50px
+            >.caption
+                font-size: 28px
+                font-family: "Playfair Display"
+                color: #1c2335
+                & + .clarify
+                    font-size: 14px
+                    margin-top: 15px
+                    .mark
+                        color: #f47aac
+            .holders
+                margin-top: 30px
+                >div:not(:first-child)
+                    margin-top: 20px
+                >div
+                    display: flex
+                    justify-content: flex-start
+                    align-items: center
+                label
+                    font-size: 14px
+                    min-width: 130px
+                    width: 130px
+                input, select, textarea
+                    outline: none
+                    box-shadow: none
+                    border: 1px solid #ccc
+                    padding-left: 20px
+                    width: 100%
+                    line-height: 45px
+                    height: 45px
+                select
+                    cursor: pointer
+                textarea
+                    resize: vertical
+                    height: 100px
+            .addr
+                .places
+                    width: 100%
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                input[name="street"]
+                    max-width: 280px
+                    min-width: 280px
+                input[name="house"],
+                input[name="apart"]
+                    max-width: 80px
+                    min-width: 80px
+            .delivery
+                align-items: flex-start
+                .items
+                    width: 100%
+                    .item:not(:first-child)
+                        margin-top: 10px
+                    .item
+                        position: relative
+                    .wrap
+                        width: 100%
+                        display: flex
+                        justify-content: space-between
+                        align-items: flex-start
+                    label:checked
+                        background-color: #f4f7fc
+                    label
+                        cursor: pointer
+                        padding: 20px 20px 20px 55px
+                        width: 100%
+                        display: flex
+                        justify-content: flex-start
+                        align-items: flex-start
+                        box-shadow: inset 0 0 0 1px #ccc
+                    input[type="radio"]
+                        position: absolute
+                        left: 20px
+                        top: 20px
+                        margin-right: 20px
+                        width: 15px
+                        height: 15px
+                        cursor: pointer
+                    .caption
+                        margin-bottom: 10px
+                        font-size: 16px
+                        font-weight: 600
+            .news-letters
+                label[for="news-letters"]
+                    cursor: pointer
+                    width: 23px
+                    max-width: 23px
+                    min-width: 23px
+                    margin-right: 10px
+                    height: 23px
+                    border: 1px solid #ccc
+                    transition: .15s
+                input:checked + label
+                    background: url(../img/checked.png) center no-repeat
+                input
+                    display: none
+                .notion
+                    opacity: .7
+                    font-size: 12px
+                    line-height: 1.1em
+    .bottom-line
+        margin-top: 100px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .back-to:before
+            left: 0
+            top: 0
+            margin-top: -2px
+            content: url(../img/arrow.png)
+            position: absolute
+            transform: rotateZ(180deg)
+            transition: .25s
+        .back-to:hover
+            transform: translateX(-2px)
+            &:before
+                transform: rotateZ(180deg) translateX(4px)
+        .back-to
+            padding-left: 20px
+            transition: .25s
+            position: relative
+            font-size: 14px
+        .btn-wrap
+            justify-content: center
+            .btn:hover
+                background-color: rgba(#000, .8)
+            .btn
+                border: none
+                cursor: pointer
+                color: #fff
+                background-color: #000
+            .notion
+                margin-top: 15px
+                font-size: 12px
+                opacity: .7
+                line-height: 1.2em
+    .right-side
+        max-width: 460px
+        min-width: 460px
+        .in-cart
+            font-size: 14px
+            padding: 40px
+            background-color: #f3f7fb
+        .caption
+            font-family: "Playfair Display"
+            font-size: 21px
+            font-weight: 400
+            text-align: center
+        .list
+            border-bottom: 1px solid #ccc
+            margin-top: 50px
+            margin-bottom: 10px
+            padding-bottom: 15px
+            li:not(:first-child)
+                margin-top: 10px
+            li
+                display: flex
+                justify-content: space-between
+                align-items: flex-start
+                img
+                    max-width: 100%
+                .item-img
+                    max-width: 60px
+                    min-width: 60px
+                    margin-right: 20px
+                .item-info
+                    display: flex
+                    justify-content: flex-start
+                    align-items: flex-start
+                .item-clarify
+                    max-width: 160px
+        .order-price,
+        .order-delivery,
+        .order-total
+            display: flex
+            justify-content: space-between
+            align-items: center
+            line-height: 2em
+        .order-total
+            margin-top: 10px
+            padding-top: 10px
+            border-top: 1px solid #ccc
+            font-weight: 700
+            font-size: 16px
+
+@media only screen and (max-width : 1200px)
+    #make-order
+        .flex-wrap
+            flex-direction: column
+            align-items: center
+        .right-side
+            display: none
+
+@media only screen and (max-width : 767px)
+    #make-order .left-side form .delivery .items .caption
+        line-height: 1.3em
+        font-size: 14px
+    #make-order .bottom-line
+        margin-top: 50px
+        align-items: center
+        flex-direction: column
+        .btn-wrap
+            margin-top: 15px
+    #make-order
+        h1
+            font-size: 28px
+    #make-order .left-side form > .caption
+        font-size: 21px
+        p
+            display: inline
+    #make-order .left-side form .holders
+        >div
+            flex-wrap: wrap
+        label
+            margin-bottom: 5px
+            width: 100%
+    #make-order .left-side form .addr .places
+        flex-wrap: wrap
+        input[name="street"]
+            min-width: 100%
+            margin-bottom: 10px
+        input[name="house"],
+        input[name="apart"]
+            max-width: 45%
+    #make-order .left-side form .delivery .items .price
+        min-width: 50px
+    #make-order .left-side form .delivery .items input[type="radio"]
+        left: 15px
+    #make-order .left-side form .delivery .items label
+        padding-left: 40px
+    #make-order .left-side form .news-letters
+        label
+            min-width: initial
+            max-width: initial
+            width: auto
+            margin-right: 20px

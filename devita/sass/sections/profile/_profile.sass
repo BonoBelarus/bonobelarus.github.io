@@ -314,6 +314,8 @@
 			border-radius: 50%
 			opacity: .8
 			transition: .35s ease .1s
+#profile .mobile-history-box
+    display: none
 
 @media only screen and (max-width : 1200px)
     #profile .main-wrap
@@ -349,3 +351,158 @@
         li
             width: 350px
             margin-right: 0
+
+@media only screen and (max-width : 767px)
+    #profile
+        padding-bottom: 80px
+        h1
+            font-size: 28px
+        .content
+            padding: 0
+        main
+            padding: 0 20px
+    #profile aside nav
+        padding: 5px 0
+        overflow-y: auto
+    #profile aside ul
+        width: 550px
+        margin: 0 auto
+    #profile main
+        min-width: 100%
+    #profile .main-wrap
+        padding-top: 30px
+    #profile .profile-box .caption
+        font-size: 21px
+    #profile form .profile-box > div
+        flex-direction: column
+        align-items: flex-start
+    #profile form .profile-box > div
+        label
+            margin-bottom: 5px
+    #profile form .profile-box > div.addr
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        input[name="street"]
+            max-width: 60%
+        input[name="house"],
+        input[name="apart"]
+            min-width: 10%
+        input[name="street"]
+        label
+            min-width: 100%
+    #profile form .profile-box .addr input[name="house"], #profile form .profile-box .addr input[name="apart"]
+        margin-left: 0
+    #profile form .profile-box > div.birthday
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        input
+            border: 1px solid rgba(#000, .5)
+            background: url(../img/calendar.png) calc(100% - 5px) center no-repeat
+            max-width: 50%
+            margin-right: 0
+        input:enabled:read-write:-webkit-any(:focus,:hover)::-webkit-inner-spin-button,
+        input:enabled:read-write:-webkit-any(:focus,:hover)::-webkit-calendar-picker-indicator, input::-webkit-calendar-picker-indicator:focus
+            opacity: 0
+        .notion
+            font-size: 12px
+            max-width: 45%
+        label
+            min-width: 100%
+    #profile .history-box
+        display: none
+    #profile .mobile-history-box
+        font-size: 14px
+        margin-top: 50px
+        display: block
+        .orders
+            .order:not(:first-child)
+                margin-top: 20px
+                padding-top: 10px
+                border-top: 1px solid rgba(#000, .1)
+            .order:last-child
+                padding-bottom: 10px
+                border-bottom: 1px solid rgba(#000, .1)
+        table
+            width: 100%
+            td
+                padding: 5px 0
+        tr td:first-child
+            font-weight: 600
+            font-size: 12px
+        tr td:nth-child(2)
+            text-align: right
+        .order-id
+            td:last-child
+                p
+                    line-height: 1.2em
+                    display: inline-block
+                    border-bottom: 1px dashed rgba(#000, .6)
+        .hidden-content
+            display: none
+            margin-top: 20px
+            .item
+                display: flex
+                justify-content: flex-start
+                align-items: stretch
+            .item:not(:first-child)
+                margin-top: 20px
+            .item-img
+                img
+                    display: block
+            .count
+                font-size: 12px
+                .counter,
+                .price-num
+                    color: #1c2335
+                    font-weight: 700
+                    font-size: 16px
+            .item-name
+                margin-bottom: 10px
+                font-size: 14px
+            .item-height,
+            .item-size
+                font-weight: 600
+                .num
+                    font-weight: 300
+            .item-info
+                margin-left: 20px
+                display: flex
+                align-items: flex-start
+                flex-direction: column
+                justify-content: space-between
+    #profile.security .btn-wrap
+        margin-top: 30px
+        justify-content: center
+        display: flex
+    #profile.security .btn-wrap .btn
+        max-width: 500px
+        width: 100%
+        justify-content: center
+    #profile.wishlist .list .like.active
+        background-size: contain
+    #profile.wishlist .list .like
+        min-width: 26px
+        position: absolute
+        bottom: 0
+        right: 0
+        background-size: contain
+        margin-top: 15px
+    #profile.wishlist .list .meta
+        align-items: flex-end
+        position: relative
+    #profile.wishlist .list li
+        width: 48%
+    #profile.wishlist .list li .clarify
+        font-size: 12px
+
+@media only screen and (max-width : 425px)
+    #profile form .profile-box > div.addr input[name="street"]
+        max-width: 100%
+        margin-bottom: 20px
+    #profile form .profile-box > div.addr input[name="house"], #profile form .profile-box > div.addr input[name="apart"]
+        min-width: 45%
+        text-align: center

@@ -28,6 +28,7 @@
         >li:not(:first-child)
             border-top: 1px solid #eeeff0
         >li
+            position: relative
             padding: 20px 0
             display: flex
             justify-content: flex-start
@@ -201,3 +202,38 @@
         position: absolute
     #cart .list > li .item-info
         margin-bottom: 20px
+
+@media only screen and (max-width : 767px)
+    #cart .list .item-prev
+        margin-right: 20px
+    #cart .list .item-name
+        margin-right: 40px
+    #cart .list .counter
+        position: absolute
+        bottom: 0
+        left: 0
+        height: 50px
+        line-height: 50px
+    #cart .list .price
+        position: absolute
+        bottom: 0
+        right: 0
+        line-height: 50px
+        width: 50%
+    #cart .list > li
+        padding-bottom: 60px
+        align-items: flex-start
+    #cart .bottom-line,
+    #cart .bottom-line .total
+        align-items: center
+        text-align: center
+        flex-direction: column
+    #cart .bottom-line .total > p
+        margin-right: 0
+        margin-top: 20px
+        margin-bottom: 30px
+    #cart .bottom-line .coupon .step-1
+        display: inline-block
+    #cart .bottom-line .coupon
+        line-height: 45px
+        height: 45px

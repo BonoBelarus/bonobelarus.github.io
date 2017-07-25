@@ -1,0 +1,125 @@
+#about
+    padding: 40px 0 120px
+    .breadcrumbs
+        margin-bottom: 70px
+    .left-side
+        max-width: 650px
+        .notion
+            font-weight: 700
+            margin-bottom: 35px
+            font-size: 21px
+        h1
+            margin-bottom: 45px
+        .clarify
+            a:hover
+
+                border-bottom: 1px solid transparent
+            a
+                border-bottom: 1px solid $green
+                color: $green
+            p:not(:first-child)
+                margin-top: 20px
+    .right-side
+        .img
+            position: relative
+            .label
+                position: absolute
+                height: 200px
+                width: 200px
+                border-radius: 50%
+                background-color: $green
+                color: #fff
+                display: flex
+                bottom: 0
+                right: 0
+                align-items: center
+                text-align: center
+                justify-content: flex-end
+                flex-direction: column
+                padding-bottom: 15px
+                box-shadow: 0 5px 30px rgba($green, .5)
+                .caption
+                    line-height: 1em
+                    font-weight: 700
+                    font-size: 84px
+                .clarify
+                    font-size: 17px
+                    font-family: "PT Sans"
+        .download
+            margin-top: 50px
+            text-align: center
+            a
+                text-align: left
+                display: inline-block
+                padding-left: 50px
+                background: url(../img/download-file.png) left center no-repeat
+                >p
+                    font-weight: 700
+                    font-size: 14px
+            .file
+                font-size: 13px
+            a:hover
+                color: $green
+    .flex-wrap.features
+        .caption
+            font-size: 21px
+            font-weight: 700
+            margin-bottom: 10px
+        .left-side
+            margin-right: 30px
+            min-width: 770px
+            max-width: 770px
+            .list
+                ul
+                    display: flex
+                    justify-content: flex-start
+                    align-items: flex-start
+                    flex-wrap: wrap
+                li
+                    padding-right: 55px
+                    margin-top: 20px
+                    position: relative
+                    width: 50%
+                    padding-left: 15px
+                    &:before
+                        content: ''
+                        position: absolute
+                        height: 5px
+                        width: 5px
+                        background-color: $green
+                        top: 10px
+                        left: 0
+        .right-side
+            .caption
+                margin-bottom: 30px
+    .cards
+        ul
+            display: flex
+            justify-content: flex-start
+            align-items: stretch
+            flex-wrap: wrap
+        li:nth-child(odd)
+            background-color: #343437
+            color: #fff
+            padding-left: 150px
+            .clarify
+                opacity: .6
+        li:first-child
+            background: #343437 url(../img/card-icon-1.png) 30px center no-repeat
+        li:nth-child(2)
+            background: #f2f2f2 url(../img/card-icon-2.png) calc(100% - 30px) center no-repeat
+        li:nth-child(3)
+            background: #343437 url(../img/card-icon-3.png) 30px center no-repeat
+        li:nth-child(4)
+            background: #f2f2f2 url(../img/card-icon-4.png) 30px center no-repeat
+        li:nth-child(5)
+            background: #343437 url(../img/card-icon-5.png) 30px center no-repeat
+        li:nth-child(6)
+            background: #f2f2f2 url(../img/card-icon-6.png) 30px center no-repeat
+        li
+            padding: 30px
+            width: 33.33%
+            .caption
+                line-height: 1em
+                font-size: 54px
+                font-weight: 700

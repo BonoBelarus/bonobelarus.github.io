@@ -218,5 +218,60 @@ body header .btn-white:hover,
 		font-size: 14px
 		opacity: .7
 
+b
+	font-weight: 700
+
 .slick-slide
 	outline: none
+
+.breadcrumbs
+	font-size: 12px
+	opacity: .6
+	a:hover
+		color: $green
+	a
+		transition: .05s
+		color: $color
+	ul
+		display: flex
+		justify-content: flex-start
+		align-items: center
+	li
+		position: relative
+	li:not(:last-child)
+		margin-right: 20px
+	li:not(:last-child):before
+		content: '»'
+		right: -13px
+		top: 50%
+		margin-top: -14px
+		position: absolute
+
+#bullets
+	ul
+		display: flex
+		justify-content: space-between
+		align-items: center
+	li
+		padding: 20px
+		min-width: 270px
+		max-width: 270px
+		background-color: #343437
+		color: #fff
+	.caption
+		font-weight: 700
+	.clarify
+		font-size: 14px
+	.info
+		padding-left: 20px
+		border-left: 3px solid $green
+	.btn-wrap
+		margin-top: 50px
+		text-align: center
+		.btn:hover
+			color: #fff
+		.btn
+			color: $green
+			padding: 0 30px
+			line-height: 50px
+			height: 50px

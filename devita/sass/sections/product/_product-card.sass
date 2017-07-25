@@ -210,6 +210,7 @@
 			align-items: center
 			font-size: 30px
 			font-weight: 300
+			margin-right: 30px
 			div
 				width: 45px
 				height: 60px
@@ -228,8 +229,6 @@
 		.btn:hover
 			background-color: rgba(#1c2335, .85)
 			box-shadow: none
-		.btn-wrap
-			margin-left: 30px
 		.btn
 			height: 60px
 			line-height: 60px
@@ -311,3 +310,42 @@
 		margin-top: 30px
 	#product-card .right-side .to-share
 		justify-content: flex-start
+
+@media only screen and (max-width : 767px)
+	#product-card
+		background-color: #f4f7fc
+		.content:before
+			display: none
+		.preview
+			.nav
+				width: 80%
+				left: 10%
+	#product-card .preview .nav .next-preview:before, #product-card .preview .nav .next-preview:after, #product-card .preview .nav .prev-preview:before, #product-card .preview .nav .prev-preview:after
+		background: #fff
+	#product-card .preview .nav .next-preview.slick-disabled, #product-card .preview .nav .prev-preview.slick-disabled
+		opacity: .3
+		&:before,
+		&:after
+			background: #000
+	#product-card
+		.right-side
+			padding-right: 0
+			padding-left: 0
+		.flex-wrap
+			flex-wrap: wrap
+	#product-card .right-side h1
+		font-size: 28px
+	#product-card .right-side .to-share
+		margin-top: 20px
+
+@media only screen and (max-width : 500px)
+	#product-card .flex-wrap
+		flex-direction: column
+		align-items: flex-start
+		>*:not(:first-child)
+			margin-top: 15px
+	#product-card .preview
+		max-width: 300px
+		width: 300px
+		img
+			max-width: 100%

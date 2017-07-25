@@ -9,54 +9,87 @@ html(lang="en")
 		link(href="css/main.css", rel="stylesheet")
 		
 	body
-		header
-			.top-line
-				.content
-					.left-side
-						ul
-							li
-								a(href="#") Доставка  и оплата
-							li
-								a(href="#") Обмен и возврат
-					.right-side
-						ul
-							li.drop
-								a(href="#") Rus
-							li.drop
-								a(href="#") Валюта: BYN
-							li
-								a(href="#")  Войти / Регистрация
-			.major-menu
-				.content
-					.logo
-						img(draggable="false" src="img/logo.png", alt="")
-						.clarify
-							p Официальный интернет-магазин
-					nav
-						.mobile-nav
-							div
-						ul
-							li
-								a(href="#") Каталог
-							li
-								a(href="#") Скидки
-							li
-								a(href="#") Блог
-							li.drop
-								a(href="#") О бренде
-					.states
-						ul
-							li.search
-								a(href="#")
-									img(draggable="false" src="img/icon-search.png", alt="")
-							li.like
-								a(href="#")
-									.total 6
-									img(draggable="false" src="img/icon-like.png", alt="")
-							li.cart
-								a(href="#")
-									.total 2
-									img(draggable="false" src="img/icon-cart.png", alt="")
+		.mobile-menu
+			.overlay
+			ul
+				li.settings
+					ul
+						li.login
+							a(href="#") Войти / Регистрация
+						li.dropdown
+							a(href="#") Валюта: BYN
+						li
+							a(href="#") Rus / Eng
+				li
+					a(href="#") Каталог
+				li
+					a(href="#") Скидки
+				li
+					a(href="#") Блог
+				li.dropdown
+					a(href="#") О бренде
+					ul
+						li
+							p О бренде
+						li
+							p Lookbook
+						li
+							p Новости
+						li
+							p Сертификаты
+						li
+							p Блог
+						li
+							p Контакты
+		.header-wrap
+			header
+				.top-line
+					.content
+						.left-side
+							ul
+								li
+									a(href="#") Доставка  и оплата
+								li
+									a(href="#") Обмен и возврат
+						.right-side
+							ul
+								li.drop
+									a(href="#") Rus
+								li.drop
+									a(href="#") Валюта: BYN
+								li
+									a(href="#")  Войти / Регистрация
+				.major-menu
+					.content
+						.logo
+							img(draggable="false" src="img/logo.png", alt="")
+							.clarify
+								p Официальный интернет-магазин
+						nav
+							.mobile-nav
+								div
+							ul
+								li
+									a(href="#") Каталог
+								li
+									a(href="#") Скидки
+								li
+									a(href="#") Блог
+								li.drop
+									a(href="#") О бренде
+						.states
+							ul
+								li.search
+									a(href="#")
+										img(draggable="false" src="img/icon-search.png", alt="")
+								li.like
+									a(href="#")
+										.total 6
+										img(draggable="false" src="img/icon-like.png", alt="")
+								li.cart
+									a(href="#")
+										.total 2
+										img(draggable="false" src="img/icon-cart.png", alt="")
 		section#top-sec
 			.content
 				h1

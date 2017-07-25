@@ -107,3 +107,52 @@
 		margin-left: 0
 		position: relative
 		z-index: 2
+		padding-top: 100px
+		max-width: 360px
+
+	#about .template-1 + .template-1
+		overflow: hidden
+		.right-side
+			img
+				margin-left: 150px
+
+@media only screen and (max-width : 767px)
+	#about
+		.content
+			padding-bottom: 0
+		.template-1
+			.right-side
+				position: relative
+				width: 100%
+				margin-left: 0
+		.template-1
+			.left-side
+				max-width: 360px
+				width: 100%
+				margin: 0 auto 50px
+	#about h1, #about h1 + .clarify
+		p
+			display: inline
+	#about .template-1 + .template-1
+		margin-top: 0
+		.content
+			flex-direction: column
+		.right-side
+			position: static
+			max-width: 100%
+			margin: 0 
+			img
+				margin-left: 0
+	#about .template-1 + .template-1 .left-side
+		max-width: 100%
+		padding-top: 0
+	#about .right-side .wrap
+		padding: 40px 0
+
+@media only screen and (max-width : 500px)
+	#about
+		.collage
+			margin-bottom: -50px
+			transform: scale(.6) translateX(calc(50% - 170px))
+		.content+.template-1
+			margin-top: 0

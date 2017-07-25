@@ -74,12 +74,14 @@
                 text-align: left
             .like.active
                 background: url(../img/like-full.png) center no-repeat
+                background-size: contain
             .like
                 cursor: pointer
                 transition: .2s
                 width: 26px
                 height: 24px
                 background: url(../img/like.png) center no-repeat
+                background-size: contain
         li a:hover
             .prev-img:before
                 background-color: #d4e5ef
@@ -123,5 +125,35 @@
             text-transform: uppercase !important
 
 @media only screen and (max-width : 1200px)
-    #catalog .list li
-        max-width: 360px
+    #catalog
+        .list li
+            max-width: 360px
+        h1
+            font-size: 40px
+
+@media only screen and (max-width : 767px)
+    #catalog
+        padding-bottom: 80px
+        .filter:after
+            content: url(../img/arrow-down.png)
+            position: absolute
+            right: 30px
+            line-height: 55px
+        .filter:before
+            line-height: 55px
+            content: 'фильтры'
+            position: absolute
+            text-transform: uppercase
+            font-size: 14px
+            font-weight: 600
+            color: #1c2335
+        .filter
+            position: relative
+            .left-side,
+            .right-side
+                display: none
+        .list
+            li
+                max-width: 48%
+    #catalog .list .clarify
+        font-size: 14px

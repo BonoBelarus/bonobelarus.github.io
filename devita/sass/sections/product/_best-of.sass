@@ -93,9 +93,23 @@
 			display: inline
 	#best-of
 		padding: 50px 0
-	#best-of .right-side
-		display: none
 	#best-of .left-side
 		max-width: 100%
 	#best-of .nav
 		display: none
+	#best-of .right-side
+		position: static
+		max-width: 700px
+		width: 100%
+		margin: 50px auto 0
+	#best-of .right-side .slider
+		max-width: 700px
+
+@media only screen and (max-width : 767px)
+	#best-of .right-side,
+	#best-of .right-side .slider
+		max-width: 500px
+
+@media only screen and (max-width : 500px)
+	#best-of .right-side, #best-of .right-side .slider
+		max-width: 300px

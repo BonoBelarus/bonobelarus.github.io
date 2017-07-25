@@ -2,6 +2,8 @@
 	padding: 200px 0 70px
 	position: relative
 	overflow: hidden
+	.slick-dots
+		display: none
 	h3
 		margin-top: 30px
 	.content:before
@@ -90,3 +92,65 @@
 		font-size: 12px
 		padding-left: 45px
 		position: relative
+
+@media only screen and (max-width : 1200px)
+	#famous-devita
+		padding-top: 350px
+	#famous-devita .right-side
+		margin-left: 0
+		padding-top: 150px
+	#famous-devita .slider-wrap
+		max-width: 620px
+		margin-top: -250px
+		margin-left: auto
+		margin-right: auto
+		left: 0
+		right: 0
+	#famous-devita .slider-wrap
+		.nav
+			background-color: transparent
+			bottom: 50%
+			margin-bottom: -20px
+			left: -10%
+			width: 120%
+			.pages
+				display: none
+
+@media only screen and (max-width : 767px)
+	#famous-devita .slider-wrap .nav
+		display: none
+	#famous-devita
+		h3
+			font-size: 31px
+		.slick-dots
+			margin-bottom: 50px
+			display: block
+			li
+				width: auto
+				height: auto
+			li.slick-active
+				button
+					box-shadow: inset 0 0 0 10px #fff
+			li:not(:first-child)
+				margin-left: 10px
+			button:before
+				display: none
+			button
+				background: transparent
+				width: 10px
+				height: 10px
+				border-radius: 50%
+				transition: .3s
+				box-shadow: inset 0 0 0 1px #fff
+	#famous-devita .right-side
+		padding-top: 70px
+		max-width: 100%
+		width: 100%
+
+@media only screen and (max-width : 450px)
+	#famous-devita .slider-wrap
+		margin-top: -215px
+
+@media only screen and (max-width : 450px)
+	#famous-devita .slider-wrap
+		margin-top: -180px

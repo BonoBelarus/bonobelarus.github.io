@@ -1,0 +1,82 @@
+#catalog-page
+    padding: 40px 0 120px
+    h1
+        margin: 100px 0 50px
+    .list
+        >ul
+            display: flex
+            justify-content: flex-start
+            flex-wrap: wrap
+            align-items: stretch
+            >li
+                margin-left: -1px
+                margin-top: -1px
+                border: 1px solid #ccc
+                width: 385px
+                padding: 0 40px 40px
+                ul
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+                    justify-content: flex-start
+                li:before
+                    content: ''
+                    position: absolute
+                    width: 5px
+                    height: 5px
+                    background-color: #3bd99e
+                    top: 10px
+                    left: 0
+                li.new:after
+                    font-size: 11px
+                    content: 'Новинка'
+                    position: absolute
+                    padding: 0 5px
+                    line-height: 1.7em
+                    background-color: #fcc213
+                    color: #fff
+                    left: 100%
+                    margin-left: 10px
+                    top: 5px
+                li:not(:first-child)
+                    margin-top: 10px
+                li
+                    overflow: initial
+                    font-size: 16px
+                    color: rgba(#233143, .85)
+                    position: relative
+                    padding-left: 15px
+                    line-height: 1.3em
+                a:hover
+                    color: #3bd99e
+            .caption
+                margin-bottom: 15px
+                font-size: 21px
+                font-weight: 700
+        .img
+            margin-bottom: 15px
+            padding-top: 30px
+            height: 200px
+            display: flex
+            align-items: flex-end
+        img
+            max-width: 100%
+            max-height: 100%
+            margin: 0 auto
+            display: block
+        .tabs
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 14px
+            font-weight: 700
+            margin-bottom: 10px
+            div.active
+                color: #3bd99e
+                border-color: #3bd99e
+            div
+                cursor: pointer
+                padding: 0 10px
+                border: 1px solid #ccc
+            div:not(:first-child)
+                margin-left: 12px

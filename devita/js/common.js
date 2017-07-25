@@ -40,18 +40,27 @@ document.addEventListener('DOMContentLoaded', function(){
 		fade: true
 	});
 
-	var descr_tabs = $('#descr-and-rev .tabs li');
-	descr_tabs.click(function(e){
-		var slide = $(e.currentTarget).index();
-		$(descr_and_rev_Slider).slick('slickGoTo', slide);
+	if($(window).width() > 767 ){
+		//product card slider
 
-		if($(e.currentTarget).hasClass('active')){
-			return;
-		}else{
-			descr_tabs.removeClass('active')
-			$(e.currentTarget).addClass('active');
-		}
-	});
+		$('#descr-and-rev .tabs>ul>li:first-child').addClass('active');
+		var descr_tabs = $('#descr-and-rev .tabs li');
+		descr_tabs.click(function(e){
+			var slide = $(e.currentTarget).index();
+			$(descr_and_rev_Slider).slick('slickGoTo', slide);
+
+			if($(e.currentTarget).hasClass('active')){
+				return;
+			}else{
+				descr_tabs.removeClass('active')
+				$(e.currentTarget).addClass('active');
+			}
+		});
+	}else{
+		$('#descr-and-rev .tabs .to-open').click(function(e){
+				$(e.currentTarget).next().slideToggle().closest('li').toggleClass('active');
+		});
+	}
 
 	var best_of_slider = $('#best-of .slider')
 	best_of_slider.slick({
@@ -110,18 +119,21 @@ document.addEventListener('DOMContentLoaded', function(){
 		prevArrow: '<div class="prev"><img src="img/preview-arrow.png" alt=""></div>'
 	});
 
-	var famous_slider = $('#famous-devita .slider');
-	var total_slides_product = $('#famous-devita .slider .item');
-	$('#famous-devita .total').text(total_slides_product.length);
-	famous_slider.slick({
-		infinite: false,
-		appendArrows: $('#famous-devita .nav'),
-		nextArrow: '<div class="next"><img src="img/preview-arrow.png" alt=""></div>',
-		prevArrow: '<div class="prev"><img src="img/preview-arrow.png" alt=""></div>'
-	});
-	famous_slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
-		$('#famous-devita .current').text(currentSlide+1);
-	});
+	setTimeout(function(){
+		var famous_slider = $('#famous-devita .slider');
+		var total_slides_product = $('#famous-devita .slider .item');
+		$('#famous-devita .total').text(total_slides_product.length);
+		famous_slider.slick({
+			infinite: false,
+			appendArrows: $('#famous-devita .nav'),
+			nextArrow: '<div class="next"><img src="img/preview-arrow.png" alt=""></div>',
+			prevArrow: '<div class="prev"><img src="img/preview-arrow.png" alt=""></div>',
+			dots: true
+		});
+		famous_slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
+			$('#famous-devita .current').text(currentSlide+1);
+		});
+	}, 1000);
 
 	var article_slider = $('#article .slider');
 	article_slider.slick({
@@ -131,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		prevArrow: '<div class="prev"><img src="img/preview-arrow.png" alt=""></div>'
 	});
 
-	$('#faq .item .caption, #payment .tabs .header').click(function(e){
+	$('#faq .item .caption, #payment .tabs .header, #profile .mobile-history-box table').click(function(e){
 		if($(e.currentTarget).closest('li').hasClass('active') == true){
 			$(e.currentTarget).closest('li').removeClass('active').find('.hidden-content').slideUp();
 		}else{
@@ -225,8 +237,32 @@ document.addEventListener('DOMContentLoaded', function(){
 		$(e.currentTarget).addClass('active');
 	});
 
-	$('.mobile-nav').click(function(e){
-		$(e.currentTarget).closest('nav').find('ul').slideToggle();
+	$('.dropdown').click(function(e){
+		$(e.currentTarget).toggleClass('active').find('ul').slideToggle();
 	});
+
+	$('.mobile-nav').click(function(e){
+
+		var w = $('.major-menu .content').width();
+
+		$('.major-menu').toggleClass('active');
+		$(e.currentTarget).closest('header').toggleClass('active');
+		$('.mobile-menu').toggleClass('active');
+		
+		if($(window).width() > 500){
+			var ol;
+			if($('.major-menu').hasClass('active') == true){
+				ol = (w/2) - 100
+			}else{
+				ol = 0
+			}
+
+			var like = $('header .like').css({
+				'transform': 'translateX(-' + ol + 'px)'
+			});
+		}
+
+	});
+	
 
 });

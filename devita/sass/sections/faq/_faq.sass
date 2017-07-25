@@ -52,6 +52,7 @@
 					color: #f47aac
 		.header
 			color: #1c2335
+			line-height: 1.1em
 			font-size: 32px
 			font-family: 'Playfair Display'
 		.caption:hover
@@ -109,3 +110,28 @@
 		margin-top: 50px
 	#faq .themes .item .caption
 		font-size: 16px
+
+@media only screen and (max-width : 767px)
+	#faq .content
+		padding: 0
+	#faq h1
+		font-size: 28px
+	#faq aside
+		nav
+			overflow: auto
+	#faq aside ul
+		width: 600px
+		margin: 0 auto
+		a
+			word-break: normal
+	#faq .themes .header
+		font-size: 24px
+		padding-left: 20px
+		&+ul
+			padding-left: 20px
+			padding-right: 20px
+	#faq .themes .item .caption
+		font-size: 14px
+		padding-right: 30px
+	#faq .themes .item .hidden-content
+		font-size: 13px

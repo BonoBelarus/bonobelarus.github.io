@@ -1,0 +1,303 @@
+#product
+    padding: 40px 0 120px
+    h1
+        font-size: 44px
+    .breadcrumbs
+        margin-bottom: 70px
+    .flex-wrap.top
+        .left-side
+            margin-right: 130px
+            max-width: 470px
+            width: 100%
+            display: flex
+            justify-content: flex-start
+            align-items: center
+        .item:focus
+            outline: none
+        .gallery
+            position: relative
+            margin-right: 50px
+            max-width: 80px
+            .prev-arrow
+                margin-bottom: 10px
+                transform: rotateZ(180deg)
+            .prev-arrow,
+            .next-arrow
+                text-align: center
+                cursor: pointer
+            .item:not(:first-child)
+                margin-top: 10px
+            .item.slick-current
+                border: 1px solid #000
+            .item
+                height: 80px
+                border: 1px solid #ccc
+            img
+                max-height: 100%
+                max-width: 100%
+                margin: 0 auto
+        .preview
+            max-width: 300px
+            width: 100%
+            img
+                max-width: 100%
+        .right-side
+            .tabs
+                margin: 35px 0
+                ul
+                    display: flex
+                    justify-content: flex-start
+                    align-items: center
+                li:hover
+                    border-bottom: 1px dashed rgba(#000, 0)
+                li
+                    cursor: pointer
+                    border-bottom: 1px dashed rgba(#000, .2)
+                li:first-child
+                    margin-right: 30px
+            >ul
+                li:not(:first-child)
+                    margin-top: 15px
+                li
+                    display: flex
+                    justify-content: flex-start
+                    align-items: center
+                .icon
+                    margin-right: 20px
+                    max-width: 25px
+                    img
+                        max-width: 100%
+            .btn-wrap
+                margin-top: 40px
+            .btn
+                height: 50px
+                line-height: 50px
+                padding: 0 50px
+    .bullets
+        margin-top: 100px
+        ul
+            max-width: 100%
+            justify-content: space-between
+            li:not(:first-child)
+                margin-left: 30px
+            li
+                border-left: none
+                padding: 20px
+                background-color: #343437
+                color: #fff
+                max-width: 270px
+            .info
+                border-left: 3px solid #3dd89d
+                padding-left: 20px
+    .flex-wrap.tabs
+        margin-top: 100px
+        .tabs
+            border-bottom: 1px solid #ccc
+            ul
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                font-weight: 700
+            li:first-child
+                margin-right: 30px
+            li.active:before
+                height: 2px
+            li.active
+                opacity: 1
+            li:before
+                transition: .1s
+                content: ''
+                position: absolute
+                height: 0
+                background-color: $green
+                width: 30px
+                bottom: 0
+                left: 0    
+            li
+                cursor: pointer
+                padding-bottom: 10px
+                position: relative
+                opacity: .7
+        .left-side
+            max-width: 770px
+            width: 100%
+        .tabs-content
+            margin-top: 20px
+            font-size: 16px
+            p:not(:first-child)
+                margin-top: 20px
+        .right-side
+            max-width: 270px
+            width: 100%
+            >.caption:before
+                transition: .1s
+                content: ''
+                position: absolute
+                height: 2px
+                background-color: $green
+                width: 30px
+                bottom: 0
+                left: 0
+            >.caption
+                padding-bottom: 10px
+                border-bottom: 1px solid #ccc
+                font-size: 18px
+                font-weight: 700
+                position: relative
+            li:not(:first-child)
+                margin-top: 20px
+            ul
+                margin-top: 20px
+            li
+                a:hover
+                    color: $green
+                a
+                    transition: .1s
+            li
+                background: url(../img/download-file.png) left top no-repeat
+                padding-left: 50px
+                padding-bottom: 5px
+                .caption
+                    line-height: 1.5em
+                    font-size: 14px
+                    font-weight: 700
+                .file
+                    line-height: 1.5em
+                    opacity: .6
+                    font-size: 13px
+    .tech-char
+        margin-top: 150px
+        >.caption
+            font-weight: 700
+            font-size: 28px
+            border-bottom: 1px solid #ccc
+            position: relative
+            padding-bottom: 15px
+            &:before
+                content: ''
+                position: absolute
+                width: 30px
+                height: 2px
+                bottom: 0
+                left: 0
+                background-color: $green
+        .table
+            .caption
+                font-weight: 700
+                text-transform: uppercase
+                font-size: 18px
+                margin: 70px 0 35px
+                position: relative
+                padding-left: 10px
+                &:before
+                    content: ''
+                    position: absolute
+                    height: 5px
+                    width: 5px
+                    background-color: $green
+                    border-radius: 50%
+                    top: 50%
+                    margin-top: -3px
+                    left: 0
+        table
+            border-bottom: 1px solid #ccc
+            font-size: 15px
+            width: 100%
+            text-align: center
+        td[colspan="7"]
+            font-weight: 700
+            text-transform: uppercase
+            vertical-align: bottom
+        td
+            height: 50px
+            overflow: hidden
+            vertical-align: middle
+            position: relative
+        tr:not(:first-child)
+            border-top: 1px solid #ccc
+        tr:first-child
+            font-weight: 700
+        tr
+            td:not(:first-child)
+                padding: 5px 10px
+                border-left: 1px solid #ccc
+            td:first-child
+                text-align: left
+                .wrap
+                    .box:not(:last-child):before
+                        width: 100%
+                        left: 0
+        .separate
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start
+            .name
+                padding-top: 10px
+            >*
+                width: 50%
+        .wrap
+            position: relative
+            min-height: 50px
+            height: 100%
+            display: flex
+            flex-direction: column
+            align-items: stretch
+            >div
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                position: relative
+                min-height: 50px
+                vertical-align: middle
+            .box:not(:last-child):before
+                content: ''
+                position: absolute
+                height: 1px
+                width: 140%
+                bottom: 0
+                left: -20%
+                background-color: #ccc
+        .table + .notion
+            font-weight: 700
+            margin: 30px 0 10px
+            font-size: 14px
+            &+.clarify
+                font-size: 14px
+    .xtra-tools
+        margin-top: 80px
+        border: 1px solid #ccc
+        padding: 40px
+        font-size: 16px
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        .left-side
+            max-width: 650px
+        .caption
+            font-weight: 700
+            font-size: 24px
+        .clarify
+            margin: 10px 0
+        .list
+            ul
+                display: flex
+                justify-content: flex-start
+                align-items: flex-start
+                flex-wrap: wrap
+            li:before
+                content: ''
+                height: 5px
+                width: 5px
+                background-color: $green
+                top: 10px
+                left: 0
+                position: absolute
+            li
+                position: relative
+                padding-left: 15px
+                width: 50%
+        .btn:hover
+            color: #fff
+        .btn
+            color: $green
+            padding: 0 30px

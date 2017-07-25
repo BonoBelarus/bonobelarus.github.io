@@ -13,3 +13,36 @@
 	#top-sec
 		h1
 			font-size: 64px
+
+@media only screen and (max-width : 767px)
+	#top-sec
+		h1
+			font-size: 51px
+	#top-sec:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		background-color: #000
+		opacity: .4
+	#top-sec
+		position: relative
+		background-position: calc(100% + 250px)
+		.content
+			position: relative
+		h1
+			color: #fff
+			text-align: center
+		.btn:hover
+			box-shadow: inset -1px -1px 0 2px #fff
+		.btn-wrap
+			text-align: center
+		.btn
+			padding-right: 50px
+			color: #fff
+			box-shadow: inset 0 0 0 1px #fff
+			background: url(../img/arrow-white.png) 130px center no-repeat
+			img
+				display: none

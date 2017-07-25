@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title Devita
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700|Playfair+Display:400,400i&amp;subset=cyrillic" rel="stylesheet")
+		link(href="css/main.css", rel="stylesheet")
+		
+	body
+		.header-wrap
+			header
+				.top-line
+					.content
+						.left-side
+							ul
+								li
+									a(href="#" target="_blank") Доставка  и оплата
+								li
+									a(href="#" target="_blank") Обмен и возврат
+						.right-side
+							ul
+								li.drop
+									a(href="#" target="_blank") Rus
+								li.drop
+									a(href="#" target="_blank") Валюта: BYN
+								li
+									a(href="#" target="_blank")  Войти / Регистрация
+				.major-menu
+					.content
+						.logo
+							img(draggable="false" src="img/logo.png", alt="")
+							.clarify
+								p Официальный интернет-магазин
+						nav
+							ul
+								li
+									a(href="#" target="_blank") Каталог
+								li
+									a(href="#" target="_blank") Скидки
+								li
+									a(href="#" target="_blank") Блог
+								li.drop
+									a(href="#" target="_blank") О бренде
+						.states
+							ul
+								li.search
+									a(href="#" target="_blank")
+										img(draggable="false" src="img/icon-search.png", alt="")
+								li.like
+									a(href="#" target="_blank")
+										.total 6
+										img(draggable="false" src="img/icon-like.png", alt="")
+								li.cart
+									a(href="#" target="_blank")
+										.total 2
+										img(draggable="false" src="img/icon-cart.png", alt="")
+		section#make-order
+			.content
+				h1 Оформление заказа
+				.flex-wrap
+					.left-side
+						form(action="")
+							.caption
+								p Контактная информация
+							.clarify
+								p
+									a(href="#").mark Войдите 
+									| в личный кабинет, если уже зарегистрированы.
+							.holders
+								.name
+									label ФИО
+									input(type="text" name="name" required)
+								.phone
+									label Телефон
+									input(type="tel" name="phone")
+								.email
+									label E-mail
+									input(type="email" name="email")
+							.caption
+								p Доставка и оплата
+							.holders
+								.country
+									label Страна
+									select(name="country")
+										option(value="Казахстан") Казахстан
+										option(value="Беларусь") Беларусь
+								.index
+									label Индекс
+									input(type="text" name="index" placeholder="123456789")
+								.area
+									label Область
+									input(type="text" name="area" placeholder="Актюбинская")
+								.city
+									label Город
+									input(type="text" name="city" placeholder="Актюбинск")
+								.addr
+									label Адрес
+									.places
+										input(type="text" name="street" placeholder="Улица")
+										input(type="text" name="house" placeholder="Дом")
+										input(type="text" name="apart" placeholder="Кв.")
+								.delivery
+									label Доставка
+									.items
+										.item
+											input(type="radio" name="delivery" id="delivery-type-1")
+											label(for="delivery-type-1")
+												.wrap
+													.item-info
+														.caption
+															p СДЭК, курьерская служба
+														.clarify
+															p от 4 до 14 рабочих дней
+													.price
+														p 800 Р
+										.item
+											input(type="radio" name="delivery" id="delivery-type-2")
+											label(for="delivery-type-2")
+												.wrap
+													.item-info
+														.caption
+															p EMS, экспресс-почта
+														.clarify
+															p от 4 до 6 рабочих дней
+													.price
+														p 1 600 Р
+										.item
+											input(type="radio" name="delivery" id="delivery-type-3")
+											label(for="delivery-type-3")
+												.wrap
+													.item-info
+														.caption
+															p DPD, транспортная компания
+														.clarify
+															p от 10 до 14 рабочих дней
+													.price
+														p 600 Р
+								.pay-method
+									label Оплата
+									select(name="payment")
+										option(value="Карта Visa/Mastercard") Карта Visa / Mastercard
+								.comment
+									label Комментарий
+									textarea(name="comment")
+								.news-letters
+									label Рассылка
+									input(type="checkbox" id="news-letters" name="news-letters")
+									label(for="news-letters")
+									.notion
+										p Вы будете первыми узнавать об обновлении коллекций,
+										p новых акциях и специальных предложениях
+						.bottom-line
+							.back-to
+								a(href="#") Назад в корзину
+							.btn-wrap
+								button.btn Подтвердить заказ
+								.notion
+									p Нажимая на кнопку «подтвердить заказ»,
+									p я принимаю условия публичной оферты
+
+					.right-side
+						.in-cart
+							.caption
+								p В заказе 2 товара
+							ul.list
+								li
+									.item-info
+										.item-img
+											img(src="img/catalog-1.jpg", alt="")
+										.item-clarify
+											p Принтованное платье М-546
+											p Размер: 44
+									.item-price
+										p 1 x 114 BYN
+								li
+									.item-info
+										.item-img
+											img(src="img/catalog-2.jpg", alt="")
+										.item-clarify
+											p Принтованное платье М-546
+											p Размер: 44
+									.item-price
+										p 2 x 228 BYN
+							.order-price
+								p Сумма заказа:
+								p 342 BYN
+							.order-delivery
+								p Доставка:
+								p 5 BYN
+							.order-total
+								p Итого:
+								p 347 BYN
+		footer
+			.content
+				.social
+					ul
+						li.vk
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/vk.png", alt="")
+						li.fb
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/fb.png", alt="")
+						li.insta
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/insta.png", alt="")
+						li.ok
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/ok.png", alt="")
+						li.youtube
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/youtube.png", alt="")
+				.footer-top
+					.contacts
+						ul
+							li.viber
+								a(href="tel:+375293757770") +375 29 375 77 70
+							li.whatsapp
+								a(href="tel:+375292272633") +375 29 227 26 33
+							li.skype
+								a(href="skype:devitabel") devitabel
+							li.email
+								a(href="e-mail:devitabel@mail.ru") devitabel@mail.ru
+						.shedule
+							.caption
+								p Обработка заказов:
+							p ПН-ПТ с 09:00 до 19:00
+					nav
+						.shop
+							.caption
+								p Магазин
+							ul
+								li
+									a(href="#" target="_blank") Клоллекции
+								li
+									a(href="#" target="_blank") Распродажа
+								li
+									a(href="#" target="_blank") О бренде
+								li
+									a(href="#" target="_blank") Новости
+								li
+									a(href="#" target="_blank") Блог
+								li
+									a(href="#" target="_blank") Контакты
+						.buyers
+							.caption
+								p Покупателям
+							ul
+								li
+									a(href="#" target="_blank") Оплата и доставка
+								li
+									a(href="#" target="_blank") Обмен и возврат
+								li
+									a(href="#" target="_blank") Вопросы и ответы
+						.account
+							.caption
+								p Личный кабинет
+							ul
+								li
+									a(href="#" target="_blank") Личные данные
+								li
+									a(href="#" target="_blank") Адреса доставки
+								li
+									a(href="#" target="_blank") Заказы
+								li
+									a(href="#" target="_blank") Хочу купить
+					.subscription
+						.notion
+							p Подпишитесь на новости и получите скидку 1000 руб. на первую покупку
+						form(action="")
+							.email
+								input(type="email" name="email" placeholder="Ваш Email")
+				.footer-bottom
+					.copyright
+						.caption
+							p © 2017. Devita Shop
+						.clarify
+							p Магазин зарегистрирован
+							p в Торговом реестре РБ 15 апреля 2014.
+					.pay-with
+						img(draggable="false" src="img/payment-logo.png", alt="")
+					.made-by
+						p Дизайн и разработка
+							a(href="#" target="_blank")
+								.namba
+									.logo
+										img(draggable="false" src="img/nambawan-logo.png", alt="")
+										p Nambawan
+					
+		.hidden
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		script(src="js/slick.min.js")
+		script(src="js/sticky.js")
+		script(src="js/common.js")

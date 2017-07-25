@@ -86,6 +86,18 @@
 			.clarify
 				margin-top: 20px
 				font-size: 14px
+	.hidden-content
+		margin-top: 50px
+		text-align: left
+		font-size: 14px
+		color: $color
+		font-family: "Open Sans"
+		display: none
+		.left-side>.clarify
+			>p:not(:first-child)
+				margin-top: 15px
+		.right-side
+			margin-top: 50px
 
 @media only screen and (max-width : 1200px)
 	#descr-and-rev .slick-next,
@@ -101,3 +113,54 @@
 		width: 100%
 		img
 			width: 100%
+
+@media only screen and (max-width : 767px)
+	#descr-and-rev
+		padding: 60px 0
+		.slider
+			display: none
+		.tabs
+			border-bottom: none
+			>ul
+				flex-direction: column
+				align-items: stretch
+				>li.active:before
+					display: none
+				>li:not(:first-child)
+					margin-top: 30px
+				>li
+					padding-bottom: 0
+					width: initial
+					text-align: left
+					>p
+		.to-open
+			padding-right: 50px
+			position: relative
+			display: inline-block
+			max-width: 300px
+			width: 100%
+		.to-open:before
+			transform: rotateZ(180deg)
+			content: url(../img/arrow-down.png) !important
+			position: absolute
+			top: 0
+			margin-left: -20px
+			left: 100%
+			transition: .5s
+		.care
+			margin-top: 50px
+			line-height: 1em
+			.caption
+				font-weight: 600
+				margin-bottom: 10px
+			>ul
+				justify-content: flex-start
+	#descr-and-rev .tabs ul li:not(:first-child)
+				margin-left: 0
+	#descr-and-rev .tabs ul li:first-child:after
+		display: none
+	#descr-and-rev .tabs ul li.active .to-open:before
+		transform: rotateZ(0deg)
+	#descr-and-rev .hidden-content .right-side
+		img
+			max-width: 100%

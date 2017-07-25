@@ -1,0 +1,20 @@
+.top-sec {
+  padding-top: 30px;
+  padding-bottom: 100px;
+  background-color: #fff; }
+  .top-sec .flex-wrap {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 75px; }
+    .top-sec .flex-wrap .right-side {
+      min-width: 480px;
+      text-align: center; }
+  .top-sec .flex-wrap.small-top {
+    margin-top: 0; }
+  .top-sec .btn-wrap {
+    margin-top: 50px; }
+    .top-sec .btn-wrap .btn {
+      padding: 0 30px;
+      font-size: 14px; }

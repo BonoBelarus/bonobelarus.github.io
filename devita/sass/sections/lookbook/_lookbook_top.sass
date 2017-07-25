@@ -174,8 +174,34 @@
 
 @media only screen and (max-width : 1200px)
 	#lookbook_top
+		padding-bottom: 80px
 		h1
 			font-size: 40px
 	#lookbook_top .gallery .image-prev a:after,
 	#lookbook_top .gallery .image-prev a:before
 		display: none
+
+@media only screen and (max-width : 767px)
+	#lookbook_top .top-box
+		overflow: hidden
+		padding: 50px 0
+	#lookbook_top .img-overlay img
+		max-width: initial
+		max-height: 100%
+		margin-left: -150px
+	#lookbook_top .gallery .meta
+		flex-direction: column
+		align-items: flex-start
+		.to-share
+			margin-top: 10px
+	#lookbook_top .gallery ._2-images > div:first-child
+		margin-right: 0
+		margin-bottom: 50px
+	#lookbook_top .gallery ._2-images
+		flex-wrap: wrap
+	#lookbook_top .gallery ._2-images > div
+		width: 100%
+	#lookbook_top .btn-wrap .btn
+		padding: 0 30px 0 10px
+	#lookbook_top .gallery img
+		margin: 0 auto

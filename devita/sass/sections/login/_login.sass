@@ -1,3 +1,36 @@
+#login.recovery
+    .content
+        justify-content: center
+        text-align: center
+        *::-webkit-input-placeholder
+            color: $color
+            opacity: .5
+
+        *:-moz-placeholder
+            color: $color
+            opacity: .5
+
+        *::-moz-placeholder
+            color: $color
+            opacity: .5
+
+        *:-ms-input-placeholder
+            color: $color
+            opacity: .5
+        label
+            display: none
+    .left-side
+        form
+            max-width: 300px
+            margin: 50px auto
+    .left-side .btns
+        .btn-wrap
+            width: 100%
+        .btn
+            justify-content: center
+            padding: 0 10px
+            max-width: 300px
+            width: 100%
 #login
     padding: 80px 0 130px
     .content
@@ -77,7 +110,14 @@
             opacity: .5
 
 @media only screen and (max-width : 1200px)
+    #login.recovery
+        .clarify:before
+            display: none
+        .clarify
+            padding-top: 0
+            font-size: 14px
     #login
+        padding-bottom: 80px
         .content
             text-align: center
             flex-direction: column
@@ -123,3 +163,29 @@
         margin-top: 90px
         .clarify
             font-size: 16px
+
+@media only screen and (max-width : 767px)
+    #login.recovery
+        h1
+            font-size: 24px
+    #login .left-side form > div:last-child
+        flex-direction: column-reverse
+        align-items: stretch
+        .btn
+            width: 100%
+            justify-content: center
+    #login .left-side .btns > div:not(:first-child)
+        margin-left: 0
+        margin-bottom: 10px
+        text-align: center
+    #login .forgot-password:hover
+        box-shadow: none
+    #login .forgot-password
+        box-shadow: none
+        text-transform: none
+        font-weight: 400
+        font-size: 18px
+    #login .right-side .btn-wrap .btn
+        max-width: 290px
+        width: 100%
+        justify-content: center

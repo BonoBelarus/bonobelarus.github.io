@@ -33,15 +33,16 @@ header
 				font-size: 12px
 				opacity: .6
 	nav
-		ul
+		>ul
 			display: flex
 			justify-content: center
 			align-items: center
-		li:not(:first-child)
-			margin-left: 40px
-		a
-			font-weight: 600
-			color: #1c2335
+			>li:not(:first-child)
+				margin-left: 40px
+			>li
+				a
+					font-weight: 600
+					color: #1c2335
 	.states
 		ul
 			display: flex
@@ -73,26 +74,189 @@ header
 				background-color: #a1d8f9
 	.mobile-nav
 		display: none
+.mobile-menu
+	display: none
 
 @media only screen and (max-width : 1200px)
+	.mobile-menu.active
+		.overlay
+			transition-delay: 0s
+			height: 100vh
+		>ul
+			>li
+				opacity: 1
+				transform: none
+			>li:first-child
+				transition-delay: .45s
+			>li:nth-child(2)
+				transition-delay: .55s
+			>li:nth-child(3)
+				transition-delay: .65s
+			>li:nth-child(4)
+				transition-delay: .75s
+			>li:nth-child(5)
+				transition-delay: .85s
+			>li:nth-child(6)
+				transition-delay: .95s
+			>li:nth-child(7)
+				transition-delay: 1.05s
+			>li:nth-child(8)
+				transition-delay: 1.15s
+	.mobile-menu
+		display: block
+		position: fixed
+		overflow: auto
+		top: 0
+		left: 0
+		margin-top: 100px
+		padding: 20px 20px 150px
+		width: 100vw
+		height: 100vh
+		z-index: 9
+		>ul
+			max-width: 680px
+			margin: 0 auto
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-start
+			ul>.dropdown:before
+				transform: scale(.7)
+			>li:first-child
+				transition-delay: .25s
+			>li:nth-child(2)
+				transition-delay: .35s
+			>li:nth-child(3)
+				transition-delay: .45s
+			>li:nth-child(4)
+				transition-delay: .55s
+			>li:nth-child(5)
+				transition-delay: .65s
+			>li:nth-child(6)
+				transition-delay: .75s
+			>li:nth-child(7)
+				transition-delay: .85s
+			>li:nth-child(8)
+				transition-delay: .95s
+			>li
+				opacity: 0
+				transform: translateY(-20px)
+				transition: .25s
+			li
+				padding-right: 30px
+			>li:not(.settings)
+				margin-top: 15px
+				font-weight: 700
+		.overlay
+			bottom: 0
+			left: 0
+			background-color: #fff
+			position: fixed
+			opacity: .9
+			width: 100%
+			transition: .5s ease 1s
+			height: 0
+		ul
+			position: relative
+			z-index: 1
+		.settings
+			font-size: 14px
+			ul
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+				justify-content: flex-start
+			li:not(:first-child)
+				margin-top: 5px
+			.login
+				margin-bottom: 10px
+				font-weight: 600
+		.dropdown.active > a:before
+			transform: rotateZ(180deg)
+		.dropdown > a:before
+			transition: .35s
+			content: url(../img/arrow-down.png)
+			right: 0
+			top: 50%
+			margin-top: -10px
+			position: absolute
+		.dropdown
+			>a
+				display: inline-block
+				padding-right: 30px
+				position: relative
+			ul
+				margin-left: 20px
+				margin-top: 20px
+				font-size: 16px
+				display: none
+			li:not(:first-child)
+				margin-top: 15px
+	.header-wrap
+		height: 105px
+		// transform: translateZ(0)
+		background-color: #fff
+	header.active
+		.mobile-menu
+			display: block
 	header
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 105px
+		z-index: 9
+		background-color: #fff
 		.content
 			max-width: 720px
 		.top-line
 			display: none
+		.major-menu.active
+			.logo
+				transform: translateY(-20px)
+				opacity: 0
+				transition-delay: 0s
+			.cart
+				transform: translateY(-20px)
+				opacity: 0
+				transition-delay: 0s
+			.search
+				transform: translateY(-20px)
+				opacity: 1
+				transition-delay: .2s
+			.like
+				transform: translateX(-50%)
+				transition-delay: .2s
 		.major-menu
 			position: relative
+			.content
+				position: relative
+			.like
+				transition: .25s ease 0s
+			.cart
+				transition: .25s ease .2s
+			.search
+				transition: .25s ease 0s
+				right: 15px
+				top: 50%
+				margin-top: 10px
+				opacity: 0
+				position: absolute
 			.logo
+				transition: .25s ease .2s
 				text-align: center
 				img
 					margin: 0 auto
 			.logo,.states
 				min-width: 33.33%
 				width: 33.33%
+				position: relative
+				z-index: 9
 			.mobile-nav
 				display: block
 				width: 30px
 				height: 24px
+				z-index: 9
 				position: relative
 			.mobile-nav:before,
 			.mobile-nav:after,
@@ -117,7 +281,7 @@ header
 				left: 30px
 				position: absolute
 				width: 33.33%
-				ul
+				>ul
 					position: absolute
 					left: -30px
 					padding: 30px
@@ -126,11 +290,42 @@ header
 					background-color: #fff
 					flex-direction: column
 					align-items: flex-start
-				li
-					width: 100%
-				li:not(:first-child)
-					margin-left: 0
-					margin-top: 20px
+					>li
+						width: 100%
+					>li:not(:first-child)
+						margin-left: 0
+						margin-top: 20px
 
 			.logo
 				margin-left: 33%
+
+@media only screen and (max-width : 767px)
+	header .major-menu .logo
+		min-width: 195px
+		margin-left: 30%
+	header .major-menu .states
+		min-width: auto
+		width: auto
+	header .states li:not(:first-child)
+		margin-left: 30px
+
+@media only screen and (max-width : 500px)
+	header .major-menu .logo img
+		max-width: 100px
+	header .major-menu nav
+		left: 10px
+	header .major-menu .logo
+		margin-left: calc(50% - 90px)
+	header
+		.content
+			padding-left: 0
+	header .major-menu .like
+		position: fixed
+		left: 50%
+		opacity: 0
+		margin-top: 20px
+	header .states li:not(:first-child).like
+		margin-left: 0px
+	header .major-menu.active .like
+		margin-top: 0
+		opacity: 1

@@ -1,0 +1,50 @@
+#supply
+    .flex-wrap
+        align-items: center
+    .left-side
+        max-width: 870px
+        min-width: 870px
+    .list
+        margin-top: 50px
+        ul
+            display: flex
+            justify-content: space-between
+            align-items: stretch
+            flex-wrap: wrap
+        li
+            margin-top: 20px
+            border: 1px solid #ccc
+            padding: 20px
+            text-align: center
+            width: 100%
+            min-width: 270px
+            max-width: 270px
+            margin-right: 20px
+            .img
+                margin-bottom: 10px
+            .clarify
+                font-size: 14px
+                opacity: .4
+                line-height: 1.4em
+    .right-side
+        color: #fff
+        padding: 40px 20px
+        background: #343437
+        font-size: 14px
+        .caption
+            font-size: 18px
+            margin-bottom: 15px
+            font-weight: 700
+        li:not(:first-child)
+            margin-top: 15px
+        li
+            padding-left: 15px
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                height: 5px
+                width: 5px
+                background-color: $green
+                top: 10px
+                left: 0

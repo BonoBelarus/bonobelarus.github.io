@@ -101,8 +101,27 @@
 	#article .slider:not(:first-child), #article .full-img:not(:first-child)
 		margin-top: 50px
 	#article .next, #article .prev
-		display: none
+		display: none !important
 	#article .slider + .text
 		margin-top: 90px
 	#article .bottom-line
 		margin-top: 90px
+
+@media only screen and (max-width : 767px)
+	#article
+		font-size: 14px
+		h1
+			font-size: 28px
+	#article .bottom-line
+		flex-direction: column-reverse
+		.btn-wrap
+			margin-top: 30px
+
+@media only screen and (max-width : 500px)
+	#article .bottom-line
+		.btn-wrap
+			width: 100%
+			.btn
+				text-align: center
+				width: 100%
+				justify-content: center
