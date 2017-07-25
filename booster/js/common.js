@@ -77,8 +77,8 @@ document.addEventListener('DOMContentLoaded', function(){
 		vertical: true,
 		slidesToShow: 4,
 		asNavFor: $('#product .preview'),
-		prevArrow: '<div class="prev-arrow"><img src="../img/arrow.png"></div>',
-		nextArrow: '<div class="next-arrow"><img src="../img/arrow.png"></div>'
+		prevArrow: '<div class="prev-arrow"><img src="img/arrow.png"></div>',
+		nextArrow: '<div class="next-arrow"><img src="img/arrow.png"></div>'
 	});
 
 	$('#product .preview').slick({
