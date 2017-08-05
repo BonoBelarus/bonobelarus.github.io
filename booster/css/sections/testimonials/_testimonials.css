@@ -1,0 +1,11 @@
+#testimonials {
+  padding-bottom: 295px; }
+  #testimonials .caption {
+    font-weight: 700;
+    margin-top: 30px; }
+  #testimonials h1 + .clarify {
+    max-width: 900px; }
+  #testimonials .breadcrumbs {
+    margin-bottom: 70px; }
+  #testimonials .list {
+    margin-top: 55px; }
