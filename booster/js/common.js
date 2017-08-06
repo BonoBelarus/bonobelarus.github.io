@@ -31,27 +31,39 @@ document.addEventListener('DOMContentLoaded', function(){
 		nav = $('.aside-wrap'),
 		nav_height = nav.outerHeight(),
 		wh = $(window).height();
-	$(window).on('scroll', function () {
-		var cur_pos = $(this).scrollTop();
-		var xtra_add = wh/2;
-		if($(window).width() < 1024){
-			xtra_add = -60
-		}
-		sections.each(function() {
-			var top = $(this).offset().top - nav_height + xtra_add,
-			bottom = top + $(this).outerHeight();
 
-			if (cur_pos >= top && cur_pos <= bottom) {
-
-				nav.find('li').removeClass('active');
-				sections.removeClass('active');
-				
-				$(this).addClass('active');
-				nav.find('a[href="#'+$(this).attr('id')+'"]').closest('li').addClass('active');
+	if($(window).width() > 1200){
+		$(window).on('scroll', function () {
+			var cur_pos = $(this).scrollTop();
+			var xtra_add = wh/2;
+			if($(window).width() < 1024){
+				xtra_add = -60
 			}
+			sections.each(function() {
+				var top = $(this).offset().top - nav_height + xtra_add,
+				bottom = top + $(this).outerHeight();
 
+				if (cur_pos >= top && cur_pos <= bottom) {
+
+					nav.find('li').removeClass('active');
+					sections.removeClass('active');
+					
+					$(this).addClass('active');
+					nav.find('a[href="#'+$(this).attr('id')+'"]').closest('li').addClass('active');
+				}
+
+			});
 		});
-	});
+	}else{
+		var aboveHeight = $('#header-box').outerHeight();
+		$(window).scroll(function(){
+			if ($(window).scrollTop() > aboveHeight){
+				$('#nav-box').addClass('fixed').css('top','0').next().css('margin-top','52px');
+			} else {
+				$('#nav-box').removeClass('fixed').next().css('margin-top','0');
+			}
+		});
+	}
 
 	function scroll2Sec(e){
 		$(e.target).closest('nav').removeClass('active');
@@ -70,7 +82,21 @@ document.addEventListener('DOMContentLoaded', function(){
 	$('#brands .slider').slick({
 		slidesToShow: 4,
 		arrows: false,
-		dots: true
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 2
+				}
+			}
+		]
 	});
 
 	$('#product .gallery').slick({
@@ -84,5 +110,38 @@ document.addEventListener('DOMContentLoaded', function(){
 	$('#product .preview').slick({
 		slidesToShow: 1,
 		arrows: false
+	});
+
+	$('#vacancy .tab > .caption').click(function(){
+		if($(this).closest('.tab').hasClass('active') != true){
+			$('#vacancy .tab').removeClass('active').find('.hidden-content').slideUp();
+			$(this).closest('.tab').addClass('active').find('.hidden-content').slideDown();
+		}
+	});
+
+	$('#solution .slider').slick({
+		prevArrow: '<div class="prev-arrow"><img src="img/arrow.png"></div>',
+		nextArrow: '<div class="next-arrow"><img src="img/arrow.png"></div>',
+		dots: true
+	});
+
+	$('#case-equipment .slider').slick({
+		prevArrow: '<div class="prev-arrow"><img src="img/arrow.png"></div>',
+		nextArrow: '<div class="next-arrow"><img src="img/arrow.png"></div>',
+		dots: true,
+		slidesToShow: 2,
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+
+	$('.mobile-nav').click(function(){
+		$('section').toggleClass('disabled');
+		$(this).next().toggleClass('active');
 	});
 });

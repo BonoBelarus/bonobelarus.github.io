@@ -1,0 +1,30 @@
+#case-review
+    padding: 100px 0
+    h2
+        font-size: 28px
+        margin-bottom: 30px
+    .review-box
+        background-color: #f3f3f3
+        padding: 30px 50px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        .img
+            margin-right: 10%
+        .review-txt
+            >p
+                opacity: .85
+            >p:not(:first-child)
+                margin-top: 15px
+        .review-person
+            margin-top: 70px
+            text-align: right
+            .wrap
+                text-align: left
+                display: inline-block
+
+@media only screen and (max-width: 767px)
+    #case-review .review-box
+        flex-direction: column
+    #case-review .review-box .img
+        margin-right: 0

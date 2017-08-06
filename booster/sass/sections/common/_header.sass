@@ -132,3 +132,130 @@ header
 		border: 1px solid #3dd89d
 		padding: 0 20px
 		cursor: pointer
+
+@media only screen and (max-width: 1365px)
+	.header-menu nav
+		margin-left: 30px
+	.header-menu .phones
+		margin-left: 30px
+
+@media only screen and (max-width: 1200px)
+	header
+		position: relative
+		z-index: 1
+	.header-menu
+		padding: 10px 0
+		.content
+			position: relative
+			padding-left: 25%
+		nav
+			margin-left: 0
+			left: 0
+			position: absolute
+			ul
+				position: absolute
+				display: block
+				width: 30vw
+				top: 102px
+				left: -30vw
+				opacity: 0
+				transition: .5s
+				text-transform: uppercase
+				text-shadow: 1px 1px 1px rgba(#000, .5)
+				padding: 60px 0 60px 60px
+				background-color: rgba($green, .95)
+				&.active
+					opacity: 1
+					transform: translateX(30vw)
+					li
+						transform: translateX(0)
+				li
+					transition: .35s
+					transform: translateX(-30vw)
+				li:first-child
+					transition-delay: .3s
+				li:nth-child(2)
+					transition-delay: .35s
+				li:nth-child(3)
+					transition-delay: .4s
+				li:nth-child(4)
+					transition-delay: .45s
+				a
+					color: #fff
+				li:not(:first-child)
+					margin-top: 15px
+					margin-left: 0
+			.mobile-nav
+				position: relative
+				width: 30px
+				height: 25px
+				div
+					position: absolute
+					background-color: #000
+					height: 1px
+					width: 100%
+					top: 50%
+					left: 60px
+				&:before,
+				&:after
+					content: ''
+					position: absolute
+					height: 1px
+					width: 100%
+					left: 60px
+					background-color: #000
+				&:before
+					top: 0
+				&:after
+					bottom: 0
+
+@media only screen and (max-width: 991px)
+	.header-menu .content
+		padding-left: 20%
+	.header-menu .phones
+		margin-left: 0
+		padding-top: 0
+		&:before
+			top: 15px
+	.header-menu .btn
+		margin-left: 0
+	.header-menu .logo
+		max-width: 180px
+		img
+			max-width: 100%
+	.header-menu nav ul
+		top: 96px
+@media only screen and (max-width: 900px)
+	header .top-line
+		display: none
+
+@media only screen and (max-width: 767px)
+	.header-menu nav .mobile-nav
+		margin-top: 3px
+		&:before,
+		&:after,
+		div
+			left: 30px
+
+	.header-menu
+		padding-top: 20px
+		.content
+			padding-left: 0
+			padding-right: 0
+			flex-wrap: wrap
+			justify-content: space-around
+		.logo
+			max-width: 100%
+			width: 100%
+			margin-bottom: 20px
+			img
+				margin: 0 auto
+				display: block
+	.header-menu nav
+		top: 0
+	.header-menu nav ul
+		top: 163px
+		width: 50vw
+		left: -50vw
+		&.active
+			transform: translateX(50vw)

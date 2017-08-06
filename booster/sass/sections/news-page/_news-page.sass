@@ -1,0 +1,45 @@
+#news-article
+    padding-bottom: 150px
+    .breadcrumbs
+        margin-bottom: 70px
+    h1
+        &+.date
+            margin: 30px 0 60px
+            font-size: 12px
+            opacity: .6
+    .clarify
+        max-width: 830px
+        p:not(:first-child)
+            margin-top: 15px
+        a
+            text-decoration: underline
+            color: $green
+            margin-top: 15px
+            &:hover
+                text-decoration: none
+        img
+            max-width: 100%
+            margin-top: 50px
+            display: block
+    .btn-wrap
+        margin-top: 100px
+    .btn
+        padding: 0 55px
+        line-height: 55px
+        height: 55px
+        font-size: 13px
+        position: relative
+        &:hover
+            color: #232323
+            background-color: white
+            &:before
+                transform: translateX(-3px)
+        &:before
+            transition: .15s
+            content: url(../img/btn-arr.png)
+            position: absolute
+            top: 50%
+            left: 35px
+            margin-top: -27px
+
+// @media only screen and (max-width: 767px)

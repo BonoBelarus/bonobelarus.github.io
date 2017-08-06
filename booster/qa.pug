@@ -3,13 +3,6 @@ html(lang="en")
 head
 	meta(charset="UTF-8")
 	meta(name="viewport", content="width=device-width, initial-scale=1.0")
-	script.
-		var ww = window.innerWidth;
-		if(ww <= 500){
-			viewport = document.querySelector("meta[name=viewport]");
-			viewport.setAttribute('content', 'width=500');
-		}
-
 	meta(http-equiv="X-UA-Compatible", content="ie=edge")
 	title Booster
 	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet")
@@ -34,8 +27,6 @@ body
 				.logo
 					img( draggable="false" src="img/logo.png", alt="Бустер - Промышленные парогенераторы")
 				nav
-					.mobile-nav
-						div
 					ul
 						li
 							a(href="#") О компании
@@ -58,13 +49,13 @@ body
 							a(href="tel:+375293887505") +375 (29) 388-75-05
 				.callback.btn.btn-white
 					p Обратный звонок
-	section#services
+	section#qa
 		.second-nav
 			.content
 				ul
 					li
 						a(href="#") О компании
-					li.active
+					li
 						a(href="#") Услуги
 					li
 						a(href="#") Отзывы
@@ -74,7 +65,7 @@ body
 						a(href="#") Новости
 					li
 						a(href="#") Вакансии
-					li
+					li.active
 						a(href="#") Вопрос-Ответ
 		.content
 			.breadcrumbs
@@ -85,31 +76,56 @@ body
 						a(href="#") Каталог
 					li
 						a(href="#") Парогенераторы BOOSTER
-			h1 Услуги
-			.clarify
-				p Основная деятельность нашей компании - это поставки качественного и доступного теплотехнического оборудования от запорной арматуры до промышленных котлов.
-			.list
-				ul
-					li
-						.icon
-							img(src="img/service-1.png", alt="")
+			h1 Вопрос-ответ
+			.flex-wrap
+				.left-side
+					.clarify
+						p За годы работы мы накопили много опыта и подготовили ответы на самые часто задаваемые вопросы. Если вы не нашли ответ, можете задать вопрос через форму или позвонить по одному из контактных телефонов.
+					.tags
+						ul
+							li.active
+								p Все
+							li
+								p Парогенераторы
+							li
+								p Теплообменники
+							li
+								p ТЕХНИЧЕСКАЯ ИНФОРМАЦИЯ
+					.tabs
+						.tab
+							a(href="#")
+								.caption
+									p Скажите можно ли самостоятельно изменить режим работы котла?
+									.tag
+										p ПАРОГЕНЕРАТОРЫ
+						.tab
+							a(href="#")
+								.caption
+									p Скажите можно ли самостоятельно изменить режим работы котла?
+									.tag
+										p ПАРОГЕНЕРАТОРЫ
+				.right-side
+					.form-box
 						.caption
-							p Поставки оборудования
-					li
-						.icon
-							img(src="img/service-2.png", alt="")
-						.caption
-							p Инструктаж персонала
-					li
-						.icon
-							img(src="img/service-3.png", alt="")
-						.caption
-							p Гарантийное обслуживание
-					li
-						.icon
-							img(src="img/service-4.png", alt="")
-						.caption
-							p Сервисное обслуживание
+							p Ваш вопрос
+						form(action="" method="post")
+							.holder
+								label Название компании
+								input(type="text" name="company-name")
+							.holder
+								label ФИО
+								input(type="text" name="name")
+							.holder
+								label Телефон
+								input(type="tel" name="phone")
+							.holder
+								label Почта
+								input(type="email" name="email")
+							.holder
+								label Текст вопроса
+								textarea(name="comment")
+							.btn-wrap
+								button.btn.btn-green Отправить
 	footer
 		.content
 			.footer-top

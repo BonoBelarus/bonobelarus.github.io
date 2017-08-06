@@ -1,0 +1,74 @@
+#news-page
+    padding-bottom: 150px
+    .breadcrumbs
+        margin-bottom: 70px
+    .list
+        margin-top: 60px
+        ul
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            flex-wrap: wrap
+        li
+            margin-top: 40px
+            max-width: 31.5%
+            width: 100%
+            padding-bottom: 50px
+            box-shadow: 0 0 0 1px #e8e8e8
+        .img
+            img
+                max-width: 100%
+                width: 100%
+        a:hover
+            .clarify
+                color: $green
+        .date
+            margin: 40px 0 30px
+            padding-left: 30px
+            font-size: 12px
+            opacity: .6
+        .clarify
+            padding: 0 30px
+            font-size: 17px
+            font-weight: 700
+    .btn-wrap
+        text-align: center
+        margin-top: 85px
+        .btn
+            line-height: 55px
+            height: 55px
+            width: 100%
+            border: 1px solid #dfdfdf
+            font-size: 13px
+            font-weight: 700
+            &:hover
+                background-color: $green
+                color: #fff
+
+@media only screen and (max-width: 1200px)
+    #news-page .list .clarify
+        padding: 0 15px
+
+@media only screen and (max-width: 767px)
+    #news-page .list .clarify
+        font-size: 15px
+    #news-page
+        .list
+            margin-top: 35px
+            li
+                max-width: 47%
+        .breadcrumbs
+            margin-bottom: 45px
+
+@media only screen and (max-width: 500px)
+    #news-page .list
+        li
+            max-width: 100%
+        .date
+            font-size: 17px
+        .clarify
+            font-size: 21px
+    #news-page .btn-wrap .btn
+        font-size: 21px
+        line-height: 75px
+        height: 75px

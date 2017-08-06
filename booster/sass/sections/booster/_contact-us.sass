@@ -1,3 +1,15 @@
+#contact-us.case
+	max-width: 850px
+	margin: 0 auto 200px
+	background-color: #fff
+	.contact-us-box
+		position: relative
+	h2,
+	.btn-wrap
+		background-color: #fff
+	.btn-wrap
+		margin-left: -150px
+		bottom: -20px
 #contact-us.common
 	margin-top: 200px
 	background-color: #fff
@@ -74,3 +86,28 @@
 		color: #fff
 		font-size: 14px
 		padding: 0 50px
+
+@media only screen and (max-width: 991px)
+	#contact-us
+		padding: 0 30px
+		.clarify
+			p
+				display: inline
+	#contact-us.case .contact-us-box
+		padding: 0 30px 60px
+	#contact-us ul li
+		max-width: 50%
+	#contact-us .phone-num
+		font-size: 18px
+
+@media only screen and (max-width: 767px)
+	#contact-us .phone-num
+		font-size: 21px
+	#contact-us ul
+		li
+			max-width: 100%
+	#contact-us ul li:nth-child(even)
+		padding-left: 0
+
+	#contact-us.case
+		margin-bottom: 100px

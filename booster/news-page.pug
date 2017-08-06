@@ -3,13 +3,6 @@ html(lang="en")
 head
 	meta(charset="UTF-8")
 	meta(name="viewport", content="width=device-width, initial-scale=1.0")
-	script.
-		var ww = window.innerWidth;
-		if(ww <= 500){
-			viewport = document.querySelector("meta[name=viewport]");
-			viewport.setAttribute('content', 'width=500');
-		}
-
 	meta(http-equiv="X-UA-Compatible", content="ie=edge")
 	title Booster
 	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet")
@@ -34,8 +27,6 @@ body
 				.logo
 					img( draggable="false" src="img/logo.png", alt="Бустер - Промышленные парогенераторы")
 				nav
-					.mobile-nav
-						div
 					ul
 						li
 							a(href="#") О компании
@@ -58,19 +49,19 @@ body
 							a(href="tel:+375293887505") +375 (29) 388-75-05
 				.callback.btn.btn-white
 					p Обратный звонок
-	section#services
+	section#news-article
 		.second-nav
 			.content
 				ul
 					li
 						a(href="#") О компании
-					li.active
+					li
 						a(href="#") Услуги
 					li
 						a(href="#") Отзывы
 					li
 						a(href="#") Дилерам
-					li
+					li.active
 						a(href="#") Новости
 					li
 						a(href="#") Вакансии
@@ -85,31 +76,16 @@ body
 						a(href="#") Каталог
 					li
 						a(href="#") Парогенераторы BOOSTER
-			h1 Услуги
+			h1 Представитель SWEP в Беларуси
+			.date
+				p 18.02.2016
 			.clarify
-				p Основная деятельность нашей компании - это поставки качественного и доступного теплотехнического оборудования от запорной арматуры до промышленных котлов.
-			.list
-				ul
-					li
-						.icon
-							img(src="img/service-1.png", alt="")
-						.caption
-							p Поставки оборудования
-					li
-						.icon
-							img(src="img/service-2.png", alt="")
-						.caption
-							p Инструктаж персонала
-					li
-						.icon
-							img(src="img/service-3.png", alt="")
-						.caption
-							p Гарантийное обслуживание
-					li
-						.icon
-							img(src="img/service-4.png", alt="")
-						.caption
-							p Сервисное обслуживание
+				p Компания «Бустер Бел» стала официальным представителем шведского концерна SWEP International AB в Республике Беларусь.
+				p Пластинчатые паяные теплообменники SWEP отлично зарекомендовали себя во всем Мире и наша миссия — сделать данное оборудование доступным для Вас.
+				a(href="#") Теплообменники SWEP в нашем каталоге
+				img(src="img/news-page-img.jpg", alt="")
+			.btn-wrap
+				a.btn.btn-white(href="#") к списку новостей
 	footer
 		.content
 			.footer-top

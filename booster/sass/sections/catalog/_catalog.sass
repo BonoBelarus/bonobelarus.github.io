@@ -12,7 +12,7 @@
                 margin-left: -1px
                 margin-top: -1px
                 border: 1px solid #ccc
-                width: 385px
+                width: 33.33%
                 padding: 0 40px 40px
                 ul
                     display: flex
@@ -80,3 +80,30 @@
                 border: 1px solid #ccc
             div:not(:first-child)
                 margin-left: 12px
+
+@media only screen and (max-width: 1200px)
+    #catalog-page .list > ul > li
+        padding: 10px 20px 30px
+
+@media only screen and (max-width: 991px)
+    #catalog-page .list > ul > li
+        width: 50%
+
+@media only screen and (max-width: 767px)
+    #catalog-page .list > ul .caption
+        font-size: 16px
+
+@media only screen and (max-width: 500px)
+    #catalog-page .list > ul > li
+        width: 100%
+    #catalog-page .list > ul .caption
+        font-size: 27px
+        margin-bottom: 25px
+    #catalog-page .list > ul > li li
+        font-size: 19px
+    #catalog-page .list .tabs
+        margin: 25px auto
+        font-size: 21px
+        line-height: 45px
+        div
+            padding: 0 25px

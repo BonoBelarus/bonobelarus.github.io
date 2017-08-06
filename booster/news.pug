@@ -9,7 +9,6 @@ head
 			viewport = document.querySelector("meta[name=viewport]");
 			viewport.setAttribute('content', 'width=500');
 		}
-
 	meta(http-equiv="X-UA-Compatible", content="ie=edge")
 	title Booster
 	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet")
@@ -34,8 +33,6 @@ body
 				.logo
 					img( draggable="false" src="img/logo.png", alt="Бустер - Промышленные парогенераторы")
 				nav
-					.mobile-nav
-						div
 					ul
 						li
 							a(href="#") О компании
@@ -58,19 +55,19 @@ body
 							a(href="tel:+375293887505") +375 (29) 388-75-05
 				.callback.btn.btn-white
 					p Обратный звонок
-	section#services
+	section#news-page
 		.second-nav
 			.content
 				ul
 					li
 						a(href="#") О компании
-					li.active
+					li
 						a(href="#") Услуги
 					li
 						a(href="#") Отзывы
 					li
 						a(href="#") Дилерам
-					li
+					li.active
 						a(href="#") Новости
 					li
 						a(href="#") Вакансии
@@ -85,31 +82,59 @@ body
 						a(href="#") Каталог
 					li
 						a(href="#") Парогенераторы BOOSTER
-			h1 Услуги
-			.clarify
-				p Основная деятельность нашей компании - это поставки качественного и доступного теплотехнического оборудования от запорной арматуры до промышленных котлов.
+			h1 Новости
 			.list
 				ul
 					li
-						.icon
-							img(src="img/service-1.png", alt="")
-						.caption
-							p Поставки оборудования
+						a(href="#")
+							.img
+								img(src="img/news-1.png", alt="")
+							.date
+								p 15.11.2016
+							.clarify
+								p Мы стали официальными представителями шведских пластинчатых теплообменников SWEP
 					li
-						.icon
-							img(src="img/service-2.png", alt="")
-						.caption
-							p Инструктаж персонала
+						a(href="#")
+							.img
+								img(src="img/news-1.png", alt="")
+							.date
+								p 15.11.2016
+							.clarify
+								p Мы стали официальными представителями шведских пластинчатых теплообменников SWEP
 					li
-						.icon
-							img(src="img/service-3.png", alt="")
-						.caption
-							p Гарантийное обслуживание
+						a(href="#")
+							.img
+								img(src="img/news-1.png", alt="")
+							.date
+								p 15.11.2016
+							.clarify
+								p Мы стали официальными представителями шведских пластинчатых теплообменников SWEP
 					li
-						.icon
-							img(src="img/service-4.png", alt="")
-						.caption
-							p Сервисное обслуживание
+						a(href="#")
+							.img
+								img(src="img/news-1.png", alt="")
+							.date
+								p 15.11.2016
+							.clarify
+								p Мы стали официальными представителями шведских пластинчатых теплообменников SWEP
+					li
+						a(href="#")
+							.img
+								img(src="img/news-1.png", alt="")
+							.date
+								p 15.11.2016
+							.clarify
+								p Мы стали официальными представителями шведских пластинчатых теплообменников SWEP
+					li
+						a(href="#")
+							.img
+								img(src="img/news-1.png", alt="")
+							.date
+								p 15.11.2016
+							.clarify
+								p Мы стали официальными представителями шведских пластинчатых теплообменников SWEP
+			.btn-wrap
+				a(href="#").btn Показать все
 	footer
 		.content
 			.footer-top

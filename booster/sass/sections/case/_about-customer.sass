@@ -1,0 +1,130 @@
+#about-customer
+    .flex-wrap
+        background-color: #f2f2f2
+        padding: 40px 40px 60px
+        align-items: flex-start
+    .images
+        max-width: 570px
+        width: 100%
+        position: relative
+        margin-right: 70px
+        img
+            max-width: 100%
+            display: block
+        .img-1
+            max-width: 460px
+            max-height: 420px
+        .img-2
+            position: absolute
+            bottom: -50px
+            right: -50px
+            max-width: 300px
+            max-height: 300px
+    .about
+        max-width: 500px
+        width: 100%
+        font-size: 15px
+        .caption
+            text-transform: uppercase
+            font-weight: 700
+            margin-bottom: 20px
+            font-size: 14px
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                height: 1px
+                width: 60px
+                right: 100%
+                margin-right: 20px
+                top: 50%
+                margin-top: -1px
+                background-color: $green
+        .clarify
+            margin-top: 10px
+        .ft
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            margin-top: 40px
+        .mark
+            margin-right: 20px
+            font-size: 70px
+            font-family: 'Bebas Neue'
+    .goals
+        margin: 100px 0
+        .caption
+            font-weight: 700
+            font-size: 28px
+            margin-bottom: 50px
+        ul
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start
+            flex-wrap: wrap
+        li
+            width: 30%
+            position: relative
+            padding-left: 40px
+            margin-top: 50px
+            &:nth-child(3n+2)
+                margin: 50px 5% 0
+            &:first-child:before
+                content: '1.'
+            &:nth-child(2):before
+                content: '2.'
+            &:nth-child(3):before
+                content: '3.'
+            &:nth-child(4):before
+                content: '4.'
+            &:nth-child(5):before
+                content: '5.'
+            &:nth-child(6):before
+                content: '6.'
+            &:before
+                line-height: 1em
+                position: absolute
+                left: 0
+                top: 0
+                font-size: 42px
+                font-family: 'Bebas Neue'
+                font-weight: 700
+
+@media only screen and (max-width: 1200px)
+    #about-customer .images .img-2
+        top: 100%
+        margin-top: -50px
+        left: 25px
+        right: initial
+        max-width: 250px
+    #about-customer .about .caption:before
+        width: 35px
+    #about-customer .goals .caption
+        margin-bottom: 15px
+    #about-customer .goals
+        margin: 150px 0 100px
+
+@media only screen and (max-width: 767px)
+    #about-customer .flex-wrap
+        flex-direction: column
+    #about-customer .images .img-2
+        position: relative
+        left: 15px
+        top: 0
+        margin-top: -50px
+    #about-customer .about .caption:before
+        display: none
+    #about-customer .about
+        margin-top: 50px
+        font-size: 19px
+
+@media only screen and (max-width: 500px)
+    #about-customer .about .caption
+        font-size: 21px
+    #about-customer .goals
+        margin: 100px 0
+    #about-customer .goals li
+        width: 100%
+        font-size: 21px
+    #about-customer .goals li:nth-child(3n+2)
+        margin: 50px 0 0

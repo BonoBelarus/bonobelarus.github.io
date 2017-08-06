@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script>
+    var ww = window.innerWidth;
+    if(ww <= 500){
+    	viewport = document.querySelector("meta[name=viewport]");
+    	viewport.setAttribute('content', 'width=500');
+    }
+  </script>
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
   <title>Booster</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|PT+Sans:400,700&amp;amp;subset=cyrillic" rel="stylesheet"/>
@@ -55,15 +62,15 @@
       </div>
     </div>
   </header>
-  <section id="dealers">
+  <section id="news-page">
     <div class="second-nav">
       <div class="content">
         <ul>
           <li><a href="#">О компании</a></li>
           <li><a href="#">Услуги</a></li>
           <li><a href="#">Отзывы</a></li>
-          <li class="active"><a href="#">Дилерам</a></li>
-          <li><a href="#">Новости</a></li>
+          <li><a href="#">Дилерам</a></li>
+          <li class="active"><a href="#">Новости</a></li>
           <li><a href="#">Вакансии</a></li>
           <li><a href="#">Вопрос-Ответ</a></li>
         </ul>
@@ -77,84 +84,60 @@
           <li><a href="#">Парогенераторы BOOSTER</a></li>
         </ul>
       </div>
-      <h1>Дилерам</h1>
-      <div class="flex-wrap">
-        <div class="left-side">
-          <div class="clarify">
-            <p>Компания «Бустер Бел» рада предложить специальные условия для монтажных и проектных организаций, а так же для торговых представителей и индивидуальных предпринимателей.</p>
-            <p>Нашим представителям мы оказываем всю необходимую помощь и поддержку:</p>
-          </div>
-          <div class="list">
-            <ul>
-              <li>
-                <div class="img"><img src="img/dealers-1.png" alt=""/></div>
-                <div class="caption">
-                  <p>Консультации</p>
-                </div>
-              </li>
-              <li>
-                <div class="img"><img src="img/dealers-2.png" alt=""/></div>
-                <div class="caption">
-                  <p>Защита проектов</p>
-                </div>
-              </li>
-              <li>
-                <div class="img"><img src="img/dealers-3.png" alt=""/></div>
-                <div class="caption">
-                  <p>Техническая документация</p>
-                </div>
-              </li>
-              <li>
-                <div class="img"><img src="img/dealers-4.png" alt=""/></div>
-                <div class="caption">
-                  <p>Специальные условия</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="right-side">
-          <div class="form-box">
-            <div class="caption">
-              <p>заявка на партнерство</p>
-            </div>
-            <form action="">
-              <div class="holder">
-                <select name="partner-type">
-                  <option value="Проектная организация">Проектная организация</option>
-                </select>
+      <h1>Новости</h1>
+      <div class="list">
+        <ul>
+          <li><a href="#">
+              <div class="img"><img src="img/news-1.png" alt=""/></div>
+              <div class="date">
+                <p>15.11.2016</p>
               </div>
-              <div class="holder">
-                <label>Название компании</label>
-                <input type="text" name="company-name" placeholder="000 «Roga and  |"/>
+              <div class="clarify">
+                <p>Мы стали официальными представителями шведских пластинчатых теплообменников SWEP</p>
+              </div></a></li>
+          <li><a href="#">
+              <div class="img"><img src="img/news-1.png" alt=""/></div>
+              <div class="date">
+                <p>15.11.2016</p>
               </div>
-              <div class="holder">
-                <label>ФИО</label>
-                <input type="text" name="name"/>
+              <div class="clarify">
+                <p>Мы стали официальными представителями шведских пластинчатых теплообменников SWEP</p>
+              </div></a></li>
+          <li><a href="#">
+              <div class="img"><img src="img/news-1.png" alt=""/></div>
+              <div class="date">
+                <p>15.11.2016</p>
               </div>
-              <div class="holder">
-                <label>Должность</label>
-                <input type="text" name="position"/>
+              <div class="clarify">
+                <p>Мы стали официальными представителями шведских пластинчатых теплообменников SWEP</p>
+              </div></a></li>
+          <li><a href="#">
+              <div class="img"><img src="img/news-1.png" alt=""/></div>
+              <div class="date">
+                <p>15.11.2016</p>
               </div>
-              <div class="holder">
-                <label>Телефон</label>
-                <input type="tel" name="phone"/>
+              <div class="clarify">
+                <p>Мы стали официальными представителями шведских пластинчатых теплообменников SWEP</p>
+              </div></a></li>
+          <li><a href="#">
+              <div class="img"><img src="img/news-1.png" alt=""/></div>
+              <div class="date">
+                <p>15.11.2016</p>
               </div>
-              <div class="holder">
-                <label>Почта</label>
-                <input type="email" name="email"/>
+              <div class="clarify">
+                <p>Мы стали официальными представителями шведских пластинчатых теплообменников SWEP</p>
+              </div></a></li>
+          <li><a href="#">
+              <div class="img"><img src="img/news-1.png" alt=""/></div>
+              <div class="date">
+                <p>15.11.2016</p>
               </div>
-              <div class="holder">
-                <label>Письмо в произвольной форме</label>
-                <textarea name="comment"></textarea>
-              </div>
-              <div class="btn-wrap">
-                <button class="btn btn-green">Отправить</button>
-              </div>
-            </form>
-          </div>
-        </div>
+              <div class="clarify">
+                <p>Мы стали официальными представителями шведских пластинчатых теплообменников SWEP</p>
+              </div></a></li>
+        </ul>
       </div>
+      <div class="btn-wrap"><a class="btn" href="#">Показать все</a></div>
     </div>
   </section>
   <footer>

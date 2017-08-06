@@ -12,9 +12,10 @@
 			left: 0
 			width: 30px
 			background-color: $green
-#objects
+#objects,
+#objects-page
 	.objects-list
-		margin-top: 50px
+		margin-top: 35px
 		ul
 			display: flex
 			justify-content: space-between
@@ -34,9 +35,15 @@
 				transition-delay: .2s
 		li
 			width: 31%
+			margin-top: 40px
 			min-width: 300px
+			&:nth-child(3n+2)
+				margin: 40px 3% 0
 			a
 				width: 100%
+		.object-logo
+			img
+				max-width: 100%
 		.object-img:after
 			content: 'Смотреть кейс'
 			position: absolute
@@ -86,3 +93,27 @@
 			border-right: 1px solid #e8e9ea
 			border-left: 1px solid #e8e9ea
 			border-bottom: 1px solid #e8e9ea
+
+@media only screen and (max-width: 1200px)
+	#objects .objects-list li, #objects-page .objects-list li
+		min-width: initial
+	#objects .objects-list .object-info, #objects-page .objects-list .object-info
+		height: initial
+
+@media only screen and (max-width: 991px)
+	#objects .objects-list .object-info, #objects-page .objects-list .object-info
+		flex-direction: column
+
+@media only screen and (max-width: 767px)
+	#objects .objects-list li, #objects-page .objects-list li
+		width: 47%
+		&:nth-child(3n+2)
+			margin: 40px 0
+
+@media only screen and (max-width: 500px)
+	#objects .objects-list .object-info, #objects-page .objects-list .object-info
+		padding: 10px 0
+	#objects .objects-list li, #objects-page .objects-list li
+		width: 100%
+		.object-name
+			font-size: 21px

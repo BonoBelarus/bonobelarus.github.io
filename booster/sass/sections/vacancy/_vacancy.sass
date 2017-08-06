@@ -1,0 +1,66 @@
+#vacancy
+    padding-bottom: 150px
+    .breadcrumbs
+        margin-bottom: 70px
+    h1 + .clarify
+        margin-top: 40px
+        a
+            color: $green
+    .tabs
+        margin-top: 60px
+    .tab
+        padding: 30px 40px 0
+        font-size: 16px
+        box-shadow: inset 0 0 0 1px #e6e6e6
+        &:not(:first-child)
+            margin-top: 30px
+        &.active
+            .caption
+                &:before
+                    transform: rotateZ(180deg)
+        >.caption
+            position: relative
+            border-bottom: 1px solid #e6e6e6
+            padding-bottom: 30px
+            &:before
+                transition: .5s
+                content: url(../img/arrow.png)
+                position: absolute
+                top: 50%
+                margin-top: -20px
+                right: 40px
+            p:first-child
+                font-weight: 700
+                font-size: 24px
+            p:not(:first-child)
+                margin-top: 5px
+    .hidden-content
+        padding-bottom: 40px
+        padding-top: 30px
+        max-width: 570px
+        width: 100%
+        display: none
+        >.caption
+            font-weight: 700
+            margin-bottom: 25px
+        ul+p
+            margin-top: 15px
+        li
+            position: relative
+            padding-left: 15px
+            &:not(:first-child)
+                margin-top: 15px
+            &:before
+                content: ''
+                position: absolute
+                height: 5px
+                width: 5px
+                background-color: $green
+                top: 10px
+                left: 0
+
+@media only screen and (max-width: 991px)
+    #vacancy .tab > .caption
+        padding-right: 60px
+    #vacancy .tab > .caption:before
+        right: 0

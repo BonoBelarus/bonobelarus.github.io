@@ -14,3 +14,33 @@
 			display: flex
 			justify-content: space-between
 			align-items: flex-start
+
+@media only screen and (max-width: 1200px)
+	#services
+		padding-bottom: 100px
+
+@media only screen and (max-width: 991px)
+	#services
+		.clarify
+			font-size: 17px
+		.list
+			margin-top: 0
+			ul
+				flex-wrap: wrap
+				justify-content: space-between
+				li
+					margin-top: 75px
+					width: 44%
+	#services .caption
+		font-size: 15px
+
+@media only screen and (max-width: 500px)
+	#services .list ul
+		flex-direction: column
+		text-align: center
+		li
+			width: 100%
+	#services .caption
+		font-size: 19px
+	#services .clarify
+		font-size: 19px

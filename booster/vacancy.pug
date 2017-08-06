@@ -3,13 +3,6 @@ html(lang="en")
 head
 	meta(charset="UTF-8")
 	meta(name="viewport", content="width=device-width, initial-scale=1.0")
-	script.
-		var ww = window.innerWidth;
-		if(ww <= 500){
-			viewport = document.querySelector("meta[name=viewport]");
-			viewport.setAttribute('content', 'width=500');
-		}
-
 	meta(http-equiv="X-UA-Compatible", content="ie=edge")
 	title Booster
 	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet")
@@ -34,8 +27,6 @@ body
 				.logo
 					img( draggable="false" src="img/logo.png", alt="Бустер - Промышленные парогенераторы")
 				nav
-					.mobile-nav
-						div
 					ul
 						li
 							a(href="#") О компании
@@ -58,13 +49,13 @@ body
 							a(href="tel:+375293887505") +375 (29) 388-75-05
 				.callback.btn.btn-white
 					p Обратный звонок
-	section#services
+	section#vacancy
 		.second-nav
 			.content
 				ul
 					li
 						a(href="#") О компании
-					li.active
+					li
 						a(href="#") Услуги
 					li
 						a(href="#") Отзывы
@@ -72,7 +63,7 @@ body
 						a(href="#") Дилерам
 					li
 						a(href="#") Новости
-					li
+					li.active
 						a(href="#") Вакансии
 					li
 						a(href="#") Вопрос-Ответ
@@ -85,31 +76,49 @@ body
 						a(href="#") Каталог
 					li
 						a(href="#") Парогенераторы BOOSTER
-			h1 Услуги
+			h1 Вакансии
 			.clarify
-				p Основная деятельность нашей компании - это поставки качественного и доступного теплотехнического оборудования от запорной арматуры до промышленных котлов.
-			.list
-				ul
-					li
-						.icon
-							img(src="img/service-1.png", alt="")
+				p Резюме высылайте на e-mail: 
+					a(href="email:info@booster.by") info@booster.by
+			.tabs
+				.tab
+					.caption
+						p Менеджер по продажам
+						p Ищем талантливых менеджеров по продаже промышленного котельного оборудования
+					.hidden-content
 						.caption
-							p Поставки оборудования
-					li
-						.icon
-							img(src="img/service-2.png", alt="")
+							p Обязанности:
+						ul
+							li
+								p поиск новых клиентов и ведение существующей базы
+							li
+								p холодные звонки
+							li
+								p оставление коммерческих предложений
+							li
+								p полное сопровождение сделок
+							li
+								p отчетность
+						p Полный рабочий день, офис 1-й Твердый переулок, 7, размер з/п обсуждается индивидуально с претендентом
+				.tab
+					.caption
+						p Менеджер по продажам
+						p Ищем талантливых менеджеров по продаже промышленного котельного оборудования
+					.hidden-content
 						.caption
-							p Инструктаж персонала
-					li
-						.icon
-							img(src="img/service-3.png", alt="")
-						.caption
-							p Гарантийное обслуживание
-					li
-						.icon
-							img(src="img/service-4.png", alt="")
-						.caption
-							p Сервисное обслуживание
+							p Обязанности:
+						ul
+							li
+								p поиск новых клиентов и ведение существующей базы
+							li
+								p холодные звонки
+							li
+								p оставление коммерческих предложений
+							li
+								p полное сопровождение сделок
+							li
+								p отчетность
+						p Полный рабочий день, офис 1-й Твердый переулок, 7, размер з/п обсуждается индивидуально с претендентом
 	footer
 		.content
 			.footer-top

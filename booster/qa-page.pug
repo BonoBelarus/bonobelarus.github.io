@@ -3,13 +3,6 @@ html(lang="en")
 head
 	meta(charset="UTF-8")
 	meta(name="viewport", content="width=device-width, initial-scale=1.0")
-	script.
-		var ww = window.innerWidth;
-		if(ww <= 500){
-			viewport = document.querySelector("meta[name=viewport]");
-			viewport.setAttribute('content', 'width=500');
-		}
-
 	meta(http-equiv="X-UA-Compatible", content="ie=edge")
 	title Booster
 	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet")
@@ -34,8 +27,6 @@ body
 				.logo
 					img( draggable="false" src="img/logo.png", alt="Бустер - Промышленные парогенераторы")
 				nav
-					.mobile-nav
-						div
 					ul
 						li
 							a(href="#") О компании
@@ -58,13 +49,13 @@ body
 							a(href="tel:+375293887505") +375 (29) 388-75-05
 				.callback.btn.btn-white
 					p Обратный звонок
-	section#services
+	section#qa-page
 		.second-nav
 			.content
 				ul
 					li
 						a(href="#") О компании
-					li.active
+					li
 						a(href="#") Услуги
 					li
 						a(href="#") Отзывы
@@ -74,7 +65,7 @@ body
 						a(href="#") Новости
 					li
 						a(href="#") Вакансии
-					li
+					li.active
 						a(href="#") Вопрос-Ответ
 		.content
 			.breadcrumbs
@@ -85,31 +76,23 @@ body
 						a(href="#") Каталог
 					li
 						a(href="#") Парогенераторы BOOSTER
-			h1 Услуги
+			h1 Что такое избыточное давление
 			.clarify
-				p Основная деятельность нашей компании - это поставки качественного и доступного теплотехнического оборудования от запорной арматуры до промышленных котлов.
-			.list
-				ul
-					li
-						.icon
-							img(src="img/service-1.png", alt="")
-						.caption
-							p Поставки оборудования
-					li
-						.icon
-							img(src="img/service-2.png", alt="")
-						.caption
-							p Инструктаж персонала
-					li
-						.icon
-							img(src="img/service-3.png", alt="")
-						.caption
-							p Гарантийное обслуживание
-					li
-						.icon
-							img(src="img/service-4.png", alt="")
-						.caption
-							p Сервисное обслуживание
+				p
+					b Давление 
+					| — физическая величина, характеризующая отношение нормально (перпендикулярно поверхности) направленной силы к площади поверхности, на которую она действует.
+				p Различают атмосферное, избыточное и абсолютное давление.
+				p
+					b Атмосферным 
+					| называют давление воздуха на землю и на предметы, расположенные на ней. Атмосферное давление измеряют барометром, поэтому его называют также барометрическим и обозначают Pбар. 1 атм=1,033 ат=1,013*100 000 Па=760 мм рт.ст. 1 мм рт. ст.=133 Па 1 мм водн. ст.=9,8 Па
+				p В герметично закрытом сосуде можно создать давление выше или ниже атмосферного.
+				p
+					b Избыточным 
+					| называют давление, создаваемое искусственно в сосудах, трубопроводах и отсчитываемое от имеющегося уже давления атмосферного. Избыточное давление указывает на сколько давление внутри сосуда больше атмосферного. Pизб измеряется манометрами и получило название манометрического.
+				p Если в сосудах давление избыточное, то абсолютное давление равно сумме атмосферного и избыточного давления:
+				p Pабс = Pбар + Pизб.
+			.btn-wrap
+				a.btn.btn-white К списку новостей
 	footer
 		.content
 			.footer-top

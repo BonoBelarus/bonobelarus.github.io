@@ -49,7 +49,7 @@ body
 							a(href="tel:+375293887505") +375 (29) 388-75-05
 				.callback.btn.btn-white
 					p Обратный звонок
-	section#testimonials
+	section#dealers
 		.second-nav
 			.content
 				ul
@@ -77,59 +77,61 @@ body
 					li
 						a(href="#") Парогенераторы BOOSTER
 			h1 Дилерам
-			.clarify
-				p Компания «Бустер Бел» рада предложить специальные условия для монтажных и проектных организаций, а так же для торговых представителей и индивидуальных предпринимателей.
-				p Нашим представителям мы оказываем всю необходимую помощь и поддержку:
-			.list
-				ul
-					li
-						.icon
-							img(src="img/testimonial-1.png", alt="")
+			.flex-wrap
+				.left-side
+					.clarify
+						p Компания «Бустер Бел» рада предложить специальные условия для монтажных и проектных организаций, а так же для торговых представителей и индивидуальных предпринимателей.
+						p Нашим представителям мы оказываем всю необходимую помощь и поддержку:
+					.list
+						ul
+							li
+								.img
+									img(src="img/dealers-1.png", alt="")
+								.caption
+									p Консультации
+							li
+								.img
+									img(src="img/dealers-2.png", alt="")
+								.caption
+									p Защита проектов
+							li
+								.img
+									img(src="img/dealers-3.png", alt="")
+								.caption
+									p Техническая документация
+							li
+								.img
+									img(src="img/dealers-4.png", alt="")
+								.caption
+									p Специальные условия
+				.right-side
+					.form-box
 						.caption
-							p Агрокомбинат «Дзержинский»
-						a(href="#") Смотреть проект
-					li
-						.icon
-							img(src="img/testimonial-1.png", alt="")
-						.caption
-							p Компания «Онега»
-						a(href="#") Смотреть проект
-					li
-						.icon
-							img(src="img/testimonial-1.png", alt="")
-						.caption
-							p Концерн «Мясомолпром»
-						a(href="#") Смотреть проект
-					li
-						.icon
-							img(src="img/testimonial-1.png", alt="")
-						.caption
-							p Концерн «Минсктранс»
-						a(href="#") Смотреть проект
-					li
-						.icon
-							img(src="img/testimonial-1.png", alt="")
-						.caption
-							p Агрокомбинат «Дзержинский»
-						a(href="#") Смотреть проект
-					li
-						.icon
-							img(src="img/testimonial-1.png", alt="")
-						.caption
-							p Компания «Онега»
-						a(href="#") Смотреть проект
-					li
-						.icon
-							img(src="img/testimonial-1.png", alt="")
-						.caption
-							p Концерн «Мясомолпром»
-						a(href="#") Смотреть проект
-					li
-						.icon
-							img(src="img/testimonial-1.png", alt="")
-						.caption
-							p Концерн «Минсктранс»
-						a(href="#") Смотреть проект
+							p заявка на партнерство
+						form(action="")
+							.holder
+								select(name="partner-type")
+									option(value="Проектная организация") Проектная организация
+							.holder
+								label Название компании
+								input(type="text" name="company-name" placeholder="000 «Roga and  |")
+							.holder
+								label ФИО
+								input(type="text" name="name")
+							.holder
+								label Должность
+								input(type="text" name="position")
+							.holder
+								label Телефон
+								input(type="tel" name="phone")
+							.holder
+								label Почта
+								input(type="email" name="email")
+							.holder
+								label Письмо в произвольной форме
+								textarea(name="comment")
+							.btn-wrap
+								button.btn.btn-green Отправить
 	footer
 		.content
 			.footer-top

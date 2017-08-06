@@ -6,6 +6,8 @@
 	font-weight: 700
 	text-transform: uppercase
 	margin-bottom: 40px
+	position: relative
+	z-index: 0
 	li:not(:first-child)
 		margin-left: 50px
 	.active
@@ -17,3 +19,16 @@
 		display: flex
 		justify-content: flex-start
 		align-items: center
+
+@media only screen and (max-width: 991px)
+	.second-nav
+		font-size: 12px
+		li:not(:first-child)
+			margin-left: 35px
+
+@media only screen and (max-width: 767px)
+	.second-nav
+		.content
+			overflow: auto
+		ul
+			min-width: 650px

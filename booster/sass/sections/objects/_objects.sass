@@ -1,0 +1,89 @@
+#objects-page
+    .breadcrumbs
+        margin-bottom: 70px
+    .clarify
+        max-width: 800px
+        width: 100%
+        margin-bottom: 55px
+    .tags
+        max-width: 970px
+        width: 100%
+        ul
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            flex-wrap: wrap
+        li.active
+            background-color: $green
+            color: #fff
+        li
+            cursor: pointer
+            margin-top: 15px
+            font-weight: 700
+            font-size: 12px
+            padding: 0 20px
+            border: 1px solid #e0dfe0
+            border-radius: 15px
+            margin: 15px 10px 0
+            &:hover
+                border: 1px solid $green
+    .objects-list
+        li
+            margin-top: 40px
+    .list
+        margin-top: 110px
+        color: #fff
+        font-size: 15px
+        margin-bottom: -70px
+        ul
+            display: flex
+            justify-content: space-between
+            align-items: stretch
+        li
+            background-color: #2e2d30
+            max-width: 31%
+            width: 100%
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            padding: 30px 20px
+            .mark
+                font-size: 70px
+                font-weight: 700
+                margin-right: 20px
+
+@media only screen and (max-width: 1200px)
+    #objects-page .list li .mark
+        font-size: 42px
+
+@media only screen and (max-width: 991px)
+    #objects-page .list li
+        flex-direction: column
+        text-align: center
+        .mark
+            margin-bottom: 25px
+            margin-right: 0
+            font-size: 51px
+    #objects-page .tags li
+        font-size: 15px
+        height: 36px
+        line-height: 34px
+        border-radius: 18px
+
+@media only screen and (max-width: 767px)
+    #objects-page .list
+        margin-top: 55px
+        ul
+            flex-wrap: wrap
+        li
+            max-width: 100%
+            &:not(:first-child)
+                margin-top: 15px
+
+@media only screen and (max-width: 500px)
+    #objects-page
+        .content
+            padding: 0 20px
+        .tags li
+            margin: 15px 10px 0
+            font-size: 17px

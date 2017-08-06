@@ -64,6 +64,7 @@ h3
 	color: $green
 
 .main-wrap
+	overflow: hidden
 	background-color: #f0f0f0
 	.content
 		max-width: 1500px
@@ -136,6 +137,15 @@ body header .btn-white:hover,
 	font-size: 14px
 	opacity: .5
 	text-align: center
+
+section
+	>.content
+		transition: .25s ease .25s
+	&.disabled
+		>.content
+			transition-delay: 0s
+			opacity: .7
+			filter: blur(20px)
 
 .main-wrap main
 	background-color: #f0f0f0
@@ -275,3 +285,39 @@ b
 			padding: 0 30px
 			line-height: 50px
 			height: 50px
+
+@media only screen and (max-width: 1200px)
+	.content
+		padding: 0 30px
+	body
+		font-size: 16px
+	h1
+		font-size: 48px
+	.main-wrap .content
+		flex-direction: column
+		section:before
+			display: none
+	.main-wrap main
+		padding-top: 0
+	.main-wrap main section
+		padding: 70px
+
+@media only screen and (max-width: 767px)
+	h1, h2
+		font-size: 36px
+	.breadcrumbs
+		font-size: 15px
+
+@media only screen and (max-width: 500px)
+	body
+		font-size: 19px
+	.breadcrumbs
+		font-size: 16px
+	.bullets
+		li
+			width: 100%
+		.caption
+			margin-bottom: 10px
+			font-size: 24px
+		.clarify
+			font-size: 19px

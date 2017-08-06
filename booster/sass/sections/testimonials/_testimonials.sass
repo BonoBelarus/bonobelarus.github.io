@@ -14,12 +14,12 @@
 		margin-top: 55px
 		ul
 			display: flex
-			justify-content: space-between
+			justify-content: space-around
 			align-items: flex-start
 			flex-wrap: wrap
 		li
 			margin-top: 50px
-			width: 250px
+			width: 270px
 		.icon
 			max-width: 210px
 			margin: 0 auto
@@ -28,3 +28,13 @@
 			color: $green
 			font-size: 14px
 			font-weight: 700
+
+@media only screen and (max-width: 500px)
+	#testimonials .caption
+		font-size: 21px
+	#testimonials .list a
+		margin-top: 15px
+		font-size: 17px
+		text-transform: uppercase
+	#testimonials .list li
+		width: 100%

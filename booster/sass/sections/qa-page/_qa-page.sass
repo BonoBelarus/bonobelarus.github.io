@@ -1,0 +1,29 @@
+#qa-page
+    padding-bottom: 150px
+    .breadcrumbs
+        margin-bottom: 70px
+    .clarify
+        max-width: 900px
+        width: 100%
+        p:not(:first-child)
+            margin-top: 15px
+    .btn-wrap
+        margin-top: 100px
+    .btn
+        line-height: 55px
+        height: 55px
+        font-size: 13px
+        padding: 0 45px 0 65px
+        position: relative
+        &:hover
+            color: #232323
+            background-color: #fff
+            &:before
+                transform: translateX(-3px)
+        &:before
+            transition: .15s
+            content: url(../img/btn-arr.png)
+            position: absolute
+            top: 50%
+            left: 40px
+            margin-top: -25px
