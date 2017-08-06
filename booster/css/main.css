@@ -5603,6 +5603,10 @@ footer {
       left: 40px;
       margin-top: -25px; }
 
+@media only screen and (max-width: 500px) {
+  #qa-page .clarify {
+    font-size: 19px; } }
+
 #objects-page .breadcrumbs {
   margin-bottom: 70px; }
 
@@ -5727,7 +5731,9 @@ footer {
     padding: 0 20px; }
   #objects-page .tags li {
     margin: 15px 10px 0;
-    font-size: 17px; } }
+    font-size: 17px; }
+  #objects-page .list {
+    font-size: 18px; } }
 
 #case {
   padding-bottom: 100px; }
