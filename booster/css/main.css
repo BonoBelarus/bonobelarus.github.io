@@ -1648,15 +1648,13 @@ header {
   .header-menu nav {
     top: 0; }
   .header-menu nav ul {
-    top: 163px;
+    top: 203px;
     width: 50vw;
     left: -50vw; }
     .header-menu nav ul.active {
       -webkit-transform: translateX(50vw);
       -ms-transform: translateX(50vw);
-      transform: translateX(50vw); } }
-
-@media only screen and (max-width: 500px) {
+      transform: translateX(50vw); }
   header {
     padding-bottom: 25px; }
   .header-menu .logo {
