@@ -55,14 +55,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			});
 		});
 	}else{
-		var aboveHeight = $('#header-box').outerHeight();
-		$(window).scroll(function(){
-			if ($(window).scrollTop() > aboveHeight){
-				$('#nav-box').addClass('fixed').css('top','0').next().css('margin-top','52px');
-			} else {
-				$('#nav-box').removeClass('fixed').next().css('margin-top','0');
-			}
-		});
+		
 	}
 
 	function scroll2Sec(e){

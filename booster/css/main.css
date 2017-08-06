@@ -448,6 +448,10 @@ b {
   .main-wrap main section {
     padding: 70px; } }
 
+@media only screen and (max-width: 991px) {
+  .main-wrap .content {
+    padding: 0; } }
+
 @media only screen and (max-width: 767px) {
   h1, h2 {
     font-size: 36px; }
@@ -1679,6 +1683,13 @@ header {
       padding: 0 30px;
       font-size: 14px; }
 
+@media only screen and (max-width: 991px) {
+  .top-sec .flex-wrap .right-side {
+    min-width: 270px;
+    margin-left: 20px; }
+    .top-sec .flex-wrap .right-side img {
+      max-width: 100%; } }
+
 .aside-wrap {
   min-width: 210px;
   width: 210px; }
@@ -1712,6 +1723,15 @@ aside {
     transition: .1s; }
 
 @media only screen and (max-width: 1200px) {
+  .aside-wrap.is_stuck {
+    left: 0;
+    padding: 0 20px;
+    top: 0 !important; }
+  .aside-wrap {
+    padding: 0 20px;
+    background-color: #f0f0f0;
+    position: relative;
+    z-index: 88; }
   aside {
     padding: 25px 0;
     min-width: 850px;
@@ -2120,6 +2140,16 @@ aside {
     font-family: 'PT Sans';
     max-width: 410px;
     font-size: 16px; }
+
+@media only screen and (max-width: 991px) {
+  #proizvoditel .illu {
+    text-align: center; }
+  #proizvoditel .flex-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
 
 #features {
   padding-bottom: 120px; }
