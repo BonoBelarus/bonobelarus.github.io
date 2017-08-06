@@ -456,7 +456,7 @@ b {
 
 @media only screen and (max-width: 500px) {
   body {
-    font-size: 19px; }
+    font-size: 18px; }
   .breadcrumbs {
     font-size: 16px; }
   .bullets li {
@@ -3177,6 +3177,84 @@ footer {
         align-items: center; }
       footer .footer-bottom .developed-by img {
         margin-right: 5px; }
+
+@media only screen and (max-width: 1200px) {
+  footer .footer-nav {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 25px; }
+  footer .footer-top {
+    position: relative; }
+  footer .footer-nav ul {
+    max-width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    footer .footer-nav ul li {
+      width: initial; }
+    footer .footer-nav ul li:not(:last-child) {
+      margin-right: 20px; }
+  footer .footer-top .to-up {
+    top: 20px;
+    z-index: 1; }
+  footer .footer-phones {
+    margin-right: 0; } }
+
+@media only screen and (max-width: 991px) {
+  footer .footer-bottom {
+    padding-top: 75px;
+    position: relative; }
+    footer .footer-bottom ul {
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+    footer .footer-bottom li {
+      width: 50%; }
+    footer .footer-bottom .social {
+      position: absolute;
+      top: 15px;
+      left: 0;
+      text-align: center;
+      width: 100%; } }
+
+@media only screen and (max-width: 767px) {
+  footer .footer-bottom .developed-by {
+    width: 70%; }
+  footer .footer-top > ul {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    footer .footer-top > ul .footer-logo,
+    footer .footer-top > ul .footer-addr {
+      width: 100%;
+      max-width: 100%; }
+    footer .footer-top > ul .footer-addr {
+      margin-top: 35px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      footer .footer-top > ul .footer-addr ul {
+        margin-top: 0; }
+      footer .footer-top > ul .footer-addr li:first-child {
+        margin-top: 0; }
+  footer .footer-phones {
+    margin-top: 25px; }
+  footer .about-company {
+    margin-top: 5px; }
+  footer .footer-bottom .social li {
+    min-width: 40px; } }
+
+@media only screen and (max-width: 500px) {
+  footer .about-company {
+    font-size: 16px; } }
 
 #features .left-side {
   max-width: 600px; }

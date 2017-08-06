@@ -147,3 +147,67 @@ footer
 				align-items: center
 			img
 				margin-right: 5px
+
+@media only screen and (max-width: 1200px)
+	footer .footer-nav
+		position: absolute
+		width: 100%
+		left: 0
+		top: 25px
+	footer .footer-top
+		position: relative
+	footer .footer-nav ul
+		max-width: 100%
+		justify-content: center
+		li
+			width: initial
+		li:not(:last-child)
+			margin-right: 20px
+	footer .footer-top .to-up
+		top: 20px
+		z-index: 1
+	footer .footer-phones
+		margin-right: 0
+
+@media only screen and (max-width: 991px)
+	footer .footer-bottom
+		padding-top: 75px
+		position: relative
+		ul
+			justify-content: space-between
+		li
+			width: 50%
+		.social
+			position: absolute
+			top: 15px
+			left: 0
+			text-align: center
+			width: 100%
+
+@media only screen and (max-width: 767px)
+	footer .footer-bottom .developed-by
+		width: 70%
+	footer .footer-top > ul
+		flex-wrap: wrap
+		.footer-logo,
+		.footer-addr
+			width: 100%
+			max-width: 100%
+		.footer-addr
+			margin-top: 35px
+			display: flex
+			justify-content: space-between
+			ul
+				margin-top: 0
+			li:first-child
+				margin-top: 0
+	footer .footer-phones
+		margin-top: 25px
+	footer .about-company
+		margin-top: 5px
+	footer .footer-bottom .social li
+		min-width: 40px
+
+@media only screen and (max-width: 500px)
+	footer .about-company
+		font-size: 16px
