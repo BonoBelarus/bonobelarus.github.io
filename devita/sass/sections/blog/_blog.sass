@@ -1,6 +1,6 @@
 #blog
 	font-size: 16px
-	padding-top: 80px
+	padding: 80px 0 130px
 	img
 		max-width: 100%
 	h1:before
@@ -61,11 +61,7 @@
 	.btn-wrap
 		margin-top: 30px
 		.btn:hover
-			.b-l
-				height: 100%
-				transition-delay: 0s
 			.b-b
-				transition-delay: .25s
 				width: 100%
 		.btn
 			font-size: 12px
@@ -76,17 +72,10 @@
 				background-color: #000
 				position: absolute
 			.b-b
-				transition-delay: 0s
 				width: 0
 				height: 1px
 				left: 0
 				bottom: 0
-			.b-l
-				transition-delay: .25s
-				width: 1px
-				height: 0
-				top: 0
-				left: 0
 	.is_stuck
 		margin-left: 900px
 	aside
@@ -104,13 +93,13 @@
 			padding: 40px 30px 60px 0
 			overflow: hidden
 			.active
+				pointer-events: none
 				a
 					cursor: default
-					color: #fff
-				p
-					background-color: #000
+					color: #f47aac
+				// p
+				// 	background-color: #000
 				a:hover
-					color: #fff
 					transform: none
 					p
 						transform: none

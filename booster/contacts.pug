@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	script.
+		var ww = window.innerWidth;
+		if(ww <= 500){
+			viewport = document.querySelector("meta[name=viewport]");
+			viewport.setAttribute('content', 'width=500');
+		}
+	meta(http-equiv="X-UA-Compatible", content="ie=edge")
+	title Booster
+	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet")
+	link(href="css/main.css", rel="stylesheet")
+	
+body
+	header
+		.top-line
+			.content
+				.company-clarify
+					p Промышленные парогенераторы и котельное оборудование
+				.company-info
+					ul
+						li
+							p Пн–Пт, 09:00–18:00
+						li
+							p info@booster.by
+						li
+							a(href="skype:booster_bel") booster_bel
+		.header-menu
+			.content
+				.logo
+					img( draggable="false" src="img/logo.png", alt="Бустер - Промышленные парогенераторы")
+				nav
+					.mobile-nav
+						div
+					ul
+						li
+							a(href="#") О компании
+						li
+							a(href="#") Каталог
+						li
+							a(href="#") Объекты
+						li
+							a(href="#") Контакты
+				.phones
+					ul
+						li
+							a(href="tel:+375173887505") +375 (17) 388-75-05
+						li
+							a(href="tel:+375293887505") +375 (29) 388-75-05
+					ul.hidden-phones
+						li
+							a(href="tel:+375293887505") +375 (29) 388-75-05
+						li
+							a(href="tel:+375293887505") +375 (29) 388-75-05
+				.callback.btn.btn-white
+					p Обратный звонок
+	section#contacts-page
+		.content
+			.breadcrumbs
+				ul
+					li
+						a(href="#") Главная
+					li
+						a(href="#") Каталог
+					li
+						a(href="#") Парогенераторы BOOSTER
+			h1 Контакты
+			.flex-wrap
+				.left-side
+					b ООО «Бустер Бел»
+					p г.Минск, 1-й Твердый переулок, 7, каб. 11
+					.shedule
+						p Время работы: Пн–Пт, с 08:30 до 18:00
+					.phones
+						b Телефоны
+						ul
+							li
+								a(href="tel:+375173887505") +375 (17) 388-75-05 тел/факс
+							li
+								a(href="tel:+375173887505") +375 (29) 398-75-05 моб.
+							li
+								a(href="tel:+375173887505") +375 (29) 388-75-05 моб.
+							li
+								a(href="tel:+375173887505") +375 (29) 365-95-00 моб.
+					.social
+						ul
+							li.email
+								b e-meail
+								p info@booster.by
+							li.skype
+								b skype
+								p booster_bel
+				.right-side
+					.wrap
+						.caption
+							p Реквизиты компании
+						.clarify
+							p Общество с ограниченной ответственностью «Бустер Бел».
+							p Директор Шитько Илья Михайлович действует на основании Устава
+							p р/с 3012060210015 ОАО «Банк Москва-Минск»
+							p г. Минск, ул. Коммунистическая, 49, пом.1
+							p ОКПО 381030275000, УНП 192001685
+						.yr
+							b Юридический адрес:
+							p РБ, 220037, г.Минск, 1-й Твёрдый переулок,7/1, каб.11
+						.post
+							b Почтовый адрес:
+							p РБ, 220037, г.Минск, 1-й Твёрдый переулок,7/1, каб.11
+						.download
+							a(href="#") Скачать Pdf
+	section#map
+
+		script(async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd_SaifTZQ-vwarl1l9ZJwSCFazqLTisA&callback=initMap")
+
+		script.
+			function initMap() {
+			var styles = [
+				{
+				stylers:
+				[
+				{hue: ''},
+				{saturation: '-90'},
+				{lightness: ''},
+				]
+				},{
+				featureType: "road",
+				elementType: "labels.icon",
+				stylers:
+				[
+				{ lightness: 100 },
+				{ visibility: "simplified" }
+				]
+				},{
+				featureType: "road",
+				elementType: "labels.icon",
+				stylers:
+				[
+				{ visibility: "off" }
+				]
+				}
+			];
+
+
+
+			var styledMap = new google.maps.StyledMapType(styles,
+
+			{name: "Styled Map"});
+
+
+
+
+
+
+
+			var marker = new google.maps.Marker({
+
+			position: {lat: 53.9063133, lng: 27.5967496},
+
+			map: map,
+
+			title: 'МиСофт — Официальный дистрибьютор фирмы «1С» в РБ',
+
+			icon: {
+
+			url: "img/pointer.png",
+
+			scaledSize: new google.maps.Size(34, 47)
+
+			}
+
+			});
+
+
+
+
+
+
+
+
+
+
+
+			var mapOptions = {
+
+			zoom: 14,
+
+			center: new google.maps.LatLng(53.9063133,27.5945609),
+
+			animation: google.maps.Animation.DROP,
+
+			scrollwheel: false,
+
+			navigationControl: false,
+
+			mapTypeControl: false,
+
+			scaleControl: false,
+
+			icon: 'img/pointer.png',
+
+			mapTypeControlOptions: {
+
+			mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+
+			}
+
+			};
+
+			var map = new google.maps.Map(document.getElementById('map'),
+
+			mapOptions);
+
+
+
+			map.mapTypes.set('map_style', styledMap);
+
+			map.setMapTypeId('map_style');
+
+			marker.setMap(map);
+
+
+
+			}
+	section#any-question
+		.content
+			h2 Есть вопросы?
+			.clarify
+				p Заполните форму обратной связи, или задайте вопрос лично представителю компании
+			.flex-wrap
+				.left-side
+					ul
+						li
+							.img
+								img(src="img/contacts-photo-1.png", alt="")
+							.info
+								b.name Илья Шитько
+								p.position Директор
+								a(href="tel:+375293659500").phone +375 (29) 365-95-00
+								p.email info@booster.by
+						li
+							.img
+								img(src="img/contacts-photo-2.png", alt="")
+							.info
+								b.name Илья Шитько
+								p.position Директор
+								a(href="tel:+375293659500").phone +375 (29) 365-95-00
+								p.email info@booster.by
+						li
+							.img
+								img(src="img/contacts-photo-3.png", alt="")
+							.info
+								b.name Илья Шитько
+								p.position Директор
+								a(href="tel:+375293659500").phone +375 (29) 365-95-00
+								p.email info@booster.by
+				.right-side
+					.form-box
+						.caption
+							p Задать вопрос
+						form(action="")
+							.holder
+								label Ваше имя
+								input(type="text" name="name" required)
+							.holder
+								label Телефон
+								input(type="tel" name="phone" required)
+							.holder
+								label Сообщение
+								textarea(name="comment" required)
+							.btn-wrap
+								button.btn.btn-green ОТПРАВИТЬ СООБЩЕНИЕ
+	footer
+		.content
+			.footer-top
+				.to-up
+				ul
+					li.footer-logo
+						a(href="#")
+							img(draggable="false" src="img/svg/logo_footer.svg", alt="")
+						.about-company
+							p Промышленные парогенераторы, теплообменное и котельное  оборудование
+					li.footer-nav
+						nav
+							ul
+								li
+									a(href="#") О компании
+								li
+									a(href="#") Объекты
+								li
+									a(href="#") Каталог
+								li
+									a(href="#") Контакты
+					li.footer-addr
+						.wrap
+							p Республика Беларусь, г. Минск
+							p 1-й Твердый переулок, дом. 7, каб. 1
+						ul
+							li
+								p info@booster.by
+							li
+								a(href="skype:booster_bel") booster_bel
+					li.footer-phones
+						a(href="tel:+375173887505") +375 (17) 388-75-05 тел/факс
+						a(href="tel:+375293887505") +375 (29) 388-75-05 моб.
+						a(href="tel:+375293659500") +375 (29) 365-95-00 моб.
+						.btn-wrap
+							a.btn.btn-green(href="#")
+								p Обратный звонок
+			.footer-bottom
+				ul
+					li.copyright
+						p © 2017 Booster.by
+					li.social
+						ul
+							li
+								a(href="#" target="_blank")
+									img(draggable="false" src="img/svg/fb.svg", alt="")
+							li
+								a(href="#" target="_blank")
+									img(draggable="false" src="img/svg/vk.svg", alt="")
+							li
+								a(href="#" target="_blank")
+									img(draggable="false" src="img/svg/insta.svg", alt="")
+					li.developed-by
+						p Дизайн и разработка:
+						a(href="https://nambawan.by" target="_blank")
+							img(draggable="false" src="img/logo-namba.png", alt="")
+							p Nambawan
+		.hidden
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+	script(src="js/sticky.js")
+	script(src="js/slick.min.js")
+	script(src="js/jquery.fancybox.min.js")
+	script(src="js/common.js")

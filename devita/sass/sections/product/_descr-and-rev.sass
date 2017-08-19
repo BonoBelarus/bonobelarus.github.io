@@ -8,7 +8,7 @@
 		color: #1c2335
 		border-bottom: 1px solid #dedfe2
 		max-width: 570px
-		margin: 0 auto 70px
+		margin: 0 auto 35px
 		font-family: 'Times New Roman', Times, serif
 		ul
 			display: flex
@@ -28,7 +28,7 @@
 				bottom: -1px
 				background-color: #d47aac
 			li.active:before
-				height: 4px
+				height: 3px
 				transition-delay: 1s
 			li.active
 				color: #f47aac
@@ -41,7 +41,7 @@
 				left: 50%
 				transition: .25s
 				margin-left: -25px
-				background-color: #d47aac
+				background-color: #f286b7
 			li
 				text-align: center
 				width: 120px
@@ -98,6 +98,104 @@
 				margin-top: 15px
 		.right-side
 			margin-top: 50px
+	.item.reviews
+		display: block
+	.top-line
+		padding-bottom: 35px
+		border-bottom: 1px solid #ececee
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.btn
+			background-color: #1c2335
+			color: #fff
+			&:hover
+				box-shadow: none
+	.hidden-content .stars,
+	.stars
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		ul
+			margin-right: 20px
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			&+p
+				font-size: 14px
+		li
+			background: url(../img/yellow-star.png) center no-repeat
+			background-size: contain
+			width: 27px
+			height: 27px
+			&:not(:first-child)
+				margin-left: 5px
+	.hidden-content .review-meta,
+	.review-meta
+		position: relative
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		margin-bottom: 15px
+		.date
+			position: absolute
+			font-size: 12px
+			top: 0
+			right: 0
+		.name
+			font-size: 16px
+			font-weight: 600
+	.hidden-content .review-list,
+	.review-list
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+		flex-direction: column
+		>li
+			width: 100%
+			padding: 30px
+			border-bottom: 1px solid #ececee
+		.stars
+			margin-left: 30px
+			li
+				cursor: pointer
+				width: 17px
+				height: 17px
+		.txt
+			max-width: 750px
+			font-size: 14px
+			text-align: left
+	.hidden-content .devita-reply,
+	.devita-reply
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+		background-color: #f4f7fc
+		padding: 25px 30px
+		margin-top: 35px
+		position: relative
+		&:before
+			content: ''
+			height: 35px
+			width: 35px
+			position: absolute
+			bottom: 100%
+			margin-bottom: -18px
+			transform: rotateZ(45deg)
+			background-color: #f4f7fc
+			left: 30px
+		.icon
+			margin-right: 20px
+		.name
+			text-align: left
+			margin-bottom: 10px
+			font-size: 16px
+			font-weight: 600
+		.date
+			font-size: 12px
+			position: absolute
+			top: 25px
+			right: 30px
 
 @media only screen and (max-width : 1200px)
 	#descr-and-rev .slick-next,
@@ -115,6 +213,12 @@
 			width: 100%
 
 @media only screen and (max-width : 767px)
+	#descr-and-rev .top-line
+		flex-direction: column
+		.stars
+			margin-bottom: 25px
+	#descr-and-rev .hidden-content .review-list > li, #descr-and-rev .review-list > li
+		padding: 30px 15px
 	#descr-and-rev
 		padding: 60px 0
 		.slider
@@ -164,3 +268,14 @@
 	#descr-and-rev .hidden-content .right-side
 		img
 			max-width: 100%
+
+@media only screen and (max-width : 500px)
+	#descr-and-rev .hidden-content .review-list > li, #descr-and-rev .review-list > li
+		padding: 50px 15px 30px
+		.date
+			top: -30px
+	#descr-and-rev .hidden-content .devita-reply, #descr-and-rev .devita-reply
+		flex-direction: column
+		padding: 25px 20px
+		.date
+			top: 30px !important

@@ -9,54 +9,164 @@
     <link href="css/main.css" rel="stylesheet"/>
   </head>
   <body>
-    <header>
-      <div class="top-line">
-        <div class="content">
-          <div class="left-side">
-            <ul>
-              <li><a href="#">Доставка  и оплата</a></li>
-              <li><a href="#">Обмен и возврат</a></li>
-            </ul>
-          </div>
-          <div class="right-side">
-            <ul>
-              <li class="drop"><a href="#">Rus</a></li>
-              <li class="drop"><a href="#">Валюта: BYN</a></li>
-              <li><a href="#"> Войти / Регистрация</a></li>
-            </ul>
+    <div class="mobile-menu">
+      <div class="overlay"></div>
+      <ul>
+        <li class="settings">
+          <ul>
+            <li class="login"><a href="#">Войти / Регистрация</a></li>
+            <li class="dropdown"><a href="#">Валюта: BYN</a>
+              <ul>
+                <li>
+                  <p>BYN</p>
+                </li>
+                <li>
+                  <p>RUR</p>
+                </li>
+                <li>
+                  <p>EUR</p>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Rus / Eng</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Скидки</a></li>
+        <li><a href="#">Блог</a></li>
+        <li class="dropdown"><a href="#">О бренде</a>
+          <ul>
+            <li>
+              <p>О бренде</p>
+            </li>
+            <li>
+              <p>Lookbook</p>
+            </li>
+            <li>
+              <p>Новости</p>
+            </li>
+            <li>
+              <p>Сертификаты</p>
+            </li>
+            <li>
+              <p>Блог</p>
+            </li>
+            <li>
+              <p>Контакты</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="header-wrap">
+      <header>
+        <div class="search-bar">
+          <div class="content">
+            <div class="close"></div>
+            <input type="search" placeholder="Найти на сайте"/>
           </div>
         </div>
-      </div>
-      <div class="major-menu">
-        <div class="content">
-          <div class="logo"><img draggable="false" src="img/logo.png" alt=""/>
-            <div class="clarify">
-              <p>Официальный интернет-магазин</p>
+        <div class="top-line">
+          <div class="content">
+            <div class="left-side">
+              <ul>
+                <li><a href="#">Доставка  и оплата</a></li>
+                <li><a href="#">Обмен и возврат</a></li>
+              </ul>
             </div>
-          </div>
-          <nav>
-            <div class="mobile-nav">
-              <div></div>
+            <div class="right-side">
+              <ul>
+                <li class="drop"><a href="#">Rus</a>
+                  <ul>
+                    <li>
+                      <p>Blr</p>
+                    </li>
+                    <li>
+                      <p>Ukr</p>
+                    </li>
+                    <li>
+                      <p>Kaz</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="drop"><a href="#">Валюта: BYN</a>
+                  <ul>
+                    <li>
+                      <p>RUR</p>
+                    </li>
+                    <li>
+                      <p>KAZ</p>
+                    </li>
+                    <li>
+                      <p>EURO</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="login"><a href="#"> Войти / Регистрация</a></li>
+              </ul>
             </div>
-            <ul>
-              <li><a href="#">Каталог</a></li>
-              <li><a href="#">Скидки</a></li>
-              <li><a href="#">Блог</a></li>
-              <li class="drop"><a href="#">О бренде</a></li>
-            </ul>
-          </nav>
-          <div class="states">
-            <ul>
-              <li class="search"><a href="#"><img draggable="false" src="img/icon-search.png" alt=""/></a></li>
-              <li class="like"><a href="#">
-                  <div class="total">6</div><img draggable="false" src="img/icon-like.png" alt=""/></a></li>
-              <li class="cart"><a href="#">
-                  <div class="total">2</div><img draggable="false" src="img/icon-cart.png" alt=""/></a></li>
-            </ul>
           </div>
         </div>
-      </div>
-    </header>
+        <div class="major-menu">
+          <div class="content">
+            <div class="logo"><img draggable="false" src="img/logo.png" alt=""/>
+              <div class="clarify">
+                <p>Официальный интернет-магазин</p>
+              </div>
+            </div>
+            <nav>
+              <div class="mobile-nav">
+                <div></div>
+              </div>
+              <ul class="main-nav">
+                <li class="drop"><a href="#" target="_blank">Каталог</a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Summer 2017</a></li>
+                    <li><a href="#">Devita Sport</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" target="_blank">Распродажа</a></li>
+                <li><a href="#" target="_blank">Блог</a></li>
+                <li class="drop"><a href="#" target="_blank">О бренде</a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Summer 2017</a></li>
+                    <li><a href="#">Devita Sport</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <div class="states">
+              <ul>
+                <li class="search"><img draggable="false" src="img/icon-search.png" alt=""/></li>
+                <li class="like"><a href="#" target="_blank">
+                    <div class="total">6</div><img draggable="false" src="img/icon-like.png" alt=""/></a></li>
+                <li class="cart full"><a href="#" target="_blank">
+                    <div class="total">2</div><img draggable="false" src="img/icon-cart.png" alt=""/></a>
+                  <div class="cart-preview">
+                    <div class="b-t"></div>
+                    <div class="flex-wrap">
+                      <div class="img"><img src="img/cart-prev-1.jpg" alt=""/></div>
+                      <div class="info">
+                        <div class="caption">
+                          <p>Платье из лёгкого шифона М-539</p>
+                        </div>
+                        <div class="size">
+                          <p><span>Размер: </span>44</p>
+                        </div>
+                        <div class="conter">
+                          <p><span>2 x </span>228 BYN</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn-wrap"><a class="btn" href="#">Оформить заказ</a></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
     <section id="product-card">
       <div class="content">
         <div class="left-side">
@@ -104,6 +214,9 @@
           <div class="clarify">
             <p>Стильный комбинезон с оригинальным принтом из текстильного полотна. Лиф с рельефами из пройм и центральной застёжкой на 7 пуговиц. Вырез горловины круглый на обтачке.</p>
           </div>
+          <div class="price-old">
+            <p><span class="num">227</span><span class="cur"> BYN</span></p>
+          </div>
           <div class="price">
             <p><span class="num">114</span><span class="cur"> BYN</span></p>
           </div>
@@ -127,8 +240,7 @@
                   <li>
                     <p>46</p>
                   </li>
-                </ul>
-                <p>Таблица размеров</p>
+                </ul><a href="#" data-popup="popup-wrap-sizes">Таблица размеров</a>
               </div>
             </div>
             <div class="compound">
@@ -146,7 +258,7 @@
                   <p>+</p>
                 </div>
               </div>
-              <div class="btn-wrap"><a class="btn" href="#">Добавить в корзину</a></div>
+              <div class="btn-wrap"><a class="btn" href="#" data-popup="popup-wrap-add">Добавить в корзину</a></div>
             </div>
             <div class="to-like"><img src="img/like-icon.png" alt=""/>
               <p>Добавить в список желаний</p>
@@ -214,39 +326,117 @@
                 <p>Отзывы (<span>5</span>)</p>
               </div>
               <div class="hidden-content">
-                <div class="left-side">
-                  <div class="clarify">
-                    <p>Стильный комбинезон с оригинальным принтом из текстильного полотна. Лиф с рельефами из пройм и центральной застёжкой на 7 аккуратных пуговиц. Вырез горловины круглый на обтачке. По линии талии расположена планка со сборкой на резинку и шлёвки для удобного пояса. На передних частях брюк находятся боковые карманы.</p>
-                    <p>Длина изделия до талии — 45,5 см, брюки с резинкой — 05 см.</p>
-                  </div>
-                  <div class="care">
-                    <div class="caption">
-                      <p>Уход</p>
-                    </div>
+                <div class="top-line">
+                  <div class="stars">
                     <ul>
-                      <li>
-                        <div class="care-icon"><img src="img/care-1.png" alt=""/></div>
-                        <div class="clarify">
-                          <p>щадяшая</p>
-                          <p>химчистка</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="care-icon"><img src="img/care-2.png" alt=""/></div>
-                        <div class="clarify">
-                          <p>глажка</p>
-                          <p>с отпариванием</p>
-                        </div>
-                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
                     </ul>
+                    <p>на основе 5 оценок</p>
                   </div>
+                  <div class="btn-wrap"><a class="btn" href="#">Оставить Отзыв</a></div>
                 </div>
-                <div class="right-side">
-                  <div class="video"><img src="img/video.jpg" alt=""/></div>
-                  <div class="clarify">
-                    <p>Видеообзор платья от DeVita. Модель 566.</p>
-                  </div>
-                </div>
+                <ul class="review-list">
+                  <li>
+                    <div class="review-meta">
+                      <div class="name">
+                        <p>Александра</p>
+                      </div>
+                      <div class="stars">
+                        <ul>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                      </div>
+                      <div class="date">
+                        <p>27.06.2017</p>
+                      </div>
+                    </div>
+                    <div class="txt">
+                      <p>На 42 размер при росте 168 платье сильно ниже колена (см. на 15) и великовато (в плечах, груди, по длине). Меньше размера нет, а то бы взяла попробовать. Качество ткани и пошива отменное.</p>
+                    </div>
+                    <div class="devita-reply">
+                      <div class="icon"><img src="img/devita-icon.png" alt=""/></div>
+                      <div class="info">
+                        <div class="name">
+                          <p>Devita</p>
+                        </div>
+                        <div class="txt">
+                          <p>Да, Александра - это немножко не ваш размер. 40-й на вас просто идеально бы сел.</p>
+                          <p>Благодарим за отзыв!</p>
+                        </div>
+                        <div class="date">
+                          <p>27.06.2017</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="review-meta">
+                      <div class="name">
+                        <p>Александра</p>
+                      </div>
+                      <div class="stars">
+                        <ul>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                      </div>
+                      <div class="date">
+                        <p>27.06.2017</p>
+                      </div>
+                    </div>
+                    <div class="txt">
+                      <p>На 42 размер при росте 168 платье сильно ниже колена (см. на 15) и великовато (в плечах, груди, по длине). Меньше размера нет, а то бы взяла попробовать. Качество ткани и пошива отменное.</p>
+                    </div>
+                    <div class="devita-reply">
+                      <div class="icon"><img src="img/devita-icon.png" alt=""/></div>
+                      <div class="info">
+                        <div class="name">
+                          <p>Devita</p>
+                        </div>
+                        <div class="txt">
+                          <p>Да, Александра - это немножко не ваш размер. 40-й на вас просто идеально бы сел.</p>
+                          <p>Благодарим за отзыв!</p>
+                        </div>
+                        <div class="date">
+                          <p>27.06.2017</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="review-meta">
+                      <div class="name">
+                        <p>Александра</p>
+                      </div>
+                      <div class="stars">
+                        <ul>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                      </div>
+                      <div class="date">
+                        <p>27.06.2017</p>
+                      </div>
+                    </div>
+                    <div class="txt">
+                      <p>На 42 размер при росте 168 платье сильно ниже колена (см. на 15) и великовато (в плечах, груди, по длине). Меньше размера нет, а то бы взяла попробовать. Качество ткани и пошива отменное.</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </li>
           </ul>
@@ -288,39 +478,117 @@
             </div>
           </div>
           <div class="item reviews">
-            <div class="left-side">
-              <div class="clarify">
-                <p>Стильный комбинезон с оригинальным принтом из текстильного полотна. Лиф с рельефами из пройм и центральной застёжкой на 7 аккуратных пуговиц. Вырез горловины круглый на обтачке. По линии талии расположена планка со сборкой на резинку и шлёвки для удобного пояса. На передних частях брюк находятся боковые карманы.</p>
-                <p>Длина изделия до талии — 45,5 см, брюки с резинкой — 05 см.</p>
-              </div>
-              <div class="care">
-                <div class="caption">
-                  <p>Уход</p>
-                </div>
+            <div class="top-line">
+              <div class="stars">
                 <ul>
-                  <li>
-                    <div class="care-icon"><img src="img/care-1.png" alt=""/></div>
-                    <div class="clarify">
-                      <p>щадяшая</p>
-                      <p>химчистка</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="care-icon"><img src="img/care-2.png" alt=""/></div>
-                    <div class="clarify">
-                      <p>глажка</p>
-                      <p>с отпариванием</p>
-                    </div>
-                  </li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
                 </ul>
+                <p>на основе 5 оценок</p>
               </div>
+              <div class="btn-wrap"><a class="btn" href="#">Оставить Отзыв</a></div>
             </div>
-            <div class="right-side">
-              <div class="video"><img src="img/video.jpg" alt=""/></div>
-              <div class="clarify">
-                <p>Видеообзор платья от DeVita. Модель 566.</p>
-              </div>
-            </div>
+            <ul class="review-list">
+              <li>
+                <div class="review-meta">
+                  <div class="name">
+                    <p>Александра</p>
+                  </div>
+                  <div class="stars">
+                    <ul>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                  <div class="date">
+                    <p>27.06.2017</p>
+                  </div>
+                </div>
+                <div class="txt">
+                  <p>На 42 размер при росте 168 платье сильно ниже колена (см. на 15) и великовато (в плечах, груди, по длине). Меньше размера нет, а то бы взяла попробовать. Качество ткани и пошива отменное.</p>
+                </div>
+                <div class="devita-reply">
+                  <div class="icon"><img src="img/devita-icon.png" alt=""/></div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Devita</p>
+                    </div>
+                    <div class="txt">
+                      <p>Да, Александра - это немножко не ваш размер. 40-й на вас просто идеально бы сел.</p>
+                      <p>Благодарим за отзыв!</p>
+                    </div>
+                    <div class="date">
+                      <p>27.06.2017</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review-meta">
+                  <div class="name">
+                    <p>Александра</p>
+                  </div>
+                  <div class="stars">
+                    <ul>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                  <div class="date">
+                    <p>27.06.2017</p>
+                  </div>
+                </div>
+                <div class="txt">
+                  <p>На 42 размер при росте 168 платье сильно ниже колена (см. на 15) и великовато (в плечах, груди, по длине). Меньше размера нет, а то бы взяла попробовать. Качество ткани и пошива отменное.</p>
+                </div>
+                <div class="devita-reply">
+                  <div class="icon"><img src="img/devita-icon.png" alt=""/></div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Devita</p>
+                    </div>
+                    <div class="txt">
+                      <p>Да, Александра - это немножко не ваш размер. 40-й на вас просто идеально бы сел.</p>
+                      <p>Благодарим за отзыв!</p>
+                    </div>
+                    <div class="date">
+                      <p>27.06.2017</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review-meta">
+                  <div class="name">
+                    <p>Александра</p>
+                  </div>
+                  <div class="stars">
+                    <ul>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                  <div class="date">
+                    <p>27.06.2017</p>
+                  </div>
+                </div>
+                <div class="txt">
+                  <p>На 42 размер при росте 168 платье сильно ниже колена (см. на 15) и великовато (в плечах, груди, по длине). Меньше размера нет, а то бы взяла попробовать. Качество ткани и пошива отменное.</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -350,14 +618,14 @@
           </div>
           <div class="btn-wrap"><a class="btn white" href="#"><span>О бренде</span><img draggable="false" src="img/arrow-white.png" alt=""/></a></div>
         </div>
-        <div class="nav"></div>
-      </div>
-      <div class="right-side">
-        <div class="slider">
-          <div class="item"><img src="img/best-of-1.jpg" alt=""/></div>
-          <div class="item"><img src="img/best-of-2.jpg" alt=""/></div>
-          <div class="item"><img src="img/best-of-1.jpg" alt=""/></div>
-          <div class="item"><img src="img/best-of-2.jpg" alt=""/></div>
+        <div class="right-side">
+          <div class="nav"></div>
+          <div class="slider">
+            <div class="item"><img src="img/best-of-1.jpg" alt=""/></div>
+            <div class="item"><img src="img/best-of-2.jpg" alt=""/></div>
+            <div class="item"><img src="img/best-of-1.jpg" alt=""/></div>
+            <div class="item"><img src="img/best-of-2.jpg" alt=""/></div>
+          </div>
         </div>
       </div>
     </section>
@@ -498,8 +766,435 @@
       </div>
     </footer>
     <div class="hidden"></div>
+    <div class="popup-wrap" id="popup-wrap-card">
+      <div class="popup" id="popup-card">
+        <div class="close"></div>
+        <div class="flex-wrap">
+          <div class="left-side">
+            <div class="gallery">
+              <div class="slider">
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+              </div>
+            </div>
+            <div class="preview">
+              <div class="nav">
+                <p class="pages"><span class="current">1</span><span class="slash"> / </span><span class="total">3</span></p>
+              </div>
+              <div class="slider">
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+              </div>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="caption">
+              <p>Комбинезон М-566</p>
+            </div>
+            <div class="clarify">
+              <p>Стильный комбинезон с оригинальным принтом из текстильного полотна. Лиф с рельефами из пройм и центральной застёжкой на 7 пуговиц.  Вырез горловины круглый на обтачке.</p>
+            </div>
+            <div class="prices">
+              <div class="old-price">
+                <p> <span class="num">75</span><span class="cur"> BYN</span></p>
+              </div>
+              <div class="price">
+                <p> <span class="num">159</span><span class="cur"> BYN</span></p>
+              </div>
+            </div>
+            <div class="item-info">
+              <p class="height">
+                <p><b>Рост: </b>164</p>
+              </p>
+              <div class="size"><b>Размер:</b>
+                <div class="flex-wrap">
+                  <ul>
+                    <li>
+                      <p>42</p>
+                    </li>
+                    <li>
+                      <p>43</p>
+                    </li>
+                    <li class="active">
+                      <p>44</p>
+                    </li>
+                    <li>
+                      <p>46</p>
+                    </li>
+                  </ul><a class="table-sizes" href="#" data-popup="popup-wrap-sizes">Таблица размеров</a>
+                </div>
+              </div>
+              <div class="compound">
+                <p><b>Состав: </b>88% шерсть, 12% полиэстер</p>
+              </div>
+              <div class="flex-wrap counter-btn">
+                <div class="count">
+                  <div class="minus">
+                    <p>–</p>
+                  </div>
+                  <div class="current">
+                    <p>1</p>
+                  </div>
+                  <div class="plus">
+                    <p>+</p>
+                  </div>
+                </div>
+                <div class="btn-wrap"><a class="btn" href="#">Добавить в корзину</a></div>
+              </div>
+            </div>
+            <div class="to-like"><img src="img/like-icon.png" alt=""/>
+              <p>Мне нравится</p>
+            </div>
+            <div class="more"><a href="#">Подробнее о товаре </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-wrap" id="popup-wrap-sizes">
+      <div class="popup" id="popup-sizes">
+        <div class="close"></div>
+        <div class="caption">
+          <p>Таблица размеров</p>
+        </div>
+        <div class="table">
+          <table class="head">
+            <tr>
+              <td>
+                <p>Российский размер</p>
+              </td>
+              <td>
+                <p>42</p>
+              </td>
+              <td>
+                <p>44</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+              <td>
+                <p>48</p>
+              </td>
+              <td>
+                <p>50</p>
+              </td>
+              <td>
+                <p>52</p>
+              </td>
+              <td>
+                <p>54</p>
+              </td>
+              <td>
+                <p>56</p>
+              </td>
+              <td>
+                <p>58</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Международный размер</p>
+              </td>
+              <td>
+                <p>S</p>
+              </td>
+              <td>
+                <p>M</p>
+              </td>
+              <td>
+                <p>L</p>
+              </td>
+              <td>
+                <p>XL</p>
+              </td>
+              <td>
+                <p>XXL</p>
+              </td>
+              <td>
+                <p>XXXL</p>
+              </td>
+              <td>
+                <p>XXXL</p>
+              </td>
+              <td>
+                <p>XXXL</p>
+              </td>
+              <td>
+                <p>XXXL</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Европейский размер</p>
+              </td>
+              <td>
+                <p>36</p>
+              </td>
+              <td>
+                <p>38</p>
+              </td>
+              <td>
+                <p>40</p>
+              </td>
+              <td>
+                <p>42</p>
+              </td>
+              <td>
+                <p>44</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+              <td>
+                <p>48</p>
+              </td>
+              <td>
+                <p>50</p>
+              </td>
+              <td>
+                <p>52</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Обхват груди, см</p>
+              </td>
+              <td>
+                <p>84</p>
+              </td>
+              <td>
+                <p>88</p>
+              </td>
+              <td>
+                <p>92</p>
+              </td>
+              <td>
+                <p>96</p>
+              </td>
+              <td>
+                <p>100</p>
+              </td>
+              <td>
+                <p>104</p>
+              </td>
+              <td>
+                <p>108</p>
+              </td>
+              <td>
+                <p>112</p>
+              </td>
+              <td>
+                <p>114</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Обхват талии, см</p>
+              </td>
+              <td>
+                <p>66</p>
+              </td>
+              <td>
+                <p>70</p>
+              </td>
+              <td>
+                <p>74</p>
+              </td>
+              <td>
+                <p>78</p>
+              </td>
+              <td>
+                <p>82</p>
+              </td>
+              <td>
+                <p>86</p>
+              </td>
+              <td>
+                <p>90</p>
+              </td>
+              <td>
+                <p>94</p>
+              </td>
+              <td>
+                <p>98</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Обхват бедер, см</p>
+              </td>
+              <td>
+                <p>92</p>
+              </td>
+              <td>
+                <p>96</p>
+              </td>
+              <td>
+                <p>100</p>
+              </td>
+              <td>
+                <p>104</p>
+              </td>
+              <td>
+                <p>108</p>
+              </td>
+              <td>
+                <p>112</p>
+              </td>
+              <td>
+                <p>116</p>
+              </td>
+              <td>
+                <p>120</p>
+              </td>
+              <td>
+                <p>124</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="flex-wrap">
+          <div class="left-side">
+            <div class="caption">
+              <p>Как определить свой размер?</p>
+            </div>
+            <div class="clarify">
+              <p>Для того чтобы выбрать правильный размер, необходимо снять следующие мерки:</p>
+              <div><b>Обхват груди</b>
+                <p>Измеряется по выступающим точкам груди вокруг тела.</p>
+              </div>
+              <div><b>Обхват талии</b>
+                <p>Измеряется строго горизонтально по самой узкой части тела</p>
+              </div>
+              <div><b>Обхват бедер</b>
+                <p>Измеряется го наиболее выступающим точкам бедер и ягодиц.</p>
+              </div>
+            </div>
+          </div>
+          <div class="right-side"><img src="img/table-img.png" alt=""/></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-wrap" id="popup-wrap-add">
+      <div class="popup" id="popup-add">
+        <div class="close"></div>
+        <div class="caption">
+          <p>Товар добавлен в корзину!</p>
+        </div>
+        <ul class="list">
+          <li class="item">
+            <div class="item-info">
+              <div class="img"><img src="img/catalog-1.jpg" alt=""/></div>
+              <div class="info">
+                <div class="item-name">
+                  <p>Платье из лёгкого шифона М-539</p>
+                </div>
+                <div class="item-size">
+                  <p>Размер: 44</p>
+                </div>
+              </div>
+            </div>
+            <div class="price">
+              <p>2 x 228 BYN</p>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item-info">
+              <div class="img"><img src="img/catalog-1.jpg" alt=""/></div>
+              <div class="info">
+                <div class="item-name">
+                  <p>Платье из лёгкого шифона М-539</p>
+                </div>
+                <div class="item-size">
+                  <p>Размер: 44</p>
+                </div>
+              </div>
+            </div>
+            <div class="price">
+              <p>2 x 228 BYN</p>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item-info">
+              <div class="img"><img src="img/catalog-1.jpg" alt=""/></div>
+              <div class="info">
+                <div class="item-name">
+                  <p>Платье из лёгкого шифона М-539</p>
+                </div>
+                <div class="item-size">
+                  <p>Размер: 44</p>
+                </div>
+              </div>
+            </div>
+            <div class="price">
+              <p>2 x 228 BYN</p>
+            </div>
+          </li>
+        </ul>
+        <div class="btns">
+          <div class="btn-wrap"><a class="btn" href="#">Продолжить покупки</a></div>
+          <div class="btn-wrap"><a class="btn order" href="#">Оформить заказ</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-wrap" id="popup-wrap-wish">
+      <div class="popup" id="popup-wish">
+        <div class="close"></div>
+        <div class="caption">
+          <p>Добавить в список желаний</p>
+        </div>
+        <div class="clarify">
+          <p>Чтобы добавить товар в список желаний, войдите с свой аккаунт</p>
+        </div>
+        <div class="flex-wrap">
+          <div class="left-side">
+            <form action="">
+              <div class="holder">
+                <input type="email" placeholder="Введите email" required="required"/>
+              </div>
+              <div class="holder">
+                <input type="password" placeholder="Введите пароль" required="required"/>
+              </div>
+              <div class="btns">
+                <div class="btn-wrap forgot"><a class="btn" href="#">Забыли пароль?</a></div>
+                <div class="btn-wrap login">
+                  <button class="btn" href="#">ВОЙТИ</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="right-side">
+            <div class="caption">
+              <p>Еще нет аккаунта?</p>
+            </div>
+            <div class="clarify">
+              <p>Регистрация позволит вам сохранять в избранное, быстро совершать покупки, просматривать историю заказов, получать свежую информацию о новинках.</p>
+            </div>
+            <div class="btn-wrap"><a class="btn" href="#">Регистрация</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-wrap" id="popup-wrap-success">
+      <div class="popup" id="popup-success">
+        <div class="close"></div>
+        <div class="caption">
+          <p>Ваше сообщение отправлено</p>
+        </div>
+        <div class="clarify">
+          <p>Мы свяжимся с вами в ближайшее время</p>
+        </div>
+      </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.tubular.1.0.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
     <script src="js/sticky.js"></script>
     <script src="js/common.js"></script>
   </body>

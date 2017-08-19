@@ -3,11 +3,22 @@
     h1
         font-size: 40px
         text-align: center
+        position: relative
+        padding-bottom: 25px
+        &:before
+            content: ''
+            position: absolute
+            width: 60px
+            height: 1px
+            left: 50%
+            margin-left: -30px
+            bottom: 0
+            background-color: #f47aac
     .flex-wrap
-        margin-top: 50px
+        margin-top: 60px
         display: flex
         justify-content: space-between
-        align-items: flex-start
+        align-items: stretch
     .left-side
         max-width: 600px
         width: 100%
@@ -23,6 +34,7 @@
                     margin-top: 15px
                     .mark
                         color: #f47aac
+                        text-decoration: underline
             .holders
                 margin-top: 30px
                 >div:not(:first-child)
@@ -74,7 +86,7 @@
                         display: flex
                         justify-content: space-between
                         align-items: flex-start
-                    label:checked
+                    input:checked + label
                         background-color: #f4f7fc
                     label
                         cursor: pointer
@@ -139,17 +151,24 @@
         .btn-wrap
             justify-content: center
             .btn:hover
-                background-color: rgba(#000, .8)
+                background-color: rgba(#1c2335, .8)
+                box-shadow: none
             .btn
                 border: none
                 cursor: pointer
                 color: #fff
-                background-color: #000
+                background-color: #1c2335
             .notion
                 margin-top: 15px
                 font-size: 12px
                 opacity: .7
                 line-height: 1.2em
+                a
+                    border-bottom: 1px dashed #494f5d
+                    line-height: 1em
+                    display: inline-block
+                    &:hover
+                        border: none
     .right-side
         max-width: 460px
         min-width: 460px
@@ -162,8 +181,9 @@
             font-size: 21px
             font-weight: 400
             text-align: center
+            color: #1c2335
         .list
-            border-bottom: 1px solid #ccc
+            border-bottom: 1px solid #e4e4e4
             margin-top: 50px
             margin-bottom: 10px
             padding-bottom: 15px
@@ -195,7 +215,7 @@
         .order-total
             margin-top: 10px
             padding-top: 10px
-            border-top: 1px solid #ccc
+            border-top: 1px solid #e4e4e4
             font-weight: 700
             font-size: 16px
 

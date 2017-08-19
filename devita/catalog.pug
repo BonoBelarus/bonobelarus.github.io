@@ -9,104 +9,241 @@ html(lang="en")
 		link(href="css/main.css", rel="stylesheet")
 		
 	body
-		header
-			.top-line
-				.content
-					.left-side
-						ul
-							li
-								a(href="#" target="_blank") Доставка  и оплата
-							li
-								a(href="#" target="_blank") Обмен и возврат
-					.right-side
-						ul
-							li.drop
-								a(href="#" target="_blank") Rus
-							li.drop
-								a(href="#" target="_blank") Валюта: BYN
-							li
-								a(href="#" target="_blank")  Войти / Регистрация
-			.major-menu
-				.content
-					.logo
-						img(draggable="false" src="img/logo.png", alt="")
-						.clarify
-							p Официальный интернет-магазин
-					nav
-						.mobile-nav
-							div
-						ul
-							li
-								a(href="#" target="_blank") Каталог
-							li
-								a(href="#" target="_blank") Скидки
-							li
-								a(href="#" target="_blank") Блог
-							li.drop
-								a(href="#" target="_blank") О бренде
-					.states
-						ul
-							li.search
-								a(href="#" target="_blank")
+		.mobile-menu
+			.overlay
+			ul
+				li.settings
+					ul
+						li.login
+							a(href="#") Войти / Регистрация
+						li.dropdown
+							a(href="#") Валюта: BYN
+							ul
+								li
+									p BYN
+								li
+									p RUR
+								li
+									p EUR
+						li
+							a(href="#") Rus / Eng
+				li
+					a(href="#") Каталог
+				li
+					a(href="#") Скидки
+				li
+					a(href="#") Блог
+				li.dropdown
+					a(href="#") О бренде
+					ul
+						li
+							p О бренде
+						li
+							p Lookbook
+						li
+							p Новости
+						li
+							p Сертификаты
+						li
+							p Блог
+						li
+							p Контакты
+		.header-wrap
+			header
+				.search-bar
+					.content
+						.close
+						input(type="search" placeholder="Найти на сайте")
+				.top-line
+					.content
+						.left-side
+							ul
+								li
+									a(href="#") Доставка  и оплата
+								li
+									a(href="#") Обмен и возврат
+						.right-side
+							ul
+								li.drop
+									a(href="#") Rus
+									ul
+										li
+											p Blr
+										li
+											p Ukr
+										li
+											p Kaz
+								li.drop
+									a(href="#") Валюта: BYN
+									ul
+										li
+											p RUR
+										li
+											p KAZ
+										li
+											p EURO
+								li.login
+									a(href="#")  Войти / Регистрация
+				.major-menu
+					.content
+						.logo
+							img(draggable="false" src="img/logo.png", alt="")
+							.clarify
+								p Официальный интернет-магазин
+						nav
+							.mobile-nav
+								div
+							ul.main-nav
+								li.drop
+									a(href="#" target="_blank") Каталог
+									ul.sub-menu
+										li
+											a(href="#") Summer 2017
+										li
+											a(href="#") Devita Sport
+								li
+									a(href="#" target="_blank") Распродажа
+								li
+									a(href="#" target="_blank") Блог
+								li.drop
+									a(href="#" target="_blank") О бренде
+									ul.sub-menu
+										li
+											a(href="#") Summer 2017
+										li
+											a(href="#") Devita Sport
+						.states
+							ul
+								li.search
 									img(draggable="false" src="img/icon-search.png", alt="")
-							li.like
-								a(href="#" target="_blank")
-									.total 6
-									img(draggable="false" src="img/icon-like.png", alt="")
-							li.cart
-								a(href="#" target="_blank")
-									.total 2
-									img(draggable="false" src="img/icon-cart.png", alt="")
+								li.like
+									a(href="#" target="_blank")
+										.total 6
+										img(draggable="false" src="img/icon-like.png", alt="")
+								li.cart.full
+									a(href="#" target="_blank")
+										.total 2
+										img(draggable="false" src="img/icon-cart.png", alt="")
+									.cart-preview
+										.b-t
+										.flex-wrap
+											.img
+												img(src="img/cart-prev-1.jpg", alt="")
+											.info
+												.caption
+													p Платье из лёгкого шифона М-539
+												.size
+													p
+														span Размер: 
+														| 44
+												.conter
+													p
+														span 2 x 
+														| 228 BYN
+										.btn-wrap
+											a.btn(href="#") Оформить заказ
 		section#catalog
 			.content
 				h1 Каталог
 				.filter
-					.left-side
-						ul
-							li.dropdown
-								.caption
-									p цена
-							li.dropdown
-								.caption
-									p размер
-							li.dropdown
-								.caption
-									p рост
-					.right-side
-						p сортировать по 
-						p.dropdown возрастанию цены
+					p Фильтры
+					.wrap
+						.left-side
+							ul
+								li.dropdown-price
+									.caption
+										p цена
+									.hidden
+										.wrap
+											input#slider-price(type="text")
+											.from-to
+												.holder
+													label от
+													input#price-from(type="number" value="100")
+												.holder
+													label до
+													input#price-to(type="number" value="1000")
+								li.dropdown-size
+									.caption
+										p размер
+									.hidden
+										ul
+											li
+												input#size-1(type="checkbox" name="size")
+												label(for="size-1")
+												p 42
+											li
+												input#size-2(type="checkbox" name="size")
+												label(for="size-2")
+												p 44
+											li
+												input#size-3(type="checkbox" name="size")
+												label(for="size-3")
+												p 46
+											li
+												input#size-4(type="checkbox" name="size")
+												label(for="size-4")
+												p 48
+											li
+												input#size-5(type="checkbox" name="size")
+												label(for="size-5")
+												p 50
+											li
+												input#size-6(type="checkbox" name="size")
+												label(for="size-6")
+												p 52
+								li.dropdown-height
+									.caption
+										p рост
+									.hidden
+										ul
+											li
+												input#height-1(type="checkbox" name="size")
+												label(for="height-1")
+												p 160
+											li
+												input#height-2(type="checkbox" name="size")
+												label(for="height-2")
+												p 163
+											li
+												input#height-3(type="checkbox" name="size")
+												label(for="height-3")
+												p 166
+											li
+												input#height-4(type="checkbox" name="size")
+												label(for="height-4")
+												p 169
+											li
+												input#height-5(type="checkbox" name="size")
+												label(for="height-5")
+												p 172
+											li
+												input#height-6(type="checkbox" name="size")
+												label(for="height-6")
+												p 175
+								li.skidka
+									input#skidka(type="checkbox")
+									label(for="skidka")
+									span Со скидкой
+						.right-side
+							p сортировать по: 
+							.dropdown-sort
+								p возрастанию цены
+								.hidden
+									.wrap
+										ul
+											li
+												p убыванию цены
+											li
+												p возрастанию цены
 				.list
 					ul
 						li
-							a(href="#" target="_blank")
-								.prev-img
-									img(src="img/catalog-1.jpg", alt="")
-							.meta
-								.info
-									.clarify
-										p Желтое платье М-537
-									.price
-										p
-											span.num 114 
-											span.cur BYN
-								.like
-						li
-							a(href="#" target="_blank")
-								.prev-img
-									img(src="img/catalog-2.jpg", alt="")
-							.meta
-								.info
-									.clarify
-										p Желтое платье М-537
-									.price
-										p
-											span.num 114 
-											span.cur BYN
-								.like
-						li
-							a(href="#" target="_blank")
-								.prev-img
+							.prev-img
+								a(href="#" target="_blank")
 									img(src="img/catalog-3.jpg", alt="")
+								a(href="#" data-popup="popup-wrap-card")
+									.show-prev
 							.meta
 								.info
 									.clarify
@@ -115,11 +252,13 @@ html(lang="en")
 										p
 											span.num 114 
 											span.cur BYN
-								.like
+								a.like(data-popup="popup-wrap-wish")
 						li
-							a(href="#" target="_blank")
-								.prev-img
-									img(src="img/catalog-4.jpg", alt="")
+							.prev-img
+								a(href="#" target="_blank")
+									img(src="img/catalog-3.jpg", alt="")
+								a(href="#" data-popup="popup-wrap-card")
+									.show-prev
 							.meta
 								.info
 									.clarify
@@ -128,11 +267,13 @@ html(lang="en")
 										p
 											span.num 114 
 											span.cur BYN
-								.like
+								a.like(data-popup="popup-wrap-wish")
 						li
-							a(href="#" target="_blank")
-								.prev-img
-									img(src="img/catalog-5.jpg", alt="")
+							.prev-img
+								a(href="#" target="_blank")
+									img(src="img/catalog-3.jpg", alt="")
+								a(href="#" data-popup="popup-wrap-card")
+									.show-prev
 							.meta
 								.info
 									.clarify
@@ -141,11 +282,13 @@ html(lang="en")
 										p
 											span.num 114 
 											span.cur BYN
-								.like
+								a.like(data-popup="popup-wrap-wish")
 						li
-							a(href="#" target="_blank")
-								.prev-img
-									img(src="img/catalog-6.jpg", alt="")
+							.prev-img
+								a(href="#" target="_blank")
+									img(src="img/catalog-3.jpg", alt="")
+								a(href="#" data-popup="popup-wrap-card")
+									.show-prev
 							.meta
 								.info
 									.clarify
@@ -154,7 +297,37 @@ html(lang="en")
 										p
 											span.num 114 
 											span.cur BYN
-								.like
+								a.like(data-popup="popup-wrap-wish")
+						li
+							.prev-img
+								a(href="#" target="_blank")
+									img(src="img/catalog-3.jpg", alt="")
+								a(href="#" data-popup="popup-wrap-card")
+									.show-prev
+							.meta
+								.info
+									.clarify
+										p Желтое платье М-537
+									.price
+										p
+											span.num 114 
+											span.cur BYN
+								a.like(data-popup="popup-wrap-wish")
+						li
+							.prev-img
+								a(href="#" target="_blank")
+									img(src="img/catalog-3.jpg", alt="")
+								a(href="#" data-popup="popup-wrap-card")
+									.show-prev
+							.meta
+								.info
+									.clarify
+										p Желтое платье М-537
+									.price
+										p
+											span.num 114 
+											span.cur BYN
+								a.like(data-popup="popup-wrap-wish")
 				.pagination
 					.prev
 					ul
@@ -264,7 +437,321 @@ html(lang="en")
 										p Nambawan
 					
 		.hidden
+		.popup-wrap#popup-wrap-card
+			#popup-card.popup
+				.close
+				.flex-wrap
+					.left-side
+						.gallery
+							.slider
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+						.preview
+							.nav
+								p.pages
+									span.current 1
+									span.slash  / 
+									span.total 3
+							.slider
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+					.right-side
+						.caption
+							p Комбинезон М-566
+						.clarify
+							p Стильный комбинезон с оригинальным принтом из текстильного полотна. Лиф с рельефами из пройм и центральной застёжкой на 7 пуговиц.  Вырез горловины круглый на обтачке.
+						.prices
+							.old-price
+								p 
+									span.num 75
+									span.cur  BYN
+							.price
+								p 
+									span.num 159
+									span.cur  BYN
+						.item-info
+							p.height
+								p
+									b Рост: 
+									| 164
+							.size
+								b Размер:
+								.flex-wrap
+									ul
+										li
+											p 42
+										li
+											p 43
+										li.active
+											p 44
+										li
+											p 46
+									a(href="#").table-sizes(data-popup="popup-wrap-sizes") Таблица размеров
+							.compound
+								p
+									b Состав: 
+									| 88% шерсть, 12% полиэстер
+							.flex-wrap.counter-btn
+								.count
+									.minus
+										p –
+									.current
+										p 1
+									.plus
+										p +
+								.btn-wrap
+									a.btn(href="#" data-popup="popup-wrap-add") Добавить в корзину
+						.to-like
+							img(src="img/like-icon.png", alt="")
+							p Мне нравится
+						.more
+							a(href="#") Подробнее о товаре 
+		.popup-wrap#popup-wrap-sizes
+			.popup#popup-sizes
+				.close
+				.caption
+					p Таблица размеров
+				.table
+					table.head
+						tr
+							td
+								p Российский размер
+							td
+								p 42
+							td
+								p 44
+							td
+								p 46
+							td
+								p 48
+							td
+								p 50
+							td
+								p 52
+							td
+								p 54
+							td
+								p 56
+							td
+								p 58
+						tr
+							td
+								p Международный размер
+							td
+								p S
+							td
+								p M
+							td
+								p L
+							td
+								p XL
+							td
+								p XXL
+							td
+								p XXXL
+							td
+								p XXXL
+							td
+								p XXXL
+							td
+								p XXXL
+						tr
+							td
+								p Европейский размер
+							td
+								p 36
+							td
+								p 38
+							td
+								p 40
+							td
+								p 42
+							td
+								p 44
+							td
+								p 46
+							td
+								p 48
+							td
+								p 50
+							td
+								p 52
+						tr
+							td
+								p Обхват груди, см
+							td
+								p 84
+							td
+								p 88
+							td
+								p 92
+							td
+								p 96
+							td
+								p 100
+							td
+								p 104
+							td
+								p 108
+							td
+								p 112
+							td
+								p 114
+						tr
+							td
+								p Обхват талии, см
+							td
+								p 66
+							td
+								p 70
+							td
+								p 74
+							td
+								p 78
+							td
+								p 82
+							td
+								p 86
+							td
+								p 90
+							td
+								p 94
+							td
+								p 98
+						tr
+							td
+								p Обхват бедер, см
+							td
+								p 92
+							td
+								p 96
+							td
+								p 100
+							td
+								p 104
+							td
+								p 108
+							td
+								p 112
+							td
+								p 116
+							td
+								p 120
+							td
+								p 124
+				.flex-wrap
+					.left-side
+						.caption
+							p Как определить свой размер?
+						.clarify
+							p Для того чтобы выбрать правильный размер, необходимо снять следующие мерки:
+							div
+								b Обхват груди
+								p Измеряется по выступающим точкам груди вокруг тела.
+							div
+								b Обхват талии
+								p Измеряется строго горизонтально по самой узкой части тела
+							div
+								b Обхват бедер
+								p Измеряется го наиболее выступающим точкам бедер и ягодиц.
+					.right-side
+						img(src="img/table-img.png", alt="")
+		.popup-wrap#popup-wrap-add
+			.popup#popup-add
+				.close
+				.caption
+					p Товар добавлен в корзину!
+				ul.list
+					li.item
+						.item-info
+							.img
+								img(src="img/catalog-1.jpg", alt="")
+							.info
+								.item-name
+									p Платье из лёгкого шифона М-539
+								.item-size
+									p Размер: 44
+						.price
+							p 2 x 228 BYN
+					li.item
+						.item-info
+							.img
+								img(src="img/catalog-1.jpg", alt="")
+							.info
+								.item-name
+									p Платье из лёгкого шифона М-539
+								.item-size
+									p Размер: 44
+						.price
+							p 2 x 228 BYN
+					li.item
+						.item-info
+							.img
+								img(src="img/catalog-1.jpg", alt="")
+							.info
+								.item-name
+									p Платье из лёгкого шифона М-539
+								.item-size
+									p Размер: 44
+						.price
+							p 2 x 228 BYN
+				.btns
+					.btn-wrap
+						a.btn(href="#") Продолжить покупки
+					.btn-wrap
+						a.btn.order(href="#") Оформить заказ
+		.popup-wrap#popup-wrap-wish
+			.popup#popup-wish
+				.close
+				.caption
+					p Добавить в список желаний
+				.clarify
+					p Чтобы добавить товар в список желаний, войдите с свой аккаунт
+				.flex-wrap
+					.left-side
+						form(action="")
+							.holder
+								input(type="email" placeholder="Введите email" required)
+							.holder
+								input(type="password" placeholder="Введите пароль" required)
+							.btns
+								.btn-wrap.forgot
+									a.btn(href="#") Забыли пароль?
+								.btn-wrap.login
+									button.btn(href="#") ВОЙТИ
+					.right-side
+						.caption
+							p Еще нет аккаунта?
+						.clarify
+							p Регистрация позволит вам сохранять в избранное, быстро совершать покупки, просматривать историю заказов, получать свежую информацию о новинках.
+						.btn-wrap
+							a.btn(href="#") Регистрация
+		.popup-wrap#popup-wrap-success
+			.popup#popup-success
+				.close
+				.caption
+					p Ваше сообщение отправлено
+				.clarify
+					p Мы свяжимся с вами в ближайшее время
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 		script(src="js/slick.min.js")
+		script(src="js/ion.rangeSlider.min.js")
+		script(src="js/jquery.tubular.1.0.js")
 		script(src="js/sticky.js")
 		script(src="js/common.js")

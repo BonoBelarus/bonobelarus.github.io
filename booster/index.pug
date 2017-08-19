@@ -14,8 +14,8 @@ head
 	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet")
 	link(href="css/main.css", rel="stylesheet")
 	
-body
-	header
+body.index
+	header.index_header
 		.top-line
 			.content
 				.company-clarify
@@ -59,8 +59,8 @@ body
 					p Обратный звонок
 	main
 		section#top-index
-			.cover
-				img(src="img/index-top.jpg", alt="")
+			.cover-video
+				#video-cover
 			.content
 				.slider
 					.item
@@ -351,6 +351,9 @@ body
 							p Nambawan
 		.hidden
 	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+	script(src="js/jquery.tubular.1.0.js")
+	script.
+		$('#video-cover').tubular({videoId: 'TrYOJydy8eQ'});
 	script(src="js/sticky.js")
 	script(src="js/slick.min.js")
 	script(src="js/jquery.fancybox.min.js")

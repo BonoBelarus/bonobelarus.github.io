@@ -15,6 +15,9 @@
 	background-size: cover
 	padding: 140px 0
 	.content
+		display: flex
+		justify-content: space-between
+		align-items: center
 		position: relative
 	.left-side
 		max-width: 400px
@@ -64,28 +67,20 @@
 			margin-top: -13px
 			transform: rotateZ(180deg)
 	.right-side
-		position: absolute
-		display: flex
-		justify-content: center
-		align-items: center
-		top: 0
-		width: 785px
-		height: 100%
-		right: -5px
 		.slider
-			width: 785px
-		.item:not(:last-child)
-			margin-right: 25px
+			margin-top: 30px
+			width: 485px
 		.item:focus
 			outline: none
 		.item
 			overflow: hidden
-			height: 260px
+			width: 100%
 			text-align: center
 			img
+				margin: 0 auto
 				max-width: 100%
 
-@media only screen and (max-width : 1200px)
+@media only screen and (max-width : 1199px)
 	#best-of h2
 		text-align: center
 		font-size: 36px
@@ -96,14 +91,22 @@
 	#best-of .left-side
 		max-width: 100%
 	#best-of .nav
-		display: none
+		margin-top: 0
+		left: 0
+		width: 100%
+		top: initial
+		margin-bottom: 20px
+		bottom: 100%
+	#best-of .content
+		flex-direction: column
 	#best-of .right-side
-		position: static
+		position: relative
 		max-width: 700px
 		width: 100%
-		margin: 50px auto 0
+		margin: 100px auto 0
 	#best-of .right-side .slider
 		max-width: 700px
+		margin: 0 auto
 
 @media only screen and (max-width : 767px)
 	#best-of .right-side,
@@ -112,4 +115,4 @@
 
 @media only screen and (max-width : 500px)
 	#best-of .right-side, #best-of .right-side .slider
-		max-width: 300px
+		max-width: 100%

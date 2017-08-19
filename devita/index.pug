@@ -18,6 +18,13 @@ html(lang="en")
 							a(href="#") Войти / Регистрация
 						li.dropdown
 							a(href="#") Валюта: BYN
+							ul
+								li
+									p BYN
+								li
+									p RUR
+								li
+									p EUR
 						li
 							a(href="#") Rus / Eng
 				li
@@ -43,6 +50,10 @@ html(lang="en")
 							p Контакты
 		.header-wrap
 			header
+				.search-bar
+					.content
+						.close
+						input(type="search" placeholder="Найти на сайте")
 				.top-line
 					.content
 						.left-side
@@ -55,9 +66,23 @@ html(lang="en")
 							ul
 								li.drop
 									a(href="#") Rus
+									ul
+										li
+											p Blr
+										li
+											p Ukr
+										li
+											p Kaz
 								li.drop
 									a(href="#") Валюта: BYN
-								li
+									ul
+										li
+											p RUR
+										li
+											p KAZ
+										li
+											p EURO
+								li.login
 									a(href="#")  Войти / Регистрация
 				.major-menu
 					.content
@@ -68,29 +93,58 @@ html(lang="en")
 						nav
 							.mobile-nav
 								div
-							ul
-								li
-									a(href="#") Каталог
-								li
-									a(href="#") Скидки
-								li
-									a(href="#") Блог
+							ul.main-nav
 								li.drop
-									a(href="#") О бренде
+									a(href="#" target="_blank") Каталог
+									ul.sub-menu
+										li
+											a(href="#") Summer 2017
+										li
+											a(href="#") Devita Sport
+								li
+									a(href="#" target="_blank") Распродажа
+								li
+									a(href="#" target="_blank") Блог
+								li.drop
+									a(href="#" target="_blank") О бренде
+									ul.sub-menu
+										li
+											a(href="#") Summer 2017
+										li
+											a(href="#") Devita Sport
 						.states
 							ul
 								li.search
-									a(href="#")
-										img(draggable="false" src="img/icon-search.png", alt="")
+									img(draggable="false" src="img/icon-search.png", alt="")
 								li.like
-									a(href="#")
+									a(href="#" target="_blank")
 										.total 6
 										img(draggable="false" src="img/icon-like.png", alt="")
-								li.cart
-									a(href="#")
+								li.cart.full
+									a(href="#" target="_blank")
 										.total 2
 										img(draggable="false" src="img/icon-cart.png", alt="")
+									.cart-preview
+										.b-t
+										.flex-wrap
+											.img
+												img(src="img/cart-prev-1.jpg", alt="")
+											.info
+												.caption
+													p Платье из лёгкого шифона М-539
+												.size
+													p
+														span Размер: 
+														| 44
+												.conter
+													p
+														span 2 x 
+														| 228 BYN
+										.btn-wrap
+											a.btn(href="#") Оформить заказ
 		section#top-sec
+			.overlay
+				#video
 			.content
 				h1
 					span Летняя
@@ -286,5 +340,7 @@ html(lang="en")
 		.hidden
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 		script(src="js/slick.min.js")
+		script(src="js/jquery.tubular.1.0.js")
+		script(src="js/ion.rangeSlider.min.js")
 		script(src="js/sticky.js")
 		script(src="js/common.js")

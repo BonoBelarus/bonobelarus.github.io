@@ -42,40 +42,14 @@
 		margin-top: 100px
 		.image-prev
 			overflow: hidden
-			a:before,
-			a:after
-				content: ''
-				position: absolute
-				width: 100%
-				height: 100%
-				top: 0
-				left: 0
-				opacity: .3
-				transition: .75s ease 0s
-				z-index: 2
-			a:before
-				background: linear-gradient(to bottom, #000 1px, transparent 1px) repeat-y
-				background-size: 100% 4px
-			a:after
-				top: 2px
-				background: linear-gradient(to bottom, #000 1px, transparent 1px) repeat-y
-				background-size: 100% 4px
 			a
 				display: block
 				position: relative
-			a:hover:after
-				transform: translateX(100%)
-				transition-delay: 0s
-				opacity: 0
-			a:hover:before
-				transform: translateX(-100%)
-				transition-delay: 0s
-				opacity: 0
-			a:hover
-				img
-					transition: 50s
-					transform: scale(1.5) rotateZ(5deg)
-
+		div[class^=photo-]
+			&:hover
+				a
+					color: #f47aac
+					text-decoration: underline
 		>div:not(:first-child)
 			margin-top: 60px
 		.meta
@@ -99,6 +73,10 @@
 			max-width: 100%
 		.full-image
 			width: 100%
+			&:hover
+				a
+					color: #f47aac
+					text-decoration: underline
 		._2-images
 			display: flex
 			justify-content: flex-start
@@ -107,38 +85,23 @@
 			>div:first-child
 				margin-right: 4%
 	.btn-wrap
-		.btn:hover:before
-			width: 100%
-			transition-delay: 0s
 		.btn:hover:after
 			height: 100%
-			transition-delay: .4s
 		.btn:hover
 			box-shadow: none
 			color: #fff
-			transition-delay: .3s
-			span:before,
-			span:after
-				transition-delay: .3s
+			span:after,
+			span:before
 				background-color: #fff
 			img
 				margin-left: 5px
-		.btn:before,
 		.btn:after
 			content: ''
 			position: absolute
 			left: 0
 			bottom: 0
-			transition: .5s
-		.btn:before
-			z-index: 1
-			width: 0
-			height: 100%
-			background-color: #f6b4cf
-			transition-delay: .4s
-		.btn:after
+			transition: .25s
 			z-index: 2
-			transition-delay: 0s
 			width: 100%
 			height: 0
 			background-color: #000

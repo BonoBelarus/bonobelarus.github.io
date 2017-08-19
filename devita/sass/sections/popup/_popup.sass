@@ -1,0 +1,562 @@
+.popup-wrap.active
+    opacity: 1
+    transform: scale(1)
+    transition-delay: 0s
+    .popup
+        transition-delay: .15s
+        opacity: 1
+        transform: scale(1)
+.popup-wrap
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    line-height: 100vh
+    text-align: center
+    background-color: rgba(#000, .5)
+    z-index: 10
+    overflow: auto
+    padding: 0 20px
+    opacity: 0
+    transform: scale(0)
+    transition: .35s ease .15s
+    .popup
+        transition: .35s ease 0s
+        opacity: 0
+        transform: scale(0)
+        text-align: left
+        background-color: #fff
+        display: inline-block
+        line-height: 1.4em
+        vertical-align: middle
+        max-width: 1170px
+        width: 100%
+        position: relative
+    .close
+        position: absolute
+        height: 30px
+        width: 30px
+        top: 10px
+        right: 10px
+        cursor: pointer
+        z-index: 9
+        &:before,
+        &:after
+            content: ''
+            height: 1px
+            width: 100%
+            background-color: #000
+            position: absolute
+            top: 50%
+            left: 0
+            z-index: 9
+        &:before
+            transform: rotateZ(45deg)
+        &:after
+            transform: rotateZ(-45deg)
+#popup-card
+    padding: 50px 70px
+    .item:focus
+        outline: none
+    .gallery
+        z-index: 1
+        max-width: 70px
+        width: 100%
+        position: absolute
+        left: 10px
+        .slider
+            max-width: 70px
+            width: 100%
+            .item
+                border: 1px solid transparent
+            .slick-current
+                border-color: #000
+            .item
+                margin: 5px 0
+            .prev-gallery,
+            .next-gallery
+                cursor: pointer
+            .prev-gallery
+                margin-bottom: 5px
+                transform: rotateZ(180deg)
+            .next-gallery
+                margin-top: 10px
+        .item
+            img
+                display: block
+                max-width: 100%
+        img
+            display: block
+            margin: 0 auto
+    .preview
+        position: relative
+        .slick-disabled
+            opacity: .5
+        .nav
+            position: absolute
+            height: 50px
+            width: 160px
+            bottom: 0
+            right: 0
+            background-color: #fff
+            display: flex
+            justify-content: space-between
+            align-items: center
+            z-index: 1
+            padding: 0 20px
+            .slick-disabled
+                opacity: .5
+                pointer-events: none
+            .next-preview,
+            .prev-preview
+                cursor: pointer
+            .next-preview
+                margin-top: -5px
+                transform: rotateZ(180deg)
+        .pages
+            display: flex
+            justify-content: flex-start
+            align-items: flex-end
+        .current
+            font-size: 21px
+            font-weight: 300
+        .slash
+            margin: 0 2px 0 5px
+            font-size: 25px
+        .slash
+            opacity: .3
+        .total
+            opacity: .4
+            font-size: 14px
+        .total,
+        .slash,
+        .current
+            line-height: 1em
+        .slider
+            max-width: 370px
+            width: 100%
+    .flex-wrap
+        justify-content: space-between
+        align-items: flex-start
+        align-items: stretch
+    .left-side
+        position: relative
+        padding-left: 60px
+        max-width: 430px
+        width: 100%
+        margin-right: 50px
+    .right-side
+        position: relative
+        max-width: 500px
+        min-width: 450px
+    .caption
+        font-size: 40px
+        font-family: "Playfair Display"
+        margin-bottom: 30px
+    .clarify
+        font-size: 14px
+        color: #494f5d
+    .prices
+        margin: 25px 0
+    .old-price
+        font-size: 14px
+        font-weight: 600
+        opacity: .7
+        text-decoration: line-through
+    .price
+        font-weight: 600
+        font-size: 21px
+        .cur
+            font-size: 14px
+    .item-info
+        font-size: 14px
+        b
+            font-weight: 600
+    .size
+        .flex-wrap
+            display: flex
+            justify-content: flex-start
+            align-items: center
+        .table-sizes
+            text-decoration: underline
+            cursor: pointer
+            color: #f387b8
+            &:hover
+                text-decoration: none
+        ul
+            margin: 5px 20px 0 0
+            display: flex
+            justify-content: flex-start
+            align-items: center
+        li
+            height: 40px
+            width: 40px
+            line-height: 40px
+            text-align: center
+            font-size: 14px
+            cursor: pointer
+            font-weight: 600
+            transition: .25s
+            box-shadow: inset 0 0 0 1px #dfe0e3
+            &.active
+                color: #fff
+                box-shadow: inset 0 0 0 20px #f387b8
+                &:hover
+                    box-shadow: inset 0 0 0 20px #f387b8
+            &:hover
+                box-shadow: inset 0 0 0 1px #f387b8
+            &:not(:first-child)
+                margin-left: 10px
+    .compound
+        margin-top: 10px
+    .counter-btn
+        margin-top: 40px
+        justify-content: flex-start
+        height: 60px
+        line-height: 60px
+        align-items: stretch
+        .btn-wrap
+            margin-left: 30px
+        .btn
+            height: 60px
+            line-height: 60px
+            background-color: #1c2335
+            color: #fff
+            &:hover
+                box-shadow: none
+        .count
+            min-height: 60px
+            border: 1px solid #dfe0e3
+            display: flex
+            justify-content: flex-start
+            align-items: stretch
+            text-align: center
+        .minus,
+        .current,
+        .plus
+            width: 50px
+        .minus,
+        .plus
+            font-size: 30px
+            cursor: pointer
+    .to-like
+        margin-top: 30px
+        font-size: 14px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        cursor: pointer
+        img
+            margin-right: 5px
+    .more
+        bottom: 0
+        left: 0
+        position: absolute
+        margin-top: 50px
+        a
+            color: #f47aac
+            font-size: 14px
+
+#popup-sizes
+    padding: 50px
+    .caption
+        line-height: 1em
+        color: #1c2335
+        font-family: "Playfair Display"
+        font-size: 40px
+    .table
+        color: #1c2335
+        margin: 50px 0 60px
+        font-size: 14px
+        position: relative
+        overflow: auto
+    table
+        width: 100%
+        td
+            min-width: 50px
+            padding: 10px 0
+        tr:first-child
+            font-weight: 600
+            border-bottom: 1px solid #000
+        tr:not(:first-child)
+            border-bottom: 1px solid #dfe0e3
+        td:first-child
+            min-width: 200px
+    .flex-wrap
+        justify-content: space-between
+        .caption
+            margin-bottom: 15px
+            color: #1c2335;
+            font-size: 16px
+            font-family: 'Open Sans'
+            font-weight: 600
+    .clarify
+        font-size: 14px
+        color: #494f5d
+        line-height: 1.4em
+        >p
+            margin-bottom: 20px
+        b
+            font-weight: 600
+        >div:not(:first-child)
+            margin-top: 
+
+#popup-add
+    padding: 50px
+    font-size: 14px
+    max-width: 620px
+    width: 100%
+    .caption
+        line-height: 1em
+        font-family: "Playfair Display"
+        font-size: 28px
+        color: #1c2335
+    .list
+        margin-top: 40px
+    li:not(:first-child)
+        margin-top: 13px
+        padding-top: 15px
+        border-top: 1px solid #ccc
+    li
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        .item-info
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start
+        .img
+            margin-right: 20px
+            max-width: 60px
+            img
+                width: 100%
+        .item-size
+            font-size: 12px
+    .btns
+        margin-top: 35px
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        .btn
+            line-height: 60px
+            height: 60px
+        .order
+            background-color: #151e32
+            color: #fff
+            &:hover
+                box-shadow: none
+
+#popup-wish
+    padding: 50px
+    max-width: 890px
+    width: 100%
+    .caption
+        font-family: "Playfair Display"
+        text-align: center
+        font-size: 32px
+        line-height: 1em
+        color: #1c2335
+        &+.clarify
+            margin-top: 25px
+            text-align: center
+            font-size: 16px
+    .flex-wrap
+        margin-top: 35px
+        justify-content: space-between
+    .left-side
+        max-width: 370px
+        width: 100%
+        input
+            line-height: 45px
+            height: 45px
+            padding-left: 15px
+            width: 100%
+            border: 1px solid #d2d3d6
+        .holder:not(:first-child)
+            margin-top: 15px
+        .btns
+            display: flex
+            justify-content: flex-end
+            align-items: stretch
+            margin-top: 35px
+        .forgot
+            .btn
+                font-size: 14px
+                font-weight: 300
+                text-transform: none
+                box-shadow: none
+        .login
+            .btn
+                color: #fff
+                border: none
+                cursor: pointer
+                background-color: #1c2335
+                &:hover
+                    box-shadow: none
+    .right-side
+        text-align: left
+        max-width: 370px
+        width: 100%
+        .caption
+            text-align: left
+            &+.clarify
+                margin-top: 15px
+                font-size: 14px
+                text-align: left
+        .btn-wrap
+            margin-top: 25px
+
+#popup-success
+    padding: 50px 50px 90px
+    max-width: 570px
+    width: 100%
+    .caption
+        font-size: 28px
+        font-family: "Playfair Display"
+        color: #1c2335
+        margin-bottom: 25px
+    .clarify
+        font-size: 16px
+
+@media only screen and (max-width : 1199px)
+    #popup-card .gallery
+        display: none
+    #popup-card .left-side
+        padding-left: 0
+    #popup-card .right-side
+        min-width: initial
+    #popup-card .counter-btn .btn
+        font-size: 13px
+    #popup-card
+        padding: 50px 30px
+    #popup-card .preview .slider
+        max-width: 100%
+        img
+            max-width: 100%
+
+@media only screen and (max-width : 991px)
+    #popup-card .preview .slider,
+    #popup-card .left-side
+        max-width: 250px
+    #popup-card .counter-btn .minus, #popup-card .counter-btn .current, #popup-card .counter-btn .plus
+        width: 40px
+    #popup-card .counter-btn .btn-wrap
+        margin-left: 20px
+    #popup-card .more
+        left: initial
+        right: 0
+    
+    #popup-wish
+        max-width: 620px
+    #popup-wish .flex-wrap
+        flex-direction: column
+        .btns
+            justify-content: space-between
+        .forgot
+            .btn
+                padding-left: 0
+        .right-side
+            margin-top: 50px
+            .caption
+                text-align: center
+                &+.clarify
+                    text-align: center
+            .btn-wrap
+                text-align: center
+
+@media only screen and (max-width : 767px)
+    #popup-card
+        .flex-wrap
+            flex-direction: column
+            align-items: center
+        .left-side
+            margin-bottom: 50px
+            max-width: 100%
+            margin-right: 0
+        .preview
+            margin: 0 auto
+            max-width: 400px
+            .slider
+                max-width: 400px
+    #popup-card .size .flex-wrap
+        align-items: flex-start
+    #popup-card .size .table-sizes
+        margin-top: 15px
+    #popup-card .counter-btn
+        flex-direction: row
+        justify-content: space-between
+    #popup-sizes
+        padding: 50px 20px
+    
+    #popup-add .btns
+        flex-direction: column
+        div:not(:first-child)
+            margin-top: 25px
+    #popup-add
+        padding: 50px 20px
+    
+    #popup-wish
+        padding: 50px 20px
+
+@media only screen and (max-width : 499px)
+    #popup-card .caption
+        line-height: 1.1em
+    #popup-card
+        padding: 0 0 20px
+        .right-side
+            padding: 0 10px 40px
+        .more
+            right: initial
+            left: 10px
+    #popup-card .counter-btn .btn-wrap
+        margin-left: 0
+        width: 100%
+        .btn
+            width: 100%
+            justify-content: center
+    
+    #popup-sizes .flex-wrap
+        flex-direction: column
+        .right-side
+            margin-top: 25px
+
+    #popup-add
+        li
+            position: relative
+            .price
+                position: absolute
+                bottom: 0
+                right: 0
+        .btns
+            .btn-wrap
+                max-width: 100%
+                width: 100%
+            .btn
+                width: 100%
+                justify-content: center
+                font-size: 13px
+    
+    #popup-wish .caption
+        font-size: 28px
+    #popup-wish .flex-wrap .btns
+        flex-direction: column
+        .login
+            margin-top: 15px
+        .btn-wrap
+            max-width: 100%
+            width: 100%
+            .btn
+                width: 100%
+                justify-content: center
+        .forgot
+            .btn
+                padding-left: 35px
+
+    #popup-card .counter-btn
+        height: initial
+        line-height: 1.2em
+        flex-direction: column
+        .count
+            line-height: 60px
+            margin-bottom: 25px

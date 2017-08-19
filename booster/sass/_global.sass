@@ -89,6 +89,8 @@ h3
 .flex-wrap+.flex-wrap
 	margin-top: 70px
 
+body.index
+	background-color: #fff
 body
 	line-height: 1.4em
 	font-family: 'PT Sans', Arial, Helvetica, sans-serif
@@ -139,6 +141,9 @@ body header .btn-white:hover,
 	text-align: center
 
 section
+	position: relative
+	z-index: 1
+	background-color: #fff
 	>.content
 		transition: .25s ease .25s
 	&.disabled
@@ -147,10 +152,14 @@ section
 			opacity: .7
 			filter: blur(20px)
 
+main
+	position: relative
+	z-index: 3
 .main-wrap main
 	background-color: #f0f0f0
 	padding: 50px 0 100px
 	section
+		position: relative
 		background-color: #fff
 		padding: 70px 0 70px 75px
 	section:not(:first-child)
@@ -258,6 +267,9 @@ b
 		position: absolute
 
 #bullets
+	position: relative
+	z-index: 2
+	background-color: #fff
 	ul
 		display: flex
 		justify-content: space-between
@@ -302,9 +314,15 @@ b
 	.main-wrap main section
 		padding: 70px
 @media only screen and (max-width: 991px)
+	.main-wrap main section
+		padding: 70px 20px
 	.main-wrap
 		.content
 			padding: 0
+	.main-wrap main
+		max-width: 100%
+	#proizvoditel .flex-wrap.about-korea
+		margin-top: 0
 
 @media only screen and (max-width: 767px)
 	h1, h2

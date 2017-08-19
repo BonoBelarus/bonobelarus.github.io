@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script>
+    var ww = window.innerWidth;
+    if(ww <= 500){
+    	viewport = document.querySelector("meta[name=viewport]");
+    	viewport.setAttribute('content', 'width=500');
+    }
+  </script>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Booster</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|PT+Sans:400,700&amp;amp;subset=cyrillic" rel="stylesheet"/>
+  <link href="css/main.css" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <div class="top-line">
+      <div class="content">
+        <div class="company-clarify">
+          <p>Промышленные парогенераторы и котельное оборудование</p>
+        </div>
+        <div class="company-info">
+          <ul>
+            <li>
+              <p>Пн–Пт, 09:00–18:00</p>
+            </li>
+            <li>
+              <p>info@booster.by</p>
+            </li>
+            <li><a href="skype:booster_bel">booster_bel</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu">
+      <div class="content">
+        <div class="logo"><img draggable="false" src="img/logo.png" alt="Бустер - Промышленные парогенераторы"/></div>
+        <nav>
+          <div class="mobile-nav">
+            <div></div>
+          </div>
+          <ul>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Объекты</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="phones">
+          <ul>
+            <li><a href="tel:+375173887505">+375 (17) 388-75-05</a></li>
+            <li><a href="tel:+375293887505">+375 (29) 388-75-05</a></li>
+          </ul>
+          <ul class="hidden-phones">
+            <li><a href="tel:+375293887505">+375 (29) 388-75-05</a></li>
+            <li><a href="tel:+375293887505">+375 (29) 388-75-05</a></li>
+          </ul>
+        </div>
+        <div class="callback btn btn-white">
+          <p>Обратный звонок</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="contacts-page">
+    <div class="content">
+      <div class="breadcrumbs">
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Парогенераторы BOOSTER</a></li>
+        </ul>
+      </div>
+      <h1>Контакты</h1>
+      <div class="flex-wrap">
+        <div class="left-side"><b>ООО «Бустер Бел»</b>
+          <p>г.Минск, 1-й Твердый переулок, 7, каб. 11</p>
+          <div class="shedule">
+            <p>Время работы: Пн–Пт, с 08:30 до 18:00</p>
+          </div>
+          <div class="phones"><b>Телефоны</b>
+            <ul>
+              <li><a href="tel:+375173887505">+375 (17) 388-75-05 тел/факс</a></li>
+              <li><a href="tel:+375173887505">+375 (29) 398-75-05 моб.</a></li>
+              <li><a href="tel:+375173887505">+375 (29) 388-75-05 моб.</a></li>
+              <li><a href="tel:+375173887505">+375 (29) 365-95-00 моб.</a></li>
+            </ul>
+          </div>
+          <div class="social">
+            <ul>
+              <li class="email"><b>e-meail</b>
+                <p>info@booster.by</p>
+              </li>
+              <li class="skype"><b>skype</b>
+                <p>booster_bel</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="wrap">
+            <div class="caption">
+              <p>Реквизиты компании</p>
+            </div>
+            <div class="clarify">
+              <p>Общество с ограниченной ответственностью «Бустер Бел».</p>
+              <p>Директор Шитько Илья Михайлович действует на основании Устава</p>
+              <p>р/с 3012060210015 ОАО «Банк Москва-Минск»</p>
+              <p>г. Минск, ул. Коммунистическая, 49, пом.1</p>
+              <p>ОКПО 381030275000, УНП 192001685</p>
+            </div>
+            <div class="yr"><b>Юридический адрес:</b>
+              <p>РБ, 220037, г.Минск, 1-й Твёрдый переулок,7/1, каб.11</p>
+            </div>
+            <div class="post"><b>Почтовый адрес:</b>
+              <p>РБ, 220037, г.Минск, 1-й Твёрдый переулок,7/1, каб.11</p>
+            </div>
+            <div class="download"><a href="#">Скачать Pdf</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="map">
+    <script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd_SaifTZQ-vwarl1l9ZJwSCFazqLTisA&amp;callback=initMap"></script>
+    <script>
+      function initMap() {
+      var styles = [
+      	{
+      	stylers:
+      	[
+      	{hue: ''},
+      	{saturation: '-90'},
+      	{lightness: ''},
+      	]
+      	},{
+      	featureType: "road",
+      	elementType: "labels.icon",
+      	stylers:
+      	[
+      	{ lightness: 100 },
+      	{ visibility: "simplified" }
+      	]
+      	},{
+      	featureType: "road",
+      	elementType: "labels.icon",
+      	stylers:
+      	[
+      	{ visibility: "off" }
+      	]
+      	}
+      ];
+      
+      
+      
+      var styledMap = new google.maps.StyledMapType(styles,
+      
+      {name: "Styled Map"});
+      
+      
+      
+      
+      
+      
+      
+      var marker = new google.maps.Marker({
+      
+      position: {lat: 53.9063133, lng: 27.5967496},
+      
+      map: map,
+      
+      title: 'МиСофт — Официальный дистрибьютор фирмы «1С» в РБ',
+      
+      icon: {
+      
+      url: "img/pointer.png",
+      
+      scaledSize: new google.maps.Size(34, 47)
+      
+      }
+      
+      });
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      var mapOptions = {
+      
+      zoom: 14,
+      
+      center: new google.maps.LatLng(53.9063133,27.5945609),
+      
+      animation: google.maps.Animation.DROP,
+      
+      scrollwheel: false,
+      
+      navigationControl: false,
+      
+      mapTypeControl: false,
+      
+      scaleControl: false,
+      
+      icon: 'img/pointer.png',
+      
+      mapTypeControlOptions: {
+      
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+      
+      }
+      
+      };
+      
+      var map = new google.maps.Map(document.getElementById('map'),
+      
+      mapOptions);
+      
+      
+      
+      map.mapTypes.set('map_style', styledMap);
+      
+      map.setMapTypeId('map_style');
+      
+      marker.setMap(map);
+      
+      
+      
+      }
+    </script>
+  </section>
+  <section id="any-question">
+    <div class="content">
+      <h2>Есть вопросы?</h2>
+      <div class="clarify">
+        <p>Заполните форму обратной связи, или задайте вопрос лично представителю компании</p>
+      </div>
+      <div class="flex-wrap">
+        <div class="left-side">
+          <ul>
+            <li>
+              <div class="img"><img src="img/contacts-photo-1.png" alt=""/></div>
+              <div class="info"><b class="name">Илья Шитько</b>
+                <p class="position">Директор</p><a class="phone" href="tel:+375293659500">+375 (29) 365-95-00</a>
+                <p class="email">info@booster.by</p>
+              </div>
+            </li>
+            <li>
+              <div class="img"><img src="img/contacts-photo-2.png" alt=""/></div>
+              <div class="info"><b class="name">Илья Шитько</b>
+                <p class="position">Директор</p><a class="phone" href="tel:+375293659500">+375 (29) 365-95-00</a>
+                <p class="email">info@booster.by</p>
+              </div>
+            </li>
+            <li>
+              <div class="img"><img src="img/contacts-photo-3.png" alt=""/></div>
+              <div class="info"><b class="name">Илья Шитько</b>
+                <p class="position">Директор</p><a class="phone" href="tel:+375293659500">+375 (29) 365-95-00</a>
+                <p class="email">info@booster.by</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="right-side">
+          <div class="form-box">
+            <div class="caption">
+              <p>Задать вопрос</p>
+            </div>
+            <form action="">
+              <div class="holder">
+                <label>Ваше имя</label>
+                <input type="text" name="name" required="required"/>
+              </div>
+              <div class="holder">
+                <label>Телефон</label>
+                <input type="tel" name="phone" required="required"/>
+              </div>
+              <div class="holder">
+                <label>Сообщение</label>
+                <textarea name="comment" required="required"></textarea>
+              </div>
+              <div class="btn-wrap">
+                <button class="btn btn-green">ОТПРАВИТЬ СООБЩЕНИЕ</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="content">
+      <div class="footer-top">
+        <div class="to-up"></div>
+        <ul>
+          <li class="footer-logo"><a href="#"><img draggable="false" src="img/svg/logo_footer.svg" alt=""/></a>
+            <div class="about-company">
+              <p>Промышленные парогенераторы, теплообменное и котельное  оборудование</p>
+            </div>
+          </li>
+          <li class="footer-nav">
+            <nav>
+              <ul>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Объекты</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </li>
+          <li class="footer-addr">
+            <div class="wrap">
+              <p>Республика Беларусь, г. Минск</p>
+              <p>1-й Твердый переулок, дом. 7, каб. 1</p>
+            </div>
+            <ul>
+              <li>
+                <p>info@booster.by</p>
+              </li>
+              <li><a href="skype:booster_bel">booster_bel</a></li>
+            </ul>
+          </li>
+          <li class="footer-phones"><a href="tel:+375173887505">+375 (17) 388-75-05 тел/факс</a><a href="tel:+375293887505">+375 (29) 388-75-05 моб.</a><a href="tel:+375293659500">+375 (29) 365-95-00 моб.</a>
+            <div class="btn-wrap"><a class="btn btn-green" href="#">
+                <p>Обратный звонок</p></a></div>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <ul>
+          <li class="copyright">
+            <p>© 2017 Booster.by</p>
+          </li>
+          <li class="social">
+            <ul>
+              <li><a href="#" target="_blank"><img draggable="false" src="img/svg/fb.svg" alt=""/></a></li>
+              <li><a href="#" target="_blank"><img draggable="false" src="img/svg/vk.svg" alt=""/></a></li>
+              <li><a href="#" target="_blank"><img draggable="false" src="img/svg/insta.svg" alt=""/></a></li>
+            </ul>
+          </li>
+          <li class="developed-by">
+            <p>Дизайн и разработка:</p><a href="https://nambawan.by" target="_blank"><img draggable="false" src="img/logo-namba.png" alt=""/>
+              <p>Nambawan</p></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="hidden"></div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/sticky.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/common.js"></script>
+</body>

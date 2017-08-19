@@ -15,8 +15,8 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|PT+Sans:400,700&amp;amp;subset=cyrillic" rel="stylesheet"/>
   <link href="css/main.css" rel="stylesheet"/>
 </head>
-<body>
-  <header>
+<body class="index">
+  <header class="index_header">
     <div class="top-line">
       <div class="content">
         <div class="company-clarify">
@@ -67,7 +67,9 @@
   </header>
   <main>
     <section id="top-index">
-      <div class="cover"><img src="img/index-top.jpg" alt=""/></div>
+      <div class="cover-video">
+        <div id="video-cover"></div>
+      </div>
       <div class="content">
         <div class="slider">
           <div class="item">
@@ -368,6 +370,8 @@
     <div class="hidden"></div>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/jquery.tubular.1.0.js"></script>
+  <script>$('#video-cover').tubular({videoId: 'TrYOJydy8eQ'});</script>
   <script src="js/sticky.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>

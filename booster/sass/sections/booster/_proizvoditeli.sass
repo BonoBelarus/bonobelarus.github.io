@@ -262,9 +262,43 @@
 			max-width: 410px
 			font-size: 16px
 
+@media only screen and (max-width: 1199px)
+	#proizvoditel .history-line li:last-child a
+		padding-top: 20px
+	#proizvoditel .history-line li:last-child a:before, #proizvoditel .history-line li:last-child a:after
+		margin-top: -35px
+		left: 50%
+		margin-left: 0
+
 @media only screen and (max-width: 991px)
 	#proizvoditel
 		.illu
 			text-align: center
 		.flex-wrap
 			flex-direction: column
+	#proizvoditel .history-line .clarify
+		p
+			display: inline
+	#proizvoditel .geografy .clarify
+		text-shadow: 1px 1px 1px rgba(#000, .4)
+
+@media only screen and (max-width: 767px)
+	#proizvoditel .history-line
+		ul
+			flex-wrap: wrap
+		li
+			margin-top: -1px
+			width: 50%
+	#proizvoditel .about-korea .right-side
+		padding-top: 50px
+	#proizvoditel .about-korea .left-side
+		&:after
+			content: ''
+			position: absolute
+			height: 50px
+			width: 100%
+			bottom: -5px
+			left: 0
+			background: linear-gradient(to top, #fff, rgba(#fff, .1))
+	#proizvoditel .geografy
+		padding: 0 20px

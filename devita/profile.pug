@@ -9,54 +9,122 @@ html(lang="en")
 		link(href="css/main.css", rel="stylesheet")
 		
 	body
-		header
-			.top-line
-				.content
-					.left-side
-						ul
-							li
-								a(href="#" target="_blank") Доставка  и оплата
-							li
-								a(href="#" target="_blank") Обмен и возврат
-					.right-side
-						ul
-							li.drop
-								a(href="#" target="_blank") Rus
-							li.drop
-								a(href="#" target="_blank") Валюта: BYN
-							li
-								a(href="#" target="_blank")  Войти / Регистрация
-			.major-menu
-				.content
-					.logo
-						img(draggable="false" src="img/logo.png", alt="")
-						.clarify
-							p Официальный интернет-магазин
-					nav
-						.mobile-nav
-							div
-						ul
-							li
-								a(href="#" target="_blank") Каталог
-							li
-								a(href="#" target="_blank") Скидки
-							li
-								a(href="#" target="_blank") Блог
-							li.drop
-								a(href="#" target="_blank") О бренде
-					.states
-						ul
-							li.search
-								a(href="#" target="_blank")
-									img(draggable="false" src="img/icon-search.png", alt="")
-							li.like
-								a(href="#" target="_blank")
-									.total 6
-									img(draggable="false" src="img/icon-like.png", alt="")
-							li.cart
-								a(href="#" target="_blank")
-									.total 2
-									img(draggable="false" src="img/icon-cart.png", alt="")
+		.mobile-menu
+			.overlay
+			ul
+				li.settings
+					ul
+						li.login
+							a(href="#") Войти / Регистрация
+						li.dropdown
+							a(href="#") Валюта: BYN
+							ul
+								li
+									p BYN
+								li
+									p RUR
+								li
+									p EUR
+						li
+							a(href="#") Rus / Eng
+				li
+					a(href="#") Каталог
+				li
+					a(href="#") Скидки
+				li
+					a(href="#") Блог
+				li.dropdown
+					a(href="#") О бренде
+					ul
+						li
+							p О бренде
+						li
+							p Lookbook
+						li
+							p Новости
+						li
+							p Сертификаты
+						li
+							p Блог
+						li
+							p Контакты
+		.header-wrap
+			header
+				.top-line
+					.content
+						.left-side
+							ul
+								li
+									a(href="#") Доставка  и оплата
+								li
+									a(href="#") Обмен и возврат
+						.right-side
+							ul
+								li.drop
+									a(href="#") Rus
+								li.drop
+									a(href="#") Валюта: BYN
+								li
+									a(href="#")  Войти / Регистрация
+				.major-menu
+					.content
+						.logo
+							img(draggable="false" src="img/logo.png", alt="")
+							.clarify
+								p Официальный интернет-магазин
+						nav
+							.mobile-nav
+								div
+							ul.main-nav
+								li.drop
+									a(href="#" target="_blank") Каталог
+									ul.sub-menu
+										li
+											a(href="#") Summer 2017
+										li
+											a(href="#") Devita Sport
+								li
+									a(href="#" target="_blank") Распродажа
+								li
+									a(href="#" target="_blank") Блог
+								li.drop
+									a(href="#" target="_blank") О бренде
+									ul.sub-menu
+										li
+											a(href="#") Summer 2017
+										li
+											a(href="#") Devita Sport
+						.states
+							ul
+								li.search
+									a(href="#" target="_blank")
+										img(draggable="false" src="img/icon-search.png", alt="")
+								li.like
+									a(href="#" target="_blank")
+										.total 6
+										img(draggable="false" src="img/icon-like.png", alt="")
+								li.cart.full
+									a(href="#" target="_blank")
+										.total 2
+										img(draggable="false" src="img/icon-cart.png", alt="")
+									.cart-preview
+										.b-t
+										.flex-wrap
+											.img
+												img(src="img/cart-prev-1.jpg", alt="")
+											.info
+												.caption
+													p Платье из лёгкого шифона М-539
+												.size
+													p
+														span Размер: 
+														| 44
+												.conter
+													p
+														span 2 x 
+														| 228 BYN
+										.btn-wrap
+											a.btn(href="#") Оформить заказ
 		section#profile
 			.content
 				h1 Личный кабинет

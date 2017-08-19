@@ -1,0 +1,47 @@
+footer
+    padding: 25px 40px 35px
+    color: #fff
+    display: flex
+    justify-content: flex-start
+    .caption
+        @include heading-footer
+        margin-bottom: 15px
+.footer-contacts
+    min-width: 250px
+    margin-right: 90px
+    >p
+        margin-bottom: 5px
+    a
+        color: #fff
+    .phone-link
+        text-decoration: none
+    .email-link
+        text-decoration: underline
+    .skype-link
+        text-decoration: underline
+        color: #ff0e00
+.footer-form
+    width: 100%
+    form
+        padding: 10px
+        background-color: #2b3944
+    input,
+    textarea
+        display: block
+        width: 100%
+        padding-left: 10px
+        font: $font-stack
+        border: none
+    input
+        line-height: 40px
+        height: 40px
+        margin-bottom: 10px
+    textarea
+        padding-top: 5px
+        resize: vertical
+        height: 67px
+    .btn-form
+        @include btn-form
+        margin-top: 10px
+        display: block
+        margin-left: auto

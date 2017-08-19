@@ -1,4 +1,5 @@
-#catalog
+#catalog,
+#search
     text-align: center
     padding: 80px 0 130px
     h1:before
@@ -16,13 +17,18 @@
         position: relative
     .filter
         margin-top: 80px
-        display: flex
-        justify-content: space-between
-        align-items: center
         background-color: #f7f7f7
         line-height: 55px
         height: 55px
         padding: 0 30px
+        position: relative
+        z-index: 3
+        > p
+            display: none
+        .wrap
+            display: flex
+            justify-content: space-between
+            align-items: center
     ul
         display: flex
         justify-content: flex-start
@@ -34,28 +40,256 @@
         text-transform: uppercase
         li
             padding-right: 16px
-            background: url(../img/arrow-down.png) right center no-repeat
-            background-size: 10px
             cursor: pointer
+        li[class^=dropdown-]
+            cursor: pointer
+            position: relative
+            &:before
+                content: url(../img/arrow-down.png)
+                position: absolute
+                right: -2px
+                transform: scale(.8)
+                transition: .5s
+            p
+                cursor: pointer
+            &:hover
+                .hidden
+                    display: block
+                &:before
+                    transform: rotateZ(180deg) scale(.8)
+                .caption
+                    color: #f47aac
+                ul
+                    opacity: 1
+                    transform: none
+                    &:before
+                        border-color: #ccc
+                        transition-delay: 2s
+                        z-index: 1
+            .caption
+            ul
+                cursor: default
+                &:before
+                    content: ''
+                    width: 20px
+                    transition: 2s ease 2s
+                    height: 20px
+                    background-color: #fff
+                    border-top: 1px solid #fff
+                    border-left: 1px solid #fff
+                    position: absolute
+                    top: 10px
+                    left: 25px
+                    transform: rotateZ(45deg)
+            li
+                cursor: default
+                display: flex
+                justify-content: flex-start
+                align-items: center
+        .dropdown-price
+            .hidden
+                position: absolute
+                top: 100%
+                display: none
+                width: 250px
+                margin-top: -20px
+                padding-top: 20px
+                z-index: 1
+                cursor: default
+                .wrap
+                    border: 1px solid #ccc
+                    position: relative
+                    padding: 0 20px 20px
+                    display: block !important
+                    background-color: #fff
+                    &:before
+                        content: ''
+                        position: absolute
+                        height: 20px
+                        width: 20px
+                        background-color: #fff
+                        border-left: 1px solid #ccc
+                        border-top: 1px solid #ccc
+                        bottom: 100%
+                        margin-bottom: -10px
+                        left: 15px
+                        transform: rotateZ(45deg)
+                input
+                    width: 100%
+                .irs-line
+                    border: none
+                    background: #d2d3d6
+                    height: 3px
+                .irs-bar
+                    height: 3px
+                    background: #f57bad
+                    border: none
+                .irs-slider
+                    background: #f57bad
+                    box-shadow: none
+                    border: 5px solid #fff
+                    top: 50%
+                    margin-top: -7px
+                .from-to
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                .holder
+                    display: flex
+                    justify-content: flex-start
+                    align-items: center
+                    label
+                        display: inline-block
+                        margin-right: 5px
+                        font-size: 13px
+                        color: rgba(#1c2335, .7)
+                        font-weight: 300
+                    input
+                        width: 70px
+                        height: 35px
+                        padding-left: 10px
+                        -webkit-appearance: none
+                        border: 1px solid #ccc
+                        color: rgba(#1c2335, .7)
+                        &::-webkit-inner-spin-button
+                            display: none
+        .dropdown-size,
+        .dropdown-height
+            .hidden
+                top: 100%
+                margin-top: -20px
+                display: none
+                padding-top: 20px
+                position: absolute
+                z-index: 1
+            ul
+                background-color: #fff
+                font-size: 14px
+                color: #1c2335
+                width: 150px
+                top: 100%
+                flex-direction: column
+                align-items: flex-start
+                justify-content: flex-start
+                padding: 20px
+                border: 1px solid #ccc
+                li:not(:first-child)
+                    margin-left: 0
+                li
+                    height: 40px
+            input
+                display: none
+            label
+                margin-right: 10px
+                cursor: pointer
+                display: inline-block
+                height: 23px
+                width: 23px
+                border: 1px solid #e4e5e6
+            p
+                opacity: .6
+                cursor: default
+            input:checked + label
+                border-color: #d2d3d6
+                background: url(../img/checked.png) center no-repeat
+            input:checked + label + p
+                opacity: 1
         li:not(:first-child)
             margin-left: 25px
+        .skidka
+            font-size: 14px
+            color: #494f5d
+            text-transform: none
+            font-weight: 300
+            >*
+                vertical-align: middle
+                display: inline-block
+            label
+                cursor: pointer
+                margin-left: 30px
+                margin-right: 10px
+                height: 23px
+                width: 23px
+                display: inline-block
+                border: 1px solid #000
+                opacity: .2
+            span
+                opacity: .5
+                cursor: default
+        #skidka
+            display: none
+            &:checked + label
+                opacity: 1
+                background: url(../img/checked.png) center no-repeat
+            &:checked + label + span
+                opacity: 1
     .right-side
         display: flex
         justify-content: flex-start
         align-items: center
-        p:first-child
+        >p:first-child
             text-transform: uppercase
             font-size: 14px
             font-weight: 600
-        .dropdown
-            font-size: 14px
+        .dropdown-sort
             text-decoration: underline
             margin-left: 20px
             position: relative
             padding-right: 18px
             cursor: pointer
-            background: url(../img/arrow-down.png) right center no-repeat
-            background-size: 10px
+            font-size: 14px
+            >p
+                font-weight: 300
+            &:hover:before
+                transform: rotateZ(180deg)
+            &:hover .hidden
+                display: block
+            &:before
+                transition: .5s
+                content: url(../img/arrow-down.png)
+                position: absolute
+                right: 0
+                transform: scale(.8)
+            .hidden
+                width: 175px
+                position: absolute
+                top: 100%
+                right: -20px
+                display: none
+                line-height: 1.35em
+                font-size: 14px
+                text-align: left
+                z-index: 1
+                .wrap
+                    position: relative
+                    border: 1px solid #ccc
+                    padding: 20px
+                    background: #fff
+                    color: #494f5d
+                    &:before
+                        content: ''
+                        position: absolute
+                        height: 20px
+                        width: 20px
+                        border-top: 1px solid #ccc
+                        border-left: 1px solid #ccc
+                        bottom: 100%
+                        background-color: #fff
+                        margin-bottom: -10px
+                        transform: rotateZ(45deg)
+                ul
+                    flex-direction: column
+                    align-items: flex-start
+                    li:not(:first-child)
+                        margin-top: 15px
+                p
+                    cursor: pointer
+                    text-decoration: none
+                    text-transform: none
+                    font-weight: 300
+                    &:hover
+                        text-decoration: none
+                        color: #f47aac
     .list
         ul
             display: flex
@@ -66,6 +300,8 @@
             margin-top: 60px
             max-width: 370px
             width: 100%
+            position: relative
+            overflow: hidden
         .meta
             display: flex
             justify-content: space-between
@@ -82,32 +318,39 @@
                 height: 24px
                 background: url(../img/like.png) center no-repeat
                 background-size: contain
-        li a:hover
-            .prev-img:before
-                background-color: #d4e5ef
-            .prev-img:after
+        li:hover
+            .show-prev
                 transform: scale(1)
-        .prev-img:before
-            content: ''
+            a:hover
+                .show-prev
+                    transform: scale(1.4)
+        .show-prev
             position: absolute
             height: 100%
             width: 100%
-            top: 0
-            left: 0
+            top: 100%
+            margin-top: -110px
+            left: 100%
+            margin-left: -110px
+            width: 220px
+            height: 200px
+            background-color: #addaf4
+            border-radius: 50%
             transition: .35s
-            opacity: .75
             z-index: 1
-        .prev-img:after
-            content: url(../img/eye.png)
-            position: absolute
-            top: 50%
-            margin-top: -60px
-            left: 0
-            transition: .5s
+            opacity: .8
             transform: scale(0)
-            height: 100%
-            width: 100%
-            z-index: 2
+            &:after
+                content: ''
+                position: absolute
+                top: 45px
+                left: 35px
+                width: 60px
+                height: 40px
+                background: url(../img/eye.png) center no-repeat
+                background-size: contain
+                transition: .35s
+                z-index: 2
         .prev-img
             position: relative
             overflow: hidden
@@ -125,35 +368,94 @@
             text-transform: uppercase !important
 
 @media only screen and (max-width : 1200px)
-    #catalog
+    #catalog,
+    #search
         .list li
             max-width: 360px
         h1
             font-size: 40px
-
-@media only screen and (max-width : 767px)
-    #catalog
+    #catalog,
+    #search
         padding-bottom: 80px
+        .filter.active:after
+            transform: rotateZ(180deg)
         .filter:after
+            transition: .5s
             content: url(../img/arrow-down.png)
             position: absolute
             right: 30px
             line-height: 55px
-        .filter:before
+        .filter > p
+            display: block
             line-height: 55px
-            content: 'фильтры'
             position: absolute
+            left: 0
+            padding-left: 10px
             text-transform: uppercase
             font-size: 14px
             font-weight: 600
             color: #1c2335
+            width: 100%
         .filter
+            text-align: left
             position: relative
-            .left-side,
-            .right-side
+            .wrap
+                background-color: #fff
+                position: absolute
+                width: 100%
+                top: 100%
+                left: 0
+                padding: 0 30px
                 display: none
+                border: 1px solid #f7f7f7
+            .left-side
+                z-index: 2
+                position: relative
         .list
             li
                 max-width: 48%
-    #catalog .list .clarify
+    #catalog .list .clarify,
+    #search  .list .clarify
         font-size: 14px
+
+@media only screen and (max-width : 550px)
+    #catalog .left-side,
+    #search .left-side
+        ul
+            flex-wrap: wrap
+        .skidka
+            left: 0
+            padding-left: 0
+            width: 100%
+            label
+                margin-left: 0
+    #search .left-side li:not(:first-child).skidka,
+    #catalog .left-side li:not(:first-child).skidka
+        margin-left: 0
+    #catalog .filter .wrap,
+    #search .filter .wrap
+        padding: 0 10px
+
+@media only screen and (max-width : 380px)
+    #catalog .right-side,
+    #search .right-side
+        flex-wrap: wrap
+        flex-direction: column
+        align-items: flex-start
+        line-height: 1.3em
+        margin-top: 20px
+    #catalog .right-side .dropdown-sort,
+    #search .right-side .dropdown-sort
+        margin: 10px 0 20px
+        font-size: 16px
+    #catalog .dropdown-height .hidden,
+    #search .dropdown-height .hidden
+        left: initial
+        right: 0
+    #catalog .left-side li[class^=dropdown-height] ul:before,
+    #search .left-side li[class^=dropdown-height] ul:before
+            left: initial
+            right: 25px
+    #catalog .right-side .dropdown-sort .hidden,
+    #search .right-side .dropdown-sort .hidden
+        margin-top: 17px

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title Devita
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700|Playfair+Display:400,400i&amp;subset=cyrillic" rel="stylesheet")
+		link(href="css/main.css", rel="stylesheet")
+		
+	body
+		.mobile-menu
+			.overlay
+			ul
+				li.settings
+					ul
+						li.login
+							a(href="#") Войти / Регистрация
+						li.dropdown
+							a(href="#") Валюта: BYN
+							ul
+								li
+									p BYN
+								li
+									p RUR
+								li
+									p EUR
+						li
+							a(href="#") Rus / Eng
+				li
+					a(href="#") Каталог
+				li
+					a(href="#") Скидки
+				li
+					a(href="#") Блог
+				li.dropdown
+					a(href="#") О бренде
+					ul
+						li
+							p О бренде
+						li
+							p Lookbook
+						li
+							p Новости
+						li
+							p Сертификаты
+						li
+							p Блог
+						li
+							p Контакты
+		.header-wrap
+			header
+				.top-line
+					.content
+						.left-side
+							ul
+								li
+									a(href="#") Доставка  и оплата
+								li
+									a(href="#") Обмен и возврат
+						.right-side
+							ul
+								li.drop
+									a(href="#") Rus
+								li.drop
+									a(href="#") Валюта: BYN
+								li
+									a(href="#")  Войти / Регистрация
+				.major-menu
+					.content
+						.logo
+							img(draggable="false" src="img/logo.png", alt="")
+							.clarify
+								p Официальный интернет-магазин
+						nav
+							.mobile-nav
+								div
+							ul.main-nav
+								li.drop
+									a(href="#" target="_blank") Каталог
+									ul.sub-menu
+										li
+											a(href="#") Summer 2017
+										li
+											a(href="#") Devita Sport
+								li
+									a(href="#" target="_blank") Распродажа
+								li
+									a(href="#" target="_blank") Блог
+								li.drop
+									a(href="#" target="_blank") О бренде
+									ul.sub-menu
+										li
+											a(href="#") Summer 2017
+										li
+											a(href="#") Devita Sport
+						.states
+							ul
+								li.search
+									a(href="#" target="_blank")
+										img(draggable="false" src="img/icon-search.png", alt="")
+								li.like
+									a(href="#" target="_blank")
+										.total 6
+										img(draggable="false" src="img/icon-like.png", alt="")
+								li.cart.full
+									a(href="#" target="_blank")
+										.total 2
+										img(draggable="false" src="img/icon-cart.png", alt="")
+									.cart-preview
+										.b-t
+										.flex-wrap
+											.img
+												img(src="img/cart-prev-1.jpg", alt="")
+											.info
+												.caption
+													p Платье из лёгкого шифона М-539
+												.size
+													p
+														span Размер: 
+														| 44
+												.conter
+													p
+														span 2 x 
+														| 228 BYN
+										.btn-wrap
+											a.btn(href="#") Оформить заказ
+		section#contacts
+			.content
+				h1 Контакты
+				.flex-wrap
+					.left-side
+						.map
+							iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2452.402226875269!2d23.756196415509038!3d52.072407379731914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210c34f9140487%3A0xda8e44107a6f6a95!2z0YPQuy4g0KHRg9Cy0L7RgNC-0LLQsCAxMDQsINCR0YDQtdGB0YIgMjI0MDIyLCDQkdC10LvQsNGA0YPRgdGM!5e0!3m2!1sru!2sru!4v1502856894319" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
+					.right-side
+						div
+							p.bold Республика Беларусь:
+							p 224022, г. Брест, ул. Суворова, 104 
+						div
+							p Понедельник — пятница: 8:30 до 17:30
+							p Суббота — воскресенье: Выходной
+						div
+							p По условиям оптового сотрудничества:
+							a(href="#") www.devitabel.ru
+				.row
+					.caption
+						p Телефоны и контакты
+					ul.social
+						li
+							.icon
+								img(src="img/viber.png", alt="")
+							.info
+								p Viber
+								a(href="tel:+375 29 375 77 70") +375 29 375 77 70 
+						li
+							.icon
+								img(src="img/skype.png", alt="")
+							.info
+								p Skype
+								a(href="skype:devitabel") devitabel
+						li
+							.icon
+								img(src="img/whatsapp.png", alt="")
+							.info
+								p WhatsApp
+								a(href="tel:+375 29 227 26 33") +375 29 227 26 33
+						li
+							.icon
+								img(src="img/email.png", alt="")
+							.info
+								p WhatsApp
+								a(href="mail:devitabel@mail.ru") devitabel@mail.ru
+					.info
+						div
+							p.bold Для звонков из Беларуси и других стран:
+							p +375 29 375 77 70
+						div
+							p.bold Для звонков из России и Казахстана:
+							p +7 499 116 30 08
+				.row
+					.caption
+						p Наши представительства
+					div.representation
+						p Российская Федерация
+						p ООО "РусТрейд":
+						p 214013, г. Смоленск, 
+						p ул. Черняховского, д.15, помещение 7.3, офис 2.
+					div.representation
+						p Украина: 
+						p 03186, г. Киев, Украина, ул. Авиаконструктора Антонова, 5А оф.201 (второй этаж)
+						p e-mail:kiev.panda@gmail.com
+						p Телефон: +380 67 323 32 27
+			.feed-back
+				h3 Обратная связь
+				form(action="")
+					.wrap
+						input(type="text" name="name" placeholder="ФИО" required)
+						input(type="email" name="email" placeholder="Email" required)
+					textarea(name="comment" required)
+					.btn-wrap
+						button.btn Отправить
+		footer
+			.content
+				.social
+					ul
+						li.vk
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/vk.png", alt="")
+						li.fb
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/fb.png", alt="")
+						li.insta
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/insta.png", alt="")
+						li.ok
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/ok.png", alt="")
+						li.youtube
+							a(href="#" target="_blank")
+								img(draggable="false" src="img/youtube.png", alt="")
+				.footer-top
+					.contacts
+						ul
+							li.viber
+								a(href="tel:+375293757770") +375 29 375 77 70
+							li.whatsapp
+								a(href="tel:+375292272633") +375 29 227 26 33
+							li.skype
+								a(href="skype:devitabel") devitabel
+							li.email
+								a(href="e-mail:devitabel@mail.ru") devitabel@mail.ru
+						.shedule
+							.caption
+								p Обработка заказов:
+							p ПН-ПТ с 09:00 до 19:00
+					nav
+						.shop
+							.caption
+								p Магазин
+							ul
+								li
+									a(href="#" target="_blank") Клоллекции
+								li
+									a(href="#" target="_blank") Распродажа
+								li
+									a(href="#" target="_blank") О бренде
+								li
+									a(href="#" target="_blank") Новости
+								li
+									a(href="#" target="_blank") Блог
+								li
+									a(href="#" target="_blank") Контакты
+						.buyers
+							.caption
+								p Покупателям
+							ul
+								li
+									a(href="#" target="_blank") Оплата и доставка
+								li
+									a(href="#" target="_blank") Обмен и возврат
+								li
+									a(href="#" target="_blank") Вопросы и ответы
+						.account
+							.caption
+								p Личный кабинет
+							ul
+								li
+									a(href="#" target="_blank") Личные данные
+								li
+									a(href="#" target="_blank") Адреса доставки
+								li
+									a(href="#" target="_blank") Заказы
+								li
+									a(href="#" target="_blank") Хочу купить
+					.subscription
+						.notion
+							p Подпишитесь на новости и получите скидку 1000 руб. на первую покупку
+						form(action="")
+							.email
+								input(type="email" name="email")
+				.footer-bottom
+					.copyright
+						.caption
+							p © 2017. Devita Shop
+						.clarify
+							p Магазин зарегистрирован
+							p в Торговом реестре РБ 15 апреля 2014.
+					.pay-with
+						img(draggable="false" src="img/payment-logo.png", alt="")
+					.made-by
+						p Дизайн и разработка
+							a(href="#" target="_blank")
+								.namba
+									.logo
+										img(draggable="false" src="img/nambawan-logo.png", alt="")
+										p Nambawan
+					
+		.hidden
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		script(src="js/slick.min.js")
+		script(src="js/sticky.js")
+		script(src="js/common.js")

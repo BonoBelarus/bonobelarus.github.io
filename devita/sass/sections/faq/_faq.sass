@@ -19,6 +19,7 @@
 		justify-content: space-between
 		align-items: flex-start
 	aside
+		transform: translateZ(0)
 		max-width: 170px
 		font-size: 14px
 		margin-top: 160px
@@ -27,10 +28,23 @@
 		a:hover
 			color: #f47aac
 		a
+			position: relative
 			transition: .05s
+			&:before
+				content: url(../img/menu-arrow.png)
+				position: absolute
+				top: 50%
+				left: 100%
+				opacity: 0
+				transition: .35s
+				margin-left: 30px
+				margin-top: -12px
 		li.active
 			a
 				color: #f47aac
+				&:before
+					opacity: 1
+					transform: translateX(-10px)
 	.main-wrap
 		max-width: 770px
 		width: 100%

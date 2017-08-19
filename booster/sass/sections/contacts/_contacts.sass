@@ -1,0 +1,73 @@
+#contacts-page
+    padding-bottom: 100px
+    font-size: 16px
+    .breadcrumbs
+        margin: 30px 0 70px
+    h1
+        margin-bottom: 60px
+    .left-side
+        max-width: 570px
+        width: 100%
+    .shedule
+        margin-top: 15px
+    .phones
+        margin: 50px 0
+        position: relative
+        padding-left: 30px
+        &:before
+            content: url(../img/contacts-phone.png)
+            position: absolute
+            left: 0
+            top: 5px
+    .phones,
+    .social
+        b
+            font-size: 14px
+            text-transform: uppercase
+    .email,
+    .skype
+        padding-left: 30px
+        position: relative
+        &:before
+            position: absolute
+            left: 0
+            top: 2px
+    .email
+        &:before
+            content: url(../img/contacts-email.png)
+    .skype
+        &:before
+            content: url(../img/contacts-skype.png)
+    .flex-wrap ul
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        flex-wrap: wrap
+        li
+            max-width: 270px
+            width: 100%
+    .right-side
+        font-size: 14px
+        .wrap
+            position: relative
+            box-shadow: inset 0 0 0 1px #e6e7e8
+            padding: 40px 50px
+            &:before
+                content: ''
+                position: absolute
+                height: 40px
+                width: 40px
+                top: 0
+                right: 0
+                background: #fff linear-gradient(45deg, $green 50%, #fff 50.1%)
+        .caption
+            margin-bottom: 25px
+            font-size: 21px
+            font-weight: 700
+        .clarify
+            margin-bottom: 25px
+        .download
+            margin-top: 25px
+            font-size: 14px
+            a
+                color: $green

@@ -9,54 +9,139 @@ html(lang="en")
 		link(href="css/main.css", rel="stylesheet")
 		
 	body
-		header
-			.top-line
-				.content
-					.left-side
-						ul
-							li
-								a(href="#") Доставка  и оплата
-							li
-								a(href="#") Обмен и возврат
-					.right-side
-						ul
-							li.drop
-								a(href="#") Rus
-							li.drop
-								a(href="#") Валюта: BYN
-							li
-								a(href="#")  Войти / Регистрация
-			.major-menu
-				.content
-					.logo
-						img(draggable="false" src="img/logo.png", alt="")
-						.clarify
-							p Официальный интернет-магазин
-					nav
-						.mobile-nav
-							div
-						ul
-							li
-								a(href="#") Каталог
-							li
-								a(href="#") Скидки
-							li
-								a(href="#") Блог
-							li.drop
-								a(href="#") О бренде
-					.states
-						ul
-							li.search
-								a(href="#")
+		.mobile-menu
+			.overlay
+			ul
+				li.settings
+					ul
+						li.login
+							a(href="#") Войти / Регистрация
+						li.dropdown
+							a(href="#") Валюта: BYN
+							ul
+								li
+									p BYN
+								li
+									p RUR
+								li
+									p EUR
+						li
+							a(href="#") Rus / Eng
+				li
+					a(href="#") Каталог
+				li
+					a(href="#") Скидки
+				li
+					a(href="#") Блог
+				li.dropdown
+					a(href="#") О бренде
+					ul
+						li
+							p О бренде
+						li
+							p Lookbook
+						li
+							p Новости
+						li
+							p Сертификаты
+						li
+							p Блог
+						li
+							p Контакты
+		.header-wrap
+			header
+				.search-bar
+					.content
+						.close
+						input(type="search" placeholder="Найти на сайте")
+				.top-line
+					.content
+						.left-side
+							ul
+								li
+									a(href="#") Доставка  и оплата
+								li
+									a(href="#") Обмен и возврат
+						.right-side
+							ul
+								li.drop
+									a(href="#") Rus
+									ul
+										li
+											p Blr
+										li
+											p Ukr
+										li
+											p Kaz
+								li.drop
+									a(href="#") Валюта: BYN
+									ul
+										li
+											p RUR
+										li
+											p KAZ
+										li
+											p EURO
+								li.login
+									a(href="#")  Войти / Регистрация
+				.major-menu
+					.content
+						.logo
+							img(draggable="false" src="img/logo.png", alt="")
+							.clarify
+								p Официальный интернет-магазин
+						nav
+							.mobile-nav
+								div
+							ul.main-nav
+								li.drop
+									a(href="#" target="_blank") Каталог
+									ul.sub-menu
+										li
+											a(href="#") Summer 2017
+										li
+											a(href="#") Devita Sport
+								li
+									a(href="#" target="_blank") Распродажа
+								li
+									a(href="#" target="_blank") Блог
+								li.drop
+									a(href="#" target="_blank") О бренде
+									ul.sub-menu
+										li
+											a(href="#") Summer 2017
+										li
+											a(href="#") Devita Sport
+						.states
+							ul
+								li.search
 									img(draggable="false" src="img/icon-search.png", alt="")
-							li.like
-								a(href="#")
-									.total 6
-									img(draggable="false" src="img/icon-like.png", alt="")
-							li.cart
-								a(href="#")
-									.total 2
-									img(draggable="false" src="img/icon-cart.png", alt="")
+								li.like
+									a(href="#" target="_blank")
+										.total 6
+										img(draggable="false" src="img/icon-like.png", alt="")
+								li.cart.full
+									a(href="#" target="_blank")
+										.total 2
+										img(draggable="false" src="img/icon-cart.png", alt="")
+									.cart-preview
+										.b-t
+										.flex-wrap
+											.img
+												img(src="img/cart-prev-1.jpg", alt="")
+											.info
+												.caption
+													p Платье из лёгкого шифона М-539
+												.size
+													p
+														span Размер: 
+														| 44
+												.conter
+													p
+														span 2 x 
+														| 228 BYN
+										.btn-wrap
+											a.btn(href="#") Оформить заказ
 		section#product-card
 			.content
 				.left-side
@@ -114,6 +199,10 @@ html(lang="en")
 					h1 Комбинезон М-566
 					.clarify
 						p Стильный комбинезон с оригинальным принтом из текстильного полотна. Лиф с рельефами из пройм и центральной застёжкой на 7 пуговиц. Вырез горловины круглый на обтачке.
+					.price-old
+						p
+							span.num 227
+							span.cur  BYN
 					.price
 						p
 							span.num 114
@@ -134,7 +223,7 @@ html(lang="en")
 										p 44
 									li
 										p 46
-								p Таблица размеров
+								a(href="#" data-popup="popup-wrap-sizes") Таблица размеров
 						.compound
 							p Состав: 
 								span 88% шерсть, 12% полиэстер
@@ -147,7 +236,7 @@ html(lang="en")
 								.plus
 									p +
 							.btn-wrap
-								a.btn(href="#") Добавить в корзину
+								a.btn(href="#" data-popup="popup-wrap-add") Добавить в корзину
 						.to-like
 							img(src="img/like-icon.png", alt="")
 							p Добавить в список желаний
@@ -208,31 +297,85 @@ html(lang="en")
 									span 5
 									| )
 							.hidden-content
-								.left-side
-									.clarify
-										p Стильный комбинезон с оригинальным принтом из текстильного полотна. Лиф с рельефами из пройм и центральной застёжкой на 7 аккуратных пуговиц. Вырез горловины круглый на обтачке. По линии талии расположена планка со сборкой на резинку и шлёвки для удобного пояса. На передних частях брюк находятся боковые карманы.
-										p Длина изделия до талии — 45,5 см, брюки с резинкой — 05 см.
-									.care
-										.caption
-											p Уход
+								.top-line
+									.stars
 										ul
 											li
-												.care-icon
-													img(src="img/care-1.png", alt="")
-												.clarify
-													p щадяшая
-													p химчистка
 											li
-												.care-icon
-													img(src="img/care-2.png", alt="")
-												.clarify
-													p глажка
-													p с отпариванием
-								.right-side
-									.video
-										img(src="img/video.jpg", alt="")
-									.clarify
-										p Видеообзор платья от DeVita. Модель 566.
+											li
+											li
+											li
+										p на основе 5 оценок
+									.btn-wrap
+										a.btn(href="#") Оставить Отзыв
+								ul.review-list
+									li
+										.review-meta
+											.name
+												p Александра
+											.stars
+												ul
+													li
+													li
+													li
+													li
+													li
+											.date
+												p 27.06.2017
+										.txt
+											p На 42 размер при росте 168 платье сильно ниже колена (см. на 15) и великовато (в плечах, груди, по длине). Меньше размера нет, а то бы взяла попробовать. Качество ткани и пошива отменное.
+										.devita-reply
+											.icon
+												img(src="img/devita-icon.png", alt="")
+											.info
+												.name
+													p Devita
+												.txt
+													p Да, Александра - это немножко не ваш размер. 40-й на вас просто идеально бы сел.
+													p Благодарим за отзыв!
+												.date
+													p 27.06.2017
+									li
+										.review-meta
+											.name
+												p Александра
+											.stars
+												ul
+													li
+													li
+													li
+													li
+													li
+											.date
+												p 27.06.2017
+										.txt
+											p На 42 размер при росте 168 платье сильно ниже колена (см. на 15) и великовато (в плечах, груди, по длине). Меньше размера нет, а то бы взяла попробовать. Качество ткани и пошива отменное.
+										.devita-reply
+											.icon
+												img(src="img/devita-icon.png", alt="")
+											.info
+												.name
+													p Devita
+												.txt
+													p Да, Александра - это немножко не ваш размер. 40-й на вас просто идеально бы сел.
+													p Благодарим за отзыв!
+												.date
+													p 27.06.2017
+									li
+										.review-meta
+											.name
+												p Александра
+											.stars
+												ul
+													li
+													li
+													li
+													li
+													li
+											.date
+												p 27.06.2017
+										.txt
+											p На 42 размер при росте 168 платье сильно ниже колена (см. на 15) и великовато (в плечах, груди, по длине). Меньше размера нет, а то бы взяла попробовать. Качество ткани и пошива отменное.
 				.slider
 					.item.description
 						.left-side
@@ -261,31 +404,85 @@ html(lang="en")
 							.clarify
 								p Видеообзор платья от DeVita. Модель 566.
 					.item.reviews
-						.left-side
-							.clarify
-								p Стильный комбинезон с оригинальным принтом из текстильного полотна. Лиф с рельефами из пройм и центральной застёжкой на 7 аккуратных пуговиц. Вырез горловины круглый на обтачке. По линии талии расположена планка со сборкой на резинку и шлёвки для удобного пояса. На передних частях брюк находятся боковые карманы.
-								p Длина изделия до талии — 45,5 см, брюки с резинкой — 05 см.
-							.care
-								.caption
-									p Уход
+						.top-line
+							.stars
 								ul
 									li
-										.care-icon
-											img(src="img/care-1.png", alt="")
-										.clarify
-											p щадяшая
-											p химчистка
 									li
-										.care-icon
-											img(src="img/care-2.png", alt="")
-										.clarify
-											p глажка
-											p с отпариванием
-						.right-side
-							.video
-								img(src="img/video.jpg", alt="")
-							.clarify
-								p Видеообзор платья от DeVita. Модель 566.
+									li
+									li
+									li
+								p на основе 5 оценок
+							.btn-wrap
+								a.btn(href="#") Оставить Отзыв
+						ul.review-list
+							li
+								.review-meta
+									.name
+										p Александра
+									.stars
+										ul
+											li
+											li
+											li
+											li
+											li
+									.date
+										p 27.06.2017
+								.txt
+									p На 42 размер при росте 168 платье сильно ниже колена (см. на 15) и великовато (в плечах, груди, по длине). Меньше размера нет, а то бы взяла попробовать. Качество ткани и пошива отменное.
+								.devita-reply
+									.icon
+										img(src="img/devita-icon.png", alt="")
+									.info
+										.name
+											p Devita
+										.txt
+											p Да, Александра - это немножко не ваш размер. 40-й на вас просто идеально бы сел.
+											p Благодарим за отзыв!
+										.date
+											p 27.06.2017
+							li
+								.review-meta
+									.name
+										p Александра
+									.stars
+										ul
+											li
+											li
+											li
+											li
+											li
+									.date
+										p 27.06.2017
+								.txt
+									p На 42 размер при росте 168 платье сильно ниже колена (см. на 15) и великовато (в плечах, груди, по длине). Меньше размера нет, а то бы взяла попробовать. Качество ткани и пошива отменное.
+								.devita-reply
+									.icon
+										img(src="img/devita-icon.png", alt="")
+									.info
+										.name
+											p Devita
+										.txt
+											p Да, Александра - это немножко не ваш размер. 40-й на вас просто идеально бы сел.
+											p Благодарим за отзыв!
+										.date
+											p 27.06.2017
+							li
+								.review-meta
+									.name
+										p Александра
+									.stars
+										ul
+											li
+											li
+											li
+											li
+											li
+									.date
+										p 27.06.2017
+								.txt
+									p На 42 размер при росте 168 платье сильно ниже колена (см. на 15) и великовато (в плечах, груди, по длине). Меньше размера нет, а то бы взяла попробовать. Качество ткани и пошива отменное.
 		section#banner
 			.content
 				.left-side
@@ -313,17 +510,17 @@ html(lang="en")
 						a.btn.white(href="#")
 							span О бренде
 							img(draggable="false" src="img/arrow-white.png", alt="")
-				.nav
-			.right-side
-				.slider
-					.item
-						img(src="img/best-of-1.jpg", alt="")
-					.item
-						img(src="img/best-of-2.jpg", alt="")
-					.item
-						img(src="img/best-of-1.jpg", alt="")
-					.item
-						img(src="img/best-of-2.jpg", alt="")
+				.right-side
+					.nav
+					.slider
+						.item
+							img(src="img/best-of-1.jpg", alt="")
+						.item
+							img(src="img/best-of-2.jpg", alt="")
+						.item
+							img(src="img/best-of-1.jpg", alt="")
+						.item
+							img(src="img/best-of-2.jpg", alt="")
 		section#popular.could-like
 			.content
 				h3 Вам может понравиться
@@ -462,7 +659,321 @@ html(lang="en")
 										p Nambawan
 					
 		.hidden
+		.popup-wrap#popup-wrap-card
+			#popup-card.popup
+				.close
+				.flex-wrap
+					.left-side
+						.gallery
+							.slider
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+						.preview
+							.nav
+								p.pages
+									span.current 1
+									span.slash  / 
+									span.total 3
+							.slider
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+								.item
+									img(src="img/preview-1.png", alt="")
+					.right-side
+						.caption
+							p Комбинезон М-566
+						.clarify
+							p Стильный комбинезон с оригинальным принтом из текстильного полотна. Лиф с рельефами из пройм и центральной застёжкой на 7 пуговиц.  Вырез горловины круглый на обтачке.
+						.prices
+							.old-price
+								p 
+									span.num 75
+									span.cur  BYN
+							.price
+								p 
+									span.num 159
+									span.cur  BYN
+						.item-info
+							p.height
+								p
+									b Рост: 
+									| 164
+							.size
+								b Размер:
+								.flex-wrap
+									ul
+										li
+											p 42
+										li
+											p 43
+										li.active
+											p 44
+										li
+											p 46
+									a(href="#").table-sizes(data-popup="popup-wrap-sizes") Таблица размеров
+							.compound
+								p
+									b Состав: 
+									| 88% шерсть, 12% полиэстер
+							.flex-wrap.counter-btn
+								.count
+									.minus
+										p –
+									.current
+										p 1
+									.plus
+										p +
+								.btn-wrap
+									a.btn(href="#") Добавить в корзину
+						.to-like
+							img(src="img/like-icon.png", alt="")
+							p Мне нравится
+						.more
+							a(href="#") Подробнее о товаре 
+		.popup-wrap#popup-wrap-sizes
+			.popup#popup-sizes
+				.close
+				.caption
+					p Таблица размеров
+				.table
+					table.head
+						tr
+							td
+								p Российский размер
+							td
+								p 42
+							td
+								p 44
+							td
+								p 46
+							td
+								p 48
+							td
+								p 50
+							td
+								p 52
+							td
+								p 54
+							td
+								p 56
+							td
+								p 58
+						tr
+							td
+								p Международный размер
+							td
+								p S
+							td
+								p M
+							td
+								p L
+							td
+								p XL
+							td
+								p XXL
+							td
+								p XXXL
+							td
+								p XXXL
+							td
+								p XXXL
+							td
+								p XXXL
+						tr
+							td
+								p Европейский размер
+							td
+								p 36
+							td
+								p 38
+							td
+								p 40
+							td
+								p 42
+							td
+								p 44
+							td
+								p 46
+							td
+								p 48
+							td
+								p 50
+							td
+								p 52
+						tr
+							td
+								p Обхват груди, см
+							td
+								p 84
+							td
+								p 88
+							td
+								p 92
+							td
+								p 96
+							td
+								p 100
+							td
+								p 104
+							td
+								p 108
+							td
+								p 112
+							td
+								p 114
+						tr
+							td
+								p Обхват талии, см
+							td
+								p 66
+							td
+								p 70
+							td
+								p 74
+							td
+								p 78
+							td
+								p 82
+							td
+								p 86
+							td
+								p 90
+							td
+								p 94
+							td
+								p 98
+						tr
+							td
+								p Обхват бедер, см
+							td
+								p 92
+							td
+								p 96
+							td
+								p 100
+							td
+								p 104
+							td
+								p 108
+							td
+								p 112
+							td
+								p 116
+							td
+								p 120
+							td
+								p 124
+				.flex-wrap
+					.left-side
+						.caption
+							p Как определить свой размер?
+						.clarify
+							p Для того чтобы выбрать правильный размер, необходимо снять следующие мерки:
+							div
+								b Обхват груди
+								p Измеряется по выступающим точкам груди вокруг тела.
+							div
+								b Обхват талии
+								p Измеряется строго горизонтально по самой узкой части тела
+							div
+								b Обхват бедер
+								p Измеряется го наиболее выступающим точкам бедер и ягодиц.
+					.right-side
+						img(src="img/table-img.png", alt="")
+		.popup-wrap#popup-wrap-add
+			.popup#popup-add
+				.close
+				.caption
+					p Товар добавлен в корзину!
+				ul.list
+					li.item
+						.item-info
+							.img
+								img(src="img/catalog-1.jpg", alt="")
+							.info
+								.item-name
+									p Платье из лёгкого шифона М-539
+								.item-size
+									p Размер: 44
+						.price
+							p 2 x 228 BYN
+					li.item
+						.item-info
+							.img
+								img(src="img/catalog-1.jpg", alt="")
+							.info
+								.item-name
+									p Платье из лёгкого шифона М-539
+								.item-size
+									p Размер: 44
+						.price
+							p 2 x 228 BYN
+					li.item
+						.item-info
+							.img
+								img(src="img/catalog-1.jpg", alt="")
+							.info
+								.item-name
+									p Платье из лёгкого шифона М-539
+								.item-size
+									p Размер: 44
+						.price
+							p 2 x 228 BYN
+				.btns
+					.btn-wrap
+						a.btn(href="#") Продолжить покупки
+					.btn-wrap
+						a.btn.order(href="#") Оформить заказ
+		.popup-wrap#popup-wrap-wish
+			.popup#popup-wish
+				.close
+				.caption
+					p Добавить в список желаний
+				.clarify
+					p Чтобы добавить товар в список желаний, войдите с свой аккаунт
+				.flex-wrap
+					.left-side
+						form(action="")
+							.holder
+								input(type="email" placeholder="Введите email" required)
+							.holder
+								input(type="password" placeholder="Введите пароль" required)
+							.btns
+								.btn-wrap.forgot
+									a.btn(href="#") Забыли пароль?
+								.btn-wrap.login
+									button.btn(href="#") ВОЙТИ
+					.right-side
+						.caption
+							p Еще нет аккаунта?
+						.clarify
+							p Регистрация позволит вам сохранять в избранное, быстро совершать покупки, просматривать историю заказов, получать свежую информацию о новинках.
+						.btn-wrap
+							a.btn(href="#") Регистрация
+		.popup-wrap#popup-wrap-success
+			.popup#popup-success
+				.close
+				.caption
+					p Ваше сообщение отправлено
+				.clarify
+					p Мы свяжимся с вами в ближайшее время
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 		script(src="js/slick.min.js")
+		script(src="js/jquery.tubular.1.0.js")
+		script(src="js/ion.rangeSlider.min.js")
 		script(src="js/sticky.js")
 		script(src="js/common.js")

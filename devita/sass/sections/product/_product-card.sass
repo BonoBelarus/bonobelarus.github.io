@@ -14,6 +14,7 @@
 		justify-content: flex-start
 		align-items: center
 	.left-side
+		margin-top: -130px
 		position: relative
 		display: flex
 		justify-content: flex-start
@@ -100,7 +101,7 @@
 			.total
 				font-size: 14px
 	.right-side
-		padding: 35px 40px 35px 60px
+		padding: 20px 40px 35px 60px
 		position: relative
 		.breadcrumbs
 			opacity: .4
@@ -149,11 +150,29 @@
 		.clarify
 			padding-top: 0
 			margin-top: 40px
+			margin-bottom: 50px
 			font-size: 14px
-		.price
-			font-family: "Playfair Display"
+		.price-old
+			font-size: 14px
 			color: #1c2335
-			margin-top: 50px
+			opacity: .5
+			font-weight: 600
+			p
+				display: inline-block
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					background-color: #1c2335
+					top: 50%
+					margin-top: -1px
+					left: -5%
+					width: 110%
+					height: 1px
+		.price
+			color: #1c2335
+			margin-top: 0px
+			font-weight: 600
 			font-size: 32px
 			text-transform: uppercase
 			span
@@ -258,6 +277,8 @@
 				margin-left: 15px
 
 @media only screen and (max-width : 1200px)
+	#product-card .left-side
+		margin-top: -20px
 	#product-card
 		padding-top: 50px
 		.gallery

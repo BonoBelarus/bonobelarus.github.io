@@ -9,21 +9,70 @@
     <link href="css/main.css" rel="stylesheet"/>
   </head>
   <body>
+    <div class="mobile-menu">
+      <div class="overlay"></div>
+      <ul>
+        <li class="settings">
+          <ul>
+            <li class="login"><a href="#">Войти / Регистрация</a></li>
+            <li class="dropdown"><a href="#">Валюта: BYN</a>
+              <ul>
+                <li>
+                  <p>BYN</p>
+                </li>
+                <li>
+                  <p>RUR</p>
+                </li>
+                <li>
+                  <p>EUR</p>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Rus / Eng</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Скидки</a></li>
+        <li><a href="#">Блог</a></li>
+        <li class="dropdown"><a href="#">О бренде</a>
+          <ul>
+            <li>
+              <p>О бренде</p>
+            </li>
+            <li>
+              <p>Lookbook</p>
+            </li>
+            <li>
+              <p>Новости</p>
+            </li>
+            <li>
+              <p>Сертификаты</p>
+            </li>
+            <li>
+              <p>Блог</p>
+            </li>
+            <li>
+              <p>Контакты</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
     <div class="header-wrap">
       <header>
         <div class="top-line">
           <div class="content">
             <div class="left-side">
               <ul>
-                <li><a href="#" target="_blank">Доставка  и оплата</a></li>
-                <li><a href="#" target="_blank">Обмен и возврат</a></li>
+                <li><a href="#">Доставка  и оплата</a></li>
+                <li><a href="#">Обмен и возврат</a></li>
               </ul>
             </div>
             <div class="right-side">
               <ul>
-                <li class="drop"><a href="#" target="_blank">Rus</a></li>
-                <li class="drop"><a href="#" target="_blank">Валюта: BYN</a></li>
-                <li><a href="#" target="_blank"> Войти / Регистрация</a></li>
+                <li class="drop"><a href="#">Rus</a></li>
+                <li class="drop"><a href="#">Валюта: BYN</a></li>
+                <li><a href="#"> Войти / Регистрация</a></li>
               </ul>
             </div>
           </div>
@@ -36,11 +85,24 @@
               </div>
             </div>
             <nav>
-              <ul>
-                <li><a href="#" target="_blank">Каталог</a></li>
-                <li><a href="#" target="_blank">Скидки</a></li>
+              <div class="mobile-nav">
+                <div></div>
+              </div>
+              <ul class="main-nav">
+                <li class="drop"><a href="#" target="_blank">Каталог</a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Summer 2017</a></li>
+                    <li><a href="#">Devita Sport</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" target="_blank">Распродажа</a></li>
                 <li><a href="#" target="_blank">Блог</a></li>
-                <li class="drop"><a href="#" target="_blank">О бренде</a></li>
+                <li class="drop"><a href="#" target="_blank">О бренде</a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Summer 2017</a></li>
+                    <li><a href="#">Devita Sport</a></li>
+                  </ul>
+                </li>
               </ul>
             </nav>
             <div class="states">
@@ -48,8 +110,27 @@
                 <li class="search"><a href="#" target="_blank"><img draggable="false" src="img/icon-search.png" alt=""/></a></li>
                 <li class="like"><a href="#" target="_blank">
                     <div class="total">6</div><img draggable="false" src="img/icon-like.png" alt=""/></a></li>
-                <li class="cart"><a href="#" target="_blank">
-                    <div class="total">2</div><img draggable="false" src="img/icon-cart.png" alt=""/></a></li>
+                <li class="cart full"><a href="#" target="_blank">
+                    <div class="total">2</div><img draggable="false" src="img/icon-cart.png" alt=""/></a>
+                  <div class="cart-preview">
+                    <div class="b-t"></div>
+                    <div class="flex-wrap">
+                      <div class="img"><img src="img/cart-prev-1.jpg" alt=""/></div>
+                      <div class="info">
+                        <div class="caption">
+                          <p>Платье из лёгкого шифона М-539</p>
+                        </div>
+                        <div class="size">
+                          <p><span>Размер: </span>44</p>
+                        </div>
+                        <div class="conter">
+                          <p><span>2 x </span>228 BYN</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn-wrap"><a class="btn" href="#">Оформить заказ</a></div>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -95,22 +176,22 @@
                 </div>
                 <div class="index">
                   <label>Индекс</label>
-                  <input type="text" name="index" placeholder="123456789"/>
+                  <input type="text" name="index"/>
                 </div>
                 <div class="area">
                   <label>Область</label>
-                  <input type="text" name="area" placeholder="Актюбинская"/>
+                  <input type="text" name="area"/>
                 </div>
                 <div class="city">
                   <label>Город</label>
-                  <input type="text" name="city" placeholder="Актюбинск"/>
+                  <input type="text" name="city"/>
                 </div>
                 <div class="addr">
                   <label>Адрес</label>
                   <div class="places">
-                    <input type="text" name="street" placeholder="Улица"/>
-                    <input type="text" name="house" placeholder="Дом"/>
-                    <input type="text" name="apart" placeholder="Кв."/>
+                    <input type="text" name="street"/>
+                    <input type="text" name="house"/>
+                    <input type="text" name="apart"/>
                   </div>
                 </div>
                 <div class="delivery">
@@ -129,7 +210,7 @@
                             </div>
                           </div>
                           <div class="price">
-                            <p>800 Р</p>
+                            <p>800 руб.</p>
                           </div>
                         </div>
                       </label>
@@ -147,7 +228,7 @@
                             </div>
                           </div>
                           <div class="price">
-                            <p>1 600 Р</p>
+                            <p>1 600 руб.</p>
                           </div>
                         </div>
                       </label>
@@ -165,7 +246,7 @@
                             </div>
                           </div>
                           <div class="price">
-                            <p>600 Р</p>
+                            <p>600 	руб.</p>
                           </div>
                         </div>
                       </label>
@@ -184,7 +265,7 @@
                 </div>
                 <div class="news-letters">
                   <label>Рассылка</label>
-                  <input type="checkbox" id="news-letters" name="news-letters"/>
+                  <input type="checkbox" id="news-letters" checked="checked" name="news-letters"/>
                   <label for="news-letters"></label>
                   <div class="notion">
                     <p>Вы будете первыми узнавать об обновлении коллекций,</p>
@@ -199,7 +280,7 @@
                 <button class="btn">Подтвердить заказ</button>
                 <div class="notion">
                   <p>Нажимая на кнопку «подтвердить заказ»,</p>
-                  <p>я принимаю условия публичной оферты</p>
+                  <p>я принимаю условия <a href="#">публичной оферты</a></p>
                 </div>
               </div>
             </div>
@@ -320,7 +401,7 @@
             </div>
             <form action="">
               <div class="email">
-                <input type="email" name="email" placeholder="Ваш Email"/>
+                <input type="email" name="email"/>
               </div>
             </form>
           </div>
