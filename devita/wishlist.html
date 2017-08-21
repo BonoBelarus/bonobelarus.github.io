@@ -36,30 +36,24 @@
         <li><a href="#">Блог</a></li>
         <li class="dropdown"><a href="#">О бренде</a>
           <ul>
-            <li>
-              <p>О бренде</p>
-            </li>
-            <li>
-              <p>Lookbook</p>
-            </li>
-            <li>
-              <p>Новости</p>
-            </li>
-            <li>
-              <p>Сертификаты</p>
-            </li>
-            <li>
-              <p>Блог</p>
-            </li>
-            <li>
-              <p>Контакты</p>
-            </li>
+            <li><a href="#">О бренде</a></li>
+            <li><a href="#">Lookbook</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Сертификаты</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Контакты</a></li>
           </ul>
         </li>
       </ul>
     </div>
     <div class="header-wrap">
       <header>
+        <div class="search-bar">
+          <div class="content">
+            <div class="close"></div>
+            <input type="search" placeholder="Найти на сайте"/>
+          </div>
+        </div>
         <div class="top-line">
           <div class="content">
             <div class="left-side">
@@ -70,9 +64,33 @@
             </div>
             <div class="right-side">
               <ul>
-                <li class="drop"><a href="#">Rus</a></li>
-                <li class="drop"><a href="#">Валюта: BYN</a></li>
-                <li><a href="#"> Войти / Регистрация</a></li>
+                <li class="drop"><a href="#">Rus</a>
+                  <ul>
+                    <li>
+                      <p>Blr</p>
+                    </li>
+                    <li>
+                      <p>Ukr</p>
+                    </li>
+                    <li>
+                      <p>Kaz</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="drop"><a href="#">Валюта: BYN</a>
+                  <ul>
+                    <li>
+                      <p>RUR</p>
+                    </li>
+                    <li>
+                      <p>KAZ</p>
+                    </li>
+                    <li>
+                      <p>EURO</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="login"><a href="#"> Войти / Регистрация</a></li>
               </ul>
             </div>
           </div>
@@ -99,35 +117,24 @@
                 <li><a href="#" target="_blank">Блог</a></li>
                 <li class="drop"><a href="#" target="_blank">О бренде</a>
                   <ul class="sub-menu">
-                    <li><a href="#">Summer 2017</a></li>
-                    <li><a href="#">Devita Sport</a></li>
+                    <li><a href="#">О бренде</a></li>
+                    <li><a href="#">Lookbook</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Сертификаты</a></li>
+                    <li><a href="#">Контакты</a></li>
                   </ul>
                 </li>
               </ul>
             </nav>
             <div class="states">
               <ul>
-                <li class="search"><a href="#" target="_blank"><img draggable="false" src="img/icon-search.png" alt=""/></a></li>
+                <li class="search"><img draggable="false" src="img/icon-search.png" alt=""/></li>
                 <li class="like"><a href="#" target="_blank">
                     <div class="total">6</div><img draggable="false" src="img/icon-like.png" alt=""/></a></li>
-                <li class="cart full"><a href="#" target="_blank">
-                    <div class="total">2</div><img draggable="false" src="img/icon-cart.png" alt=""/></a>
+                <li class="cart"><a href="#" target="_blank">
+                    <div class="total"> </div><img draggable="false" src="img/icon-cart.png" alt=""/></a>
                   <div class="cart-preview">
                     <div class="b-t"></div>
-                    <div class="flex-wrap">
-                      <div class="img"><img src="img/cart-prev-1.jpg" alt=""/></div>
-                      <div class="info">
-                        <div class="caption">
-                          <p>Платье из лёгкого шифона М-539</p>
-                        </div>
-                        <div class="size">
-                          <p><span>Размер: </span>44</p>
-                        </div>
-                        <div class="conter">
-                          <p><span>2 x </span>228 BYN</p>
-                        </div>
-                      </div>
-                    </div>
                     <div class="btn-wrap"><a class="btn" href="#">Оформить заказ</a></div>
                   </div>
                 </li>
@@ -261,6 +268,8 @@
     <div class="hidden"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/jquery.tubular.1.0.js"></script>
     <script src="js/sticky.js"></script>
     <script src="js/common.js"></script>
   </body>

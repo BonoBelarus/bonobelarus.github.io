@@ -245,9 +245,45 @@
         .price
             margin-top: 5px
 #profile.wishlist
+	.show-prev
+		position: absolute
+		height: 100%
+		width: 100%
+		top: 100%
+		margin-top: -110px
+		left: 100%
+		margin-left: -110px
+		width: 220px
+		height: 200px
+		background-color: #addaf4
+		border-radius: 50%
+		transition: .35s
+		z-index: 1
+		opacity: .8
+		transform: scale(0)
+		&:after
+			content: ''
+			position: absolute
+			top: 45px
+			left: 35px
+			width: 60px
+			height: 40px
+			background: url(../img/eye.png) center no-repeat
+			background-size: contain
+			transition: .35s
+			z-index: 2
+	.prev-img
+		position: relative
+		overflow: hidden
 	.list
 		font-size: 16px
 		text-align: center
+		li:hover
+            .show-prev
+                transform: scale(1)
+            a:hover
+                .show-prev
+                    transform: scale(1.1)
 		ul
 			display: flex
 			justify-content: flex-start

@@ -37,17 +37,17 @@ html(lang="en")
 					a(href="#") О бренде
 					ul
 						li
-							p О бренде
+							a(href="#") О бренде
 						li
-							p Lookbook
+							a(href="#") Lookbook
 						li
-							p Новости
+							a(href="#") Новости
 						li
-							p Сертификаты
+							a(href="#") Сертификаты
 						li
-							p Блог
+							a(href="#") Блог
 						li
-							p Контакты
+							a(href="#") Контакты
 		.header-wrap
 			header
 				.search-bar
@@ -117,32 +117,18 @@ html(lang="en")
 								li.search
 									img(draggable="false" src="img/icon-search.png", alt="")
 								li.like
-									a(href="#" target="_blank")
+									a(href="#")
 										.total 6
 										img(draggable="false" src="img/icon-like.png", alt="")
-								li.cart.full
-									a(href="#" target="_blank")
-										.total 2
+								li.cart
+									a(href="#")
+										.total 
 										img(draggable="false" src="img/icon-cart.png", alt="")
 									.cart-preview
 										.b-t
-										.flex-wrap
-											.img
-												img(src="img/cart-prev-1.jpg", alt="")
-											.info
-												.caption
-													p Платье из лёгкого шифона М-539
-												.size
-													p
-														span Размер: 
-														| 44
-												.conter
-													p
-														span 2 x 
-														| 228 BYN
 										.btn-wrap
 											a.btn(href="#") Оформить заказ
-		section#product-card
+		section#product-card.item-card
 			.content
 				.left-side
 					.gallery
@@ -196,7 +182,7 @@ html(lang="en")
 							li.full
 							li.full
 							li
-					h1 Комбинезон М-566
+					h1.product-title Комбинезон М-566
 					.clarify
 						p Стильный комбинезон с оригинальным принтом из текстильного полотна. Лиф с рельефами из пройм и центральной застёжкой на 7 пуговиц. Вырез горловины круглый на обтачке.
 					.price-old
@@ -235,8 +221,8 @@ html(lang="en")
 									p 1
 								.plus
 									p +
-							.btn-wrap
-								a.btn(href="#" data-popup="popup-wrap-add") Добавить в корзину
+							.btn-wrap.add-to-cart
+								a.btn(href="#") Добавить в корзину
 						.to-like
 							img(src="img/like-icon.png", alt="")
 							p Добавить в список желаний
@@ -527,60 +513,119 @@ html(lang="en")
 				.list
 					ul
 						li
-							a(href="#")
-								
-								.popular-img
-									img(draggable="false" src="img/popular-1.jpg", alt="")
-								.clarify
-									p Желтое платье М-537
-								.price
-									p 114 BYN
+							.prev-img
+								a(href="#" target="_blank")
+									img(src="img/catalog-3.jpg", alt="")
+								a(href="#" data-popup="popup-wrap-card")
+									.show-prev
+							.meta
+								.info
+									.clarify
+										p Желтое платье М-537
+									.price
+										p
+											span.num 114 
+											span.cur BYN
+								a.like(data-popup="popup-wrap-wish")
 						li
-							a(href="#")
-								
-								.popular-img
-									img(draggable="false" src="img/popular-2.jpg", alt="")
-								.clarify
-									p Желтое платье М-537
-								.price
-									p 114 BYN
+							.prev-img
+								a(href="#" target="_blank")
+									img(src="img/catalog-3.jpg", alt="")
+								a(href="#" data-popup="popup-wrap-card")
+									.show-prev
+							.meta
+								.info
+									.clarify
+										p Желтое платье М-537
+									.price
+										p
+											span.num 114 
+											span.cur BYN
+								a.like(data-popup="popup-wrap-wish")
 						li
-							a(href="#")
-								
-								.popular-img
-									img(draggable="false" src="img/popular-3.jpg", alt="")
-								.clarify
-									p Желтое платье М-537
-								.price
-									p 114 BYN
+							.prev-img
+								a(href="#" target="_blank")
+									img(src="img/catalog-3.jpg", alt="")
+								a(href="#" data-popup="popup-wrap-card")
+									.show-prev
+							.meta
+								.info
+									.clarify
+										p Желтое платье М-537
+									.price
+										p
+											span.num 114 
+											span.cur BYN
+								a.like(data-popup="popup-wrap-wish")
 						li
-							a(href="#")
-								
-								.popular-img
-									img(draggable="false" src="img/popular-4.jpg", alt="")
-								.clarify
-									p Желтое платье М-537
-								.price
-									p 114 BYN
+							.prev-img
+								a(href="#" target="_blank")
+									img(src="img/catalog-3.jpg", alt="")
+								a(href="#" data-popup="popup-wrap-card")
+									.show-prev
+							.meta
+								.info
+									.clarify
+										p Желтое платье М-537
+									.price
+										p
+											span.num 114 
+											span.cur BYN
+								a.like(data-popup="popup-wrap-wish")
+						li
+							.prev-img
+								a(href="#" target="_blank")
+									img(src="img/catalog-3.jpg", alt="")
+								a(href="#" data-popup="popup-wrap-card")
+									.show-prev
+							.meta
+								.info
+									.clarify
+										p Желтое платье М-537
+									.price
+										p
+											span.num 114 
+											span.cur BYN
+								a.like(data-popup="popup-wrap-wish")
+						li
+							.prev-img
+								a(href="#" target="_blank")
+									img(src="img/catalog-3.jpg", alt="")
+								a(href="#" data-popup="popup-wrap-card")
+									.show-prev
+							.meta
+								.info
+									.clarify
+										p Желтое платье М-537
+									.price
+										p
+											span.num 114 
+											span.cur BYN
+								a.like(data-popup="popup-wrap-wish")
 		footer
 			.content
 				.social
 					ul
 						li.vk
 							a(href="#")
-								img(draggable="false" src="img/vk.png", alt="")
+								img.desktop(draggable="false" src="img/vk.png", alt="")
+								img.mobile(src="img/vk_logo.svg", alt="")
 						li.fb
 							a(href="#")
-								img(draggable="false" src="img/fb.png", alt="")
+								img.desktop(draggable="false" src="img/fb.png", alt="")
+								img.mobile(src="img/fb_logo-small.svg", alt="")
 						li.insta
 							a(href="#")
-								img(draggable="false" src="img/insta.png", alt="")
+								img.desktop(draggable="false" src="img/insta.png", alt="")
+								img.mobile(src="img/insta_logo-small.svg", alt="")
 						li.ok
 							a(href="#")
-								img(draggable="false" src="img/ok.png", alt="")
+								img.desktop(draggable="false" src="img/ok.png", alt="")
+								img.mobile(src="img/ok_logo-small.svg", alt="")
 						li.youtube
 							a(href="#")
-								img(draggable="false" src="img/youtube.png", alt="")
+								img.desktop(draggable="false" src="img/youtube.png", alt="")
+								img.mobile(src="img/yt_logo-small.svg", alt="")
 				.footer-top
 					.contacts
 						ul
@@ -738,7 +783,7 @@ html(lang="en")
 									.plus
 										p +
 								.btn-wrap
-									a.btn(href="#") Добавить в корзину
+									a.btn.add-to-cart(href="#") Добавить в корзину
 						.to-like
 							img(src="img/like-icon.png", alt="")
 							p Мне нравится

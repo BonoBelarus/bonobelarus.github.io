@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		$('#descr-and-rev .tabs .to-open').click(function(e){
 				$(e.currentTarget).next().slideToggle().closest('li').toggleClass('active');
 		});
+		$('#descr-and-rev li:first-child .to-open').trigger("click");
 	}
 
 	var best_of_slider = $('#best-of .slider')
@@ -172,13 +173,55 @@ document.addEventListener('DOMContentLoaded', function(){
 		price.text(afterPrice)
 	});
 
+	$('#cart li .plus').click(function(){
+		var item_price = +$(this).closest('li').find('.price .num').text();
+		var counter = +$(this).closest('li').find('.current').text().trim();
+		var base_price = item_price/counter;
+		
+		item_price += base_price;
+		
+		$(this).closest('li').find('.price .num').text(item_price);
+		$(this).closest('li').find('.current').text(counter+=1);
+		
+		var total = $('#cart .list .price .num');
+		var total_num = 0;
+		for(var i = 0; i < total.length; i++ ){
+			total_num += +$(total[i]).text();
+			console.log(total);
+		}
+		$('#cart .total .num').text(total_num);
+		console.log(base_price);
+	});
+	
+	$('#cart li .minus').click(function(){
+		var item_price = +$(this).closest('li').find('.price .num').text();
+		var counter = +$(this).closest('li').find('.current').text().trim();
+		var base_price = item_price/counter;
+		
+		if(counter <= 1) return;
+
+		item_price -= base_price;
+		
+		$(this).closest('li').find('.price .num').text(item_price);
+		$(this).closest('li').find('.current').text(counter-=1);
+		
+		var total = $('#cart .list .price .num');
+		var total_num = 0;
+		for(var i = 0; i < total.length; i++ ){
+			total_num += +$(total[i]).text();
+			console.log(total);
+		}
+		$('#cart .total .num').text(total_num);
+		console.log(base_price);
+		
+	});
 	var about_slider = $('#about-slider .slider');
 	about_slider.slick({
 		slidesToShow: 1,
 		nextArrow: '<div class="next"><img src="img/preview-arrow.png" alt=""></div>',
 		prevArrow: '<div class="prev"><img src="img/preview-arrow.png" alt=""></div>'
 	});
-
+	
 	setTimeout(function(){
 		var famous_slider = $('#famous-devita .slider');
 		var total_slides_product = $('#famous-devita .slider .item');
@@ -298,8 +341,9 @@ document.addEventListener('DOMContentLoaded', function(){
 		$(e.currentTarget).addClass('active');
 	});
 
-	$('.dropdown').click(function(e){
-		$(e.currentTarget).toggleClass('active').find('ul').slideToggle();
+	$('.dropdown>a').click(function(e){
+		e.preventDefault();
+		$(e.currentTarget).closest('.dropdown').toggleClass('active').find('ul').slideToggle();
 	});
 
 	$('.mobile-nav').click(function(e){
@@ -371,19 +415,36 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	$('.popup .close').click(function(){
 		$(this).closest('.popup-wrap').removeClass('active');
+		$('body').removeClass('disabled');
 	});
 
 	$('a[data-popup]').click(function(e){
 		e.preventDefault();
+		$('body').addClass('disabled');
+
 		var popup = $(this).data('popup');
 
 		switch(popup){
 			case "popup-wrap-add":
 				$('#popup-wrap-card').removeClass('active');
+				$('body').removeClass('disabled');
 				setTimeout(function(){
-					$('#' + popup).addClass('active');
+					var body = $("html, body");
+					body.stop().animate({scrollTop:0}, 500, 'swing', function() { 
+						$('.cart-preview').addClass('active');
+						setTimeout(function(){
+							$('.cart-preview').removeClass('active');
+						}, 3000);
+					});
 				}, 400);
 			break;
+			case "popup-wrap-card":
+				var item_price = +$('.item-card .price .num').text().trim();
+				var count = +$('.current').last().text().trim();
+				var base_price = item_price/count;
+				console.log(base_price);
+				$('.item-card .price .num').text(item_price / count);
+				$('.item-card .current').text(1);
 			default:
 				$('#' + popup).addClass('active');
 		}
@@ -394,5 +455,85 @@ document.addEventListener('DOMContentLoaded', function(){
 	});
 	$('header .search-bar .close').click(function(){
 		$('.search-bar').slideUp();
+	});
+
+	$(window).resize(function(){
+		var ww = $(window).width();
+
+		if(ww > 767){
+			//product card slider
+			console.log('true');
+
+			$('#descr-and-rev .tabs>ul>li:first-child').addClass('active');
+			var descr_tabs = $('#descr-and-rev .tabs li');
+			descr_tabs.click(function(e){
+				var slide = $(e.currentTarget).index();
+				$(descr_and_rev_Slider).slick('slickGoTo', slide);
+
+				if($(e.currentTarget).hasClass('active')){
+					return;
+				}else{
+					descr_tabs.removeClass('active')
+					$(e.currentTarget).addClass('active');
+				}
+			});
+		} else {
+				console.log('less than 767');
+			$('#descr-and-rev .tabs .to-open').click(function(e){
+				$(e.currentTarget).next().slideToggle().closest('li').toggleClass('active');
+			});
+		}
+	});
+
+	$('.states .like a').click(function(e){
+		e.preventDefault();
+	});
+
+	$('.add-to-cart').click(function(e){
+		e.preventDefault();
+		var caption_value = $('.product-title').text();
+		var img_value = $('.item-card .gallery .item:first-child img').attr('src');
+		var size_value = $('.item-card .size .active').text().trim();
+		var counter_value = +$('.item-card .count .current').text().trim();
+		var price_value = +$('.item-card .price .num').text() / counter_value;
+		
+		var img = '<div class="img"><img src="' + img_value + '", alt=""></div>';
+		var caption = '<div class="caption">' + caption_value + '</div>';
+		var size = '<div class="size"><p><span>Размер: </span>' + size_value + '</p></div>';
+		var counter = '<div class="conter"><p><span>' + counter_value + ' x </span>' + price_value + ' BYN</p></div>'
+		var info = '<div class="info">' + caption + size + counter + '</div>';
+		var elem = '<div class="flex-wrap">' + img + info + '<div>';
+		var delay = 0;
+
+		$('header .cart-preview').prepend(elem);
+		var body = $("html, body");
+
+		if($(this).hasClass('popup-btn') == true){
+			$(e.target).closest('.popup-wrap').removeClass('active');
+			$('body').removeClass('disabled');
+			delay = 400;
+		}
+
+		setTimeout(function(){
+			body.stop().animate({scrollTop:0}, 500, 'swing', function() { 
+				$('.cart-preview').addClass('active');
+				setTimeout(function(){
+					$('.cart-preview').removeClass('active');
+				}, 3000);
+			});
+		}, delay);
+
+		var items_in_cart = $('.cart-preview .flex-wrap').length;
+		console.log(items_in_cart);
+		$('.cart').addClass('full').find('.total').text(items_in_cart);
+	});
+
+	$('#cart .delete').click(function(){
+		var tot_price = +$('form .total .num').text().trim();
+		var item_price = +$(this).closest('li').find('.price .num').text().trim();
+		
+		console.log(tot_price);
+		$(this).closest('li').remove();
+		$('form .total .num').text(tot_price - item_price);
 	});
 });

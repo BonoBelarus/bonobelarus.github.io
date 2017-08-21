@@ -36,30 +36,24 @@
         <li><a href="#">Блог</a></li>
         <li class="dropdown"><a href="#">О бренде</a>
           <ul>
-            <li>
-              <p>О бренде</p>
-            </li>
-            <li>
-              <p>Lookbook</p>
-            </li>
-            <li>
-              <p>Новости</p>
-            </li>
-            <li>
-              <p>Сертификаты</p>
-            </li>
-            <li>
-              <p>Блог</p>
-            </li>
-            <li>
-              <p>Контакты</p>
-            </li>
+            <li><a href="#">О бренде</a></li>
+            <li><a href="#">Lookbook</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Сертификаты</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Контакты</a></li>
           </ul>
         </li>
       </ul>
     </div>
     <div class="header-wrap">
       <header>
+        <div class="search-bar">
+          <div class="content">
+            <div class="close"></div>
+            <input type="search" placeholder="Найти на сайте"/>
+          </div>
+        </div>
         <div class="top-line">
           <div class="content">
             <div class="left-side">
@@ -70,9 +64,33 @@
             </div>
             <div class="right-side">
               <ul>
-                <li class="drop"><a href="#">Rus</a></li>
-                <li class="drop"><a href="#">Валюта: BYN</a></li>
-                <li><a href="#"> Войти / Регистрация</a></li>
+                <li class="drop"><a href="#">Rus</a>
+                  <ul>
+                    <li>
+                      <p>Blr</p>
+                    </li>
+                    <li>
+                      <p>Ukr</p>
+                    </li>
+                    <li>
+                      <p>Kaz</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="drop"><a href="#">Валюта: BYN</a>
+                  <ul>
+                    <li>
+                      <p>RUR</p>
+                    </li>
+                    <li>
+                      <p>KAZ</p>
+                    </li>
+                    <li>
+                      <p>EURO</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="login"><a href="#"> Войти / Регистрация</a></li>
               </ul>
             </div>
           </div>
@@ -99,35 +117,24 @@
                 <li><a href="#" target="_blank">Блог</a></li>
                 <li class="drop"><a href="#" target="_blank">О бренде</a>
                   <ul class="sub-menu">
-                    <li><a href="#">Summer 2017</a></li>
-                    <li><a href="#">Devita Sport</a></li>
+                    <li><a href="#">О бренде</a></li>
+                    <li><a href="#">Lookbook</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Сертификаты</a></li>
+                    <li><a href="#">Контакты</a></li>
                   </ul>
                 </li>
               </ul>
             </nav>
             <div class="states">
               <ul>
-                <li class="search"><a href="#" target="_blank"><img draggable="false" src="img/icon-search.png" alt=""/></a></li>
+                <li class="search"><img draggable="false" src="img/icon-search.png" alt=""/></li>
                 <li class="like"><a href="#" target="_blank">
                     <div class="total">6</div><img draggable="false" src="img/icon-like.png" alt=""/></a></li>
-                <li class="cart full"><a href="#" target="_blank">
-                    <div class="total">2</div><img draggable="false" src="img/icon-cart.png" alt=""/></a>
+                <li class="cart"><a href="#" target="_blank">
+                    <div class="total"> </div><img draggable="false" src="img/icon-cart.png" alt=""/></a>
                   <div class="cart-preview">
                     <div class="b-t"></div>
-                    <div class="flex-wrap">
-                      <div class="img"><img src="img/cart-prev-1.jpg" alt=""/></div>
-                      <div class="info">
-                        <div class="caption">
-                          <p>Платье из лёгкого шифона М-539</p>
-                        </div>
-                        <div class="size">
-                          <p><span>Размер: </span>44</p>
-                        </div>
-                        <div class="conter">
-                          <p><span>2 x </span>228 BYN</p>
-                        </div>
-                      </div>
-                    </div>
                     <div class="btn-wrap"><a class="btn" href="#">Оформить заказ</a></div>
                   </div>
                 </li>
@@ -157,60 +164,60 @@
             </div>
             <div class="list">
               <ul>
-                <li><a href="#">
-                    <div class="img"><img src="img/wish-img.jpg" alt=""/></div></a>
+                <li>
+                  <div class="prev-img"><a href="#" target="_blank"><img src="img/catalog-3.jpg" alt=""/></a><a href="#" data-popup="popup-wrap-card">
+                      <div class="show-prev"></div></a></div>
                   <div class="meta">
                     <div class="info">
                       <div class="clarify">
-                        <p>Принтованное платье М-546</p>
+                        <p>Желтое платье М-537</p>
                       </div>
                       <div class="price">
-                        <p>114 BYN</p>
+                        <p><span class="num">114 </span><span class="cur">BYN</span></p>
                       </div>
-                    </div>
-                    <div class="like active"></div>
+                    </div><a class="like" data-popup="popup-wrap-wish"></a>
                   </div>
                 </li>
-                <li><a href="#">
-                    <div class="img"><img src="img/wish-img.jpg" alt=""/></div></a>
+                <li>
+                  <div class="prev-img"><a href="#" target="_blank"><img src="img/catalog-3.jpg" alt=""/></a><a href="#" data-popup="popup-wrap-card">
+                      <div class="show-prev"></div></a></div>
                   <div class="meta">
                     <div class="info">
                       <div class="clarify">
-                        <p>Принтованное платье М-546</p>
+                        <p>Желтое платье М-537</p>
                       </div>
                       <div class="price">
-                        <p>114 BYN</p>
+                        <p><span class="num">114 </span><span class="cur">BYN</span></p>
                       </div>
-                    </div>
-                    <div class="like active"></div>
+                    </div><a class="like" data-popup="popup-wrap-wish"></a>
                   </div>
                 </li>
-                <li><a href="#">
-                    <div class="img"><img src="img/wish-img.jpg" alt=""/></div></a>
+                <li>
+                  <div class="prev-img"><a href="#" target="_blank"><img src="img/catalog-3.jpg" alt=""/></a><a href="#" data-popup="popup-wrap-card">
+                      <div class="show-prev"></div></a></div>
                   <div class="meta">
                     <div class="info">
                       <div class="clarify">
-                        <p>Принтованное платье М-546</p>
+                        <p>Желтое платье М-537</p>
                       </div>
                       <div class="price">
-                        <p>114 BYN</p>
+                        <p><span class="num">114 </span><span class="cur">BYN</span></p>
                       </div>
-                    </div>
-                    <div class="like active"></div>
+                    </div><a class="like" data-popup="popup-wrap-wish"></a>
                   </div>
                 </li>
-                <li><a href="#">
-                    <div class="img"><img src="img/wish-img.jpg" alt=""/></div></a>
+                <li>
+                  <div class="prev-img"><a href="#" target="_blank"><img src="img/catalog-3.jpg" alt=""/></a><a href="#" data-popup="popup-wrap-card">
+                      <div class="show-prev"></div></a></div>
                   <div class="meta">
                     <div class="info">
                       <div class="clarify">
-                        <p>Принтованное платье М-546</p>
+                        <p>Желтое платье М-537</p>
                       </div>
                       <div class="price">
-                        <p>114 BYN</p>
+                        <p><span class="num">114 </span><span class="cur">BYN</span></p>
                       </div>
-                    </div>
-                    <div class="like active"></div>
+                    </div><a class="like" data-popup="popup-wrap-wish"></a>
                   </div>
                 </li>
               </ul>
@@ -315,8 +322,435 @@
       </div>
     </footer>
     <div class="hidden"></div>
+    <div class="popup-wrap item-card" id="popup-wrap-card">
+      <div class="popup" id="popup-card">
+        <div class="close"></div>
+        <div class="flex-wrap">
+          <div class="left-side">
+            <div class="gallery">
+              <div class="slider">
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+              </div>
+            </div>
+            <div class="preview">
+              <div class="nav">
+                <p class="pages"><span class="current">1</span><span class="slash"> / </span><span class="total">3</span></p>
+              </div>
+              <div class="slider">
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+                <div class="item"><img src="img/preview-1.png" alt=""/></div>
+              </div>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="caption product-title">
+              <p>Комбинезон М-566</p>
+            </div>
+            <div class="clarify">
+              <p>Стильный комбинезон с оригинальным принтом из текстильного полотна. Лиф с рельефами из пройм и центральной застёжкой на 7 пуговиц.  Вырез горловины круглый на обтачке.</p>
+            </div>
+            <div class="prices">
+              <div class="old-price">
+                <p> <span class="num">75</span><span class="cur"> BYN</span></p>
+              </div>
+              <div class="price">
+                <p> <span class="num">159</span><span class="cur"> BYN</span></p>
+              </div>
+            </div>
+            <div class="item-info">
+              <p class="height">
+                <p><b>Рост: </b>164</p>
+              </p>
+              <div class="size"><b>Размер:</b>
+                <div class="flex-wrap">
+                  <ul>
+                    <li>
+                      <p>42</p>
+                    </li>
+                    <li>
+                      <p>43</p>
+                    </li>
+                    <li class="active">
+                      <p>44</p>
+                    </li>
+                    <li>
+                      <p>46</p>
+                    </li>
+                  </ul><a class="table-sizes" href="#" data-popup="popup-wrap-sizes">Таблица размеров</a>
+                </div>
+              </div>
+              <div class="compound">
+                <p><b>Состав: </b>88% шерсть, 12% полиэстер</p>
+              </div>
+              <div class="flex-wrap counter-btn">
+                <div class="count">
+                  <div class="minus">
+                    <p>–</p>
+                  </div>
+                  <div class="current">
+                    <p>1</p>
+                  </div>
+                  <div class="plus">
+                    <p>+</p>
+                  </div>
+                </div>
+                <div class="btn-wrap"><a class="btn add-to-cart popup-btn" href="#">Добавить в корзину</a></div>
+              </div>
+            </div>
+            <div class="to-like"><img src="img/like-icon.png" alt=""/>
+              <p>Мне нравится</p>
+            </div>
+            <div class="more"><a href="#">Подробнее о товаре </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-wrap" id="popup-wrap-sizes">
+      <div class="popup" id="popup-sizes">
+        <div class="close"></div>
+        <div class="caption">
+          <p>Таблица размеров</p>
+        </div>
+        <div class="table">
+          <table class="head">
+            <tr>
+              <td>
+                <p>Российский размер</p>
+              </td>
+              <td>
+                <p>42</p>
+              </td>
+              <td>
+                <p>44</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+              <td>
+                <p>48</p>
+              </td>
+              <td>
+                <p>50</p>
+              </td>
+              <td>
+                <p>52</p>
+              </td>
+              <td>
+                <p>54</p>
+              </td>
+              <td>
+                <p>56</p>
+              </td>
+              <td>
+                <p>58</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Международный размер</p>
+              </td>
+              <td>
+                <p>S</p>
+              </td>
+              <td>
+                <p>M</p>
+              </td>
+              <td>
+                <p>L</p>
+              </td>
+              <td>
+                <p>XL</p>
+              </td>
+              <td>
+                <p>XXL</p>
+              </td>
+              <td>
+                <p>XXXL</p>
+              </td>
+              <td>
+                <p>XXXL</p>
+              </td>
+              <td>
+                <p>XXXL</p>
+              </td>
+              <td>
+                <p>XXXL</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Европейский размер</p>
+              </td>
+              <td>
+                <p>36</p>
+              </td>
+              <td>
+                <p>38</p>
+              </td>
+              <td>
+                <p>40</p>
+              </td>
+              <td>
+                <p>42</p>
+              </td>
+              <td>
+                <p>44</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+              <td>
+                <p>48</p>
+              </td>
+              <td>
+                <p>50</p>
+              </td>
+              <td>
+                <p>52</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Обхват груди, см</p>
+              </td>
+              <td>
+                <p>84</p>
+              </td>
+              <td>
+                <p>88</p>
+              </td>
+              <td>
+                <p>92</p>
+              </td>
+              <td>
+                <p>96</p>
+              </td>
+              <td>
+                <p>100</p>
+              </td>
+              <td>
+                <p>104</p>
+              </td>
+              <td>
+                <p>108</p>
+              </td>
+              <td>
+                <p>112</p>
+              </td>
+              <td>
+                <p>114</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Обхват талии, см</p>
+              </td>
+              <td>
+                <p>66</p>
+              </td>
+              <td>
+                <p>70</p>
+              </td>
+              <td>
+                <p>74</p>
+              </td>
+              <td>
+                <p>78</p>
+              </td>
+              <td>
+                <p>82</p>
+              </td>
+              <td>
+                <p>86</p>
+              </td>
+              <td>
+                <p>90</p>
+              </td>
+              <td>
+                <p>94</p>
+              </td>
+              <td>
+                <p>98</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Обхват бедер, см</p>
+              </td>
+              <td>
+                <p>92</p>
+              </td>
+              <td>
+                <p>96</p>
+              </td>
+              <td>
+                <p>100</p>
+              </td>
+              <td>
+                <p>104</p>
+              </td>
+              <td>
+                <p>108</p>
+              </td>
+              <td>
+                <p>112</p>
+              </td>
+              <td>
+                <p>116</p>
+              </td>
+              <td>
+                <p>120</p>
+              </td>
+              <td>
+                <p>124</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="flex-wrap">
+          <div class="left-side">
+            <div class="caption">
+              <p>Как определить свой размер?</p>
+            </div>
+            <div class="clarify">
+              <p>Для того чтобы выбрать правильный размер, необходимо снять следующие мерки:</p>
+              <div><b>Обхват груди</b>
+                <p>Измеряется по выступающим точкам груди вокруг тела.</p>
+              </div>
+              <div><b>Обхват талии</b>
+                <p>Измеряется строго горизонтально по самой узкой части тела</p>
+              </div>
+              <div><b>Обхват бедер</b>
+                <p>Измеряется го наиболее выступающим точкам бедер и ягодиц.</p>
+              </div>
+            </div>
+          </div>
+          <div class="right-side"><img src="img/table-img.png" alt=""/></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-wrap" id="popup-wrap-add">
+      <div class="popup" id="popup-add">
+        <div class="close"></div>
+        <div class="caption">
+          <p>Товар добавлен в корзину!</p>
+        </div>
+        <ul class="list">
+          <li class="item">
+            <div class="item-info">
+              <div class="img"><img src="img/catalog-1.jpg" alt=""/></div>
+              <div class="info">
+                <div class="item-name">
+                  <p>Платье из лёгкого шифона М-539</p>
+                </div>
+                <div class="item-size">
+                  <p>Размер: 44</p>
+                </div>
+              </div>
+            </div>
+            <div class="price">
+              <p>2 x 228 BYN</p>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item-info">
+              <div class="img"><img src="img/catalog-1.jpg" alt=""/></div>
+              <div class="info">
+                <div class="item-name">
+                  <p>Платье из лёгкого шифона М-539</p>
+                </div>
+                <div class="item-size">
+                  <p>Размер: 44</p>
+                </div>
+              </div>
+            </div>
+            <div class="price">
+              <p>2 x 228 BYN</p>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item-info">
+              <div class="img"><img src="img/catalog-1.jpg" alt=""/></div>
+              <div class="info">
+                <div class="item-name">
+                  <p>Платье из лёгкого шифона М-539</p>
+                </div>
+                <div class="item-size">
+                  <p>Размер: 44</p>
+                </div>
+              </div>
+            </div>
+            <div class="price">
+              <p>2 x 228 BYN</p>
+            </div>
+          </li>
+        </ul>
+        <div class="btns">
+          <div class="btn-wrap"><a class="btn" href="#">Продолжить покупки</a></div>
+          <div class="btn-wrap"><a class="btn order" href="#">Оформить заказ</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-wrap" id="popup-wrap-wish">
+      <div class="popup" id="popup-wish">
+        <div class="close"></div>
+        <div class="caption">
+          <p>Добавить в список желаний</p>
+        </div>
+        <div class="clarify">
+          <p>Чтобы добавить товар в список желаний, войдите с свой аккаунт</p>
+        </div>
+        <div class="flex-wrap">
+          <div class="left-side">
+            <form action="">
+              <div class="holder">
+                <input type="email" placeholder="Введите email" required="required"/>
+              </div>
+              <div class="holder">
+                <input type="password" placeholder="Введите пароль" required="required"/>
+              </div>
+              <div class="btns">
+                <div class="btn-wrap forgot"><a class="btn" href="#">Забыли пароль?</a></div>
+                <div class="btn-wrap login">
+                  <button class="btn" href="#">ВОЙТИ</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="right-side">
+            <div class="caption">
+              <p>Еще нет аккаунта?</p>
+            </div>
+            <div class="clarify">
+              <p>Регистрация позволит вам сохранять в избранное, быстро совершать покупки, просматривать историю заказов, получать свежую информацию о новинках.</p>
+            </div>
+            <div class="btn-wrap"><a class="btn" href="#">Регистрация</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-wrap" id="popup-wrap-success">
+      <div class="popup" id="popup-success">
+        <div class="close"></div>
+        <div class="caption">
+          <p>Ваше сообщение отправлено</p>
+        </div>
+        <div class="clarify">
+          <p>Мы свяжимся с вами в ближайшее время</p>
+        </div>
+      </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/jquery.tubular.1.0.js"></script>
     <script src="js/sticky.js"></script>
     <script src="js/common.js"></script>
   </body>

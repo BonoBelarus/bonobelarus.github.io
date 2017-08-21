@@ -120,26 +120,12 @@ html(lang="en")
 									a(href="#" target="_blank")
 										.total 6
 										img(draggable="false" src="img/icon-like.png", alt="")
-								li.cart.full
+								li.cart
 									a(href="#" target="_blank")
-										.total 2
+										.total
 										img(draggable="false" src="img/icon-cart.png", alt="")
 									.cart-preview
 										.b-t
-										.flex-wrap
-											.img
-												img(src="img/cart-prev-1.jpg", alt="")
-											.info
-												.caption
-													p Платье из лёгкого шифона М-539
-												.size
-													p
-														span Размер: 
-														| 44
-												.conter
-													p
-														span 2 x 
-														| 228 BYN
 										.btn-wrap
 											a.btn(href="#") Оформить заказ
 		section#catalog
@@ -437,7 +423,7 @@ html(lang="en")
 										p Nambawan
 					
 		.hidden
-		.popup-wrap#popup-wrap-card
+		.popup-wrap.item-card#popup-wrap-card
 			#popup-card.popup
 				.close
 				.flex-wrap
@@ -472,7 +458,7 @@ html(lang="en")
 								.item
 									img(src="img/preview-1.png", alt="")
 					.right-side
-						.caption
+						.caption.product-title
 							p Комбинезон М-566
 						.clarify
 							p Стильный комбинезон с оригинальным принтом из текстильного полотна. Лиф с рельефами из пройм и центральной застёжкой на 7 пуговиц.  Вырез горловины круглый на обтачке.
@@ -516,7 +502,7 @@ html(lang="en")
 									.plus
 										p +
 								.btn-wrap
-									a.btn(href="#" data-popup="popup-wrap-add") Добавить в корзину
+									a.btn.add-to-cart.popup-btn(href="#") Добавить в корзину
 						.to-like
 							img(src="img/like-icon.png", alt="")
 							p Мне нравится

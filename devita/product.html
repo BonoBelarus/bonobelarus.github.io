@@ -36,24 +36,12 @@
         <li><a href="#">Блог</a></li>
         <li class="dropdown"><a href="#">О бренде</a>
           <ul>
-            <li>
-              <p>О бренде</p>
-            </li>
-            <li>
-              <p>Lookbook</p>
-            </li>
-            <li>
-              <p>Новости</p>
-            </li>
-            <li>
-              <p>Сертификаты</p>
-            </li>
-            <li>
-              <p>Блог</p>
-            </li>
-            <li>
-              <p>Контакты</p>
-            </li>
+            <li><a href="#">О бренде</a></li>
+            <li><a href="#">Lookbook</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Сертификаты</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Контакты</a></li>
           </ul>
         </li>
       </ul>
@@ -138,26 +126,12 @@
             <div class="states">
               <ul>
                 <li class="search"><img draggable="false" src="img/icon-search.png" alt=""/></li>
-                <li class="like"><a href="#" target="_blank">
+                <li class="like"><a href="#">
                     <div class="total">6</div><img draggable="false" src="img/icon-like.png" alt=""/></a></li>
-                <li class="cart full"><a href="#" target="_blank">
-                    <div class="total">2</div><img draggable="false" src="img/icon-cart.png" alt=""/></a>
+                <li class="cart"><a href="#">
+                    <div class="total"> </div><img draggable="false" src="img/icon-cart.png" alt=""/></a>
                   <div class="cart-preview">
                     <div class="b-t"></div>
-                    <div class="flex-wrap">
-                      <div class="img"><img src="img/cart-prev-1.jpg" alt=""/></div>
-                      <div class="info">
-                        <div class="caption">
-                          <p>Платье из лёгкого шифона М-539</p>
-                        </div>
-                        <div class="size">
-                          <p><span>Размер: </span>44</p>
-                        </div>
-                        <div class="conter">
-                          <p><span>2 x </span>228 BYN</p>
-                        </div>
-                      </div>
-                    </div>
                     <div class="btn-wrap"><a class="btn" href="#">Оформить заказ</a></div>
                   </div>
                 </li>
@@ -167,7 +141,7 @@
         </div>
       </header>
     </div>
-    <section id="product-card">
+    <section class="item-card" id="product-card">
       <div class="content">
         <div class="left-side">
           <div class="gallery">
@@ -210,7 +184,7 @@
               <li></li>
             </ul>
           </div>
-          <h1>Комбинезон М-566</h1>
+          <h1 class="product-title">Комбинезон М-566</h1>
           <div class="clarify">
             <p>Стильный комбинезон с оригинальным принтом из текстильного полотна. Лиф с рельефами из пройм и центральной застёжкой на 7 пуговиц. Вырез горловины круглый на обтачке.</p>
           </div>
@@ -258,7 +232,7 @@
                   <p>+</p>
                 </div>
               </div>
-              <div class="btn-wrap"><a class="btn" href="#" data-popup="popup-wrap-add">Добавить в корзину</a></div>
+              <div class="btn-wrap add-to-cart"><a class="btn" href="#">Добавить в корзину</a></div>
             </div>
             <div class="to-like"><img src="img/like-icon.png" alt=""/>
               <p>Добавить в список желаний</p>
@@ -634,38 +608,90 @@
         <h3>Вам может понравиться</h3>
         <div class="list">
           <ul>
-            <li><a href="#">
-                <div class="popular-img"><img draggable="false" src="img/popular-1.jpg" alt=""/></div>
-                <div class="clarify">
-                  <p>Желтое платье М-537</p>
-                </div>
-                <div class="price">
-                  <p>114 BYN</p>
-                </div></a></li>
-            <li><a href="#">
-                <div class="popular-img"><img draggable="false" src="img/popular-2.jpg" alt=""/></div>
-                <div class="clarify">
-                  <p>Желтое платье М-537</p>
-                </div>
-                <div class="price">
-                  <p>114 BYN</p>
-                </div></a></li>
-            <li><a href="#">
-                <div class="popular-img"><img draggable="false" src="img/popular-3.jpg" alt=""/></div>
-                <div class="clarify">
-                  <p>Желтое платье М-537</p>
-                </div>
-                <div class="price">
-                  <p>114 BYN</p>
-                </div></a></li>
-            <li><a href="#">
-                <div class="popular-img"><img draggable="false" src="img/popular-4.jpg" alt=""/></div>
-                <div class="clarify">
-                  <p>Желтое платье М-537</p>
-                </div>
-                <div class="price">
-                  <p>114 BYN</p>
-                </div></a></li>
+            <li>
+              <div class="prev-img"><a href="#" target="_blank"><img src="img/catalog-3.jpg" alt=""/></a><a href="#" data-popup="popup-wrap-card">
+                  <div class="show-prev"></div></a></div>
+              <div class="meta">
+                <div class="info">
+                  <div class="clarify">
+                    <p>Желтое платье М-537</p>
+                  </div>
+                  <div class="price">
+                    <p><span class="num">114 </span><span class="cur">BYN</span></p>
+                  </div>
+                </div><a class="like" data-popup="popup-wrap-wish"></a>
+              </div>
+            </li>
+            <li>
+              <div class="prev-img"><a href="#" target="_blank"><img src="img/catalog-3.jpg" alt=""/></a><a href="#" data-popup="popup-wrap-card">
+                  <div class="show-prev"></div></a></div>
+              <div class="meta">
+                <div class="info">
+                  <div class="clarify">
+                    <p>Желтое платье М-537</p>
+                  </div>
+                  <div class="price">
+                    <p><span class="num">114 </span><span class="cur">BYN</span></p>
+                  </div>
+                </div><a class="like" data-popup="popup-wrap-wish"></a>
+              </div>
+            </li>
+            <li>
+              <div class="prev-img"><a href="#" target="_blank"><img src="img/catalog-3.jpg" alt=""/></a><a href="#" data-popup="popup-wrap-card">
+                  <div class="show-prev"></div></a></div>
+              <div class="meta">
+                <div class="info">
+                  <div class="clarify">
+                    <p>Желтое платье М-537</p>
+                  </div>
+                  <div class="price">
+                    <p><span class="num">114 </span><span class="cur">BYN</span></p>
+                  </div>
+                </div><a class="like" data-popup="popup-wrap-wish"></a>
+              </div>
+            </li>
+            <li>
+              <div class="prev-img"><a href="#" target="_blank"><img src="img/catalog-3.jpg" alt=""/></a><a href="#" data-popup="popup-wrap-card">
+                  <div class="show-prev"></div></a></div>
+              <div class="meta">
+                <div class="info">
+                  <div class="clarify">
+                    <p>Желтое платье М-537</p>
+                  </div>
+                  <div class="price">
+                    <p><span class="num">114 </span><span class="cur">BYN</span></p>
+                  </div>
+                </div><a class="like" data-popup="popup-wrap-wish"></a>
+              </div>
+            </li>
+            <li>
+              <div class="prev-img"><a href="#" target="_blank"><img src="img/catalog-3.jpg" alt=""/></a><a href="#" data-popup="popup-wrap-card">
+                  <div class="show-prev"></div></a></div>
+              <div class="meta">
+                <div class="info">
+                  <div class="clarify">
+                    <p>Желтое платье М-537</p>
+                  </div>
+                  <div class="price">
+                    <p><span class="num">114 </span><span class="cur">BYN</span></p>
+                  </div>
+                </div><a class="like" data-popup="popup-wrap-wish"></a>
+              </div>
+            </li>
+            <li>
+              <div class="prev-img"><a href="#" target="_blank"><img src="img/catalog-3.jpg" alt=""/></a><a href="#" data-popup="popup-wrap-card">
+                  <div class="show-prev"></div></a></div>
+              <div class="meta">
+                <div class="info">
+                  <div class="clarify">
+                    <p>Желтое платье М-537</p>
+                  </div>
+                  <div class="price">
+                    <p><span class="num">114 </span><span class="cur">BYN</span></p>
+                  </div>
+                </div><a class="like" data-popup="popup-wrap-wish"></a>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -674,11 +700,11 @@
       <div class="content">
         <div class="social">
           <ul>
-            <li class="vk"><a href="#"><img draggable="false" src="img/vk.png" alt=""/></a></li>
-            <li class="fb"><a href="#"><img draggable="false" src="img/fb.png" alt=""/></a></li>
-            <li class="insta"><a href="#"><img draggable="false" src="img/insta.png" alt=""/></a></li>
-            <li class="ok"><a href="#"><img draggable="false" src="img/ok.png" alt=""/></a></li>
-            <li class="youtube"><a href="#"><img draggable="false" src="img/youtube.png" alt=""/></a></li>
+            <li class="vk"><a href="#"><img class="desktop" draggable="false" src="img/vk.png" alt=""/><img class="mobile" src="img/vk_logo.svg" alt=""/></a></li>
+            <li class="fb"><a href="#"><img class="desktop" draggable="false" src="img/fb.png" alt=""/><img class="mobile" src="img/fb_logo-small.svg" alt=""/></a></li>
+            <li class="insta"><a href="#"><img class="desktop" draggable="false" src="img/insta.png" alt=""/><img class="mobile" src="img/insta_logo-small.svg" alt=""/></a></li>
+            <li class="ok"><a href="#"><img class="desktop" draggable="false" src="img/ok.png" alt=""/><img class="mobile" src="img/ok_logo-small.svg" alt=""/></a></li>
+            <li class="youtube"><a href="#"><img class="desktop" draggable="false" src="img/youtube.png" alt=""/><img class="mobile" src="img/yt_logo-small.svg" alt=""/></a></li>
           </ul>
         </div>
         <div class="footer-top">
@@ -845,7 +871,7 @@
                     <p>+</p>
                   </div>
                 </div>
-                <div class="btn-wrap"><a class="btn" href="#">Добавить в корзину</a></div>
+                <div class="btn-wrap"><a class="btn add-to-cart" href="#">Добавить в корзину</a></div>
               </div>
             </div>
             <div class="to-like"><img src="img/like-icon.png" alt=""/>
