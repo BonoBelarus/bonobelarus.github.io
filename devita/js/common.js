@@ -101,7 +101,6 @@ document.addEventListener('DOMContentLoaded', function(){
 		$('#descr-and-rev .tabs .to-open').click(function(e){
 				$(e.currentTarget).next().stop().slideToggle().closest('li').toggleClass('active');
 		});
-		$('#descr-and-rev li:first-child .to-open').trigger("click");
 	}
 
 	var best_of_slider = $('#best-of .slider')
