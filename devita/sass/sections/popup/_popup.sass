@@ -241,12 +241,13 @@
             font-size: 30px
             cursor: pointer
     .to-like
-        margin-top: 30px
-        font-size: 14px
-        display: flex
-        justify-content: flex-start
-        align-items: center
-        cursor: pointer
+        display: none
+        // margin-top: 30px
+        // font-size: 14px
+        // display: flex
+        // justify-content: flex-start
+        // align-items: center
+        // cursor: pointer
         img
             margin-right: 5px
     .more
@@ -419,6 +420,103 @@
     .clarify
         font-size: 16px
 
+#popup-wrap-testimonials
+    // transform: scale(1)
+    // opacity: 1
+    .popup
+        // transform: scale(1)
+        // opacity: 1
+        max-width: 570px
+        background-color: #fff
+        padding: 60px 50px
+    .caption
+        font-family: "Playfair Display"
+        font-size: 28px
+        color: #1c2335
+    form
+        margin-top: 30px
+        input,
+        textarea
+            width: 100%
+            margin-top: 5px
+            border: 1px solid #d2d3d6
+            font-family: 'Open Sans', sans-serif
+            font-size: 18px
+        textarea
+            height: 100px
+            resize: vertical
+            padding: 15px
+            &:focus
+                outline: none
+        input
+            line-height: 45px
+            height: 45px
+            padding-left: 15px
+        .holder:not(:first-child)
+            margin-top: 15px
+        .btn-wrap
+            text-align: center
+            margin: 15px 0
+        .btn
+            background-color: #151e32
+            color: #fff
+            cursor: pointer
+            border: none
+            &:hover
+                box-shadow: none
+        .notion
+            text-align: center
+        .captcha
+            margin-top: 20px
+        img
+            max-width: 100%
+    .stars
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        ul
+            margin-left: 35px
+            display: flex
+            justify-content: flex-start
+            align-items: center
+        li
+            height: 25px
+            width: 25px
+            &.active
+                label
+                    background: url(../img/star.png) center no-repeat
+                    background-size: contain
+            input
+                display: none
+            label
+                cursor: pointer
+                display: inline-block
+                width: 25px
+                height: 25px
+                background: url(../img/star-empty.png) center no-repeat
+                background-size: contain
+    .notion
+        font-size: 13px
+        line-height: 1.3em
+
+.popup-notion.active
+    transform: translateY(0)
+.popup-notion
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 9
+    text-align: center
+    font-weight: 700
+    transition: .5s
+    transform: translateY(-105%)
+    .popup
+        padding: 20px
+        background-color: #fff
+        display: inline-block
+        box-shadow: 0 0 0 1px #ccc
+
 @media only screen and (max-width : 1199px)
     #popup-card .gallery
         display: none
@@ -444,8 +542,9 @@
     #popup-card .counter-btn .btn-wrap
         margin-left: 20px
     #popup-card .more
-        left: initial
-        right: 0
+        bottom: 0
+    #popup-card .right-side
+        padding-bottom: 50px
     
     #popup-wish
         max-width: 620px
@@ -502,6 +601,8 @@
 @media only screen and (max-width : 499px)
     #popup-card .caption
         line-height: 1.1em
+    #popup-wrap-testimonials .popup
+        padding: 60px 20px
     #popup-card
         padding: 0 0 20px
         .right-side

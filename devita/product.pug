@@ -7,7 +7,7 @@ html(lang="en")
 		title Devita
 		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700|Playfair+Display:400,400i&amp;subset=cyrillic" rel="stylesheet")
 		link(href="css/main.css", rel="stylesheet")
-		
+
 	body
 		.mobile-menu
 			.overlay
@@ -274,7 +274,8 @@ html(lang="en")
 													p с отпариванием
 								.right-side
 									.video
-										img(src="img/video.jpg", alt="")
+										a(data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
+											img(src="img/video.jpg", alt="")
 									.clarify
 										p Видеообзор платья от DeVita. Модель 566.
 						li
@@ -287,13 +288,18 @@ html(lang="en")
 									.stars
 										ul
 											li
+												a(href="#" data-popup="popup-wrap-testimonials")
 											li
+												a(href="#" data-popup="popup-wrap-testimonials")
 											li
+												a(href="#" data-popup="popup-wrap-testimonials")
 											li
+												a(href="#" data-popup="popup-wrap-testimonials")
 											li
+												a(href="#" data-popup="popup-wrap-testimonials")
 										p на основе 5 оценок
 									.btn-wrap
-										a.btn(href="#") Оставить Отзыв
+										a.btn(href="#" data-popup="popup-wrap-testimonials") Оставить Отзыв
 								ul.review-list
 									li
 										.review-meta
@@ -386,7 +392,8 @@ html(lang="en")
 											p с отпариванием
 						.right-side
 							.video
-								img(src="img/video.jpg", alt="")
+								a(data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
+									img(src="img/video.jpg", alt="")
 							.clarify
 								p Видеообзор платья от DeVita. Модель 566.
 					.item.reviews
@@ -394,13 +401,18 @@ html(lang="en")
 							.stars
 								ul
 									li
+										a(href="#" data-popup="popup-wrap-testimonials")
 									li
+										a(href="#" data-popup="popup-wrap-testimonials")
 									li
+										a(href="#" data-popup="popup-wrap-testimonials")
 									li
+										a(href="#" data-popup="popup-wrap-testimonials")
 									li
+										a(href="#" data-popup="popup-wrap-testimonials")
 								p на основе 5 оценок
 							.btn-wrap
-								a.btn(href="#") Оставить Отзыв
+								a.btn(href="#" data-popup="popup-wrap-testimonials") Оставить Отзыв
 						ul.review-list
 							li
 								.review-meta
@@ -512,36 +524,6 @@ html(lang="en")
 				h3 Вам может понравиться
 				.list
 					ul
-						li
-							.prev-img
-								a(href="#" target="_blank")
-									img(src="img/catalog-3.jpg", alt="")
-								a(href="#" data-popup="popup-wrap-card")
-									.show-prev
-							.meta
-								.info
-									.clarify
-										p Желтое платье М-537
-									.price
-										p
-											span.num 114 
-											span.cur BYN
-								a.like(data-popup="popup-wrap-wish")
-						li
-							.prev-img
-								a(href="#" target="_blank")
-									img(src="img/catalog-3.jpg", alt="")
-								a(href="#" data-popup="popup-wrap-card")
-									.show-prev
-							.meta
-								.info
-									.clarify
-										p Желтое платье М-537
-									.price
-										p
-											span.num 114 
-											span.cur BYN
-								a.like(data-popup="popup-wrap-wish")
 						li
 							.prev-img
 								a(href="#" target="_blank")
@@ -939,6 +921,43 @@ html(lang="en")
 								p Измеряется го наиболее выступающим точкам бедер и ягодиц.
 					.right-side
 						img(src="img/table-img.png", alt="")
+		.popup-wrap#popup-wrap-testimonials
+			.popup#popup-testimonials
+				.close
+				.caption
+					p Отправить отзыв
+				form(action="")
+					.holder
+						label Ваше имя
+						input(type="text" name="name" required)
+					.holder
+						label Текст отзыва
+						textarea(tabe="testimonial" required)
+					.holder.stars
+						label Оценка
+						ul
+							li.active
+								input#star-1(type="radio" name="stars")
+								label(for="star-1")
+							li.active
+								input#star-2(type="radio" name="stars")
+								label(for="star-2")
+							li.active
+								input#star-3(type="radio" name="stars")
+								label(for="star-3")
+							li.active
+								input#star-4(type="radio" name="stars" checked)
+								label(for="star-4")
+							li
+								input#star-5(type="radio" name="stars")
+								label(for="star-5")
+					.captcha
+						img(src="img/recaptcha.png", alt="")
+					.btn-wrap
+						button.btn Отправить отзыв
+					.notion
+						p Внимание! Публикация производится только после 
+						p предварительной модерации
 		.popup-wrap#popup-wrap-add
 			.popup#popup-add
 				.close
@@ -1020,5 +1039,6 @@ html(lang="en")
 		script(src="js/slick.min.js")
 		script(src="js/jquery.tubular.1.0.js")
 		script(src="js/ion.rangeSlider.min.js")
+		script(src="js/jquery.fancybox.min.js")
 		script(src="js/sticky.js")
 		script(src="js/common.js")

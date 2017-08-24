@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	}else{
 		$('#descr-and-rev .tabs .to-open').click(function(e){
-				$(e.currentTarget).next().slideToggle().closest('li').toggleClass('active');
+				$(e.currentTarget).next().stop().slideToggle().closest('li').toggleClass('active');
 		});
 		$('#descr-and-rev li:first-child .to-open').trigger("click");
 	}
@@ -418,9 +418,30 @@ document.addEventListener('DOMContentLoaded', function(){
 		$('body').removeClass('disabled');
 	});
 
+	var like_num = +$('.states .like .total').text();
+	var num = 0;
+	$('a[data-notion]').click(function(e){
+		if($(this).hasClass('active') != true){
+			num -= 1;
+			$('.states .like .total').text(like_num + num);
+			if($('.states .like .total').text().trim() == 0){
+				console.log('true');
+				$('.states .like .total').text(' ');
+			}
+			return;
+		}else{
+			var notion = $(this).data('notion');
+			num += 1;
+			$('.states .like .total').text(like_num + num);
+			$('.'+notion).addClass('active');
+			setTimeout(function(){
+				$('.'+notion).removeClass('active');
+			}, 3000);
+		}
+	});
+
 	$('a[data-popup]').click(function(e){
 		e.preventDefault();
-		$('body').addClass('disabled');
 
 		var popup = $(this).data('popup');
 
@@ -437,21 +458,32 @@ document.addEventListener('DOMContentLoaded', function(){
 						}, 3000);
 					});
 				}, 400);
-			break;
+				break;
 			case "popup-wrap-card":
+				$('#' + popup).addClass('active');
+				$('body').addClass('disabled');
 				var item_price = +$('.item-card .price .num').text().trim();
 				var count = +$('.current').last().text().trim();
 				var base_price = item_price/count;
-				console.log(base_price);
 				$('.item-card .price .num').text(item_price / count);
 				$('.item-card .current').text(1);
+			break;
+			case "popup-wrap-wish":
+				if($(this).hasClass('active') != true) return;
+				$('#' + popup).addClass('active');
+				$('body').addClass('disabled');
+			break;
 			default:
+				$('body').addClass('disabled');
 				$('#' + popup).addClass('active');
 		}
 	});
 
 	$('header .search').click(function(){
-		$('header .search-bar').slideDown();
+		$('header .search-bar').slideToggle().find('input');
+		setTimeout(function(){
+			$('header .search-bar').find('input').focus();
+		}, 500)
 	});
 	$('header .search-bar .close').click(function(){
 		$('.search-bar').slideUp();
@@ -532,8 +564,87 @@ document.addEventListener('DOMContentLoaded', function(){
 		var tot_price = +$('form .total .num').text().trim();
 		var item_price = +$(this).closest('li').find('.price .num').text().trim();
 		
-		console.log(tot_price);
 		$(this).closest('li').remove();
 		$('form .total .num').text(tot_price - item_price);
 	});
+
+	$('#popup-testimonials .stars input').change(function(){
+		var current = $(this).closest('li').index();
+		$('#popup-testimonials .stars li').removeClass('active');
+		$(this).closest('li').addClass('active').prevAll().addClass('active');
+	});
+
+	$('#popup-testimonials .stars li').hover(function(){
+		$('#popup-testimonials .stars li').removeClass('active');
+		console.log('success');
+		$(this).addClass('active').prevAll().addClass('active');
+	},function(){
+		$('#popup-testimonials .stars li').removeClass('active');
+		$(this).closest('ul').find('input:checked').closest('li').addClass('active').prevAll().addClass('active');
+	});
+	
+	var cour_door_dpd = $('#make-order .delivery .item').first().clone();
+	$(cour_door_dpd).find('.caption').text('Курьером DPD «до двери»');
+	$(cour_door_dpd).find('.clarify').text('от 3 до 4 рабочих дней');
+	$(cour_door_dpd).find('.price').text('450 руб.');
+	
+	var self_dpd = $('#make-order .delivery .item').first().clone();
+	$(self_dpd).find('.caption').text('Самовывоз со склада DPD');
+	$(self_dpd).find('.clarify').text('от 3 до 4 рабочих дней');
+	$(self_dpd).find('.price').text('200 руб.');
+
+	var cour_door_ems = $('#make-order .delivery .item').first().clone();
+	$(cour_door_ems).find('.caption').text('Курьером EMS «до двери»');
+	$(cour_door_ems).find('.clarify').text('от 1 до 3 рабочих дней');
+	$(cour_door_ems).find('.price').text('5 бел.руб.');
+	
+	var belpost = $('#make-order .delivery .item').first().clone();
+	$(belpost).find('.caption').text('В отделение Белпочты');
+	$(belpost).find('.clarify').text('от 2 до 5 рабочих дней');
+	$(belpost).find('.price').text('бесплатно');
+	
+	var personal = $('#make-order .delivery .item').first().clone();
+	$(personal).find('.caption').text('Персональный способ доставки');
+	$(personal).find('.clarify').text('Наши менеджеры свяжутся с вами и предложат оптимальный способ доставки для Вас.');
+	$(personal).find('.price').text('');
+
+	$('#make-order select[name="country"]').change(function(){
+		var value = $(this).val();
+		var payment;
+		var items_wrap = $('#make-order .delivery .items');
+
+		$(items_wrap).empty();
+		switch(value){
+			case 'Россия':
+				payment = 'Карта Visa/Mastercard';
+				$(items_wrap).append(cour_door_dpd);
+				$(items_wrap).append(self_dpd);
+				$('.pay-method input[value="Наложенный платеж"]').closest('.item').show();
+			break;
+			case 'Казахстан':
+				payment = 'Карта Visa/Mastercard';
+				$(items_wrap).append(cour_door_dpd);
+				$(items_wrap).append(self_dpd);
+				$('.pay-method input[value="Наложенный платеж"]').closest('.item').show();
+			break;
+			case 'Украина':
+				payment = 'Карта Visa/Mastercard';
+				$(items_wrap).append(belpost);
+				$('.pay-method input[value="Наложенный платеж"]').closest('.item').hide();
+			break;
+			case 'Беларусь':
+				payment = 'Карта Visa/Mastercard/Белкард';
+				$(items_wrap).append(cour_door_ems);
+				$(items_wrap).append(belpost);
+				$('.pay-method input[value="Наложенный платеж"]').closest('.item').show();
+				break;
+			default:
+				payment = 'Карта Visa/Mastercard';
+				$(items_wrap).append(personal);
+				$('.pay-method input[value="Наложенный платеж"]').closest('.item').hide();
+			}
+			
+			$('#pay-method-1').val(payment);
+			$('label[for="pay-method-1"] .caption').text(payment);
+		});
 });

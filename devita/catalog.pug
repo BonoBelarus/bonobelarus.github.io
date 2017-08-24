@@ -15,7 +15,9 @@ html(lang="en")
 				li.settings
 					ul
 						li.login
-							a(href="#") Войти / Регистрация
+							a(href="#") Войти
+							|  / 
+							a(href="#") Регистрация
 						li.dropdown
 							a(href="#") Валюта: BYN
 							ul
@@ -83,7 +85,9 @@ html(lang="en")
 										li
 											p EURO
 								li.login
-									a(href="#")  Войти / Регистрация
+									a(href="#") Войти
+									|  / 
+									a(href="#") Регистрация
 				.major-menu
 					.content
 						.logo
@@ -118,7 +122,7 @@ html(lang="en")
 									img(draggable="false" src="img/icon-search.png", alt="")
 								li.like
 									a(href="#" target="_blank")
-										.total 6
+										.total
 										img(draggable="false" src="img/icon-like.png", alt="")
 								li.cart
 									a(href="#" target="_blank")
@@ -238,7 +242,7 @@ html(lang="en")
 										p
 											span.num 114 
 											span.cur BYN
-								a.like(data-popup="popup-wrap-wish")
+								a.like(data-popup="popup-wrap-wish" data-notion="popup-notion")
 						li
 							.prev-img
 								a(href="#" target="_blank")
@@ -253,7 +257,7 @@ html(lang="en")
 										p
 											span.num 114 
 											span.cur BYN
-								a.like(data-popup="popup-wrap-wish")
+								a.like(data-popup="popup-wrap-wish" data-notion="popup-notion")
 						li
 							.prev-img
 								a(href="#" target="_blank")
@@ -268,7 +272,7 @@ html(lang="en")
 										p
 											span.num 114 
 											span.cur BYN
-								a.like(data-popup="popup-wrap-wish")
+								a.like(data-popup="popup-wrap-wish" data-notion="popup-notion")
 						li
 							.prev-img
 								a(href="#" target="_blank")
@@ -283,7 +287,7 @@ html(lang="en")
 										p
 											span.num 114 
 											span.cur BYN
-								a.like(data-popup="popup-wrap-wish")
+								a.like(data-popup="popup-wrap-wish" data-notion="popup-notion")
 						li
 							.prev-img
 								a(href="#" target="_blank")
@@ -298,7 +302,7 @@ html(lang="en")
 										p
 											span.num 114 
 											span.cur BYN
-								a.like(data-popup="popup-wrap-wish")
+								a.like(data-popup="popup-wrap-wish" data-notion="popup-notion")
 						li
 							.prev-img
 								a(href="#" target="_blank")
@@ -313,7 +317,7 @@ html(lang="en")
 										p
 											span.num 114 
 											span.cur BYN
-								a.like(data-popup="popup-wrap-wish")
+								a.like(data-popup="popup-wrap-wish" data-notion="popup-notion")
 				.pagination
 					.prev
 					ul
@@ -735,9 +739,15 @@ html(lang="en")
 					p Ваше сообщение отправлено
 				.clarify
 					p Мы свяжимся с вами в ближайшее время
+		.popup-notion
+			.popup
+				.caption
+					p Товар успешно добавлен
+					p в список желаний!
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 		script(src="js/slick.min.js")
 		script(src="js/ion.rangeSlider.min.js")
 		script(src="js/jquery.tubular.1.0.js")
+		script(src="js/jquery.fancybox.min.js")
 		script(src="js/sticky.js")
 		script(src="js/common.js")

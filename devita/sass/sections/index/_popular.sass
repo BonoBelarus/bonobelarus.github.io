@@ -52,10 +52,11 @@
 			justify-content: space-between
 			align-items: center
 			flex-wrap: wrap
+			min-width: 1170px
 		li
 			text-align: left
 			width: 100%
-			max-width: 370px
+			max-width: 270px
 			margin-top: 50px
 		.meta
 			display: flex
@@ -89,6 +90,10 @@
 			margin-left: 30px
 
 @media only screen and (max-width : 767px)
+	#popular .list ul
+		min-width: 930px
+	#popular .list li
+		max-width: 210px
 	#popular.could-like
 		padding: 50px 0 20px
 		h3

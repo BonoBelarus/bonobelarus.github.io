@@ -37,19 +37,23 @@ html(lang="en")
 					a(href="#") О бренде
 					ul
 						li
-							p О бренде
+							a(href="#") О бренде
 						li
-							p Lookbook
+							a(href="#") Lookbook
 						li
-							p Новости
+							a(href="#") Новости
 						li
-							p Сертификаты
+							a(href="#") Сертификаты
 						li
-							p Блог
+							a(href="#") Блог
 						li
-							p Контакты
+							a(href="#") Контакты
 		.header-wrap
 			header
+				.search-bar
+					.content
+						.close
+						input(type="search" placeholder="Найти на сайте")
 				.top-line
 					.content
 						.left-side
@@ -62,9 +66,23 @@ html(lang="en")
 							ul
 								li.drop
 									a(href="#") Rus
+									ul
+										li
+											p Blr
+										li
+											p Ukr
+										li
+											p Kaz
 								li.drop
 									a(href="#") Валюта: BYN
-								li
+									ul
+										li
+											p RUR
+										li
+											p KAZ
+										li
+											p EURO
+								li.login
 									a(href="#")  Войти / Регистрация
 				.major-menu
 					.content
@@ -97,32 +115,17 @@ html(lang="en")
 						.states
 							ul
 								li.search
-									a(href="#" target="_blank")
-										img(draggable="false" src="img/icon-search.png", alt="")
+									img(draggable="false" src="img/icon-search.png", alt="")
 								li.like
-									a(href="#" target="_blank")
+									a(href="#")
 										.total 6
 										img(draggable="false" src="img/icon-like.png", alt="")
-								li.cart.full
-									a(href="#" target="_blank")
-										.total 2
+								li.cart
+									a(href="#")
+										.total 
 										img(draggable="false" src="img/icon-cart.png", alt="")
 									.cart-preview
 										.b-t
-										.flex-wrap
-											.img
-												img(src="img/cart-prev-1.jpg", alt="")
-											.info
-												.caption
-													p Платье из лёгкого шифона М-539
-												.size
-													p
-														span Размер: 
-														| 44
-												.conter
-													p
-														span 2 x 
-														| 228 BYN
 										.btn-wrap
 											a.btn(href="#") Оформить заказ
 		section#cart

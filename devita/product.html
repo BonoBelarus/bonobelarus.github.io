@@ -288,7 +288,7 @@
                   </div>
                 </div>
                 <div class="right-side">
-                  <div class="video"><img src="img/video.jpg" alt=""/></div>
+                  <div class="video"><a data-fancybox="data-fancybox" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><img src="img/video.jpg" alt=""/></a></div>
                   <div class="clarify">
                     <p>Видеообзор платья от DeVita. Модель 566.</p>
                   </div>
@@ -303,15 +303,15 @@
                 <div class="top-line">
                   <div class="stars">
                     <ul>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
+                      <li><a href="#" data-popup="popup-wrap-testimonials"></a></li>
+                      <li><a href="#" data-popup="popup-wrap-testimonials"></a></li>
+                      <li><a href="#" data-popup="popup-wrap-testimonials"></a></li>
+                      <li><a href="#" data-popup="popup-wrap-testimonials"></a></li>
+                      <li><a href="#" data-popup="popup-wrap-testimonials"></a></li>
                     </ul>
                     <p>на основе 5 оценок</p>
                   </div>
-                  <div class="btn-wrap"><a class="btn" href="#">Оставить Отзыв</a></div>
+                  <div class="btn-wrap"><a class="btn" href="#" data-popup="popup-wrap-testimonials">Оставить Отзыв</a></div>
                 </div>
                 <ul class="review-list">
                   <li>
@@ -445,7 +445,7 @@
               </div>
             </div>
             <div class="right-side">
-              <div class="video"><img src="img/video.jpg" alt=""/></div>
+              <div class="video"><a data-fancybox="data-fancybox" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><img src="img/video.jpg" alt=""/></a></div>
               <div class="clarify">
                 <p>Видеообзор платья от DeVita. Модель 566.</p>
               </div>
@@ -455,15 +455,15 @@
             <div class="top-line">
               <div class="stars">
                 <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                  <li><a href="#" data-popup="popup-wrap-testimonials"></a></li>
+                  <li><a href="#" data-popup="popup-wrap-testimonials"></a></li>
+                  <li><a href="#" data-popup="popup-wrap-testimonials"></a></li>
+                  <li><a href="#" data-popup="popup-wrap-testimonials"></a></li>
+                  <li><a href="#" data-popup="popup-wrap-testimonials"></a></li>
                 </ul>
                 <p>на основе 5 оценок</p>
               </div>
-              <div class="btn-wrap"><a class="btn" href="#">Оставить Отзыв</a></div>
+              <div class="btn-wrap"><a class="btn" href="#" data-popup="popup-wrap-testimonials">Оставить Отзыв</a></div>
             </div>
             <ul class="review-list">
               <li>
@@ -608,34 +608,6 @@
         <h3>Вам может понравиться</h3>
         <div class="list">
           <ul>
-            <li>
-              <div class="prev-img"><a href="#" target="_blank"><img src="img/catalog-3.jpg" alt=""/></a><a href="#" data-popup="popup-wrap-card">
-                  <div class="show-prev"></div></a></div>
-              <div class="meta">
-                <div class="info">
-                  <div class="clarify">
-                    <p>Желтое платье М-537</p>
-                  </div>
-                  <div class="price">
-                    <p><span class="num">114 </span><span class="cur">BYN</span></p>
-                  </div>
-                </div><a class="like" data-popup="popup-wrap-wish"></a>
-              </div>
-            </li>
-            <li>
-              <div class="prev-img"><a href="#" target="_blank"><img src="img/catalog-3.jpg" alt=""/></a><a href="#" data-popup="popup-wrap-card">
-                  <div class="show-prev"></div></a></div>
-              <div class="meta">
-                <div class="info">
-                  <div class="clarify">
-                    <p>Желтое платье М-537</p>
-                  </div>
-                  <div class="price">
-                    <p><span class="num">114 </span><span class="cur">BYN</span></p>
-                  </div>
-                </div><a class="like" data-popup="popup-wrap-wish"></a>
-              </div>
-            </li>
             <li>
               <div class="prev-img"><a href="#" target="_blank"><img src="img/catalog-3.jpg" alt=""/></a><a href="#" data-popup="popup-wrap-card">
                   <div class="show-prev"></div></a></div>
@@ -1106,6 +1078,57 @@
         </div>
       </div>
     </div>
+    <div class="popup-wrap" id="popup-wrap-testimonials">
+      <div class="popup" id="popup-testimonials">
+        <div class="close"></div>
+        <div class="caption">
+          <p>Отправить отзыв</p>
+        </div>
+        <form action="">
+          <div class="holder">
+            <label>Ваше имя</label>
+            <input type="text" name="name" required="required"/>
+          </div>
+          <div class="holder">
+            <label>Текст отзыва</label>
+            <textarea tabe="testimonial" required="required"></textarea>
+          </div>
+          <div class="holder stars">
+            <label>Оценка</label>
+            <ul>
+              <li class="active">
+                <input id="star-1" type="radio" name="stars"/>
+                <label for="star-1"></label>
+              </li>
+              <li class="active">
+                <input id="star-2" type="radio" name="stars"/>
+                <label for="star-2"></label>
+              </li>
+              <li class="active">
+                <input id="star-3" type="radio" name="stars"/>
+                <label for="star-3"></label>
+              </li>
+              <li class="active">
+                <input id="star-4" type="radio" name="stars" checked="checked"/>
+                <label for="star-4"></label>
+              </li>
+              <li>
+                <input id="star-5" type="radio" name="stars"/>
+                <label for="star-5"></label>
+              </li>
+            </ul>
+          </div>
+          <div class="captcha"><img src="img/recaptcha.png" alt=""/></div>
+          <div class="btn-wrap">
+            <button class="btn">Отправить отзыв</button>
+          </div>
+          <div class="notion">
+            <p>Внимание! Публикация производится только после </p>
+            <p>предварительной модерации</p>
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="popup-wrap" id="popup-wrap-add">
       <div class="popup" id="popup-add">
         <div class="close"></div>
@@ -1221,6 +1244,7 @@
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.tubular.1.0.js"></script>
     <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/sticky.js"></script>
     <script src="js/common.js"></script>
   </body>

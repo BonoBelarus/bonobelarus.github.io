@@ -162,8 +162,11 @@ html(lang="en")
 								.country
 									label Страна
 									select(name="country")
-										option(value="Казахстан") Казахстан
+										option(value="Россия") Россия
 										option(value="Беларусь") Беларусь
+										option(value="Казахстан") Казахстан
+										option(value="Украина") Украина
+										option(value="Другая страна") Другая страна
 								.index
 									label Индекс
 									input(type="text" name="index")
@@ -176,59 +179,74 @@ html(lang="en")
 								.addr
 									label Адрес
 									.places
-										input(type="text" name="street")
-										input(type="text" name="house")
-										input(type="text" name="apart")
+										input(type="text" name="street" placeholder="Улица")
+										input(type="text" name="house" placeholder="Дом")
+										input(type="text" name="apart" placeholder="Кв.")
+								.pay-method
+									label Оплата
+									.items
+										.item
+											input(type="radio" name="pay-method" id="pay-method-1" value="Карта Visa/Mastercard" checked)
+											label(for="pay-method-1")
+												.wrap
+													.item-info
+														.caption
+															p Карта Visa/Mastercard
+														.clarify
+															p без комиссии
+										.item
+											input(type="radio" name="pay-method" id="pay-method-2" value="Банковская квитанция")
+											label(for="pay-method-2")
+												.wrap
+													.item-info
+														.caption
+															p Банковская квитанция
+														.clarify
+															p оплата по квитанции в любом отделении банка
+										.item
+											input(type="radio" name="pay-method" id="pay-method-3" value="Наложенный платеж")
+											label(for="pay-method-3")
+												.wrap
+													.item-info
+														.caption
+															p Наложенный платеж
+														.clarify
+															p Оплата при получении, плюс к стоимости 3% комиссия ТК DPD (комиссию плюсуем сразу к стоимости товара)
 								.delivery
 									label Доставка
 									.items
 										.item
-											input(type="radio" name="delivery" id="delivery-type-1")
+											input(type="radio" name="delivery" id="delivery-type-1" checked)
 											label(for="delivery-type-1")
 												.wrap
 													.item-info
 														.caption
-															p СДЭК, курьерская служба
+															p Курьером DPD «до двери»
 														.clarify
-															p от 4 до 14 рабочих дней
+															p от 3 до 4 рабочих дней
 													.price
-														p 800 руб.
+														p 450 руб.
 										.item
 											input(type="radio" name="delivery" id="delivery-type-2")
 											label(for="delivery-type-2")
 												.wrap
 													.item-info
 														.caption
-															p EMS, экспресс-почта
+															p Самовывоз со склада DPD
 														.clarify
-															p от 4 до 6 рабочих дней
+															p от 3 до 4 рабочих дней
 													.price
-														p 1 600 руб.
-										.item
-											input(type="radio" name="delivery" id="delivery-type-3")
-											label(for="delivery-type-3")
-												.wrap
-													.item-info
-														.caption
-															p DPD, транспортная компания
-														.clarify
-															p от 10 до 14 рабочих дней
-													.price
-														p 600 	руб.
-								.pay-method
-									label Оплата
-									select(name="payment")
-										option(value="Карта Visa/Mastercard") Карта Visa / Mastercard
+														p 200 руб.
 								.comment
 									label Комментарий
 									textarea(name="comment")
-								.news-letters
-									label Рассылка
-									input(type="checkbox" id="news-letters" checked name="news-letters")
-									label(for="news-letters")
-									.notion
-										p Вы будете первыми узнавать об обновлении коллекций,
-										p новых акциях и специальных предложениях
+								//- .news-letters
+								//- 	label Рассылка
+								//- 	input(type="checkbox" id="news-letters" checked name="news-letters")
+								//- 	label(for="news-letters")
+								//- 	.notion
+								//- 		p Вы будете первыми узнавать об обновлении коллекций,
+								//- 		p новых акциях и специальных предложениях
 						.bottom-line
 							.back-to
 								a(href="#") Назад в корзину

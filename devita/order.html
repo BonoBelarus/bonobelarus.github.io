@@ -177,8 +177,11 @@
                 <div class="country">
                   <label>Страна</label>
                   <select name="country">
-                    <option value="Казахстан">Казахстан</option>
+                    <option value="Россия">Россия</option>
                     <option value="Беларусь">Беларусь</option>
+                    <option value="Казахстан">Казахстан</option>
+                    <option value="Украина">Украина</option>
+                    <option value="Другая страна">Другая страна</option>
                   </select>
                 </div>
                 <div class="index">
@@ -196,28 +199,78 @@
                 <div class="addr">
                   <label>Адрес</label>
                   <div class="places">
-                    <input type="text" name="street"/>
-                    <input type="text" name="house"/>
-                    <input type="text" name="apart"/>
+                    <input type="text" name="street" placeholder="Улица"/>
+                    <input type="text" name="house" placeholder="Дом"/>
+                    <input type="text" name="apart" placeholder="Кв."/>
+                  </div>
+                </div>
+                <div class="pay-method">
+                  <label>Оплата</label>
+                  <div class="items">
+                    <div class="item">
+                      <input type="radio" name="pay-method" id="pay-method-1" value="Карта Visa/Mastercard" checked="checked"/>
+                      <label for="pay-method-1">
+                        <div class="wrap">
+                          <div class="item-info">
+                            <div class="caption">
+                              <p>Карта Visa/Mastercard</p>
+                            </div>
+                            <div class="clarify">
+                              <p>без комиссии</p>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <input type="radio" name="pay-method" id="pay-method-2" value="Банковская квитанция"/>
+                      <label for="pay-method-2">
+                        <div class="wrap">
+                          <div class="item-info">
+                            <div class="caption">
+                              <p>Банковская квитанция</p>
+                            </div>
+                            <div class="clarify">
+                              <p>оплата по квитанции в любом отделении банка</p>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <input type="radio" name="pay-method" id="pay-method-3" value="Наложенный платеж"/>
+                      <label for="pay-method-3">
+                        <div class="wrap">
+                          <div class="item-info">
+                            <div class="caption">
+                              <p>Наложенный платеж</p>
+                            </div>
+                            <div class="clarify">
+                              <p>Оплата при получении, плюс к стоимости 3% комиссия ТК DPD (комиссию плюсуем сразу к стоимости товара)</p>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="delivery">
                   <label>Доставка</label>
                   <div class="items">
                     <div class="item">
-                      <input type="radio" name="delivery" id="delivery-type-1"/>
+                      <input type="radio" name="delivery" id="delivery-type-1" checked="checked"/>
                       <label for="delivery-type-1">
                         <div class="wrap">
                           <div class="item-info">
                             <div class="caption">
-                              <p>СДЭК, курьерская служба</p>
+                              <p>Курьером DPD «до двери»</p>
                             </div>
                             <div class="clarify">
-                              <p>от 4 до 14 рабочих дней</p>
+                              <p>от 3 до 4 рабочих дней</p>
                             </div>
                           </div>
                           <div class="price">
-                            <p>800 руб.</p>
+                            <p>450 руб.</p>
                           </div>
                         </div>
                       </label>
@@ -228,56 +281,23 @@
                         <div class="wrap">
                           <div class="item-info">
                             <div class="caption">
-                              <p>EMS, экспресс-почта</p>
+                              <p>Самовывоз со склада DPD</p>
                             </div>
                             <div class="clarify">
-                              <p>от 4 до 6 рабочих дней</p>
+                              <p>от 3 до 4 рабочих дней</p>
                             </div>
                           </div>
                           <div class="price">
-                            <p>1 600 руб.</p>
-                          </div>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="item">
-                      <input type="radio" name="delivery" id="delivery-type-3"/>
-                      <label for="delivery-type-3">
-                        <div class="wrap">
-                          <div class="item-info">
-                            <div class="caption">
-                              <p>DPD, транспортная компания</p>
-                            </div>
-                            <div class="clarify">
-                              <p>от 10 до 14 рабочих дней</p>
-                            </div>
-                          </div>
-                          <div class="price">
-                            <p>600 	руб.</p>
+                            <p>200 руб.</p>
                           </div>
                         </div>
                       </label>
                     </div>
                   </div>
-                </div>
-                <div class="pay-method">
-                  <label>Оплата</label>
-                  <select name="payment">
-                    <option value="Карта Visa/Mastercard">Карта Visa / Mastercard</option>
-                  </select>
                 </div>
                 <div class="comment">
                   <label>Комментарий</label>
                   <textarea name="comment"></textarea>
-                </div>
-                <div class="news-letters">
-                  <label>Рассылка</label>
-                  <input type="checkbox" id="news-letters" checked="checked" name="news-letters"/>
-                  <label for="news-letters"></label>
-                  <div class="notion">
-                    <p>Вы будете первыми узнавать об обновлении коллекций,</p>
-                    <p>новых акциях и специальных предложениях</p>
-                  </div>
                 </div>
               </div>
             </form>

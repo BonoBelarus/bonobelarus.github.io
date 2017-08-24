@@ -14,6 +14,7 @@
 		margin-top: 25px
 		font-size: 16px
 	.gallery
+		overflow: hidden
 		margin-top: 70px
 		ul
 			display: flex
@@ -24,13 +25,70 @@
 			width: 20%
 			&:nth-child(odd)
 				margin-top: 120px
+			.meta
+				transition: .15s
+				opacity: 0
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-color: rgba(0, 0, 0, .1)
+				display: flex
+				justify-content: center
+				align-items: center
+				line-height: 1em
+				font-weight: 700
+				color: #fff
+			.comments,
+			.likes
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					top: 50%
+					left: 100%
+					margin-left: 5px
+					width: 15px
+					height: 1px
+					background-color: #fff
+			.likes
+				padding-left: 30px
+				&:after
+					content: ''
+					position: absolute
+					top: 50%
+					margin-top: -12px
+					left: 0
+					height: 24px
+					width: 24px
+					background: url(../img/like-insta.svg) center no-repeat
+					background-size: contain
+			.comments
+				padding-left: 40px
+				margin-left: 50px
+				&:after
+					content: ''
+					width: 30px
+					height: 30px
+					position: absolute
+					top: 50%
+					margin-top: -15px
+					left: 0
+					background: url(../img/comments.svg) center no-repeat
+					background-size: contain
 			img
 				display: block
 				max-width: 100%
+		a
+			position: relative
+			display: block
 		.photo-1,
 		.photo-2
 			max-width: 100%
 			height: 50%
+			&:hover .meta
+				opacity: 1
 
 @media only screen and (max-width : 767px)
 	#devitable .gallery li:nth-child(odd)
