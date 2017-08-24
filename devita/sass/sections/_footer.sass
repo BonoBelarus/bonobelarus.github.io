@@ -94,23 +94,41 @@ footer
 			.email
 				position: relative
 				margin-top: 20px
-			.email:before,
-			.email:after
-				content: ''
-				position: absolute
-				height: 1px
-				width: 10px
-				background-color: #989ca5
-				opacity: 1
-				top: 50%
-				right: 20px
-				transform-origin: right center
-			.email:before
-				transform: rotateZ(45deg)
-			.email:after
-				transform: rotateZ(-45deg)
+				display: flex
+				justify-content: flex-start
+				align-items: center
+			.btn-wrap
+				position: relative
+				&:before,
+				&:after
+					content: ''
+					position: absolute
+					width: 15px
+					height: 1px
+					background: rgba(#000, .3)
+					transform-origin: right center
+					top: 50%
+					right: 20px
+				&:before
+					transform: rotateZ(45deg)
+				&:after
+					transform: rotateZ(-45deg)
+			.btn
+				cursor: pointer
+				border: none
+				border-top: 1px solid #eff0f1
+				border-right: 1px solid #eff0f1
+				border-bottom: 1px solid #eff0f1
+				box-shadow: none
+				display: block
+				-webkit-appearance: none
+				line-height: 1em
+				background-color: transparent
 			input
-				border: 1px solid #eff0f1
+				border-top: 1px solid #eff0f1
+				border-left: 1px solid #eff0f1
+				border-bottom: 1px solid #eff0f1
+				border-right: none
 				line-height: 45px
 				height: 45px
 				width: 100%

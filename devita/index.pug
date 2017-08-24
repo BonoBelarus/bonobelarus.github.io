@@ -192,7 +192,7 @@ html(lang="en")
 										p
 											span.num 114 
 											span.cur BYN
-								a.like(data-popup="popup-wrap-wish" data-notion="popup-notion")
+								a.like(data-notion="popup-notion")
 						li
 							.prev-img
 								a(href="#" target="_blank")
@@ -207,7 +207,7 @@ html(lang="en")
 										p
 											span.num 114 
 											span.cur BYN
-								a.like(data-popup="popup-wrap-wish" data-notion="popup-notion")
+								a.like(data-notion="popup-notion")
 						li
 							.prev-img
 								a(href="#" target="_blank")
@@ -222,7 +222,7 @@ html(lang="en")
 										p
 											span.num 114 
 											span.cur BYN
-								a.like(data-popup="popup-wrap-wish" data-notion="popup-notion")
+								a.like(data-notion="popup-notion")
 						li
 							.prev-img
 								a(href="#" target="_blank")
@@ -237,7 +237,7 @@ html(lang="en")
 										p
 											span.num 114 
 											span.cur BYN
-								a.like(data-popup="popup-wrap-wish" data-notion="popup-notion")
+								a.like(data-notion="popup-notion")
 		section#lookbook
 			.content
 				.lookbox
@@ -424,7 +424,9 @@ html(lang="en")
 							p Подпишитесь на новости и получите скидку 1000 руб. на первую покупку
 						form(action="")
 							.email
-								input(type="email" name="email" placeholder="Ваш Email")
+								input(type="email" name="email" placeholder="Ваш Email" required)
+								.btn-wrap
+									input(type="submit" value="").btn
 				.footer-bottom
 					.copyright
 						.caption
