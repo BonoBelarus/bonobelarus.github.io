@@ -260,6 +260,19 @@
 			font-size: 14px
 			font-weight: 300
 			cursor: pointer
+			position: relative
+			padding-left: 35px
+			&.active:before
+				background: url(../img/like-full.png) center no-repeat
+			&:before
+				content: ''
+				background: url(../img/like.png) center no-repeat
+				position: absolute
+				top: 50%
+				margin-top: -12px
+				left: 0
+				width: 26px
+				height: 24px
 			img
 				margin-right: 5px
 		.to-share

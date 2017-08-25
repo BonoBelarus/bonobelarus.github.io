@@ -500,22 +500,28 @@
         line-height: 1.3em
 
 .popup-notion.active
-    transform: translateY(0)
+    opacity: 1
+    transform: translate(-100px, 100px) translateZ(0) scale(1)
 .popup-notion
     position: fixed
     top: 0
-    left: 0
-    width: 100%
+    right: 0
     z-index: 9
-    text-align: center
-    font-weight: 700
     transition: .5s
-    transform: translateY(-105%)
+    transform: translateY(-55px) translateZ(0) scale(0)
+    font-size: 13px
+    line-height: 1.2em
+    opacity: 0
+    pointer-events: none
     .popup
-        padding: 20px
+        padding: 30px 45px 30px 30px
         background-color: #fff
-        display: inline-block
+        display: inline-flex
+        align-items: flex-start
+        justify-content: space-between
         box-shadow: 0 0 0 1px #ccc
+    .img
+        margin-right: 20px
 
 @media only screen and (max-width : 1199px)
     #popup-card .gallery
@@ -599,6 +605,20 @@
         padding: 50px 20px
 
 @media only screen and (max-width : 499px)
+    .popup-notion
+        width: 100%
+        left: 0
+        right: initial
+        transform: scale(1)
+        z-index: 2
+        &.active
+            transform: translateY(105px)
+        .caption
+            p
+                display: inline
+        .popup
+            width: 100%
+            justify-content: center
     #popup-card .caption
         line-height: 1.1em
     #popup-wrap-testimonials .popup

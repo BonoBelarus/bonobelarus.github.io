@@ -223,8 +223,7 @@ html(lang="en")
 									p +
 							.btn-wrap.add-to-cart
 								a.btn(href="#") Добавить в корзину
-						.to-like
-							img(src="img/like-icon.png", alt="")
+						a(href="#").to-like.like(data-notion="popup-notion")
 							p Добавить в список желаний
 						.to-share
 							p Поделиться с друзьями:
@@ -1037,9 +1036,11 @@ html(lang="en")
 					p Мы свяжимся с вами в ближайшее время
 		.popup-notion
 			.popup
+				.img
+					img(src="img/like-full.png", alt="")
 				.caption
-					p Товар успешно добавлен
-					p в список желаний!
+					p Товар добавлен 
+					p в список желаний
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 		script(src="js/slick.min.js")
 		script(src="js/jquery.tubular.1.0.js")

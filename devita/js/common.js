@@ -422,6 +422,8 @@ document.addEventListener('DOMContentLoaded', function(){
 	var like_num = +$('.states .like .total').text();
 	var num = 0;
 	$('a[data-notion]').click(function(e){
+		console.log('success');
+		e.preventDefault();
 		if($(this).hasClass('active') != true){
 			num -= 1;
 			$('.states .like .total').text(like_num + num);
