@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		$('.major-menu').toggleClass('active');
 		$(e.currentTarget).closest('header').toggleClass('active');
 		$('.mobile-menu').toggleClass('active');
-		
+		$('.search-bar').slideUp();
 		if($(window).width() > 500){
 			var ol;
 			if($('.major-menu').hasClass('active') == true){
