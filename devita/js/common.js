@@ -99,8 +99,10 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	}else{
 		$('#descr-and-rev .tabs .to-open').click(function(e){
-				$(e.currentTarget).next().stop().slideToggle().closest('li').toggleClass('active');
+			$(e.currentTarget).next().stop().slideToggle().closest('li').toggleClass('active');
 		});
+		$('#descr-and-rev .tabs>ul>li').first().find('.to-open').trigger('click');
+		
 	}
 
 	var best_of_slider = $('#best-of .slider')
@@ -486,34 +488,6 @@ document.addEventListener('DOMContentLoaded', function(){
 	});
 	$('header .search-bar .close').click(function(){
 		$('.search-bar').slideUp();
-	});
-
-	$(window).resize(function(){
-		var ww = $(window).width();
-
-		if(ww > 767){
-			//product card slider
-			console.log('true');
-
-			$('#descr-and-rev .tabs>ul>li:first-child').addClass('active');
-			var descr_tabs = $('#descr-and-rev .tabs li');
-			descr_tabs.click(function(e){
-				var slide = $(e.currentTarget).index();
-				$(descr_and_rev_Slider).slick('slickGoTo', slide);
-
-				if($(e.currentTarget).hasClass('active')){
-					return;
-				}else{
-					descr_tabs.removeClass('active')
-					$(e.currentTarget).addClass('active');
-				}
-			});
-		} else {
-				console.log('less than 767');
-			$('#descr-and-rev .tabs .to-open').click(function(e){
-				$(e.currentTarget).next().slideToggle().closest('li').toggleClass('active');
-			});
-		}
 	});
 
 	$('.states .like a').click(function(e){
