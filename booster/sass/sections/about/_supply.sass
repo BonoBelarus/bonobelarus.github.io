@@ -68,3 +68,25 @@
             top: 0
         &:before
             bottom: 0
+
+@media only screen and (max-width: 1199px)
+    #supply .flex-wrap
+        flex-direction: column-reverse
+
+@media only screen and (max-width: 991px)
+    #supply .list li
+        width: 50%
+        max-width: 47%
+        margin-right: 0
+    #supply .left-side
+        max-width: 100%
+        min-width: 100%
+
+@media only screen and (max-width: 767px)
+    #supply .list li
+        min-width: 100%
+        img
+            max-width: 100%
+    #supply .flex-wrap + .notion
+        p
+            display: inline

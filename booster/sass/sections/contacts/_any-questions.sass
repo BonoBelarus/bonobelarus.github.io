@@ -16,6 +16,8 @@
                 margin-bottom: 20px
                 border-bottom: 1px solid #e8e8e8
         .img
+            border-radius: 50%
+            overflow: hidden
             margin-right: 30px
         .name
             font-size: 21px
@@ -64,3 +66,23 @@
             text-transform: uppercase
             line-height: 48px
             height: 48px
+
+@media only screen and (max-width: 1199px)
+    #any-question .left-side
+        margin-right: 20px
+
+@media only screen and (max-width: 991px)
+    #any-question .left-side .img
+        max-width: 100px
+        width: 100%
+        img
+            max-width: 100%
+
+@media only screen and (max-width: 767px)
+    #any-question .flex-wrap
+        flex-direction: column-reverse
+        align-items: center
+        .right-side
+            margin-bottom: 35px
+        .form-box
+            margin: 0 auto

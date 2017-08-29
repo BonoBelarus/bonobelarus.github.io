@@ -78,8 +78,6 @@
         ul
             max-width: 100%
             justify-content: space-between
-            li:not(:first-child)
-                margin-left: 30px
             li
                 border-left: none
                 padding: 20px
@@ -182,6 +180,7 @@
                 left: 0
                 background-color: $green
         .table
+            overflow: auto
             .caption
                 font-weight: 700
                 text-transform: uppercase
@@ -200,6 +199,7 @@
                     margin-top: -3px
                     left: 0
         table
+            min-width: 930px
             border-bottom: 1px solid #ccc
             font-size: 15px
             width: 100%
@@ -277,7 +277,7 @@
             font-weight: 700
             font-size: 24px
         .clarify
-            margin: 10px 0
+            margin: 10px 0 35px
         .list
             ul
                 display: flex
@@ -299,5 +299,36 @@
         .btn:hover
             color: #fff
         .btn
+            white-space: nowrap
             color: $green
             padding: 0 30px
+
+@media only screen and (max-width: 1199px)
+    #product .flex-wrap.tabs .left-side
+        margin-right: 20px
+    #product .bullets ul
+        justify-content: space-around
+        li
+            max-width: 47%
+    #product .flex-wrap.top
+        flex-direction: column
+        align-items: center
+    #product .flex-wrap.top .left-side
+        margin-right: 0
+        margin-bottom: 50px
+
+@media only screen and (max-width: 991px)
+    #product .xtra-tools
+        flex-direction: column-reverse
+        .right-side
+            margin-bottom: 35px
+        .btn
+            font-size: 15px
+
+@media only screen and (max-width: 767px)
+    #product .bullets ul li
+        max-width: 100%
+    #product .flex-wrap.tabs
+        flex-direction: column
+        .right-side
+            margin-top: 35px

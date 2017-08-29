@@ -124,3 +124,21 @@
                 line-height: 1em
                 font-size: 54px
                 font-weight: 700
+
+@media only screen and (max-width: 991px)
+    .flex-wrap.about
+        flex-direction: column-reverse
+    .flex-wrap.features
+        flex-direction: column
+        .right-side
+            margin-top: 50px
+    #about .cards li
+        width: 50%
+    #about .flex-wrap.features .left-side
+        min-width: 100%
+
+@media only screen and (max-width: 767px)
+    #about .flex-wrap.features .left-side .list li
+        width: 100%
+    #about .cards li
+        width: 100%
