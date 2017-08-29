@@ -136,14 +136,6 @@ html(lang="en")
 									a.btn.btn-white(href="#") Все категории
 		section#about
 			.content
-				.breadcrumbs
-					ul
-						li
-							a(href="#") Главная
-						li
-							a(href="#") Каталог
-						li
-							a(href="#") Парогенераторы BOOSTER
 				.flex-wrap.about
 					.left-side
 						h1 О компании
@@ -353,7 +345,9 @@ html(lang="en")
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 		script(src="js/jquery.tubular.1.0.js")
 		script.
-			$('#video-cover').tubular({videoId: 'TrYOJydy8eQ'});
+			if($(window).width() >= 1200){
+				$('#video-cover').tubular({videoId: 'TrYOJydy8eQ'});
+			}
 		script(src="js/sticky.js")
 		script(src="js/slick.min.js")
 		script(src="js/jquery.fancybox.min.js")

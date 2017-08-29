@@ -144,13 +144,6 @@
     </main>
     <section id="about">
       <div class="content">
-        <div class="breadcrumbs">
-          <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Парогенераторы BOOSTER</a></li>
-          </ul>
-        </div>
         <div class="flex-wrap about">
           <div class="left-side">
             <h1>О компании</h1>
@@ -371,7 +364,11 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/jquery.tubular.1.0.js"></script>
-    <script>$('#video-cover').tubular({videoId: 'TrYOJydy8eQ'});</script>
+    <script>
+      if($(window).width() >= 1200){
+      	$('#video-cover').tubular({videoId: 'TrYOJydy8eQ'});
+      }
+    </script>
     <script src="js/sticky.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>

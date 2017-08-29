@@ -1,5 +1,5 @@
 #catalog
-	padding-top: 100px
+	padding: 100px 0
 	.list
 		margin-top: 50px
 		text-align: center
@@ -30,8 +30,10 @@
 		.cat-img
 			height: 250px
 			line-height: 250px
+			padding: 2px
 			img
 				vertical-align: bottom
+				max-width: 98%
 		.caption
 			margin-top: 30px
 			font-weight: 700
@@ -43,3 +45,19 @@
 				color: $green
 				display: inline-block
 				padding: 0 30px
+
+@media only screen and (max-width: 991px)
+	#catalog .list li > a
+		padding-bottom: 50px
+
+@media only screen and (max-width: 767px)
+	#catalog .list
+		ul
+			justify-content: center
+		li
+			width: 49%
+			margin: 0
+			margin-left: -1px
+			margin-top: -1px
+	#catalog .list li:not(:nth-child(3n+1))
+		border-left: 1px solid #e3e4e5
