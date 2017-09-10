@@ -1,0 +1,75 @@
+#krumkachy
+    padding: 5% 0
+    color: #fff
+    background: #020202
+    position: relative
+    .flex-wrap
+        position: relative
+        z-index: 1
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        padding-right: 50px
+    .left-side
+        max-width: 40%
+        img
+            max-width: 720px
+    .right-side
+        min-width: 500px
+        max-width: 500px
+        margin-left: 100px
+    .caption
+        margin-top: 30px
+        font-weight: 700
+        font-size: 32px
+        line-height: 1.1em
+    .clarify
+        line-height: 1.5em
+        font-weight: 300
+        margin-top: 30px
+    .hash
+        margin-top: 40px
+        color: #ee2528
+        font-size: 21px
+        font-weight: 900
+
+@media only screen and (max-width : 1199px)
+    #krumkachy
+        .left-side
+            img
+                max-width: 180%
+        .caption
+            font-size: 28px
+
+@media only screen and (max-width : 991px)
+    #krumkachy
+        padding-top: 0
+        padding-bottom: 50px
+        .flex-wrap
+            flex-direction: column
+            padding-right: 0
+        .left-side
+            max-width: 100%
+            img
+                display: block
+                margin: 0 auto
+                max-width: 100%
+        .right-side
+            min-width: initial
+            margin-left: 50px
+            padding-right: 50px
+            max-width: 100%
+
+@media only screen and (max-width : 767px)
+    #krumkachy
+        .right-side
+            margin-left: 20px
+            padding-right: 20px
+        .caption
+            font-size: 24px
+
+@media only screen and (max-width : 420px)
+    #krumkachy
+        .caption
+            font-size: 19px
+            line-height: 1.2em

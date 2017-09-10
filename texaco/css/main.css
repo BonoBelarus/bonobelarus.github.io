@@ -1,3 +1,1774 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Roboto/Roboto-Light/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Light/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Light/Roboto-Light.woff") format("woff"), url("../fonts/Roboto/Roboto-Light/Roboto-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Roboto/Roboto-Regular/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Regular/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Regular/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto/Roboto-Regular/Roboto-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Roboto/Roboto-Bold/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Bold/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Bold/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto/Roboto-Bold/Roboto-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/Roboto/Roboto-Black/Roboto-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Black/Roboto-Black.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Black/Roboto-Black.woff") format("woff"), url("../fonts/Roboto/Roboto-Black/Roboto-Black.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/BebasNeue/BebasNeue-Bold/BebasNeue-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue/BebasNeue-Bold/BebasNeue-Bold.woff2") format("woff2"), url("../fonts/BebasNeue/BebasNeue-Bold/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue/BebasNeue-Bold/BebasNeue-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Lato/Lato-Heavy/Lato-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Heavy/Lato-Heavy.woff2") format("woff2"), url("../fonts/Lato/Lato-Heavy/Lato-Heavy.woff") format("woff"), url("../fonts/Lato/Lato-Heavy/Lato-Heavy.ttf") format("truetype"); }
+
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("./ajax-loader.gif") center center no-repeat; }
+
+/* Icons */
+@font-face {
+  font-family: 'slick';
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg"); }
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent; }
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: transparent;
+  outline: none;
+  background: transparent; }
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1; }
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: .25; }
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.slick-prev {
+  left: -25px; }
+
+[dir='rtl'] .slick-prev {
+  right: -25px;
+  left: auto; }
+
+.slick-prev:before {
+  content: '←'; }
+
+[dir='rtl'] .slick-prev:before {
+  content: '→'; }
+
+.slick-next {
+  right: -25px; }
+
+[dir='rtl'] .slick-next {
+  right: auto;
+  left: -25px; }
+
+.slick-next:before {
+  content: '→'; }
+
+[dir='rtl'] .slick-next:before {
+  content: '←'; }
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px; }
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center; }
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer; }
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent; }
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none; }
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1; }
+
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  opacity: .25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: black; }
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+
+.slick-list:focus {
+  outline: none; }
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block; }
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: ''; }
+
+.slick-track:after {
+  clear: both; }
+
+.slick-loading .slick-track {
+  visibility: hidden; }
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px; }
+
+[dir='rtl'] .slick-slide {
+  float: right; }
+
+.slick-slide img {
+  display: block; }
+
+.slick-slide.slick-loading img {
+  display: none; }
+
+.slick-slide.dragging img {
+  pointer-events: none; }
+
+.slick-initialized .slick-slide {
+  display: block; }
+
+.slick-loading .slick-slide {
+  visibility: hidden; }
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+body.swal2-shown {
+  overflow-y: hidden; }
+
+body.swal2-iosfix {
+  position: fixed;
+  left: 0;
+  right: 0; }
+
+.swal2-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  background-color: transparent;
+  z-index: 1060; }
+
+.swal2-container.swal2-fade {
+  -webkit-transition: background-color .1s;
+  -o-transition: background-color .1s;
+  transition: background-color .1s; }
+
+.swal2-container.swal2-shown {
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.swal2-modal {
+  background-color: #fff;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+  position: relative;
+  max-width: 100%; }
+
+.swal2-modal:focus {
+  outline: 0; }
+
+.swal2-modal.swal2-loading {
+  overflow-y: hidden; }
+
+.swal2-modal .swal2-title {
+  color: #595959;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: none;
+  position: relative;
+  margin: 0 0 .4em;
+  padding: 0;
+  display: block;
+  word-wrap: break-word; }
+
+.swal2-modal .swal2-buttonswrapper {
+  margin-top: 15px; }
+
+.swal2-modal .swal2-buttonswrapper:not(.swal2-loading) .swal2-styled[disabled] {
+  opacity: .4;
+  cursor: no-drop; }
+
+.swal2-modal .swal2-buttonswrapper.swal2-loading .swal2-styled.swal2-confirm {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 4px solid transparent;
+  border-color: transparent;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 7.5px;
+  vertical-align: top;
+  background-color: transparent !important;
+  color: transparent;
+  cursor: default;
+  border-radius: 100%;
+  -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+  animation: rotate-loading 1.5s linear 0s infinite normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.swal2-modal .swal2-buttonswrapper.swal2-loading .swal2-styled.swal2-cancel {
+  margin-left: 30px;
+  margin-right: 30px; }
+
+.swal2-modal .swal2-buttonswrapper.swal2-loading :not(.swal2-styled).swal2-confirm::after {
+  display: inline-block;
+  content: '';
+  margin-left: 5px 0 15px;
+  vertical-align: -1px;
+  height: 15px;
+  width: 15px;
+  border: 3px solid #999;
+  -webkit-box-shadow: 1px 1px 1px #fff;
+  box-shadow: 1px 1px 1px #fff;
+  border-right-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+  animation: rotate-loading 1.5s linear 0s infinite normal; }
+
+.swal2-modal .swal2-styled {
+  border: 0;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 15px 5px 0;
+  padding: 10px 32px; }
+
+.swal2-modal .swal2-image {
+  margin: 20px auto;
+  max-width: 100%; }
+
+.swal2-modal .swal2-close {
+  background: 0 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 38px;
+  height: 40px;
+  font-size: 36px;
+  line-height: 40px;
+  font-family: serif;
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  cursor: pointer;
+  color: #ccc;
+  -webkit-transition: color .1s ease;
+  -o-transition: color .1s ease;
+  transition: color .1s ease; }
+
+.swal2-modal .swal2-close:hover {
+  color: #d55; }
+
+.swal2-modal > .swal2-checkbox, .swal2-modal > .swal2-file, .swal2-modal > .swal2-input, .swal2-modal > .swal2-radio, .swal2-modal > .swal2-select, .swal2-modal > .swal2-textarea {
+  display: none; }
+
+.swal2-modal .swal2-content {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 300;
+  position: relative;
+  float: none;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  color: #545454;
+  word-wrap: break-word; }
+
+.swal2-modal .swal2-checkbox, .swal2-modal .swal2-file, .swal2-modal .swal2-input, .swal2-modal .swal2-radio, .swal2-modal .swal2-select, .swal2-modal .swal2-textarea {
+  margin: 20px auto; }
+
+.swal2-modal .swal2-file, .swal2-modal .swal2-input, .swal2-modal .swal2-textarea {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 18px;
+  border-radius: 3px;
+  border: 1px solid #d9d9d9;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06);
+  -webkit-transition: border-color box-shadow .3s;
+  -o-transition: border-color box-shadow .3s;
+  transition: border-color box-shadow .3s; }
+
+.swal2-modal .swal2-file.swal2-inputerror, .swal2-modal .swal2-input.swal2-inputerror, .swal2-modal .swal2-textarea.swal2-inputerror {
+  border-color: #f27474 !important;
+  -webkit-box-shadow: 0 0 2px #f27474 !important;
+  box-shadow: 0 0 2px #f27474 !important; }
+
+.swal2-modal .swal2-file:focus, .swal2-modal .swal2-input:focus, .swal2-modal .swal2-textarea:focus {
+  outline: 0;
+  border: 1px solid #b4dbed;
+  -webkit-box-shadow: 0 0 3px #c4e6f5;
+  box-shadow: 0 0 3px #c4e6f5; }
+
+.swal2-modal .swal2-file:focus::-webkit-input-placeholder, .swal2-modal .swal2-input:focus::-webkit-input-placeholder, .swal2-modal .swal2-textarea:focus::-webkit-input-placeholder {
+  -webkit-transition: opacity .3s .03s ease;
+  -o-transition: opacity .3s .03s ease;
+  transition: opacity .3s .03s ease;
+  opacity: .8; }
+
+.swal2-modal .swal2-file:focus:-ms-input-placeholder, .swal2-modal .swal2-input:focus:-ms-input-placeholder, .swal2-modal .swal2-textarea:focus:-ms-input-placeholder {
+  -webkit-transition: opacity .3s .03s ease;
+  -o-transition: opacity .3s .03s ease;
+  transition: opacity .3s .03s ease;
+  opacity: .8; }
+
+.swal2-modal .swal2-file:focus::-moz-placeholder, .swal2-modal .swal2-input:focus::-moz-placeholder, .swal2-modal .swal2-textarea:focus::-moz-placeholder {
+  -webkit-transition: opacity .3s .03s ease;
+  -o-transition: opacity .3s .03s ease;
+  transition: opacity .3s .03s ease;
+  opacity: .8; }
+
+.swal2-modal .swal2-file:focus::placeholder, .swal2-modal .swal2-input:focus::placeholder, .swal2-modal .swal2-textarea:focus::placeholder {
+  -webkit-transition: opacity .3s .03s ease;
+  -o-transition: opacity .3s .03s ease;
+  transition: opacity .3s .03s ease;
+  opacity: .8; }
+
+.swal2-modal .swal2-file::-webkit-input-placeholder, .swal2-modal .swal2-input::-webkit-input-placeholder, .swal2-modal .swal2-textarea::-webkit-input-placeholder {
+  color: #e6e6e6; }
+
+.swal2-modal .swal2-file:-ms-input-placeholder, .swal2-modal .swal2-input:-ms-input-placeholder, .swal2-modal .swal2-textarea:-ms-input-placeholder {
+  color: #e6e6e6; }
+
+.swal2-modal .swal2-file::-moz-placeholder, .swal2-modal .swal2-input::-moz-placeholder, .swal2-modal .swal2-textarea::-moz-placeholder {
+  color: #e6e6e6; }
+
+.swal2-modal .swal2-file::placeholder, .swal2-modal .swal2-input::placeholder, .swal2-modal .swal2-textarea::placeholder {
+  color: #e6e6e6; }
+
+.swal2-modal .swal2-range input {
+  float: left;
+  width: 80%; }
+
+.swal2-modal .swal2-range output {
+  float: right;
+  width: 20%;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center; }
+
+.swal2-modal .swal2-range input, .swal2-modal .swal2-range output {
+  height: 43px;
+  line-height: 43px;
+  vertical-align: middle;
+  margin: 20px auto;
+  padding: 0; }
+
+.swal2-modal .swal2-input {
+  height: 43px;
+  padding: 0 12px; }
+
+.swal2-modal .swal2-input[type=number] {
+  max-width: 150px; }
+
+.swal2-modal .swal2-file {
+  font-size: 20px; }
+
+.swal2-modal .swal2-textarea {
+  height: 108px;
+  padding: 12px; }
+
+.swal2-modal .swal2-select {
+  color: #545454;
+  font-size: inherit;
+  padding: 5px 10px;
+  min-width: 40%;
+  max-width: 100%; }
+
+.swal2-modal .swal2-radio {
+  border: 0; }
+
+.swal2-modal .swal2-radio label:not(:first-child) {
+  margin-left: 20px; }
+
+.swal2-modal .swal2-radio input, .swal2-modal .swal2-radio span {
+  vertical-align: middle; }
+
+.swal2-modal .swal2-radio input {
+  margin: 0 3px 0 0; }
+
+.swal2-modal .swal2-checkbox {
+  color: #545454; }
+
+.swal2-modal .swal2-checkbox input, .swal2-modal .swal2-checkbox span {
+  vertical-align: middle; }
+
+.swal2-modal .swal2-validationerror {
+  background-color: #f0f0f0;
+  margin: 0 -20px;
+  overflow: hidden;
+  padding: 10px;
+  color: gray;
+  font-size: 16px;
+  font-weight: 300;
+  display: none; }
+
+.swal2-modal .swal2-validationerror::before {
+  content: '!';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ea7d7d;
+  color: #fff;
+  line-height: 24px;
+  text-align: center;
+  margin-right: 10px; }
+
+@supports (-ms-accelerator: true) {
+  .swal2-range input {
+    width: 100% !important; }
+  .swal2-range output {
+    display: none; } }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .swal2-range input {
+    width: 100% !important; }
+  .swal2-range output {
+    display: none; } }
+
+.swal2-icon {
+  width: 80px;
+  height: 80px;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  margin: 20px auto 30px;
+  padding: 0;
+  position: relative;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.swal2-icon.swal2-error {
+  border-color: #f27474; }
+
+.swal2-icon.swal2-error .swal2-x-mark {
+  position: relative;
+  display: block; }
+
+.swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+  position: absolute;
+  height: 5px;
+  width: 47px;
+  background-color: #f27474;
+  display: block;
+  top: 37px;
+  border-radius: 2px; }
+
+.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: 17px; }
+
+.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  right: 16px; }
+
+.swal2-icon.swal2-warning {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #f8bb86;
+  border-color: #facea8;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center; }
+
+.swal2-icon.swal2-info {
+  font-family: 'Open Sans',sans-serif;
+  color: #3fc3ee;
+  border-color: #9de0f6;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center; }
+
+.swal2-icon.swal2-question {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #87adbd;
+  border-color: #c9dae1;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center; }
+
+.swal2-icon.swal2-success {
+  border-color: #a5dc86; }
+
+.swal2-icon.swal2-success [class^=swal2-success-circular-line] {
+  border-radius: 50%;
+  position: absolute;
+  width: 60px;
+  height: 120px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left] {
+  border-radius: 120px 0 0 120px;
+  top: -7px;
+  left: -33px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 60px 60px;
+  -ms-transform-origin: 60px 60px;
+  transform-origin: 60px 60px; }
+
+.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right] {
+  border-radius: 0 120px 120px 0;
+  top: -11px;
+  left: 30px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 60px;
+  -ms-transform-origin: 0 60px;
+  transform-origin: 0 60px; }
+
+.swal2-icon.swal2-success .swal2-success-ring {
+  width: 80px;
+  height: 80px;
+  border: 4px solid rgba(165, 220, 134, 0.2);
+  border-radius: 50%;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  z-index: 2; }
+
+.swal2-icon.swal2-success .swal2-success-fix {
+  width: 7px;
+  height: 90px;
+  position: absolute;
+  left: 28px;
+  top: 8px;
+  z-index: 1;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.swal2-icon.swal2-success [class^=swal2-success-line] {
+  height: 5px;
+  background-color: #a5dc86;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 2; }
+
+.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip] {
+  width: 25px;
+  left: 14px;
+  top: 46px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.swal2-icon.swal2-success [class^=swal2-success-line][class$=long] {
+  width: 47px;
+  right: 8px;
+  top: 38px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.swal2-progresssteps {
+  font-weight: 600;
+  margin: 0 0 20px;
+  padding: 0; }
+
+.swal2-progresssteps li {
+  display: inline-block;
+  position: relative; }
+
+.swal2-progresssteps .swal2-progresscircle {
+  background: #3085d6;
+  border-radius: 2em;
+  color: #fff;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  width: 2em;
+  z-index: 20; }
+
+.swal2-progresssteps .swal2-progresscircle:first-child {
+  margin-left: 0; }
+
+.swal2-progresssteps .swal2-progresscircle:last-child {
+  margin-right: 0; }
+
+.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep {
+  background: #3085d6; }
+
+.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progresscircle {
+  background: #add8e6; }
+
+.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progressline {
+  background: #add8e6; }
+
+.swal2-progresssteps .swal2-progressline {
+  background: #3085d6;
+  height: .4em;
+  margin: 0 -1px;
+  z-index: 10; }
+
+[class^=swal2] {
+  -webkit-tap-highlight-color: transparent; }
+
+@-webkit-keyframes showSweetAlert {
+  0% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7); }
+  45% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
+  80% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes showSweetAlert {
+  0% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7); }
+  45% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
+  80% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@-webkit-keyframes hideSweetAlert {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0; } }
+
+@keyframes hideSweetAlert {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0; } }
+
+.swal2-show {
+  -webkit-animation: showSweetAlert .3s;
+  animation: showSweetAlert .3s; }
+
+.swal2-show.swal2-noanimation {
+  -webkit-animation: none;
+  animation: none; }
+
+.swal2-hide {
+  -webkit-animation: hideSweetAlert .15s forwards;
+  animation: hideSweetAlert .15s forwards; }
+
+.swal2-hide.swal2-noanimation {
+  -webkit-animation: none;
+  animation: none; }
+
+@-webkit-keyframes animate-success-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px; }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px; }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px; } }
+
+@keyframes animate-success-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px; }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px; }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px; } }
+
+@-webkit-keyframes animate-success-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px; }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px; } }
+
+@keyframes animate-success-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px; }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px; } }
+
+@-webkit-keyframes rotatePlaceholder {
+  0% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  5% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  12% {
+    -webkit-transform: rotate(-405deg);
+    transform: rotate(-405deg); }
+  100% {
+    -webkit-transform: rotate(-405deg);
+    transform: rotate(-405deg); } }
+
+@keyframes rotatePlaceholder {
+  0% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  5% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  12% {
+    -webkit-transform: rotate(-405deg);
+    transform: rotate(-405deg); }
+  100% {
+    -webkit-transform: rotate(-405deg);
+    transform: rotate(-405deg); } }
+
+.swal2-animate-success-line-tip {
+  -webkit-animation: animate-success-tip .75s;
+  animation: animate-success-tip .75s; }
+
+.swal2-animate-success-line-long {
+  -webkit-animation: animate-success-long .75s;
+  animation: animate-success-long .75s; }
+
+.swal2-success.swal2-animate-success-icon .swal2-success-circular-line-right {
+  -webkit-animation: rotatePlaceholder 4.25s ease-in;
+  animation: rotatePlaceholder 4.25s ease-in; }
+
+@-webkit-keyframes animate-error-icon {
+  0% {
+    -webkit-transform: rotateX(100deg);
+    transform: rotateX(100deg);
+    opacity: 0; }
+  100% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1; } }
+
+@keyframes animate-error-icon {
+  0% {
+    -webkit-transform: rotateX(100deg);
+    transform: rotateX(100deg);
+    opacity: 0; }
+  100% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1; } }
+
+.swal2-animate-error-icon {
+  -webkit-animation: animate-error-icon .5s;
+  animation: animate-error-icon .5s; }
+
+@-webkit-keyframes animate-x-mark {
+  0% {
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  50% {
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  80% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    margin-top: -6px; }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    margin-top: 0;
+    opacity: 1; } }
+
+@keyframes animate-x-mark {
+  0% {
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  50% {
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  80% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    margin-top: -6px; }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    margin-top: 0;
+    opacity: 1; } }
+
+.swal2-animate-x-mark {
+  -webkit-animation: animate-x-mark .5s;
+  animation: animate-x-mark .5s; }
+
+@-webkit-keyframes rotate-loading {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes rotate-loading {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+/**
+ * Owl Carousel v2.2.1
+ * Copyright 2013-2017 David Deutsch
+ * Licensed under  ()
+ */
+.owl-carousel, .owl-carousel .owl-item {
+  -webkit-tap-highlight-color: transparent;
+  position: relative; }
+
+.owl-carousel {
+  display: none;
+  width: 100%;
+  z-index: 1; }
+
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  -moz-backface-visibility: hidden; }
+
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0); }
+
+.owl-carousel .owl-item, .owl-carousel .owl-wrapper {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0); }
+
+.owl-carousel .owl-item {
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-touch-callout: none; }
+
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%; }
+
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+  display: none; }
+
+.no-js .owl-carousel, .owl-carousel.owl-loaded {
+  display: block; }
+
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block; }
+
+.owl-carousel.owl-hidden {
+  opacity: 0; }
+
+.owl-carousel.owl-refresh .owl-item {
+  visibility: hidden; }
+
+.owl-carousel.owl-drag .owl-item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.owl-carousel.owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab; }
+
+.owl-carousel.owl-rtl {
+  direction: rtl; }
+
+.owl-carousel.owl-rtl .owl-item {
+  float: right; }
+
+.owl-carousel .animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.owl-carousel .owl-animated-in {
+  z-index: 0; }
+
+.owl-carousel .owl-animated-out {
+  z-index: 1; }
+
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut; }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.owl-height {
+  -webkit-transition: height .5s ease-in-out;
+  -o-transition: height .5s ease-in-out;
+  transition: height .5s ease-in-out; }
+
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity .4s ease;
+  -o-transition: opacity .4s ease;
+  transition: opacity .4s ease; }
+
+.owl-carousel .owl-item img.owl-lazy {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000; }
+
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url(owl.video.play.png) no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform .1s ease;
+  transition: -webkit-transform .1s ease;
+  -o-transition: transform .1s ease;
+  transition: transform .1s ease;
+  transition: transform .1s ease, -webkit-transform .1s ease; }
+
+.owl-carousel .owl-video-play-icon:hover {
+  -ms-transform: scale(1.3, 1.3);
+  -webkit-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3); }
+
+.owl-carousel .owl-video-playing .owl-video-play-icon, .owl-carousel .owl-video-playing .owl-video-tn {
+  display: none; }
+
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transition: opacity .4s ease;
+  -o-transition: opacity .4s ease;
+  transition: opacity .4s ease; }
+
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%; }
+
+/**
+ * Owl Carousel v2.2.1
+ * Copyright 2013-2017 David Deutsch
+ * Licensed under  ()
+ */
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+
+.owl-theme .owl-nav {
+  margin-top: 10px; }
+
+.owl-theme .owl-nav [class*=owl-] {
+  color: #FFF;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px; }
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background: #869791;
+  color: #FFF;
+  text-decoration: none; }
+
+.owl-theme .owl-nav .disabled {
+  opacity: .5;
+  cursor: default; }
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px; }
+
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1; }
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  -webkit-transition: opacity .2s ease;
+  -o-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  border-radius: 30px; }
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #869791; }
+
+*::-webkit-input-placeholder {
+  color: rgba(28, 29, 33, 0.6);
+  opacity: 1; }
+
+*:-moz-placeholder {
+  color: rgba(28, 29, 33, 0.6);
+  opacity: 1; }
+
+*::-moz-placeholder {
+  color: rgba(28, 29, 33, 0.6);
+  opacity: 1; }
+
+*:-ms-input-placeholder {
+  color: rgba(28, 29, 33, 0.6);
+  opacity: 1; }
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+h1, h2, h3 {
+  line-height: 1em;
+  font-weight: 700;
+  font-family: 'Bebas Neue'; }
+
+body.disabled {
+  overflow: hidden; }
+
+body {
+  cursor: default;
+  font-family: 'Roboto';
+  color: #1d1d1d;
+  background-color: #1d1d1d; }
+
+.content {
+  max-width: 1050px;
+  margin: 0 auto; }
+
+a {
+  -webkit-transition: .25s;
+  -o-transition: .25s;
+  transition: .25s; }
+
+a:focus,
+a:active,
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none; }
+
+.bold {
+  font-weight: 700; }
+
+.mark-dark {
+  color: #1d1d1d; }
+
+.mark {
+  color: #ee2528; }
+
+.sections {
+  padding-left: 130px;
+  width: 100%;
+  text-align: center; }
+
+section {
+  width: 100%;
+  display: inline-block;
+  text-align: left; }
+
+.btn {
+  -webkit-transition: .45s;
+  -o-transition: .45s;
+  transition: .45s; }
+
+@media only screen and (max-width: 1200px) {
+  h1, h2 {
+    font-size: 70px; } }
+
+@media only screen and (max-width: 991px) {
+  .sections {
+    padding: 0; } }
+
 @-webkit-keyframes drop_shield {
   68% {
     opacity: 1;
@@ -279,8 +2050,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   left: 0;
   width: 130px;
   color: #858585;
-  z-index: 3;
+  z-index: 4;
   background-color: #0a0a0a;
+  -webkit-box-shadow: 0 0px 30px rgba(0, 0, 0, 0.18);
   box-shadow: 0 0px 30px rgba(0, 0, 0, 0.18); }
   #left-side .logo {
     text-align: center;
@@ -309,6 +2081,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       position: absolute;
       height: 2px;
       width: 0;
+      -webkit-transition: .25s ease .25s;
+      -o-transition: .25s ease .25s;
       transition: .25s ease .25s;
       margin-top: -1px;
       top: 50%;
@@ -324,6 +2098,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     #left-side nav a:hover {
       color: #ee2528; }
     #left-side nav a {
+      -webkit-transition: .05s;
+      -o-transition: .05s;
       transition: .05s;
       display: block;
       color: #ccc;
@@ -344,12 +2120,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     width: 100%;
     height: 60px;
     z-index: 9;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -383,6 +2162,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       #left-side nav .mobile-nav .sn1,
       #left-side nav .mobile-nav .sn2 {
         content: '';
+        -webkit-transition: .35s;
+        -o-transition: .35s;
         transition: .35s;
         position: absolute;
         height: 2px;
@@ -394,6 +2175,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       #left-side nav .mobile-nav .sn2 {
         bottom: 0; }
       #left-side nav .mobile-nav .sn-center {
+        -webkit-transition: .1s ease .15s;
+        -o-transition: .1s ease .15s;
         transition: .1s ease .15s;
         position: absolute;
         height: 2px;
@@ -407,11 +2190,18 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         width: 100%;
         height: 120%;
         top: -120%;
+        -webkit-transition: .5s ease .2s;
+        -o-transition: .5s ease .2s;
         transition: .5s ease .2s;
         left: 0;
         z-index: 1;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #000), color-stop(40%, rgba(0, 0, 0, 0.9)), color-stop(80%, rgba(0, 0, 0, 0.7)), to(transparent));
+        background: -webkit-linear-gradient(top, #000 10%, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0.7) 80%, transparent);
+        background: -o-linear-gradient(top, #000 10%, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0.7) 80%, transparent);
         background: linear-gradient(to bottom, #000 10%, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0.7) 80%, transparent); }
       #left-side nav ul {
+        -webkit-transition: .5s;
+        -o-transition: .5s;
         transition: .5s;
         position: fixed;
         width: 100%;
@@ -426,11 +2216,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       #left-side nav li:not(:first-child) {
         margin-top: 15px; }
     #left-side nav.active .mobile-bg {
+      -webkit-transition-delay: 0s;
+      -o-transition-delay: 0s;
       transition-delay: 0s;
       -webkit-transform: translateY(100%);
       -ms-transform: translateY(100%);
       transform: translateY(100%); }
     #left-side nav.active ul {
+      -webkit-transition-delay: .2s;
+      -o-transition-delay: .2s;
       transition-delay: .2s;
       -webkit-transform: translateY(100%);
       -ms-transform: translateY(100%);
@@ -454,12 +2248,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   line-height: 1.5em; }
   #top-sec .content {
     height: inherit;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -482,9 +2279,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     line-height: 1.3em;
     color: rgba(255, 255, 255, 0.8); }
     #top-sec .features ul {
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: start;
       -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
       justify-content: flex-start;
@@ -495,9 +2294,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       margin-right: 40px; }
     #top-sec .features li {
       margin-top: 80px;
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: start;
       -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
       justify-content: flex-start; }
@@ -526,11 +2327,14 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     padding: 120px 0 60px;
     height: initial; }
   #top-sec .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
     -webkit-flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse; }
   #top-sec .top-sec_left {
-    margin-top: 50px; } }
+    max-width: 600px;
+    margin: 50px auto 0; } }
 
 @media only screen and (max-width: 767px) {
   #top-sec .clarify p {
@@ -543,12 +2347,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 #skidka {
   background-color: #e8e8e8; }
   #skidka .content {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
@@ -580,12 +2387,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       height: 55px;
       text-decoration: none;
       color: #fff;
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
@@ -600,8 +2410,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       font-weight: 700;
       font-family: 'Bebas Neue'; }
     #skidka form input:valid {
+      -webkit-box-shadow: inset 0 0 3px 30px #fff;
       box-shadow: inset 0 0 3px 30px #fff; }
     #skidka form input:focus {
+      -webkit-box-shadow: inset 0 0 3px 30px #fff;
       box-shadow: inset 0 0 3px 30px #fff; }
     #skidka form input {
       padding: 0 10px;
@@ -613,6 +2425,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       background-color: #d5161e;
       width: 100%;
       font-size: 15px;
+      -webkit-transition: .25s;
+      -o-transition: .25s;
       transition: .25s; }
     #skidka form .name, #skidka form .phone, #skidka form .email {
       margin-top: 30px; }
@@ -620,11 +2434,14 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       margin-top: 40px; }
       #skidka form .btn-wrap .btn:hover {
         color: #fff;
+        -webkit-box-shadow: inset 0 0 0 40px #0a0a0a;
         box-shadow: inset 0 0 0 40px #0a0a0a; }
       #skidka form .btn-wrap .btn {
-        transition: box-shadow .45s, -webkit-transform .25s;
+        -webkit-transition: -webkit-box-shadow .45s, -webkit-transform .25s;
+        transition: -webkit-box-shadow .45s, -webkit-transform .25s;
+        -o-transition: box-shadow .45s, transform .25s;
         transition: box-shadow .45s, transform .25s;
-        transition: box-shadow .45s, transform .25s, -webkit-transform .25s;
+        transition: box-shadow .45s, transform .25s, -webkit-box-shadow .45s, -webkit-transform .25s;
         cursor: pointer;
         line-height: 70px;
         height: 70px;
@@ -657,9 +2474,22 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     font-size: 17px; } }
 
 @media only screen and (max-width: 991px) {
+  #skidka form {
+    margin: 0 auto; }
   #skidka {
-    padding: 80px 0; }
+    padding: 80px 0;
+    text-align: center; }
+    #skidka h2 p {
+      display: inline; }
+    #skidka .skidka-left,
+    #skidka .skidka-right {
+      width: 100%;
+      max-width: 500px; }
+    #skidka .clarify {
+      margin-top: 20px; }
     #skidka .content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column; }
@@ -696,12 +2526,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   color: #414042;
   font-weight: 300; }
   #technology .content {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
@@ -737,9 +2570,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       font-size: 21px;
       opacity: .6; }
     #technology .compare ul {
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: start;
       -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
       justify-content: flex-start;
@@ -772,21 +2607,31 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 @media only screen and (max-width: 991px) {
   #technology .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 0 20px;
-    max-width: 540px; } }
+    max-width: 600px; }
+  #technology .tech-left img {
+    max-width: 260px; }
+  #technology.disable-shield .shield {
+    max-width: 150px; } }
 
 @media only screen and (max-width: 424px) {
   #technology {
     padding: 50px 0; }
     #technology .tech-left {
-      padding: 0; }
+      padding: 0;
+      margin: 0; }
   #technology .compare ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -820,12 +2665,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   #products .product-info {
     padding: 25px 100px 65px;
     line-height: 1.5em;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -836,12 +2684,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       position: relative;
       left: -65px;
       font-size: 14px;
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center; }
@@ -868,9 +2719,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         line-height: 45px; }
         #products .product-info .product-img .btn-wrap .btn:hover {
           color: #fff;
+          -webkit-box-shadow: inset 0 0 0 30px #ee2528;
           box-shadow: inset 0 0 0 30px #ee2528; }
         #products .product-info .product-img .btn-wrap .btn {
           font-size: 14px;
+          -webkit-transition: .25s;
+          -o-transition: .25s;
           transition: .25s;
           text-decoration: none;
           text-transform: uppercase;
@@ -878,6 +2732,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           font-weight: 700;
           padding: 0 30px;
           display: inline-block;
+          -webkit-box-shadow: inset 0 0 0 2px #ee2528;
           box-shadow: inset 0 0 0 2px #ee2528; }
       #products .product-info .product-img .item {
         width: 300px; }
@@ -894,6 +2749,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         left: 125px;
         bottom: -50px; }
         #products .product-info .product-img .owl-dots > div:hover {
+          -webkit-box-shadow: inset 0 0 0 1px black;
           box-shadow: inset 0 0 0 1px black; }
         #products .product-info .product-img .owl-dots > div {
           margin: 0 3px;
@@ -903,11 +2759,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           height: 18px;
           line-height: 18px;
           text-align: center;
+          -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3);
           width: 30px;
+          -webkit-transition: .15s;
+          -o-transition: .15s;
           transition: .15s; }
         #products .product-info .product-img .owl-dots > div.active {
           color: #fff;
+          -webkit-box-shadow: inset 0 0 0 1px transparent;
           box-shadow: inset 0 0 0 1px transparent;
           background-color: #ee2528; }
         #products .product-info .product-img .owl-dots > div:before {
@@ -947,12 +2807,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   #products .product-list {
     position: relative; }
     #products .product-list ul {
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
       justify-content: space-between;
+      -webkit-box-align: stretch;
       -webkit-align-items: stretch;
       -ms-flex-align: stretch;
       align-items: stretch;
@@ -968,6 +2831,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       padding: 35px 30px;
       width: 100%; }
       #products .product-list li .caption {
+        -webkit-transition: .05s;
+        -o-transition: .05s;
         transition: .05s;
         font-size: 19px;
         font-weight: 700;
@@ -992,6 +2857,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     transform: rotateZ(25deg); }
   #products .prev,
   #products .next {
+    -webkit-transition: .25s;
+    -o-transition: .25s;
     transition: .25s;
     cursor: pointer;
     width: 30px;
@@ -1000,7 +2867,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     position: absolute;
     top: 50%;
     margin-top: -18px;
-    z-index: 9; }
+    z-index: 8; }
   #products .prev {
     left: 20px; }
   #products .next {
@@ -1009,6 +2876,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   #products .next:before,
   #products .prev:after,
   #products .next:after {
+    -webkit-transition: .25s;
+    -o-transition: .25s;
     transition: .25s;
     content: '';
     background-color: #fff;
@@ -1045,12 +2914,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     top: 60%;
     left: 2.5%;
     width: 95%;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
@@ -1064,6 +2936,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 @media only screen and (max-width: 991px) {
   #products .product-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
@@ -1076,8 +2950,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     left: 50%; }
   #products .product-info .product-txt ul {
     text-align: left; }
+  #products .product-info .product-img {
+    margin: 0 auto; }
   #products .product-info .product-txt {
-    max-width: 500px; }
+    max-width: 100%; }
   #products .product-list li .clarify {
     display: none; }
   #products .product-list li .caption {
@@ -1087,6 +2963,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   #products {
     padding: 50px 0 0; }
     #products h2 {
+      font-size: 70px;
       margin-bottom: 50px; }
     #products .product-list li {
       padding: 35px 10px; }
@@ -1105,8 +2982,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 @media only screen and (max-width: 424px) {
   #products .product-info {
-    padding-left: 50px;
-    padding-right: 50px; }
+    padding-left: 15px;
+    padding-right: 15px; }
     #products .product-info h3 {
       font-size: 37px; } }
 
@@ -1114,12 +2991,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   padding: 100px 0; }
   #advantages .content {
     padding: 110px 45px;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -1134,12 +3014,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     max-width: 530px;
     font-weight: 300; }
     #advantages .adv-list ul {
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
       justify-content: space-between;
+      -webkit-box-align: start;
       -webkit-align-items: flex-start;
       -ms-flex-align: start;
       align-items: flex-start;
@@ -1149,12 +3032,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     #advantages .adv-list li {
       margin-top: 100px;
       width: 50%;
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: start;
       -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
       justify-content: flex-start;
+      -webkit-box-align: start;
       -webkit-align-items: flex-start;
       -ms-flex-align: start;
       align-items: flex-start; }
@@ -1185,9 +3071,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     #advantages h2 p {
       display: inline; }
   #advantages .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; } }
@@ -1227,12 +3116,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       color: #231f20; }
   #about .middle-wrap {
     margin-top: 70px;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
@@ -1256,12 +3148,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     margin-top: 100px;
     text-align: center; }
     #about .about-features ul {
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
       justify-content: space-between;
+      -webkit-box-align: start;
       -webkit-align-items: flex-start;
       -ms-flex-align: start;
       align-items: flex-start; }
@@ -1283,8 +3178,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 @media only screen and (max-width: 991px) {
   #about {
-    padding: 80px 40px 130px; }
+    padding: 80px 0 130px; }
     #about .middle-wrap {
+      padding: 0 20px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
       -webkit-flex-direction: column-reverse;
       -ms-flex-direction: column-reverse;
       flex-direction: column-reverse; }
@@ -1303,6 +3201,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center; }
@@ -1316,7 +3215,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 @media only screen and (max-width: 424px) {
   #about {
-    padding: 0 20px 130px; }
+    padding: 0 0 130px; }
     #about > .content {
       padding: 50px 0; } }
 
@@ -1339,12 +3238,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   line-height: 1.5em; }
   .banner-sec .content {
     position: relative;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
@@ -1382,14 +3284,21 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     padding: 0 0 80px; }
     .banner-sec .content {
       max-width: 500px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
       -webkit-flex-direction: column-reverse;
       -ms-flex-direction: column-reverse;
       flex-direction: column-reverse; }
+  .banner-sec .content {
+    max-width: 100%; }
   .banner-sec .right-side {
     top: 0;
     margin-top: -130px; }
   .banner-sec .left-side {
-    margin-top: 50px; } }
+    max-width: 600px;
+    margin-top: 50px; }
+  .banner-sec .left-side .clarify p {
+    display: inline; } }
 
 @media only screen and (max-width: 767px) {
   .banner-sec .content {
@@ -1418,12 +3327,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   font-weight: 300;
   line-height: 1.5em; }
   .quality .content {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
@@ -1465,12 +3377,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       top: 0;
       left: -5%; }
   .quality .right-side .quality-pack {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
@@ -1478,6 +3393,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     .quality .right-side .quality-pack .sng.active {
       opacity: 1; }
     .quality .right-side .quality-pack .txc {
+      -webkit-transition: .15s;
+      -o-transition: .15s;
       transition: .15s;
       opacity: 0; }
     .quality .right-side .quality-pack .sng {
@@ -1485,6 +3402,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       top: 0;
       left: 0;
       opacity: 0;
+      -webkit-transition: .15s;
+      -o-transition: .15s;
       transition: .15s; }
     .quality .right-side .quality-pack > ul {
       margin-top: 50px;
@@ -1523,18 +3442,23 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     color: #000;
     font-size: 16px; }
     .quality .tab-links ul {
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
       justify-content: space-between;
+      -webkit-box-align: center;
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center; }
     .quality .tab-links li:hover {
       border-bottom: 1px dashed transparent; }
     .quality .tab-links li {
+      -webkit-transition: .15s;
+      -o-transition: .15s;
       transition: .15s;
       cursor: pointer;
       border-bottom: 1px dashed rgba(0, 0, 0, 0.5); }
@@ -1553,8 +3477,6 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 @media only screen and (max-width: 1200px) {
   .quality h2 {
     font-size: 59px; }
-  .quality .left-side {
-    max-width: 400px; }
   .quality .nb {
     font-size: 18px; } }
 
@@ -1562,6 +3484,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   .quality h2 {
     font-size: 55px; }
   .quality .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
     -webkit-flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse; }
@@ -1575,8 +3499,24 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     margin-top: 50px; } }
 
 @media only screen and (max-width: 424px) {
+  .quality .right-side .quality-pack > ul {
+    width: 100%; }
+    .quality .right-side .quality-pack > ul li:before,
+    .quality .right-side .quality-pack > ul li:after {
+      display: none; }
   .quality .right-side .quality-pack {
-    max-width: 150px; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center; }
+    .quality .right-side .quality-pack p {
+      display: inline; }
     .quality .right-side .quality-pack img {
       width: 100%; }
   .quality .content {
@@ -1601,9 +3541,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   #reviews .content {
     position: relative; }
   #reviews .item {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between; }
@@ -1644,6 +3586,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   #reviews .prev:after,
   #reviews .next:after {
     content: '';
+    -webkit-transition: .1s;
+    -o-transition: .1s;
     transition: .1s;
     background-color: #0a0a0a;
     width: 30px;
@@ -1706,23 +3650,30 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     top: 60%;
     left: 0;
     width: 100%;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
   #reviews .dots li.slick-active {
+    -webkit-box-shadow: inset 0 0 0 6px #ee2528;
     box-shadow: inset 0 0 0 6px #ee2528; }
   #reviews .dots li {
+    -webkit-transition: .25s;
+    -o-transition: .25s;
     transition: .25s;
     width: 12px;
     height: 12px;
     color: #ee2528;
     border-radius: 50%;
+    -webkit-box-shadow: inset 0 0 0 1px #ee2528;
     box-shadow: inset 0 0 0 1px #ee2528; }
 
 @media only screen and (max-width: 1365px) {
@@ -1738,9 +3689,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 @media only screen and (max-width: 991px) {
   #reviews .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
     -webkit-flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
@@ -1771,12 +3725,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     text-align: center; }
   #expert-opinion .content {
     padding: 65px 0;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
@@ -1790,15 +3747,18 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       max-width: 450px;
       text-align: right; }
       #expert-opinion .content .expert .slick-track {
+        display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
         -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center; }
       #expert-opinion .content .expert .item {
         vertical-align: middle; }
       #expert-opinion .content .expert img {
+        margin-bottom: -3px;
         max-width: 100%; }
       #expert-opinion .content .expert .expert-info {
         display: inline-block;
@@ -1853,6 +3813,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     #expert-opinion .content .slick-next:before,
     #expert-opinion .content .slick-next:after {
       content: '';
+      -webkit-transition: .25s;
+      -o-transition: .25s;
       transition: .25s;
       position: absolute;
       top: 50%;
@@ -1891,16 +3853,22 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     #expert-opinion .content .slick-dots {
       bottom: 10px; }
     #expert-opinion .content .slick-dots li.slick-active {
+      -webkit-box-shadow: inset 0 0 0 10px #ee2528;
       box-shadow: inset 0 0 0 10px #ee2528; }
     #expert-opinion .content .slick-dots li {
       border-radius: 50%;
+      -webkit-box-shadow: inset 0 0 0 1px #ee2528;
       box-shadow: inset 0 0 0 1px #ee2528;
+      -webkit-transition: .35s;
+      -o-transition: .35s;
       transition: .35s;
       width: 12px;
       height: 12px; }
 
 @media only screen and (max-width: 1200px) {
   #expert-opinion .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
@@ -2015,6 +3983,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     margin-top: 60px;
     overflow: hidden; }
     #social .gallery img {
+      -webkit-transition: .1s linear;
+      -o-transition: .1s linear;
       transition: .1s linear;
       margin-left: 0;
       width: initial; }
@@ -2022,26 +3992,34 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     margin-top: 150px;
     text-align: left; }
     #social .questions ul {
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: start;
       -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
       justify-content: flex-start;
+      -webkit-box-align: start;
       -webkit-align-items: flex-start;
       -ms-flex-align: start;
       align-items: flex-start; }
     #social .questions li {
       height: 250px;
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
       justify-content: space-between;
+      -webkit-box-align: start;
       -webkit-align-items: flex-start;
       -ms-flex-align: start;
       align-items: flex-start;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
@@ -2060,8 +4038,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       max-width: 420px; }
     #social .questions .btn:hover {
       color: #fff;
+      -webkit-box-shadow: inset 0 0 0 30px #000;
       box-shadow: inset 0 0 0 30px #000; }
     #social .questions .btn {
+      -webkit-transition: .35s;
+      -o-transition: .35s;
       transition: .35s;
       cursor: pointer;
       font-size: 15px;
@@ -2086,18 +4067,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   #social .questions .caption {
     font-size: 33px; } }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 767px) {
+  #social .questions .caption,
+  #social .questions .btn-wrap {
+    width: 100%; }
   #social .questions ul {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
+  #social .questions li {
+    max-width: 320px; }
   #social .questions li:not(:first-child) {
-    margin-top: 50px; } }
-
-@media only screen and (max-width: 767px) {
+    margin-top: 50px; }
   #social .questions li {
     height: initial;
     width: 100%; }
@@ -2119,18 +4107,24 @@ footer {
   text-align: left;
   line-height: 1.2em; }
   footer .content {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start; }
   footer .social li:hover {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(238, 37, 40, 0.4);
     box-shadow: inset 0 0 0 1px rgba(238, 37, 40, 0.4); }
   footer .social li {
+    -webkit-transition: .15s;
+    -o-transition: .15s;
     transition: .15s;
     display: inline-block;
     height: 45px;
@@ -2138,6 +4132,7 @@ footer {
     border-radius: 50%;
     line-height: 45px;
     text-align: center;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
     margin: 0 5px; }
   footer .social a {
@@ -2152,6 +4147,8 @@ footer {
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
     transform-origin: center;
+    -webkit-transition: .15s;
+    -o-transition: .15s;
     transition: .15s; }
   footer .made-by svg {
     -webkit-transform-origin: right bottom;
@@ -2164,19 +4161,26 @@ footer {
   footer .made-by a {
     margin-top: 10px;
     text-decoration: none;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-transition: .15s;
+    -o-transition: .15s;
     transition: .15s;
     color: #fff; }
     footer .made-by a p {
       color: #EE2528;
+      -webkit-transition: .15s;
+      -o-transition: .15s;
       transition: .15s; }
   footer .made-by .logo {
     max-width: 30px;
@@ -2196,12 +4200,253 @@ footer {
 
 @media only screen and (max-width: 767px) {
   footer .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
     text-align: center; }
     footer .content > div:not(:first-child) {
       margin-top: 35px; } }
+
+.popup-wrap.active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s; }
+  .popup-wrap.active .popup {
+    -webkit-transition-delay: .2s;
+    -o-transition-delay: .2s;
+    transition-delay: .2s;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; }
+
+.popup-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+  z-index: 9;
+  opacity: 0;
+  -webkit-transition: .45s;
+  -o-transition: .45s;
+  transition: .45s;
+  -webkit-transition-delay: .25s;
+  -o-transition-delay: .25s;
+  transition-delay: .25s;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0); }
+  .popup-wrap .popup {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition: .45s;
+    -o-transition: .45s;
+    transition: .45s;
+    padding: 35px 50px;
+    background-color: #fff;
+    line-height: 1.5em;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 450px; }
+    .popup-wrap .popup .close:hover {
+      opacity: .5;
+      -webkit-transform: scale(0.7) rotateZ(-90deg);
+      -ms-transform: scale(0.7) rotate(-90deg);
+      transform: scale(0.7) rotateZ(-90deg); }
+    .popup-wrap .popup .close {
+      -webkit-transition: .35s;
+      -o-transition: .35s;
+      transition: .35s;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 25px;
+      height: 25px; }
+    .popup-wrap .popup .close:before,
+    .popup-wrap .popup .close:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #000; }
+    .popup-wrap .popup .close:after {
+      -webkit-transform: rotateZ(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotateZ(45deg); }
+    .popup-wrap .popup .close:before {
+      -webkit-transform: rotateZ(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotateZ(-45deg); }
+  .popup-wrap .caption:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #ee2528;
+    top: 100%;
+    margin-top: 30px;
+    left: 50%;
+    margin-left: -30px; }
+  .popup-wrap .caption {
+    line-height: 1em;
+    position: relative;
+    color: #1c1d21;
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: 700;
+    font-family: 'Bebas Neue'; }
+  .popup-wrap form {
+    margin-top: 60px;
+    text-align: left; }
+    .popup-wrap form > div:not(:first-child) {
+      margin-top: 35px; }
+    .popup-wrap form label {
+      text-transform: uppercase;
+      font-family: 'Bebas Neue';
+      font-weight: 700;
+      font-size: 18px; }
+    .popup-wrap form input:focus,
+    .popup-wrap form textarea:focus {
+      opacity: 1;
+      outline: none; }
+    .popup-wrap form input {
+      -webkit-transition: .25s;
+      -o-transition: .25s;
+      transition: .25s;
+      opacity: .5;
+      padding: 0 20px;
+      line-height: 58px;
+      height: 58px;
+      width: 100%;
+      border: none;
+      -webkit-box-shadow: 0 0 0 1px #000;
+      box-shadow: 0 0 0 1px #000; }
+    .popup-wrap form textarea {
+      padding: 20px;
+      -webkit-transition: .25s;
+      -o-transition: .25s;
+      transition: .25s;
+      -webkit-box-shadow: 0 0 0 1px #000;
+      box-shadow: 0 0 0 1px #000;
+      border: none;
+      opacity: .5;
+      width: 100%;
+      resize: vertical;
+      height: 100px; }
+    .popup-wrap form .btn-wrap .btn {
+      cursor: pointer;
+      color: #fff;
+      line-height: 70px;
+      height: 70px;
+      background-color: #ee2528;
+      text-transform: uppercase;
+      font-family: 'Bebas Neue';
+      font-weight: 700;
+      font-size: 17px;
+      width: 100%;
+      border: none; }
+
+#krumkachy {
+  padding: 5% 0;
+  color: #fff;
+  background: #020202;
+  position: relative; }
+  #krumkachy .flex-wrap {
+    position: relative;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-right: 50px; }
+  #krumkachy .left-side {
+    max-width: 40%; }
+    #krumkachy .left-side img {
+      max-width: 720px; }
+  #krumkachy .right-side {
+    min-width: 500px;
+    max-width: 500px;
+    margin-left: 100px; }
+  #krumkachy .caption {
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.1em; }
+  #krumkachy .clarify {
+    line-height: 1.5em;
+    font-weight: 300;
+    margin-top: 30px; }
+  #krumkachy .hash {
+    margin-top: 40px;
+    color: #ee2528;
+    font-size: 21px;
+    font-weight: 900; }
+
+@media only screen and (max-width: 1199px) {
+  #krumkachy .left-side img {
+    max-width: 180%; }
+  #krumkachy .caption {
+    font-size: 28px; } }
+
+@media only screen and (max-width: 991px) {
+  #krumkachy {
+    padding-top: 0;
+    padding-bottom: 50px; }
+    #krumkachy .flex-wrap {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding-right: 0; }
+    #krumkachy .left-side {
+      max-width: 100%; }
+      #krumkachy .left-side img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%; }
+    #krumkachy .right-side {
+      min-width: initial;
+      margin-left: 50px;
+      padding-right: 50px;
+      max-width: 100%; } }
+
+@media only screen and (max-width: 767px) {
+  #krumkachy .right-side {
+    margin-left: 20px;
+    padding-right: 20px; }
+  #krumkachy .caption {
+    font-size: 24px; } }
+
+@media only screen and (max-width: 420px) {
+  #krumkachy .caption {
+    font-size: 19px;
+    line-height: 1.2em; } }
